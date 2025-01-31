@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmr28hsoyiw77"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_v8cqg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j25bi"]
+transparency = 1
+albedo_color = Color(0.733333, 0.14902, 0, 0.541176)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_v8cqg")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Magic" load_steps=3 format=3 uid="uid://dr1cgj62a5fwe"]
+
+[ext_resource type="PackedScene" uid="uid://5843ikt3ogge" path="res://models/NEWMAGICWAND.glb" id="1_nsgvm"]
+[ext_resource type="Script" path="res://scripts/magic.gd" id="1_swgux"]
+
+[resource]
+script = ExtResource("1_swgux")
+model = ExtResource("1_nsgvm")
+position = Vector3(0.5, 0.8, -1.25)
+rotation = Vector3(35, 0, 0)
+muzzle_position = Vector3(2.7, -0.5, 12)
+cooldown = 1.0
+max_distance = 10
+damage = 100.0
+spread = 0.0
+shot_count = 1
+knockback = 20
+sound_shoot = ""

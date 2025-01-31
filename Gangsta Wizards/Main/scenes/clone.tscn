@@ -1,0 +1,200 @@
+[gd_scene load_steps=21 format=3 uid="uid://dfiesgqgjcgjs"]
+
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_tmp57"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4aea4"]
+[ext_resource type="Script" path="res://objects/FIREBALLplayer.gd" id="3_57cp8"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="3_j2tvr"]
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="3_r8y4g"]
+[ext_resource type="Resource" uid="uid://cu2gtxlcmbb34" path="res://weapons/blaster-repeater.tres" id="4_pm77p"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="4_rfdn5"]
+[ext_resource type="Script" path="res://scripts/magic.gd" id="5_12eqc"]
+[ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="5_jreky"]
+[ext_resource type="Resource" uid="uid://dr1cgj62a5fwe" path="res://magics/basic-ass-wand.tres" id="6_fjv7x"]
+[ext_resource type="PackedScene" uid="uid://r7rt7pth4u7o" path="res://objects/wall_low.tscn" id="6_ybjbq"]
+[ext_resource type="PackedScene" uid="uid://dpm3l05d7fu35" path="res://objects/platform.tscn" id="7_vyxpj"]
+[ext_resource type="PackedScene" uid="uid://c71evdjblk5wp" path="res://objects/wall_high.tscn" id="8_22ly0"]
+[ext_resource type="PackedScene" uid="uid://dd3oln1ucgqpd" path="res://models/blaster-repeater.glb" id="8_cc7xq"]
+[ext_resource type="PackedScene" uid="uid://bpoyjcgn7e3kh" path="res://Card Shark/Card.gltf" id="8_f4h2k"]
+[ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="9_i7lfi"]
+[ext_resource type="PackedScene" uid="uid://oqfhfp1a80qd" path="res://objects/cloud.tscn" id="10_oj4ie"]
+[ext_resource type="PackedScene" uid="uid://coqt2gv243eu8" path="res://Woo Anime/WALKING.glb" id="16_0otix"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fpmwk"]
+font = ExtResource("4_rfdn5")
+font_size = 36
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_tmp57")
+
+[node name="Player_boom" parent="." node_paths=PackedStringArray("crosshair") instance=ExtResource("2_4aea4")]
+transform = Transform3D(0.99447, 0, 0, 0, 0.99447, 0, 0, 0, 0.99447, -0.0101628, 0.508705, 0.00700188)
+script = ExtResource("3_57cp8")
+weapons = Array[ExtResource("3_r8y4g")]([ExtResource("4_pm77p")])
+magics = Array[ExtResource("5_12eqc")]([ExtResource("6_fjv7x")])
+crosshair = NodePath("../HUD/Crosshair")
+
+[node name="Collider" parent="Player_boom" index="0"]
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="blaster-repeater" parent="Player_boom/Head/Camera/SubViewportContainer/SubViewport/CameraItem/Container" index="0" instance=ExtResource("8_cc7xq")]
+
+[node name="Card" parent="Player_boom/Head/Camera/SubViewportContainer/SubViewport/CameraItem/Container" index="1" instance=ExtResource("8_f4h2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.990435, 0)
+
+[node name="Muzzle" parent="Player_boom/Head/Camera/SubViewportContainer/SubViewport/CameraItem" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212461, 1.63791, -2.52536)
+
+[node name="Muzzle" parent="Player_boom/Head/Camera/SubViewportContainer/SubViewport/LeftCameraItem" index="1"]
+visible = false
+
+[node name="RayCast2" type="RayCast3D" parent="Player_boom/Head/Camera" index="2"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+shadow_enabled = true
+shadow_opacity = 0.75
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("3_j2tvr")
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 48.0
+offset_top = 627.0
+offset_right = 138.0
+offset_bottom = 672.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_fpmwk")
+vertical_alignment = 2
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="enemy-flying" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("5_jreky")]
+transform = Transform3D(0.997709, 0, 0, 0, 0.997709, 0, 0, 0, 0.997709, -3.5, 2.5, -6)
+player = NodePath("../../Player_boom")
+
+[node name="enemy-flying2" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("5_jreky")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.5, 2.5, 1.5)
+player = NodePath("../../Player_boom")
+
+[node name="enemy-flying3" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("5_jreky")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 5.5, 3.5, 9)
+player = NodePath("../../Player_boom")
+
+[node name="enemy-flying4" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("5_jreky")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 15.5, 4, -7.5)
+player = NodePath("../../Player_boom")
+
+[node name="Level" type="Node" parent="."]
+
+[node name="wall-low" parent="Level" instance=ExtResource("6_ybjbq")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -1.92088, 1.05, -6.90166)
+
+[node name="wall-low3" parent="Level" instance=ExtResource("6_ybjbq")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, 6.07912, 1.05, 6.59834)
+
+[node name="platform" parent="Level" instance=ExtResource("7_vyxpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 6.5)
+
+[node name="platform2" parent="Level" instance=ExtResource("7_vyxpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2.5, -2.5)
+
+[node name="platform3" parent="Level" instance=ExtResource("7_vyxpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 3, -3.5)
+
+[node name="platform4" parent="Level" instance=ExtResource("7_vyxpj")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 7, 1, -2)
+
+[node name="wall-high" parent="Level" instance=ExtResource("8_22ly0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 4)
+
+[node name="wall-high2" parent="Level" instance=ExtResource("8_22ly0")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 11.5, 3, -5.5)
+
+[node name="platform-large-grass" parent="Level" instance=ExtResource("9_i7lfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="platform-large-grass2" parent="Level" instance=ExtResource("9_i7lfi")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -2, 0.5, -6)
+
+[node name="platform-large-grass3" parent="Level" instance=ExtResource("9_i7lfi")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -6, 1, 2.5)
+
+[node name="platform-large-grass5" parent="Level" instance=ExtResource("9_i7lfi")]
+transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 12, 2.5, -5)
+
+[node name="platform-large-grass4" parent="Level" instance=ExtResource("9_i7lfi")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 5, 0.5, 5.5)
+
+[node name="Decoration" type="Node" parent="."]
+
+[node name="cube2" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(1.49603, 0.232188, 3.70243, 1.85892, 3.40786, -0.964843, -3.21035, 2.08149, 1.16666, -9.48509, 8.49799, 20.5554)
+
+[node name="cube9" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(1.49603, 1.85892, -3.21035, 0.232188, 3.40786, 2.08149, 3.70243, -0.964843, 1.16666, 25.5597, 6.35221, -12.1167)
+
+[node name="cube5" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(3.0771, 1.12972, -2.29242, -0.0239142, 3.60054, 1.74228, 2.55556, -1.32658, 2.77656, 6.4111, 6.35221, -28.6551)
+
+[node name="cube3" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, 2.12132, -2.75413, 2.42683, 25.3984)
+
+[node name="cube10" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(0.776457, -2.89778, 2.66454e-15, 1.44889, 0.388229, -2.59808, 2.50955, 0.672432, 1.5, 27.5131, 12.0265, -5.37209)
+
+[node name="cube11" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(0.672432, 2.89778, -0.388229, -2.50955, 0.776457, 1.44889, 1.5, 0, 2.59808, -28.6125, 16.2998, -4.89238)
+
+[node name="cube12" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(0.672432, 2.89778, -0.388229, -2.50955, 0.776457, 1.44889, 1.5, 0, 2.59808, -25.14, 8.80719, -24.2564)
+
+[node name="cube6" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(-1.73205, 0.965926, 0.258819, -1, -1.67303, -0.448288, 0, -0.517638, 1.93185, 14.1295, 10.1139, 17.5347)
+
+[node name="cube7" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(1.41421, 0, -1.41421, 1, 1.41421, 1, 1, -1.41421, 1, -5.11081, 2.42683, -36.641)
+
+[node name="cube8" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(1.73205, 0, 1, 0, 2, 0, -1, 0, 1.73205, -30.1261, 2.42683, -13.7339)
+
+[node name="cube4" parent="Decoration" instance=ExtResource("10_oj4ie")]
+transform = Transform3D(1.12202, 1.39419, -2.40776, 1.53922, 1.85165, 1.78946, 2.31773, -1.90463, -0.0227883, -0.881504, 13.0297, -30.1859)
+
+[node name="WALKING" parent="Decoration" instance=ExtResource("16_0otix")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.98378, 3.00482, 2.25463)
+
+[node name="AnimationPlayer" parent="Decoration/WALKING" index="1"]
+autoplay = "Generic ManAction"
+
+[connection signal="health_updated" from="Player_boom" to="HUD" method="_on_health_updated"]
+
+[editable path="Player_boom"]
+[editable path="Decoration/WALKING"]

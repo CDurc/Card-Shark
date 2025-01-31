@@ -1,0 +1,226 @@
+[gd_scene load_steps=15 format=3 uid="uid://cvo5qsrnmwa20"]
+
+[ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
+[ext_resource type="PackedScene" uid="uid://toq3yagj7pvo" path="res://Card Shark/ace_of_spades_destiny_2.glb" id="2_raaok"]
+[ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_nqoh8"]
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_pexkb"]
+[ext_resource type="PackedScene" uid="uid://ugy0o3ae7b23" path="res://Card Shark/the_waning_gibbous.tscn" id="4_653qv"]
+[ext_resource type="PackedScene" uid="uid://bulqxst6fcjsh" path="res://objects/CardShark.tscn" id="4_r1jao"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="5_e0jyt"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hp6lq"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_me0ch"]
+[ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="10_cibhp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i5175"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y5egc"]
+size = Vector3(1, 1, 0.812012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqqoj"]
+albedo_color = Color(0.133333, 0.121569, 0.145098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8pkvj"]
+font = ExtResource("6_me0ch")
+font_size = 36
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
+
+[node name="Main" type="Node3D"]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="platform-large-grass" parent="Map" instance=ExtResource("1_a674t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="platform-large-grass5" parent="Map" instance=ExtResource("1_a674t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15068, -0.5, 0)
+
+[node name="platform-large-grass4" parent="Map" instance=ExtResource("1_a674t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -7.28284)
+
+[node name="platform-large-grass3" parent="Map" instance=ExtResource("1_a674t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.91212, -0.5, 0)
+
+[node name="platform-large-grass2" parent="Map" instance=ExtResource("1_a674t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 7.42686)
+
+[node name="Sketchfab_Scene" parent="Map" instance=ExtResource("2_raaok")]
+transform = Transform3D(-0.0749265, 0, 0.997189, 0, 1, 0, -0.997189, 0, -0.0749265, -0.194063, 0.77156, -7.32325)
+
+[node name="Wall1" type="Node3D" parent="Map"]
+transform = Transform3D(5.15071, 0, 0, 0, 2.36219, 0, 0, 0, 1, 6.9901, 0.873913, -3.15489)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.19874)
+mesh = SubResource("BoxMesh_i5175")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall1/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall1/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00325179)
+shape = SubResource("BoxShape3D_y5egc")
+
+[node name="Wall2" type="Node3D" parent="Map"]
+transform = Transform3D(5.15071, 0, 0, 0, 2.36219, 0, 0, 0, 1, 6.9901, 0.873913, 2.8178)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.19874)
+mesh = SubResource("BoxMesh_i5175")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall2/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.104745)
+shape = SubResource("BoxShape3D_y5egc")
+
+[node name="Wall3" type="Node3D" parent="Map"]
+transform = Transform3D(-3.06001e-07, 0, 1, 0, 2.36219, 0, -7.00049, 0, -4.37114e-08, 9.83902, 0.873913, 0.0419154)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 8.52651e-14, 0, 1, 0, -0.494158, 0.0455456)
+mesh = SubResource("BoxMesh_i5175")
+surface_material_override/0 = SubResource("StandardMaterial3D_qqqoj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall3/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall3/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19874)
+shape = SubResource("BoxShape3D_y5egc")
+
+[node name="Wall4" type="Node3D" parent="Map"]
+transform = Transform3D(-3.06001e-07, 0, 1, 0, 2.36219, 0, -7.00049, 0, -4.37114e-08, 9.83902, 3.66189, 0.0419154)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 8.52651e-14, 0, 1, 0, -0.494158, 0.0455456)
+mesh = SubResource("BoxMesh_i5175")
+surface_material_override/0 = SubResource("StandardMaterial3D_qqqoj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall4/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall4/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19874)
+shape = SubResource("BoxShape3D_y5egc")
+
+[node name="TheCardShark_v2" parent="Map" instance=ExtResource("3_nqoh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5997, 0, 0)
+
+[node name="TheWaningGibbous" parent="Map" instance=ExtResource("4_653qv")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 24.2998)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_pexkb")
+
+[node name="Player" parent="." instance=ExtResource("4_r1jao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42778, 0)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("5_e0jyt")
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("6_hp6lq")
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 56.0
+offset_top = 58.0
+offset_right = 146.0
+offset_bottom = 103.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_8pkvj")
+vertical_alignment = 2
+
+[node name="C1" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1195.0
+offset_top = 15.0
+offset_right = 1195.0
+offset_bottom = 15.0
+
+[node name="Outer" type="ColorRect" parent="HUD/C1"]
+visibility_layer = 6
+layout_mode = 1
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0, 0, 0, 1)
+
+[node name="Inner" type="ColorRect" parent="HUD/C1"]
+visibility_layer = 6
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0.930577, 0.928115, 0.890927, 1)
+
+[node name="Txt" type="Label" parent="HUD/C1"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -4.0
+offset_right = 49.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "E"
+
+[node name="C2" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1101.0
+offset_top = 15.0
+offset_right = 1101.0
+offset_bottom = 15.0
+
+[node name="Outer" type="ColorRect" parent="HUD/C2"]
+visibility_layer = 6
+layout_mode = 1
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0, 0, 0, 1)
+
+[node name="Inner" type="ColorRect" parent="HUD/C2"]
+visibility_layer = 6
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0.930577, 0.928115, 0.890927, 1)
+
+[node name="Txt" type="Label" parent="HUD/C2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -4.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "E"
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="enemy-flying" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("10_cibhp")]
+transform = Transform3D(0.997709, 0, 0, 0, 0.997709, 0, 0, 0, 0.997709, 0.0455265, 0.909849, -10.3432)
+player = NodePath("../../Player")
+
+[node name="Scripts" type="Node" parent="."]

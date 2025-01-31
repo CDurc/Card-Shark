@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5ofrbv6nuh3i"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_v8cqg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j25bi"]
+transparency = 1
+albedo_color = Color(0, 0.473747, 0.400618, 0.811765)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5nnyn"]
+
+[node name="Static" type="RigidBody3D"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="Node3D" type="MeshInstance3D" parent="."]
+
+[node name="Particle7" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.34641, 0.548999, -0.173205, 0, 1.90179, 0.2, 0.2, -0.950894, 0.3, 0.910219, 3.38563, -0.826873)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Ball" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.00877589, 0, -0.000283718)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle1" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.4, 0, 0, 0, 2.196, 0, 0, 0, 0.4, 0, 3.38563, 0)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle8" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.4, 0, 0, 0, 1.90179, -0.2, 0, 1.098, 0.34641, 0, 3.38563, 0.791108)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.34641, 1.098, 0, -0.2, 1.90179, 0, 0, 0, 0.4, 0.728266, 3.38563, 0)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle9" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.3, 0.950894, -0.2, -0.2, 1.90179, 0, 0.173205, 0.548999, 0.34641, 0.728266, 3.38563, 0.76374)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.34641, -1.098, 0, 0.2, 1.90179, 0, 0, 0, 0.4, -0.80651, 3.38563, 0)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.34641, -0.548999, -0.173205, 0, 1.90179, -0.2, 0.2, 0.950894, 0.3, -0.80651, 3.38563, 0.787885)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle5" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.3, -0.950894, -0.2, 0.2, 1.90179, 0, 0.173205, -0.548999, 0.34641, -0.80651, 3.38563, -0.826873)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Particle6" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.4, 0, 0, 0, 1.90179, 0.2, 0, -1.098, 0.34641, 0.0231341, 3.38563, -0.826873)
+mesh = SubResource("SphereMesh_v8cqg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j25bi")
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.1, 0, 0, 0, 4.1, 0, 0, 0, 4.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_5nnyn")

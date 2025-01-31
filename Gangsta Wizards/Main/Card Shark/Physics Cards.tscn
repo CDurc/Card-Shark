@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://ck4nyjdikaxe0"]
+
+[ext_resource type="Script" path="res://Card Shark/Card Damage.gd" id="1_un3o4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su36n"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_0six5"]
+material = SubResource("StandardMaterial3D_su36n")
+text = "B"
+font_size = 31
+
+[sub_resource type="BoxMesh" id="BoxMesh_qh2iy"]
+size = Vector3(0.125, 0.2, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvwk2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2a2bd"]
+size = Vector3(0.125, 0.2, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my51j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dr5yf"]
+size = Vector3(0.125, 0.2, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyj6j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8lc66"]
+size = Vector3(0.138, 0.214, 0.048)
+
+[node name="RootNode" type="Node3D"]
+transform = Transform3D(0.996869, 0, 0, 0, 0.996869, 0, 0, 0, 0.996869, 0, 0, 0)
+
+[node name="Rig" type="RigidBody3D" parent="."]
+continuous_cd = true
+script = ExtResource("1_un3o4")
+
+[node name="Txt" type="MeshInstance3D" parent="Rig"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.05, -0.0310758, 0.06826, -0.00519737)
+mesh = SubResource("TextMesh_0six5")
+skeleton = NodePath("../..")
+
+[node name="Outline" type="MeshInstance3D" parent="Rig"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 0.192, 0, 0, -0.00581564)
+mesh = SubResource("BoxMesh_qh2iy")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Rig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.00625935)
+mesh = SubResource("BoxMesh_2a2bd")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="C1" type="MeshInstance3D" parent="Rig"]
+transform = Transform3D(1, 7.45058e-09, 0, -7.45058e-09, 1, 0, 0, 0, 0.192, 0, 0, -0.00553183)
+mesh = SubResource("BoxMesh_dr5yf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gyj6j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rig"]
+transform = Transform3D(1.00001, 1.54972e-06, 0, -1.54972e-06, 1.00001, 0, 0, 0, 1.8571, 0.00195158, -0.00242275, -0.00227151)
+shape = SubResource("BoxShape3D_8lc66")

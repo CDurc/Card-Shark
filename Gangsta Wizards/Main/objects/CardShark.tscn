@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://bulqxst6fcjsh"]
+
+[ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_0uyvx"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="5_lfidv"]
+[ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="5_o5weu"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="7_prwlk"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="8_3guaj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
+radius = 0.01
+height = 0.02
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_0uyvx")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.537391, 0)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera" type="Camera3D" parent="Head"]
+cull_mask = 1048573
+current = true
+fov = 80.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Camera"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Head/Camera/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+msaa_3d = 1
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="CameraItem" type="Camera3D" parent="Head/Camera/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89112)
+cull_mask = 1047554
+fov = 40.0
+
+[node name="RightContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, -1, -2.25)
+
+[node name="RightMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203494, 1.63791, -2.51712)
+layers = 2
+sprite_frames = ExtResource("5_lfidv")
+frame = 2
+
+[node name="LeftContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79245, -1, -2.25)
+
+[node name="LeftMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19594, 1.63791, -2.51712)
+layers = 2
+sprite_frames = ExtResource("5_lfidv")
+frame = 2
+
+[node name="RayCast" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="RayCast2" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="TheCardShark_v3" parent="Head" instance=ExtResource("5_o5weu")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, -0.234754, 0.0942593)
+visible = false
+
+[node name="Shadow" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+size = Vector3(1, 2, 1)
+texture_albedo = ExtResource("7_prwlk")
+modulate = Color(1, 1, 1, 0.705882)
+normal_fade = 0.5
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3guaj")
+volume_db = -5.0
+autoplay = true
+
+[node name="CardCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="MagicCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="CardContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430047, -0.669971)
+
+[node name="spawn" type="MeshInstance3D" parent="CardContainer"]
+visible = false
+mesh = SubResource("CapsuleMesh_hlc1o")
+
+[node name="TheCardShark_v2" parent="." instance=ExtResource("5_o5weu")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765246, 0.0942595)

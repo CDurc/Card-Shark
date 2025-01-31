@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c082vbxnkaec3"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_0hrco"]
+size = Vector3(5, 5, 5)
+
+[node name="BigBoy" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00213957, 0.00816739, -0.00391531)
+layers = 2
+mesh = SubResource("PrismMesh_0hrco")
