@@ -80,7 +80,7 @@ var jump_single := true
 var jump_double := true
 
 var left_container_offset = Vector3(-0.38 , -0.3, -1) # weapon location
-var right_container_offset = Vector3(.8, -.5, -2.3) # weapon location
+var right_container_offset = Vector3(.8, -.5, -2.3) # card location
 var gun_rotation = Vector3(0,90,0)
 
 
@@ -109,6 +109,7 @@ var all_cards
 var best_hand #Best Hand Algo will return this
 var hand = []
 var cards #This is the asset for the physical cards and is not related to the card data
+var straight_laser
 var gun
 var phys_card_path
 var phys_card #phys_cards are affected by gravity/ physics
@@ -151,7 +152,8 @@ func _physics_process(delta):
 	right_container.position = lerp(right_container.position, right_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
 	left_container.position = lerp(left_container.position, left_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
 	#Durc
-	right_container.get_child(0).position = right_container.position
+	right_container.get_child(0).position = right_container.position #The cards
+	right_container.get_child(1).position = right_container.position #Straight_laser
 	#left_muzzle.position = left_container.position + left_container_offset + Vector3(-.3,0.4,-3)
 
 	# Movement sound
@@ -185,6 +187,11 @@ func load_viewport():
 	right_container.add_child(cards)
 	#card1.rotation_degrees = Vector3()
 	
+	var straight_laser_path = load("res://Card Shark/Straight Card Laser.tscn")
+	straight_laser = straight_laser_path.instantiate()
+	right_container.add_child(straight_laser)
+	straight_laser.position += Vector3(0,0,-4) #another offset within the container offset...
+	
 	var gun_model_path = load("res://Card Shark/aceGUN.tscn")
 	gun = gun_model_path.instantiate()
 	left_container.add_child(gun)
@@ -195,6 +202,8 @@ func load_viewport():
 	for child in cards.find_children("*", "MeshInstance3D"):
 		child.layers = 2
 	for child in gun.find_children("*", "MeshInstance3D"):
+		child.layers = 2
+	for child in straight_laser.find_children("*", "MeshInstance3D"):
 		child.layers = 2
 		#child.position += Vector3(0,1,0)
 
@@ -269,6 +278,7 @@ func shoot():
 		if !gun_cooldown.is_stopped(): return
 		
 		#Audio.play("res://sounds/blaster.ogg")
+		shoot_laser()
 		Audio.play("sounds/blaster_repeater.ogg")
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual
@@ -315,6 +325,13 @@ func shoot():
 			
 			impact_instance.position = raycast.get_collision_point() + (raycast.get_collision_normal() / 10)
 			impact_instance.look_at(camera.global_transform.origin, Vector3.UP, true) 
+
+func shoot_laser():
+		var tween = create_tween()
+		var C1_target = straight_laser.get_node("C3")
+		tween.tween_property(cards.get_node("C3"),"global_position",C1_target.global_transform.origin,0.2)
+		tween.tween_property(cards.get_node("C3"),"global_rotation_degrees",C1_target.global_rotation_degrees,0.2)
+
 
 # Mouse movement
 func _input(event):
@@ -391,9 +408,6 @@ func action_jump():
 	
 	jump_single = false;
 	jump_double = true;
-
-
-
 
 func damage(amount):
 	
