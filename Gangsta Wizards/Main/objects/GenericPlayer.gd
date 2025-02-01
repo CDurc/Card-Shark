@@ -133,6 +133,7 @@ func _physics_process(delta):
 	# Handle functions
 	handle_controls(delta)
 	handle_gravity(delta)
+	straight_fly_cards(delta)
 	
 	# Movement
 	var applied_velocity: Vector3
@@ -153,7 +154,6 @@ func _physics_process(delta):
 	left_container.position = lerp(left_container.position, left_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
 	#Durc
 	right_container.get_child(0).position = right_container.position #The cards
-	right_container.get_child(1).position = right_container.position #Straight_laser
 	#left_muzzle.position = left_container.position + left_container_offset + Vector3(-.3,0.4,-3)
 
 	# Movement sound
@@ -187,11 +187,6 @@ func load_viewport():
 	right_container.add_child(cards)
 	#card1.rotation_degrees = Vector3()
 	
-	var straight_laser_path = load("res://Card Shark/Straight Card Laser.tscn")
-	straight_laser = straight_laser_path.instantiate()
-	right_container.add_child(straight_laser)
-	straight_laser.position += Vector3(0,0,-4) #another offset within the container offset...
-	
 	var gun_model_path = load("res://Card Shark/aceGUN.tscn")
 	gun = gun_model_path.instantiate()
 	left_container.add_child(gun)
@@ -202,8 +197,6 @@ func load_viewport():
 	for child in cards.find_children("*", "MeshInstance3D"):
 		child.layers = 2
 	for child in gun.find_children("*", "MeshInstance3D"):
-		child.layers = 2
-	for child in straight_laser.find_children("*", "MeshInstance3D"):
 		child.layers = 2
 		#child.position += Vector3(0,1,0)
 
@@ -270,15 +263,35 @@ func throw_cards():
 		var random_direction = card_container.global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
-	
-	
+
+func straight_fly_cards(delta): #I can't even tell you how good this works after trying so many other dumb ideas
+	for i in range(1, 6):
+		var from_transform = cards.get_node("C%d" % i).global_transform
+		var to_transform   = cards.get_node("T%d" % i).global_transform
+		
+		from_transform = Transform3D(
+			Basis(
+				from_transform.basis.orthonormalized()
+				.get_rotation_quaternion()
+				.slerp(
+					to_transform.basis.orthonormalized()
+					.get_rotation_quaternion(), 2 * delta
+				)
+			),
+			from_transform.origin.lerp(to_transform.origin, 2 * delta)
+		)
+		
+		cards.get_node("C%d" % i).global_transform = from_transform
+
+
+
 func shoot():
 	if Input.is_action_pressed("magic_shoot"):
 	
 		if !gun_cooldown.is_stopped(): return
 		
 		#Audio.play("res://sounds/blaster.ogg")
-		shoot_laser()
+		#shoot_laser()
 		Audio.play("sounds/blaster_repeater.ogg")
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual
@@ -325,14 +338,6 @@ func shoot():
 			
 			impact_instance.position = raycast.get_collision_point() + (raycast.get_collision_normal() / 10)
 			impact_instance.look_at(camera.global_transform.origin, Vector3.UP, true) 
-
-func shoot_laser():
-		var tween = create_tween()
-		var C1_target = straight_laser.get_node("C3")
-		tween.tween_property(cards.get_node("C3"),"global_position",C1_target.global_transform.origin,0.2)
-		tween.tween_property(cards.get_node("C3"),"global_rotation_degrees",C1_target.global_rotation_degrees,0.2)
-
-
 # Mouse movement
 func _input(event):
 	if event is InputEventMouseMotion and mouse_captured:
