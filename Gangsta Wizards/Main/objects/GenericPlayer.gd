@@ -98,6 +98,8 @@ signal health_updated
 @onready var card_cooldown = $CardCooldown
 @onready var magic_cooldown = $MagicCooldown #Timer for magic only
 @onready var gun_cooldown = $GunCooldown #Timer for magic only
+@onready var straight_laser_cooldown = $StraightLaserCooldown #Timer for magic only
+
 @onready var anime = $TheCardShark_v2/AnimationPlayer
 @onready var UI_Card1 = $"../HUD/C1/Txt"
 @onready var UI_Card2 = $"../HUD/C2/Txt"
@@ -187,7 +189,7 @@ func load_viewport():
 	right_container.add_child(cards)
 	#card1.rotation_degrees = Vector3()
 	
-	var gun_model_path = load("res://Card Shark/aceGUN.tscn")
+	var gun_model_path = load("res://Card Shark/aceGUN.tscn") #Stolen from destiny lol
 	gun = gun_model_path.instantiate()
 	left_container.add_child(gun)
 	gun.rotation_degrees = gun_rotation
@@ -249,6 +251,7 @@ func cards_down():
 	load_set_cards()
 
 func throw_cards():
+	
 	for i in range(len(hand)):
 		
 		anime.play("New Card")
@@ -264,7 +267,15 @@ func throw_cards():
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
 
+func straight_laser_spell():
+	if Input.is_action_pressed("magic_shoot"):
+		if !straight_laser_cooldown.is_stopped(): return
+		straight_laser_cooldown.start(5)
+		print("pew")
+		
+
 func straight_fly_cards(delta): #I can't even tell you how good this works after trying so many other dumb ideas
+	if straight_laser_cooldown.time_left <= 0: return
 	for i in range(1, 6):
 		var from_transform = cards.get_node("C%d" % i).global_transform
 		var to_transform   = cards.get_node("T%d" % i).global_transform
@@ -351,6 +362,7 @@ func handle_controls(_delta):
 	
 	discard()
 	shoot()
+	straight_laser_spell()
 	
 	# Mouse capture
 	

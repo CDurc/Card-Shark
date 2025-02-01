@@ -113,7 +113,7 @@ font_size = 31
 [node name="Card" type="Node3D"]
 
 [node name="C1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.997605, -0.0691645, 0, 0.0691645, 0.997605, 0, 0, 0, 1, -0.637509, -0.00915033, -0.0167998)
+transform = Transform3D(0.997605, -0.0691645, 0, 0.0691645, 0.997605, 0, 0, 0, 1, -0.637509, -0.00915033, -0.0244202)
 layers = 3
 mesh = SubResource("BoxMesh_elhht")
 surface_material_override/0 = SubResource("StandardMaterial3D_gyj6j")
@@ -138,7 +138,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="C2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.999296, -0.0375158, 0, 0.0375158, 0.999296, 0, 0, 0, 1, -0.32328, 0.0178508, -0.008021)
+transform = Transform3D(0.999296, -0.0375158, 0, 0.0375158, 0.999296, 0, 0, 0, 1, -0.32328, 0.0178508, -0.0124679)
 layers = 3
 mesh = SubResource("BoxMesh_elhht")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
@@ -163,7 +163,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="C3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0302078, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0302078, -0.00492385)
 layers = 3
 mesh = SubResource("BoxMesh_elhht")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")

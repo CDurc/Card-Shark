@@ -97,6 +97,10 @@ autoplay = true
 [node name="CardCooldown" type="Timer" parent="."]
 one_shot = true
 
+[node name="StraightLaserCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
 
