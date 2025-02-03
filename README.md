@@ -10,3 +10,5 @@ Todo/ Keep in mind:
 
 
 2/1/2025
+
+i gtg make steak tacos

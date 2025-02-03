@@ -270,15 +270,19 @@ func throw_cards():
 func straight_laser_spell():
 	if Input.is_action_pressed("magic_shoot"):
 		if !straight_laser_cooldown.is_stopped(): return
-		straight_laser_cooldown.start(5)
+		straight_laser_cooldown.start(5) #For 5 seconds, let _physics_process move the cards
 		print("pew")
 		
 
+var rot_speed = 0.7
+var rot_acc = 3
+var rot_max_speed = 10
 func straight_fly_cards(delta): #I can't even tell you how good this works after trying so many other dumb ideas
 	if straight_laser_cooldown.time_left <= 0: return
+	#lerp and slerp the cards to pentagon formation
 	for i in range(1, 6):
 		var from_transform = cards.get_node("C%d" % i).global_transform
-		var to_transform   = cards.get_node("T%d" % i).global_transform
+		var to_transform   = cards.get_node("Target").get_node("T%d" % i).global_transform
 		
 		from_transform = Transform3D(
 			Basis(
@@ -286,14 +290,21 @@ func straight_fly_cards(delta): #I can't even tell you how good this works after
 				.get_rotation_quaternion()
 				.slerp(
 					to_transform.basis.orthonormalized()
-					.get_rotation_quaternion(), 2 * delta
+					.get_rotation_quaternion(), 4 * delta
 				)
 			),
-			from_transform.origin.lerp(to_transform.origin, 2 * delta)
+			from_transform.origin.lerp(to_transform.origin, 4 * delta)
 		)
 		
 		cards.get_node("C%d" % i).global_transform = from_transform
+	#Begin rotating the parent node
+	rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
+	var current_rotation = cards.get_node("Target").global_transform.basis.get_rotation_quaternion()
+	var rotation_delta = Quaternion(Vector3(0,0,1), delta)  # Small Y-axis rotation
+	var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
 
+	cards.get_node("Target").global_transform.basis = Basis(new_rotation)
+	
 
 
 func shoot():
@@ -433,3 +444,4 @@ func damage(amount):
 	
 	if health < 0:
 		get_tree().reload_current_scene() # Reset when out of health
+#Fin
