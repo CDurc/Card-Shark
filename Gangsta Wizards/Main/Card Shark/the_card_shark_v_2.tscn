@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://oc0e8dppj7kq"]
+[gd_scene load_steps=4 format=3 uid="uid://oc0e8dppj7kq"]
 
 [ext_resource type="PackedScene" uid="uid://c7kpf17rn6ki8" path="res://Card Shark/TheCardShark_v2.glb" id="1_no6jn"]
+[ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="2_mtlmi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yf51t"]
+radius = 0.1
 
 [node name="TheCardShark_v2" instance=ExtResource("1_no6jn")]
 
@@ -38,3 +42,19 @@ bones/31/position = Vector3(-0.562637, -1.12722, 2.7111)
 bones/31/rotation = Quaternion(0.999964, -3.0478e-09, 3.57616e-07, -0.00852224)
 bones/32/position = Vector3(-1.36948, -2.03593, 8.86391)
 bones/32/rotation = Quaternion(-0.776127, -0.0199116, 0.628234, -0.0505226)
+
+[node name="RightHandContainer" type="BoneAttachment3D" parent="Shark/Skeleton3D" index="1"]
+transform = Transform3D(0.120377, -0.31305, -0.942076, -0.940187, -0.340587, -0.00695932, -0.31868, 0.886566, -0.335325, -1.3687, 2.576, 4.61504)
+bone_name = "Palm R"
+bone_idx = 16
+
+[node name="Card" parent="Shark/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("2_mtlmi")]
+transform = Transform3D(-0.144795, -0.975676, 0.16459, 0.293953, -0.201249, -0.934393, 0.944789, -0.0869139, 0.315943, -0.636849, -0.131257, -0.0377589)
+
+[node name="LeftHandContainer" type="BoneAttachment3D" parent="Shark/Skeleton3D" index="2"]
+transform = Transform3D(0.0913967, 0.120023, 0.988555, 0.968664, -0.240944, -0.0603041, 0.230949, 0.963089, -0.138283, 1.45814, 2.71908, 4.82079)
+bone_name = "Palm L"
+bone_idx = 8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Shark/Skeleton3D/LeftHandContainer" index="0"]
+mesh = SubResource("CapsuleMesh_yf51t")

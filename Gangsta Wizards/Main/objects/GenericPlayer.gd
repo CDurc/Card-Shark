@@ -88,11 +88,15 @@ signal health_updated
 
 @onready var camera = $Head/Camera
 @onready var raycast = $Head/Camera/RayCast
-@onready var raycast2 = $Head/Camera/RayCast2
+@onready var raycast2 = $Head/Camera/RayCast2 #Used for magic to allow gun and magic at same time
 @onready var right_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightMuzzle
 @onready var left_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftMuzzle
 @onready var right_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightContainer
 @onready var left_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer
+@onready var right_hand_container = $TheCardShark_v2/Shark/Skeleton3D/RightHandContainer
+@onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
+@onready var test_spawn = $Laserspawn #For parenting
+
 @onready var card_container = $CardContainer
 @onready var sound_footsteps = $SoundFootsteps
 @onready var card_cooldown = $CardCooldown
@@ -107,6 +111,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var active_laser
 var all_cards
 var best_hand #Best Hand Algo will return this
 var hand = []
@@ -119,6 +124,7 @@ var bofa
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
+var active_laser_path = preload("res://Card Shark/laser.tscn")
 
 # Functions
 func _ready():
@@ -135,7 +141,10 @@ func _physics_process(delta):
 	# Handle functions
 	handle_controls(delta)
 	handle_gravity(delta)
-	straight_fly_cards(delta)
+	straight_fly_cards(delta,cards)
+	straight_fly_cards_real(delta,right_hand_container.get_node("Card"))
+	if active_laser:
+		laser()
 	
 	# Movement
 	var applied_velocity: Vector3
@@ -181,12 +190,16 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 
 
-func load_viewport():
+func load_viewport(): #Also load any real world things that aren't part of the player scene
 	
 	var card_model_path = load("res://Card Shark/Card.tscn")
 	cards = card_model_path.instantiate()
+	#irl_cards = card_model_path.instantiate()
 	load_set_cards()
 	right_container.add_child(cards)
+	#right_hand_container.add_child(irl_cards)
+	#irl_cards.rotation_degrees = Vector3(90,-90,0)
+	#irl_cards.position = Vector3(1,1,-1)
 	#card1.rotation_degrees = Vector3()
 	
 	var gun_model_path = load("res://Card Shark/aceGUN.tscn") #Stolen from destiny lol
@@ -202,8 +215,6 @@ func load_viewport():
 		child.layers = 2
 		#child.position += Vector3(0,1,0)
 
-
-#Durc
 
 func two_cards():	
 	var _bofa = deck.slice(0,2)
@@ -223,14 +234,14 @@ func set_cards():
 	print(best_hand)
 	
 func load_set_cards(): #This CANNOT be same fn as set_cards because viewport needs to load after set
-	cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"]) #this could be a for loop i guess
+	cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"]) #this could be a for loop
 	cards.get_node("C2").get_node("Txt").mesh.text = str(hand[1]["rank"])
 	cards.get_node("C3").get_node("Txt").mesh.text = str(hand[2]["rank"])
 	cards.get_node("C4").get_node("Txt").mesh.text = str(hand[3]["rank"])
 	cards.get_node("C5").get_node("Txt").mesh.text = str(hand[4]["rank"])
 
 func discard():
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("Ability1"):
 		if !magic_cooldown.is_stopped(): return
 		var tween = create_tween()
 		var original = right_container_offset
@@ -268,25 +279,35 @@ func throw_cards():
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
 
 func straight_laser_spell():
-	if Input.is_action_pressed("magic_shoot"):
+	if Input.is_action_pressed("Right_Click"):
 		if !straight_laser_cooldown.is_stopped(): return
-		straight_laser_cooldown.start(5) #For 5 seconds, let _physics_process move the cards
-		print("pew")
-		
+		straight_laser_cooldown.start(6) #For 6 seconds, let _physics_process move the cards
+		var d = get_tree().create_timer(2.0).timeout #Wait for spin-up
+		await d
+		print("spawn laser")
+		active_laser = active_laser_path.instantiate()
+		test_spawn.add_child(active_laser)
+		var d2 = get_tree().create_timer(0.1).timeout #Wait laser to get set
+		await d2
+		active_laser.visible = true
+		await straight_laser_cooldown.timeout #Wait for laser animation to end
+		active_laser.queue_free()
+		active_laser = null
 
+#Cards forming pentagon for straight_laser
 var rot_speed = 0.7
 var rot_acc = 3
-var rot_max_speed = 10
-func straight_fly_cards(delta): #I can't even tell you how good this works after trying so many other dumb ideas
+var rot_max_speed = 9.5
+func straight_fly_cards(delta,instance): #Viewport version, possibly obselete
 	if straight_laser_cooldown.time_left <= 0: return
 	#lerp and slerp the cards to pentagon formation
 	for i in range(1, 6):
-		var from_transform = cards.get_node("C%d" % i).global_transform
-		var to_transform   = cards.get_node("Target").get_node("T%d" % i).global_transform
+		var from_transform = instance.get_node("C%d" % i).global_transform
+		var to_transform   = instance.get_node("Target").get_node("T%d" % i).global_transform
 		
 		from_transform = Transform3D(
 			Basis(
-				from_transform.basis.orthonormalized()
+				from_transform.basis.orthonormalized() #SCALE MUST BE 1,1,1
 				.get_rotation_quaternion()
 				.slerp(
 					to_transform.basis.orthonormalized()
@@ -296,19 +317,72 @@ func straight_fly_cards(delta): #I can't even tell you how good this works after
 			from_transform.origin.lerp(to_transform.origin, 4 * delta)
 		)
 		
-		cards.get_node("C%d" % i).global_transform = from_transform
+		instance.get_node("C%d" % i).global_transform = from_transform
 	#Begin rotating the parent node
 	rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
-	var current_rotation = cards.get_node("Target").global_transform.basis.get_rotation_quaternion()
+	var current_rotation = instance.get_node("Target").global_transform.basis.get_rotation_quaternion()
 	var rotation_delta = Quaternion(Vector3(0,0,1), delta)  # Small Y-axis rotation
 	var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
 
-	cards.get_node("Target").global_transform.basis = Basis(new_rotation)
-	
+	instance.get_node("Target").global_transform.basis = Basis(new_rotation)
 
+func straight_fly_cards_real(delta, instance): #This must use local space, unlike viewport version
+	if straight_laser_cooldown.time_left <= 0:
+		return
+
+	# Get 'Target' node once, outside the for-loop
+	var target_node = instance.get_node("Target")
+
+	# Lerp + slerp each card in local space (relative to the 'Card' node)
+	for i in range(1, 6):
+		var card = instance.get_node("C%d" % i)
+		var t_node = target_node.get_node("T%d" % i)
+
+		# The card’s current local transform (relative to 'Card')
+		var from_transform = card.transform
+
+		# Combine 'Target.transform' and 'T#.transform' to get T# in 'Card' space
+		var t_in_card_space = target_node.transform * t_node.transform
+
+		# Position: LERP
+		var new_origin = from_transform.origin.lerp(t_in_card_space.origin, 4 * delta)
+
+		# Rotation: SLERP
+		var from_quat = from_transform.basis.orthonormalized().get_rotation_quaternion()
+		var to_quat   = t_in_card_space.basis.orthonormalized().get_rotation_quaternion()
+		var new_quat  = from_quat.slerp(to_quat, 4 * delta)
+
+		card.transform = Transform3D(Basis(new_quat), new_origin)
+
+	# Now rotate 'Target' using your original spin logic
+	rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
+	var current_rotation = target_node.transform.basis.get_rotation_quaternion()
+	var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # rotate around Z-axis
+	var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
+	target_node.transform.basis = Basis(new_rotation)
+
+func laser():
+	if active_laser:
+		var hit_position
+		if raycast.is_colliding():
+			hit_position = raycast.get_collision_point()
+		else:
+			hit_position = raycast.global_transform.origin + raycast.global_transform.basis.z * -100 #fallback distance
+
+		var start_position = laser_spawn.global_transform.origin
+
+		# Place the laser at the muzzle
+		active_laser.global_transform.origin = start_position
+
+		# Rotate it to face the hit
+		active_laser.look_at(hit_position)
+
+		# Scale to the exact distance
+		var distance = start_position.distance_to(hit_position)
+		active_laser.scale.z = distance
 
 func shoot():
-	if Input.is_action_pressed("magic_shoot"):
+	if Input.is_action_pressed("Left_Click"):
 	
 		if !gun_cooldown.is_stopped(): return
 		
@@ -341,7 +415,7 @@ func shoot():
 			
 			raycast.force_raycast_update()
 			
-			if !raycast.is_colliding(): continue # Don't create impact when raycast didn't hit
+			if !raycast.is_colliding(): continue
 			
 			var collider = raycast.get_collider()
 			# Hitting an enemy

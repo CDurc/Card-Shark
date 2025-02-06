@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=18 format=3 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://toq3yagj7pvo" path="res://Card Shark/ace_of_spades_destiny_2.glb" id="2_raaok"]
@@ -6,9 +6,12 @@
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_pexkb"]
 [ext_resource type="PackedScene" uid="uid://ugy0o3ae7b23" path="res://Card Shark/the_waning_gibbous.tscn" id="4_653qv"]
 [ext_resource type="PackedScene" uid="uid://bulqxst6fcjsh" path="res://objects/CardShark.tscn" id="4_r1jao"]
+[ext_resource type="PackedScene" uid="uid://cu4uc3lvtx75" path="res://Card Shark/goblin.tscn" id="5_5i5kg"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="5_e0jyt"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hp6lq"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_me0ch"]
+[ext_resource type="PackedScene" uid="uid://dtw1crl6pckfi" path="res://Card Shark/TheCardShark_v3.glb" id="6_ox7r8"]
+[ext_resource type="PackedScene" uid="uid://b7gb63ibneevv" path="res://Card Shark/laser.tscn" id="7_o7uuw"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="10_cibhp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_i5175"]
@@ -106,6 +109,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5997, 0, 0)
 
 [node name="TheWaningGibbous" parent="Map" instance=ExtResource("4_653qv")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 24.2998)
+
+[node name="Goblin" parent="Map" instance=ExtResource("5_5i5kg")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -9.11423, 0.441887, 0)
+
+[node name="TheCardShark_v3" parent="Map" instance=ExtResource("6_ox7r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4634, 5.23277, 0.130196)
+
+[node name="RootNode" parent="Map" instance=ExtResource("7_o7uuw")]
+transform = Transform3D(1, 0, 0, 0, 0.730317, 33.1976, 0, -0.683108, 35.4919, 0, 1.11999, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_pexkb")

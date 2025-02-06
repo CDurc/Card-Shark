@@ -31,6 +31,7 @@ current = true
 fov = 80.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Camera"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,7 +44,7 @@ transparent_bg = true
 handle_input_locally = false
 msaa_3d = 1
 size = Vector2i(1280, 720)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="CameraItem" type="Camera3D" parent="Head/Camera/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89112)
@@ -70,12 +71,12 @@ frame = 2
 
 [node name="RayCast" type="RayCast3D" parent="Head/Camera"]
 exclude_parent = false
-target_position = Vector3(0, 0, -10)
+target_position = Vector3(0, 0, -30)
 collide_with_areas = true
 
 [node name="RayCast2" type="RayCast3D" parent="Head/Camera"]
 exclude_parent = false
-target_position = Vector3(0, 0, -10)
+target_position = Vector3(0, 0, -30)
 collide_with_areas = true
 
 [node name="TheCardShark_v3" parent="Head" instance=ExtResource("5_o5weu")]
@@ -116,3 +117,11 @@ mesh = SubResource("CapsuleMesh_hlc1o")
 
 [node name="TheCardShark_v2" parent="." instance=ExtResource("5_o5weu")]
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765246, 0.0942595)
+
+[node name="Laserspawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 0.9012, -0.423599)
+
+[node name="RayCast" type="RayCast3D" parent="Laserspawn"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true

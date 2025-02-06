@@ -370,3 +370,6 @@ layers = 3
 mesh = SubResource("BoxMesh_beqvw")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_gjway")
+
+[node name="spawn" type="Node3D" parent="Target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.438258)
