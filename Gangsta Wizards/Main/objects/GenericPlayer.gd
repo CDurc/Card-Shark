@@ -141,8 +141,7 @@ func _physics_process(delta):
 	# Handle functions
 	handle_controls(delta)
 	handle_gravity(delta)
-	straight_fly_cards(delta,cards)
-	straight_fly_cards_real(delta,right_hand_container.get_node("Card"))
+	
 	if active_laser:
 		laser()
 	
@@ -282,6 +281,8 @@ func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
 		if !straight_laser_cooldown.is_stopped(): return
 		straight_laser_cooldown.start(6) #For 6 seconds, let _physics_process move the cards
+		straight_fly_cards(cards)
+		straight_fly_cards_real(right_hand_container.get_node("Card"))
 		var d = get_tree().create_timer(2.0).timeout #Wait for spin-up
 		await d
 		print("spawn laser")
@@ -298,8 +299,9 @@ func straight_laser_spell():
 var rot_speed = 0.7
 var rot_acc = 3
 var rot_max_speed = 9.5
-func straight_fly_cards(delta,instance): #Viewport version, possibly obselete
+func straight_fly_cards(instance): #Viewport version, possibly obselete
 	if straight_laser_cooldown.time_left <= 0: return
+	var delta = get_process_delta_time()
 	#lerp and slerp the cards to pentagon formation
 	for i in range(1, 6):
 		var from_transform = instance.get_node("C%d" % i).global_transform
@@ -326,40 +328,51 @@ func straight_fly_cards(delta,instance): #Viewport version, possibly obselete
 
 	instance.get_node("Target").global_transform.basis = Basis(new_rotation)
 
-func straight_fly_cards_real(delta, instance): #This must use local space, unlike viewport version
-	if straight_laser_cooldown.time_left <= 0:
-		return
+func straight_fly_cards_real(instance): #This must use local space, unlike viewport version
+	while straight_laser_cooldown.time_left > 0:
+		var delta = get_process_delta_time()
+		var target_node = instance.get_node("Target")
+		# Lerp + slerp each card in local space (relative to the 'Card' node)
+		for i in range(1, 6):
+			var card = instance.get_node("C%d" % i)
+			var t_node = target_node.get_node("T%d" % i)
 
-	# Get 'Target' node once, outside the for-loop
-	var target_node = instance.get_node("Target")
+			# The card’s current local transform (relative to 'Card')
+			var from_transform = card.transform
 
-	# Lerp + slerp each card in local space (relative to the 'Card' node)
-	for i in range(1, 6):
-		var card = instance.get_node("C%d" % i)
-		var t_node = target_node.get_node("T%d" % i)
+			# Combine 'Target.transform' and 'T#.transform' to get T# in 'Card' space
+			var t_in_card_space = target_node.transform * t_node.transform
 
-		# The card’s current local transform (relative to 'Card')
-		var from_transform = card.transform
+			# Position: LERP
+			var new_origin = from_transform.origin.lerp(t_in_card_space.origin, 4 * delta)
 
-		# Combine 'Target.transform' and 'T#.transform' to get T# in 'Card' space
-		var t_in_card_space = target_node.transform * t_node.transform
+			# Rotation: SLERP
+			var from_quat = from_transform.basis.orthonormalized().get_rotation_quaternion()
+			var to_quat   = t_in_card_space.basis.orthonormalized().get_rotation_quaternion()
+			var new_quat  = from_quat.slerp(to_quat, 4 * delta)
 
-		# Position: LERP
-		var new_origin = from_transform.origin.lerp(t_in_card_space.origin, 4 * delta)
+			card.transform = Transform3D(Basis(new_quat), new_origin)
 
-		# Rotation: SLERP
-		var from_quat = from_transform.basis.orthonormalized().get_rotation_quaternion()
-		var to_quat   = t_in_card_space.basis.orthonormalized().get_rotation_quaternion()
-		var new_quat  = from_quat.slerp(to_quat, 4 * delta)
-
-		card.transform = Transform3D(Basis(new_quat), new_origin)
-
-	# Now rotate 'Target' using your original spin logic
-	rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
-	var current_rotation = target_node.transform.basis.get_rotation_quaternion()
-	var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # rotate around Z-axis
-	var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
-	target_node.transform.basis = Basis(new_rotation)
+		#rotate 'Target'
+		rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
+		var current_rotation = target_node.transform.basis.get_rotation_quaternion()
+		var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # rotate around Z-axis
+		var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
+		target_node.transform.basis = Basis(new_rotation)
+		#Stop spin, reset vars
+		target_node.transform.basis = Basis(current_rotation)
+		rot_speed = 0.7
+		rot_acc = 3
+		rot_max_speed = 9.5
+		#Send cards flying?  Or whatever they do?
+		#Return cards to original position and rotation while invisible
+		for i in range(1, 6):
+			var card = instance.get_node("C%d" % i)
+			var t_node = instance.get_node("P%d" % i)
+			card.transform = t_node.transform
+		#throw_cards()
+		#cards_down()
+		print("e")
 
 func laser():
 	if active_laser:
