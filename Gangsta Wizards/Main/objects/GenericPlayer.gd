@@ -93,7 +93,7 @@ signal health_updated
 @onready var left_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftMuzzle
 @onready var right_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightContainer
 @onready var left_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer
-@onready var right_hand_container = $TheCardShark_v2/Shark/Skeleton3D/RightHandContainer
+@onready var right_hand_container = $TheCardSharkv4/SharkBones/Skeleton3D/RightHandContainer
 @onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
 @onready var test_spawn = $Laserspawn #For parenting
 
@@ -104,7 +104,7 @@ signal health_updated
 @onready var gun_cooldown = $GunCooldown #Timer for magic only
 @onready var straight_laser_cooldown = $StraightLaserCooldown #Timer for magic only
 
-@onready var anime = $TheCardShark_v2/AnimationPlayer
+@onready var anime = $TheCardSharkv4/AnimationPlayer
 @onready var UI_Card1 = $"../HUD/C1/Txt"
 @onready var UI_Card2 = $"../HUD/C2/Txt"
 
@@ -277,6 +277,23 @@ func throw_cards():
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
 
+func drop_cards():
+	
+	for i in range(len(hand)):
+		
+		anime.play("New Card")
+		phys_card = phys_card_scene.instantiate()
+		var text_node = phys_card.get_node("Rig").get_node("Txt")
+		text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
+		text_node.mesh.text = str(hand[i]["rank"])
+		$"../Projectiles".add_child(phys_card)
+		phys_card.position = card_container.global_position
+		var random_vector = Vector3(randf()*1-0.5,randf()*1,0)
+		var local_direction = Vector3(0,0,-0.8)+random_vector
+		var random_direction = card_container.global_transform.basis * local_direction
+		random_direction = random_direction.normalized()
+		phys_card.get_node("Rig").linear_velocity = random_direction * 8
+
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
 		if !straight_laser_cooldown.is_stopped(): return
@@ -328,10 +345,16 @@ func straight_fly_cards(instance): #Viewport version, possibly obselete
 
 	instance.get_node("Target").global_transform.basis = Basis(new_rotation)
 
-func straight_fly_cards_real(instance): #This must use local space, unlike viewport version
+func straight_fly_cards_real(instance):
+	if straight_laser_cooldown.time_left <= 0:
+		return # Exit if cooldown is over
+
+	var target_node = instance.get_node("Target")
+	var current_rotation = target_node.transform.basis.get_rotation_quaternion()  # Declare at the start
+
 	while straight_laser_cooldown.time_left > 0:
 		var delta = get_process_delta_time()
-		var target_node = instance.get_node("Target")
+
 		# Lerp + slerp each card in local space (relative to the 'Card' node)
 		for i in range(1, 6):
 			var card = instance.get_node("C%d" % i)
@@ -353,26 +376,32 @@ func straight_fly_cards_real(instance): #This must use local space, unlike viewp
 
 			card.transform = Transform3D(Basis(new_quat), new_origin)
 
-		#rotate 'Target'
+		# Rotate 'Target'
 		rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
-		var current_rotation = target_node.transform.basis.get_rotation_quaternion()
-		var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # rotate around Z-axis
+		current_rotation = target_node.transform.basis.get_rotation_quaternion()  # Update rotation
+		var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # Rotate around Z-axis
 		var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
 		target_node.transform.basis = Basis(new_rotation)
-		#Stop spin, reset vars
-		target_node.transform.basis = Basis(current_rotation)
-		rot_speed = 0.7
-		rot_acc = 3
-		rot_max_speed = 9.5
-		#Send cards flying?  Or whatever they do?
-		#Return cards to original position and rotation while invisible
-		for i in range(1, 6):
-			var card = instance.get_node("C%d" % i)
-			var t_node = instance.get_node("P%d" % i)
-			card.transform = t_node.transform
-		#throw_cards()
-		#cards_down()
-		print("e")
+
+		await get_tree().process_frame  # Yield execution so it doesn't lock up
+
+	# Reset rotation and stop movement
+	target_node.transform.basis = Basis(current_rotation)  # Ensure final rotation reset
+	rot_speed = 0.7
+	rot_acc = 3
+	rot_max_speed = 9.5
+
+	# Return cards to original position and rotation while invisible
+	for i in range(1, 6):
+		var card = instance.get_node("C%d" % i)
+		var t_node = instance.get_node("P%d" % i)
+		card.transform = t_node.transform
+
+	print("e")
+	set_cards()
+	load_set_cards()
+
+
 
 func laser():
 	if active_laser:

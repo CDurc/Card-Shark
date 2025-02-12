@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=19 format=3 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://toq3yagj7pvo" path="res://Card Shark/ace_of_spades_destiny_2.glb" id="2_raaok"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_me0ch"]
 [ext_resource type="PackedScene" uid="uid://dtw1crl6pckfi" path="res://Card Shark/TheCardShark_v3.glb" id="6_ox7r8"]
 [ext_resource type="PackedScene" uid="uid://b7gb63ibneevv" path="res://Card Shark/laser.tscn" id="7_o7uuw"]
+[ext_resource type="PackedScene" uid="uid://bfljw54prxjvj" path="res://Card Shark/SharkGun.glb" id="9_wuq64"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="10_cibhp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_i5175"]
@@ -118,6 +119,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4634, 5.23277, 0.130196)
 
 [node name="RootNode" parent="Map" instance=ExtResource("7_o7uuw")]
 transform = Transform3D(1, 0, 0, 0, 0.730317, 33.1976, 0, -0.683108, 35.4919, 0, 1.11999, 0)
+
+[node name="SharkGun2" parent="Map" instance=ExtResource("9_wuq64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.04003, -23.9812)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_pexkb")

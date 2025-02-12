@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://ficgyrmbr8nu"]
+
+[ext_resource type="PackedScene" uid="uid://gsoywute2cbt" path="res://Card Shark/TheCardSharkv4.glb" id="1_sfrpj"]
+[ext_resource type="ArrayMesh" uid="uid://dtxob7y80tfgp" path="res://Card Shark/shark mesh 4.tres" id="2_ocyhk"]
+[ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="3_w46ih"]
+
+[node name="TheCardSharkv4" instance=ExtResource("1_sfrpj")]
+
+[node name="Skeleton3D" parent="SharkBones" index="0"]
+bones/1/position = Vector3(-0.164412, 2.68524, 8.86475)
+bones/3/rotation = Quaternion(-0.396043, -0.0217878, -0.0207304, 0.91774)
+bones/5/rotation = Quaternion(-0.244589, 0.281293, -0.489828, 0.788111)
+bones/6/rotation = Quaternion(0.688074, 0.00855659, -0.0480884, 0.723995)
+bones/7/rotation = Quaternion(-0.449177, -0.304771, 0.123686, 0.830697)
+bones/8/rotation = Quaternion(-0.0911783, 0.112991, -0.860511, 0.488303)
+bones/10/rotation = Quaternion(0.120798, 0.00256121, 0.0127377, 0.992592)
+bones/13/rotation = Quaternion(0.310121, -0.489718, 0.509265, 0.636121)
+bones/14/rotation = Quaternion(0.196456, -0.00567365, -0.664161, 0.721293)
+bones/15/rotation = Quaternion(0.0329167, 0.930988, 0.207953, 0.298219)
+bones/17/rotation = Quaternion(0.998122, 0.0501304, 0.0324979, -0.0135723)
+bones/18/rotation = Quaternion(0.231884, -0.0190545, 0.0596362, 0.970727)
+bones/19/rotation = Quaternion(-0.515059, 0.00106818, -0.00814641, 0.857115)
+bones/21/rotation = Quaternion(0.998312, -0.0563058, 0.00545954, -0.0131241)
+bones/22/rotation = Quaternion(0.227106, 0.0187336, -0.0775001, 0.970601)
+bones/23/rotation = Quaternion(-0.507869, -0.0427304, 0.00660957, 0.860349)
+bones/25/position = Vector3(2.11704, -1.01101, 15.9942)
+bones/25/rotation = Quaternion(-0.103893, 0.0719556, -0.991978, -0.00277358)
+bones/26/rotation = Quaternion(0.929327, -3.98264e-08, 2.40725e-07, -0.369258)
+bones/27/position = Vector3(2.62438, 4.22044, 15.0504)
+bones/28/rotation = Quaternion(0.999964, -3.04759e-09, 3.57616e-07, -0.00852165)
+bones/29/rotation = Quaternion(0.929327, -4.40189e-08, 1.10784e-07, -0.369258)
+bones/30/position = Vector3(-3.38636, 1.72522, 16.2408)
+bones/31/rotation = Quaternion(0.999964, -3.04782e-09, 3.57616e-07, -0.00852232)
+bones/32/position = Vector3(-2.46401, -0.336434, 17.519)
+bones/32/rotation = Quaternion(-0.241508, 0.469267, 0.681117, -0.507486)
+
+[node name="Collision Object" parent="SharkBones/Skeleton3D" index="0"]
+visible = false
+
+[node name="Shark Body" parent="SharkBones/Skeleton3D" index="1"]
+mesh = ExtResource("2_ocyhk")
+
+[node name="RightHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D" index="2"]
+transform = Transform3D(0.870318, -0.0493232, -0.490014, 0.00549703, 0.995883, -0.090479, 0.492459, 0.0760519, 0.867006, 3.03844, 3.51575, 2.28067)
+bone_name = "Palm R"
+bone_idx = 16
+
+[node name="Card" parent="SharkBones/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("3_w46ih")]
+transform = Transform3D(0.426719, 0.0266021, -0.903994, 0.0822701, 0.994281, 0.068093, 0.900635, -0.103428, 0.422091, -0.133882, 0.0720623, -0.134276)
