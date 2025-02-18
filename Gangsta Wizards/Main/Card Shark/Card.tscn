@@ -1,4 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://bgvpqpkr8qlnu"]
+[gd_scene load_steps=47 format=3 uid="uid://bgvpqpkr8qlnu"]
+
+[ext_resource type="Texture2D" uid="uid://btoeu03q87qs8" path="res://Card Shark/Card Pics/PlayingCard_6D.jpg" id="1_i8fje"]
+[ext_resource type="Texture2D" uid="uid://c17ocgn82ag4m" path="res://Card Shark/Card Pics/PlayingCard_7D.jpg" id="2_5pr2o"]
+[ext_resource type="Texture2D" uid="uid://ch8qgsu1npfhm" path="res://Card Shark/Card Pics/PlayingCard_CardBack.png" id="2_fr1e1"]
+[ext_resource type="Texture2D" uid="uid://cghroaiy13ekt" path="res://Card Shark/Card Pics/PlayingCard_8C.jpg" id="3_jypve"]
+[ext_resource type="Texture2D" uid="uid://c54nfk6x6e6sm" path="res://Card Shark/Card Pics/PlayingCard_10C.jpg" id="4_6rc0t"]
+[ext_resource type="Texture2D" uid="uid://bxa7a3e02csxd" path="res://Card Shark/Card Pics/PlayingCard_2D.jpg" id="5_wk5dt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_elhht"]
 size = Vector3(0.5, 0.8, 0.007)
@@ -19,6 +26,20 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my51j"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7sum"]
+albedo_texture = ExtResource("1_i8fje")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sougk"]
+material = SubResource("StandardMaterial3D_f7sum")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25vxn"]
+albedo_texture = ExtResource("2_fr1e1")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0feh3"]
+material = SubResource("StandardMaterial3D_25vxn")
+size = Vector2(0.5, 0.8)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mue8h"]
 albedo_color = Color(1, 0, 0, 1)
 
@@ -27,6 +48,13 @@ material = SubResource("StandardMaterial3D_mue8h")
 text = "B
 "
 font_size = 31
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5k1f"]
+albedo_texture = ExtResource("2_5pr2o")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q27fr"]
+material = SubResource("StandardMaterial3D_s5k1f")
+size = Vector2(0.5, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmysy"]
 albedo_color = Color(1, 0, 0, 1)
@@ -37,6 +65,13 @@ text = "C
 "
 font_size = 31
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xif7u"]
+albedo_texture = ExtResource("3_jypve")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3g01t"]
+material = SubResource("StandardMaterial3D_xif7u")
+size = Vector2(0.5, 0.8)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77ggf"]
 albedo_color = Color(1, 0, 0, 1)
 
@@ -46,6 +81,13 @@ text = "D
 "
 font_size = 31
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoltv"]
+albedo_texture = ExtResource("4_6rc0t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7edms"]
+material = SubResource("StandardMaterial3D_uoltv")
+size = Vector2(0.5, 0.8)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc4yl"]
 albedo_color = Color(1, 0, 0, 1)
 
@@ -54,6 +96,13 @@ material = SubResource("StandardMaterial3D_sc4yl")
 text = "E
 "
 font_size = 31
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ve0s"]
+albedo_texture = ExtResource("5_wk5dt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i1yeu"]
+material = SubResource("StandardMaterial3D_7ve0s")
+size = Vector2(0.5, 0.8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_beqvw"]
 size = Vector3(0.5, 0.8, 0.04)
@@ -120,6 +169,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_gyj6j")
 
 [node name="Txt" type="MeshInstance3D" parent="C1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, -0.11444, 0.257638, 0.0170923)
+visible = false
 mesh = SubResource("TextMesh_vq5gj")
 skeleton = NodePath("../..")
 
@@ -137,6 +187,14 @@ mesh = SubResource("BoxMesh_elhht")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
+[node name="Front" type="MeshInstance3D" parent="C1"]
+transform = Transform3D(1, 2.22045e-16, 2.98023e-08, 2.98023e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00448821)
+mesh = SubResource("PlaneMesh_sougk")
+
+[node name="Back" type="MeshInstance3D" parent="C1"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
 [node name="C2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999296, -0.0375158, 0, 0.0375158, 0.999296, 0, 0, 0, 1, -0.32328, 0.0178508, -0.0124679)
 layers = 3
@@ -145,6 +203,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="Txt" type="MeshInstance3D" parent="C2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, -0.108958, 0.264793, 0.0170924)
+visible = false
 mesh = SubResource("TextMesh_po3bm")
 skeleton = NodePath("../..")
 
@@ -162,6 +221,14 @@ mesh = SubResource("BoxMesh_elhht")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
+[node name="Front" type="MeshInstance3D" parent="C2"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_q27fr")
+
+[node name="Back" type="MeshInstance3D" parent="C2"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
 [node name="C3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0302078, -0.00492385)
 layers = 3
@@ -170,6 +237,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="Txt" type="MeshInstance3D" parent="C3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, -0.138516, 0.270245, 0.0170924)
+visible = false
 mesh = SubResource("TextMesh_xexcf")
 skeleton = NodePath("../..")
 
@@ -187,6 +255,14 @@ mesh = SubResource("BoxMesh_elhht")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
+[node name="Front" type="MeshInstance3D" parent="C3"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_3g01t")
+
+[node name="Back" type="MeshInstance3D" parent="C3"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
 [node name="C4" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.998705, 0.0508718, 0, -0.0508718, 0.998705, 0, 0, 0, 1, 0.304401, 0.0254918, 0.00649279)
 layers = 3
@@ -195,6 +271,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="Txt" type="MeshInstance3D" parent="C4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, -0.131909, 0.270226, 0.0170924)
+visible = false
 mesh = SubResource("TextMesh_i0cwm")
 skeleton = NodePath("../..")
 
@@ -212,6 +289,14 @@ mesh = SubResource("BoxMesh_elhht")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
+[node name="Front" type="MeshInstance3D" parent="C4"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_7edms")
+
+[node name="Back" type="MeshInstance3D" parent="C4"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
 [node name="C5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.994596, 0.103817, 0, -0.103817, 0.994596, 0, 0, 0, 1, 0.609393, 0.00644417, 0.0182935)
 layers = 3
@@ -220,6 +305,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
 
 [node name="Txt" type="MeshInstance3D" parent="C5"]
 transform = Transform3D(1, 2.23517e-08, 0, -2.23517e-08, 1, 0, 0, 0, 0.192, -0.116025, 0.269454, 0.0170924)
+visible = false
 mesh = SubResource("TextMesh_gytbf")
 skeleton = NodePath("../..")
 
@@ -236,6 +322,14 @@ layers = 3
 mesh = SubResource("BoxMesh_elhht")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="C5"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_i1yeu")
+
+[node name="Back" type="MeshInstance3D" parent="C5"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
 
 [node name="P1" type="Marker3D" parent="."]
 transform = Transform3D(0.997605, -0.0691645, 0, 0.0691645, 0.997605, 0, 0, 0, 1, -0.637509, -0.00915033, -0.0244202)

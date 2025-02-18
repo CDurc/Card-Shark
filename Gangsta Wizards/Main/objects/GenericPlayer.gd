@@ -121,14 +121,16 @@ var gun
 var phys_card_path
 var phys_card #phys_cards are affected by gravity/ physics
 var bofa
+var splash
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
+var splash_path = preload("res://Particles/laser_splash.tscn")
 
 # Functions
 func _ready():
-	
+	add_to_group("Player") #So bots can communicate easily with player?
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	#Load weapon
 	deck.shuffle()
@@ -233,11 +235,14 @@ func set_cards():
 	print(best_hand)
 	
 func load_set_cards(): #This CANNOT be same fn as set_cards because viewport needs to load after set
-	cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"]) #this could be a for loop
-	cards.get_node("C2").get_node("Txt").mesh.text = str(hand[1]["rank"])
-	cards.get_node("C3").get_node("Txt").mesh.text = str(hand[2]["rank"])
-	cards.get_node("C4").get_node("Txt").mesh.text = str(hand[3]["rank"])
-	cards.get_node("C5").get_node("Txt").mesh.text = str(hand[4]["rank"])
+	#cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"])
+	for i in range(len(hand)):
+		print(i)
+		var card_front = cards.get_node("C%d" % (i+1)).get_node("Front").mesh.material
+		var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
+		print (card_type)
+		var image = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % (card_type))
+		card_front.albedo_texture = image
 
 func discard():
 	if Input.is_action_pressed("Ability1"):
@@ -261,10 +266,8 @@ func cards_down():
 	load_set_cards()
 
 func throw_cards():
-	
+	anime.play("Discard")
 	for i in range(len(hand)):
-		
-		anime.play("New Card")
 		phys_card = phys_card_scene.instantiate()
 		var text_node = phys_card.get_node("Rig").get_node("Txt")
 		text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
@@ -401,28 +404,42 @@ func straight_fly_cards_real(instance):
 	set_cards()
 	load_set_cards()
 
-
-
 func laser():
 	if active_laser:
 		var hit_position
 		if raycast.is_colliding():
 			hit_position = raycast.get_collision_point()
+
+			# Spawn the splash scene.
+			var splash = splash_path.instantiate()
+			get_tree().root.add_child(splash)
+
+			# Position the splash at the hit point.
+			splash.position = hit_position + (raycast.get_collision_normal() / 10) #/10 to nudge towards the ray a bit
+			
+			var particles = splash.get_node("GPUParticles3D")
+			if particles:
+				#Duplicate the entire process_material so it doesn't share with previous splashes.
+				if particles.process_material:
+					particles.process_material = particles.process_material.duplicate(true)
+
+				particles.emitting = true
+
+				# 4) Delete the splash
+				get_tree().create_timer(particles.lifetime).timeout.connect(func():
+					if is_instance_valid(splash):
+						splash.queue_free()
+				)
 		else:
-			hit_position = raycast.global_transform.origin + raycast.global_transform.basis.z * -100 #fallback distance
+			hit_position = raycast.global_transform.origin + raycast.global_transform.basis.z * -100 #Fallback distance
 
 		var start_position = laser_spawn.global_transform.origin
-
-		# Place the laser at the muzzle
 		active_laser.global_transform.origin = start_position
-
-		# Rotate it to face the hit
 		active_laser.look_at(hit_position)
-
-		# Scale to the exact distance
 		var distance = start_position.distance_to(hit_position)
 		active_laser.scale.z = distance
 
+		
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
 	

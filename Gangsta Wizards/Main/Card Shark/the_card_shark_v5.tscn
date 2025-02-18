@@ -8,35 +8,44 @@
 
 [node name="Skeleton3D" parent="SharkBones" index="0"]
 bones/1/position = Vector3(-0.164412, 2.68524, 8.86475)
-bones/5/rotation = Quaternion(-0.0498222, 0.222765, -0.531204, 0.815915)
-bones/6/rotation = Quaternion(0.636931, 0.00909537, -0.0445141, 0.769581)
-bones/7/rotation = Quaternion(-0.539338, -0.346279, 0.186853, 0.744508)
-bones/8/rotation = Quaternion(-0.0911784, 0.112991, -0.860511, 0.488303)
+bones/2/rotation = Quaternion(0.344193, 0.00746124, -0.00267819, 0.938865)
+bones/5/rotation = Quaternion(0.0107202, 0.354139, -0.379806, 0.854528)
+bones/6/rotation = Quaternion(0.648564, 0.00897924, -0.0453271, 0.759756)
+bones/7/rotation = Quaternion(-0.487613, -0.530845, 0.135492, 0.679764)
+bones/8/rotation = Quaternion(-0.0911783, 0.112991, -0.860511, 0.488303)
+bones/10/rotation = Quaternion(0.120798, 0.00256121, 0.0127377, 0.992592)
+bones/11/rotation = Quaternion(-0.110252, 0.00572376, -0.00367142, 0.993881)
+bones/12/rotation = Quaternion(-0.359279, 0.490751, 0.614058, 0.503006)
 bones/13/rotation = Quaternion(0.408639, -0.488488, 0.516763, 0.572145)
 bones/14/rotation = Quaternion(0.155372, -0.00658074, -0.525269, 0.836605)
 bones/15/rotation = Quaternion(0.161291, 0.901779, 0.109849, 0.385634)
-bones/17/rotation = Quaternion(0.998122, 0.0501304, 0.0324979, -0.0135723)
-bones/18/rotation = Quaternion(0.231884, -0.0190545, 0.0596362, 0.970727)
-bones/19/rotation = Quaternion(-0.515059, 0.00106818, -0.00814641, 0.857115)
-bones/21/rotation = Quaternion(0.998312, -0.0563058, 0.00545954, -0.0131241)
-bones/22/rotation = Quaternion(0.227106, 0.0187336, -0.0775001, 0.970601)
-bones/23/rotation = Quaternion(-0.507869, -0.0427304, 0.00660957, 0.860349)
-bones/25/position = Vector3(1.47099, -1.01101, 16.9983)
+bones/17/rotation = Quaternion(0.967259, 0.0201367, 0.0287711, -0.251351)
+bones/18/rotation = Quaternion(0.00260204, -0.0196253, 0.000669239, 0.999804)
+bones/19/rotation = Quaternion(-0.521871, -0.0159977, 0.0155055, 0.852733)
+bones/21/rotation = Quaternion(0.999456, -0.016982, -0.00277432, 0.028149)
+bones/22/rotation = Quaternion(0.00254811, 0.0192973, -0.000869485, 0.99981)
+bones/23/rotation = Quaternion(-0.263676, -0.00966535, -0.0245991, 0.964249)
+bones/25/position = Vector3(2.05321, -1.01101, 16.9983)
 bones/25/rotation = Quaternion(-0.103893, 0.0719556, -0.991978, -0.00277358)
+bones/26/position = Vector3(1.58679, 5.51411, 0.330719)
 bones/26/rotation = Quaternion(0.929327, -3.98264e-08, 2.40725e-07, -0.369258)
 bones/27/position = Vector3(2.62438, 4.22044, 15.0504)
+bones/28/position = Vector3(1.43585, 0.0969856, 4.63243)
 bones/28/rotation = Quaternion(0.999964, -3.04759e-09, 3.57616e-07, -0.00852165)
+bones/29/position = Vector3(-1.77391, 0.0246565, 0.228271)
 bones/29/rotation = Quaternion(0.929327, -4.40189e-08, 1.10784e-07, -0.369258)
 bones/30/position = Vector3(-3.38636, 1.72522, 16.2408)
+bones/31/position = Vector3(-1.7708, -1.24554, 4.60794)
 bones/31/rotation = Quaternion(0.999964, -3.04782e-09, 3.57616e-07, -0.00852232)
 bones/32/position = Vector3(-1.68357, -0.882848, 17.4812)
 bones/32/rotation = Quaternion(-0.241508, 0.469267, 0.681117, -0.507486)
+bones/32/scale = Vector3(1, 1, 1)
 
 [node name="Collision Object" parent="SharkBones/Skeleton3D" index="0"]
 visible = false
 
 [node name="RightHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D" index="2"]
-transform = Transform3D(0.870318, -0.049324, -0.490015, 0.00549792, 0.995883, -0.0904793, 0.49246, 0.0760516, 0.867006, 3.58488, 3.47794, 1.50021)
+transform = Transform3D(0.870318, -0.0493239, -0.490015, 0.00549791, 0.995883, -0.0904792, 0.49246, 0.0760515, 0.867005, 3.58488, 3.47794, 1.50021)
 bone_name = "Palm R"
 bone_idx = 16
 
@@ -44,9 +53,9 @@ bone_idx = 16
 transform = Transform3D(0.426719, 0.0266021, -0.903994, 0.0822701, 0.994281, 0.068093, 0.900635, -0.103428, 0.422091, -0.132107, 0.393615, -0.16349)
 
 [node name="LeftHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D" index="3"]
-transform = Transform3D(0.870318, -0.049324, -0.490015, 0.00549792, 0.995883, -0.0904793, 0.49246, 0.0760516, 0.867006, 3.58488, 3.47794, 1.50021)
-bone_name = "Palm R"
-bone_idx = 16
+transform = Transform3D(-0.850166, -0.525316, 0.0354939, 0.0629002, -0.0344043, 0.997427, -0.522743, 0.850211, 0.0622917, 4.49486, 2.36583, -1.95019)
+bone_name = "Palm L"
+bone_idx = 8
 
 [node name="SharkGun2" parent="SharkBones/Skeleton3D/LeftHandContainer" index="0" instance=ExtResource("3_s73m7")]
-transform = Transform3D(-0.141978, -0.00121898, 0.264274, -0.03295, 0.297738, -0.0163286, -0.262215, -0.0367538, -0.141041, -0.359773, -0.874843, -2.63656)
+transform = Transform3D(0.162169, 0.00905067, -0.252229, -0.252033, -0.010148, -0.162408, -0.0134318, 0.299692, 0.00211792, 0.0860531, 0.221254, 0.29399)

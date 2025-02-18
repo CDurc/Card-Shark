@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqerlocbm6wym"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c3sbb"]
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 183.91
+initial_velocity_max = 183.91
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cip1w"]
+albedo_color = Color(1, 0, 0.113725, 1)
+emission_enabled = true
+emission = Color(0.8, 0.0588235, 0.0823529, 1)
+emission_energy_multiplier = 3.26
+
+[sub_resource type="SphereMesh" id="SphereMesh_0frfb"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_cip1w")
+radius = 0.015
+height = 0.03
+
+[node name="Splash" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_c3sbb")
+draw_pass_1 = SubResource("SphereMesh_0frfb")
