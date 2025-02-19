@@ -98,19 +98,23 @@ signal health_updated
 @onready var test_spawn = $Laserspawn #For parenting
 
 @onready var card_container = $CardContainer
+@onready var basking_spawn = $Baskingspawn
 @onready var sound_footsteps = $SoundFootsteps
 @onready var card_cooldown = $CardCooldown
 @onready var magic_cooldown = $MagicCooldown #Timer for magic only
 @onready var gun_cooldown = $GunCooldown #Timer for magic only
-@onready var straight_laser_cooldown = $StraightLaserCooldown #Timer for magic only
+@onready var straight_laser_cooldown = $StraightLaserCooldown
+@onready var basking_house_cooldown = $BaskingHouseCooldown
 
 @onready var anime = $TheCardSharkv4/AnimationPlayer
+@onready var gun_anime = $TheCardSharkv4/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
 @onready var UI_Card1 = $"../HUD/C1/Txt"
 @onready var UI_Card2 = $"../HUD/C2/Txt"
 
 @export var crosshair:TextureRect
 
 #Durc
+var basking_shark
 var active_laser
 var all_cards
 var best_hand #Best Hand Algo will return this
@@ -127,6 +131,7 @@ var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
+var basking_shark_path = preload("res://Card Shark/basking_shark.tscn")
 
 # Functions
 func _ready():
@@ -145,7 +150,7 @@ func _physics_process(delta):
 	handle_gravity(delta)
 	
 	if active_laser:
-		laser()
+		laser(delta)
 	
 	# Movement
 	var applied_velocity: Vector3
@@ -279,6 +284,11 @@ func throw_cards():
 		var random_direction = card_container.global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
+	#Turn cards in hand invisible
+	await get_tree().create_timer(0.2).timeout
+	right_hand_container.visible = false
+	await get_tree().create_timer(1).timeout
+	right_hand_container.visible = true
 
 func drop_cards():
 	
@@ -296,6 +306,16 @@ func drop_cards():
 		var random_direction = card_container.global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
+
+func basking_house_spell():
+	if Input.is_action_pressed("Ability2"):
+		if !basking_house_cooldown.is_stopped(): return
+		print ("F")
+		basking_house_cooldown.start(5)
+		basking_shark = basking_shark_path.instantiate()
+		basking_shark.position = basking_spawn.position
+		get_tree().root.add_child(basking_shark)
+		
 
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
@@ -404,10 +424,15 @@ func straight_fly_cards_real(instance):
 	set_cards()
 	load_set_cards()
 
-func laser():
+func laser(delta):
 	if active_laser:
 		var hit_position
 		if raycast.is_colliding():
+			var collider = raycast.get_collider()
+			if collider and collider.has_method("damage"):
+				collider.damage(100*delta)
+			
+			
 			hit_position = raycast.get_collision_point()
 
 			# Spawn the splash scene.
@@ -439,15 +464,15 @@ func laser():
 		var distance = start_position.distance_to(hit_position)
 		active_laser.scale.z = distance
 
-		
+
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
 	
 		if !gun_cooldown.is_stopped(): return
 		
-		#Audio.play("res://sounds/blaster.ogg")
-		#shoot_laser()
 		Audio.play("sounds/blaster_repeater.ogg")
+		gun_anime.play("Fire")
+		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual
 		camera.rotation.x += 0.025 # Knockback of camera
@@ -507,6 +532,7 @@ func handle_controls(_delta):
 	discard()
 	shoot()
 	straight_laser_spell()
+	basking_house_spell()
 	
 	# Mouse capture
 	

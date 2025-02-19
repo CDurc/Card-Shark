@@ -5,9 +5,9 @@
 [node name="SharkGun2" instance=ExtResource("1_oh7ft")]
 
 [node name="Skeleton3D" parent="SharkGun" index="0"]
-bones/0/position = Vector3(0, 2.65976, -0.636242)
-bones/0/rotation = Quaternion(-0.00947943, -4.13609e-25, 1.06171e-17, 0.999955)
-bones/1/position = Vector3(-0.0133523, 2.97412, -0.851731)
-bones/1/rotation = Quaternion(0.0127162, 2.3564e-19, 1.06145e-17, 0.999919)
+bones/0/position = Vector3(-1.4658e-16, 2.65328, -0.660136)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/1/position = Vector3(-0.0133523, 2.9719, -0.869783)
+bones/1/rotation = Quaternion(0.0221943, -1.84889e-32, -3.85182e-32, 0.999754)
 bones/2/position = Vector3(-0.0194149, 6.16098, -1.2932)
 bones/2/rotation = Quaternion(-0.121622, 6.16298e-33, 4.41192e-32, 0.992576)

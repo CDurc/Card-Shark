@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfs7t8w8wgff3"]
+
+[ext_resource type="PackedScene" uid="uid://3twoblqia3rh" path="res://Card Shark/Basking Shark.glb" id="1_3qw25"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h2g7j"]
+height = 3.0
+radius = 2.0
+
+[node name="Basking Shark" instance=ExtResource("1_3qw25")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Suckbox" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 4.1886, 0, 0)
+shape = SubResource("CylinderShape3D_h2g7j")
+
+[node name="Suckpoint" type="Marker3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2412, 0, 0)

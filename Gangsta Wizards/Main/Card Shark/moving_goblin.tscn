@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cv5rfef3j7mc6" path="res://Card Shark/Goblin.glb" id="1_igkm2"]
 
 [node name="Goblin" instance=ExtResource("1_igkm2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Goblin Bones" index="0"]
 bones/1/position = Vector3(-0.0526531, 1.55395, 3.17934)
@@ -64,7 +65,7 @@ bones/79/position = Vector3(-0.721927, 0.0146323, 5.36937)
 bones/79/rotation = Quaternion(-0.809394, -0.0921547, 0.570527, -0.104345)
 
 [node name="Hat" parent="Goblin Bones/Skeleton3D" index="0"]
-transform = Transform3D(-0.000530131, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640901, 0.0824729, 1.09378, 0.226635)
+transform = Transform3D(-0.000530203, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640909, 0.0824729, 1.09379, 0.226633)
 
 [node name="Goblin Bones__lowpoly" parent="." index="1"]
 visible = false
@@ -93,4 +94,4 @@ bones/76/rotation = Quaternion(0.929327, -4.40189e-08, 1.10784e-07, -0.369258)
 bones/79/rotation = Quaternion(-0.22089, -0.0802441, 0.680686, 0.693855)
 
 [node name="Hat_lowpoly" parent="Goblin Bones__lowpoly/Skeleton3D" index="0"]
-transform = Transform3D(-0.000530136, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640901, 0.0824729, 1.41209, 0.319704)
+transform = Transform3D(-0.000530175, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640907, 0.0824728, 1.41209, 0.319704)

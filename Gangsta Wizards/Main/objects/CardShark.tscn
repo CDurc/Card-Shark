@@ -103,6 +103,10 @@ one_shot = true
 wait_time = 0.213
 one_shot = true
 
+[node name="BaskingHouseCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
 
@@ -110,11 +114,14 @@ one_shot = true
 one_shot = true
 
 [node name="CardContainer" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430047, -0.669971)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0902302, 0.850561, -0.350699)
 
 [node name="spawn" type="MeshInstance3D" parent="CardContainer"]
 visible = false
 mesh = SubResource("CapsuleMesh_hlc1o")
+
+[node name="Baskingspawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.41866, -2.97245)
 
 [node name="Laserspawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 0.9012, -0.423599)

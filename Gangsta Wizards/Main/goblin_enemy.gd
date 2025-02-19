@@ -4,7 +4,10 @@ extends CharacterBody3D
 @export var follow_speed = 2.0
 @export var gravity_strength = 20.0
 
+
 var player
+var health := 100
+var destroyed := false
 
 func _ready():
 	# Find the first node in group "Player"
@@ -33,6 +36,7 @@ func _physics_process(delta):
 		# Update only x and z; keep y for gravity
 		velocity.x = direction.x * follow_speed
 		velocity.z = direction.z * follow_speed
+		look_at(player_pos)
 	else:
 		velocity.x = 0
 		velocity.z = 0
@@ -43,3 +47,14 @@ func _physics_process(delta):
 	# Optional: do something if we landed on the floor
 	# if on_floor_after:
 	#     print("Enemy on floor now!")
+
+func destroy():
+	Audio.play("sounds/enemy_destroy.ogg")
+
+	destroyed = true
+	queue_free()
+func damage(amount):
+	health -= amount
+
+	if health <= 0 and !destroyed:
+		destroy()

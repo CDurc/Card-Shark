@@ -244,3 +244,9 @@ player = NodePath("../../Player")
 
 [node name="Goblin Enemy" parent="." instance=ExtResource("15_yua1b")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -7.44596, 0.856156, 0)
+
+[node name="Goblin Enemy2" parent="." instance=ExtResource("15_yua1b")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.03516, 0.856156, 0)
+
+[node name="Goblin Enemy3" parent="." instance=ExtResource("15_yua1b")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.03516, 0.856156, -0.499126)
