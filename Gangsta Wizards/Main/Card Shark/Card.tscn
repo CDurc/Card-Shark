@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c17ocgn82ag4m" path="res://Card Shark/Card Pics/PlayingCard_7D.jpg" id="2_5pr2o"]
 [ext_resource type="Texture2D" uid="uid://ch8qgsu1npfhm" path="res://Card Shark/Card Pics/PlayingCard_CardBack.png" id="2_fr1e1"]
 [ext_resource type="Texture2D" uid="uid://cghroaiy13ekt" path="res://Card Shark/Card Pics/PlayingCard_8C.jpg" id="3_jypve"]
-[ext_resource type="Texture2D" uid="uid://c54nfk6x6e6sm" path="res://Card Shark/Card Pics/PlayingCard_10C.jpg" id="4_6rc0t"]
+[ext_resource type="Texture2D" uid="uid://bq62h4r4ytaqi" path="res://Card Shark/Card Pics/PlayingCard_10C.jpg" id="4_6rc0t"]
 [ext_resource type="Texture2D" uid="uid://bxa7a3e02csxd" path="res://Card Shark/Card Pics/PlayingCard_2D.jpg" id="5_wk5dt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_elhht"]

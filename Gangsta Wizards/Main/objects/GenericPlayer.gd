@@ -131,7 +131,7 @@ var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
-var basking_shark_path = preload("res://Card Shark/basking_shark.tscn")
+var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
 
 # Functions
 func _ready():
@@ -311,11 +311,39 @@ func basking_house_spell():
 	if Input.is_action_pressed("Ability2"):
 		if !basking_house_cooldown.is_stopped(): return
 		print ("F")
+		var flying = true
 		basking_house_cooldown.start(5)
 		basking_shark = basking_shark_path.instantiate()
-		basking_shark.position = basking_spawn.position
+		basking_shark.global_transform = basking_spawn.global_transform
 		get_tree().root.add_child(basking_shark)
+		move_shark(basking_shark)
+		await get_tree().create_timer(3).timeout #wait to open mouth
+		var shark_anime = basking_shark.get_node("PathFollow3D").get_node("Basking Shark").get_node("AnimationPlayer")
+		shark_anime.play("Expand")
+		shark_anime.speed_scale = 0.5
+		# Increase suckbox as mouth opens
+		var tween = get_tree().create_tween()
+
+		var sucking_visual = basking_shark.get_node("PathFollow3D/Basking Shark/Sucker/Sucking visual")
+		var visual_mesh = sucking_visual.mesh
+
+		# Duplicate the mesh and apply it back to the MeshInstance3D
+		sucking_visual.mesh = visual_mesh.duplicate()
+
+		# Now modify the unique duplicated mesh
+		tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
+		tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
 		
+		
+
+		
+func move_shark(shark):
+	var path_follow = shark.get_node("PathFollow3D")
+	path_follow.progress = 0  # Reset position
+	path_follow.set_meta("speed", 3)  #pass speed to path3D
+
+	# Enable per-frame movement
+	path_follow.set_process(true)
 
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):

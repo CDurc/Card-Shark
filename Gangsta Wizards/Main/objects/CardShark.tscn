@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bulqxst6fcjsh"]
+[gd_scene load_steps=10 format=3 uid="uid://bulqxst6fcjsh"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_0uyvx"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="5_lfidv"]
@@ -14,6 +14,10 @@ height = 1.1
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
 radius = 0.01
 height = 0.02
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_03cjf"]
+radius = 0.1
+height = 0.2
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -121,7 +125,10 @@ visible = false
 mesh = SubResource("CapsuleMesh_hlc1o")
 
 [node name="Baskingspawn" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.41866, -2.97245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.47398, -2.97245)
+
+[node name="indicator" type="MeshInstance3D" parent="Baskingspawn"]
+mesh = SubResource("CapsuleMesh_03cjf")
 
 [node name="Laserspawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 0.9012, -0.423599)

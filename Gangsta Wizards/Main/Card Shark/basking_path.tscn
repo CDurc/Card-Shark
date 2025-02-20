@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsigpj5ws2ncu"]
+
+[ext_resource type="Script" path="res://Card Shark/follow_path.gd" id="1_kfkpi"]
+[ext_resource type="PackedScene" uid="uid://bfs7t8w8wgff3" path="res://Card Shark/basking_shark.tscn" id="1_pu7de"]
+
+[sub_resource type="Curve3D" id="Curve3D_kj5y3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 3, 0, 0, -1, 0, 0, 0, 1.5, 0, 0, 0, 0, 5, -3, 0, 0, 0, 0, 0, 0, 0, 5, -20),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[node name="Path3D" type="Path3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+curve = SubResource("Curve3D_kj5y3")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(-4.3711e-08, 1, -4.3711e-08, 0, -4.37114e-08, -0.999992, -0.999992, -4.37114e-08, 1.91067e-15, 0, -1, 0)
+script = ExtResource("1_kfkpi")
+
+[node name="Basking Shark" parent="PathFollow3D" instance=ExtResource("1_pu7de")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 0, 0)

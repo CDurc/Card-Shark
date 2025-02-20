@@ -2,14 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://27bk662wya63"
+uid="uid://drl5hbjy4i4t3"
 path.s3tc="res://.godot/imported/PlayingCard_14H.jpg-93d4eb7eb07cfae529849d138521abbb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "bf33c7df874cad9fe92db63a0a74f01a"
+"md5": "c2f8a1bf51ff254cb6ec0241a0677858"
 }
 
 [deps]

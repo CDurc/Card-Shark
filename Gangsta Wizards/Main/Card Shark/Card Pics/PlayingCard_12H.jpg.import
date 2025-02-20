@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds5pouxdwsy34"
-path.s3tc="res://.godot/imported/9H_9H.png-24136baa138f85923ed418a5d79f8d3f.s3tc.ctex"
+uid="uid://d2g65wr4sp0me"
+path.s3tc="res://.godot/imported/PlayingCard_12H.jpg-f8ffb4c6443d9be92807aaf95a016fe0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "569de79a6065081f54bd092c2bd91baa"
+"md5": "35fd8b26f4cca8e8e3377a04d63bea62"
 }
 
 [deps]
 
-source_file="res://Card Shark/9H_9H.png"
-dest_files=["res://.godot/imported/9H_9H.png-24136baa138f85923ed418a5d79f8d3f.s3tc.ctex"]
+source_file="res://Card Shark/Card Pics/PlayingCard_12H.jpg"
+dest_files=["res://.godot/imported/PlayingCard_12H.jpg-f8ffb4c6443d9be92807aaf95a016fe0.s3tc.ctex"]
 
 [params]
 
