@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c082vbxnkaec3"]
+[gd_scene load_steps=2 format=3 uid="uid://bsk8f7718676w"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_0hrco"]
 size = Vector3(5, 5, 5)

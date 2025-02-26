@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://toq3yagj7pvo"
-path="res://.godot/imported/ace_of_spades_destiny_2.glb-fa04ad10a8ad99480e88b7657bc33fc3.scn"
+uid="uid://cv5rfef3j7mc6"
+path="res://.godot/imported/Goblin.glb-5101db890f37abaefa2f74eefcdf2ca6.scn"
 
 [deps]
 
-source_file="res://Card Shark/ace_of_spades_destiny_2.glb"
-dest_files=["res://.godot/imported/ace_of_spades_destiny_2.glb-fa04ad10a8ad99480e88b7657bc33fc3.scn"]
+source_file="res://objects/Goblin.glb"
+dest_files=["res://.godot/imported/Goblin.glb-5101db890f37abaefa2f74eefcdf2ca6.scn"]
 
 [params]
 

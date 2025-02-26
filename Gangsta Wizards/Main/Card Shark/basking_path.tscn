@@ -15,7 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 curve = SubResource("Curve3D_kj5y3")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(-4.3711e-08, 1, -4.3711e-08, 0, -4.37114e-08, -0.999992, -0.999992, -4.37114e-08, 1.91067e-15, 0, -1, 0)
+transform = Transform3D(-4.37109e-08, 1, -4.37109e-08, 0, -4.37114e-08, -0.999989, -0.999989, -4.37114e-08, 1.91066e-15, 0, -1, 0)
 script = ExtResource("1_kfkpi")
 
 [node name="Basking Shark" parent="PathFollow3D" instance=ExtResource("1_pu7de")]

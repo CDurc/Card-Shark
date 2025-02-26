@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfs7t8w8wgff3"]
+[gd_scene load_steps=6 format=3 uid="uid://bfs7t8w8wgff3"]
 
 [ext_resource type="PackedScene" uid="uid://3twoblqia3rh" path="res://Card Shark/Basking Shark.glb" id="1_3qw25"]
+[ext_resource type="Script" path="res://Card Shark/sucker.gd" id="2_f7bgk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_h2g7j"]
 radius = 1.0
@@ -16,13 +17,13 @@ albedo_color = Color(1, 1, 1, 0.109804)
 [node name="Basking Shark" instance=ExtResource("1_3qw25")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="Suckpoint" type="Marker3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2412, 0, 0)
-
-[node name="SharkHead" parent="." index="2"]
+[node name="SharkHead" parent="." index="1"]
 transform = Transform3D(0.0233784, 0, 0, 0, 0.0233784, 0, 0, 0, 0.0233784, 3.46094, 0.250363, -0.273546)
 
-[node name="Sucker" type="Area3D" parent="." index="4"]
+[node name="Sucker" type="Area3D" parent="." index="3"]
+collision_layer = 3
+script = ExtResource("2_f7bgk")
+target_node = NodePath("Suckpoint")
 
 [node name="Suckbox" type="CollisionShape3D" parent="Sucker" index="0"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 4.1886, 0, 0)
@@ -32,3 +33,6 @@ shape = SubResource("CylinderShape3D_h2g7j")
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 4.189, 0, 0)
 mesh = SubResource("CylinderMesh_sucfv")
 surface_material_override/0 = SubResource("StandardMaterial3D_f32b5")
+
+[node name="Suckpoint" type="Marker3D" parent="Sucker" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2412, 0, 0)

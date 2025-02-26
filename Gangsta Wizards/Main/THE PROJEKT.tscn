@@ -1,20 +1,18 @@
-[gd_scene load_steps=20 format=3 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=18 format=3 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
-[ext_resource type="PackedScene" uid="uid://toq3yagj7pvo" path="res://Card Shark/ace_of_spades_destiny_2.glb" id="2_raaok"]
 [ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_nqoh8"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_pexkb"]
-[ext_resource type="PackedScene" uid="uid://ugy0o3ae7b23" path="res://Card Shark/the_waning_gibbous.tscn" id="4_653qv"]
+[ext_resource type="PackedScene" uid="uid://ugy0o3ae7b23" path="res://objects/the_waning_gibbous.tscn" id="4_653qv"]
 [ext_resource type="PackedScene" uid="uid://bulqxst6fcjsh" path="res://objects/CardShark.tscn" id="4_r1jao"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="5_e0jyt"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hp6lq"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_me0ch"]
 [ext_resource type="PackedScene" uid="uid://dtw1crl6pckfi" path="res://Card Shark/TheCardShark_v3.glb" id="6_ox7r8"]
 [ext_resource type="PackedScene" uid="uid://3twoblqia3rh" path="res://Card Shark/Basking Shark.glb" id="9_m48vo"]
-[ext_resource type="PackedScene" uid="uid://cxc5cas7u2r5d" path="res://Card Shark/PlayingCard.glb" id="9_p7cnd"]
 [ext_resource type="PackedScene" uid="uid://bfljw54prxjvj" path="res://Card Shark/SharkGun.glb" id="9_wuq64"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="10_cibhp"]
-[ext_resource type="PackedScene" uid="uid://d3vokeugd845g" path="res://Card Shark/goblin_enemy.tscn" id="15_yua1b"]
+[ext_resource type="PackedScene" uid="uid://d3vokeugd845g" path="res://objects/goblin_enemy.tscn" id="15_yua1b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_i5175"]
 
@@ -49,8 +47,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.91212, -0.5, 0)
 [node name="platform-large-grass2" parent="Map" instance=ExtResource("1_a674t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 7.42686)
 
-[node name="Sketchfab_Scene" parent="Map" instance=ExtResource("2_raaok")]
+[node name="Sketchfab_Scene" parent="Map"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(-0.0749265, 0, 0.997189, 0, 1, 0, -0.997189, 0, -0.0749265, -0.194063, 0.77156, -7.32325)
+script = null
 
 [node name="Wall1" type="Node3D" parent="Map"]
 transform = Transform3D(5.15071, 0, 0, 0, 2.36219, 0, 0, 0, 1, 6.9901, 0.873913, -3.15489)
@@ -121,8 +129,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.04003, -23.9812)
 [node name="Basking Shark" parent="Map" instance=ExtResource("9_m48vo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02195, 4.35322, -3.74638)
 
-[node name="PlayingCard" parent="Map" instance=ExtResource("9_p7cnd")]
+[node name="PlayingCard" parent="Map"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.73005, 0)
+script = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_pexkb")

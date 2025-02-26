@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cu4uc3lvtx75"]
 
-[ext_resource type="PackedScene" uid="uid://cv5rfef3j7mc6" path="res://Card Shark/Goblin.glb" id="1_qnid3"]
+[ext_resource type="PackedScene" uid="uid://cv5rfef3j7mc6" path="res://objects/Goblin.glb" id="1_qnid3"]
 
 [node name="Goblin" instance=ExtResource("1_qnid3")]
 

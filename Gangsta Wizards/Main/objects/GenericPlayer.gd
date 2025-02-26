@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var movement_speed = 5
 @export var jump_strength = 8
 @export var health:int = 100
+@export var can_move = true
 
 var deck = [
 	{"rank": 2, "suit": "Clubs"},
@@ -158,7 +159,8 @@ func _physics_process(delta):
 	applied_velocity = velocity.lerp(movement_velocity, delta * 10)
 	applied_velocity.y = -gravity
 	velocity = applied_velocity
-	move_and_slide()
+	if can_move:
+		move_and_slide()
 	
 	# Rotation
 	
@@ -208,17 +210,17 @@ func load_viewport(): #Also load any real world things that aren't part of the p
 	#irl_cards.position = Vector3(1,1,-1)
 	#card1.rotation_degrees = Vector3()
 	
-	var gun_model_path = load("res://Card Shark/aceGUN.tscn") #Stolen from destiny lol
-	gun = gun_model_path.instantiate()
-	left_container.add_child(gun)
-	gun.rotation_degrees = gun_rotation
+	#var gun_model_path = load("res://Card Shark/aceGUN.tscn") #Stolen from destiny lol
+	#gun = gun_model_path.instantiate()
+	#left_container.add_child(gun)
+	#gun.rotation_degrees = gun_rotation
 	
 	#Set model to only render on layer 2 (the weapon camera)
 	
 	for child in cards.find_children("*", "MeshInstance3D"):
 		child.layers = 2
-	for child in gun.find_children("*", "MeshInstance3D"):
-		child.layers = 2
+	#for child in gun.find_children("*", "MeshInstance3D"):
+	#	child.layers = 2
 		#child.position += Vector3(0,1,0)
 
 
@@ -512,7 +514,7 @@ func shoot():
 		#left_muzzle.play("default")
 		
 		#Durc
-		gun.get_node("Sketchfab_model").get_node("Ace Of Spades_fbx").get_node("RootNode").get_node("MuzzleFlash").play("default")
+	#	gun.get_node("Sketchfab_model").get_node("Ace Of Spades_fbx").get_node("RootNode").get_node("MuzzleFlash").play("default")
 		
 		
 		

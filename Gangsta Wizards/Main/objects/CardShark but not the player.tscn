@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://32y0x7h4l5p8"]
+
+[ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_0ac8r"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="4_8njxo"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_6jm45"]
+[ext_resource type="PackedScene" uid="uid://b0v3sd2xgeikt" path="res://Card Shark/the_card_shark_v5.tscn" id="6_5wlnr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
+radius = 0.01
+height = 0.02
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_03cjf"]
+radius = 0.1
+height = 0.2
+
+[node name="DeadPlayer" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.537391, 0)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="TheCardShark_v3" parent="Head" instance=ExtResource("3_0ac8r")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, -0.234754, 0.0942593)
+visible = false
+
+[node name="Shadow" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+size = Vector3(1, 2, 1)
+texture_albedo = ExtResource("4_8njxo")
+modulate = Color(1, 1, 1, 0.705882)
+normal_fade = 0.5
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6jm45")
+volume_db = -5.0
+autoplay = true
+
+[node name="CardCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="StraightLaserCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
+[node name="BaskingHouseCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="MagicCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="CardContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0902302, 0.850561, -0.350699)
+
+[node name="spawn" type="MeshInstance3D" parent="CardContainer"]
+visible = false
+mesh = SubResource("CapsuleMesh_hlc1o")
+
+[node name="Baskingspawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.47398, -2.97245)
+
+[node name="indicator" type="MeshInstance3D" parent="Baskingspawn"]
+mesh = SubResource("CapsuleMesh_03cjf")
+
+[node name="Laserspawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 0.9012, -0.423599)
+
+[node name="RayCast" type="RayCast3D" parent="Laserspawn"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="TheCardSharkv4" parent="." instance=ExtResource("6_5wlnr")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765192, 0.0776601)
+
+[node name="CharacterCenter" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636857, 0.0971916)
