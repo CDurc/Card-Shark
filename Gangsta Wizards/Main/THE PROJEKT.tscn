@@ -47,19 +47,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.91212, -0.5, 0)
 [node name="platform-large-grass2" parent="Map" instance=ExtResource("1_a674t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 7.42686)
 
-[node name="Sketchfab_Scene" parent="Map"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(-0.0749265, 0, 0.997189, 0, 1, 0, -0.997189, 0, -0.0749265, -0.194063, 0.77156, -7.32325)
-script = null
-
 [node name="Wall1" type="Node3D" parent="Map"]
 transform = Transform3D(5.15071, 0, 0, 0, 2.36219, 0, 0, 0, 1, 6.9901, 0.873913, -3.15489)
 
@@ -128,19 +115,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.04003, -23.9812)
 
 [node name="Basking Shark" parent="Map" instance=ExtResource("9_m48vo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02195, 4.35322, -3.74638)
-
-[node name="PlayingCard" parent="Map"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.73005, 0)
-script = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_pexkb")

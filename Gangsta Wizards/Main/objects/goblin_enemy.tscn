@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3vokeugd845g"]
 
 [ext_resource type="Script" path="res://goblin_enemy.gd" id="1_ufgla"]
-[ext_resource type="PackedScene" uid="uid://bye6wspfvthof" path="res://Card Shark/moving_goblin.tscn" id="2_tsbnn"]
+[ext_resource type="PackedScene" uid="uid://byp515y0kwr0" path="res://Card Shark Campaign/Character Models/goblin scene.tscn" id="2_bhsev"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 1.31393
@@ -11,8 +11,9 @@ height = 6.27046
 collision_layer = 3
 script = ExtResource("1_ufgla")
 
-[node name="Goblin" parent="." instance=ExtResource("2_tsbnn")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296965, -0.57167, 0)
 shape = SubResource("CapsuleShape3D_4pgsn")
+
+[node name="Goblin2" parent="." instance=ExtResource("2_bhsev")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
