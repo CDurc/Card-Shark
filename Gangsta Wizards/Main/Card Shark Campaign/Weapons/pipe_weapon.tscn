@@ -1,15 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqaqg3fak7erw"]
 
-[ext_resource type="PackedScene" uid="uid://bue3m3brf08qj" path="res://Card Shark Campaign/Weapons/Metal Pipe.glb" id="1_fba7v"]
+[ext_resource type="PackedScene" uid="uid://dlbgdsrwkmlau" path="res://Card Shark Campaign/Weapons/Metal Pipe.glb" id="1_fba7v"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/sword_damage.gd" id="2_30yqk"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_352u8"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utihy"]
-albedo_color = Color(0.294118, 0.294118, 0.294118, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8fxbk"]
+radius = 1.0
+height = 8.0
 
 [node name="Metal Pipe" instance=ExtResource("1_fba7v")]
 
-[node name="Cylinder" parent="." index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_352u8")
-surface_material_override/1 = SubResource("StandardMaterial3D_utihy")
+[node name="Area3D" type="Area3D" parent="." index="1"]
+monitoring = false
+script = ExtResource("2_30yqk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CapsuleShape3D_8fxbk")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

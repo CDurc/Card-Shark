@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=20 format=3 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
+[ext_resource type="Script" path="res://wall_5.gd" id="2_08aqy"]
 [ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_nqoh8"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_pexkb"]
 [ext_resource type="PackedScene" uid="uid://ugy0o3ae7b23" path="res://objects/the_waning_gibbous.tscn" id="4_653qv"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="6_hp6lq"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="6_me0ch"]
 [ext_resource type="PackedScene" uid="uid://dtw1crl6pckfi" path="res://Card Shark/TheCardShark_v3.glb" id="6_ox7r8"]
+[ext_resource type="PackedScene" uid="uid://dj58uyo4ptla1" path="res://Card Shark Campaign/Map Assets/Test Hospital.glb" id="7_3mxjf"]
 [ext_resource type="PackedScene" uid="uid://3twoblqia3rh" path="res://Card Shark/Basking Shark.glb" id="9_m48vo"]
 [ext_resource type="PackedScene" uid="uid://bfljw54prxjvj" path="res://Card Shark/SharkGun.glb" id="9_wuq64"]
 [ext_resource type="PackedScene" uid="uid://d2g78tpqbyf5g" path="res://objects/enemy.tscn" id="10_cibhp"]
@@ -36,7 +38,7 @@ outline_color = Color(0, 0, 0, 0.470588)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
 [node name="platform-large-grass5" parent="Map" instance=ExtResource("1_a674t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15068, -0.5, 0)
+transform = Transform3D(1.75534, 0, 0, 0, 1, 0, 0, 0, 2.42249, -7.15068, -0.5, 0)
 
 [node name="platform-large-grass4" parent="Map" instance=ExtResource("1_a674t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -7.28284)
@@ -70,6 +72,20 @@ mesh = SubResource("BoxMesh_i5175")
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall2/MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall2/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.104745)
+shape = SubResource("BoxShape3D_y5egc")
+
+[node name="Wall5" type="Node3D" parent="Map"]
+transform = Transform3D(5.15071, 0, 0, 0, 2.36219, 0, 0, 0, 1, -7.2929, 1.50498, -1.3215)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.19874)
+mesh = SubResource("BoxMesh_i5175")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall5/MeshInstance3D"]
+script = ExtResource("2_08aqy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall5/MeshInstance3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.104745)
 shape = SubResource("BoxShape3D_y5egc")
 
@@ -115,6 +131,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.04003, -23.9812)
 
 [node name="Basking Shark" parent="Map" instance=ExtResource("9_m48vo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02195, 4.35322, -3.74638)
+
+[node name="Test Hospital" parent="Map" instance=ExtResource("7_3mxjf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3272, -0.272564, -16.0757)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_pexkb")
@@ -234,11 +253,7 @@ player = NodePath("../../Player")
 
 [node name="Scripts" type="Node" parent="."]
 
-[node name="Goblin Enemy" parent="." instance=ExtResource("15_yua1b")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -7.44596, 0.856156, 0)
-
 [node name="Goblin Enemy2" parent="." instance=ExtResource("15_yua1b")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.03516, 0.856156, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -8.03516, 3.10469, 0.547953)
 
-[node name="Goblin Enemy3" parent="." instance=ExtResource("15_yua1b")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.03516, 0.856156, -0.499126)
+[connection signal="health_updated" from="Player" to="HUD" method="_on_health_updated"]

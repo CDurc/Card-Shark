@@ -627,7 +627,7 @@ func action_jump():
 	jump_double = true;
 
 func damage(amount):
-	
+	print ("ouch")
 	health -= amount
 	health_updated.emit(health) # Update health on HUD
 	

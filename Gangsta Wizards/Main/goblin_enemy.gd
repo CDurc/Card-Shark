@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
 @export var follow_distance = 4
+@export var attack_distance = 6
 @export var follow_speed = 2.0
 @export var gravity_strength = 20.0
 @export var can_move = true
-
+@export var attacking = false
 
 var player
 var health := 100
@@ -41,6 +42,9 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.z = 0
 	
+	if dist_to_player < attack_distance and not attacking:
+		attack()
+	
 	if self.can_move:
 		var on_floor_after = move_and_slide()
 
@@ -54,3 +58,6 @@ func damage(amount):
 
 	if health <= 0 and !destroyed:
 		destroy()
+func attack():
+	attacking = true
+	self.get_node("Goblin/AnimationPlayer").play("Attack")

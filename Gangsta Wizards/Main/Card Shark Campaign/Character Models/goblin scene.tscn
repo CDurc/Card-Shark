@@ -65,10 +65,10 @@ bones/80/position = Vector3(-0.721927, 0.0146323, 5.36937)
 bones/80/rotation = Quaternion(-0.809394, -0.0921547, 0.570527, -0.104345)
 
 [node name="Hat" parent="Goblin Bones/Skeleton3D" index="0"]
-transform = Transform3D(-0.000530131, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640901, 0.0824729, 1.25053, 0.284743)
+transform = Transform3D(-0.000530203, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640909, 0.0824729, 1.25053, 0.28474)
 
 [node name="Hat_lowpoly" parent="Goblin Bones/Skeleton3D" index="1"]
-transform = Transform3D(-0.000530131, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640901, 0.0824729, 1.25053, 0.284743)
+transform = Transform3D(-0.000530203, -0.0278524, -1.50877, -0.319171, 1.47464, -0.0271102, 1.47489, 0.319107, -0.00640909, 0.0824729, 1.25053, 0.28474)
 
 [node name="Hat_lowpoly" parent="Goblin Bones/Skeleton3D/Hat_lowpoly" index="0"]
 visible = false
@@ -77,7 +77,7 @@ visible = false
 visible = false
 
 [node name="HandContainer" type="BoneAttachment3D" parent="Goblin Bones/Skeleton3D" index="4"]
-transform = Transform3D(0.184889, -0.347802, -0.919157, -0.9783, -0.154128, -0.138466, -0.0935089, 0.924812, -0.368752, -0.683507, 2.28483, 2.32216)
+transform = Transform3D(0.18489, -0.347803, -0.919156, -0.9783, -0.154128, -0.138466, -0.0935092, 0.924812, -0.368752, -0.683506, 2.28483, 2.32216)
 bone_name = "Palm R"
 bone_idx = 50
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlbgdsrwkmlau"
-path="res://.godot/imported/Metal Pipe.glb-7d2fbbd33d3913c3c8088dee9cf94bdd.scn"
+uid="uid://dj58uyo4ptla1"
+path="res://.godot/imported/Test Hospital.glb-8562b00e62752d88d4497261749a3e17.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Metal Pipe.glb"
-dest_files=["res://.godot/imported/Metal Pipe.glb-7d2fbbd33d3913c3c8088dee9cf94bdd.scn"]
+source_file="res://Card Shark Campaign/Map Assets/Test Hospital.glb"
+dest_files=["res://.godot/imported/Test Hospital.glb-8562b00e62752d88d4497261749a3e17.scn"]
 
 [params]
 
@@ -31,6 +31,15 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:colonly_Floor": {
+"generate/physics": true
+},
+"PATH:colonly_Floor/colonly_Exterior Walls": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
