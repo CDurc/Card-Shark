@@ -522,7 +522,7 @@ func shoot():
 		
 		# Shoot the weapon, amount based on shot count
 		
-		for n in range(10):
+		for n in range(1):
 		
 			raycast.target_position.x = randf_range(-0.5, 0.5)
 			raycast.target_position.y = randf_range(-0.5, 0.5)

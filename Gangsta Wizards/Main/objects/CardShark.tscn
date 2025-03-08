@@ -77,11 +77,13 @@ frame = 2
 [node name="RayCast" type="RayCast3D" parent="Head/Camera"]
 exclude_parent = false
 target_position = Vector3(0, 0, -30)
+collision_mask = 2
 collide_with_areas = true
 
 [node name="RayCast2" type="RayCast3D" parent="Head/Camera"]
 exclude_parent = false
 target_position = Vector3(0, 0, -30)
+collision_mask = 2
 collide_with_areas = true
 
 [node name="TheCardShark_v3" parent="Head" instance=ExtResource("5_o5weu")]

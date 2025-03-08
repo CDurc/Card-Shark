@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8aay7e67mjs2"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/goblin_puncher.gd" id="1_uo8rs"]
+[ext_resource type="PackedScene" uid="uid://breydwpch142" path="res://Card Shark Campaign/Character Models/Goblins/goblin_2.tscn" id="1_wnffg"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/punch.gd" id="3_6bvhy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xajxh"]
+radius = 3.14632
+height = 12.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8wvwn"]
+radius = 2.5
+height = 8.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gyte"]
+size = Vector3(6.26074, 9.63538, 8.03299)
+
+[node name="Goblin Puncher" type="CharacterBody3D"]
+collision_layer = 3
+script = ExtResource("1_uo8rs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96989, -6.36991, 0)
+shape = SubResource("CapsuleShape3D_xajxh")
+
+[node name="goblin_2" parent="." instance=ExtResource("1_wnffg")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.748736, -0.662868, 0, 0.662868, 0.748736, 0, 0, 0, 1, 2.61955, -10.0749, 0)
+shape = SubResource("CapsuleShape3D_8wvwn")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19549, -4.50783, 0)
+monitoring = false
+script = ExtResource("3_6bvhy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.55661, -1.5943, -0.0110252)
+shape = SubResource("BoxShape3D_0gyte")
