@@ -34,10 +34,20 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:colonly_Floor": {
-"generate/physics": true
+"generate/physics": true,
+"physics/layer": 3
+},
+"PATH:colonly_Floor/colonly_Door": {
+"generate/physics": true,
+"physics/layer": 3
 },
 "PATH:colonly_Floor/colonly_Exterior Walls": {
-"generate/physics": true
+"generate/physics": true,
+"physics/layer": 3
+},
+"PATH:colonly_Floor/colonly_Interior Walls": {
+"generate/physics": true,
+"physics/layer": 3
 }
 }
 }

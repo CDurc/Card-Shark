@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1u06hmwoxjvp"]
+
+[ext_resource type="Script" path="res://street_goblin_sc.gd" id="1_f4wsw"]
+[ext_resource type="PackedScene" uid="uid://dx0hk3okef5ma" path="res://Card Shark Campaign/Character Models/Goblins/street goblin model.tscn" id="2_lebqk"]
+
+[sub_resource type="GDScript" id="GDScript_tb2yu"]
+script/source = "extends Area3D
+
+@export var damage := 75
+
+var goblin
+@export var damaged_bodies := {} # A dictionary to store each body we've damaged.
+
+func _ready():
+	goblin = get_parent()
+	monitoring = true
+
+func overlap_check():
+	var overlapping_bodies = get_overlapping_bodies()
+	for body in overlapping_bodies:
+		if body != goblin and body.has_method(\"damage\"):
+			body.damage(damage)
+			damaged_bodies[body] = true
+
+func _on_body_entered(body):
+	
+	if not goblin or not goblin.damaging:
+		return
+
+	if body != goblin and body.has_method(\"damage\"):
+		if body not in damaged_bodies:
+			body.damage(damage)
+			damaged_bodies[body] = true
+"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ak1r1"]
+radius = 13.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ptlns"]
+radius = 10.0
+height = 33.1131
+
+[node name="Street Goblin" type="CharacterBody3D"]
+collision_layer = 3
+script = ExtResource("1_f4wsw")
+
+[node name="Street Goblin Model" parent="." instance=ExtResource("2_lebqk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.17194e-07, 0, -9.5443)
+monitoring = false
+script = SubResource("GDScript_tb2yu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05148, -0.193639, 9.28054)
+shape = SubResource("SphereShape3D_ak1r1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -5.61146, 0)
+shape = SubResource("CapsuleShape3D_ptlns")
