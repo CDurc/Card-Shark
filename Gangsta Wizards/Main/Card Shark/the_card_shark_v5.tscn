@@ -45,7 +45,7 @@ bones/32/rotation = Quaternion(-0.241508, 0.469267, 0.681117, -0.507486)
 visible = false
 
 [node name="RightHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D" index="2"]
-transform = Transform3D(0.870317, -0.0493241, -0.490015, 0.00549748, 0.995883, -0.0904797, 0.492461, 0.0760524, 0.867005, 3.58488, 3.47794, 1.50021)
+transform = Transform3D(0.870318, -0.0493239, -0.490015, 0.00549795, 0.995883, -0.0904792, 0.49246, 0.0760515, 0.867005, 3.58488, 3.47794, 1.50021)
 bone_name = "Palm R"
 bone_idx = 16
 
@@ -53,7 +53,7 @@ bone_idx = 16
 transform = Transform3D(0.426719, 0.0266021, -0.903994, 0.0822701, 0.994281, 0.068093, 0.900635, -0.103428, 0.422091, -0.132107, 0.393615, -0.16349)
 
 [node name="LeftHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D" index="3"]
-transform = Transform3D(-0.850167, -0.525316, 0.035493, 0.0628996, -0.0344053, 0.997427, -0.522743, 0.850211, 0.0622923, 4.49486, 2.36583, -1.95019)
+transform = Transform3D(-0.850166, -0.525316, 0.0354939, 0.0629002, -0.0344043, 0.997427, -0.522743, 0.850211, 0.0622917, 4.49486, 2.36583, -1.95019)
 bone_name = "Palm L"
 bone_idx = 8
 
