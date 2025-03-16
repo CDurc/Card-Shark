@@ -109,8 +109,8 @@ signal health_updated
 
 @onready var anime = $TheCardSharkv4/AnimationPlayer
 @onready var gun_anime = $TheCardSharkv4/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
-@onready var UI_Card1 = $"../HUD/C1/Txt"
-@onready var UI_Card2 = $"../HUD/C2/Txt"
+@onready var UI_Card1 = $HUD/C1/Txt
+@onready var UI_Card2 = $HUD/C2/Txt
 
 @export var crosshair:TextureRect
 
@@ -254,58 +254,94 @@ func load_set_cards(): #This CANNOT be same fn as set_cards because viewport nee
 func discard():
 	if Input.is_action_pressed("Ability1"):
 		if !magic_cooldown.is_stopped(): return
-		var tween = create_tween()
-		var original = right_container_offset
-		var down = original + Vector3(0,-0.8,0)
 		magic_cooldown.start(3)
-		tween.tween_property(self,"right_container_offset",down,0.2)
-		tween.tween_callback(Callable(self,"throw_cards"))
-		tween.tween_callback(Callable(self,"cards_down")) #Do the loading while cards out of sight
-		tween.tween_interval(1)
-		tween.tween_property(self,"right_container_offset",original,0.5)
-		
-		#Throw Cards
-		
-		print("discard")
-
-func cards_down():
-	set_cards()
-	load_set_cards()
+		anime.play("Discard")
+		combine_cards() #Merge cards to prepare to throw
+		await get_tree().create_timer(0.2).timeout
+		right_hand_container.visible = false
+		throw_cards() #Instantiates physics cards
+		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+		for i in range(1, 6): #return cards to original position while invisible
+			print("attempt",i)
+			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+			card.transform = t_node.transform
+		set_cards() #Pick cards from deck
+		load_set_cards() #Load the textures
+		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+		right_hand_container.visible = true
 
 func throw_cards():
-	anime.play("Discard")
 	for i in range(len(hand)):
-		phys_card = phys_card_scene.instantiate()
-		var text_node = phys_card.get_node("Rig").get_node("Txt")
-		text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
-		text_node.mesh.text = str(hand[i]["rank"])
+		var phys_card = phys_card_scene.instantiate()
+
+		var mesh_instance = phys_card.get_node("Rig/C2/Front")
+		
+		# Duplicate the mesh so each card is unique
+		var mesh_copy = mesh_instance.mesh.duplicate()
+		mesh_instance.mesh = mesh_copy
+
+		# Get the material from surface 0
+		var original_material = mesh_copy.surface_get_material(0)
+		if original_material:
+			# Deep-duplicate so sub-resources aren’t shared
+			var new_material = original_material.duplicate(true)
+			new_material.resource_local_to_scene = true
+			
+			# Determine which texture to use for this card
+			var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
+			var card_texture = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % card_type)
+			
+			new_material.albedo_texture = card_texture
+			
+			# Assign the new material to surface 0
+			mesh_copy.surface_set_material(0, new_material)
+		
+		#var text_node = phys_card.get_node("Rig").get_node("Txt")
+		#text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
+		#text_node.mesh.text = str(hand[i]["rank"])
 		$"../Projectiles".add_child(phys_card)
-		phys_card.position = card_container.global_position
+		phys_card.position = card_container.get_node("spawn").global_position
 		var random_vector = Vector3(randf()*1-0.5,randf()*1,0)
 		var local_direction = Vector3(0,0,-0.8)+random_vector
-		var random_direction = card_container.global_transform.basis * local_direction
+		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
-	#Turn cards in hand invisible
-	await get_tree().create_timer(0.2).timeout
-	right_hand_container.visible = false
-	await get_tree().create_timer(1).timeout
-	right_hand_container.visible = true
 
-func drop_cards():
-	
+func seek_throw_cards():
 	for i in range(len(hand)):
+		var phys_card = phys_card_scene.instantiate()
+
+		var mesh_instance = phys_card.get_node("Rig/C2/Front")
 		
-		anime.play("New Card")
-		phys_card = phys_card_scene.instantiate()
-		var text_node = phys_card.get_node("Rig").get_node("Txt")
-		text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
-		text_node.mesh.text = str(hand[i]["rank"])
+		# Duplicate the mesh so each card is unique
+		var mesh_copy = mesh_instance.mesh.duplicate()
+		mesh_instance.mesh = mesh_copy
+
+		# Get the material from surface 0
+		var original_material = mesh_copy.surface_get_material(0)
+		if original_material:
+			# Deep-duplicate so sub-resources aren’t shared
+			var new_material = original_material.duplicate(true)
+			new_material.resource_local_to_scene = true
+			
+			# Determine which texture to use for this card
+			var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
+			var card_texture = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % card_type)
+			
+			new_material.albedo_texture = card_texture
+			
+			# Assign the new material to surface 0
+			mesh_copy.surface_set_material(0, new_material)
+		
+		#var text_node = phys_card.get_node("Rig").get_node("Txt")
+		#text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
+		#text_node.mesh.text = str(hand[i]["rank"])
 		$"../Projectiles".add_child(phys_card)
-		phys_card.position = card_container.global_position
+		phys_card.position = card_container.get_node("spawn").global_position
 		var random_vector = Vector3(randf()*1-0.5,randf()*1,0)
 		var local_direction = Vector3(0,0,-0.8)+random_vector
-		var random_direction = card_container.global_transform.basis * local_direction
+		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
 
@@ -346,6 +382,29 @@ func move_shark(shark):
 
 	# Enable per-frame movement
 	path_follow.set_process(true)
+
+func seeking_card_spell():
+	if Input.is_action_pressed("p"):
+		if !magic_cooldown.is_stopped(): return
+		magic_cooldown.start(4)
+		#Play some sort of spell cast anime
+		anime.play("Taunt")
+		await get_tree().create_timer(1).timeout
+		anime.play("Discard")
+		combine_cards() #Merge cards to prepare to throw
+		await get_tree().create_timer(0.2).timeout
+		right_hand_container.visible = false
+		seek_throw_cards() #Instantiates physics cards
+		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+		for i in range(1, 6): #return cards to original position while invisible
+			print("attempt",i)
+			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+			card.transform = t_node.transform
+		set_cards() #Pick cards from deck
+		load_set_cards() #Load the textures
+		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+		right_hand_container.visible = true
 
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
@@ -494,6 +553,52 @@ func laser(delta):
 		var distance = start_position.distance_to(hit_position)
 		active_laser.scale.z = distance
 
+var combining = false
+var combine_t = 0.0  # Progress variable for lerp/slerp
+
+func combine_cards():
+	if combining:
+		return  # Prevent duplicate calls
+
+	combining = true
+	combine_t = 0.0  # Reset animation progress
+
+func _process(delta): #Currently only used for card combine
+	if not combining:
+		return
+
+	combine_t += 1.0 * delta  # Increase over time (adjust speed as needed)
+	if combine_t > 1:#prevent overshooting
+		combine_t = 1.0 
+		combining = false  # Stop animating
+
+	var target_node = right_hand_container.get_node("Card").get_node("C3")
+	var target_pos = target_node.transform.origin
+	var target_quat = target_node.transform.basis.get_rotation_quaternion()
+
+	for i in range(1, 6):
+		if i == 3:
+			continue
+
+		var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+
+		# Current position
+		var from_pos = card.transform.origin
+
+		# Lerp X and Y using combine_t
+		var new_pos = Vector3(
+			lerp(from_pos.x, target_pos.x, combine_t),
+			lerp(from_pos.y, target_pos.y, combine_t),
+			from_pos.z # Keep Z unchanged
+		)
+
+		# Slerp Rotation
+		var from_quat = card.transform.basis.orthonormalized().get_rotation_quaternion()
+		var new_quat = from_quat.slerp(target_quat, combine_t)
+
+		# Apply new transform
+		card.transform = Transform3D(Basis(new_quat), new_pos)
+
 
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
@@ -559,6 +664,7 @@ func _input(event):
 
 func handle_controls(_delta):
 	
+	seeking_card_spell()
 	discard()
 	shoot()
 	straight_laser_spell()
@@ -633,4 +739,10 @@ func damage(amount):
 	
 	if health < 0:
 		get_tree().reload_current_scene() # Reset when out of health
+		
+var can_interact = false
+func interact(): #This is always called by an area3D detecting the player
+	if can_interact and Input.is_action_pressed("Interact"):
+		print("int")
+		return true
 #Fin

@@ -1,28 +1,96 @@
-extends CharacterBody3D
+extends Node3D
+
+@export var rotation_speed = 2.0
+var target_open_rotation: Quaternion
+var target_closed_rotation: Quaternion
+var opening = false
+var closing = false
+var player
+var interact
+var inside = false
+var closed = true
+var open = false
+var rotation_t = 0.0
+
+func _ready():
+	player = get_tree().get_first_node_in_group("Player")
+	print ("player found:",player)
+	
+	# Set the target rotation
+	target_open_rotation = Quaternion.from_euler(Vector3(0, deg_to_rad(-110), 0))
+	target_closed_rotation = Quaternion.from_euler(Vector3(0, 0, 0))
+
+func _process(delta):
+	if opening:
+		# Get current rotation as a Quaternion
+		var current_quat: Quaternion = global_transform.basis.get_rotation_quaternion()
+		
+		# Slerp from stored start rotation to target_open_rotation using rotation_t
+		var new_quat: Quaternion = target_closed_rotation.slerp(target_open_rotation, rotation_t)
+		
+		# Apply the new rotation
+		global_transform.basis = Basis(new_quat)
+		
+		# Increase rotation_t
+		rotation_t += (1.0 - (rotation_t / 1.05)) * 2 * delta #/1.05 ensures it doesn't get TOO slow at the end
+		if rotation_t > 1.0:
+			rotation_t = 1.0
+		
+		#Stop door
+		if current_quat == target_open_rotation:
+			opening = false
+			open = true
+			print("Door open")
+			rotation_t = 0
+			if inside == true:
+				interact.visible = true
+			
+	if closing:
+		# Get current rotation as a Quaternion
+		var current_quat: Quaternion = global_transform.basis.get_rotation_quaternion()
+		
+		# Slerp from stored start rotation to target_closed_rotation using rotation_t
+		var new_quat: Quaternion = target_open_rotation.slerp(target_closed_rotation, rotation_t)
+		
+		# Apply the new rotation
+		global_transform.basis = Basis(new_quat)
+		
+		# Increase rotation_t
+		rotation_t += (1.0 - (rotation_t / 1.05)) * 2 * delta
+		if rotation_t > 1.0: #Prevent overshooting
+			rotation_t = 1.0
+		
+		# Stop door
+		if current_quat == target_closed_rotation:
+			closing = false
+			closed = true
+			print("Door closed")
+			rotation_t = 0
+			if inside == true:
+				interact.visible = true
+			
+	if inside and player and player.interact(): #F was pressed
+		print("F")
+		if closed:
+			closed = false
+			opening = true
+			interact.visible = false
+		elif open:
+			open = false
+			closing = true
+			interact.visible = false
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
+func on_body_entered(body):
+	if body == player:
+		inside = true
+		interact = player.get_node("HUD/Interact")
+		interact.visible = true
+		player.can_interact = true
+		
+func on_body_exited(body):
+	if body == player:
+		inside = false
+		interact = player.get_node("HUD/Interact")
+		interact.visible = false
+		player.can_interact = false

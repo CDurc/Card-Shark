@@ -12,11 +12,11 @@ size = Vector3(0.5, 0.8, 0.007)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyj6j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vio5j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhp6c"]
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_vq5gj"]
-material = SubResource("StandardMaterial3D_vio5j")
+material = SubResource("StandardMaterial3D_mhp6c")
 text = "A
 "
 font_size = 31
@@ -26,18 +26,18 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my51j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7sum"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm0ms"]
 albedo_texture = ExtResource("1_i8fje")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sougk"]
-material = SubResource("StandardMaterial3D_f7sum")
+material = SubResource("StandardMaterial3D_qm0ms")
 size = Vector2(0.5, 0.8)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25vxn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnrnm"]
 albedo_texture = ExtResource("2_fr1e1")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0feh3"]
-material = SubResource("StandardMaterial3D_25vxn")
+material = SubResource("StandardMaterial3D_dnrnm")
 size = Vector2(0.5, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mue8h"]
