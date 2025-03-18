@@ -11,7 +11,6 @@ func _ready():
 		{"rank": 5, "suit": "diamonds"}
 	]
 	var best_hand = get_best_poker_hand(my_seven_cards)
-	print(best_hand)  # Expected: "Royal Flush"
 
 
 func get_best_poker_hand(cards):

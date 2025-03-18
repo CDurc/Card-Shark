@@ -1,6 +1,6 @@
 [gd_resource type="ArrayMesh" load_steps=9 format=4 uid="uid://dtxob7y80tfgp"]
 
-[ext_resource type="Texture2D" uid="uid://7ke6kdf5dbl2" path="res://Card Shark/TheCardSharkv4_Checker.png" id="1_hpj3r"]
+[ext_resource type="Texture2D" uid="uid://d3otdw55uqj5e" path="res://Card Shark/TheCardSharkv4_Checker.png" id="1_hpj3r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1hqk"]
 resource_name = "Skin - Top"
