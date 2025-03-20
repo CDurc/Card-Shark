@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bs0d0wm3fb7qq"
-path="res://.godot/imported/PalmTree.glb-6c0ebba2ab279b25f3c4d09267369190.scn"
+uid="uid://d2xjrg58rrax0"
+path="res://.godot/imported/Beach Towel 6.glb-950432be9d2930ac4c67edf9bb705061.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/PalmTree.glb"
-dest_files=["res://.godot/imported/PalmTree.glb-6c0ebba2ab279b25f3c4d09267369190.scn"]
+source_file="res://Card Shark Campaign/Map Assets/Beach Towel 6.glb"
+dest_files=["res://.godot/imported/Beach Towel 6.glb-950432be9d2930ac4c67edf9bb705061.scn"]
 
 [params]
 
@@ -31,13 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Trunk/colonly_Palm Tree": {
-"generate/physics": true,
-"physics/layer": 3
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

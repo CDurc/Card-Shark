@@ -111,6 +111,7 @@ signal health_updated
 @onready var gun_anime = $TheCardSharkv4/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
 @onready var UI_Card1 = $HUD/C1/Txt
 @onready var UI_Card2 = $HUD/C2/Txt
+@onready var ranges = $Ranges
 
 @export var crosshair:TextureRect
 
@@ -130,6 +131,7 @@ var splash
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
+var seek_card_scene = preload("res://Card Shark/Seeking Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
@@ -244,10 +246,8 @@ func set_cards():
 func load_set_cards(): #This CANNOT be same fn as set_cards because viewport needs to load after set
 	#cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"])
 	for i in range(len(hand)):
-		print(i)
 		var card_front = cards.get_node("C%d" % (i+1)).get_node("Front").mesh.material
 		var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
-		print (card_type)
 		var image = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % (card_type))
 		card_front.albedo_texture = image
 
@@ -262,7 +262,6 @@ func discard():
 		throw_cards() #Instantiates physics cards
 		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
 		for i in range(1, 6): #return cards to original position while invisible
-			print("attempt",i)
 			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
 			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
 			card.transform = t_node.transform
@@ -308,7 +307,7 @@ func throw_cards():
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
 
-func seek_throw_cards():
+func pattern_throw_cards():
 	for i in range(len(hand)):
 		var phys_card = phys_card_scene.instantiate()
 
@@ -334,16 +333,54 @@ func seek_throw_cards():
 			# Assign the new material to surface 0
 			mesh_copy.surface_set_material(0, new_material)
 		
+		$"../Projectiles".add_child(phys_card)
+		phys_card.position = card_container.get_node("spawn").global_position
+		var x = .5*i
+		var moving_vector = Vector3(x,0,0)
+		print(x)
+		var local_direction = Vector3(-1,0.7,-4)+moving_vector
+		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
+		random_direction = random_direction.normalized()
+		phys_card.get_node("Rig").linear_velocity = random_direction * 15
+		await get_tree().create_timer(0.05).timeout
+
+func seek_throw_cards():
+	for i in range(len(hand)):
+		var seek_card = seek_card_scene.instantiate()
+		seek_card.enemy_list = ranges.get_node("Spell Range").enemy_list
+
+		var mesh_instance = seek_card.get_node("Rig/C2/Front")
+		
+		# Duplicate the mesh so each card is unique
+		var mesh_copy = mesh_instance.mesh.duplicate()
+		mesh_instance.mesh = mesh_copy
+
+		# Get the material from surface 0
+		var original_material = mesh_copy.surface_get_material(0)
+		if original_material:
+			# Deep-duplicate so sub-resources aren’t shared
+			var new_material = original_material.duplicate(true)
+			new_material.resource_local_to_scene = true
+			
+			# Determine which texture to use for this card
+			var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
+			var card_texture = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % card_type)
+			
+			new_material.albedo_texture = card_texture
+			
+			# Assign the new material to surface 0
+			mesh_copy.surface_set_material(0, new_material)
+		
 		#var text_node = phys_card.get_node("Rig").get_node("Txt")
 		#text_node.mesh = text_node.mesh.duplicate() #Dupe so that they don't share properties (txt)
 		#text_node.mesh.text = str(hand[i]["rank"])
-		$"../Projectiles".add_child(phys_card)
-		phys_card.position = card_container.get_node("spawn").global_position
+		$"../Projectiles".add_child(seek_card)
+		seek_card.position = card_container.get_node("spawn").global_position
 		var random_vector = Vector3(randf()*1-0.5,randf()*1,0)
-		var local_direction = Vector3(0,0,-0.8)+random_vector
+		var local_direction = Vector3(0,0.5,-0.8)+random_vector
 		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
-		phys_card.get_node("Rig").linear_velocity = random_direction * 8
+		seek_card.get_node("Rig").linear_velocity = random_direction * 8
 
 func basking_house_spell():
 	if Input.is_action_pressed("Ability2"):
@@ -384,7 +421,7 @@ func move_shark(shark):
 	path_follow.set_process(true)
 
 func seeking_card_spell():
-	if Input.is_action_pressed("p"):
+	if Input.is_action_pressed("Test_1"):
 		if !magic_cooldown.is_stopped(): return
 		magic_cooldown.start(4)
 		#Play some sort of spell cast anime
@@ -405,7 +442,28 @@ func seeking_card_spell():
 		load_set_cards() #Load the textures
 		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
 		right_hand_container.visible = true
-
+func pattern_card_spell():
+	if Input.is_action_pressed("Test_2"):
+		if !magic_cooldown.is_stopped(): return
+		magic_cooldown.start(4)
+		#Play some sort of spell cast anime
+		anime.play("Taunt")
+		await get_tree().create_timer(1).timeout
+		anime.play("Discard")
+		combine_cards() #Merge cards to prepare to throw
+		await get_tree().create_timer(0.2).timeout
+		right_hand_container.visible = false
+		pattern_throw_cards() #Instantiates physics cards
+		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+		for i in range(1, 6): #return cards to original position while invisible
+			print("attempt",i)
+			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+			card.transform = t_node.transform
+		set_cards() #Pick cards from deck
+		load_set_cards() #Load the textures
+		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+		right_hand_container.visible = true
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
 		if !straight_laser_cooldown.is_stopped(): return
@@ -509,7 +567,6 @@ func straight_fly_cards_real(instance):
 		var t_node = instance.get_node("P%d" % i)
 		card.transform = t_node.transform
 
-	print("e")
 	set_cards()
 	load_set_cards()
 
@@ -669,6 +726,7 @@ func handle_controls(_delta):
 	shoot()
 	straight_laser_spell()
 	basking_house_spell()
+	pattern_card_spell()
 	
 	# Mouse capture
 	
@@ -698,7 +756,6 @@ func handle_controls(_delta):
 	# Jumping
 	
 	if Input.is_action_just_pressed("jump"):
-		print("JUMP")
 		
 		if jump_single or jump_double:
 			Audio.play("sounds/jump_a.ogg, sounds/jump_b.ogg, sounds/jump_c.ogg")
@@ -733,7 +790,6 @@ func action_jump():
 	jump_double = true;
 
 func damage(amount):
-	print ("ouch")
 	health -= amount
 	health_updated.emit(health) # Update health on HUD
 	

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bs0d0wm3fb7qq"
-path="res://.godot/imported/PalmTree.glb-6c0ebba2ab279b25f3c4d09267369190.scn"
+uid="uid://cspnb87r501ok"
+path="res://.godot/imported/goblin_5.glb-239f06a1756fecec90ae76c65d9c5ce1.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/PalmTree.glb"
-dest_files=["res://.godot/imported/PalmTree.glb-6c0ebba2ab279b25f3c4d09267369190.scn"]
+source_file="res://Card Shark Campaign/Character Models/Goblins/goblin_5.glb"
+dest_files=["res://.godot/imported/goblin_5.glb-239f06a1756fecec90ae76c65d9c5ce1.scn"]
 
 [params]
 
@@ -31,13 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Trunk/colonly_Palm Tree": {
-"generate/physics": true,
-"physics/layer": 3
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
