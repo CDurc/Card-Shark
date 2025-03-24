@@ -132,6 +132,7 @@ var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
 var seek_card_scene = preload("res://Card Shark/Seeking Physics Cards.tscn")
+var boom_card_scene = preload("res://Card Shark/Boom Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
@@ -344,6 +345,40 @@ func pattern_throw_cards():
 		phys_card.get_node("Rig").linear_velocity = random_direction * 15
 		await get_tree().create_timer(0.05).timeout
 
+func straightline_throw_cards():
+	for i in range(len(hand)):
+		var phys_card = boom_card_scene.instantiate()
+
+		var mesh_instance = phys_card.get_node("Rig/C2/Front")
+		
+		# Duplicate the mesh so each card is unique
+		var mesh_copy = mesh_instance.mesh.duplicate()
+		mesh_instance.mesh = mesh_copy
+
+		# Get the material from surface 0
+		var original_material = mesh_copy.surface_get_material(0)
+		if original_material:
+			# Deep-duplicate so sub-resources aren’t shared
+			var new_material = original_material.duplicate(true)
+			new_material.resource_local_to_scene = true
+			
+			# Determine which texture to use for this card
+			var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
+			var card_texture = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % card_type)
+			
+			new_material.albedo_texture = card_texture
+			
+			# Assign the new material to surface 0
+			mesh_copy.surface_set_material(0, new_material)
+		
+		$"../Projectiles".add_child(phys_card)
+		phys_card.position = card_container.get_node("spawn").global_position
+		var local_direction = Vector3(0,0.7,-4)
+		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
+		random_direction = random_direction.normalized()
+		phys_card.get_node("Rig").linear_velocity = random_direction * 15
+		await get_tree().create_timer(0.05).timeout
+
 func seek_throw_cards():
 	for i in range(len(hand)):
 		var seek_card = seek_card_scene.instantiate()
@@ -464,6 +499,29 @@ func pattern_card_spell():
 		load_set_cards() #Load the textures
 		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
 		right_hand_container.visible = true
+func straightline_card_spell():
+	if Input.is_action_pressed("Test_3"):
+		if !magic_cooldown.is_stopped(): return
+		magic_cooldown.start(4)
+		#Play some sort of spell cast anime
+		anime.play("Taunt")
+		await get_tree().create_timer(1).timeout
+		anime.play("Discard")
+		combine_cards() #Merge cards to prepare to throw
+		await get_tree().create_timer(0.2).timeout
+		right_hand_container.visible = false
+		straightline_throw_cards() #Instantiates physics cards
+		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+		for i in range(1, 6): #return cards to original position while invisible
+			print("attempt",i)
+			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+			card.transform = t_node.transform
+		set_cards() #Pick cards from deck
+		load_set_cards() #Load the textures
+		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+		right_hand_container.visible = true
+
 func straight_laser_spell():
 	if Input.is_action_pressed("Right_Click"):
 		if !straight_laser_cooldown.is_stopped(): return
@@ -727,6 +785,7 @@ func handle_controls(_delta):
 	straight_laser_spell()
 	basking_house_spell()
 	pattern_card_spell()
+	straightline_card_spell()
 	
 	# Mouse capture
 	

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbsu1vf8bvgsh"]
+
+[ext_resource type="PackedScene" uid="uid://b5ywvhtuqtapy" path="res://Card Shark Campaign/Character Models/Gary, The Sand Sorcerer.glb" id="1_2u778"]
+[ext_resource type="Script" path="res://Gary_chat.gd" id="2_u7ibt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1dek0"]
+height = 18.3654
+radius = 8.20082
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkefd"]
+radius = 3.54035
+height = 21.1758
+
+[node name="Gary" type="CharacterBody3D"]
+script = ExtResource("2_u7ibt")
+
+[node name="G_model" parent="." instance=ExtResource("1_2u778")]
+
+[node name="Talk Zone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.657248, 0, 0.582279)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Talk Zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629097, -3.66758, 0)
+shape = SubResource("CylinderShape3D_1dek0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.03597, 0)
+shape = SubResource("CapsuleShape3D_dkefd")
+
+[connection signal="body_entered" from="Talk Zone" to="." method="on_body_entered"]
+[connection signal="body_exited" from="Talk Zone" to="." method="on_body_exited"]

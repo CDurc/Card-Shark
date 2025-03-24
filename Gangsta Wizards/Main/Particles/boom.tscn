@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwjku4y5koev8"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tuw6i"]
+direction = Vector3(1, 10, 0)
+spread = 88.163
+initial_velocity_min = 5.0
+initial_velocity_max = 7.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fakf0"]
+transparency = 1
+albedo_color = Color(1, 0.556863, 0, 0.898039)
+
+[sub_resource type="SphereMesh" id="SphereMesh_8tv5v"]
+material = SubResource("StandardMaterial3D_fakf0")
+radius = 0.2
+height = 0.4
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mv71g"]
+direction = Vector3(1, 10, 0)
+spread = 88.163
+initial_velocity_min = 5.0
+initial_velocity_max = 7.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuk5j"]
+transparency = 1
+albedo_color = Color(0.196078, 0.196078, 0.196078, 0.941176)
+
+[sub_resource type="SphereMesh" id="SphereMesh_dqo2r"]
+material = SubResource("StandardMaterial3D_cuk5j")
+radius = 0.2
+height = 0.4
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.642493, 0.766291, 0, -0.766291, 0.642493, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+amount = 3
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_tuw6i")
+draw_pass_1 = SubResource("SphereMesh_8tv5v")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+amount = 3
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_mv71g")
+draw_pass_1 = SubResource("SphereMesh_dqo2r")
