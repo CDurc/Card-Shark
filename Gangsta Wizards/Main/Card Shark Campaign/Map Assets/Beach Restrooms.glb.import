@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6gspxhdlsl62"
-path="res://.godot/imported/Island.glb-4bc329c551b6eeed229576931fdf6a25.scn"
+uid="uid://c2y0nt7ku6sxo"
+path="res://.godot/imported/Beach Restrooms.glb-af1e342c9bf90d699290518044a8298d.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/Island.glb"
-dest_files=["res://.godot/imported/Island.glb-4bc329c551b6eeed229576931fdf6a25.scn"]
+source_file="res://Card Shark Campaign/Map Assets/Beach Restrooms.glb"
+dest_files=["res://.godot/imported/Beach Restrooms.glb-af1e342c9bf90d699290518044a8298d.scn"]
 
 [params]
 
@@ -31,15 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Ground": {
-"mesh_instance/layers": 3
-},
-"PATH:Volcano": {
-"mesh_instance/layers": 3
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

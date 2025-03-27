@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://c3jtwlj682gq6"]
+
+[ext_resource type="Script" path="res://Card Shark/boom_card.gd" id="1_2184k"]
+[ext_resource type="Texture2D" uid="uid://btoeu03q87qs8" path="res://Card Shark/Card Pics/PlayingCard_6D.jpg" id="2_aab7d"]
+[ext_resource type="Texture2D" uid="uid://ch8qgsu1npfhm" path="res://Card Shark/Card Pics/PlayingCard_CardBack.png" id="3_6mqej"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8lc66"]
+size = Vector3(0.138, 0.214, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bfn48"]
+size = Vector3(0.5, 0.8, 0.007)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kfex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuj1o"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejmpw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eu4qi"]
+albedo_texture = ExtResource("2_aab7d")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xd0b1"]
+material = SubResource("StandardMaterial3D_eu4qi")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25vxn"]
+albedo_texture = ExtResource("3_6mqej")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_53h78"]
+material = SubResource("StandardMaterial3D_25vxn")
+size = Vector2(0.5, 0.8)
+
+[node name="RootNode" type="Node3D"]
+transform = Transform3D(0.996869, 0, 0, 0, 0.996869, 0, 0, 0, 0.996869, 0, 0, 0)
+
+[node name="Rig" type="RigidBody3D" parent="."]
+continuous_cd = true
+script = ExtResource("1_2184k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rig"]
+transform = Transform3D(1, 1.5497e-06, 0, -1.5497e-06, 1, 0, 0, 0, 1, 0.00195158, -0.00242275, -0.00227151)
+shape = SubResource("BoxShape3D_8lc66")
+
+[node name="C2" type="MeshInstance3D" parent="Rig"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+layers = 3
+mesh = SubResource("BoxMesh_bfn48")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1kfex")
+
+[node name="Outline" type="MeshInstance3D" parent="Rig/C2"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 0.192, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_bfn48")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuj1o")
+
+[node name="Backing" type="MeshInstance3D" parent="Rig/C2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_bfn48")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ejmpw")
+
+[node name="Front" type="MeshInstance3D" parent="Rig/C2"]
+transform = Transform3D(1, 2.22045e-16, 2.98023e-08, 2.98023e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00448821)
+mesh = SubResource("PlaneMesh_xd0b1")
+skeleton = NodePath("../../C2")
+
+[node name="Back" type="MeshInstance3D" parent="Rig/C2"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_53h78")
+skeleton = NodePath("../../C2")

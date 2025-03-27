@@ -9,8 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="8_3guaj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
-radius = 0.3
-height = 1.1
+radius = 0.192156
+height = 1.07779
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
 radius = 0.01

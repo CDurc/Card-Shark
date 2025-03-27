@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6gspxhdlsl62"
-path="res://.godot/imported/Island.glb-4bc329c551b6eeed229576931fdf6a25.scn"
+uid="uid://bc7fbmgugosed"
+path="res://.godot/imported/bball_col.glb-09e5a84808798992bdc665c2d8646788.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/Island.glb"
-dest_files=["res://.godot/imported/Island.glb-4bc329c551b6eeed229576931fdf6a25.scn"]
+source_file="res://Card Shark Campaign/DTest/bball_col.glb"
+dest_files=["res://.godot/imported/bball_col.glb-09e5a84808798992bdc665c2d8646788.scn"]
 
 [params]
 
@@ -33,10 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Ground": {
-"mesh_instance/layers": 3
-},
-"PATH:Volcano": {
+"PATH:Beach Ball 2": {
 "mesh_instance/layers": 3
 }
 }
