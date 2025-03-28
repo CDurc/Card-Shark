@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bulqxst6fcjsh"]
+[gd_scene load_steps=13 format=3 uid="uid://bulqxst6fcjsh"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_0uyvx"]
+[ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="2_02tme"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="5_lfidv"]
 [ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="5_o5weu"]
 [ext_resource type="PackedScene" uid="uid://b0v3sd2xgeikt" path="res://Card Shark/the_card_shark_v5.tscn" id="6_wqfci"]
@@ -137,6 +138,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.47398, -2.97245)
 
 [node name="indicator" type="MeshInstance3D" parent="Baskingspawn"]
 mesh = SubResource("CapsuleMesh_03cjf")
+
+[node name="3rd_person_point" type="Marker3D" parent="."]
+transform = Transform3D(0.866025, -0.12941, 0.482963, 0, 0.965926, 0.258819, -0.5, -0.224144, 0.836516, 0.937163, 1.19932, 0.745126)
+
+[node name="Testgun" parent="3rd_person_point" instance=ExtResource("2_02tme")]
+transform = Transform3D(-0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, 0, -0.058812, 0)
+visible = false
 
 [node name="Laserspawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 0.9012, -0.423599)

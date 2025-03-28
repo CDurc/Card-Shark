@@ -116,6 +116,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var can_look = true #Can turn the camera at all with inputs
 var basking_shark
 var active_laser
 var all_cards
@@ -150,9 +151,11 @@ func _ready():
 func _physics_process(delta):
 	
 	# Handle functions
-	handle_controls(delta)
 	handle_gravity(delta)
 	
+	if GameState.current_mode != GameState.GameMode.GAMEPLAY:
+		return
+	handle_controls(delta)
 	if active_laser:
 		laser(delta)
 	
@@ -166,10 +169,10 @@ func _physics_process(delta):
 		move_and_slide()
 	
 	# Rotation
-	
-	camera.rotation.z = lerp_angle(camera.rotation.z, -input_mouse.x * 25 * delta, delta * 5)	
-	camera.rotation.x = lerp_angle(camera.rotation.x, rotation_target.x, delta * 25)
-	rotation.y = lerp_angle(rotation.y, rotation_target.y, delta * 25)
+	if can_look:
+		camera.rotation.z = lerp_angle(camera.rotation.z, -input_mouse.x * 25 * delta, delta * 5)	
+		camera.rotation.x = lerp_angle(camera.rotation.x, rotation_target.x, delta * 25)
+		rotation.y = lerp_angle(rotation.y, rotation_target.y, delta * 25)
 	
 	#make the container lag for a sway effect
 	right_container.position = lerp(right_container.position, right_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
@@ -418,31 +421,31 @@ func seek_throw_cards():
 		seek_card.get_node("Rig").linear_velocity = random_direction * 8
 
 func basking_house_spell():
-	if Input.is_action_pressed("Ability2"):
-		if !basking_house_cooldown.is_stopped(): return
-		print ("F")
-		var flying = true
-		basking_house_cooldown.start(5)
-		basking_shark = basking_shark_path.instantiate()
-		basking_shark.global_transform = basking_spawn.global_transform
-		get_tree().root.add_child(basking_shark)
-		move_shark(basking_shark)
-		await get_tree().create_timer(3).timeout #wait to open mouth
-		var shark_anime = basking_shark.get_node("PathFollow3D").get_node("Basking Shark").get_node("AnimationPlayer")
-		shark_anime.play("Expand")
-		shark_anime.speed_scale = 0.5
-		# Increase suckbox as mouth opens
-		var tween = get_tree().create_tween()
+	#if Input.is_action_pressed("Ability2"):
+	if !basking_house_cooldown.is_stopped(): return
+	print ("F")
+	var flying = true
+	basking_house_cooldown.start(5)
+	basking_shark = basking_shark_path.instantiate()
+	basking_shark.global_transform = basking_spawn.global_transform
+	get_tree().root.add_child(basking_shark)
+	move_shark(basking_shark)
+	await get_tree().create_timer(3).timeout #wait to open mouth
+	var shark_anime = basking_shark.get_node("PathFollow3D").get_node("Basking Shark").get_node("AnimationPlayer")
+	shark_anime.play("Expand")
+	shark_anime.speed_scale = 0.5
+	# Increase suckbox as mouth opens
+	var tween = get_tree().create_tween()
 
-		var sucking_visual = basking_shark.get_node("PathFollow3D/Basking Shark/Sucker/Sucking visual")
-		var visual_mesh = sucking_visual.mesh
+	var sucking_visual = basking_shark.get_node("PathFollow3D/Basking Shark/Sucker/Sucking visual")
+	var visual_mesh = sucking_visual.mesh
 
-		# Duplicate the mesh and apply it back to the MeshInstance3D
-		sucking_visual.mesh = visual_mesh.duplicate()
+	# Duplicate the mesh and apply it back to the MeshInstance3D
+	sucking_visual.mesh = visual_mesh.duplicate()
 
-		# Now modify the unique duplicated mesh
-		tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
-		tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
+	# Now modify the unique duplicated mesh
+	tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
+	tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
 		
 		
 
@@ -456,89 +459,116 @@ func move_shark(shark):
 	path_follow.set_process(true)
 
 func seeking_card_spell():
-	if Input.is_action_pressed("Test_1"):
-		if !magic_cooldown.is_stopped(): return
-		magic_cooldown.start(4)
-		#Play some sort of spell cast anime
-		anime.play("Taunt")
-		await get_tree().create_timer(1).timeout
-		anime.play("Discard")
-		combine_cards() #Merge cards to prepare to throw
-		await get_tree().create_timer(0.2).timeout
-		right_hand_container.visible = false
-		seek_throw_cards() #Instantiates physics cards
-		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
-		for i in range(1, 6): #return cards to original position while invisible
-			print("attempt",i)
-			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
-			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
-			card.transform = t_node.transform
-		set_cards() #Pick cards from deck
-		load_set_cards() #Load the textures
-		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
-		right_hand_container.visible = true
+#	if Input.is_action_pressed("Test_1"):
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(4)
+	#Play some sort of spell cast anime
+	anime.play("Taunt")
+	await get_tree().create_timer(1).timeout
+	anime.play("Discard")
+	combine_cards() #Merge cards to prepare to throw
+	await get_tree().create_timer(0.2).timeout
+	right_hand_container.visible = false
+	seek_throw_cards() #Instantiates physics cards
+	await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+	for i in range(1, 6): #return cards to original position while invisible
+		print("attempt",i)
+		var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+		var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+		card.transform = t_node.transform
+	set_cards() #Pick cards from deck
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
+	
 func pattern_card_spell():
-	if Input.is_action_pressed("Test_2"):
-		if !magic_cooldown.is_stopped(): return
-		magic_cooldown.start(4)
-		#Play some sort of spell cast anime
-		anime.play("Taunt")
-		await get_tree().create_timer(1).timeout
-		anime.play("Discard")
-		combine_cards() #Merge cards to prepare to throw
-		await get_tree().create_timer(0.2).timeout
-		right_hand_container.visible = false
-		pattern_throw_cards() #Instantiates physics cards
-		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
-		for i in range(1, 6): #return cards to original position while invisible
-			print("attempt",i)
-			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
-			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
-			card.transform = t_node.transform
-		set_cards() #Pick cards from deck
-		load_set_cards() #Load the textures
-		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
-		right_hand_container.visible = true
+#	if Input.is_action_pressed("Test_2"):
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(4)
+	#Play some sort of spell cast anime
+	anime.play("Taunt")
+	await get_tree().create_timer(1).timeout
+	anime.play("Discard")
+	combine_cards() #Merge cards to prepare to throw
+	await get_tree().create_timer(0.2).timeout
+	right_hand_container.visible = false
+	pattern_throw_cards() #Instantiates physics cards
+	await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+	for i in range(1, 6): #return cards to original position while invisible
+		print("attempt",i)
+		var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+		var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+		card.transform = t_node.transform
+	set_cards() #Pick cards from deck
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
+	
 func straightline_card_spell():
-	if Input.is_action_pressed("Test_3"):
-		if !magic_cooldown.is_stopped(): return
-		magic_cooldown.start(4)
-		#Play some sort of spell cast anime
-		anime.play("Taunt")
-		await get_tree().create_timer(1).timeout
-		anime.play("Discard")
-		combine_cards() #Merge cards to prepare to throw
-		await get_tree().create_timer(0.2).timeout
-		right_hand_container.visible = false
-		straightline_throw_cards() #Instantiates physics cards
-		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
-		for i in range(1, 6): #return cards to original position while invisible
-			print("attempt",i)
-			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
-			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
-			card.transform = t_node.transform
-		set_cards() #Pick cards from deck
-		load_set_cards() #Load the textures
-		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
-		right_hand_container.visible = true
+	#if Input.is_action_pressed("Test_3"):
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(4)
+	#Play some sort of spell cast anime
+	anime.play("Taunt")
+	await get_tree().create_timer(1).timeout
+	anime.play("Discard")
+	combine_cards() #Merge cards to prepare to throw
+	await get_tree().create_timer(0.2).timeout
+	right_hand_container.visible = false
+	straightline_throw_cards() #Instantiates physics cards
+	await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+	for i in range(1, 6): #return cards to original position while invisible
+		print("attempt",i)
+		var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+		var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+		card.transform = t_node.transform
+	set_cards() #Pick cards from deck
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
 
 func straight_laser_spell():
+	#if Input.is_action_pressed("Right_Click"):
+	if !straight_laser_cooldown.is_stopped(): return
+	straight_laser_cooldown.start(6) #For 6 seconds, let _physics_process move the cards
+	straight_fly_cards(cards)
+	straight_fly_cards_real(right_hand_container.get_node("Card"))
+	var d = get_tree().create_timer(2.0).timeout #Wait for spin-up
+	await d
+	print("spawn laser")
+	active_laser = active_laser_path.instantiate()
+	test_spawn.add_child(active_laser)
+	var d2 = get_tree().create_timer(0.1).timeout #Wait laser to get set
+	await d2
+	active_laser.visible = true
+	await straight_laser_cooldown.timeout #Wait for laser animation to end
+	active_laser.queue_free()
+	active_laser = null
+
+func cast_spell():
 	if Input.is_action_pressed("Right_Click"):
-		if !straight_laser_cooldown.is_stopped(): return
-		straight_laser_cooldown.start(6) #For 6 seconds, let _physics_process move the cards
-		straight_fly_cards(cards)
-		straight_fly_cards_real(right_hand_container.get_node("Card"))
-		var d = get_tree().create_timer(2.0).timeout #Wait for spin-up
-		await d
-		print("spawn laser")
-		active_laser = active_laser_path.instantiate()
-		test_spawn.add_child(active_laser)
-		var d2 = get_tree().create_timer(0.1).timeout #Wait laser to get set
-		await d2
-		active_laser.visible = true
-		await straight_laser_cooldown.timeout #Wait for laser animation to end
-		active_laser.queue_free()
-		active_laser = null
+		if best_hand == "One Pair":
+			pattern_card_spell()
+		elif best_hand == "Two Pair":
+			seeking_card_spell()
+		elif best_hand == "Three of a Kind":
+			straightline_card_spell()
+		elif best_hand == "Straight":
+			straight_laser_spell()
+		elif best_hand == "Flush":
+			print("No flush in game yet sorry bro")
+		elif best_hand == "Full House":
+			basking_house_spell()
+		elif best_hand == "Four of a Kind":
+			print("No 4kind yet surry")
+		elif best_hand == "Straight Flush":
+			print("No Straight Flush YEET")
+		elif best_hand == "Royal Flush":
+			print("OILY FUCKING TITS BRO WTF NO WAY")
+		elif best_hand == "High Card":
+			print("Poopy fart (:")
+		else:
+			print("YOU AINT GOT SHIT BOI but frfr wtf do you have cause idk")
 
 #Cards forming pentagon for straight_laser
 var rot_speed = 0.7
@@ -779,13 +809,14 @@ func _input(event):
 
 func handle_controls(_delta):
 	
-	seeking_card_spell()
+	#seeking_card_spell()
 	discard()
 	shoot()
-	straight_laser_spell()
-	basking_house_spell()
-	pattern_card_spell()
-	straightline_card_spell()
+	#straight_laser_spell()
+	#basking_house_spell()
+	#pattern_card_spell()
+	#straightline_card_spell()
+	cast_spell()
 	
 	# Mouse capture
 	
