@@ -4,6 +4,7 @@ var player
 var interact
 var inside = false
 var talking = false
+var ending_dialogue = false
 var menu
 var options
 var current_option
@@ -24,6 +25,8 @@ func _process(delta):
 		enter_dialogue()
 	if talking:
 		move_cam(delta)
+	if ending_dialogue:
+		return_cam(delta)
 
 func on_body_entered(body):
 	if body == player:
@@ -54,9 +57,14 @@ func move_cam(delta):
 	var goal = player.get_node("3rd_person_point")
 	var lerpspeed = 1
 	var slerpspeed = 1
-	TransformUtils.lerp_slerp_to_target(cam, goal, lerpspeed, slerpspeed, delta)
+	TransformUtils.lerp_slerp_node(cam, goal, lerpspeed, slerpspeed, delta)
 
-
+func return_cam(delta):
+	var cam = player.get_node("Head/Camera")
+	var goal = player.get_node("Head/Camera_origin")
+	var lerpspeed = 1.25
+	var slerpspeed = 1.25
+	TransformUtils.lerp_slerp_node(cam, goal, lerpspeed, slerpspeed, delta)
 
 func _unhandled_input(event):
 	if event.is_action_pressed("move_back"):
@@ -79,7 +87,11 @@ func update_highlight():
 		else:
 			options[i].color = Color.BLACK
 
-func select():
-		GameState.current_mode = GameState.GameMode.GAMEPLAY
+func select(): #Dialogue terminating slection
 		talking = false
+		ending_dialogue = true
 		player.get_node("DialogueElements").visible = false
+		await get_tree().create_timer(2).timeout
+		GameState.current_mode = GameState.GameMode.GAMEPLAY #Return control to the player a bit before the cam arrives for cool effect
+		await get_tree().create_timer(4).timeout
+		ending_dialogue = false
