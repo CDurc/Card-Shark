@@ -88,6 +88,7 @@ var gun_rotation = Vector3(0,90,0)
 signal health_updated
 
 @onready var camera = $Head/Camera
+@onready var camera_origin = $Head/Camera_origin
 @onready var raycast = $Head/Camera/RayCast
 @onready var raycast2 = $Head/Camera/RayCast2 #Used for magic to allow gun and magic at same time
 @onready var right_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightMuzzle
@@ -172,6 +173,8 @@ func _physics_process(delta):
 	if can_look:
 		camera.rotation.z = lerp_angle(camera.rotation.z, -input_mouse.x * 25 * delta, delta * 5)	
 		camera.rotation.x = lerp_angle(camera.rotation.x, rotation_target.x, delta * 25)
+		camera_origin.rotation.z = lerp_angle(camera_origin.rotation.z, -input_mouse.x * 25 * delta, delta * 5)	
+		camera_origin.rotation.x = lerp_angle(camera_origin.rotation.x, rotation_target.x, delta * 25)
 		rotation.y = lerp_angle(rotation.y, rotation_target.y, delta * 25)
 	
 	#make the container lag for a sway effect
