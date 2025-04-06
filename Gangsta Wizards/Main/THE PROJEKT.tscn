@@ -1,4 +1,4 @@
-[gd_scene load_steps=321 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=327 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -31,6 +31,12 @@
 [ext_resource type="PackedScene" uid="uid://d2xjrg58rrax0" path="res://Card Shark Campaign/Map Assets/Beach Towel 6.glb" id="29_hvmc4"]
 [ext_resource type="PackedScene" uid="uid://j4vhcaqwgfj2" path="res://Card Shark Campaign/Map Assets/Beach Umbrella 2.glb" id="30_e71yh"]
 [ext_resource type="PackedScene" uid="uid://dpk72ev32esq4" path="res://Card Shark Campaign/Map Assets/Beach Umbrella.glb" id="31_dgxnj"]
+[ext_resource type="PackedScene" uid="uid://csk2nemn5s72w" path="res://Card Shark Campaign/Character Models/Goblins/goblin_6.glb" id="32_g7qah"]
+[ext_resource type="PackedScene" uid="uid://bv7k5i6krjlr0" path="res://Card Shark Campaign/Character Models/Goblins/goblin_7.glb" id="33_68gvl"]
+[ext_resource type="PackedScene" uid="uid://dbmnqui46ljnl" path="res://Card Shark Campaign/Character Models/Carnies/Zebulun, Carnie.glb" id="34_ei635"]
+[ext_resource type="PackedScene" uid="uid://xe2fm6pxemcw" path="res://Card Shark Campaign/Character Models/Carnies/Asher, Carnie.glb" id="35_ab2bb"]
+[ext_resource type="PackedScene" uid="uid://b15d8dqw7xof5" path="res://Card Shark Campaign/Character Models/Carnies/Joseph, Carnie.glb" id="36_majqd"]
+[ext_resource type="PackedScene" uid="uid://bohya1bfafakw" path="res://Card Shark Campaign/Map Assets/Volleyball.glb" id="37_6s1dw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_i5175"]
 
@@ -5009,11 +5015,11 @@ font_size = 23
 outline_size = 12
 outline_color = Color(0, 0, 0, 0.470588)
 
-[sub_resource type="SystemFont" id="SystemFont_av0yc"]
+[sub_resource type="SystemFont" id="SystemFont_p8cys"]
 font_names = PackedStringArray("Gabriola")
 
 [sub_resource type="LabelSettings" id="LabelSettings_uexql"]
-font = SubResource("SystemFont_av0yc")
+font = SubResource("SystemFont_p8cys")
 font_size = 28
 outline_size = 2
 
@@ -10676,13 +10682,13 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 5.95007, 1.20237, -14.7
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 5.95007, 1.20237, -13.9385)
 
 [node name="Street Goblin" parent="Enemies" instance=ExtResource("17_f7vv7")]
-transform = Transform3D(-3.27835e-09, 0, 0.075, 0, 0.075, 0, -0.075, 0, -3.27835e-09, -6.70075, 1.67304, 4.47757)
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -6.70075, 4.57036, 4.47757)
 
 [node name="Crab2" parent="Enemies" instance=ExtResource("18_4ixtf")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.078546, 7.17674)
 
 [node name="Goblin Enemy2" parent="Enemies" instance=ExtResource("15_yua1b")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -8.03516, 3.10469, 0.547953)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -7.23717, 3.10469, -45.9956)
 
 [node name="Scripts" type="Node" parent="."]
 
@@ -10991,6 +10997,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6201, 1.92307, -50.9343)
 
 [node name="Beach Umbrella2" parent="." instance=ExtResource("31_dgxnj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85481, 1.38095, -48.5172)
+
+[node name="goblin_6" parent="." instance=ExtResource("32_g7qah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.48, 7.83432, -80.0983)
+
+[node name="goblin_7" parent="." instance=ExtResource("33_68gvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4741, 7.07672, -76.321)
+
+[node name="Zebulun, Carnie" parent="." instance=ExtResource("34_ei635")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.935, 6.5645, -76.2329)
+
+[node name="Asher, Carnie" parent="." instance=ExtResource("35_ab2bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.447, 7.05574, -78.0115)
+
+[node name="Joseph, Carnie" parent="." instance=ExtResource("36_majqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4587, 6.38354, -75.0239)
+
+[node name="Volleyball" parent="." instance=ExtResource("37_6s1dw")]
+transform = Transform3D(1, 0, 0, 0, 0.975768, -0.218807, 0, 0.218807, 0.975768, 21.5059, 6.31919, -74.7613)
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]

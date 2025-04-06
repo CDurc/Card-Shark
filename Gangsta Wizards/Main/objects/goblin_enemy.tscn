@@ -4,16 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="3_hcxei"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
-radius = 1.31393
-height = 6.27046
+radius = 0.2
+height = 1.2
 
 [node name="Goblin Enemy" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
 script = ExtResource("1_ufgla")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296965, -0.57167, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00998646, -0.0728738, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin" parent="." instance=ExtResource("3_hcxei")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
