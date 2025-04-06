@@ -1,0 +1,87 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://l5m0rkmng01e"
+path="res://.godot/imported/SurvivalModeMap.glb-21d88c19808aaed490a3c691168a9773.scn"
+
+[deps]
+
+source_file="res://CardSharkGoblinDefense/SurvivalModeMap.glb"
+dest_files=["res://.godot/imported/SurvivalModeMap.glb-21d88c19808aaed490a3c691168a9773.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Chair": {
+"mesh_instance/layers": 3
+},
+"PATH:Door": {
+"mesh_instance/layers": 3
+},
+"PATH:Fences": {
+"mesh_instance/layers": 3
+},
+"PATH:Fences_001": {
+"mesh_instance/layers": 3
+},
+"PATH:Ground": {
+"mesh_instance/layers": 3
+},
+"PATH:Life Preserver": {
+"mesh_instance/layers": 3
+},
+"PATH:Life Preserver_001": {
+"mesh_instance/layers": 3
+},
+"PATH:Pipes": {
+"mesh_instance/layers": 3
+},
+"PATH:Spawn": {
+"mesh_instance/layers": 3
+},
+"PATH:Stairs": {
+"mesh_instance/layers": 3
+},
+"PATH:Supports": {
+"mesh_instance/layers": 3
+},
+"PATH:Trunk": {
+"mesh_instance/layers": 3
+},
+"PATH:Trunk_001": {
+"mesh_instance/layers": 3
+},
+"PATH:Trunk_002": {
+"mesh_instance/layers": 3
+},
+"PATH:Trunk_003": {
+"mesh_instance/layers": 3
+},
+"PATH:Walls & Roof": {
+"mesh_instance/layers": 3
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

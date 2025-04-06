@@ -139,6 +139,10 @@ var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
 
+#For fourkind in range enemies
+var fourkind_enemies: Array = []
+var fourkind_goals: Array = []
+
 # Functions
 func _ready():
 	add_to_group("Player") #So bots can communicate easily with player?
@@ -153,7 +157,6 @@ func _physics_process(delta):
 	
 	# Handle functions
 	handle_gravity(delta)
-	
 	if GameState.current_mode != GameState.GameMode.GAMEPLAY:
 		return
 	handle_controls(delta)
@@ -450,9 +453,37 @@ func basking_house_spell():
 	tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
 	tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
 		
-		
+func fourkind_spell():
+	if Input.is_action_pressed("Test_1"):
+		if !magic_cooldown.is_stopped(): return
+		print("Magic 1 start")
+		magic_cooldown.start(4)
+		anime.play("Taunt")
+		await get_tree().create_timer(1).timeout
+		#Some sort of anime here
+		var enemy_list = ranges.get_node("Spell Range").enemy_list
+		for enemy in enemy_list:
+			var original_transform = enemy.global_transform
+			var new_origin = original_transform.origin + Vector3.UP * 3 #Set goal height
+			var new_z_rot := Basis(Vector3.RIGHT, deg_to_rad(180)) #Set goal rot
+			var enemy_goal := Transform3D(new_z_rot, new_origin)
+			print(enemy)
+			fourkind_enemies.append(enemy) #Add enemy to active list of fourkinding enemies
+			fourkind_goals.append(enemy_goal)
+			enemy.can_move = false
+			if enemy.can_turn: enemy.can_turn = false
+			#TransformUtils.ramped_lerp_slerp_transform(enemy,enemy_goal,1,1, delta)
 
-		
+func move_fourkind_enemies(delta):  #Run in process
+	var i := 0
+	while i < fourkind_enemies.size(): #Only runs when something is in the fourkind_enemies list
+		var enemy = fourkind_enemies[i]
+		var goal = fourkind_goals[i]
+		if enemy and enemy is Node3D:
+			TransformUtils.new_lerp_slerp_transform(enemy, goal, 0.1, 0.7, 1, 1, delta)
+			
+		i += 1
+
 func move_shark(shark):
 	var path_follow = shark.get_node("PathFollow3D")
 	path_follow.progress = 0  # Reset position
@@ -711,7 +742,10 @@ func combine_cards():
 	combining = true
 	combine_t = 0.0  # Reset animation progress
 
-func _process(delta): #Currently only used for card combine
+func _process(delta): #Currently only used for card combine and fourkind
+	
+	move_fourkind_enemies(delta)
+	
 	if not combining:
 		return
 
@@ -820,7 +854,7 @@ func handle_controls(_delta):
 	#pattern_card_spell()
 	#straightline_card_spell()
 	cast_spell()
-	
+	fourkind_spell()
 	# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):

@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var follow_speed = 2.0
 @export var gravity_strength = 20.0
 @export var can_move = true
+@export var can_turn = true
 @export var damaging = false
 
 var player
@@ -20,7 +21,11 @@ var attacking = false
 @onready var anime = get_node("Goblin/AnimationPlayer")
 
 func _ready():
+	call_deferred("_find_player")
+
+func _find_player():
 	player = get_tree().get_first_node_in_group("Player")
+	print("Found player:", player)
 
 func _physics_process(delta):
 	
@@ -41,7 +46,7 @@ func _physics_process(delta):
 	var dist_to_player = my_pos.distance_to(player_pos)
 
 	#Close enough to follow
-	if dist_to_player < follow_distance:
+	if dist_to_player < follow_distance and can_turn:
 		var direction = (player_pos - my_pos).normalized()
 		# Update only x and z; keep y for gravity
 		velocity.x = direction.x * follow_speed
