@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://b66rmc5cy4iao"]
+
+[sub_resource type="GDScript" id="GDScript_620xx"]
+script/source = "extends Node3D
+
+@export var auto_remove_after := 2.0  # Seconds before auto-cleanup
+
+func _ready() -> void:
+	# Start particles (make sure child node names match!)
+	$Slam.emitting = true
+
+	# Create a Timer to remove this node after auto_remove_after seconds
+	var timer = Timer.new()
+	timer.one_shot = true
+	timer.wait_time = auto_remove_after
+	add_child(timer)
+
+	# Connect Godot 4 style: pass a callable
+	timer.timeout.connect(self._on_timer_timeout)
+
+	timer.start()
+
+func _on_timer_timeout() -> void:
+	queue_free()
+"
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7qw6m"]
+particle_flag_align_y = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 0.0
+emission_ring_radius = 5.0
+emission_ring_inner_radius = 5.0
+direction = Vector3(0, 1, 0)
+spread = 40.158
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+radial_velocity_min = 4.99998
+radial_velocity_max = 9.99998
+gravity = Vector3(0, -40, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6guts"]
+albedo_color = Color(0.140255, 0.114116, 1.20327e-08, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fpui4"]
+material = SubResource("StandardMaterial3D_6guts")
+top_radius = 0.0
+bottom_radius = 0.05
+height = 0.25
+
+[node name="Particles" type="Node3D"]
+script = SubResource("GDScript_620xx")
+
+[node name="Slam" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0)
+emitting = false
+amount = 42
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.91
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_7qw6m")
+draw_pass_1 = SubResource("CylinderMesh_fpui4")

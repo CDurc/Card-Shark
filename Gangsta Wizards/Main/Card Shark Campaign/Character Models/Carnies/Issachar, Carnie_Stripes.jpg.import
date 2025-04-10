@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6jdya5othjiv"
-path.s3tc="res://.godot/imported/Outdoor Wedding Scene_marble.jpg-5044f8a453d09f89bba6df0ca8cef1f1.s3tc.ctex"
+uid="uid://byjbvrmrw4nt8"
+path.s3tc="res://.godot/imported/Issachar, Carnie_Stripes.jpg-73a9d0dfa517fb046b3d2274c3c54d90.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f95feafb0b29d3327559e2d3f5a2ad54"
+"md5": "806be325cab1e49a9a200d6c8eed87c0"
 }
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/Outdoor Wedding Scene_marble.jpg"
-dest_files=["res://.godot/imported/Outdoor Wedding Scene_marble.jpg-5044f8a453d09f89bba6df0ca8cef1f1.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Character Models/Carnies/Issachar, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Issachar, Carnie_Stripes.jpg-73a9d0dfa517fb046b3d2274c3c54d90.s3tc.ctex"]
 
 [params]
 

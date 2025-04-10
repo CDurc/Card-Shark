@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export var health:int = 100
 @export var can_move = true
 
-var deck = [
+var initial_deck = [
 	{"rank": 2, "suit": "Clubs"},
 	{"rank": 3, "suit": "Clubs"},
 	{"rank": 4, "suit": "Clubs"},
@@ -62,6 +62,7 @@ var deck = [
 	{"rank": 14, "suit": "Spades"}
 ]
 
+var deck = initial_deck
 
 var mouse_sensitivity = 700
 var gamepad_sensitivity := 0.075
@@ -98,6 +99,7 @@ signal health_updated
 @onready var right_hand_container = $TheCardSharkv4/SharkBones/Skeleton3D/RightHandContainer
 @onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
 @onready var test_spawn = $Laserspawn #For parenting
+@onready var cards_in_hand = right_hand_container.get_node("Card")
 
 @onready var card_container = $CardContainer
 @onready var basking_spawn = $Baskingspawn
@@ -112,18 +114,22 @@ signal health_updated
 @onready var gun_anime = $TheCardSharkv4/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
 @onready var UI_Card1 = $HUD/C1/Txt
 @onready var UI_Card2 = $HUD/C2/Txt
+@onready var HUD = $HUD
 @onready var ranges = $Ranges
 
 @export var crosshair:TextureRect
 
 #Durc
+var fourkind_lifting = false
+var fourkind_slamming = false
+var fourkind_uping = false
 var can_look = true #Can turn the camera at all with inputs
 var basking_shark
 var active_laser
 var all_cards
 var best_hand #Best Hand Algo will return this
 var hand = []
-var cards #This is the asset for the physical cards and is not related to the card data
+var cards #This is the asset for the viewport cards which are linked to the physical cards in hand
 var straight_laser
 var gun
 var phys_card_path
@@ -138,10 +144,14 @@ var boom_card_scene = preload("res://Card Shark/Boom Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
+var fourkind_slam_scene = preload("res://Particles/fourkind_slam_effect.tscn")
+
 
 #For fourkind in range enemies
 var fourkind_enemies: Array = []
 var fourkind_goals: Array = []
+var fourkind_ups: Array = []
+var fourkind_return_goals: Array = []
 
 # Functions
 func _ready():
@@ -152,6 +162,7 @@ func _ready():
 	bofa = two_cards()
 	set_cards()
 	set_bofa()
+	load_bofa()
 	load_viewport()
 func _physics_process(delta):
 	
@@ -245,13 +256,28 @@ func set_bofa():
 	UI_Card1.text = str(bofa[0]["rank"])
 	UI_Card2.text = str(bofa[1]["rank"])
 	
+func load_bofa(): #This CANNOT be same fn as set_cards because viewport needs to load after set
+	#cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"])
+	for i in range(len(bofa)):
+	#	var card_front = cards.get_node("C%d" % (i+1)).get_node("Front").mesh.material
+		var card_front = HUD.get_node("C%d" % (i+1)).get_node("Inner/TextureRect")
+		var card_type = str(bofa[i]["rank"]) + str(bofa[i]["suit"].left(1))
+		var image = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % (card_type))
+		card_front.texture = image
+	
+var cards_drawn
 func set_cards():
-	hand = deck.slice(0,5)
-	deck = deck.slice(5,)
+	cards_drawn = min(len(deck),5)
+	print("Cards drawn:",cards_drawn)
+	hand = []
+	hand = deck.slice(0,cards_drawn)
+	deck = deck.slice(cards_drawn,)
 	all_cards = hand.duplicate()
 	all_cards.append_array(bofa)
 	best_hand = evaluator_instance.get_best_poker_hand(all_cards)
 	print(best_hand)
+	print("Size of hand",range(len(hand)))
+	print("Size of cards_drawn",cards_drawn)
 	
 func load_set_cards(): #This CANNOT be same fn as set_cards because viewport needs to load after set
 	#cards.get_node("C1").get_node("Txt").mesh.text = str(hand[0]["rank"])
@@ -260,6 +286,11 @@ func load_set_cards(): #This CANNOT be same fn as set_cards because viewport nee
 		var card_type = str(hand[i]["rank"]) + str(hand[i]["suit"].left(1))
 		var image = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % (card_type))
 		card_front.albedo_texture = image
+	if len(hand) < 5: #Make some cards invisible of hand is too smol
+		for i in range(0,5):
+			if i >= len(hand):
+				print("Invis card:",(i+1))
+				cards_in_hand.get_node("C%d" % (i+1)).visible = false
 
 func discard():
 	if Input.is_action_pressed("Ability1"):
@@ -279,6 +310,93 @@ func discard():
 		load_set_cards() #Load the textures
 		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
 		right_hand_container.visible = true
+
+func shuffle_deck():
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(16)
+	
+	var t = 0 #Controls rate of card changes while spinning
+	var change_delay = 0 #Controls delay until cards begin changing
+	var changed_card = 1 #The card that will get changed when shuffling
+	var rot_speed = 0.2
+	var rot_acc = 7
+	var rot_max_speed = 40
+	var current_rotation = 0
+	var shuffle_node = cards_in_hand.get_node("Shuffles")
+	
+	combine_cards()
+	await get_tree().create_timer(0.5).timeout
+	anime.play("Discard")
+	await get_tree().create_timer(1.5).timeout
+	for i in range (0,5):
+		cards_in_hand.get_node("C%d" % (i+1)).visible = false
+	cards_in_hand.get_node("Shuffles").visible = true
+	await get_tree().create_timer(0.65).timeout
+	deck = initial_deck
+	deck.shuffle()
+		
+	var shuffle_cooldown = get_tree().create_timer(10)
+	while shuffle_cooldown.time_left > 0:
+		var delta = get_process_delta_time()
+		# Rotate 'Target'
+		rot_speed = min(rot_speed + rot_acc * delta, rot_max_speed)
+		current_rotation = shuffle_node.transform.basis.get_rotation_quaternion()  # Update rotation
+		var rotation_delta = Quaternion(Vector3(0, 0, 1), delta)  # Rotate around Z-axis
+		var new_rotation = current_rotation.slerp(rotation_delta * current_rotation, rot_speed)
+		shuffle_node.transform.basis = Basis(new_rotation)
+		await get_tree().process_frame  # Yield execution so it doesn't lock up
+		
+		#pinn
+		
+		t += delta
+		change_delay += delta
+		if t >= 0.25 and changed_card<=13 and change_delay>=6.5:
+			t = 0.0
+			print("Card Changed",changed_card)
+			var mesh_instance = cards_in_hand.get_node("Shuffles/C%d/Front" % changed_card)
+			
+			# Duplicate the mesh so each card is unique
+			var mesh_copy = mesh_instance.mesh.duplicate()
+			mesh_instance.mesh = mesh_copy
+			
+			# Get the material from surface 0
+			var original_material = mesh_copy.surface_get_material(0)
+			if original_material:
+				# Deep-duplicate so sub-resources aren’t shared
+				var new_material = original_material.duplicate(true)
+				new_material.resource_local_to_scene = true
+				
+				# Determine which texture to use for this card
+				var card_type = str(deck[changed_card-1]["rank"]) + str(deck[changed_card-1]["suit"].left(1))
+				var card_texture = load("res://Card Shark/Card Pics/PlayingCard_%s.jpg" % card_type)
+				
+				new_material.albedo_texture = card_texture
+				# Assign the new material to surface 0
+				mesh_copy.surface_set_material(0, new_material)
+
+				changed_card += 1
+	
+	print("While loop expired")
+	anime.play("Discard")
+	await get_tree().create_timer(1).timeout
+	for i in range (0,5): #Make hand visible and cards in correct places
+		var card = cards_in_hand.get_node("C%d" % (i+1))
+		var t_node = cards_in_hand.get_node("P%d" % (i+1))
+		card.visible = true
+		card.transform = t_node.transform
+	cards_in_hand.get_node("Shuffles").visible = false
+	set_cards() #Pick cards from deck
+	load_set_cards() #Load the textures
+
+	# Reset rotation and stop movement
+	shuffle_node.transform.basis = Basis(current_rotation)  # Ensure final rotation reset
+	rot_speed = 0.7
+	rot_acc = 3
+	rot_max_speed = 9.5
+	
+func test_2_spell():
+	if Input.is_action_just_pressed("Test_2"):
+		shuffle_deck()
 
 func throw_cards():
 	for i in range(len(hand)):
@@ -462,27 +580,98 @@ func fourkind_spell():
 		await get_tree().create_timer(1).timeout
 		#Some sort of anime here
 		var enemy_list = ranges.get_node("Spell Range").enemy_list
+		# Clean up from previous cast
+		fourkind_enemies.clear()
+		fourkind_goals.clear()
+		fourkind_ups.clear()
+		fourkind_return_goals.clear()
 		for enemy in enemy_list:
 			var original_transform = enemy.global_transform
+			var original_origin = original_transform.origin
+			var up_origin = original_transform.origin + Vector3.UP * 4
 			var new_origin = original_transform.origin + Vector3.UP * 3 #Set goal height
 			var new_z_rot := Basis(Vector3.RIGHT, deg_to_rad(180)) #Set goal rot
 			var enemy_goal := Transform3D(new_z_rot, new_origin)
+			var enemy_up_goal := Transform3D(new_z_rot, up_origin)
+			var enemy_return_goal := Transform3D(new_z_rot, original_origin) #Return goal is the slam down ending pos
+			var effect_goal :=  Transform3D(Basis(), original_origin + Vector3.DOWN * 0.5)
 			print(enemy)
 			fourkind_enemies.append(enemy) #Add enemy to active list of fourkinding enemies
 			fourkind_goals.append(enemy_goal)
+			fourkind_ups.append(enemy_up_goal)
+			fourkind_return_goals.append(enemy_return_goal)
 			enemy.can_move = false
+			spawn_slam_effect(enemy,effect_goal)
 			if enemy.can_turn: enemy.can_turn = false
-			#TransformUtils.ramped_lerp_slerp_transform(enemy,enemy_goal,1,1, delta)
+		fourkind_lifting = true
+		await get_tree().create_timer(1.5).timeout
+		fourkind_lifting = false
+		fourkind_uping = true
+		await get_tree().create_timer(0.5).timeout
+		fourkind_uping = false
+		fourkind_slamming = true
+		await get_tree().create_timer(0.3).timeout
+		fourkind_slamming = false
+
+func spawn_slam_effect(enemy,spawn):
+	await get_tree().create_timer(2.2).timeout
+	if is_instance_valid(enemy): #Check if lil' homie died first, if so remove from all future lists
+		var slam_effect = fourkind_slam_scene.instantiate()
+		slam_effect.global_transform = spawn
+		get_tree().root.add_child(slam_effect)
+		if enemy.has_method("damage"):
+			enemy.call("damage", 100)
+		await get_tree().create_timer(0.3).timeout
+		if is_instance_valid(enemy): #Make sure lil homie is alive
+			enemy.can_move = true
+			if "can_turn" in enemy: enemy.can_turn = true
+	
 
 func move_fourkind_enemies(delta):  #Run in process
 	var i := 0
 	while i < fourkind_enemies.size(): #Only runs when something is in the fourkind_enemies list
 		var enemy = fourkind_enemies[i]
 		var goal = fourkind_goals[i]
-		if enemy and enemy is Node3D:
-			TransformUtils.new_lerp_slerp_transform(enemy, goal, 0.1, 0.7, 1, 1, delta)
-			
+		#var return_goal = fourkind_return_goals[i]
+		if not is_instance_valid(enemy): #Check if lil' homie died first, if so remove from all future lists
+			fourkind_enemies.remove_at(i)
+			fourkind_goals.remove_at(i)
+			fourkind_ups.remove_at(i)
+			fourkind_return_goals.remove_at(i)
+		else:
+			TransformUtils.new_lerp_slerp_transform(0.02,enemy, goal, 0.02, 0.1, 0.5, 3, delta)
 		i += 1
+
+func up_fourkind_enemies(delta):
+	var i := 0
+	while i < fourkind_enemies.size(): #Only runs when something is in the fourkind_enemies list
+		var enemy = fourkind_enemies[i]
+		var up = fourkind_ups[i]
+		#var return_goal = fourkind_return_goals[i]
+		if not is_instance_valid(enemy): #Check if lil' homie died first, if so remove from all future lists
+			fourkind_enemies.remove_at(i)
+			fourkind_goals.remove_at(i)
+			fourkind_ups.remove_at(i)
+			fourkind_return_goals.remove_at(i)
+		else:
+			TransformUtils.new_lerp_slerp_transform(0.02,enemy, up, 0.02, 0.1, 0.5, 3, delta)
+		i += 1	
+	
+
+func slam_fourkind_enemies(delta):
+	var i := 0
+	while i < fourkind_enemies.size(): #Only runs when something is in the fourkind_enemies list
+		var enemy = fourkind_enemies[i]
+		var return_goal = fourkind_return_goals[i]
+		if not is_instance_valid(enemy): #Check if lil' homie died first, if so remove from all future lists
+			fourkind_enemies.remove_at(i)
+			fourkind_goals.remove_at(i)
+			fourkind_ups.remove_at(i)
+			fourkind_return_goals.remove_at(i)
+		else:
+			TransformUtils.new_lerp_slerp_transform(0.1,enemy, return_goal, 0.02, 20, 0.5, 3, delta)
+		i += 1
+			
 
 func move_shark(shark):
 	var path_follow = shark.get_node("PathFollow3D")
@@ -744,7 +933,12 @@ func combine_cards():
 
 func _process(delta): #Currently only used for card combine and fourkind
 	
-	move_fourkind_enemies(delta)
+	if fourkind_lifting:
+		move_fourkind_enemies(delta)
+	elif fourkind_uping:
+		up_fourkind_enemies(delta)
+	elif fourkind_slamming:
+		slam_fourkind_enemies(delta)
 	
 	if not combining:
 		return
@@ -855,6 +1049,7 @@ func handle_controls(_delta):
 	#straightline_card_spell()
 	cast_spell()
 	fourkind_spell()
+	test_2_spell()
 	# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):
@@ -910,7 +1105,7 @@ func handle_gravity(delta):
 
 func action_jump():
 	
-	anime.play("Jump")
+	#anime.play("Jump") FIX JUMP ANIME HERE
 	gravity = -jump_strength
 	
 	jump_single = false;

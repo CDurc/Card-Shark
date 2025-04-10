@@ -89,7 +89,6 @@ radial_segments = 8
 rings = 6
 
 [node name="Particles" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_c7s81")
 
 [node name="Fire" type="GPUParticles3D" parent="."]

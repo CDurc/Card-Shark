@@ -7,9 +7,9 @@ extends CharacterBody3D
 @export var can_move = true
 @export var can_turn = true
 @export var damaging = false
+@export var health := 100
 
 var player
-var health := 100
 var destroyed := false
 var attacking = false
 
