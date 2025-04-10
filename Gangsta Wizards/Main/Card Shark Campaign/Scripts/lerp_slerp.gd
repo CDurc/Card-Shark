@@ -59,6 +59,7 @@ static func ramped_lerp_slerp_transform( #Lerps and slerps, ramped
 
 
 static func new_lerp_slerp_transform(
+	min_clamp: float, #holy f update
 	moving_node: Node3D,
 	target_transform: Transform3D,
 	base_move_speed: float,
@@ -74,7 +75,7 @@ static func new_lerp_slerp_transform(
 	var distance = from_pos.distance_to(to_pos)
 
 	var move_interp = base_move_speed * (1.0 + move_ramp_factor * distance) * delta
-	move_interp = clamp(move_interp, 0.1, 1.0)  # Prevent slow motion crawl
+	move_interp = clamp(move_interp, min_clamp, 100)  # Prevent slow motion crawl
 	var new_pos = from_pos.lerp(to_pos, move_interp)
 
 	# --- Rotation ramping ---
@@ -83,7 +84,7 @@ static func new_lerp_slerp_transform(
 	var angle = from_rot.angle_to(to_rot)
 
 	var rot_interp = base_rot_speed * (1.0 + rot_ramp_factor * angle) * delta
-	rot_interp = clamp(rot_interp, 0.1, 1.0)  # Prevent ultra slow spin
+	rot_interp = clamp(rot_interp, 0.02, 5)  # Prevent ultra slow spin
 	var new_rot = from_rot.slerp(to_rot, rot_interp)
 
 	# --- Apply new transform ---

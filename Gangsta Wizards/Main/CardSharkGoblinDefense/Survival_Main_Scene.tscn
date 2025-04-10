@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bf2oikdr46m1m"]
+[gd_scene load_steps=12 format=3 uid="uid://bf2oikdr46m1m"]
 
 [ext_resource type="PackedScene" uid="uid://l5m0rkmng01e" path="res://CardSharkGoblinDefense/SurvivalModeMap.glb" id="1_cncwm"]
 [ext_resource type="PackedScene" uid="uid://d3vokeugd845g" path="res://objects/goblin_enemy.tscn" id="1_nelki"]
@@ -7,6 +7,7 @@
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_4yiao"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="4_k08p2"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="5_jv8rk"]
+[ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="7_6sdoq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h6qig"]
 font = ExtResource("5_jv8rk")
@@ -27,14 +28,25 @@ outline_size = 2
 [node name="Enemies" type="Node3D" parent="."]
 
 [node name="Goblin Enemy" parent="Enemies" instance=ExtResource("1_nelki")]
+transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -7.30985, 2.87305, 0.661235)
+
+[node name="Goblin Enemy2" parent="Enemies" instance=ExtResource("1_nelki")]
 transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -7.30985, 2.87305, -1.12646)
+health = 500
+
+[node name="Goblin Enemy3" parent="Enemies" instance=ExtResource("1_nelki")]
+transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -5.55401, 2.87305, -1.12646)
+
+[node name="Goblin Enemy4" parent="Enemies" instance=ExtResource("1_nelki")]
+transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -5.55401, 2.87305, 0.839191)
 
 [node name="Map" type="Node3D" parent="."]
 
 [node name="SurvivalModeMap" parent="Map" instance=ExtResource("1_cncwm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.604171, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_vmb5m")]
-transform = Transform3D(-1.39656, 0, -0.0980247, 0, 1.4, 0, 0.0980247, 0, -1.39656, -6.77844, 0.394987, -10.2201)
+transform = Transform3D(1, 0, 0.000314473, 0, 1, 0, -0.000314473, 0, 1, -6.77844, 0.394987, 6.52321)
 
 [node name="HUD" type="CanvasLayer" parent="Player"]
 script = ExtResource("3_3vbu2")
@@ -107,7 +119,15 @@ offset_bottom = 56.0
 scale = Vector2(1.875, 2.625)
 color = Color(0.930577, 0.928115, 0.890927, 1)
 
+[node name="TextureRect" type="TextureRect" parent="Player/HUD/C1/Inner"]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("7_6sdoq")
+expand_mode = 1
+
 [node name="Txt" type="Label" parent="Player/HUD/C1"]
+visible = false
 layout_mode = 0
 offset_left = 23.0
 offset_top = 14.0
@@ -146,7 +166,15 @@ offset_bottom = 38.0
 scale = Vector2(1.875, 2.625)
 color = Color(0.930577, 0.928115, 0.890927, 1)
 
+[node name="TextureRect" type="TextureRect" parent="Player/HUD/C2/Inner"]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("7_6sdoq")
+expand_mode = 1
+
 [node name="Txt" type="Label" parent="Player/HUD/C2"]
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_top = -4.0

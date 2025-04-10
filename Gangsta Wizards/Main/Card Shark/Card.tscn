@@ -1,11 +1,22 @@
-[gd_scene load_steps=47 format=3 uid="uid://bgvpqpkr8qlnu"]
+[gd_scene load_steps=84 format=3 uid="uid://bgvpqpkr8qlnu"]
 
-[ext_resource type="Texture2D" uid="uid://btoeu03q87qs8" path="res://Card Shark/Card Pics/PlayingCard_6D.jpg" id="1_i8fje"]
+[ext_resource type="Texture2D" uid="uid://q8yie1atrlnp" path="res://Card Shark/Card Pics/PlayingCard_14S.jpg" id="1_2cfu5"]
 [ext_resource type="Texture2D" uid="uid://c17ocgn82ag4m" path="res://Card Shark/Card Pics/PlayingCard_7D.jpg" id="2_5pr2o"]
 [ext_resource type="Texture2D" uid="uid://ch8qgsu1npfhm" path="res://Card Shark/Card Pics/PlayingCard_CardBack.png" id="2_fr1e1"]
-[ext_resource type="Texture2D" uid="uid://cghroaiy13ekt" path="res://Card Shark/Card Pics/PlayingCard_8C.jpg" id="3_jypve"]
 [ext_resource type="Texture2D" uid="uid://bq62h4r4ytaqi" path="res://Card Shark/Card Pics/PlayingCard_10C.jpg" id="4_6rc0t"]
 [ext_resource type="Texture2D" uid="uid://bxa7a3e02csxd" path="res://Card Shark/Card Pics/PlayingCard_2D.jpg" id="5_wk5dt"]
+[ext_resource type="Texture2D" uid="uid://teiebinbfi4i" path="res://Card Shark/Card Pics/PlayingCard_13S.jpg" id="6_f7dsi"]
+[ext_resource type="Texture2D" uid="uid://p3od74qqef07" path="res://Card Shark/Card Pics/PlayingCard_12S.jpg" id="7_brf7t"]
+[ext_resource type="Texture2D" uid="uid://ggrgho3xavex" path="res://Card Shark/Card Pics/PlayingCard_11S.jpg" id="8_b020c"]
+[ext_resource type="Texture2D" uid="uid://2a3rp4fx4oqs" path="res://Card Shark/Card Pics/PlayingCard_10S.jpg" id="9_t8leb"]
+[ext_resource type="Texture2D" uid="uid://ct42ujrk25h5p" path="res://Card Shark/Card Pics/PlayingCard_9S.jpg" id="10_ee7pd"]
+[ext_resource type="Texture2D" uid="uid://cuebdke5ehtov" path="res://Card Shark/Card Pics/PlayingCard_8S.jpg" id="11_4mywp"]
+[ext_resource type="Texture2D" uid="uid://bycinb6h08a5j" path="res://Card Shark/Card Pics/PlayingCard_7S.jpg" id="12_ny2ki"]
+[ext_resource type="Texture2D" uid="uid://c83o5lk7xsb74" path="res://Card Shark/Card Pics/PlayingCard_6S.jpg" id="13_3wxi4"]
+[ext_resource type="Texture2D" uid="uid://bqghvxd3h16cv" path="res://Card Shark/Card Pics/PlayingCard_5S.jpg" id="14_apqst"]
+[ext_resource type="Texture2D" uid="uid://drqgruldxamf4" path="res://Card Shark/Card Pics/PlayingCard_4S.jpg" id="15_wy0bs"]
+[ext_resource type="Texture2D" uid="uid://ctktuq0mtfnyr" path="res://Card Shark/Card Pics/PlayingCard_3S.jpg" id="16_puymd"]
+[ext_resource type="Texture2D" uid="uid://lrlgw248o5by" path="res://Card Shark/Card Pics/PlayingCard_2S.jpg" id="17_xeuat"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_elhht"]
 size = Vector3(0.5, 0.8, 0.007)
@@ -27,7 +38,7 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my51j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm0ms"]
-albedo_texture = ExtResource("1_i8fje")
+albedo_texture = ExtResource("1_2cfu5")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sougk"]
 material = SubResource("StandardMaterial3D_qm0ms")
@@ -66,7 +77,7 @@ text = "C
 font_size = 31
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xif7u"]
-albedo_texture = ExtResource("3_jypve")
+albedo_texture = ExtResource("1_2cfu5")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3g01t"]
 material = SubResource("StandardMaterial3D_xif7u")
@@ -158,6 +169,97 @@ material = SubResource("StandardMaterial3D_ppnik")
 text = "E
 "
 font_size = 31
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhqt8"]
+albedo_texture = ExtResource("1_2cfu5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oe1m3"]
+material = SubResource("StandardMaterial3D_rhqt8")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yhwq3"]
+albedo_texture = ExtResource("6_f7dsi")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2id2l"]
+material = SubResource("StandardMaterial3D_yhwq3")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjcuk"]
+albedo_texture = ExtResource("7_brf7t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dbpn5"]
+material = SubResource("StandardMaterial3D_sjcuk")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oeilx"]
+albedo_texture = ExtResource("8_b020c")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ceyvr"]
+material = SubResource("StandardMaterial3D_oeilx")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg8bb"]
+albedo_texture = ExtResource("9_t8leb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jd435"]
+material = SubResource("StandardMaterial3D_kg8bb")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scsj2"]
+albedo_texture = ExtResource("10_ee7pd")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ejmr6"]
+material = SubResource("StandardMaterial3D_scsj2")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3ihl"]
+albedo_texture = ExtResource("11_4mywp")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yw1gu"]
+material = SubResource("StandardMaterial3D_n3ihl")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hpxk"]
+albedo_texture = ExtResource("12_ny2ki")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ls30g"]
+material = SubResource("StandardMaterial3D_7hpxk")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btvdh"]
+albedo_texture = ExtResource("13_3wxi4")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h5wt1"]
+material = SubResource("StandardMaterial3D_btvdh")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qn0p"]
+albedo_texture = ExtResource("14_apqst")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dsuej"]
+material = SubResource("StandardMaterial3D_2qn0p")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mc6e1"]
+albedo_texture = ExtResource("15_wy0bs")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eru6e"]
+material = SubResource("StandardMaterial3D_mc6e1")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdlss"]
+albedo_texture = ExtResource("16_puymd")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_igamx"]
+material = SubResource("StandardMaterial3D_fdlss")
+size = Vector2(0.5, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14tik"]
+albedo_texture = ExtResource("17_xeuat")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vtaon"]
+material = SubResource("StandardMaterial3D_14tik")
+size = Vector2(0.5, 0.8)
 
 [node name="Card" type="Node3D"]
 
@@ -482,3 +584,371 @@ surface_material_override/0 = SubResource("StandardMaterial3D_gjway")
 
 [node name="spawn" type="Node3D" parent="Target"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.438258)
+
+[node name="Shuffles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006, 0.818286, -0.249448)
+visible = false
+
+[node name="C1" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C1"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C1"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_oe1m3")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C1"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C2" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.885394, 0.464842, 0, -0.464842, 0.885394, 0, 0, 0, 1, 0.279, 0.531, -0.01)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C2"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C2"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_2id2l")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C2"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C3" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.567844, 0.823136, 0, -0.823136, 0.567844, 0, 0, 0, 1, 0.494, 0.341, -0.02)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C3"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C3"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_dbpn5")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C3"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C4" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.120137, 0.992757, 0, -0.992757, 0.120137, 0, 0, 0, 1, 0.596, 0.072, -0.03)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C4"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C4"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_ceyvr")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C4"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C5" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.355107, 0.934826, 0, -0.934826, -0.355107, 0, 0, 0, 1, 0.561, -0.213, -0.04)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C5"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C5"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_jd435")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C5"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C6" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.748956, 0.66262, 0, -0.66262, -0.748956, 0, 0, 0, 1, 0.398, -0.449, -0.05)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C6"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C6"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_ejmr6")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C6"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C7" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.971134, 0.238533, 0, -0.238533, -0.971134, 0, 0, 0, 1, 0.143, -0.583, -0.06)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C7"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C7"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_yw1gu")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C7"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C8" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.971134, -0.238534, 0, 0.238534, -0.971134, 0, 0, 0, 1, -0.144, -0.582, -0.07)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C8"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C8"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_ls30g")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C8"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C9" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.748956, -0.66262, 0, 0.66262, -0.748956, 0, 0, 0, 1, -0.398, -0.449, -0.08)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C9"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C9"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_h5wt1")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C9"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C10" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(-0.355107, -0.934826, 0, 0.934826, -0.355107, 0, 0, 0, 1, -0.561, -0.212, -0.09)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C10"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C10"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_dsuej")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C10"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C11" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.120137, -0.992757, 0, 0.992757, 0.120137, 0, 0, 0, 1, -0.596, 0.073, -0.1)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C11"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C11"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_eru6e")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C11"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C12" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.567844, -0.823136, 0, 0.823136, 0.567844, 0, 0, 0, 1, -0.493, 0.342, -0.11)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C12"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C12"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_igamx")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C12"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")
+
+[node name="C13" type="MeshInstance3D" parent="Shuffles"]
+transform = Transform3D(0.885394, -0.464842, 0, 0.464842, 0.885394, 0, 0, 0, 1, -0.278, 0.532, -0.12)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Outline" type="MeshInstance3D" parent="Shuffles/C13"]
+transform = Transform3D(1.051, 0, 0, 0, 1.029, 0, 0, 0, 1, 0, 0, -0.00581564)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvwk2")
+
+[node name="Backing" type="MeshInstance3D" parent="Shuffles/C13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.192, 0, 0, -0.0129248)
+layers = 3
+mesh = SubResource("BoxMesh_elhht")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_my51j")
+
+[node name="Front" type="MeshInstance3D" parent="Shuffles/C13"]
+transform = Transform3D(1, 0, 1.86265e-08, 1.86265e-08, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.00476666)
+mesh = SubResource("PlaneMesh_vtaon")
+
+[node name="Back" type="MeshInstance3D" parent="Shuffles/C13"]
+transform = Transform3D(1, 4.44089e-16, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0137187)
+mesh = SubResource("PlaneMesh_0feh3")

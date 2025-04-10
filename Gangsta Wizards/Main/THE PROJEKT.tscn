@@ -1,4 +1,4 @@
-[gd_scene load_steps=327 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=328 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://c1u06hmwoxjvp" path="res://Card Shark Campaign/Character Models/Goblins/street_goblin.tscn" id="17_f7vv7"]
 [ext_resource type="PackedScene" uid="uid://cspnb87r501ok" path="res://Card Shark Campaign/Character Models/Goblins/goblin_5.glb" id="17_jkf7j"]
 [ext_resource type="PackedScene" uid="uid://ct8602d8fsoc0" path="res://Card Shark Campaign/Character Models/Crab.glb" id="18_4ixtf"]
+[ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="20_wyvkd"]
 [ext_resource type="PackedScene" uid="uid://c2y0nt7ku6sxo" path="res://Card Shark Campaign/Map Assets/Beach Restrooms.glb" id="26_vn2n5"]
 [ext_resource type="PackedScene" uid="uid://cbsu1vf8bvgsh" path="res://Card Shark Campaign/CPUs/gary.tscn" id="26_y0epj"]
 [ext_resource type="PackedScene" uid="uid://cb1jt0u67aek1" path="res://Card Shark Campaign/Map Assets/Boardwalk.glb" id="27_6102w"]
@@ -5009,12 +5010,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bjwn7")
 
-[sub_resource type="LabelSettings" id="LabelSettings_8pkvj"]
-font = ExtResource("6_me0ch")
-font_size = 23
-outline_size = 12
-outline_color = Color(0, 0, 0, 0.470588)
-
 [sub_resource type="SystemFont" id="SystemFont_p8cys"]
 font_names = PackedStringArray("Gabriola")
 
@@ -5022,6 +5017,12 @@ font_names = PackedStringArray("Gabriola")
 font = SubResource("SystemFont_p8cys")
 font_size = 28
 outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_fr6no"]
+font = ExtResource("6_me0ch")
+font_size = 23
+outline_size = 12
+outline_color = Color(0, 0, 0, 0.470588)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j1ms4"]
 resource_name = "Ball B"
@@ -10476,126 +10477,6 @@ environment = ExtResource("3_pexkb")
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("4_r1jao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9984, 0.559649, -38.1298)
 
-[node name="HUD" type="CanvasLayer" parent="Player"]
-script = ExtResource("5_e0jyt")
-
-[node name="Crosshair" type="TextureRect" parent="Player/HUD"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.35, 0.35)
-pivot_offset = Vector2(64, 64)
-texture = ExtResource("6_hp6lq")
-
-[node name="Health" type="Label" parent="Player/HUD"]
-offset_left = 31.0
-offset_top = 14.0
-offset_right = 121.0
-offset_bottom = 59.0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-text = "100%"
-label_settings = SubResource("LabelSettings_8pkvj")
-vertical_alignment = 2
-
-[node name="Interact" type="Label" parent="Player/HUD"]
-visible = false
-offset_left = 460.0
-offset_top = 259.0
-offset_right = 812.0
-offset_bottom = 304.0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-text = "Press F to interact"
-label_settings = SubResource("LabelSettings_8pkvj")
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="C1" type="Control" parent="Player/HUD"]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -234.0
-grow_horizontal = 0
-
-[node name="Outer" type="ColorRect" parent="Player/HUD/C1"]
-visibility_layer = 6
-layout_mode = 1
-offset_left = 14.0
-offset_top = 18.0
-offset_right = 52.0
-offset_bottom = 56.0
-scale = Vector2(1.875, 2.625)
-color = Color(0, 0, 0, 1)
-
-[node name="Inner" type="ColorRect" parent="Player/HUD/C1"]
-visibility_layer = 6
-layout_mode = 1
-offset_left = 16.0
-offset_top = 20.0
-offset_right = 52.0
-offset_bottom = 56.0
-scale = Vector2(1.875, 2.625)
-color = Color(0.930577, 0.928115, 0.890927, 1)
-
-[node name="Txt" type="Label" parent="Player/HUD/C1"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 14.0
-offset_right = 63.0
-offset_bottom = 58.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 31
-text = "E"
-
-[node name="C2" type="Control" parent="Player/HUD"]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -121.0
-offset_top = 18.0
-offset_right = -121.0
-offset_bottom = 18.0
-grow_horizontal = 0
-
-[node name="Outer" type="ColorRect" parent="Player/HUD/C2"]
-visibility_layer = 6
-layout_mode = 1
-offset_right = 38.0
-offset_bottom = 38.0
-scale = Vector2(1.875, 2.625)
-color = Color(0, 0, 0, 1)
-
-[node name="Inner" type="ColorRect" parent="Player/HUD/C2"]
-visibility_layer = 6
-layout_mode = 1
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 38.0
-offset_bottom = 38.0
-scale = Vector2(1.875, 2.625)
-color = Color(0.930577, 0.928115, 0.890927, 1)
-
-[node name="Txt" type="Label" parent="Player/HUD/C2"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = -4.0
-offset_right = 50.0
-offset_bottom = 40.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 31
-text = "E"
-
 [node name="DialogueElements" type="CanvasLayer" parent="Player"]
 visible = false
 
@@ -10663,6 +10544,142 @@ layout_mode = 2
 offset_right = 802.0
 offset_bottom = 23.0
 text = "[ATTACK] I don't like sand..."
+
+[node name="HUD" type="CanvasLayer" parent="Player"]
+script = ExtResource("5_e0jyt")
+
+[node name="Crosshair" type="TextureRect" parent="Player/HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("6_hp6lq")
+
+[node name="Health" type="Label" parent="Player/HUD"]
+offset_left = 31.0
+offset_top = 14.0
+offset_right = 121.0
+offset_bottom = 59.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "100%"
+label_settings = SubResource("LabelSettings_fr6no")
+vertical_alignment = 2
+
+[node name="Interact" type="Label" parent="Player/HUD"]
+visible = false
+offset_left = 460.0
+offset_top = 259.0
+offset_right = 812.0
+offset_bottom = 304.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Press F to interact"
+label_settings = SubResource("LabelSettings_fr6no")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="C1" type="Control" parent="Player/HUD"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -234.0
+grow_horizontal = 0
+
+[node name="Outer" type="ColorRect" parent="Player/HUD/C1"]
+visibility_layer = 6
+layout_mode = 1
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 52.0
+offset_bottom = 56.0
+scale = Vector2(1.875, 2.625)
+color = Color(0, 0, 0, 1)
+
+[node name="Inner" type="ColorRect" parent="Player/HUD/C1"]
+visibility_layer = 6
+layout_mode = 1
+offset_left = 16.0
+offset_top = 20.0
+offset_right = 52.0
+offset_bottom = 56.0
+scale = Vector2(1.875, 2.625)
+color = Color(0.930577, 0.928115, 0.890927, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Player/HUD/C1/Inner"]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("20_wyvkd")
+expand_mode = 1
+
+[node name="Txt" type="Label" parent="Player/HUD/C1"]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "E"
+
+[node name="C2" type="Control" parent="Player/HUD"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_top = 18.0
+offset_right = -121.0
+offset_bottom = 18.0
+grow_horizontal = 0
+
+[node name="Outer" type="ColorRect" parent="Player/HUD/C2"]
+visibility_layer = 6
+layout_mode = 1
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0, 0, 0, 1)
+
+[node name="Inner" type="ColorRect" parent="Player/HUD/C2"]
+visibility_layer = 6
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+scale = Vector2(1.875, 2.625)
+color = Color(0.930577, 0.928115, 0.890927, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Player/HUD/C2/Inner"]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("20_wyvkd")
+expand_mode = 1
+
+[node name="Txt" type="Label" parent="Player/HUD/C2"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = -4.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "E"
 
 [node name="Projectiles" type="Node3D" parent="."]
 
@@ -11018,4 +11035,3 @@ transform = Transform3D(1, 0, 0, 0, 0.975768, -0.218807, 0, 0.218807, 0.975768, 
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]
-[connection signal="health_updated" from="Player" to="Player/HUD" method="_on_health_updated"]
