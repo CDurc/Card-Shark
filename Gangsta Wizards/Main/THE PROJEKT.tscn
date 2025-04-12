@@ -9022,10 +9022,10 @@ _data = {
 
 [node name="Main" type="Node3D"]
 
-[node name="Map" type="Node3D" parent="."]
+[node name="Island" parent="." instance=ExtResource("1_t7jbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.80712, -293.588)
 
-[node name="Island" parent="Map" instance=ExtResource("1_t7jbi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.18469, -297.593)
+[node name="Map" type="Node3D" parent="."]
 
 [node name="platform-large-grass" parent="Map" instance=ExtResource("1_a674t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -10475,7 +10475,7 @@ skeleton = NodePath("")
 environment = ExtResource("3_pexkb")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("4_r1jao")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9984, 0.559649, -38.1298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.38548, 5.47972, -46.1006)
 
 [node name="DialogueElements" type="CanvasLayer" parent="Player"]
 visible = false

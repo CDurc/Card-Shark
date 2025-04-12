@@ -295,21 +295,25 @@ func load_set_cards(): #This CANNOT be same fn as set_cards because viewport nee
 func discard():
 	if Input.is_action_pressed("Ability1"):
 		if !magic_cooldown.is_stopped(): return
-		magic_cooldown.start(3)
-		anime.play("Discard")
-		combine_cards() #Merge cards to prepare to throw
-		await get_tree().create_timer(0.2).timeout
-		right_hand_container.visible = false
-		throw_cards() #Instantiates physics cards
-		await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
-		for i in range(1, 6): #return cards to original position while invisible
-			var card = right_hand_container.get_node("Card").get_node("C%d" % i)
-			var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
-			card.transform = t_node.transform
-		set_cards() #Pick cards from deck
-		load_set_cards() #Load the textures
-		await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
-		right_hand_container.visible = true
+		if len(hand) > 0:
+			magic_cooldown.start(3)
+			anime.play("Discard")
+			combine_cards() #Merge cards to prepare to throw
+			await get_tree().create_timer(0.2).timeout
+			right_hand_container.visible = false
+			throw_cards() #Instantiates physics cards
+			await get_tree().create_timer(1).timeout #This is to allow time for the lerp+slerp to complete before resetting position
+			for i in range(1, 6): #return cards to original position while invisible
+				var card = right_hand_container.get_node("Card").get_node("C%d" % i)
+				var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
+				card.transform = t_node.transform
+			set_cards() #Pick cards from deck
+			load_set_cards() #Load the textures
+			await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+			right_hand_container.visible = true
+		else:
+			print("auto shuffle")
+			shuffle_deck()
 
 func shuffle_deck():
 	if !magic_cooldown.is_stopped(): return
@@ -393,11 +397,23 @@ func shuffle_deck():
 	rot_speed = 0.7
 	rot_acc = 3
 	rot_max_speed = 9.5
+
 	
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		shuffle_deck()
+		fourkind_spell()
 
+func test_1_spell():
+	if Input.is_action_just_pressed("Test_1"):
+		var C1 = HUD.get_node("C1")
+		var C2 = HUD.get_node("C2")
+
+		var tween = create_tween()
+		tween.tween_property(C1, "position", Vector2(C1.position.x + 250, C1.position.y), 0.7)
+		await get_tree().create_timer(0.32).timeout
+		var tween2 = create_tween()
+		tween2.tween_property(C2, "position", Vector2(C2.position.x + 250, C2.position.y), 0.7)
+			
 func throw_cards():
 	for i in range(len(hand)):
 		var phys_card = phys_card_scene.instantiate()
@@ -572,46 +588,45 @@ func basking_house_spell():
 	tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
 		
 func fourkind_spell():
-	if Input.is_action_pressed("Test_1"):
-		if !magic_cooldown.is_stopped(): return
-		print("Magic 1 start")
-		magic_cooldown.start(4)
-		anime.play("Taunt")
-		await get_tree().create_timer(1).timeout
-		#Some sort of anime here
-		var enemy_list = ranges.get_node("Spell Range").enemy_list
-		# Clean up from previous cast
-		fourkind_enemies.clear()
-		fourkind_goals.clear()
-		fourkind_ups.clear()
-		fourkind_return_goals.clear()
-		for enemy in enemy_list:
-			var original_transform = enemy.global_transform
-			var original_origin = original_transform.origin
-			var up_origin = original_transform.origin + Vector3.UP * 4
-			var new_origin = original_transform.origin + Vector3.UP * 3 #Set goal height
-			var new_z_rot := Basis(Vector3.RIGHT, deg_to_rad(180)) #Set goal rot
-			var enemy_goal := Transform3D(new_z_rot, new_origin)
-			var enemy_up_goal := Transform3D(new_z_rot, up_origin)
-			var enemy_return_goal := Transform3D(new_z_rot, original_origin) #Return goal is the slam down ending pos
-			var effect_goal :=  Transform3D(Basis(), original_origin + Vector3.DOWN * 0.5)
-			print(enemy)
-			fourkind_enemies.append(enemy) #Add enemy to active list of fourkinding enemies
-			fourkind_goals.append(enemy_goal)
-			fourkind_ups.append(enemy_up_goal)
-			fourkind_return_goals.append(enemy_return_goal)
-			enemy.can_move = false
-			spawn_slam_effect(enemy,effect_goal)
-			if enemy.can_turn: enemy.can_turn = false
-		fourkind_lifting = true
-		await get_tree().create_timer(1.5).timeout
-		fourkind_lifting = false
-		fourkind_uping = true
-		await get_tree().create_timer(0.5).timeout
-		fourkind_uping = false
-		fourkind_slamming = true
-		await get_tree().create_timer(0.3).timeout
-		fourkind_slamming = false
+	if !magic_cooldown.is_stopped(): return
+	print("Magic 1 start")
+	magic_cooldown.start(4)
+	anime.play("Taunt")
+	await get_tree().create_timer(1).timeout
+	#Some sort of anime here
+	var enemy_list = ranges.get_node("Spell Range").enemy_list
+	# Clean up from previous cast
+	fourkind_enemies.clear()
+	fourkind_goals.clear()
+	fourkind_ups.clear()
+	fourkind_return_goals.clear()
+	for enemy in enemy_list:
+		var original_transform = enemy.global_transform
+		var original_origin = original_transform.origin
+		var up_origin = original_transform.origin + Vector3.UP * 4
+		var new_origin = original_transform.origin + Vector3.UP * 3 #Set goal height
+		var new_z_rot := Basis(Vector3.RIGHT, deg_to_rad(180)) #Set goal rot
+		var enemy_goal := Transform3D(new_z_rot, new_origin)
+		var enemy_up_goal := Transform3D(new_z_rot, up_origin)
+		var enemy_return_goal := Transform3D(new_z_rot, original_origin) #Return goal is the slam down ending pos
+		var effect_goal :=  Transform3D(Basis(), original_origin + Vector3.DOWN * 0.5)
+		print(enemy)
+		fourkind_enemies.append(enemy) #Add enemy to active list of fourkinding enemies
+		fourkind_goals.append(enemy_goal)
+		fourkind_ups.append(enemy_up_goal)
+		fourkind_return_goals.append(enemy_return_goal)
+		enemy.can_move = false
+		spawn_slam_effect(enemy,effect_goal)
+		if enemy.can_turn: enemy.can_turn = false
+	fourkind_lifting = true
+	await get_tree().create_timer(1.5).timeout
+	fourkind_lifting = false
+	fourkind_uping = true
+	await get_tree().create_timer(0.5).timeout
+	fourkind_uping = false
+	fourkind_slamming = true
+	await get_tree().create_timer(0.3).timeout
+	fourkind_slamming = false
 
 func spawn_slam_effect(enemy,spawn):
 	await get_tree().create_timer(2.2).timeout
@@ -770,28 +785,32 @@ func straight_laser_spell():
 
 func cast_spell():
 	if Input.is_action_pressed("Right_Click"):
-		if best_hand == "One Pair":
-			pattern_card_spell()
-		elif best_hand == "Two Pair":
-			seeking_card_spell()
-		elif best_hand == "Three of a Kind":
-			straightline_card_spell()
-		elif best_hand == "Straight":
-			straight_laser_spell()
-		elif best_hand == "Flush":
-			print("No flush in game yet sorry bro")
-		elif best_hand == "Full House":
-			basking_house_spell()
-		elif best_hand == "Four of a Kind":
-			print("No 4kind yet surry")
-		elif best_hand == "Straight Flush":
-			print("No Straight Flush YEET")
-		elif best_hand == "Royal Flush":
-			print("OILY FUCKING TITS BRO WTF NO WAY")
-		elif best_hand == "High Card":
-			print("Poopy fart (:")
+		if len(hand) > 0:
+			if best_hand == "One Pair":
+				pattern_card_spell()
+			elif best_hand == "Two Pair":
+				seeking_card_spell()
+			elif best_hand == "Three of a Kind":
+				straightline_card_spell()
+			elif best_hand == "Straight":
+				straight_laser_spell()
+			elif best_hand == "Flush":
+				print("No flush in game yet sorry bro")
+			elif best_hand == "Full House":
+				basking_house_spell()
+			elif best_hand == "Four of a Kind":
+				fourkind_spell()
+			elif best_hand == "Straight Flush":
+				print("No Straight Flush YEET")
+			elif best_hand == "Royal Flush":
+				print("OILY FUCKING TITS BRO WTF NO WAY")
+			elif best_hand == "High Card":
+				print("Poopy fart (:")
+			else:
+				print("YOU AINT GOT SHIT BOI but frfr wtf do you have cause idk")
 		else:
-			print("YOU AINT GOT SHIT BOI but frfr wtf do you have cause idk")
+			shuffle_deck()
+			print("auto shuffle")
 
 #Cards forming pentagon for straight_laser
 var rot_speed = 0.7
@@ -1048,8 +1067,8 @@ func handle_controls(_delta):
 	#pattern_card_spell()
 	#straightline_card_spell()
 	cast_spell()
-	fourkind_spell()
 	test_2_spell()
+	test_1_spell()
 	# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):
