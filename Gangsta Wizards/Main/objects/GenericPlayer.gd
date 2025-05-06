@@ -117,6 +117,10 @@ signal health_updated
 @onready var HUD = $HUD
 @onready var ranges = $Ranges
 
+#@onready var music := $AudioStreamPlayer
+#@onready music.stream = preload("res://Card Shark Campaign/Special Effects/wet-fart-1.mp3")
+
+
 @export var crosshair:TextureRect
 
 #Durc
@@ -143,6 +147,8 @@ var seek_card_scene = preload("res://Card Shark/Seeking Physics Cards.tscn")
 var boom_card_scene = preload("res://Card Shark/Boom Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
+var poopy_path = preload("res://Particles/poopy_fart.tscn")
+var flush_path = preload("res://Particles/flush_effect.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
 var fourkind_slam_scene = preload("res://Particles/fourkind_slam_effect.tscn")
 
@@ -331,6 +337,18 @@ func shuffle_deck():
 	combine_cards()
 	await get_tree().create_timer(0.5).timeout
 	anime.play("Discard")
+	
+	
+	var C1 = HUD.get_node("C1")
+	var C2 = HUD.get_node("C2")
+
+	var tween = create_tween()
+	tween.tween_property(C1, "position", Vector2(C1.position.x + 250, C1.position.y), 0.7)
+	await get_tree().create_timer(0.32).timeout
+	var tween2 = create_tween()
+	tween2.tween_property(C2, "position", Vector2(C2.position.x + 250, C2.position.y), 0.7)
+	
+	
 	await get_tree().create_timer(1.5).timeout
 	for i in range (0,5):
 		cards_in_hand.get_node("C%d" % (i+1)).visible = false
@@ -381,6 +399,15 @@ func shuffle_deck():
 				changed_card += 1
 	
 	print("While loop expired")
+	bofa = two_cards()
+	load_bofa()
+	var tween_r = create_tween()
+	tween_r.tween_property(C1, "position", Vector2(C1.position.x - 250, C1.position.y), 0.7)
+	#await get_tree().create_timer(0.32).timeout
+	var tween_r2 = create_tween()
+	tween_r2.tween_property(C2, "position", Vector2(C2.position.x - 250, C2.position.y), 0.7)
+	
+	await get_tree().create_timer(0.75).timeout
 	anime.play("Discard")
 	await get_tree().create_timer(1).timeout
 	for i in range (0,5): #Make hand visible and cards in correct places
@@ -401,18 +428,11 @@ func shuffle_deck():
 	
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		fourkind_spell()
+		flush_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		var C1 = HUD.get_node("C1")
-		var C2 = HUD.get_node("C2")
-
-		var tween = create_tween()
-		tween.tween_property(C1, "position", Vector2(C1.position.x + 250, C1.position.y), 0.7)
-		await get_tree().create_timer(0.32).timeout
-		var tween2 = create_tween()
-		tween2.tween_property(C2, "position", Vector2(C2.position.x + 250, C2.position.y), 0.7)
+		shuffle_deck()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -688,6 +708,46 @@ func slam_fourkind_enemies(delta):
 		i += 1
 			
 
+func poopy_fart():
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(5.5)
+	print("PLAY THE POOP")
+	Audio.play("Card Shark Campaign/Special Effects/wet-fart-1.mp3")
+	movement_speed = 0.1
+	var poop = poopy_path.instantiate()
+	var point = get_node("CharacterCenter")
+	poop.global_position = point.global_position
+	get_tree().current_scene.add_child(poop)
+	var tween := create_tween()
+	tween.tween_property(self, "movement_speed", 5, 5.0)
+	
+	
+func flush_spell():
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(5.5)
+	print("FLUSH ACTIVATED")
+	#Audio.play("Card Shark Campaign/Special Effects/wet-fart-1.mp3")
+	var flush = flush_path.instantiate()
+	var point = get_node("CharacterCenter")
+	var wave = flush.get_node("Wave")
+	var white = flush.get_node("White")
+	var pushbox = flush.get_node("Pushbox")
+	flush.global_position = point.global_position
+	get_tree().current_scene.add_child(flush)
+	for i in range (0,5):
+		flush.global_position = point.global_position
+		wave.emitting = true
+		white.emitting = true
+		flush.global_position = point.global_position
+		pushbox.monitoring = true
+		pushbox.overlap_check()
+		pushbox.expand()
+		await get_tree().create_timer(0.5).timeout
+		pushbox.monitoring = false
+		pushbox.reset()
+		await get_tree().create_timer(1).timeout
+		print(i)
+
 func move_shark(shark):
 	var path_follow = shark.get_node("PathFollow3D")
 	path_follow.progress = 0  # Reset position
@@ -806,6 +866,7 @@ func cast_spell():
 				print("OILY FUCKING TITS BRO WTF NO WAY")
 			elif best_hand == "High Card":
 				print("Poopy fart (:")
+				poopy_fart()
 			else:
 				print("YOU AINT GOT SHIT BOI but frfr wtf do you have cause idk")
 		else:

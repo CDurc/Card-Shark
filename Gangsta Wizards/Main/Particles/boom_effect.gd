@@ -4,8 +4,8 @@ extends Node3D
 
 func _ready() -> void:
 	# Start particles (make sure child node names match!)
-	$Fire.emitting = true
 	$Smoke.emitting = true
+	$Fire.emitting = true
 
 	# Create a Timer to remove this node after auto_remove_after seconds
 	var timer = Timer.new()

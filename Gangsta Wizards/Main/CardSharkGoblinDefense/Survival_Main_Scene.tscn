@@ -28,11 +28,10 @@ outline_size = 2
 [node name="Enemies" type="Node3D" parent="."]
 
 [node name="Goblin Enemy" parent="Enemies" instance=ExtResource("1_nelki")]
-transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -7.30985, 2.87305, 0.661235)
+transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -7.30985, 2.87305, 16.7991)
 
 [node name="Goblin Enemy2" parent="Enemies" instance=ExtResource("1_nelki")]
 transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -7.30985, 2.87305, -1.12646)
-health = 500
 
 [node name="Goblin Enemy3" parent="Enemies" instance=ExtResource("1_nelki")]
 transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944, -5.55401, 2.87305, -1.12646)
@@ -46,7 +45,7 @@ transform = Transform3D(0.0261944, 0, 0.999657, 0, 1, 0, -0.999657, 0, 0.0261944
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.604171, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_vmb5m")]
-transform = Transform3D(1, 0, 0.000314473, 0, 1, 0, -0.000314473, 0, 1, -6.77844, 0.394987, 6.52321)
+transform = Transform3D(1, 0, 0.000314473, 0, 1, 0, -0.000314473, 0, 1, -0.496572, -0.409502, 7.88687)
 
 [node name="HUD" type="CanvasLayer" parent="Player"]
 script = ExtResource("3_3vbu2")
@@ -257,3 +256,6 @@ text = "[ATTACK] I don't like sand..."
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_4yiao")
+
+[node name="Dummy" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.61862, 59.4494, 0)

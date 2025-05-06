@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://qxffaqfw0un"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v4l34"]
+radius = 0.2
+
+[sub_resource type="Curve" id="Curve_ccswh"]
+max_value = 25.0
+_data = [Vector2(0, 6.31868), 0.0, 0.0, 0, 0, Vector2(0.19598, 6.31868), 0.0, 0.0, 0, 0, Vector2(0.79397, 25), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_w3578"]
+curve = SubResource("Curve_ccswh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lhvlv"]
+emission_shape_scale = Vector3(1, 0, 1)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 9.8, 0)
+radial_accel_min = -2.23517e-06
+radial_accel_max = -2.23517e-06
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+tangential_accel_curve = SubResource("CurveTexture_w3578")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x3yv3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_47hwa"]
+material = SubResource("ShaderMaterial_x3yv3")
+radius = 1.0
+height = 2.0
+radial_segments = 8
+rings = 8
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TORNADO" type="CharacterBody3D" parent="."]
+
+[node name="Ground Collider" type="CollisionShape3D" parent="TORNADO"]
+shape = SubResource("SphereShape3D_v4l34")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="TORNADO"]
+layers = 4097
+emitting = false
+amount = 2000
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_lhvlv")
+draw_pass_1 = SubResource("SphereMesh_47hwa")

@@ -1,0 +1,1514 @@
+[gd_scene load_steps=6 format=3 uid="uid://bi26mweklrnpc"]
+
+[ext_resource type="Material" uid="uid://corj85x8lswv8" path="res://Particles/Explosive_process.tres" id="1_53d7w"]
+[ext_resource type="Script" path="res://Particles/poopy_fart.gd" id="1_ef65p"]
+[ext_resource type="Material" uid="uid://butr8l76lbrdg" path="res://Particles/Linger_Process.tres" id="2_ey41w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75vch"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_06itn"]
+material = SubResource("StandardMaterial3D_75vch")
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 6
+
+[node name="Particles" type="Node3D"]
+script = ExtResource("1_ef65p")
+
+[node name="Poop" type="Node3D" parent="."]
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop64" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88485, 0, -1.47483)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop64"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop64"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.94183)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop2"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop2"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39395, 0, 0.075497)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop3"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop3"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop65" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.50429)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop65"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop65"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop66" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88485, 0, -6.97912)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop66"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop66"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop67" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.56247)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop67"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop67"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop68" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39395, 0, -5.4288)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop68"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop68"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99954, 0, 0.075497)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop4"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop4"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116689, 0, -2.55007)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop5"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop5"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.55064, 0, -2.30409)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop6"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop6"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.55064, 0, 2.7691)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop7"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop7"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07212, 0, 2.7691)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop8"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop8"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07212, 0, -1.93817)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop9"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop9"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop46" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17649, 0, 2.83079)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop46"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop46"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop47" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17649, 0, 4.77262)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop47"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop47"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop48" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78254, 0, 2.90628)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop48"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop48"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop49" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.17603, 0, 2.90628)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop49"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop49"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop50" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18816, 0, 0.280721)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop50"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop50"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop51" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72714, 0, 0.526702)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop51"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop51"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop52" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72714, 0, 5.59989)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop52"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop52"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop53" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10437, 0, 5.59989)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop53"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop53"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop54" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10437, 0, 0.892617)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop54"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop54"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop55" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17649, 0, -3.1648)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop55"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop55"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop56" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17649, 0, -1.22298)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop56"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop56"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop57" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78254, 0, -3.08931)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop57"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop57"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop58" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.17603, 0, -3.08931)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop58"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop58"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop59" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18816, 0, -5.71487)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop59"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop59"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop60" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72714, 0, -5.46889)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop60"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop60"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop61" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72714, 0, -0.3957)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop61"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop61"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop62" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10437, 0, -0.3957)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop62"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop62"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop63" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10437, 0, -5.10297)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop63"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop63"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.80775)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop10"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop10"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop11" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.74958)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop11"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop11"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop12" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39395, 0, 4.88325)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop12"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop12"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop13" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99954, 0, 4.88325)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop13"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop13"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop14" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116689, 0, 2.25769)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop14"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop14"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop15" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.55064, 0, 2.50367)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop15"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop15"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop16" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.55064, 0, 7.57686)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop16"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop16"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop17" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07212, 0, 7.57686)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop17"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop17"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop18" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07212, 0, 2.86958)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop18"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop18"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop19" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29732, 0, 3.23001)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop19"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop19"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop20" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29732, 0, 5.17184)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop20"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop20"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop21" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69127, 0, 3.30551)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop21"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop21"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop22" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29778, 0, 3.30551)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop22"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop22"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop23" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28565, 0, 0.679944)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop23"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop23"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop24" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74667, 0, 0.925925)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop24"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop24"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop25" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74667, 0, 5.99912)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop25"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop25"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop26" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.36944, 0, 5.99912)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop26"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop26"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop27" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.36944, 0, 1.29184)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop27"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop27"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop28" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64316, 0, -2.53156)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop28"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop28"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop29" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64316, 0, -0.589733)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop29"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop29"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop30" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.03711, 0, -2.45606)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop30"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop30"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop31" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64362, 0, -2.45606)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop31"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop31"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop32" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.63149, 0, -5.08163)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop32"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop32"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop33" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09251, 0, -4.83565)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop33"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop33"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop34" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09251, 0, 0.237543)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop34"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop34"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop35" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71528, 0, 0.237543)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop35"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop35"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop36" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71528, 0, -4.46973)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop36"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop36"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop37" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.651753, 0, -3.44669)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop37"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop37"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop38" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.651753, 0, -1.50486)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop38"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop38"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop39" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7422, 0, -3.37119)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop39"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop39"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop40" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65129, 0, -3.37119)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop40"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop40"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop41" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.663423, 0, -5.99676)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop41"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop41"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop42" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2024, 0, -5.75078)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop42"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop42"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop43" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2024, 0, -0.677587)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop43"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop43"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop44" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42037, 0, -0.677587)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop44"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop44"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Poop45" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42037, 0, -5.38486)
+
+[node name="Explosive" type="GPUParticles3D" parent="Poop45"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 100
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("1_53d7w")
+draw_pass_1 = SubResource("SphereMesh_06itn")
+
+[node name="Linger" type="GPUParticles3D" parent="Poop45"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+emitting = false
+amount = 200
+lifetime = 6.0
+one_shot = true
+process_material = ExtResource("2_ey41w")
+draw_pass_1 = SubResource("SphereMesh_06itn")

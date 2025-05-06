@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blhq7f70qqv7r"
+path="res://.godot/imported/wet-fart-1.mp3-c94109cbdcef7d52ceb7d96bbaf47662.mp3str"
+
+[deps]
+
+source_file="res://Card Shark Campaign/Special Effects/wet-fart-1.mp3"
+dest_files=["res://.godot/imported/wet-fart-1.mp3-c94109cbdcef7d52ceb7d96bbaf47662.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
