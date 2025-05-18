@@ -1,0 +1,135 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3w2iojgthqvv"]
+
+[ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_wmgx7"]
+
+[sub_resource type="GDScript" id="GDScript_kip80"]
+script/source = "extends CharacterBody3D
+
+@export var speed:		float = 4.0		# horizontal move speed
+@export var gravity:	float = 20.0	# downward acceleration
+@export var target_path:	NodePath		# drag your Player node here
+
+@onready var target:		Node3D = get_node(target_path)
+@onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
+
+
+#Durc
+@export var follow_distance     = 10
+@export var attack_distance     = 2
+@export var follow_speed        = 2.0
+@export var gravity_strength    = 20.0
+@export var can_move            = true
+@export var can_turn            = true
+@export var damaging            = false
+@export var health              := 100
+
+# Knockback state
+var knockback_v   := Vector3.ZERO
+var knockback_t   := 0.0
+
+var player
+var destroyed       := false
+var attacking       = false
+
+@onready var pipe           = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Cylinder\")
+@onready var current_color  = pipe.get_active_material(0).albedo_color
+@onready var area3D         = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D\")
+@onready var damaged_bodies = area3D.damaged_bodies
+@onready var monitor        = area3D.monitoring
+@onready var anime          = $Goblin/AnimationPlayer
+
+func _ready() -> void:
+	# start tracking the player’s position
+	if target:
+		nav_agent.target_position = target.global_transform.origin
+
+
+func _physics_process(delta: float) -> void:
+	if not target:
+		return
+
+	# refresh the destination if the player moved a bit
+	if (target.global_transform.origin - nav_agent.target_position).length() > 0.5:
+		nav_agent.target_position = target.global_transform.origin
+
+	# STEP 1: horizontal movement via NavigationAgent3D
+	if nav_agent.is_navigation_finished():
+		velocity.x = 0
+		velocity.z = 0
+	else:
+		var next_point: Vector3 = nav_agent.get_next_path_position()
+		var dir: Vector3 = next_point - global_transform.origin
+		dir.y = 0
+		dir = dir.normalized()
+
+		# face the movement direction
+		if dir.length() > 0.01:
+			look_at(global_transform.origin + dir, Vector3.UP)
+
+		velocity.x = dir.x * speed
+		velocity.z = dir.z * speed
+
+	# STEP 2: vertical movement (gravity)
+	if is_on_floor():
+		velocity.y = 0
+	else:
+		velocity.y -= gravity * delta
+
+	# STEP 3: apply motion
+	move_and_slide()
+	
+	
+	
+	#Durc
+	
+	
+func destroy():
+	Audio.play(\"sounds/enemy_destroy.ogg\")
+	destroyed = true
+	queue_free()
+
+func damage(amount):
+	health -= amount
+	if health <= 0 and not destroyed:
+		destroy()
+
+func attack():
+	# Wind up, can't damage
+	attacking = true
+	anime.stop()
+	anime.play(\"Attack\")
+	await get_tree().create_timer(0.9).timeout
+
+	# Damage, swing down
+	damaging = true
+	monitor = true
+	area3D.overlap_check()
+	pipe.get_active_material(0).albedo_color = Color.RED
+	await get_tree().create_timer(0.8).timeout
+
+	# Can't damage, wait for next attack
+	damaging = false
+	monitor = false
+	pipe.get_active_material(0).albedo_color = current_color
+	await get_tree().create_timer(1.5).timeout
+	damaged_bodies.clear()
+	attacking = false
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
+radius = 0.2
+height = 1.2
+
+[node name="Goblin Enemy" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+collision_layer = 3
+script = SubResource("GDScript_kip80")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00998646, -0.0728738, -0.0723298)
+shape = SubResource("CapsuleShape3D_4pgsn")
+
+[node name="Goblin" parent="." instance=ExtResource("2_wmgx7")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

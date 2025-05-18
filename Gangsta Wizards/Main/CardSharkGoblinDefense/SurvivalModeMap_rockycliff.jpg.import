@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj8qvqevxnghs"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"
+uid="uid://c307pakq1kygf"
+path.s3tc="res://.godot/imported/SurvivalModeMap_rockycliff.jpg-693f106581dee8b88a34d6679230a145.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "655529d7ee54e7eeca2bf2229a7b5c0a"
+"md5": "a3cae00147220c0b4471e706ac3e06da"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmTree2.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"]
+source_file="res://CardSharkGoblinDefense/SurvivalModeMap_rockycliff.jpg"
+dest_files=["res://.godot/imported/SurvivalModeMap_rockycliff.jpg-693f106581dee8b88a34d6679230a145.s3tc.ctex"]
 
 [params]
 
