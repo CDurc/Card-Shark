@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj8qvqevxnghs"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"
+uid="uid://dst14rcr80wqa"
+path.s3tc="res://.godot/imported/Sand Castle_Sand.jpg-83f49e5b4ace1d61815731091e2e307d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "655529d7ee54e7eeca2bf2229a7b5c0a"
+"md5": "f3d17facc42d23f22a53d53418edde37"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmTree2.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/Sand Castle_Sand.jpg"
+dest_files=["res://.godot/imported/Sand Castle_Sand.jpg-83f49e5b4ace1d61815731091e2e307d.s3tc.ctex"]
 
 [params]
 

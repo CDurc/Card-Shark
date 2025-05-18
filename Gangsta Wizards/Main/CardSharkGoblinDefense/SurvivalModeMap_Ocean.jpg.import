@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj8qvqevxnghs"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"
+uid="uid://bgt6epuuau7am"
+path.s3tc="res://.godot/imported/SurvivalModeMap_Ocean.jpg-787c6b51fb0c780e55fc204996a73b16.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "655529d7ee54e7eeca2bf2229a7b5c0a"
+"md5": "d2535067be3bb5ff0a90921fcb1376b0"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmTree2.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmTree2.jpg-51f8b674956bbdcd29cf317e90ee23e4.s3tc.ctex"]
+source_file="res://CardSharkGoblinDefense/SurvivalModeMap_Ocean.jpg"
+dest_files=["res://.godot/imported/SurvivalModeMap_Ocean.jpg-787c6b51fb0c780e55fc204996a73b16.s3tc.ctex"]
 
 [params]
 
