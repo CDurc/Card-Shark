@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cofj0mpg8krgf"]
+
+[ext_resource type="PackedScene" uid="uid://b1o05y7dinwet" path="res://CardSharkGoblinDefense/SurvivalColOnly.glb" id="1_7pvu0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SurvivalColOnly" parent="." instance=ExtResource("1_7pvu0")]
