@@ -31,6 +31,7 @@ var stuck_threshold_time: float = 1.0
 var min_movement_threshold: float = 0.1
 var jump_timer = 0.0
 @export var jump_force: float = 9
+var jumping = false
 var was_stuck: bool = false
 
 
@@ -59,8 +60,11 @@ func _physics_process(delta: float) -> void:
 	if not target:
 		return
 
-	if (target.global_transform.origin - nav_agent.target_position).length() > 0.5:
-		nav_agent.target_position = target.global_transform.origin
+	if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+		nav_agent.target_position = target.global_transform.origin #Move towards player
+		
+	if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
+		attack()
 
 	if nav_agent.is_navigation_finished():
 		velocity.x = 0
@@ -71,7 +75,7 @@ func _physics_process(delta: float) -> void:
 		dir.y = 0
 		dir = dir.normalized()
 
-		if dir.length() > 0.01:
+		if dir.length() > 0.01 and not jumping:
 			look_at(global_transform.origin + dir, Vector3.UP)
 
 		velocity.x = dir.x * speed
@@ -80,7 +84,7 @@ func _physics_process(delta: float) -> void:
 	# ---- ALWAYS FACE THE PLAYER ----
 	var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
 	face_dir.y = 0
-	if face_dir.length() > 0.01:
+	if face_dir.length() > 0.01 and not jumping:
 		look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
 	# --------------------------------
 
@@ -119,7 +123,11 @@ func _physics_process(delta: float) -> void:
 
 
 func jump():
+	#jumping = true
 	velocity.y = jump_force
+	#velocity.x = 10*(jump_force)
+	#await get_tree().create_timer(0.5).timeout
+	#jumping = false
 
 
 func destroy():
@@ -154,7 +162,7 @@ func attack():
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.180986
-height = 1.2
+height = 1.13564
 
 [node name="Goblin Enemy" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
@@ -162,7 +170,7 @@ collision_layer = 3
 script = SubResource("GDScript_kip80")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.0728738, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.044122, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin" parent="." instance=ExtResource("2_wmgx7")]

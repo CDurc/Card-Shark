@@ -10438,7 +10438,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36757, 32.8967, -193.779)
 curve = SubResource("Curve3D_eyx8c")
 
 [node name="C1" type="PathFollow3D" parent="Cars/Path2"]
-transform = Transform3D(0.99067, 0, -0.135979, 0, 1, 0, 0.135979, 0, 0.99067, 274.179, 0, -210.381)
+transform = Transform3D(0.990669, 0, -0.135983, 0, 1, 0, 0.135983, 0, 0.990669, 274.18, 0, -210.381)
 progress = 473.398
 script = ExtResource("40_plsih")
 mps = 100
@@ -10447,7 +10447,7 @@ mps = 100
 transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
 
 [node name="C2" type="PathFollow3D" parent="Cars/Path2"]
-transform = Transform3D(-0.769169, 0, 0.638981, 0, 1, 0, -0.638981, 0, -0.769169, -68.1932, 0, -526.933)
+transform = Transform3D(-0.769167, 0, 0.638983, 0, 1, 0, -0.638983, 0, -0.769167, -68.1949, 0, -526.931)
 progress = 1183.5
 script = ExtResource("40_plsih")
 mps = 100
@@ -10456,7 +10456,7 @@ mps = 100
 transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
 
 [node name="C3" type="PathFollow3D" parent="Cars/Path2"]
-transform = Transform3D(0.446302, 0, 0.894837, 0, 1, 0, -0.894837, 0, 0.446302, -165.997, 0, -253.638)
+transform = Transform3D(0.446298, 0, 0.894839, 0, 1, 0, -0.894839, 0, 0.446298, -165.994, 0, -253.637)
 progress = 1656.89
 script = ExtResource("40_plsih")
 mps = 100
@@ -10480,7 +10480,7 @@ script = ExtResource("42_paxh5")
 shape = SubResource("BoxShape3D_rn6al")
 
 [node name="C5" type="PathFollow3D" parent="Cars/Path2"]
-transform = Transform3D(-0.150218, 0, -0.988612, 0, 1, 0, 0.988612, 0, -0.150218, 223.987, 0, 0.467696)
+transform = Transform3D(-0.150218, 0, -0.988612, 0, 1, 0, 0.988612, 0, -0.150218, 223.987, 0, 0.467617)
 progress = 236.699
 script = ExtResource("40_plsih")
 mps = 100
