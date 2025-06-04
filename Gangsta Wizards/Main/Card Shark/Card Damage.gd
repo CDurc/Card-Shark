@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@export var damage_amount: int = 100
+@export var damage_amount: int = 25
 
 func _ready() -> void:
 	# Ensure this object can detect collisions

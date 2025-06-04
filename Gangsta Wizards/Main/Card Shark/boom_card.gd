@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@export var damage_amount: int = 100
+@export var damage_amount: int = 75
 var has_exploded: bool = false  # To prevent multiple triggers
 var boom_scene = preload("res://Particles/boom_effect.tscn")
 

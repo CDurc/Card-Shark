@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_wmgx7"]
 
 [sub_resource type="GDScript" id="GDScript_kip80"]
-script/source = "extends CharacterBody3D
+script/source = "#Smart Gobby Script
+extends CharacterBody3D
 
 @export var speed:		float = 4.0		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
@@ -23,6 +24,17 @@ script/source = "extends CharacterBody3D
 @export var damaging            = false
 @export var health              := 100
 
+#Jumping/Stuck
+var last_position: Vector3
+var stuck_timer: float = 0.0
+var stuck_threshold_time: float = 1.0
+var min_movement_threshold: float = 0.1
+var jump_timer = 0.0
+@export var jump_force: float = 9
+var jumping = false
+var was_stuck: bool = false
+
+
 # Knockback state
 var knockback_v   := Vector3.ZERO
 var knockback_t   := 0.0
@@ -39,20 +51,21 @@ var attacking       = false
 @onready var anime          = $Goblin/AnimationPlayer
 
 func _ready() -> void:
-	# start tracking the player’s position
 	if target:
 		nav_agent.target_position = target.global_transform.origin
+	last_position = global_position
 
 
 func _physics_process(delta: float) -> void:
 	if not target:
 		return
 
-	# refresh the destination if the player moved a bit
-	if (target.global_transform.origin - nav_agent.target_position).length() > 0.5:
-		nav_agent.target_position = target.global_transform.origin
+	if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+		nav_agent.target_position = target.global_transform.origin #Move towards player
+		
+	if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
+		attack()
 
-	# STEP 1: horizontal movement via NavigationAgent3D
 	if nav_agent.is_navigation_finished():
 		velocity.x = 0
 		velocity.z = 0
@@ -62,27 +75,61 @@ func _physics_process(delta: float) -> void:
 		dir.y = 0
 		dir = dir.normalized()
 
-		# face the movement direction
-		if dir.length() > 0.01:
+		if dir.length() > 0.01 and not jumping:
 			look_at(global_transform.origin + dir, Vector3.UP)
 
 		velocity.x = dir.x * speed
 		velocity.z = dir.z * speed
 
-	# STEP 2: vertical movement (gravity)
+	# ---- ALWAYS FACE THE PLAYER ----
+	var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
+	face_dir.y = 0
+	if face_dir.length() > 0.01 and not jumping:
+		look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
+	# --------------------------------
+
+	# Gravity
 	if is_on_floor():
-		velocity.y = 0
+		if velocity.y <= 0.0:
+			velocity.y = 0
 	else:
 		velocity.y -= gravity * delta
 
-	# STEP 3: apply motion
+	# Stuck detection
+	var movement_distance = global_position.distance_to(last_position)
+	last_position = global_position
+
+	var actively_moving := not nav_agent.is_navigation_finished()
+	var moving_enough   = movement_distance > min_movement_threshold * speed * delta
+
+	if actively_moving and not moving_enough:
+		stuck_timer += delta
+	else:
+		stuck_timer = 0.0
+		was_stuck = false	# reset on movement or when idle at destination
+
+	var stuck_too_long = stuck_timer >= stuck_threshold_time
+
+	# Only jump once per genuine stuck event
+	if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0:
+		jump()
+		jump_timer = 1.0
+		was_stuck = true
+
+	if jump_timer > 0.0:
+		jump_timer -= delta
+
 	move_and_slide()
-	
-	
-	
-	#Durc
-	
-	
+
+
+func jump():
+	#jumping = true
+	velocity.y = jump_force
+	#velocity.x = 10*(jump_force)
+	#await get_tree().create_timer(0.5).timeout
+	#jumping = false
+
+
 func destroy():
 	Audio.play(\"sounds/enemy_destroy.ogg\")
 	destroyed = true
@@ -94,20 +141,17 @@ func damage(amount):
 		destroy()
 
 func attack():
-	# Wind up, can't damage
 	attacking = true
 	anime.stop()
 	anime.play(\"Attack\")
 	await get_tree().create_timer(0.9).timeout
 
-	# Damage, swing down
 	damaging = true
 	monitor = true
 	area3D.overlap_check()
 	pipe.get_active_material(0).albedo_color = Color.RED
 	await get_tree().create_timer(0.8).timeout
 
-	# Can't damage, wait for next attack
 	damaging = false
 	monitor = false
 	pipe.get_active_material(0).albedo_color = current_color
@@ -117,8 +161,8 @@ func attack():
 "
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
-radius = 0.2
-height = 1.2
+radius = 0.180986
+height = 1.13564
 
 [node name="Goblin Enemy" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
@@ -126,7 +170,7 @@ collision_layer = 3
 script = SubResource("GDScript_kip80")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00998646, -0.0728738, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.044122, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin" parent="." instance=ExtResource("2_wmgx7")]

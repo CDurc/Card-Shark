@@ -13,11 +13,12 @@ metallic_specular = 0.94
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8fxbk"]
 radius = 1.0
-height = 8.0
+height = 9.869
 
 [node name="Metal Pipe" instance=ExtResource("1_fba7v")]
 
 [node name="Cylinder" parent="." index="0"]
+transform = Transform3D(0.280068, 0, 0, 0, -4.38026, 0, 0, 0, 0.280068, 0, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_hgyji")
 surface_material_override/1 = SubResource("StandardMaterial3D_n2ji1")
 
