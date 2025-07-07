@@ -43,7 +43,7 @@ var player
 var destroyed       := false
 var attacking       = false
 
-@onready var pipe           = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Cylinder\")
+@onready var pipe           = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Pipe\")
 @onready var current_color  = pipe.get_active_material(0).albedo_color
 @onready var area3D         = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D\")
 @onready var damaged_bodies = area3D.damaged_bodies

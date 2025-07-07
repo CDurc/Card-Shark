@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqrsuut3386w3"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"
+uid="uid://dfmy7p7to1yj0"
+path.s3tc="res://.godot/imported/Dentist Office_Dentist Carpet.jpg-aa76e0c918bfcd7a5cf34999c2eee72c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c36421f29ca042c2e99e1d962db14770"
+"md5": "d5e000889125017c7dd78984013dcb83"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmBark.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/Dentist Office_Dentist Carpet.jpg"
+dest_files=["res://.godot/imported/Dentist Office_Dentist Carpet.jpg-aa76e0c918bfcd7a5cf34999c2eee72c.s3tc.ctex"]
 
 [params]
 

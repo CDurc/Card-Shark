@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqrsuut3386w3"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"
+uid="uid://dhlr0sj3ma12o"
+path.s3tc="res://.godot/imported/White Castle_WhiteBrick.jpg-e7d49c9f17d5be895e4e8854bfc0182f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c36421f29ca042c2e99e1d962db14770"
+"md5": "77e5fe3b37c0cf43d3649d56339c8348"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmBark.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/White Castle_WhiteBrick.jpg"
+dest_files=["res://.godot/imported/White Castle_WhiteBrick.jpg-e7d49c9f17d5be895e4e8854bfc0182f.s3tc.ctex"]
 
 [params]
 

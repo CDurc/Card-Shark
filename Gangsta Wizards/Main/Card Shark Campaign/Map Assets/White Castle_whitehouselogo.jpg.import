@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqrsuut3386w3"
-path.s3tc="res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"
+uid="uid://chufhrtk0u3u1"
+path.s3tc="res://.godot/imported/White Castle_whitehouselogo.jpg-c12c7b12bce46f611a3335e83878cfb9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c36421f29ca042c2e99e1d962db14770"
+"md5": "05126f163b92cdfe7c8af00eab078ec0"
 }
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/SurvivalModeMap_PalmBark.jpg"
-dest_files=["res://.godot/imported/SurvivalModeMap_PalmBark.jpg-92d6fd00573a8ec1741ae404e8792ec6.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/White Castle_whitehouselogo.jpg"
+dest_files=["res://.godot/imported/White Castle_whitehouselogo.jpg-c12c7b12bce46f611a3335e83878cfb9.s3tc.ctex"]
 
 [params]
 
