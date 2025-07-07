@@ -92,6 +92,7 @@ signal health_updated
 @onready var camera_origin = $Head/Camera_origin
 @onready var raycast = $Head/Camera/RayCast
 @onready var raycast2 = $Head/Camera/RayCast2 #Used for magic to allow gun and magic at same time
+@onready var raycast_int = $Head/Camera/RayCast_Int
 @onready var right_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightMuzzle
 @onready var left_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftMuzzle
 @onready var right_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightContainer
@@ -225,6 +226,8 @@ func _physics_process(delta):
 	# Falling/respawning
 	if position.y < -10:
 		get_tree().reload_current_scene()
+		
+	get_interact()
 
 
 func load_viewport(): #Also load any real world things that aren't part of the player scene
@@ -1198,9 +1201,19 @@ func damage(amount):
 	if health < 0:
 		get_tree().reload_current_scene() # Reset when out of health
 		
-var can_interact = false
-func interact(): #This is always called by an area3D detecting the player
-	if can_interact and Input.is_action_pressed("Interact"):
-		print("int")
-		return true
+		
+@onready var int_prompt = get_node("HUD/Interact")
+func get_interact():
+	if raycast_int.is_colliding():
+		var collider = raycast_int.get_collider()
+		if collider and collider.has_method("interac"):
+			print("intable")
+			int_prompt.visible = true
+			if Input.is_action_pressed("Interact"):
+				collider.interac()
+			else: return
+		else:
+			int_prompt.visible = false
+	else:
+		int_prompt.visible = false
 #Fin

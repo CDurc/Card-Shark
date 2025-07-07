@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://cv0ge26agfena"]
+[gd_scene load_steps=7 format=4 uid="uid://5i06dhnqlqoa"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Map Assets/openable_door_v2.gd" id="1_yycaj"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Map Assets/openable_door_v2.gd" id="1_54pbr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4d0n4"]
 resource_name = "Door Handle"
@@ -73,13 +73,10 @@ shadow_mesh = SubResource("ArrayMesh_dmr1w")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ensu7"]
 size = Vector3(0.302193, 2.82007, 1.34558)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_uj3m0"]
-radius = 1.4
-
 [node name="Openable Door" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.249605, 1.40959, -0.593345)
 collision_layer = 3
-script = ExtResource("1_yycaj")
+script = ExtResource("1_54pbr")
 
 [node name="Door" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1518, -1.40959, -8.41583)
@@ -90,14 +87,4 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0730934, -0.0462646, 0.619257)
 shape = SubResource("BoxShape3D_ensu7")
 
-[node name="Open Zone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.657248, 0, 0.582279)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Open Zone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629097, -0.103196, 0)
-shape = SubResource("CylinderShape3D_uj3m0")
-
 [node name="Node3D" type="Node3D" parent="."]
-
-[connection signal="body_entered" from="Open Zone" to="." method="on_body_entered"]
-[connection signal="body_exited" from="Open Zone" to="." method="on_body_exited"]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1xdi7lkhsjcf"]
+
+[sub_resource type="SystemFont" id="SystemFont_p8cys"]
+font_names = PackedStringArray("Gabriola")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_gaoy6"]
+font = SubResource("SystemFont_p8cys")
+font_size = 28
+outline_size = 2
+
+[node name="Gary_dialogue_1" type="ColorRect"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -240.0
+offset_right = 402.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.788235)
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = -34.0
+offset_right = 804.0
+offset_bottom = -5.0
+text = "Gary, The Sand Sorcerer"
+label_settings = SubResource("LabelSettings_gaoy6")
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 802.0
+offset_bottom = 165.0
+
+[node name="O1" type="ColorRect" parent="Menu"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0.133333)
+
+[node name="Txt" type="Label" parent="Menu/O1"]
+layout_mode = 2
+offset_right = 802.0
+offset_bottom = 49.0
+text = "Wtf aaa@@@@@ 日本語を勉強時時間ですね！ありがとうございます。。。😍😘☆*: ｡ o≧▽≦)o ｡:*☆＼（〇_ｏ）／
+⊙_⊙_⊙)_⊙)　wow!!!! "
+
+[node name="O2" type="ColorRect" parent="Menu"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Txt" type="Label" parent="Menu/O2"]
+layout_mode = 2
+offset_right = 802.0
+offset_bottom = 49.0
+text = "ちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちん
+ちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんちんおおおおお"
+
+[node name="O3" type="ColorRect" parent="Menu"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Txt" type="Label" parent="Menu/O3"]
+layout_mode = 2
+offset_right = 802.0
+offset_bottom = 23.0
+text = "[ATTACK] I don't like sand..."

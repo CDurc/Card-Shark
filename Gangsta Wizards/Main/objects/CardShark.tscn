@@ -64,6 +64,7 @@ fov = 40.0
 
 [node name="RightContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, -1, -2.25)
+visible = false
 
 [node name="RightMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203494, 1.63791, -2.51712)
@@ -73,6 +74,7 @@ frame = 2
 
 [node name="LeftContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79245, -1, -2.25)
+visible = false
 
 [node name="LeftMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19594, 1.63791, -2.51712)
@@ -89,6 +91,12 @@ collide_with_areas = true
 [node name="RayCast2" type="RayCast3D" parent="Head/Camera"]
 exclude_parent = false
 target_position = Vector3(0, 0, -30)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCast_Int" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -2)
 collision_mask = 2
 collide_with_areas = true
 
@@ -129,6 +137,7 @@ one_shot = true
 
 [node name="CardContainer" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0902302, 0.850561, -0.350699)
+visible = false
 
 [node name="spawn" type="MeshInstance3D" parent="CardContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0555815, 0, -0.0594333)
