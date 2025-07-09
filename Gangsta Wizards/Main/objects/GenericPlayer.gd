@@ -162,6 +162,7 @@ var fourkind_return_goals: Array = []
 
 # Functions
 func _ready():
+	anime.play("Idle")
 	add_to_group("Player") #So bots can communicate easily with player?
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	#Load weapon
@@ -1066,6 +1067,7 @@ func shoot():
 		
 		Audio.play("sounds/blaster_repeater.ogg")
 		gun_anime.play("Fire")
+		anime.play("Walking")
 		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual

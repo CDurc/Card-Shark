@@ -1,0 +1,248 @@
+[gd_scene load_steps=14 format=3 uid="uid://c3vo81ssgfsj6"]
+
+[ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
+[ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_wp2nx"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="4_kg30k"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_rfl7a"]
+[ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="6_ikpl2"]
+[ext_resource type="PackedScene" uid="uid://b0v3sd2xgeikt" path="res://Card Shark/the_card_shark_v5.tscn" id="7_6eqaa"]
+[ext_resource type="Script" path="res://objects/in_range.gd" id="8_p0iay"]
+[ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_tt4m1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.21
+height = 1.75066
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
+radius = 0.01
+height = 0.02
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_03cjf"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5ilxy"]
+height = 8.0
+radius = 20.0
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_tjpgj")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.682756, 0.0547508)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54436, -0.00544267)
+
+[node name="Camera" type="Camera3D" parent="Head"]
+cull_mask = 1048573
+current = true
+fov = 80.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Camera"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Head/Camera/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+msaa_3d = 1
+size = Vector2i(1280, 720)
+render_target_update_mode = 0
+
+[node name="CameraItem" type="Camera3D" parent="Head/Camera/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89112)
+cull_mask = 1047554
+fov = 40.0
+
+[node name="RightContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, -1, -2.25)
+visible = false
+
+[node name="RightMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203494, 1.63791, -2.51712)
+layers = 2
+sprite_frames = ExtResource("2_jg68g")
+frame = 2
+
+[node name="LeftContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79245, -1, -2.25)
+visible = false
+
+[node name="LeftMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19594, 1.63791, -2.51712)
+layers = 2
+sprite_frames = ExtResource("2_jg68g")
+frame = 2
+
+[node name="RayCast" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -30)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCast2" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -30)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCast_Int" type="RayCast3D" parent="Head/Camera"]
+exclude_parent = false
+target_position = Vector3(0, 0, -2)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Camera_origin" type="Marker3D" parent="Head"]
+
+[node name="TheCardShark_v3" parent="Head" instance=ExtResource("3_wp2nx")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, -0.234754, 0.0942593)
+visible = false
+
+[node name="Shadow" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+size = Vector3(1, 2, 1)
+texture_albedo = ExtResource("4_kg30k")
+modulate = Color(1, 1, 1, 0.705882)
+normal_fade = 0.5
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rfl7a")
+volume_db = -5.0
+autoplay = true
+
+[node name="CardCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="StraightLaserCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
+[node name="BaskingHouseCooldown" type="Timer" parent="."]
+wait_time = 0.213
+one_shot = true
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="MagicCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="CardContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0902302, 1.27491, -0.350699)
+visible = false
+
+[node name="spawn" type="MeshInstance3D" parent="CardContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0555815, 0, -0.0594333)
+visible = false
+mesh = SubResource("CapsuleMesh_hlc1o")
+
+[node name="Baskingspawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.47398, -2.97245)
+
+[node name="indicator" type="MeshInstance3D" parent="Baskingspawn"]
+mesh = SubResource("CapsuleMesh_03cjf")
+
+[node name="3rd_person_point" type="Marker3D" parent="."]
+transform = Transform3D(0.866025, -0.12941, 0.482963, 0, 0.965926, 0.258819, -0.5, -0.224144, 0.836516, 0.937163, 1.19932, 0.745126)
+
+[node name="Testgun" parent="3rd_person_point" instance=ExtResource("6_ikpl2")]
+transform = Transform3D(-0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, 0, -0.058812, 0)
+visible = false
+
+[node name="Laserspawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105298, 1.26489, -0.423599)
+
+[node name="RayCast" type="RayCast3D" parent="Laserspawn"]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="TheCardSharkv4" parent="." instance=ExtResource("7_6eqaa")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765192, 0.0776601)
+
+[node name="CharacterCenter" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201488, 0.909521, 0.121035)
+
+[node name="Ranges" type="Node3D" parent="."]
+
+[node name="Spell Range" type="Area3D" parent="Ranges"]
+script = ExtResource("8_p0iay")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ranges/Spell Range"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623286, 0)
+shape = SubResource("CylinderShape3D_5ilxy")
+
+[node name="TheCardShark" parent="." instance=ExtResource("9_tt4m1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0136412, 0.883949, 0.113215)
+
+[node name="Skeleton3D" parent="TheCardShark/SharkBones" index="0"]
+bones/0/rotation = Quaternion(0.5, -0.5, -0.5, -0.5)
+bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
+bones/1/rotation = Quaternion(0.621884, 0.0032591, -0.00403933, 0.783092)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(0.344193, 0.00746092, -0.00267812, 0.938865)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-0.396043, -0.0217878, -0.0207304, 0.917739)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(0.0414829, 0.336496, -0.407322, 0.84802)
+bones/6/rotation = Quaternion(0.67809, 0.00866767, -0.0473938, 0.733398)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-0.103774, -0.664187, -0.431717, 0.601421)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(-0.412231, 0.145577, -0.553667, 0.708749)
+bones/9/rotation = Quaternion(0.188416, 0.00287032, 0.026032, 0.98174)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.188338, 0.00202536, 0.0118595, 0.982031)
+bones/11/rotation = Quaternion(0.029338, 0.00330766, -0.0041813, 0.999555)
+bones/12/rotation = Quaternion(-0.359279, 0.490751, 0.614058, 0.503006)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(0.479249, -0.561438, 0.403606, 0.540565)
+bones/14/rotation = Quaternion(0.175982, -0.0061353, -0.594847, 0.784315)
+bones/15/rotation = Quaternion(-0.0915365, 0.989034, 0.00425067, 0.11582)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/rotation = Quaternion(0.267703, -0.0521207, -0.0820639, 0.958585)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(0.996038, 0.0339603, 0.0302606, -0.0764187)
+bones/17/scale = Vector3(1, 1, 1.00002)
+bones/18/rotation = Quaternion(0.0901495, -0.0195406, 0.0231849, 0.995467)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/rotation = Quaternion(-0.443558, -0.00919748, 0.00747234, 0.896167)
+bones/19/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.996736, -0.0333104, 0.0079511, -0.0731037)
+bones/21/scale = Vector3(1, 1, 1.00002)
+bones/22/rotation = Quaternion(0.0920603, 0.0192056, -0.0314157, 0.995072)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/rotation = Quaternion(-0.441202, -0.0296084, -0.0168992, 0.89676)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/rotation = Quaternion(-0.283468, -0.508323, 0.123095, 0.803804)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/position = Vector3(0.140149, -0.0684681, 1.45077)
+bones/25/rotation = Quaternion(-0.00983828, -0.0660434, 0.701035, 0.709994)
+bones/26/position = Vector3(0.132583, 0.233887, 0.0276333)
+bones/26/rotation = Quaternion(0.929327, -2.538e-07, 4.28568e-07, -0.369258)
+bones/27/position = Vector3(0.271535, 0.299299, 1.26743)
+bones/28/rotation = Quaternion(0.999964, 2.78194e-08, 3.72225e-07, -0.0085214)
+bones/29/position = Vector3(-0.148218, 0.233887, 0.0190731)
+bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
+bones/29/scale = Vector3(1, 1, 1)
+bones/30/position = Vector3(-0.36681, 0.361192, 1.28689)
+bones/30/rotation = Quaternion(-2.29353e-06, -2.55513e-07, 5.8531e-13, 1)
+bones/31/rotation = Quaternion(0.999964, -3.77333e-09, 4.42739e-07, -0.0085224)
+bones/32/position = Vector3(-0.12055, -0.0331208, 1.50166)
+bones/32/rotation = Quaternion(-0.39985, 0.303922, 0.694248, -0.51553)
+bones/32/scale = Vector3(1, 1, 1)
+
+[connection signal="body_entered" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_entered"]
+[connection signal="body_exited" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_exited"]
+
+[editable path="TheCardShark"]

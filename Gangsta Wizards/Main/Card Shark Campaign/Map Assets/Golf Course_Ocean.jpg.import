@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bulj2un4cvqnj"
-path.s3tc="res://.godot/imported/Island_grass.jpg-89c3d5713d3181c9d3f1b4a40ec73a7d.s3tc.ctex"
+uid="uid://dvmnwrm8dmn80"
+path.s3tc="res://.godot/imported/Golf Course_Ocean.jpg-fd83f25594c4d467ab466211f259b7b1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "860b54557fdde542776d96f3ee70f363"
+"md5": "d2535067be3bb5ff0a90921fcb1376b0"
 }
 
 [deps]
 
-source_file="res://Card Shark Campaign/Map Assets/Island_grass.jpg"
-dest_files=["res://.godot/imported/Island_grass.jpg-89c3d5713d3181c9d3f1b4a40ec73a7d.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/Golf Course_Ocean.jpg"
+dest_files=["res://.godot/imported/Golf Course_Ocean.jpg-fd83f25594c4d467ab466211f259b7b1.s3tc.ctex"]
 
 [params]
 

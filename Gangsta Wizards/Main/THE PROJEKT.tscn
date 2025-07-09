@@ -1,4 +1,4 @@
-[gd_scene load_steps=312 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=314 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://gpo57ilyvr4g" path="res://Card Shark Campaign/Map Assets/White Castle.glb" id="50_uvoy2"]
 [ext_resource type="PackedScene" uid="uid://cv0ge26agfena" path="res://Card Shark Campaign/Map Assets/openable_door.tscn" id="51_vgnyq"]
 [ext_resource type="PackedScene" uid="uid://5i06dhnqlqoa" path="res://Card Shark Campaign/Map Assets/openable_door_v2.tscn" id="52_ko5qh"]
+[ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="53_8ovs4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tserv"]
 size = Vector3(9, 4, 1)
@@ -8458,6 +8459,13 @@ point_count = 51
 [sub_resource type="BoxShape3D" id="BoxShape3D_rn6al"]
 size = Vector3(6, 2, 2.2)
 
+[sub_resource type="Curve3D" id="Curve3D_xnrya"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, -0.519058, 0, 0, 0, 0, 0, 0, 20, 0, -0.245117, 0, 0, 0, 0, 0, 0, 40, 0, -0.348145, 0, 0, 0, 0, 0, 0, 60, 0, -0.3, 0, 0, 0, 0, 0, 0, 79.7, 0, -0.0733032, 0, 0, 0, 0, 0, 0, 114.131, 0, 17.8645, 0, 0, 0, 0, 0, 0, 131.286, 0, 23.809, 0, 0, 0, 0, 0, 0, 171.013, 0, 22.4582, 0, 0, 0, 0, 0, 0, 206.971, 0, -1.97461, 0, 0, 0, 0, 0, 0, 239.084, 0, 1.74174, 0, 0, 0, 0, 0, 0, 262.636, 0, -29.7563, 0, 0, 0, 0, 0, 0, 250.203, 0, -99.303, 0, 0, 0, 0, 0, 0, 268.87, 0, -146.003, 0, 0, 0, 0, 0, 0, 277.763, 0, -236.486, 0, 0, 0, 0, 0, 0, 254.337, 0, -273.802, 0, 0, 0, 0, 0, 0, 188.868, 0, -299.193, 0, 0, 0, 0, 0, 0, 188.116, 0, -308.085, 0, 0, 0, 0, 0, 0, 195.065, 0, -370.944, 0, 0, 0, 0, 0, 0, 203.896, 0, -439.773, 0, 0, 0, 0, 0, 0, 195.908, 0, -488.403, 0, 0, 0, 0, 0, 0, 132.716, 0, -538.785, 0, 0, 0, 0, 0, 0, 74.3546, 0, -623.746, 0, 0, 0, 0, 0, 0, 39.8249, 0, -638.891, 0, 0, 0, 0, 0, 0, 6.59718, 0, -617.744, 0, 0, 0, 0, 0, 0, -43.8465, 0, -556.24, 0, 0, 0, 0, 0, 0, -73.1345, 0, -520.985, 0, 0, 0, 0, 0, 0, -127.072, 0, -463.266, 0, 0, 0, 0, 0, 0, -130.199, 0, -433.972, 0, 0, 0, 0, 0, 0, -122.974, 0, -406.373, 0, 0, 0, 0, 0, 0, -67.0359, 0, -314.957, 0, 0, 0, 0, 0, 0, -46.6342, 0, -263.809, 0, 0, 0, 0, 0, 0, -45.5912, 0, -224.641, 0, 0, 0, 0, 0, 0, -79.8552, 0, -224.597, 0, 0, 0, 0, 0, 0, -120.166, 0, -228.003, 0, 0, 0, 0, 0, 0, -153.225, 0, -247.268, 0, 0, 0, 0, 0, 0, -195.529, 0, -268.367, 0, 0, 0, 0, 0, 0, -229.957, 0, -267.917, 0, 0, 0, 0, 0, 0, -252.774, 0, -251.142, 0, 0, 0, 0, 0, 0, -287.418, 0, -210.853, 0, 0, 0, 0, 0, 0, -279.045, 0, -171.901, 0, 0, 0, 0, 0, 0, -296.018, 0, -131.066, 0, 0, 0, 0, 0, 0, -318.704, 0, -106.824, 0, 0, 0, 0, 0, 0, -318.612, 0, -57.0421, 0, 0, 0, 0, 0, 0, -259.674, 0, 48.9122, 0, 0, 0, 0, 0, 0, -230.02, 0, 57.2779, 0, 0, 0, 0, 0, 0, -193.402, 0, 50.8331, 0, 0, 0, 0, 0, 0, -129.573, 0, 50.4507, 0, 0, 0, 0, 0, 0, -96.601, 0, 40.1637, 0, 0, 0, 0, 0, 0, -27.5541, 0, 1.92114, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 51
+
 [node name="Main" type="Node3D"]
 
 [node name="Island" parent="." instance=ExtResource("1_t7jbi")]
@@ -10430,6 +10438,61 @@ mps = 100
 [node name="Cybertruck" parent="Cars/Path2/C5" instance=ExtResource("41_luq4q")]
 transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336617, 0)
 
+[node name="Path3" type="Path3D" parent="Cars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36757, 32.8967, -189.331)
+curve = SubResource("Curve3D_xnrya")
+
+[node name="C1" type="PathFollow3D" parent="Cars/Path3"]
+transform = Transform3D(0.995163, 0, -0.0978085, 0, 1, 0, 0.0978085, 0, 0.995163, 274.825, 0, -206.589)
+progress = 473.398
+script = ExtResource("40_plsih")
+mps = 100
+
+[node name="Car1" parent="Cars/Path3/C1" instance=ExtResource("40_w1lea")]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
+
+[node name="C2" type="PathFollow3D" parent="Cars/Path3"]
+transform = Transform3D(-0.769167, 0, 0.638983, 0, 1, 0, -0.638983, 0, -0.769167, -65.8363, 0, -529.77)
+progress = 1183.5
+script = ExtResource("40_plsih")
+mps = 100
+
+[node name="Car1" parent="Cars/Path3/C2" instance=ExtResource("40_w1lea")]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
+
+[node name="C3" type="PathFollow3D" parent="Cars/Path3"]
+transform = Transform3D(0.446298, 0, 0.894839, 0, 1, 0, -0.894839, 0, 0.446298, -162.692, 0, -251.989)
+progress = 1656.89
+script = ExtResource("40_plsih")
+mps = 100
+
+[node name="Car2" parent="Cars/Path3/C3" instance=ExtResource("39_j4ghh")]
+transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, 0, 0, 0)
+
+[node name="C4" type="PathFollow3D" parent="Cars/Path3"]
+transform = Transform3D(0.00515075, 0, -0.999898, 0, 1, 0, 0.999898, 0, 0.00515075, 29.9826, 0, -0.296541)
+progress = 30.0
+script = ExtResource("40_plsih")
+mps = 0
+
+[node name="Cybertruck" parent="Cars/Path3/C4" instance=ExtResource("41_luq4q")]
+transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336617, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Path3/C4/Cybertruck"]
+script = ExtResource("42_paxh5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Path3/C4/Cybertruck/Area3D"]
+shape = SubResource("BoxShape3D_rn6al")
+
+[node name="C5" type="PathFollow3D" parent="Cars/Path3"]
+transform = Transform3D(-0.114957, 0, -0.99333, 0, 1, 0, 0.99333, 0, -0.114957, 223.638, 0, -0.0457525)
+progress = 236.699
+script = ExtResource("40_plsih")
+mps = 100
+
+[node name="Cybertruck" parent="Cars/Path3/C5" instance=ExtResource("41_luq4q")]
+transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336617, 0)
+
 [node name="Hospital" parent="." instance=ExtResource("41_pe8u3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.28, 32.2028, -205.107)
 
@@ -10437,7 +10500,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.28, 32.2028, -205.107)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.8103, 37.2533, -188.403)
 
 [node name="Gary" parent="." instance=ExtResource("45_q2sku")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -18.3357, 34.4171, -178.989)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -18.3357, 33.1907, -178.989)
 
 [node name="Dentist Office" parent="." instance=ExtResource("45_wk75y")]
 transform = Transform3D(-0.0340971, 0, -0.999418, 0, 1, 0, 0.999418, 0, -0.0340971, 55.7186, 31.9021, -199.754)
@@ -10463,6 +10526,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0931, 33.8361, -174.644)
 [node name="Openable Door2" parent="." instance=ExtResource("52_ko5qh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1902, 33.6126, -179.49)
 
+[node name="TheCardShark2" parent="." instance=ExtResource("53_8ovs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6673, 33.296, -178.768)
+
+[node name="TheCardShark3" parent="." instance=ExtResource("53_8ovs4")]
+transform = Transform3D(0.171516, 0, -0.985181, 0, 1, 0, 0.985181, 0, 0.171516, -5.69971, 33.1274, -201.308)
+
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]
 [connection signal="body_entered" from="Cars/Path2/C4/Cybertruck/Area3D" to="Cars/Path2/C4/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Path3/C4/Cybertruck/Area3D" to="Cars/Path3/C4/Cybertruck/Area3D" method="_on_body_entered"]

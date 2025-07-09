@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bulqxst6fcjsh"]
+[gd_scene load_steps=14 format=3 uid="uid://bulqxst6fcjsh"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_0uyvx"]
 [ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="2_02tme"]
@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="7_prwlk"]
 [ext_resource type="Script" path="res://objects/in_range.gd" id="7_twype"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="8_3guaj"]
+[ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_nak50"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
-radius = 0.192156
+radius = 0.192
 height = 1.07779
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
@@ -30,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 script = ExtResource("1_0uyvx")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.537391, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00377725, 0.537391, 0.0673481)
 shape = SubResource("CapsuleShape3D_gdq8c")
 
 [node name="Head" type="Node3D" parent="."]
@@ -60,6 +61,7 @@ render_target_update_mode = 0
 [node name="CameraItem" type="Camera3D" parent="Head/Camera/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89112)
 cull_mask = 1047554
+current = true
 fov = 40.0
 
 [node name="RightContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
@@ -169,7 +171,7 @@ collide_with_areas = true
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765192, 0.0776601)
 
 [node name="CharacterCenter" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636857, 0.0971916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201488, 0.640545, 0.0971968)
 
 [node name="Ranges" type="Node3D" parent="."]
 
@@ -179,6 +181,9 @@ script = ExtResource("7_twype")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ranges/Spell Range"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623286, 0)
 shape = SubResource("CylinderShape3D_5ilxy")
+
+[node name="TheCardShark" parent="." instance=ExtResource("9_nak50")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.000170946, 0.883949, 0.113215)
 
 [connection signal="body_entered" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_entered"]
 [connection signal="body_exited" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_exited"]
