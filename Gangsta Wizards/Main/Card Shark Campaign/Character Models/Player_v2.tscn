@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3vo81ssgfsj6"]
+[gd_scene load_steps=16 format=3 uid="uid://c3vo81ssgfsj6"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
@@ -9,9 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b0v3sd2xgeikt" path="res://Card Shark/the_card_shark_v5.tscn" id="7_6eqaa"]
 [ext_resource type="Script" path="res://objects/in_range.gd" id="8_p0iay"]
 [ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_tt4m1"]
+[ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="10_dggtj"]
+[ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="11_5uwfn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
-radius = 0.21
+radius = 0.23
 height = 1.75066
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hlc1o"]
@@ -31,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 script = ExtResource("1_tjpgj")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.682756, 0.0547508)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.682756, 0.0264268)
 shape = SubResource("CapsuleShape3D_gdq8c")
 
 [node name="Head" type="Node3D" parent="."]
@@ -185,6 +187,7 @@ shape = SubResource("CylinderShape3D_5ilxy")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0136412, 0.883949, 0.113215)
 
 [node name="Skeleton3D" parent="TheCardShark/SharkBones" index="0"]
+bones/0/position = Vector3(0.223601, -0.948659, 0.00908539)
 bones/0/rotation = Quaternion(0.5, -0.5, -0.5, -0.5)
 bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
 bones/1/rotation = Quaternion(0.621884, 0.0032591, -0.00403933, 0.783092)
@@ -194,10 +197,10 @@ bones/2/scale = Vector3(1, 1, 1)
 bones/3/rotation = Quaternion(-0.396043, -0.0217878, -0.0207304, 0.917739)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/scale = Vector3(1, 1, 1)
-bones/5/rotation = Quaternion(0.0414829, 0.336496, -0.407322, 0.84802)
-bones/6/rotation = Quaternion(0.67809, 0.00866767, -0.0473938, 0.733398)
+bones/5/rotation = Quaternion(-0.0332556, 0.379653, -0.251207, 0.889749)
+bones/6/rotation = Quaternion(0.67288, 0.00872445, -0.0470297, 0.738204)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(-0.103774, -0.664187, -0.431717, 0.601421)
+bones/7/rotation = Quaternion(0.0236412, -0.651671, -0.547345, 0.524576)
 bones/7/scale = Vector3(1, 1, 1)
 bones/8/rotation = Quaternion(-0.412231, 0.145577, -0.553667, 0.708749)
 bones/9/rotation = Quaternion(0.188416, 0.00287032, 0.026032, 0.98174)
@@ -206,11 +209,10 @@ bones/10/rotation = Quaternion(0.188338, 0.00202536, 0.0118595, 0.982031)
 bones/11/rotation = Quaternion(0.029338, 0.00330766, -0.0041813, 0.999555)
 bones/12/rotation = Quaternion(-0.359279, 0.490751, 0.614058, 0.503006)
 bones/12/scale = Vector3(1, 1, 1)
-bones/13/rotation = Quaternion(0.479249, -0.561438, 0.403606, 0.540565)
-bones/14/rotation = Quaternion(0.175982, -0.0061353, -0.594847, 0.784315)
-bones/15/rotation = Quaternion(-0.0915365, 0.989034, 0.00425067, 0.11582)
-bones/15/scale = Vector3(1, 1, 1)
-bones/16/rotation = Quaternion(0.267703, -0.0521207, -0.0820639, 0.958585)
+bones/13/rotation = Quaternion(0.383268, -0.631512, 0.363492, 0.567602)
+bones/14/rotation = Quaternion(0.175022, -0.00291314, -0.622852, 0.762505)
+bones/15/rotation = Quaternion(-0.098141, 0.783867, -0.372264, -0.487176)
+bones/16/rotation = Quaternion(-0.110415, -0.447365, 0.0803994, 0.88386)
 bones/16/scale = Vector3(1, 1, 1)
 bones/17/rotation = Quaternion(0.996038, 0.0339603, 0.0302606, -0.0764187)
 bones/17/scale = Vector3(1, 1, 1.00002)
@@ -226,7 +228,7 @@ bones/23/rotation = Quaternion(-0.441202, -0.0296084, -0.0168992, 0.89676)
 bones/23/scale = Vector3(1, 1, 1)
 bones/24/rotation = Quaternion(-0.283468, -0.508323, 0.123095, 0.803804)
 bones/24/scale = Vector3(1, 1, 1)
-bones/25/position = Vector3(0.140149, -0.0684681, 1.45077)
+bones/25/position = Vector3(0.23819, -0.0633528, 1.45077)
 bones/25/rotation = Quaternion(-0.00983828, -0.0660434, 0.701035, 0.709994)
 bones/26/position = Vector3(0.132583, 0.233887, 0.0276333)
 bones/26/rotation = Quaternion(0.929327, -2.538e-07, 4.28568e-07, -0.369258)
@@ -235,12 +237,22 @@ bones/28/rotation = Quaternion(0.999964, 2.78194e-08, 3.72225e-07, -0.0085214)
 bones/29/position = Vector3(-0.148218, 0.233887, 0.0190731)
 bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
 bones/29/scale = Vector3(1, 1, 1)
-bones/30/position = Vector3(-0.36681, 0.361192, 1.28689)
+bones/30/position = Vector3(-0.281557, 0.362897, 1.28689)
 bones/30/rotation = Quaternion(-2.29353e-06, -2.55513e-07, 5.8531e-13, 1)
 bones/31/rotation = Quaternion(0.999964, -3.77333e-09, 4.42739e-07, -0.0085224)
-bones/32/position = Vector3(-0.12055, -0.0331208, 1.50166)
-bones/32/rotation = Quaternion(-0.39985, 0.303922, 0.694248, -0.51553)
+bones/32/position = Vector3(-0.186731, -0.0423403, 1.4896)
+bones/32/rotation = Quaternion(-0.880131, 0.206192, 0.226286, -0.362834)
 bones/32/scale = Vector3(1, 1, 1)
+
+[node name="SharkGun2" parent="." instance=ExtResource("6_ikpl2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.11975, 1.43625, -0.247199)
+visible = false
+
+[node name="Rifle" parent="." instance=ExtResource("10_dggtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211034, 1.45868, -0.348491)
+
+[node name="Card" parent="." instance=ExtResource("11_5uwfn")]
+transform = Transform3D(0.0996825, -0.00250535, -0.00755754, 0.00305237, 0.0996929, 0.00721172, 0.00735365, -0.00741951, 0.0994529, 0.145254, 1.47699, -0.17029)
 
 [connection signal="body_entered" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_entered"]
 [connection signal="body_exited" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_exited"]

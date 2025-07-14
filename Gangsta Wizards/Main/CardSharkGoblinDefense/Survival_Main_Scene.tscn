@@ -468,9 +468,11 @@ outline_color = Color(0, 0, 0, 0.470588)
 
 [node name="Goblin Enemy2" parent="Enemies" instance=ExtResource("2_eyisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0814, 1.84065, -0.58186)
+target_path = NodePath("../../Player")
 
 [node name="Goblin Enemy3" parent="Enemies" instance=ExtResource("2_eyisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0814, 1.84065, 0.233171)
+target_path = NodePath("../../Player")
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -1241,7 +1243,7 @@ use_3d_avoidance = true
 [node name="TheCardShark" parent="." instance=ExtResource("9_j0q6t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7027, 2.58394, 6.23325)
 
-[node name="Player" parent="." instance=ExtResource("5_o6faa")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("5_o6faa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.88821, 7.50678)
 
 [node name="DialogueElements" type="CanvasLayer" parent="Player"]
