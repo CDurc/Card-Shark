@@ -429,14 +429,14 @@ func shuffle_deck():
 	rot_acc = 3
 	rot_max_speed = 9.5
 
-	
+	#SHORTCUT SPELL 2 SPELL2
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		flush_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		shuffle_deck()
+		straightline_card_spell()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -469,8 +469,11 @@ func throw_cards():
 		#text_node.mesh.text = str(hand[i]["rank"])
 		$"../Projectiles".add_child(phys_card)
 		phys_card.position = card_container.get_node("spawn").global_position
-		var random_vector = Vector3(randf()*1-0.5,randf()*1,0)
-		var local_direction = Vector3(0,0,-0.8)+random_vector
+		#Vert test
+		var vert_x = camera.rotation.x
+		print("VERT X",vert_x)
+		var random_vector = Vector3(randf()*1-0.5,randf()*1,0) # y var was randf()*1
+		var local_direction = Vector3(0,vert_x,-0.8)+random_vector #was -0.8
 		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
 		phys_card.get_node("Rig").linear_velocity = random_direction * 8
@@ -505,11 +508,13 @@ func pattern_throw_cards():
 		phys_card.position = card_container.get_node("spawn").global_position
 		var x = .5*i
 		var moving_vector = Vector3(x,0,0)
+		var vert_x = camera.rotation.x
 		print(x)
 		var local_direction = Vector3(-1,0.7,-4)+moving_vector
 		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
-		phys_card.get_node("Rig").linear_velocity = random_direction * 15
+		random_direction.y = random_direction.y*vert_x*7
+		phys_card.get_node("Rig").linear_velocity = random_direction * 20 #was 15
 		await get_tree().create_timer(0.05).timeout
 
 func straightline_throw_cards():
@@ -540,10 +545,12 @@ func straightline_throw_cards():
 		
 		$"../Projectiles".add_child(phys_card)
 		phys_card.position = card_container.get_node("spawn").global_position
+		var vert_x = camera.rotation.x
 		var local_direction = Vector3(0,0.7,-4)
 		var random_direction = card_container.get_node("spawn").global_transform.basis * local_direction
 		random_direction = random_direction.normalized()
-		phys_card.get_node("Rig").linear_velocity = random_direction * 15
+		random_direction.y = random_direction.y*vert_x*7
+		phys_card.get_node("Rig").linear_velocity = random_direction * 20
 		await get_tree().create_timer(0.05).timeout
 
 func seek_throw_cards():
@@ -859,7 +866,7 @@ func cast_spell():
 			elif best_hand == "Straight":
 				straight_laser_spell()
 			elif best_hand == "Flush":
-				print("No flush in game yet sorry bro")
+				flush_spell()
 			elif best_hand == "Full House":
 				basking_house_spell()
 			elif best_hand == "Four of a Kind":
