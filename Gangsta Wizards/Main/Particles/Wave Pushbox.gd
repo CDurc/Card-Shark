@@ -48,6 +48,6 @@ func push(body: CharacterBody3D) -> void:
 	dir = dir.normalized()
 	dir.y = 0.15
 	body.knockback_v = dir * force
-	body.knockback_t = 0.3
+	body.knockback_t = 3
 	print(body.knockback_v)
 	print("PUSH")

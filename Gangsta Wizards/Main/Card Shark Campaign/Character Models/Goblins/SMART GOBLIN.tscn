@@ -59,67 +59,73 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not target:
 		return
-
-	if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
-		nav_agent.target_position = target.global_transform.origin #Move towards player
-		
-	if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
-		attack()
-
-	if nav_agent.is_navigation_finished():
-		velocity.x = 0
-		velocity.z = 0
+	
+		# knockback has priority
+	if knockback_t > 0.0:
+		velocity = knockback_v
+		knockback_t -= delta
 	else:
-		var next_point: Vector3 = nav_agent.get_next_path_position()
-		var dir: Vector3 = next_point - global_transform.origin
-		dir.y = 0
-		dir = dir.normalized()
 
-		if dir.length() > 0.01 and not jumping:
-			look_at(global_transform.origin + dir, Vector3.UP)
+		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+			nav_agent.target_position = target.global_transform.origin #Move towards player
+			
+		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
+			attack()
 
-		velocity.x = dir.x * speed
-		velocity.z = dir.z * speed
+		if nav_agent.is_navigation_finished():
+			velocity.x = 0
+			velocity.z = 0
+		else:
+			var next_point: Vector3 = nav_agent.get_next_path_position()
+			var dir: Vector3 = next_point - global_transform.origin
+			dir.y = 0
+			dir = dir.normalized()
 
-	# ---- ALWAYS FACE THE PLAYER ----
-	var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
-	face_dir.y = 0
-	if face_dir.length() > 0.01 and not jumping:
-		look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
-	# --------------------------------
+			if dir.length() > 0.01 and not jumping:
+				look_at(global_transform.origin + dir, Vector3.UP)
 
-	# Gravity
-	if is_on_floor():
-		if velocity.y <= 0.0:
-			velocity.y = 0
-	else:
-		velocity.y -= gravity * delta
+			velocity.x = dir.x * speed
+			velocity.z = dir.z * speed
 
-	# Stuck detection
-	var movement_distance = global_position.distance_to(last_position)
-	last_position = global_position
+		# ---- ALWAYS FACE THE PLAYER ----
+		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
+		face_dir.y = 0
+		if face_dir.length() > 0.01 and not jumping:
+			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
+		# --------------------------------
 
-	var actively_moving := not nav_agent.is_navigation_finished()
-	var moving_enough   = movement_distance > min_movement_threshold * speed * delta
+		# Gravity
+		if is_on_floor():
+			if velocity.y <= 0.0:
+				velocity.y = 0
+		else:
+			velocity.y -= gravity * delta
 
-	if actively_moving and not moving_enough:
-		stuck_timer += delta
-	else:
-		stuck_timer = 0.0
-		was_stuck = false	# reset on movement or when idle at destination
+		# Stuck detection
+		var movement_distance = global_position.distance_to(last_position)
+		last_position = global_position
 
-	var stuck_too_long = stuck_timer >= stuck_threshold_time
+		var actively_moving := not nav_agent.is_navigation_finished()
+		var moving_enough   = movement_distance > min_movement_threshold * speed * delta
 
-	# Only jump once per genuine stuck event
-	if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0:
-		jump()
-		jump_timer = 1.0
-		was_stuck = true
+		if actively_moving and not moving_enough:
+			stuck_timer += delta
+		else:
+			stuck_timer = 0.0
+			was_stuck = false	# reset on movement or when idle at destination
 
-	if jump_timer > 0.0:
-		jump_timer -= delta
+		var stuck_too_long = stuck_timer >= stuck_threshold_time
 
-	move_and_slide()
+		# Only jump once per genuine stuck event
+		if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0:
+			jump()
+			jump_timer = 1.0
+			was_stuck = true
+
+		if jump_timer > 0.0:
+			jump_timer -= delta
+
+		move_and_slide()
 
 
 func jump():
