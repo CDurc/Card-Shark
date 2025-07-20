@@ -22,9 +22,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if moving_cam1:
-		move_cam(S2,delta,0.8)
+		move_cam(S2,delta,0.2)
 	elif moving_cam2:
-		move_cam(S3,delta,1.5)
+		move_cam(S3,delta,1)
 
 
 func move_cam(step,delta,sl):

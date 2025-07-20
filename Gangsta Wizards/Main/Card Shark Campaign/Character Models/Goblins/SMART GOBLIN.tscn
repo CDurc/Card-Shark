@@ -63,6 +63,7 @@ func _physics_process(delta: float) -> void:
 		# knockback has priority
 	if knockback_t > 0.0:
 		velocity = knockback_v
+		move_and_slide()
 		knockback_t -= delta
 	else:
 

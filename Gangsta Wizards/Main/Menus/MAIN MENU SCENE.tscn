@@ -25,7 +25,7 @@ size = Vector3(0.5, 0.0155273, 0.23)
 [node name="Cam Work" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Cam Work"]
-transform = Transform3D(-1, 1.14374e-08, -1.48408e-07, -1.61145e-08, 0.982865, 0.184329, 1.47974e-07, 0.184329, -0.982865, 0.259206, 1.99935, -1.10206)
+transform = Transform3D(-1, 1.14376e-08, -1.48409e-07, -7.65797e-09, 0.99177, 0.128034, 1.48652e-07, 0.128034, -0.99177, 0.259206, 1.96951, -1.10206)
 fov = 68.0
 
 [node name="Step1" type="Marker3D" parent="Cam Work"]

@@ -1,7 +1,7 @@
 extends Area3D
 
 @export var damage = 10
-@export var force = 8
+@export var force = 3
 
 var player
 var collider
@@ -48,6 +48,6 @@ func push(body: CharacterBody3D) -> void:
 	dir = dir.normalized()
 	dir.y = 0.15
 	body.knockback_v = dir * force
-	body.knockback_t = 3
+	body.knockback_t = 0.25
 	print(body.knockback_v)
 	print("PUSH")
