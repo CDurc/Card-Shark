@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccahg3ocwrgd2"]
+
+[ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_p0gn8"]
+[ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_w3sgo"]
+[ext_resource type="PackedScene" uid="uid://birbvoma6dskv" path="res://Card Shark Campaign/Character Models/Goblins/goblin_8.glb" id="2_5o5jd"]
+[ext_resource type="Script" path="res://Menus/play_intro.gd" id="4_kbo7x"]
+[ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kvsuo"]
+size = Vector2(0.5, 0.23)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rgy0"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+emission = Color(0, 0.716674, 0.331765, 1)
+emission_energy_multiplier = 2.52
+rim_tint = 0.72
+grow_amount = 0.36
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_udr17"]
+size = Vector3(0.5, 0.0155273, 0.23)
+
+[node name="Root" type="Node3D"]
+
+[node name="Cam Work" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Cam Work"]
+transform = Transform3D(-1, 1.14374e-08, -1.48408e-07, -1.61145e-08, 0.982865, 0.184329, 1.47974e-07, 0.184329, -0.982865, 0.259206, 1.99935, -1.10206)
+fov = 68.0
+
+[node name="Step1" type="Marker3D" parent="Cam Work"]
+transform = Transform3D(-1, 1.14374e-08, -1.48408e-07, -1.61145e-08, 0.982865, 0.184329, 1.47974e-07, 0.184329, -0.982865, 0.259208, 1.99933, -1.10136)
+
+[node name="Step2" type="Marker3D" parent="Cam Work"]
+transform = Transform3D(1, 0, 0, 0, 0.987854, 0.155383, 0, -0.155383, 0.987854, 0.259208, 2.23972, 0.709082)
+
+[node name="Step3" type="Marker3D" parent="Cam Work"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.259208, 2.37847, 0.012137)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = ExtResource("1_p0gn8")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Main Menu" parent="World" instance=ExtResource("1_w3sgo")]
+
+[node name="Skeleton3D" parent="World/Main Menu/SharkBones" index="0"]
+bones/0/position = Vector3(0.348781, -0.948659, 2.13234)
+bones/0/rotation = Quaternion(-0.0214421, -0.706782, -0.706782, 0.0214422)
+bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
+bones/2/rotation = Quaternion(0.344193, 0.00746092, -0.00267812, 0.938865)
+bones/5/rotation = Quaternion(-0.437139, 0.629607, -0.560803, 0.313056)
+bones/6/rotation = Quaternion(0.184963, 0.0116127, -0.0129276, 0.982592)
+bones/7/rotation = Quaternion(0.590193, -0.670022, -0.300043, 0.335733)
+bones/8/rotation = Quaternion(0.0842304, 0.0647158, 0.111388, 0.988084)
+bones/10/rotation = Quaternion(0.120798, 0.00256176, 0.0127377, 0.992592)
+bones/11/rotation = Quaternion(-0.110252, 0.00572354, -0.00367141, 0.99388)
+bones/13/rotation = Quaternion(-0.432766, -0.606144, 0.612062, 0.265862)
+bones/14/rotation = Quaternion(0.0864014, -0.00745071, -0.292051, 0.952463)
+bones/15/rotation = Quaternion(-0.300618, 0.903963, 0.183127, 0.242782)
+bones/16/rotation = Quaternion(0.267703, -0.05212, -0.0820636, 0.958585)
+bones/17/rotation = Quaternion(0.996038, 0.0339602, 0.0302607, -0.0764189)
+bones/17/scale = Vector3(1, 1, 1.00002)
+bones/18/rotation = Quaternion(0.0901494, -0.0195406, 0.0231849, 0.995467)
+bones/19/rotation = Quaternion(-0.443558, -0.00919763, 0.00747236, 0.896167)
+bones/21/rotation = Quaternion(0.996736, -0.0333105, 0.00795077, -0.0731033)
+bones/21/scale = Vector3(1, 1, 1.00002)
+bones/22/rotation = Quaternion(0.0920613, 0.0192056, -0.0314161, 0.995072)
+bones/23/rotation = Quaternion(-0.441203, -0.0296082, -0.0168988, 0.89676)
+bones/25/position = Vector3(0.231142, 0.194042, 0.976292)
+bones/25/rotation = Quaternion(-0.696491, 0.0478308, -0.713515, -0.0592316)
+bones/26/rotation = Quaternion(0.929327, -2.52934e-07, 4.28912e-07, -0.369258)
+bones/27/position = Vector3(0.412811, 0.355831, 1.33688)
+bones/27/rotation = Quaternion(5.81778e-38, -5.03029e-23, -8.88178e-16, 1)
+bones/28/rotation = Quaternion(0.999964, 2.78197e-08, 3.72195e-07, -0.0085214)
+bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
+bones/30/position = Vector3(-0.411779, 0.355831, 1.32976)
+bones/31/rotation = Quaternion(0.999964, -4.70487e-09, 4.4276e-07, -0.0085224)
+bones/32/position = Vector3(-0.252724, 0.184124, 0.97181)
+bones/32/rotation = Quaternion(-0.613758, -0.513475, 0.370614, 0.471476)
+
+[node name="goblin_8" parent="World" instance=ExtResource("2_5o5jd")]
+transform = Transform3D(-5.68248e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.68248e-08, 0.246229, 1.12087, -1.24207)
+
+[node name="Beads" parent="World/goblin_8/gobby bones/Skeleton3D" index="0"]
+transform = Transform3D(1, 1.93715e-07, -2.14204e-08, 4.84288e-08, 1, -3.84171e-08, 1.10827e-07, -2.77068e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
+
+[node name="Beads_001" parent="World/goblin_8/gobby bones/Skeleton3D" index="1"]
+transform = Transform3D(1, 1.93715e-07, -2.14204e-08, 4.84288e-08, 1, -3.84171e-08, 1.10827e-07, -2.77068e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
+
+[node name="Beads_002" parent="World/goblin_8/gobby bones/Skeleton3D" index="2"]
+transform = Transform3D(1, 1.93715e-07, -2.14204e-08, 4.84288e-08, 1, -3.84171e-08, 1.10827e-07, -2.77068e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
+
+[node name="Scripts" type="Node3D" parent="."]
+
+[node name="Play_Intro" type="Node3D" parent="Scripts"]
+script = ExtResource("4_kbo7x")
+
+[node name="Buttons" type="Node3D" parent="Scripts"]
+script = ExtResource("5_j5xvy")
+
+[node name="Buttons" type="Node3D" parent="."]
+
+[node name="Story Mode" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230265, 1.34731, 0.2014)
+mesh = SubResource("PlaneMesh_kvsuo")
+surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
+
+[node name="Area3D" type="Area3D" parent="Buttons/Story Mode"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Story Mode/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
+shape = SubResource("BoxShape3D_udr17")
+
+[node name="Random Game Mode" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273005, 1.34731, 0.2014)
+mesh = SubResource("PlaneMesh_kvsuo")
+surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
+
+[node name="Area3D" type="Area3D" parent="Buttons/Random Game Mode"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Random Game Mode/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
+shape = SubResource("BoxShape3D_udr17")
+
+[node name="Goblin Mode" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.776716, 1.34731, 0.2014)
+mesh = SubResource("PlaneMesh_kvsuo")
+surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
+
+[node name="Area3D" type="Area3D" parent="Buttons/Goblin Mode"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Goblin Mode/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
+shape = SubResource("BoxShape3D_udr17")
+
+[editable path="World/Main Menu"]
+[editable path="World/goblin_8"]
