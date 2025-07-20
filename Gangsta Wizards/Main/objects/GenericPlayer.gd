@@ -432,7 +432,7 @@ func shuffle_deck():
 	#SHORTCUT SPELL 2 SPELL2
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		flush_spell()
+		basking_house_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
