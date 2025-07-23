@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxutsuyx1icch"]
+
+[ext_resource type="PackedScene" uid="uid://bp4laoakcknvf" path="res://Menus/SharkArm.glb" id="1_bxbjh"]
+[ext_resource type="PackedScene" uid="uid://biu3qjwaeydtu" path="res://Menus/chips.tscn" id="2_68anf"]
+
+[node name="Arm" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.30915, 0, 0, 0)
+
+[node name="SharkArm" parent="." instance=ExtResource("1_bxbjh")]
+transform = Transform3D(-0.0170161, 0, 0.999855, 0, 1, 0, -0.999855, 0, -0.0170161, 0.0200153, 0.00305355, -0.477391)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="SharkArm/ArmBone/Skeleton3D" index="0"]
+transform = Transform3D(-1.19209e-07, 1, 0, 1.19209e-07, 0, -1, -1, -1.19209e-07, -1.19209e-07, 0.876795, -0.00559327, -0.000441183)
+bone_name = "Bone"
+bone_idx = 0
+
+[node name="Chips" parent="SharkArm/ArmBone/Skeleton3D/BoneAttachment3D" instance=ExtResource("2_68anf")]
+transform = Transform3D(1.3, 1.54972e-07, 0, 0, -5.68248e-08, 1.3, 1.54972e-07, -1.3, -5.68248e-08, -0.0159169, 0.0869622, 0.059679)
+
+[editable path="SharkArm"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=314 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=319 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -53,6 +53,11 @@
 [ext_resource type="PackedScene" uid="uid://cv0ge26agfena" path="res://Card Shark Campaign/Map Assets/openable_door.tscn" id="51_vgnyq"]
 [ext_resource type="PackedScene" uid="uid://5i06dhnqlqoa" path="res://Card Shark Campaign/Map Assets/openable_door_v2.tscn" id="52_ko5qh"]
 [ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="53_8ovs4"]
+[ext_resource type="PackedScene" uid="uid://dg60oqgb0yfb5" path="res://Card Shark Campaign/Character Models/Goblins/goblin_11.glb" id="54_ww0jh"]
+[ext_resource type="PackedScene" uid="uid://dayn67cq5e3y3" path="res://Card Shark Campaign/Character Models/Goblins/goblin_12.glb" id="55_3sly8"]
+[ext_resource type="PackedScene" uid="uid://drf8a167d86no" path="res://Card Shark Campaign/Map Assets/Housing/Gourd Apartments 2.glb" id="56_c1wer"]
+[ext_resource type="PackedScene" uid="uid://1a74gr4qvehu" path="res://Card Shark Campaign/Map Assets/Tent Church.glb" id="57_jcien"]
+[ext_resource type="PackedScene" uid="uid://dgbsjmm3wgltb" path="res://Card Shark Campaign/Map Assets/DEI Tower.glb" id="58_gw40c"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tserv"]
 size = Vector3(9, 4, 1)
@@ -10461,7 +10466,7 @@ mps = 100
 transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
 
 [node name="C3" type="PathFollow3D" parent="Cars/Path3"]
-transform = Transform3D(0.34009, 0, -0.940347, 0, 0.999998, 0, 0.940346, 0, 0.34009, -99.0968, 0, 40.187)
+transform = Transform3D(0.34009, 0, -0.940347, 0, 0.999998, 0, 0.940346, 0, 0.34009, -99.1036, 0, 40.1895)
 progress = 2287.52
 script = ExtResource("40_plsih")
 mps = 100
@@ -10470,7 +10475,7 @@ mps = 100
 transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, 0, 0, 0)
 
 [node name="C4" type="PathFollow3D" parent="Cars/Path3"]
-transform = Transform3D(-0.783357, 0, 0.621311, 0, 0.999997, 0, -0.621309, 0, -0.78336, -12.5518, 0, -606.452)
+transform = Transform3D(-0.783358, 0, 0.621311, 0, 0.999997, 0, -0.621308, 0, -0.78336, -12.551, 0, -606.453)
 progress = 1111.08
 script = ExtResource("40_plsih")
 mps = 0
@@ -10485,7 +10490,7 @@ script = ExtResource("42_paxh5")
 shape = SubResource("BoxShape3D_rn6al")
 
 [node name="C5" type="PathFollow3D" parent="Cars/Path3"]
-transform = Transform3D(-0.488413, 0, 0.872566, 0, 0.999997, 0, -0.872565, 0, -0.488413, 27.3586, 0, -640.996)
+transform = Transform3D(-0.488411, 0, 0.872567, 0, 0.999997, 0, -0.872566, 0, -0.488411, 27.3591, 0, -640.996)
 progress = 1057.28
 script = ExtResource("40_plsih")
 mps = 100
@@ -10531,6 +10536,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6673, 33.296, -178.768)
 
 [node name="TheCardShark3" parent="." instance=ExtResource("53_8ovs4")]
 transform = Transform3D(0.171516, 0, -0.985181, 0, 1, 0, 0.985181, 0, 0.171516, -5.69971, 33.1274, -201.308)
+
+[node name="goblin_11" parent="." instance=ExtResource("54_ww0jh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.11, 32.6598, -199.668)
+
+[node name="goblin_12" parent="." instance=ExtResource("55_3sly8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.1646, 32.965, -198.851)
+
+[node name="Gourd Apartments 2" parent="." instance=ExtResource("56_c1wer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0649, 33.4778, -211.956)
+
+[node name="Tent Church" parent="." instance=ExtResource("57_jcien")]
+transform = Transform3D(-0.999643, 0, 0.0267179, 0, 1, 0, -0.0267179, 0, -0.999643, 79.4401, 33.6677, -207.323)
+
+[node name="DEI Tower" parent="." instance=ExtResource("58_gw40c")]
+transform = Transform3D(-0.0319515, 0, -0.999489, 0, 1, 0, 0.999489, 0, -0.0319515, 24.3967, 31.8987, -264.639)
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]
