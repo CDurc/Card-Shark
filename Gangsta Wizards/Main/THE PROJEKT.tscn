@@ -8455,7 +8455,7 @@ _data = {
 point_count = 51
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vletl"]
-size = Vector3(5.53394, 2, 2.2)
+size = Vector3(5.53394, 2, 3.58155)
 
 [sub_resource type="Curve3D" id="Curve3D_eyx8c"]
 _data = {
@@ -8468,7 +8468,7 @@ point_count = 51
 size = Vector3(6, 2, 2.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_45qmr"]
-size = Vector3(6.07629, 2, 2.2)
+size = Vector3(6.07629, 2, 4.34894)
 
 [sub_resource type="Curve3D" id="Curve3D_xnrya"]
 _data = {
@@ -8478,6 +8478,7 @@ _data = {
 point_count = 51
 
 [node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.189598, -1.52588e-05, 0.116104)
 
 [node name="Island" parent="." instance=ExtResource("1_t7jbi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, -293.588)
@@ -10383,7 +10384,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
 script = ExtResource("42_paxh5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Path1/C1/Car1/Area3D"]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+transform = Transform3D(0.999991, 0, 1.65775e-07, 0, 1, 0, -1.65775e-07, 0, 0.999991, 0.015501, 0, -0.12561)
 shape = SubResource("BoxShape3D_vletl")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Path1"]
@@ -10503,7 +10504,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
 script = ExtResource("42_paxh5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Path2/C5/Cybertruck/Area3D"]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0621643, 0, -3.05176e-05)
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0621643, 0, -0.112427)
 shape = SubResource("BoxShape3D_45qmr")
 
 [node name="Path3" type="Path3D" parent="Cars"]
@@ -10558,7 +10559,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
 script = ExtResource("42_paxh5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Path3/C3/Car2/Area3D"]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -2.38419e-07, 0, 1, 0.0155334, 0, -0.202728)
 shape = SubResource("BoxShape3D_vletl")
 
 [node name="C4" type="PathFollow3D" parent="Cars/Path3"]
@@ -10574,6 +10575,7 @@ transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336
 script = ExtResource("42_paxh5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Path3/C4/Cybertruck/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999968, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_rn6al")
 
 [node name="C5" type="PathFollow3D" parent="Cars/Path3"]

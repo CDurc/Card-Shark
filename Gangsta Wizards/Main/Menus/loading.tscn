@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyueti31kitds"]
+
+[ext_resource type="VideoStream" path="res://Menus/2outof5Title.ogv" id="1_vliad"]
+
+[node name="Loading" type="Node3D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_vliad")
+autoplay = true
+expand = true
