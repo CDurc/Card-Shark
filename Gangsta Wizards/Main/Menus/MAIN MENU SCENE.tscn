@@ -291,4 +291,16 @@ new_scene = ExtResource("10_dw8v4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
 shape = SubResource("BoxShape3D_udr17")
 
+[node name="GUI" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GUI"]
+
+[node name="ColorRect" type="ColorRect" parent="GUI/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [editable path="World/goblin_8"]
