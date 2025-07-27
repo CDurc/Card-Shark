@@ -1,4 +1,4 @@
-[gd_scene load_steps=321 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=324 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -22,7 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://c1u06hmwoxjvp" path="res://Card Shark Campaign/Character Models/Goblins/street_goblin.tscn" id="17_f7vv7"]
 [ext_resource type="PackedScene" uid="uid://cspnb87r501ok" path="res://Card Shark Campaign/Character Models/Goblins/goblin_5.glb" id="17_jkf7j"]
 [ext_resource type="PackedScene" uid="uid://ct8602d8fsoc0" path="res://Card Shark Campaign/Character Models/Crab.glb" id="18_4ixtf"]
+[ext_resource type="PackedScene" uid="uid://c5spgce5414ru" path="res://Card Shark Campaign/Map Assets/Nakatomi Plaza.glb" id="20_fmby0"]
 [ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="20_wyvkd"]
+[ext_resource type="PackedScene" uid="uid://djha0h1vigxne" path="res://Card Shark Campaign/Map Assets/Casino.glb" id="21_3hv31"]
+[ext_resource type="PackedScene" uid="uid://dd2b107h838m8" path="res://Card Shark Campaign/Map Assets/WooCorp Tower.glb" id="22_wcics"]
 [ext_resource type="PackedScene" uid="uid://c2y0nt7ku6sxo" path="res://Card Shark Campaign/Map Assets/Beach Restrooms.glb" id="26_vn2n5"]
 [ext_resource type="PackedScene" uid="uid://cbsu1vf8bvgsh" path="res://Card Shark Campaign/CPUs/gary.tscn" id="26_y0epj"]
 [ext_resource type="PackedScene" uid="uid://cb1jt0u67aek1" path="res://Card Shark Campaign/Map Assets/Boardwalk.glb" id="27_6102w"]
@@ -9967,6 +9970,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
 
+[node name="Nakatomi Plaza" parent="Player/HUD/C1" instance=ExtResource("20_fmby0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.4734, 32.5701, -481.529)
+
 [node name="C2" type="Control" parent="Player/HUD"]
 layout_mode = 3
 anchors_preset = 1
@@ -10013,6 +10019,12 @@ offset_bottom = 40.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
+
+[node name="Casino" parent="Player" instance=ExtResource("21_3hv31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881813, -4.91109, -171.495)
+
+[node name="WooCorp Tower" parent="Player" instance=ExtResource("22_wcics")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8099, 13.4082, -287.637)
 
 [node name="Projectiles" type="Node3D" parent="."]
 

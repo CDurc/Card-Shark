@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyueti31kitds"]
+[gd_scene load_steps=4 format=3 uid="uid://dyueti31kitds"]
 
+[ext_resource type="Script" path="res://Menus/loading.gd" id="1_tum3t"]
 [ext_resource type="VideoStream" path="res://Menus/2outof5Title.ogv" id="1_vliad"]
+[ext_resource type="PackedScene" uid="uid://ccahg3ocwrgd2" path="res://Menus/MAIN MENU SCENE.tscn" id="2_35o5l"]
 
 [node name="Loading" type="Node3D"]
+script = ExtResource("1_tum3t")
+new_scene = ExtResource("2_35o5l")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 anchors_preset = 15

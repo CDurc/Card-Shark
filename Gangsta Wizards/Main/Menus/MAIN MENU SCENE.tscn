@@ -178,6 +178,7 @@ transform = Transform3D(1, -1.11014e-06, 4.09782e-07, 1.18464e-06, 1, 7.44476e-0
 
 [node name="Arm" parent="World" instance=ExtResource("4_foeht")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00498766, 1.457, 0.709)
+visible = false
 
 [node name="Scripts" type="Node3D" parent="."]
 
@@ -191,6 +192,7 @@ arm_base_length = 1.2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scripts"]
 stream = ExtResource("6_swmh5")
+autoplay = true
 parameters/looping = true
 
 [node name="Buttons" type="Node3D" parent="."]
@@ -295,7 +297,7 @@ shape = SubResource("BoxShape3D_udr17")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GUI"]
 
-[node name="ColorRect" type="ColorRect" parent="GUI/CanvasLayer"]
+[node name="BlackBox" type="ColorRect" parent="GUI/CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -17,11 +17,23 @@ var hovered_mesh: MeshInstance3D = null
 var original_mat: Material = null
 const HOVER_COLOR := Color(0, 0, 0, 0.5)
 
+var extending = false
+var extended = false
+var stretch_step = 0.01
+
 func _ready() -> void:
 	if arm:
 		arm_orig_scale = arm.scale
+	await get_tree().create_timer(10).timeout
+	extending = true
 
 func _physics_process(_delta: float) -> void:
+	
+	if extending and stretch_step < 1:
+		stretch_step += 0.4 * _delta
+	elif extending and stretch_step >1:
+		stretch_step = 1
+	
 	var mouse_pos := get_viewport().get_mouse_position()
 	var origin := camera.project_ray_origin(mouse_pos)
 	var dir := camera.project_ray_normal(mouse_pos)
@@ -86,7 +98,7 @@ func _clear_hover() -> void:
 func _point_arm(hit: Vector3) -> void:
 	if !arm:
 		return
-	
+
 	var pivot := arm.global_transform.origin
 	var to_hit := hit - pivot
 	if horizontal_only:
@@ -102,10 +114,10 @@ func _point_arm(hit: Vector3) -> void:
 	arm.scale = Vector3(
 		arm_orig_scale.x,
 		arm_orig_scale.y,
-		arm_orig_scale.z * z_scale
+		arm_orig_scale.z * z_scale * stretch_step
 	)
 	chips.scale = Vector3(
 		arm_orig_scale.x,
 		arm_orig_scale.y,
-		arm_orig_scale.z / z_scale
+		arm_orig_scale.z / (z_scale * stretch_step)
 	)
