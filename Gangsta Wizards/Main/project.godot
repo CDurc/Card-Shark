@@ -15,7 +15,7 @@ config/tags=PackedStringArray("starterkit")
 run/main_scene="res://THE PROJEKT.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.92549, 0.92549, 0.960784, 1)
-boot_splash/image="res://splash-screen.png"
+boot_splash/image="res://Menus/2outof5Temporary.png"
 config/icon="res://icon.png"
 
 [autoload]

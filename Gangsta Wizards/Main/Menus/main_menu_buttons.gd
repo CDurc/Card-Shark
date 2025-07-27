@@ -2,15 +2,30 @@ extends Node3D
 
 @onready var camera: Camera3D = $"../../Cam Work/Camera3D"
 
+@export var arm_path: NodePath		# arrow / needle node
+@export var horizontal_only := true	# yaw only (compass)
+@export var arm_base_length := 1.0	# mesh default length in world units
+
+@onready var arm: Node3D = get_node_or_null(arm_path)
+@onready var chips = arm.get_node("SharkArm/ArmBone/Skeleton3D/BoneAttachment3D/Chips")
+@onready var collider = chips.get_node("Area3D")
+
+var arm_orig_scale: Vector3 = Vector3.ONE
+
 var hovered_area: Area3D = null
 var hovered_mesh: MeshInstance3D = null
 var original_mat: Material = null
-const HOVER_COLOR := Color(0, 0, 0, 0.5)	# tweak highlight colour
+const HOVER_COLOR := Color(0, 0, 0, 0.5)
+
+func _ready() -> void:
+	if arm:
+		arm_orig_scale = arm.scale
 
 func _physics_process(_delta: float) -> void:
 	var mouse_pos := get_viewport().get_mouse_position()
 	var origin := camera.project_ray_origin(mouse_pos)
-	var target := origin + camera.project_ray_normal(mouse_pos) * 1000.0
+	var dir := camera.project_ray_normal(mouse_pos)
+	var target := origin + dir * 1000.0
 	
 	var query := PhysicsRayQueryParameters3D.new()
 	query.from = origin
@@ -28,14 +43,29 @@ func _physics_process(_delta: float) -> void:
 			_apply_hover(area)
 	else:
 		_clear_hover()
+	
+	# ── rotate + scale the arm ───────────────────────────────────────────
+	var hit_pos := target
+	if result:
+		hit_pos = result.position
+	_point_arm(hit_pos)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		if hovered_area:
-			print("Clicked:", hovered_area.name)
-			# call your click action here, e.g. hovered_area.emit_signal("pressed")
+		var bodies = collider.get_overlapping_areas()
+		if len(bodies) == 1:
+			print(bodies)
+			if bodies[0].has_method("launch_scene"):
+				bodies[0].call("launch_scene")
+			
+		elif len(bodies) > 1:
+			print("multiple buttons selected")
+		elif len(bodies) < 1:
+			print("no buttons selected")
+		else:
+			print("idk wtf")
 
-# ────────────────────────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────────
 func _apply_hover(area: Area3D) -> void:
 	hovered_area = area
 	hovered_mesh = area.get_parent() as MeshInstance3D
@@ -51,3 +81,31 @@ func _clear_hover() -> void:
 	hovered_area = null
 	hovered_mesh = null
 	original_mat = null
+
+# ─────────────────────── compass arm helper ───────────────────────────────
+func _point_arm(hit: Vector3) -> void:
+	if !arm:
+		return
+	
+	var pivot := arm.global_transform.origin
+	var to_hit := hit - pivot
+	if horizontal_only:
+		to_hit.y = 0.0
+	if to_hit.length_squared() < 0.0001:
+		return
+	
+	# orient first
+	arm.look_at(pivot + to_hit, Vector3.UP)
+	
+	var dist := to_hit.length()
+	var z_scale := dist / arm_base_length
+	arm.scale = Vector3(
+		arm_orig_scale.x,
+		arm_orig_scale.y,
+		arm_orig_scale.z * z_scale
+	)
+	chips.scale = Vector3(
+		arm_orig_scale.x,
+		arm_orig_scale.y,
+		arm_orig_scale.z / z_scale
+	)
