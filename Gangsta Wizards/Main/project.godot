@@ -15,7 +15,9 @@ config/tags=PackedStringArray("starterkit")
 run/main_scene="res://THE PROJEKT.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Menus/Godot.png"
 config/icon="res://icon.png"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
@@ -27,7 +29,6 @@ GameState="*res://Card Shark Campaign/Scripts/gamestate.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 
 [editor]
 
