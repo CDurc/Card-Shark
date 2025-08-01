@@ -97,7 +97,7 @@ signal health_updated
 @onready var left_muzzle = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftMuzzle
 @onready var right_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightContainer
 @onready var left_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer
-@onready var right_hand_container = $TheCardSharkv4/SharkBones/Skeleton3D/RightHandContainer
+@onready var right_hand_container = $TheCardShark2/SharkBones/Skeleton3D/RightHandContainer
 @onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
 @onready var test_spawn = $Laserspawn #For parenting
 @onready var cards_in_hand = right_hand_container.get_node("Card")
@@ -111,8 +111,11 @@ signal health_updated
 @onready var straight_laser_cooldown = $StraightLaserCooldown
 @onready var basking_house_cooldown = $BaskingHouseCooldown
 
-@onready var anime = $TheCardSharkv4/AnimationPlayer
-@onready var gun_anime = $TheCardSharkv4/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
+@onready var LA_anime = $TheCardShark2/LeftArmController
+@onready var RA_anime = $TheCardShark2/RightArmController
+@onready var Leg_anime = $TheCardShark2/LegController
+@onready var Gen_anime = $TheCardShark2/GenericController
+@onready var gun_anime = $TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer/SharkGun2/AnimationPlayer
 @onready var UI_Card1 = $HUD/C1/Txt
 @onready var UI_Card2 = $HUD/C2/Txt
 @onready var HUD = $HUD
@@ -162,7 +165,7 @@ var fourkind_return_goals: Array = []
 
 # Functions
 func _ready():
-	anime.play("Idle")
+	Gen_anime.play("Idle")
 	add_to_group("Player") #So bots can communicate easily with player?
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	#Load weapon
@@ -212,7 +215,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		if abs(velocity.x) > 1 or abs(velocity.z) > 1:
 			sound_footsteps.stream_paused = false
-			anime.play("Walking")
+			Leg_anime.play("Walking")
 	
 	# Landing after jump or falling
 	camera.position.y = lerp(camera.position.y, 0.0, delta * 5)
@@ -307,7 +310,7 @@ func discard():
 		if !magic_cooldown.is_stopped(): return
 		if len(hand) > 0:
 			magic_cooldown.start(3)
-			anime.play("Discard")
+			RA_anime.play("Discard")
 			combine_cards() #Merge cards to prepare to throw
 			await get_tree().create_timer(0.2).timeout
 			right_hand_container.visible = false
@@ -340,7 +343,7 @@ func shuffle_deck():
 	
 	combine_cards()
 	await get_tree().create_timer(0.5).timeout
-	anime.play("Discard")
+	RA_anime.play("Discard")
 	
 	
 	var C1 = HUD.get_node("C1")
@@ -412,7 +415,7 @@ func shuffle_deck():
 	tween_r2.tween_property(C2, "position", Vector2(C2.position.x - 250, C2.position.y), 0.7)
 	
 	await get_tree().create_timer(0.75).timeout
-	anime.play("Discard")
+	RA_anime.play("Discard")
 	await get_tree().create_timer(1).timeout
 	for i in range (0,5): #Make hand visible and cards in correct places
 		var card = cards_in_hand.get_node("C%d" % (i+1))
@@ -622,7 +625,7 @@ func fourkind_spell():
 	if !magic_cooldown.is_stopped(): return
 	print("Magic 1 start")
 	magic_cooldown.start(4)
-	anime.play("Taunt")
+	#anime.play("Taunt")
 	await get_tree().create_timer(1).timeout
 	#Some sort of anime here
 	var enemy_list = ranges.get_node("Spell Range").enemy_list
@@ -772,9 +775,9 @@ func seeking_card_spell():
 	if !magic_cooldown.is_stopped(): return
 	magic_cooldown.start(4)
 	#Play some sort of spell cast anime
-	anime.play("Taunt")
+	RA_anime.play("Spell Loop")
 	await get_tree().create_timer(1).timeout
-	anime.play("Discard")
+	RA_anime.play("Discard")
 	combine_cards() #Merge cards to prepare to throw
 	await get_tree().create_timer(0.2).timeout
 	right_hand_container.visible = false
@@ -795,9 +798,9 @@ func pattern_card_spell():
 	if !magic_cooldown.is_stopped(): return
 	magic_cooldown.start(4)
 	#Play some sort of spell cast anime
-	anime.play("Taunt")
+	#anime.play("Taunt")
 	await get_tree().create_timer(1).timeout
-	anime.play("Discard")
+	RA_anime.play("Discard")
 	combine_cards() #Merge cards to prepare to throw
 	await get_tree().create_timer(0.2).timeout
 	right_hand_container.visible = false
@@ -818,9 +821,9 @@ func straightline_card_spell():
 	if !magic_cooldown.is_stopped(): return
 	magic_cooldown.start(4)
 	#Play some sort of spell cast anime
-	anime.play("Taunt")
+	#anime.play("Taunt")
 	await get_tree().create_timer(1).timeout
-	anime.play("Discard")
+	RA_anime.play("Discard")
 	combine_cards() #Merge cards to prepare to throw
 	await get_tree().create_timer(0.2).timeout
 	right_hand_container.visible = false
@@ -1074,7 +1077,7 @@ func shoot():
 		
 		Audio.play("sounds/blaster_repeater.ogg")
 		gun_anime.play("Fire")
-		anime.play("Walking")
+		Leg_anime.play("Walking")
 		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual

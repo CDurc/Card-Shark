@@ -1248,7 +1248,7 @@ use_3d_avoidance = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6755, 2.58394, -11.167)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("5_o6faa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.88821, 7.50678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160389, 4.88821, 7.48638)
 
 [node name="DialogueElements" type="CanvasLayer" parent="Player"]
 visible = false

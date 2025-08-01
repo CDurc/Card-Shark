@@ -1,4 +1,4 @@
-[gd_scene load_steps=324 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=326 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -61,6 +61,8 @@
 [ext_resource type="PackedScene" uid="uid://drf8a167d86no" path="res://Card Shark Campaign/Map Assets/Housing/Gourd Apartments 2.glb" id="56_c1wer"]
 [ext_resource type="PackedScene" uid="uid://1a74gr4qvehu" path="res://Card Shark Campaign/Map Assets/Tent Church.glb" id="57_jcien"]
 [ext_resource type="PackedScene" uid="uid://dgbsjmm3wgltb" path="res://Card Shark Campaign/Map Assets/DEI Tower.glb" id="58_gw40c"]
+[ext_resource type="PackedScene" uid="uid://pll72lr818x" path="res://Card Shark Campaign/Character Models/Goblins/goblin_13.glb" id="62_cwl6q"]
+[ext_resource type="PackedScene" uid="uid://c8dj31sfiwqpm" path="res://Card Shark Campaign/Character Models/Goblins/goblin_14.glb" id="63_yu07t"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tserv"]
 size = Vector3(9, 4, 1)
@@ -10658,6 +10660,12 @@ transform = Transform3D(-0.999643, 0, 0.0267179, 0, 1, 0, -0.0267179, 0, -0.9996
 
 [node name="DEI Tower" parent="." instance=ExtResource("58_gw40c")]
 transform = Transform3D(-0.0319515, 0, -0.999489, 0, 1, 0, 0.999489, 0, -0.0319515, 24.3967, 31.8987, -264.639)
+
+[node name="goblin_13" parent="." instance=ExtResource("62_cwl6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.3159, 33.128, -204.744)
+
+[node name="goblin_14" parent="." instance=ExtResource("63_yu07t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.796, 32.9073, -206.886)
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]
