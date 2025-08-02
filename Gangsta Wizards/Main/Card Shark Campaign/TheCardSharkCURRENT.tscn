@@ -5900,12 +5900,12 @@ mesh = SubResource("ArrayMesh_ssyic")
 skin = SubResource("Skin_85e1w")
 
 [node name="LeftHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D"]
-transform = Transform3D(0.99455, -0.0617053, -0.0840304, 0.0838173, -0.00603557, 0.996462, -0.0619944, -0.998076, -0.000830784, 0.0379286, 0.393923, -0.613721)
+transform = Transform3D(0.994551, -0.0617054, -0.0840294, 0.0838166, -0.0060364, 0.996463, -0.0619944, -0.998076, -0.000831619, 0.0379284, 0.393923, -0.613721)
 bone_name = "Palm L"
 bone_idx = 8
 
 [node name="RightHandContainer" type="BoneAttachment3D" parent="SharkBones/Skeleton3D"]
-transform = Transform3D(-0.36532, 0.352314, -0.861636, -0.47031, -0.868644, -0.155776, -0.803337, 0.348328, 0.48303, 0.30473, 0.513475, 0.205452)
+transform = Transform3D(-0.365317, 0.352313, -0.861637, -0.470309, -0.868645, -0.155777, -0.803339, 0.348328, 0.483027, 0.30473, 0.513476, 0.205453)
 bone_name = "Palm R"
 bone_idx = 16
 
