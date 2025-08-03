@@ -1,7 +1,9 @@
-[gd_scene load_steps=159 format=3 uid="uid://bf2oikdr46m1m"]
+[gd_scene load_steps=161 format=3 uid="uid://bf2oikdr46m1m"]
 
 [ext_resource type="PackedScene" uid="uid://l5m0rkmng01e" path="res://CardSharkGoblinDefense/SurvivalModeMap.glb" id="1_cncwm"]
 [ext_resource type="PackedScene" uid="uid://c3w2iojgthqvv" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tscn" id="2_eyisb"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="2_te542"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/helth.gd" id="3_3udxk"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="3_3vbu2"]
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="3_4yiao"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="4_k08p2"]
@@ -471,13 +473,241 @@ outline_color = Color(0, 0, 0, 0.470588)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0814, 1.84065, 0.233171)
 target_path = NodePath("../../Player")
 
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy3"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy3/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
 [node name="Goblin Enemy5" parent="Enemies" instance=ExtResource("2_eyisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9299, 1.84065, 0.233171)
 target_path = NodePath("../../Player")
 
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy5"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy5/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy5/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy5/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
 [node name="Goblin Enemy11" parent="Enemies" instance=ExtResource("2_eyisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9864, 1.84065, 0.233171)
 target_path = NodePath("../../Player")
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy11"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy11/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy11/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy11/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy4" parent="Enemies" instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1897, 1.84065, -21.5882)
+target_path = NodePath("../../Player")
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy4"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy4/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy4/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy4/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy6" parent="Enemies" instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0382, 1.84065, -21.5882)
+target_path = NodePath("../../Player")
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy6"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy6/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy6/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy6/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy12" parent="Enemies" instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0947, 1.84065, -21.5882)
+target_path = NodePath("../../Player")
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy12"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy12/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy12/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy12/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
 
 [node name="Map" type="Node3D" parent="."]
 

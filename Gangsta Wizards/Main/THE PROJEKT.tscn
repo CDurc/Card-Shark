@@ -1,4 +1,4 @@
-[gd_scene load_steps=324 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=328 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -58,9 +58,13 @@
 [ext_resource type="PackedScene" uid="uid://1a74gr4qvehu" path="res://Card Shark Campaign/Map Assets/Tent Church.glb" id="57_jcien"]
 [ext_resource type="PackedScene" uid="uid://dgbsjmm3wgltb" path="res://Card Shark Campaign/Map Assets/DEI Tower.glb" id="58_gw40c"]
 [ext_resource type="PackedScene" uid="uid://pll72lr818x" path="res://Card Shark Campaign/Character Models/Goblins/goblin_13.glb" id="62_cwl6q"]
+[ext_resource type="PackedScene" uid="uid://b57hglfltpbkn" path="res://Card Shark Campaign/Character Models/Goblins/goblin_15.glb" id="62_ngxxe"]
+[ext_resource type="PackedScene" uid="uid://ll8a1tl33v4q" path="res://Card Shark Campaign/Character Models/Goblins/goblin_16.glb" id="63_nsskc"]
 [ext_resource type="PackedScene" uid="uid://c8dj31sfiwqpm" path="res://Card Shark Campaign/Character Models/Goblins/goblin_14.glb" id="63_yu07t"]
+[ext_resource type="PackedScene" uid="uid://cjlpemundpthj" path="res://Card Shark Campaign/Weapons/Sniper.glb" id="64_0f0j8"]
 [ext_resource type="PackedScene" uid="uid://pwg6dn1kytyy" path="res://Card Shark Campaign/Map Assets/openable_door_wooden1.tscn" id="64_m04sh"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="65_ai2mc"]
+[ext_resource type="PackedScene" uid="uid://d3xtr7xupcsmg" path="res://Card Shark Campaign/Weapons/Flamethrower.glb" id="65_uwa5b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tserv"]
 size = Vector3(9, 4, 1)
@@ -10661,6 +10665,18 @@ offset_bottom = 40.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
+
+[node name="goblin_15" parent="." instance=ExtResource("62_ngxxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4081, 33.3458, -183.832)
+
+[node name="goblin_16" parent="." instance=ExtResource("63_nsskc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9282, 32.8703, -182.927)
+
+[node name="Sniper" parent="." instance=ExtResource("64_0f0j8")]
+transform = Transform3D(0.999797, 0.0201397, 0, -0.0201397, 0.999797, 0, 0, 0, 1, -19.8112, 33.8202, -181.089)
+
+[node name="Flamethrower" parent="." instance=ExtResource("65_uwa5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5776, 33.6738, -184.33)
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]

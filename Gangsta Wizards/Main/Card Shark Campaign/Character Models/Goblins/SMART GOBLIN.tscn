@@ -12,7 +12,8 @@ extends CharacterBody3D
 
 @onready var target:		Node3D = get_node(target_path)
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
-
+@onready var healthbar = $Control/Healthbar/Helth
+#@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
 @export var follow_distance     = 10
@@ -23,6 +24,7 @@ extends CharacterBody3D
 @export var can_turn            = true
 @export var damaging            = false
 @export var health              := 100
+var initial_health = health
 
 #Jumping/Stuck
 var last_position: Vector3
@@ -51,6 +53,7 @@ var attacking       = false
 @onready var anime          = $Goblin/AnimationPlayer
 
 func _ready() -> void:
+	print(\"healthbar\",healthbar)
 	if target:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
@@ -144,6 +147,13 @@ func destroy():
 
 func damage(amount):
 	health -= amount
+	var health_ratio = float(health)/float(initial_health)
+	var R_color = (1 - health_ratio)  #Should just got to 208 tbh
+	var G_color = health_ratio
+	healthbar.color = Color(R_color,G_color,0)
+	healthbar.scale.x = health_ratio
+	print(health_ratio)
+	
 	if health <= 0 and not destroyed:
 		destroy()
 
