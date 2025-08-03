@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://pwg6dn1kytyy"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Map Assets/openable_door_v2.gd" id="1_eb58t"]
+[ext_resource type="PackedScene" uid="uid://dx43s2hvs5qf0" path="res://Card Shark Campaign/Map Assets/Doors/Wood Slat Door.glb" id="2_1l880"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ensu7"]
+size = Vector3(0.302193, 2.15418, 1.05502)
+
+[node name="Openable Door" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.249605, 1.40959, -0.593345)
+collision_layer = 3
+script = ExtResource("1_eb58t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0730934, 0.0689086, 0.492472)
+shape = SubResource("BoxShape3D_ensu7")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Wood Slat Door" parent="." instance=ExtResource("2_1l880")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0711626, -1.14596, 0.50478)

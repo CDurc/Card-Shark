@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3vo81ssgfsj6"]
+[gd_scene load_steps=17 format=3 uid="uid://c3vo81ssgfsj6"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_tt4m1"]
 [ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="10_dggtj"]
 [ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="11_5uwfn"]
+[ext_resource type="PackedScene" uid="uid://be8aktxpp8odf" path="res://Card Shark Campaign/TheCardSharkCURRENT.tscn" id="12_17kw0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.23
@@ -170,6 +171,7 @@ collide_with_areas = true
 
 [node name="TheCardSharkv4" parent="." instance=ExtResource("7_6eqaa")]
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765192, 0.0776601)
+visible = false
 
 [node name="CharacterCenter" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201488, 0.909521, 0.121035)
@@ -185,10 +187,10 @@ shape = SubResource("CylinderShape3D_5ilxy")
 
 [node name="TheCardShark" parent="." instance=ExtResource("9_tt4m1")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0136412, 0.883949, 0.113215)
+visible = false
 
 [node name="Skeleton3D" parent="TheCardShark/SharkBones" index="0"]
 bones/0/position = Vector3(0.223601, -0.948659, 0.00908539)
-bones/0/rotation = Quaternion(0.5, -0.5, -0.5, -0.5)
 bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
 bones/1/rotation = Quaternion(0.621884, 0.0032591, -0.00403933, 0.783092)
 bones/1/scale = Vector3(1, 1, 1)
@@ -245,17 +247,38 @@ bones/32/position = Vector3(-0.186731, -0.0423403, 1.4896)
 bones/32/rotation = Quaternion(-0.880131, 0.206192, 0.226286, -0.362834)
 bones/32/scale = Vector3(1, 1, 1)
 
-[node name="SharkGun2" parent="." instance=ExtResource("6_ikpl2")]
-transform = Transform3D(-0.798573, 0, 0.0477656, 0, 0.8, 0, -0.0477656, 0, -0.798573, -0.147721, 1.46925, -0.218541)
+[node name="TheCardShark2" parent="." instance=ExtResource("12_17kw0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.864053, 0.0929689)
 
-[node name="Rifle" parent="." instance=ExtResource("10_dggtj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211034, 1.45868, -0.348491)
+[node name="Skeleton3D" parent="TheCardShark2/SharkBones" index="0"]
+bones/5/rotation = Quaternion(0.112753, 0.352577, -0.231437, 0.899674)
+bones/6/rotation = Quaternion(0.697869, 0.00844452, -0.0487762, 0.714513)
+bones/7/rotation = Quaternion(-0.130898, -0.802261, -0.385358, 0.43674)
+bones/13/rotation = Quaternion(0.383268, -0.631512, 0.363492, 0.567602)
+bones/14/rotation = Quaternion(0.175022, -0.00291314, -0.622852, 0.762505)
+bones/15/rotation = Quaternion(-0.098141, 0.783867, -0.372264, -0.487176)
+bones/25/position = Vector3(0.17795, -0.0349873, 1.50379)
+bones/25/rotation = Quaternion(-0.04063, 0.141904, -0.767195, -0.624199)
+bones/32/rotation = Quaternion(-0.880131, 0.206192, 0.226286, -0.362834)
+
+[node name="LeftHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="1"]
+transform = Transform3D(-0.902428, 0.419966, 0.0961921, 0.0885913, -0.0376177, 0.995358, 0.421635, 0.90676, -0.00325812, 0.270919, 0.543757, -0.102768)
+
+[node name="Rifle" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="0" instance=ExtResource("10_dggtj")]
+transform = Transform3D(0.448846, 0.768118, 0.456651, 0.704188, -0.618637, 0.348437, 0.550142, 0.165174, -0.818572, -0.00521445, -0.121753, 0.0968415)
 visible = false
 
-[node name="Card" parent="." instance=ExtResource("11_5uwfn")]
-transform = Transform3D(0.0996825, -0.00250535, -0.00755754, 0.00305237, 0.0996929, 0.00721172, 0.00735365, -0.00741951, 0.0994529, 0.145254, 1.47699, -0.17029)
+[node name="SharkGun2" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="1" instance=ExtResource("6_ikpl2")]
+transform = Transform3D(-0.329311, 0.0161407, -0.7289, -0.729062, -0.012702, 0.329102, -0.00493271, 0.799737, 0.019938, -0.012686, -0.0137825, 0.0431162)
+
+[node name="RightHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="2"]
+transform = Transform3D(0.427016, 0.902284, 0.059514, -0.415098, 0.25407, -0.87358, -0.803338, 0.348329, 0.483028, 0.297557, 0.576449, 0.205453)
+
+[node name="Card" parent="TheCardShark2/SharkBones/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("11_5uwfn")]
+transform = Transform3D(-0.0844858, -0.0362014, -0.0393903, 0.0288627, 0.0311508, -0.0905349, 0.0450453, -0.0878583, -0.0158693, 0.0186968, -0.0100082, -0.0336341)
 
 [connection signal="body_entered" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_entered"]
 [connection signal="body_exited" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_exited"]
 
 [editable path="TheCardShark"]
+[editable path="TheCardShark2"]

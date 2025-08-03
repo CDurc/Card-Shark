@@ -1,6 +1,8 @@
 extends Node3D
 
 @export var rotation_speed = 2.0
+@export var rotation_goal = -110
+
 var target_open_rotation: Quaternion
 var target_closed_rotation: Quaternion
 var opening = false
@@ -16,9 +18,12 @@ func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 	print ("player found:",player)
 	
+	var initial_quat: Quaternion = global_transform.basis.get_rotation_quaternion()
+	var move_quat = Quaternion(Vector3.UP, deg_to_rad(rotation_goal))
+	
 	# Set the target rotation
-	target_open_rotation = Quaternion.from_euler(Vector3(0, deg_to_rad(-110), 0))
-	target_closed_rotation = Quaternion.from_euler(Vector3(0, 0, 0))
+	target_open_rotation = initial_quat * move_quat
+	target_closed_rotation = initial_quat
 
 func _process(delta):
 	if opening:
@@ -37,11 +42,12 @@ func _process(delta):
 			rotation_t = 1.0
 		
 		#Stop door
-		if current_quat == target_open_rotation:
+		if current_quat.dot(target_open_rotation) > 0.9999:
 			opening = false
 			open = true
 			print("Door open")
 			rotation_t = 0
+			global_transform.basis = Basis(target_open_rotation) #snap to target
 			if inside == true:
 				interact.visible = true
 			
@@ -61,11 +67,12 @@ func _process(delta):
 			rotation_t = 1.0
 		
 		# Stop door
-		if current_quat == target_closed_rotation:
+		if current_quat.dot(target_closed_rotation) > 0.9999:
 			closing = false
 			closed = true
 			print("Door closed")
 			rotation_t = 0
+			global_transform.basis = Basis(target_closed_rotation) #snap to target
 			if inside == true:
 				interact.visible = true
 			
