@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3w2iojgthqvv"]
+[gd_scene load_steps=6 format=3 uid="uid://c3w2iojgthqvv"]
 
+[ext_resource type="PackedScene" uid="uid://dsg348i6y6mp2" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_1_ANIMES.tscn" id="2_n6flr"]
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_wmgx7"]
+[ext_resource type="PackedScene" uid="uid://cgqbrqx8cet6s" path="res://Card Shark Campaign/Weapons/PIPE_WEAPON_NEW.tscn" id="3_0fiey"]
 
 [sub_resource type="GDScript" id="GDScript_kip80"]
 script/source = "#Smart Gobby Script
@@ -50,7 +52,9 @@ var attacking       = false
 @onready var area3D         = $Goblin.get_node(\"Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D\")
 @onready var damaged_bodies = area3D.damaged_bodies
 @onready var monitor        = area3D.monitoring
-@onready var anime          = $Goblin/AnimationPlayer
+@onready var a_anime          = $Goblin/ArmAnimation
+@onready var l_anime          = $Goblin/LegAnimation
+
 
 func _ready() -> void:
 	print(\"healthbar\",healthbar)
@@ -68,10 +72,11 @@ func _physics_process(delta: float) -> void:
 		velocity = knockback_v
 		move_and_slide()
 		knockback_t -= delta
-	else:
+	elif can_move:
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
+			l_anime.play(\"Walking\")
 			
 		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
 			attack()
@@ -85,7 +90,7 @@ func _physics_process(delta: float) -> void:
 			dir.y = 0
 			dir = dir.normalized()
 
-			if dir.length() > 0.01 and not jumping:
+			if dir.length() > 0.01 and not jumping and can_move:
 				look_at(global_transform.origin + dir, Vector3.UP)
 
 			velocity.x = dir.x * speed
@@ -94,7 +99,7 @@ func _physics_process(delta: float) -> void:
 		# ---- ALWAYS FACE THE PLAYER ----
 		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
 		face_dir.y = 0
-		if face_dir.length() > 0.01 and not jumping:
+		if face_dir.length() > 0.01 and not jumping and can_move:
 			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
 		# --------------------------------
 
@@ -131,7 +136,6 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
-
 func jump():
 	#jumping = true
 	velocity.y = jump_force
@@ -159,8 +163,8 @@ func damage(amount):
 
 func attack():
 	attacking = true
-	anime.stop()
-	anime.play(\"Attack\")
+	a_anime.stop()
+	a_anime.play(\"Attack\")
 	await get_tree().create_timer(0.9).timeout
 
 	damaging = true
@@ -178,8 +182,8 @@ func attack():
 "
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
-radius = 0.180986
-height = 1.13564
+radius = 0.284015
+height = 1.91287
 
 [node name="Goblin Enemy" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
@@ -187,10 +191,30 @@ collision_layer = 3
 script = SubResource("GDScript_kip80")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.044122, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.21556, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
-[node name="Goblin" parent="." instance=ExtResource("2_wmgx7")]
+[node name="Goblin_old" parent="." instance=ExtResource("2_wmgx7")]
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
+visible = false
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Goblin" parent="." instance=ExtResource("2_n6flr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Goblin/Goblin Bones" index="0"]
+bones/64/rotation = Quaternion(0.973333, -0.00381346, -0.0382381, 0.226156)
+bones/65/rotation = Quaternion(0.589849, -0.0141048, -0.183501, 0.786261)
+bones/66/rotation = Quaternion(-0.651947, 0.0334044, 0.141093, 0.744273)
+bones/68/rotation = Quaternion(0.996833, -0.0217894, 0.0149244, 0.0750051)
+bones/69/rotation = Quaternion(0.485181, 0.0175067, -0.0275981, 0.873803)
+bones/70/rotation = Quaternion(-0.54464, -0.0472902, -0.0143458, 0.837213)
+bones/73/position = Vector3(0.904303, 1.50704, 0.614314)
+bones/75/position = Vector3(0.984244, 0.531334, 2.19688)
+bones/76/position = Vector3(-0.925834, 2.10191, 0.316863)
+
+[node name="Metal Pipe" parent="Goblin/Goblin Bones/Skeleton3D/HandContainer" index="0" instance=ExtResource("3_0fiey")]
+transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
+
+[editable path="Goblin"]

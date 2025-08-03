@@ -32,6 +32,7 @@ func interac():
 	if GameState.current_mode == GameState.GameMode.GAMEPLAY:
 		enter_dialogue()
 		print("INTERAXXXXIONED")
+		
 
 func enter_dialogue():
 	print("ENTEREDED DIOLUGUEUE")

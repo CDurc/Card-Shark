@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://dqaqg3fak7erw"]
+[gd_scene load_steps=6 format=4 uid="uid://cgqbrqx8cet6s"]
 
-[ext_resource type="PackedScene" uid="uid://dlbgdsrwkmlau" path="res://Card Shark Campaign/Weapons/Metal Pipe.glb" id="1_fba7v"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/sword_damage.gd" id="2_30yqk"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/sword_damage.gd" id="1_jl2nx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4o6gf"]
 resource_name = "Pipe Wall"
@@ -66,22 +65,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ofxrr")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8fxbk"]
-radius = 1.0
-height = 9.869
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7tsgp"]
+radius = 0.12
+height = 1.3
 
-[node name="Metal Pipe" instance=ExtResource("1_fba7v")]
+[node name="Metal Pipe" type="Node3D"]
 
-[node name="Pipe" parent="." index="0"]
-transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+[node name="Pipe" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6kbad")
+skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="." index="1"]
+[node name="Area3D" type="Area3D" parent="."]
 monitoring = false
-script = ExtResource("2_30yqk")
+script = ExtResource("1_jl2nx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
-shape = SubResource("CapsuleShape3D_8fxbk")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_7tsgp")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

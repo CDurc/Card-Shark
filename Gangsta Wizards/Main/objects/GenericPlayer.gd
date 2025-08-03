@@ -2,7 +2,8 @@
 extends CharacterBody3D
 
 @export_subgroup("Properties")
-@export var movement_speed = 5
+@export var walk_speed = 5
+@export var sprint_speed = 10
 @export var jump_strength = 8
 @export var health:int = 100
 @export var can_move = true
@@ -63,6 +64,7 @@ var initial_deck = [
 ]
 
 var deck = initial_deck
+var movement_speed = walk_speed
 
 var mouse_sensitivity = 700
 var gamepad_sensitivity := 0.075
@@ -128,6 +130,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var sprinting = false
 var fourkind_lifting = false
 var fourkind_slamming = false
 var fourkind_uping = false
@@ -439,7 +442,7 @@ func test_2_spell():
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		straightline_card_spell()
+		fourkind_spell()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -1069,6 +1072,10 @@ func _process(delta): #Currently only used for card combine and fourkind
 		# Apply new transform
 		card.transform = Transform3D(Basis(new_quat), new_pos)
 
+func sprint():
+	if not sprinting:
+		sprinting = true
+		movement_speed = sprint_speed
 
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
@@ -1077,7 +1084,6 @@ func shoot():
 		
 		Audio.play("sounds/blaster_repeater.ogg")
 		gun_anime.play("Fire")
-		Leg_anime.play("Walking")
 		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual

@@ -5,7 +5,7 @@ extends Control
 @onready var target = $".."
 
 func _process(_delta):
-	var world_pos = target.global_transform.origin + Vector3.UP * 1.0
+	var world_pos = target.global_transform.origin + Vector3.UP * 1.5
 	var screen_pos = camera.unproject_position(world_pos)
 
 	# Optionally hide if behind camera
