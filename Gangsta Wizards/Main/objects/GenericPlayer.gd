@@ -103,6 +103,9 @@ signal health_updated
 @onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
 @onready var test_spawn = $Laserspawn #For parenting
 @onready var cards_in_hand = right_hand_container.get_node("Card")
+@onready var skel = $TheCardShark2/SharkBones/Skeleton3D
+@onready var hip = $"TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips"
+@onready var ragcam = $"TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips/ragcam"
 
 @onready var card_container = $CardContainer
 @onready var basking_spawn = $Baskingspawn
@@ -130,6 +133,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var can_double_jump = false
 var sprinting = false
 var fourkind_lifting = false
 var fourkind_slamming = false
@@ -218,7 +222,10 @@ func _physics_process(delta):
 	if is_on_floor():
 		if abs(velocity.x) > 1 or abs(velocity.z) > 1:
 			sound_footsteps.stream_paused = false
-			Leg_anime.play("Walking")
+			if sprinting:
+				Leg_anime.play("Sprint")
+			else:
+				Leg_anime.play("Walking")
 	
 	# Landing after jump or falling
 	camera.position.y = lerp(camera.position.y, 0.0, delta * 5)
@@ -435,14 +442,33 @@ func shuffle_deck():
 	rot_acc = 3
 	rot_max_speed = 9.5
 
+func trigger_ragdoll(impulse: Vector3):
+	can_move = false
+	LA_anime.stop()
+	RA_anime.stop()
+	Leg_anime.stop()
+	Gen_anime.stop()
+	skel.set_animate_physical_bones(false)
+	skel.get_node("PhysicalBoneSimulator3D").physical_bones_start_simulation()
+	skel.get_node("PhysicalBoneSimulator3D").active = true
+	$Collider.disabled = true
+	
+	#launch ragdoll up
+	
+	hip.apply_central_impulse(impulse)
+	ragcam.make_current()
+
+
 	#SHORTCUT SPELL 2 SPELL2
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		basking_house_spell()
+		#flush_spell()
+		trigger_ragdoll(Vector3(30,200,30))
+
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		fourkind_spell()
+		seeking_card_spell()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -1073,9 +1099,15 @@ func _process(delta): #Currently only used for card combine and fourkind
 		card.transform = Transform3D(Basis(new_quat), new_pos)
 
 func sprint():
-	if not sprinting:
+	if Input.is_action_just_pressed("Sprint"):
 		sprinting = true
-		movement_speed = sprint_speed
+		movement_speed = sprint_speed	
+	elif Input.is_action_just_released("Sprint"):
+		movement_speed = walk_speed
+		sprinting = false
+		await get_tree().process_frame
+		Leg_anime.play("Idle")
+		print("IDLEING")
 
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
@@ -1142,16 +1174,18 @@ func _input(event):
 func handle_controls(_delta):
 	
 	#seeking_card_spell()
-	discard()
-	shoot()
-	#straight_laser_spell()
-	#basking_house_spell()
-	#pattern_card_spell()
-	#straightline_card_spell()
-	cast_spell()
-	test_2_spell()
-	test_1_spell()
-	# Mouse capture
+	sprint()
+	if not sprinting:
+		discard()
+		shoot()
+		#straight_laser_spell()
+		#basking_house_spell()
+		#pattern_card_spell()
+		#straightline_card_spell()
+		cast_spell()
+		test_2_spell()
+		test_1_spell()
+		# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -1180,10 +1214,10 @@ func handle_controls(_delta):
 	
 	if Input.is_action_just_pressed("jump"):
 		
-		if jump_single or jump_double:
+		if jump_single or (jump_double and can_double_jump):
 			Audio.play("sounds/jump_a.ogg, sounds/jump_b.ogg, sounds/jump_c.ogg")
 		
-		if jump_double:
+		if jump_double and can_double_jump:
 			
 			gravity = -jump_strength
 			jump_double = false

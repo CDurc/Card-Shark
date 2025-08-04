@@ -2340,7 +2340,7 @@ bones/79/rotation = Quaternion(-0.839213, -0.0863457, 0.525681, -0.1092)
 bones/79/scale = Vector3(1, 1, 1)
 
 [node name="Hat" type="BoneAttachment3D" parent="Goblin Bones/Skeleton3D"]
-transform = Transform3D(-0.00053016, -0.0278523, -1.50877, -0.319171, 1.47464, -0.0271101, 1.47489, 0.319107, -0.00640902, 0.082473, 1.04318, 0.215683)
+transform = Transform3D(-0.000529898, -0.0278528, -1.50877, -0.319173, 1.47464, -0.0271105, 1.47489, 0.319109, -0.00640898, 0.0824734, 1.04318, 0.215679)
 bone_name = "Hat"
 bone_idx = 44
 
@@ -2353,7 +2353,7 @@ mesh = SubResource("ArrayMesh_j5hb5")
 skin = SubResource("Skin_l6lt1")
 
 [node name="HandContainer" type="BoneAttachment3D" parent="Goblin Bones/Skeleton3D"]
-transform = Transform3D(-0.26138, 0.303385, 0.916317, 0.921761, -0.203242, 0.330225, 0.28642, 0.93094, -0.226525, -0.0548896, 1.2731, 2.26035)
+transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330224, 0.286421, 0.93094, -0.226524, -0.0548961, 1.2731, 2.26035)
 bone_name = "Palm L"
 bone_idx = 8
 
