@@ -105,7 +105,8 @@ signal health_updated
 @onready var cards_in_hand = right_hand_container.get_node("Card")
 @onready var skel = $TheCardShark2/SharkBones/Skeleton3D
 @onready var hip = $"TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips"
-@onready var ragcam = $"TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips/ragcam"
+@onready var ragcam = $ragcam
+@onready var followhip = $FollowHip
 
 @onready var card_container = $CardContainer
 @onready var basking_spawn = $Baskingspawn
@@ -133,6 +134,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var is_disabled = false
 var can_double_jump = false
 var sprinting = false
 var fourkind_lifting = false
@@ -151,6 +153,7 @@ var phys_card_path
 var phys_card #phys_cards are affected by gravity/ physics
 var bofa
 var splash
+var local_pos
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
@@ -183,6 +186,15 @@ func _ready():
 	load_bofa()
 	load_viewport()
 func _physics_process(delta):
+	
+	if is_disabled:
+		#followhip.position = hip.position
+		ragcam.global_position = hip.global_position + local_pos
+		ragcam.look_at(hip.position)
+		return
+	
+
+	
 	
 	# Handle functions
 	handle_gravity(delta)
@@ -444,6 +456,7 @@ func shuffle_deck():
 
 func trigger_ragdoll(impulse: Vector3):
 	can_move = false
+	is_disabled = true
 	LA_anime.stop()
 	RA_anime.stop()
 	Leg_anime.stop()
@@ -453,9 +466,20 @@ func trigger_ragdoll(impulse: Vector3):
 	skel.get_node("PhysicalBoneSimulator3D").active = true
 	$Collider.disabled = true
 	
-	#launch ragdoll up
+	followhip.position = hip.position #Properly position parent node
+	#var dir = impulse.normalized()
+	#var cam_pos = (hip.position + dir) * 2 #position cam 5 meters back towards the impulse
+	#ragcam.global_transform.origin = cam_pos
+	#ragcam.look_at(hip.position)
+	
+	
+	local_pos = impulse.normalized() * 2.5
+	ragcam.global_position = hip.global_position + local_pos
+	print("LOCAL POS",local_pos)
+	ragcam.look_at(hip.position)
 	
 	hip.apply_central_impulse(impulse)
+	
 	ragcam.make_current()
 
 
@@ -1055,6 +1079,9 @@ func combine_cards():
 	combine_t = 0.0  # Reset animation progress
 
 func _process(delta): #Currently only used for card combine and fourkind
+	
+	if is_disabled:
+		return
 	
 	if fourkind_lifting:
 		move_fourkind_enemies(delta)

@@ -36,13 +36,17 @@ var was_stuck: bool = false
 var knockback_v   := Vector3.ZERO
 var knockback_t   := 0.0
 
-var player
+@onready var player = get_tree().get_nodes_in_group("Player")[0]
 var destroyed       := false
 var attacking       = false
+var fuse_ticking = false
+var face_dir: Vector3
 
 
 @onready var goblin_anime = $goblin_4/AnimationPlayer
 @onready var bomb_anime = $Bomb2/AnimationPlayer
+
+var boom_effect = preload("res://Particles/big_explosion.tscn")
 
 
 func _ready() -> void:
@@ -68,8 +72,14 @@ func _physics_process(delta: float) -> void:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
 			goblin_anime.play("Run")
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 0.5 and not attacking:
+		if (target.global_transform.origin - global_transform.origin).length() < 1.8 and not attacking:
 			explode()
+			print("TRYING TO ATTACK")
+			
+		if (target.global_transform.origin - global_transform.origin).length() < 1.8 and not fuse_ticking:
+			fuse()
+			print("FUSE IS TICKING")			
+			
 
 		if nav_agent.is_navigation_finished():
 			velocity.x = 0
@@ -87,7 +97,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = dir.z * speed
 
 		# ---- ALWAYS FACE THE PLAYER ----
-		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
+		face_dir = target.global_transform.origin - global_transform.origin
 		face_dir.y = 0
 		if face_dir.length() > 0.01 and not jumping and can_move:
 			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
@@ -154,4 +164,26 @@ func damage(amount):
 func explode():
 	attacking = true
 	print("BOOM BANG BANG")
+	boom()
+	
+
+func boom():
+
+	#EXPLOSIVE IMPULSE
+	print("boom went off")
+	var overlapping_bodies = $BombArea.get_overlapping_bodies()
+	if player in overlapping_bodies:
+		print("Player is inside the area!")
+		var impulse_dir = face_dir
+		impulse_dir = 100*(impulse_dir+Vector3(0,2,0))
+		print(impulse_dir)
+		player.trigger_ragdoll(impulse_dir)
+		var boom = boom_effect.instantiate()
+		get_tree().root.add_child(boom)
+		boom.global_position = $BombArea.global_position
+		destroy()
+
+func fuse():
+	fuse_ticking = true
+	bomb_anime.play("Fuse")
 	
