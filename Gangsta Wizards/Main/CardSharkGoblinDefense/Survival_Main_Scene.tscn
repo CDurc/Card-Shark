@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bf2oikdr46m1m"]
+[gd_scene load_steps=38 format=3 uid="uid://bf2oikdr46m1m"]
 
 [ext_resource type="PackedScene" uid="uid://l5m0rkmng01e" path="res://CardSharkGoblinDefense/SurvivalModeMap.glb" id="1_cncwm"]
 [ext_resource type="PackedScene" uid="uid://c3w2iojgthqvv" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tscn" id="2_eyisb"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_j0q6t"]
 [ext_resource type="PackedScene" uid="uid://pwg6dn1kytyy" path="res://Card Shark Campaign/Map Assets/openable_door_wooden1.tscn" id="10_6scy4"]
 [ext_resource type="PackedScene" uid="uid://cv4bf36hm5i7l" path="res://Card Shark Campaign/Character Models/Goblins/goblin_3.glb" id="13_4qtjy"]
+[ext_resource type="Texture2D" uid="uid://ds4mtht5kc2gx" path="res://Menus/DeathScreen.png" id="13_bw6v2"]
 [ext_resource type="PackedScene" uid="uid://dt7qm6p21wn5b" path="res://Card Shark Campaign/Character Models/Goblins/SMART BOMBER.tscn" id="15_yyh5h"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6b8d4"]
@@ -113,10 +114,11 @@ height = 0.0467338
 
 [node name="Enemies" type="Node3D" parent="."]
 
-[node name="Goblin Enemy3" parent="Enemies" instance=ExtResource("2_eyisb")]
+[node name="Goblin Enemy3" parent="Enemies" groups=["Enemies"] instance=ExtResource("2_eyisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0814, 1.84065, 0.233171)
 speed = 3.0
 target_path = NodePath("../../Player")
+health = 60
 
 [node name="Control" type="Control" parent="Enemies/Goblin Enemy3"]
 layout_mode = 3
@@ -154,11 +156,13 @@ anchor_bottom = 0.85
 color = Color(0, 1, 0, 1)
 script = ExtResource("3_3udxk")
 
-[node name="Goblin Bomber" parent="Enemies" instance=ExtResource("15_yyh5h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.88955, 2.32804, -3.5102)
+[node name="Goblin Enemy4" parent="Enemies" groups=["Enemies"] instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0814, 1.84065, -3.60543)
+speed = 3.0
 target_path = NodePath("../../Player")
+health = 60
 
-[node name="Control" type="Control" parent="Enemies/Goblin Bomber"]
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy4"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -167,7 +171,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_te542")
 
-[node name="Label" type="Label" parent="Enemies/Goblin Bomber/Control"]
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy4/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -177,14 +181,262 @@ grow_vertical = 2
 text = "MY HELTH OW"
 horizontal_alignment = 1
 
-[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Bomber/Control"]
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy4/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.075
 anchor_bottom = 0.02
 color = Color(0, 0, 0, 1)
 
-[node name="Helth" type="ColorRect" parent="Enemies/Goblin Bomber/Control/Healthbar"]
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy4/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy5" parent="Enemies" groups=["Enemies"] instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5735, 1.84065, -3.60543)
+speed = 3.0
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy5"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy5/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy5/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy5/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy6" parent="Enemies" groups=["Enemies"] instance=ExtResource("2_eyisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5735, 1.84065, -0.188847)
+speed = 3.0
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy6"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy6/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy6/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy6/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy" parent="Enemies" instance=ExtResource("15_yyh5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, -2.77058)
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy2" parent="Enemies" instance=ExtResource("15_yyh5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09595, 2.55207, -2.77058)
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy2/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy7" parent="Enemies" instance=ExtResource("15_yyh5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, -5.2171)
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy7"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy7/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy7/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy7/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_3udxk")
+
+[node name="Goblin Enemy8" parent="Enemies" instance=ExtResource("15_yyh5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09595, 2.55207, -5.2171)
+target_path = NodePath("../../Player")
+health = 60
+
+[node name="Control" type="Control" parent="Enemies/Goblin Enemy8"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_te542")
+
+[node name="Label" type="Label" parent="Enemies/Goblin Enemy8/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Enemies/Goblin Enemy8/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Enemies/Goblin Enemy8/Control/Healthbar"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
@@ -372,6 +624,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "E"
 
+[node name="BUST" type="TextureRect" parent="Player/HUD"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 179.0
+offset_bottom = 179.0
+texture = ExtResource("13_bw6v2")
+expand_mode = 1
+
 [node name="Openable Door" parent="." instance=ExtResource("10_6scy4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.5324, 0.561101, -18.9145)
 rotation_goal = -118
@@ -398,12 +660,56 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5052, 2.17917, 1.52905)
 [node name="TheCardShark2" parent="." instance=ExtResource("9_j0q6t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00092, 2.95059, 7.44923)
 
+[node name="Skeleton3D" parent="TheCardShark2/SharkBones" index="0"]
+bones/0/rotation = Quaternion(0.5, -0.5, -0.5, -0.5)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(0.344193, 0.00746092, -0.00267812, 0.938865)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/rotation = Quaternion(-0.260978, -0.556373, -0.580419, 0.534278)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(-0.201757, 0.584722, 0.0694765, 0.782667)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(0.0244883, 0.0118141, -0.00171157, 0.999629)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-0.0236079, -0.6693, -0.107899, 0.734736)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(0.0842304, 0.0647158, 0.111388, 0.988084)
+bones/9/rotation = Quaternion(0.188416, 0.00287019, 0.026032, 0.98174)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.120798, 0.00256176, 0.0127377, 0.992592)
+bones/10/scale = Vector3(1, 1, 1)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.10016, -0.615088, -0.0281046, 0.781566)
+bones/14/rotation = Quaternion(0.0147693, -0.00781169, -0.0499227, 0.998613)
+bones/15/rotation = Quaternion(-0.163442, 0.667436, 0.171016, 0.706094)
+bones/15/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(0.996046, 0.0340122, 0.0299258, -0.0764179)
+bones/17/scale = Vector3(1, 1, 1.00001)
+bones/19/rotation = Quaternion(-0.443543, -0.00888029, 0.00759274, 0.896177)
+bones/20/rotation = Quaternion(-0.244044, 0.540678, -0.117724, 0.796399)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.996743, -0.033227, 0.00742373, -0.0731088)
+bones/22/rotation = Quaternion(0.0920536, 0.0192056, -0.0314135, 0.995073)
+bones/23/rotation = Quaternion(-0.441223, -0.0291097, -0.0167149, 0.896769)
+bones/24/rotation = Quaternion(-0.283468, -0.508322, 0.123096, 0.803805)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/rotation = Quaternion(-0.123978, -0.0245063, -0.692477, 0.710285)
+bones/25/scale = Vector3(1, 1, 1)
+bones/26/rotation = Quaternion(0.929327, -2.538e-07, 4.28568e-07, -0.369258)
+bones/28/rotation = Quaternion(0.999964, 2.78194e-08, 3.72225e-07, -0.0085214)
+bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
+bones/29/scale = Vector3(1, 1, 1)
+bones/31/rotation = Quaternion(0.999964, -3.77333e-09, 4.42739e-07, -0.0085224)
+bones/32/rotation = Quaternion(-0.221894, -0.0810468, 0.681003, 0.69313)
+bones/32/scale = Vector3(1, 1, 1)
+
 [node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="TheCardShark2/SharkBones/Skeleton3D" index="1"]
 
 [node name="Physical Bone Main Controller" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0, -0.959156, 0.282879, -0.0180576, -0.282833, -0.958999, 0.999837, -0.00510812, -0.0173201, 0.111419, -0.568343, 0.015954)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20141e-07, 9.76026e-07, 0.396576)
-body_offset = Transform3D(-0.999837, 0.00510811, 0.0173201, 0, 0.959156, -0.282879, -0.0180576, -0.282833, -0.958999, -0.00686884, 0.112182, 0.380316)
+transform = Transform3D(0, -0.959155, 0.282881, -0.0180577, -0.282834, -0.958999, 0.999837, -0.00510818, -0.0173201, 0.111419, -0.568343, 0.015954)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.28877e-08, 1.70618e-06, 0.396576)
+body_offset = Transform3D(-0.999837, 0.00510817, 0.0173201, 0, 0.959155, -0.282881, -0.0180577, -0.282834, -0.958999, -0.00686884, 0.112182, 0.380316)
 bone_name = "Main Controller"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Main Controller"]
@@ -411,10 +717,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_xm2ha")
 
 [node name="Physical Bone Hips" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.00227278, 0.974011, 0.226488, -0.0101284, 0.226499, -0.973959, -0.999946, -8.03546e-05, 0.0103799, -0.0162673, -0.121349, 0.0221124)
+transform = Transform3D(0.00227278, 0.974011, 0.226488, -0.0101284, 0.226499, -0.973959, -0.999946, -8.03532e-05, 0.0103799, -0.0162673, -0.121349, 0.0221124)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46645e-09, -1.67202e-06, 0.0684602)
-body_offset = Transform3D(1, -4.58385e-10, -2.14204e-08, -1.86265e-08, 1.45096e-08, -1, 1.04774e-09, 1, 4.50875e-08, 0, 0.0684602, 1.66893e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59396e-09, -1.44074e-06, 0.0684602)
+body_offset = Transform3D(1, -2.79397e-09, -2.32831e-08, -2.23517e-08, 1.33704e-07, -1, 3.62343e-09, 1, 1.49395e-07, 0, 0.0684602, 1.43051e-06)
 bone_name = "Hips"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -425,10 +731,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_g5ed2")
 
 [node name="Physical Bone Stomach" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-0.013193, 0.889539, -0.456669, -0.0136134, -0.456826, -0.889452, -0.99982, -0.0055177, 0.0181365, 0.0129437, 0.0324481, 0.0196671)
+transform = Transform3D(-0.013193, 0.889539, -0.456669, -0.0136134, -0.456826, -0.889452, -0.99982, -0.0055177, 0.0181365, 0.0129459, 0.0324478, 0.0196953)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.19622e-05, 1.42988e-05, 0.0979462)
-body_offset = Transform3D(1, -2.79397e-09, -5.58794e-09, -7.45058e-09, -4.39468e-09, -1, 4.65661e-10, 1, 6.39557e-08, -4.19617e-05, 0.0979462, -1.43051e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00943e-05, 1.23857e-05, 0.0979465)
+body_offset = Transform3D(1, -1.86265e-09, 7.45058e-09, 7.45058e-09, -4.40195e-09, -1, 4.65661e-10, 1, 1.23669e-07, -7.00951e-05, 0.0979465, -1.23978e-05)
 bone_name = "Stomach"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -439,10 +745,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ds4qs")
 
 [node name="Physical Bone Chest" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0275155, 0.942335, 0.333538, -0.0578527, 0.334606, -0.94058, -0.997946, 0.00658445, 0.0637235, 0.0153432, 0.238961, 0.00978851)
+transform = Transform3D(0.0275155, 0.942335, 0.333538, -0.0578527, 0.334606, -0.940581, -0.997946, 0.00658443, 0.0637235, 0.0153432, 0.238962, 0.00981283)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90908e-05, 4.00354e-06, 0.12694)
-body_offset = Transform3D(1, 6.84522e-08, -2.98023e-08, -3.72529e-08, 3.60596e-07, -1, -6.61239e-08, 1, 3.90573e-07, -2.90871e-05, 0.12694, -4.05312e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34076e-05, 3.29207e-06, 0.12694)
+body_offset = Transform3D(1, 8.47504e-08, -1.49012e-08, -3.72529e-08, 3.6144e-07, -1, -8.05594e-08, 1, 3.60742e-07, -5.34058e-05, 0.12694, -3.33786e-06)
 bone_name = "Chest"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -453,10 +759,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_p6812")
 
 [node name="Physical Bone Shoulder L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.947662, -0.0858858, -0.307508, 0.00703172, 0.968521, -0.248834, 0.319199, 0.233648, 0.918434, 0.000251293, 0.380405, -0.0796909)
+transform = Transform3D(0.947662, -0.0858856, -0.307508, 0.00703156, 0.968521, -0.248834, 0.319199, 0.233648, 0.918434, 0.000251293, 0.380405, -0.0796905)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87686e-06, -6.60017e-09, 0.0885878)
-body_offset = Transform3D(1, 2.98023e-08, 1.78814e-07, 2.08616e-07, 4.47035e-08, -1, 4.47035e-08, 1, 7.45058e-08, 2.86102e-06, 0.0885878, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86894e-06, -1.31992e-09, 0.0885873)
+body_offset = Transform3D(1, 4.47035e-08, 8.9407e-08, 1.78814e-07, 2.98023e-08, -1, 4.47035e-08, 1, 1.49012e-08, 2.86102e-06, 0.0885873, 0)
 bone_name = "Shoulder L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -467,10 +773,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_duuwi")
 
 [node name="Physical Bone Bicep L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.332409, 0.942749, 0.0270049, -0.943118, 0.332441, 0.00343387, -0.00574025, -0.0266102, 0.999629, 0.024652, 0.402098, -0.266017)
+transform = Transform3D(0.332409, 0.942749, 0.0270049, -0.943118, 0.332441, 0.00343389, -0.00574025, -0.0266103, 0.999629, 0.0246506, 0.402098, -0.266019)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08019e-06, 3.32437e-06, 0.104993)
-body_offset = Transform3D(1, 1.9664e-07, -1.93249e-07, -1.64844e-07, 1.67638e-08, -1, -7.75326e-08, 1, 1.28523e-07, -9.05991e-06, 0.104993, -3.33786e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.07755e-06, 4.75018e-06, 0.104995)
+body_offset = Transform3D(1, 1.06927e-07, -1.68104e-07, -1.69501e-07, 5.58794e-09, -1, -7.73871e-08, 1, 1.73226e-07, -9.05991e-06, 0.104995, -4.76837e-06)
 bone_name = "Bicep L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -481,10 +787,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_heabr")
 
 [node name="Physical Bone Forearm L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.310045, 0.950501, -0.0204747, -0.950719, 0.309921, -0.00905994, -0.00226596, 0.0222747, 0.999749, 0.0236244, 0.402533, -0.459175)
+transform = Transform3D(0.310045, 0.950501, -0.0204745, -0.950719, 0.309921, -0.00905988, -0.00226595, 0.0222745, 0.999749, 0.0236218, 0.402532, -0.459179)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76079e-06, 2.12359e-06, 0.0881996)
-body_offset = Transform3D(1, 1.32855e-07, 8.59145e-08, 1.18278e-07, 1.63913e-07, -1, -4.84906e-08, 1, 2.51457e-07, -4.76837e-06, 0.0881996, -2.14577e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75892e-06, 4.97097e-06, 0.0882034)
+body_offset = Transform3D(1, 1.33859e-07, 1.07102e-07, 1.11759e-07, 2.66358e-07, -1, -4.82796e-08, 1, 4.06057e-07, -4.76837e-06, 0.0882034, -5.00679e-06)
 bone_name = "Forearm L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -495,10 +801,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_cm0q1")
 
 [node name="Physical Bone Wrist L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.962127, -0.201825, -0.183243, 0.228434, 0.963739, 0.137936, 0.14876, -0.17457, 0.973343, 0.0316815, 0.398626, -0.580536)
+transform = Transform3D(0.962127, -0.201825, -0.183243, 0.228433, 0.963739, 0.137936, 0.14876, -0.174571, 0.973343, 0.031682, 0.398625, -0.580537)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65152e-07, 2.04381e-07, 0.0340929)
-body_offset = Transform3D(1, -7.07805e-08, -3.42727e-07, -2.98023e-07, 8.64267e-07, -1, 1.30385e-08, 1, 9.98378e-07, 4.76837e-07, 0.0340929, -2.38419e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.07127e-07, 6.71056e-07, 0.0340938)
+body_offset = Transform3D(1, -7.82311e-08, -2.38419e-07, -2.68221e-07, 1.16229e-06, -1, 6.70552e-08, 1, 1.2964e-06, 7.15256e-07, 0.0340939, -7.15256e-07)
 bone_name = "Wrist L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -509,10 +815,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_6b6bw")
 
 [node name="Physical Bone Shoulders Middle" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0140024, 0.99918, -0.0379782, -0.00728313, -0.037879, -0.999256, -0.999875, 0.0142686, 0.00674677, -0.0245576, 0.422431, 0.00123787)
+transform = Transform3D(0.0140025, 0.99918, -0.0379782, -0.00728315, -0.0378789, -0.999256, -0.999875, 0.0142687, 0.00674678, -0.0245538, 0.422429, 0.00123787)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38852e-10, 5.45677e-09, 0.0641167)
-body_offset = Transform3D(1, -1.56462e-07, 3.72529e-09, -8.84756e-09, -5.28235e-09, -1, 1.62981e-07, 1, -8.51069e-08, 0, 0.0641167, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.87204e-11, -3.81092e-06, 0.0641157)
+body_offset = Transform3D(1, -2.22586e-07, -1.39698e-09, -2.04891e-08, -2.01544e-09, -1, 2.33762e-07, 1, -5.8877e-08, 0, 0.0641158, 3.8147e-06)
 bone_name = "Shoulders Middle"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -523,10 +829,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dscj8")
 
 [node name="Physical Bone Neck" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0129748, 0.961016, -0.276187, 0.0186816, -0.276395, -0.960863, -0.999741, 0.00730739, -0.0215395, -0.0074625, 0.53756, 0.0019598)
+transform = Transform3D(0.0129748, 0.961016, -0.276187, 0.0186816, -0.276395, -0.960863, -0.999741, 0.00730739, -0.0215395, -0.0074625, 0.53756, 0.00195599)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09664e-05, 1.33631e-05, 0.053124)
-body_offset = Transform3D(1, 9.31323e-09, 1.67638e-08, 7.45058e-09, -1.07655e-07, -1, 1.39698e-09, 1, -2.20331e-07, -1.09673e-05, 0.053124, -1.33514e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.15137e-06, 1.336e-05, 0.0531239)
+body_offset = Transform3D(1, 1.58325e-08, 2.23517e-08, 1.49012e-08, -7.78819e-08, -1, -4.65661e-10, 1, -1.6077e-07, -7.15256e-06, 0.053124, -1.33514e-05)
 bone_name = "Neck"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -537,10 +843,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_jwbhx")
 
 [node name="Physical Bone Shoulder R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-0.975939, -0.0749722, -0.204748, -0.0498315, 0.990867, -0.1253, 0.212272, -0.112082, -0.970762, -0.00610113, 0.371146, 0.104651)
+transform = Transform3D(-0.975939, -0.0749723, -0.204748, -0.0498316, 0.990867, -0.1253, 0.212272, -0.112082, -0.970762, -0.00610113, 0.371147, 0.104651)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -2.25495e-07, 0.102031)
-body_offset = Transform3D(1, -5.96046e-08, 0, 2.98023e-08, -8.9407e-08, -1, 1.11759e-08, 1, -1.2666e-07, -9.53674e-07, 0.102031, 2.38419e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.61276e-07, -1.41455e-06, 0.102031)
+body_offset = Transform3D(1, 1.11759e-08, -7.45058e-08, -1.19209e-07, -8.9407e-08, -1, -1.67638e-08, 1, -1.56462e-07, -9.53674e-07, 0.102031, 1.43051e-06)
 bone_name = "Shoulder R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -551,10 +857,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ynnwn")
 
 [node name="Physical Bone Bicep R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-0.292208, 0.955231, -0.0463386, 0.956148, 0.29281, 0.00661644, 0.0198886, -0.0423732, -0.998904, 0.0200608, 0.38318, 0.317367)
+transform = Transform3D(-0.292208, 0.955232, -0.0463386, 0.956148, 0.292809, 0.00661653, 0.0198887, -0.0423731, -0.998904, 0.0200632, 0.383176, 0.317367)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3474e-06, -1.67189e-06, 0.113801)
-body_offset = Transform3D(1, -7.95582e-07, 8.3819e-08, 1.41561e-07, 3.35276e-08, -1, 7.81612e-07, 1, 2.6077e-08, 3.33786e-06, 0.113801, 1.66893e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.32898e-07, -2.86908e-06, 0.113801)
+body_offset = Transform3D(1, -1.09262e-06, 1.82539e-07, 2.40281e-07, 5.21541e-08, -1, 1.04634e-06, 1, 7.07805e-08, -9.53674e-07, 0.113801, 2.86102e-06)
 bone_name = "Bicep R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -567,8 +873,8 @@ shape = SubResource("CapsuleShape3D_p17ap")
 [node name="Physical Bone Forearm R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
 transform = Transform3D(-0.281853, 0.958357, -0.0459414, 0.956063, 0.276509, -0.0973989, -0.0806397, -0.071375, -0.994185, 0.0289235, 0.390032, 0.508729)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33762e-07, -2.73559e-08, 0.0781202)
-body_offset = Transform3D(1, 1.39698e-09, 5.96046e-08, 1.19209e-07, 3.65078e-07, -1, -4.65661e-09, 1, 3.50177e-07, -2.38419e-07, 0.0781202, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3609e-07, -2.9102e-08, 0.0781202)
+body_offset = Transform3D(1, -8.98726e-08, 2.98023e-08, 1.19209e-07, 3.65078e-07, -1, -1.86265e-09, 1, 3.72529e-07, -2.38419e-07, 0.0781202, 0)
 bone_name = "Forearm R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -579,10 +885,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_merp5")
 
 [node name="Physical Bone Wrist R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-0.97005, -0.175497, -0.167941, -0.225464, 0.907785, 0.353685, 0.0903834, 0.380957, -0.920165, 0.0365794, 0.389066, 0.608705)
+transform = Transform3D(-0.97005, -0.175497, -0.167941, -0.225464, 0.907785, 0.353685, 0.0903834, 0.380956, -0.920165, 0.0365794, 0.389065, 0.608705)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76927e-06, -4.90565e-07, 0.0242443)
-body_offset = Transform3D(1, 4.09782e-08, 3.72529e-08, -5.21541e-08, 2.98023e-07, -1, -2.23517e-08, 1, 5.66244e-07, 4.76837e-06, 0.0242443, 4.76837e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76873e-06, -4.8912e-07, 0.0242443)
+body_offset = Transform3D(1, 1.08033e-07, 1.49012e-08, -2.98023e-08, 1.78814e-07, -1, -2.98023e-08, 1, 5.06639e-07, 4.76837e-06, 0.0242443, 4.76837e-07)
 bone_name = "Wrist R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -593,10 +899,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_41fj2")
 
 [node name="Physical Bone Thigh L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0510823, -0.995707, -0.0771905, 0.0661296, -0.0737495, 0.995082, -0.996503, -0.0559356, 0.0620785, 0.00943899, -0.336107, -0.101538)
+transform = Transform3D(0.0510822, -0.995707, -0.0771907, 0.0661296, -0.0737496, 0.995082, -0.996503, -0.0559356, 0.0620784, 0.00943327, -0.336108, -0.101517)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.06248e-06, -1.81336e-05, 0.229558)
-body_offset = Transform3D(0.999999, -2.98023e-08, -1.11759e-08, -7.45058e-09, 8.33534e-08, -1, 3.35276e-08, 0.999994, 5.98375e-08, -9.05991e-06, 0.229558, 1.81198e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00331e-05, -2.26897e-05, 0.229556)
+body_offset = Transform3D(0.999999, -8.19564e-08, 3.35276e-08, 3.72529e-08, 1.70432e-07, -1, 9.31323e-08, 0.999994, 1.73226e-07, -3.00407e-05, 0.229556, 2.26498e-05)
 bone_name = "Thigh L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -607,10 +913,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_mh8fb")
 
 [node name="Physical Bone Shin L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0113804, -0.994463, 0.104473, 0.0204087, 0.104689, 0.994296, -0.999727, -0.00918333, 0.0214871, 0.00844526, -0.742776, -0.119665)
+transform = Transform3D(0.0113804, -0.994463, 0.104473, 0.0204087, 0.104689, 0.994296, -0.999727, -0.0091833, 0.0214871, 0.00844526, -0.742776, -0.119665)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76126e-05, -8.03746e-07, 0.179281)
-body_offset = Transform3D(0.999999, -4.60073e-07, -1.69501e-07, -1.47149e-07, -4.42087e-08, -1, 8.84756e-08, 0.999995, 1.82343e-06, 1.7643e-05, 0.179281, 4.76837e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76123e-05, -8.03714e-07, 0.179281)
+body_offset = Transform3D(0.999999, -4.97326e-07, -1.71363e-07, -1.6205e-07, -1.04294e-07, -1, 1.14553e-07, 0.999995, 1.82325e-06, 1.7643e-05, 0.179281, 4.76837e-07)
 bone_name = "Shin L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -621,10 +927,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_7lu1v")
 
 [node name="Physical Bone Ankle L" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(2.19046e-06, -0.686324, -0.727296, 2.64841e-07, -0.727296, 0.686324, -1, -1.69598e-06, -1.41135e-06, 0.00563383, -0.936047, -0.123499)
+transform = Transform3D(2.19232e-06, -0.686324, -0.727296, 2.7037e-07, -0.727296, 0.686324, -1, -1.70128e-06, -1.40891e-06, 0.00563383, -0.936047, -0.123503)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39912e-09, 2.18352e-07, 0.0218859)
-body_offset = Transform3D(0.999999, -2.63047e-07, -3.83765e-07, 2.81609e-08, 7.45056e-07, -0.999998, 1.36424e-12, 0.999997, -4.52995e-06, 0, 0.0218859, -1.19209e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8062e-06, 2.177e-07, 0.0218859)
+body_offset = Transform3D(0.999999, -2.77771e-07, -3.88533e-07, 2.81619e-08, 7.74858e-07, -0.999998, 1.81899e-12, 0.999997, -4.50015e-06, 3.8147e-06, 0.0218859, -1.19209e-07)
 bone_name = "Ankle L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -635,10 +941,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_r2s5l")
 
 [node name="Physical Bone Thigh R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0271977, -0.996344, -0.0809843, -0.0734232, -0.0827865, 0.993859, -0.99693, -0.0210846, -0.0754064, 0.00777984, -0.337585, 0.138474)
+transform = Transform3D(0.0271977, -0.996344, -0.0809843, -0.0734233, -0.0827866, 0.993859, -0.99693, -0.0210846, -0.0754065, 0.00778556, -0.337589, 0.138479)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14304e-05, -1.54934e-05, 0.229157)
-body_offset = Transform3D(0.999999, -1.30385e-08, 1.19209e-07, 1.19209e-07, -6.75209e-09, -1, 9.31323e-09, 0.999992, -1.72295e-08, -2.14577e-05, 0.229157, 1.54972e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61868e-05, -1.00287e-05, 0.229161)
+body_offset = Transform3D(0.999998, -1.30385e-08, 1.71363e-07, 1.71363e-07, 4.57512e-08, -1, 9.31323e-09, 0.999992, 6.56582e-08, -2.6226e-05, 0.229161, 1.00136e-05)
 bone_name = "Thigh R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -649,10 +955,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ej4jn")
 
 [node name="Physical Bone Shin R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.0661927, -0.992775, 0.100078, -0.0109617, 0.0995688, 0.99497, -0.997747, -0.0669568, -0.00429177, 0.00802541, -0.747463, 0.156483)
+transform = Transform3D(0.0661928, -0.992775, 0.100078, -0.0109617, 0.0995688, 0.99497, -0.997747, -0.0669569, -0.00429176, 0.00802541, -0.747463, 0.156458)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57633e-05, -1.21868e-05, 0.183046)
-body_offset = Transform3D(0.999999, 1.07288e-06, 2.32831e-09, -8.00937e-08, 1.16415e-10, -1, -5.21541e-07, 0.999993, 2.75453e-06, 3.57628e-05, 0.183046, 1.16825e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00822e-05, -1.38638e-05, 0.183046)
+body_offset = Transform3D(0.999999, 1.11014e-06, 3.25963e-09, -7.82311e-08, 3.0821e-08, -1, -5.51343e-07, 0.999993, 2.79845e-06, 6.00815e-05, 0.183046, 1.33514e-05)
 bone_name = "Shin R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -663,10 +969,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_oiuwt")
 
 [node name="Physical Bone Ankle R" type="PhysicalBone3D" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-3.35389e-06, -0.686328, -0.727292, -6.81705e-07, -0.727292, 0.686328, -1, 2.79767e-06, 1.97139e-06, 0.00671053, -0.945623, 0.157304)
+transform = Transform3D(-3.33899e-06, -0.686328, -0.727292, -6.69129e-07, -0.727292, 0.686328, -1, 2.7783e-06, 1.96918e-06, 0.00671053, -0.945623, 0.157304)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46676e-09, 4.11125e-07, 0.023367)
-body_offset = Transform3D(0.999999, -3.50164e-07, 2.33958e-07, 2.34048e-07, 3.27819e-07, -0.999997, -3.63798e-12, 0.999996, -7.39097e-06, 0, 0.0233669, -2.38419e-07)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43128e-09, 4.11822e-07, 0.023367)
+body_offset = Transform3D(0.999999, -3.56868e-07, 2.3244e-07, 2.34046e-07, 3.27819e-07, -0.999997, -5.91172e-12, 0.999996, -7.42077e-06, 0, 0.0233669, -2.38419e-07)
 bone_name = "Ankle R"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0

@@ -46,7 +46,7 @@ var face_dir: Vector3
 @onready var goblin_anime = $goblin_4/AnimationPlayer
 @onready var bomb_anime = $Bomb2/AnimationPlayer
 
-var boom_effect = preload("res://Particles/big_explosion.tscn")
+var boom_effect = preload("res://Particles/BIGGER BOMB.tscn")
 
 
 func _ready() -> void:
@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 			explode()
 			print("TRYING TO ATTACK")
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 1.8 and not fuse_ticking:
+		if (target.global_transform.origin - global_transform.origin).length() < 8 and not fuse_ticking:
 			fuse()
 			print("FUSE IS TICKING")			
 			
@@ -159,6 +159,7 @@ func damage(amount):
 	print(health_ratio)
 	
 	if health <= 0 and not destroyed:
+		explode()
 		destroy()
 
 func explode():
@@ -172,18 +173,28 @@ func boom():
 	#EXPLOSIVE IMPULSE
 	print("boom went off")
 	var overlapping_bodies = $BombArea.get_overlapping_bodies()
+	var boom = boom_effect.instantiate()
+	get_tree().root.add_child(boom)
+	boom.global_position = $BombArea.global_position
+	
 	if player in overlapping_bodies:
 		print("Player is inside the area!")
 		var impulse_dir = face_dir
 		impulse_dir = 100*(impulse_dir+Vector3(0,2,0))
 		print(impulse_dir)
 		player.trigger_ragdoll(impulse_dir)
-		var boom = boom_effect.instantiate()
-		get_tree().root.add_child(boom)
-		boom.global_position = $BombArea.global_position
-		destroy()
+		
+	for body in overlapping_bodies:
+		if body.has_method("damage") and body != self and body.health > 0:
+			print("DAMAGED OTHER BOY")
+			body.call("damage", 60)
+
+	destroy()
 
 func fuse():
+	speed = 5
 	fuse_ticking = true
 	bomb_anime.play("Fuse")
+	await get_tree().create_timer(5).timeout
+	explode()
 	

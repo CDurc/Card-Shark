@@ -472,15 +472,26 @@ func trigger_ragdoll(impulse: Vector3):
 	#ragcam.global_transform.origin = cam_pos
 	#ragcam.look_at(hip.position)
 	
+	if impulse != Vector3(0,0,0):
+		local_pos = impulse.normalized() * 2.5
+		ragcam.global_position = hip.global_position + local_pos
+		print("LOCAL POS",local_pos)
+		ragcam.look_at(hip.position)
+		
+		hip.apply_central_impulse(impulse)
+		
+		ragcam.make_current()
 	
-	local_pos = impulse.normalized() * 2.5
-	ragcam.global_position = hip.global_position + local_pos
-	print("LOCAL POS",local_pos)
-	ragcam.look_at(hip.position)
-	
-	hip.apply_central_impulse(impulse)
-	
-	ragcam.make_current()
+	else:
+		var back_pos = 2*transform.basis.z
+		local_pos = Vector3(0,1.5,0) + back_pos
+		ragcam.global_position = hip.global_position + local_pos
+		print("LOCAL POS",local_pos)
+		ragcam.look_at(hip.position)
+		
+		hip.apply_central_impulse(impulse)
+		
+		ragcam.make_current()
 
 
 	#SHORTCUT SPELL 2 SPELL2
@@ -492,7 +503,7 @@ func test_2_spell():
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		seeking_card_spell()
+		straightline_card_spell()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -1041,6 +1052,7 @@ func laser(delta):
 
 			# Spawn the splash scene.
 			var splash = splash_path.instantiate()
+			#if tree still exists?
 			get_tree().root.add_child(splash)
 
 			# Position the splash at the hit point.
@@ -1278,7 +1290,11 @@ func damage(amount):
 	health_updated.emit(health) # Update health on HUD
 	
 	if health < 0:
-		get_tree().reload_current_scene() # Reset when out of health
+		trigger_ragdoll(Vector3(0,0,0))
+		$HUD/BUST.visible = true
+		$HUD/Crosshair.visible = false
+		
+		#get_tree().reload_current_scene() # Reset when out of health
 		
 		
 @onready var int_prompt = get_node("HUD/Interact")

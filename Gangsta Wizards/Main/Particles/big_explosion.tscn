@@ -93,6 +93,7 @@ script = ExtResource("1_1rtt1")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 emitting = false
 amount = 30
+lifetime = 0.9
 one_shot = true
 explosiveness = 0.99
 process_material = SubResource("ParticleProcessMaterial_nl0he")

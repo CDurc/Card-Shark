@@ -29,6 +29,7 @@ GameState="*res://Card Shark Campaign/Scripts/gamestate.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 
 [editor]
 
@@ -38,6 +39,7 @@ movie_writer/movie_file="D:/Godot/test.avi"
 [global_group]
 
 Player="List of players"
+Enemies=""
 
 [input]
 
