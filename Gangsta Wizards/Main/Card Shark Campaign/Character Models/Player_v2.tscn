@@ -1,14 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3vo81ssgfsj6"]
+[gd_scene load_steps=14 format=3 uid="uid://c3vo81ssgfsj6"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
-[ext_resource type="PackedScene" uid="uid://oc0e8dppj7kq" path="res://Card Shark/the_card_shark_v_2.tscn" id="3_wp2nx"]
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="4_kg30k"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_rfl7a"]
 [ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="6_ikpl2"]
-[ext_resource type="PackedScene" uid="uid://b0v3sd2xgeikt" path="res://Card Shark/the_card_shark_v5.tscn" id="7_6eqaa"]
 [ext_resource type="Script" path="res://objects/in_range.gd" id="8_p0iay"]
-[ext_resource type="PackedScene" uid="uid://bnb6nok81e08p" path="res://Card Shark Campaign/Character Models/TheCardShark.glb" id="9_tt4m1"]
 [ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="10_dggtj"]
 [ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="11_5uwfn"]
 [ext_resource type="PackedScene" uid="uid://be8aktxpp8odf" path="res://Card Shark Campaign/TheCardSharkCURRENT.tscn" id="12_17kw0"]
@@ -106,10 +103,6 @@ collide_with_areas = true
 
 [node name="Camera_origin" type="Marker3D" parent="Head"]
 
-[node name="TheCardShark_v3" parent="Head" instance=ExtResource("3_wp2nx")]
-transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, -0.234754, 0.0942593)
-visible = false
-
 [node name="Shadow" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
 size = Vector3(1, 2, 1)
@@ -169,10 +162,6 @@ exclude_parent = false
 target_position = Vector3(0, 0, -10)
 collide_with_areas = true
 
-[node name="TheCardSharkv4" parent="." instance=ExtResource("7_6eqaa")]
-transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.765192, 0.0776601)
-visible = false
-
 [node name="CharacterCenter" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201488, 0.909521, 0.121035)
 
@@ -185,119 +174,166 @@ script = ExtResource("8_p0iay")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623286, 0)
 shape = SubResource("CylinderShape3D_5ilxy")
 
-[node name="TheCardShark" parent="." instance=ExtResource("9_tt4m1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0136412, 0.883949, 0.113215)
-visible = false
-
-[node name="Skeleton3D" parent="TheCardShark/SharkBones" index="0"]
-bones/0/position = Vector3(0.223601, -0.948659, 0.00908539)
-bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
-bones/1/rotation = Quaternion(0.621884, 0.0032591, -0.00403933, 0.783092)
-bones/1/scale = Vector3(1, 1, 1)
-bones/2/rotation = Quaternion(0.344193, 0.00746092, -0.00267812, 0.938865)
-bones/2/scale = Vector3(1, 1, 1)
-bones/3/rotation = Quaternion(-0.396043, -0.0217878, -0.0207304, 0.917739)
-bones/3/scale = Vector3(1, 1, 1)
-bones/4/scale = Vector3(1, 1, 1)
-bones/5/rotation = Quaternion(0.112753, 0.352577, -0.231437, 0.899674)
-bones/6/rotation = Quaternion(0.697869, 0.00844452, -0.0487762, 0.714513)
-bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(-0.130898, -0.802261, -0.385358, 0.43674)
-bones/7/scale = Vector3(1, 1, 1)
-bones/8/rotation = Quaternion(0.00903994, 0.0885102, -0.823326, 0.560552)
-bones/9/rotation = Quaternion(0.188416, 0.00287032, 0.026032, 0.98174)
-bones/9/scale = Vector3(1, 1, 1)
-bones/10/rotation = Quaternion(0.188338, 0.00202536, 0.0118595, 0.982031)
-bones/11/rotation = Quaternion(0.029338, 0.00330766, -0.0041813, 0.999555)
-bones/12/rotation = Quaternion(-0.359279, 0.490751, 0.614058, 0.503006)
-bones/12/scale = Vector3(1, 1, 1)
-bones/13/rotation = Quaternion(0.383268, -0.631512, 0.363492, 0.567602)
-bones/14/rotation = Quaternion(0.175022, -0.00291314, -0.622852, 0.762505)
-bones/15/rotation = Quaternion(-0.098141, 0.783867, -0.372264, -0.487176)
-bones/16/rotation = Quaternion(-0.110415, -0.447365, 0.0803994, 0.88386)
-bones/16/scale = Vector3(1, 1, 1)
-bones/17/rotation = Quaternion(0.996038, 0.0339603, 0.0302606, -0.0764187)
-bones/17/scale = Vector3(1, 1, 1.00002)
-bones/18/rotation = Quaternion(0.0901495, -0.0195406, 0.0231849, 0.995467)
-bones/18/scale = Vector3(1, 1, 1)
-bones/19/rotation = Quaternion(-0.443558, -0.00919748, 0.00747234, 0.896167)
-bones/19/scale = Vector3(1, 1, 1)
-bones/21/rotation = Quaternion(0.996736, -0.0333104, 0.0079511, -0.0731037)
-bones/21/scale = Vector3(1, 1, 1.00002)
-bones/22/rotation = Quaternion(0.0920603, 0.0192056, -0.0314157, 0.995072)
-bones/22/scale = Vector3(1, 1, 1)
-bones/23/rotation = Quaternion(-0.441202, -0.0296084, -0.0168992, 0.89676)
-bones/23/scale = Vector3(1, 1, 1)
-bones/24/rotation = Quaternion(-0.283468, -0.508323, 0.123095, 0.803804)
-bones/24/scale = Vector3(1, 1, 1)
-bones/25/position = Vector3(0.17795, -0.0349873, 1.50379)
-bones/25/rotation = Quaternion(-0.04063, 0.141904, -0.767195, -0.624199)
-bones/26/position = Vector3(0.132583, 0.233887, 0.0276333)
-bones/26/rotation = Quaternion(0.929327, -2.538e-07, 4.28568e-07, -0.369258)
-bones/27/position = Vector3(0.31809, 0.253538, 1.28411)
-bones/27/rotation = Quaternion(-0.0288847, -0.38691, 0.0686158, 0.919107)
-bones/28/rotation = Quaternion(0.999964, 2.78194e-08, 3.72225e-07, -0.0085214)
-bones/29/position = Vector3(-0.148218, 0.233887, 0.0190731)
-bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
-bones/29/scale = Vector3(1, 1, 1)
-bones/30/position = Vector3(-0.281557, 0.362897, 1.28689)
-bones/30/rotation = Quaternion(-2.29353e-06, -2.55513e-07, 5.8531e-13, 1)
-bones/31/rotation = Quaternion(0.999964, -3.77333e-09, 4.42739e-07, -0.0085224)
-bones/32/position = Vector3(-0.186731, -0.0423403, 1.4896)
-bones/32/rotation = Quaternion(-0.880131, 0.206192, 0.226286, -0.362834)
-bones/32/scale = Vector3(1, 1, 1)
-
 [node name="TheCardShark2" parent="." instance=ExtResource("12_17kw0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.864053, 0.0929689)
 
 [node name="Skeleton3D" parent="TheCardShark2/SharkBones" index="0"]
-bones/5/rotation = Quaternion(0.112753, 0.352577, -0.231437, 0.899674)
-bones/6/rotation = Quaternion(0.697869, 0.00844452, -0.0487762, 0.714513)
-bones/7/rotation = Quaternion(-0.130898, -0.802261, -0.385358, 0.43674)
-bones/9/rotation = Quaternion(0.188416, 0.00287019, 0.026032, 0.98174)
-bones/13/rotation = Quaternion(0.383268, -0.631512, 0.363492, 0.567602)
-bones/14/rotation = Quaternion(0.175022, -0.00291314, -0.622853, 0.762505)
-bones/15/rotation = Quaternion(-0.098141, 0.783867, -0.372264, -0.487176)
-bones/17/rotation = Quaternion(0.996038, 0.0339603, 0.0302606, -0.0764188)
+bones/1/rotation = Quaternion(0.621884, 0.00325908, -0.00403932, 0.783092)
+bones/2/rotation = Quaternion(0.344193, 0.00746093, -0.00267812, 0.938865)
+bones/4/rotation = Quaternion(-0.260978, -0.556374, -0.580419, 0.534278)
+bones/4/scale = Vector3(0.999999, 1, 1)
+bones/5/rotation = Quaternion(-0.201757, 0.584722, 0.0694765, 0.782667)
+bones/5/scale = Vector3(0.999999, 1, 1)
+bones/6/rotation = Quaternion(0.0244884, 0.0118141, -0.00171157, 0.999629)
+bones/7/rotation = Quaternion(-0.0236079, -0.6693, -0.107899, 0.734736)
+bones/8/rotation = Quaternion(0.0842306, 0.064716, 0.111388, 0.988084)
+bones/9/rotation = Quaternion(0.188416, 0.00287021, 0.026032, 0.98174)
+bones/10/rotation = Quaternion(0.120798, 0.00256176, 0.0127377, 0.992592)
+bones/11/rotation = Quaternion(-0.110252, 0.00572356, -0.00367141, 0.99388)
+bones/11/scale = Vector3(0.999999, 1, 0.999999)
+bones/15/scale = Vector3(1, 1, 0.999999)
+bones/16/rotation = Quaternion(0.267703, -0.05212, -0.0820636, 0.958585)
+bones/17/rotation = Quaternion(0.996046, 0.0340122, 0.0299258, -0.076418)
 bones/17/scale = Vector3(1, 1, 1.00001)
-bones/18/rotation = Quaternion(0.0901495, -0.0195406, 0.0231849, 0.995467)
-bones/18/scale = Vector3(1, 1, 1)
-bones/19/rotation = Quaternion(-0.443558, -0.00919748, 0.00747234, 0.896168)
-bones/21/rotation = Quaternion(0.996736, -0.0333104, 0.00795111, -0.0731037)
+bones/18/rotation = Quaternion(0.0901395, -0.0195407, 0.0231824, 0.995468)
+bones/19/rotation = Quaternion(-0.443543, -0.0088803, 0.00759276, 0.896177)
+bones/21/rotation = Quaternion(0.996743, -0.033227, 0.00742374, -0.073109)
 bones/21/scale = Vector3(1, 1, 1.00001)
-bones/22/rotation = Quaternion(0.0920603, 0.0192056, -0.0314157, 0.995072)
+bones/22/rotation = Quaternion(0.0920538, 0.0192056, -0.0314135, 0.995073)
 bones/22/scale = Vector3(1, 1, 0.999999)
-bones/23/rotation = Quaternion(-0.441202, -0.0296084, -0.0168992, 0.89676)
-bones/25/position = Vector3(0.17795, -0.0349873, 1.50379)
+bones/23/rotation = Quaternion(-0.441223, -0.0291097, -0.0167149, 0.896769)
+bones/25/position = Vector3(0.568253, 0.193446, 1.35202)
 bones/25/rotation = Quaternion(-0.123978, -0.0245061, -0.692477, 0.710285)
-bones/26/rotation = Quaternion(0.929327, -2.538e-07, 4.28568e-07, -0.369258)
-bones/27/position = Vector3(0.31809, 0.253538, 1.28411)
+bones/25/scale = Vector3(1, 1, 0.999999)
+bones/26/position = Vector3(0.132583, 0.233888, 0.0276333)
+bones/26/scale = Vector3(1, 1, 0.999999)
+bones/27/position = Vector3(0.412811, 0.355831, 1.33688)
 bones/27/rotation = Quaternion(0, -7.94095e-23, -8.8818e-16, 1)
 bones/28/rotation = Quaternion(0.999964, 2.78194e-08, 3.72225e-07, -0.00852141)
+bones/29/position = Vector3(-0.148218, 0.233887, 0.0190731)
 bones/29/rotation = Quaternion(0.929327, -9.97333e-08, 4.08228e-08, -0.369257)
-bones/30/position = Vector3(-0.207693, 0.312132, 1.29718)
+bones/30/position = Vector3(-0.411779, 0.355831, 1.32976)
+bones/30/rotation = Quaternion(-2.29353e-06, -4.4664e-07, 1.02319e-12, 1)
 bones/31/rotation = Quaternion(0.999964, -3.77334e-09, 4.42739e-07, -0.00852241)
-bones/32/position = Vector3(-0.186731, -0.0423403, 1.4896)
-bones/32/rotation = Quaternion(-0.880131, 0.206192, 0.226286, -0.362834)
 
 [node name="LeftHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="1"]
-transform = Transform3D(-0.902428, 0.419966, 0.0961924, 0.0885915, -0.0376179, 0.995358, 0.421635, 0.90676, -0.00325821, 0.270919, 0.543757, -0.102768)
+transform = Transform3D(0.99455, -0.0617039, -0.08403, 0.0838178, -0.00603519, 0.996462, -0.0619936, -0.998076, -0.000830293, 0.0379291, 0.393924, -0.613721)
 
 [node name="Rifle" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="0" instance=ExtResource("10_dggtj")]
 transform = Transform3D(0.448846, 0.768118, 0.456651, 0.704188, -0.618637, 0.348437, 0.550142, 0.165174, -0.818572, -0.00521445, -0.121753, 0.0968415)
 visible = false
 
 [node name="SharkGun2" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="1" instance=ExtResource("6_ikpl2")]
-transform = Transform3D(-0.329311, 0.0161407, -0.7289, -0.729062, -0.012702, 0.329102, -0.00493271, 0.799737, 0.019938, -0.012686, -0.0137825, 0.0431162)
+transform = Transform3D(0.796856, -0.0582603, 0.0403663, 0.052139, 0.173204, -0.779284, 0.0480127, 0.77885, 0.17632, 0.0315902, -0.0176607, 0.0456916)
 
 [node name="RightHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="2"]
-transform = Transform3D(0.427017, 0.902283, 0.0595152, -0.415097, 0.254072, -0.873581, -0.803338, 0.348328, 0.483028, 0.297557, 0.576449, 0.205453)
+transform = Transform3D(0.427017, 0.902283, 0.0595149, -0.415097, 0.254072, -0.87358, -0.803338, 0.348328, 0.483027, 0.297557, 0.576449, 0.205453)
 
 [node name="Card" parent="TheCardShark2/SharkBones/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("11_5uwfn")]
-transform = Transform3D(-0.0844858, -0.0362014, -0.0393903, 0.0288627, 0.0311508, -0.0905349, 0.0450453, -0.0878583, -0.0158693, 0.0186968, -0.0100082, -0.0336341)
+transform = Transform3D(-0.0185427, -0.0392659, -0.0900797, 0.00181571, 0.0915168, -0.0402662, 0.0982489, -0.00910207, -0.0162567, -0.00687259, 0.0280638, -0.0368331)
+
+[node name="Physical Bone Hips" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
+transform = Transform3D(0.00227279, 0.974011, 0.226488, -0.0101283, 0.226499, -0.973959, -0.999946, -8.03349e-05, 0.0103799, -0.016269, -0.121348, 0.0221119)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57992e-07, 4.70097e-07, 0.0684608)
+body_offset = Transform3D(1, -6.28643e-09, -3.20724e-08, -3.17232e-08, -1.19209e-07, -1, 5.12227e-09, 1, -1.19209e-07, 1.60187e-07, 0.0684608, -4.61936e-07)
+
+[node name="Physical Bone Stomach" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
+transform = Transform3D(-0.013193, 0.889539, -0.456669, -0.0136133, -0.456826, -0.889452, -0.99982, -0.00551774, 0.0181365, 0.0129577, 0.0324433, 0.0196251)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.47331e-10, 1.13371e-07, 0.0979487)
+body_offset = Transform3D(1, -1.86265e-09, -5.58794e-09, -3.72529e-09, 2.98023e-08, -1, 9.31323e-10, 1, 5.96046e-08, 0, 0.0979487, -1.19209e-07)
+
+[node name="Physical Bone Chest" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="2"]
+transform = Transform3D(0.0275154, 0.942335, 0.333539, -0.0578527, 0.334607, -0.94058, -0.997946, 0.00658438, 0.0637234, 0.0153476, 0.238963, 0.00975948)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64405e-08, 2.55561e-08, 0.126942)
+body_offset = Transform3D(1, 5.40167e-08, 4.65661e-08, 6.33299e-08, 2.38419e-07, -1, -5.02914e-08, 1, 2.68221e-07, -2.23517e-08, 0.126942, -5.96046e-08)
+
+[node name="Physical Bone Shoulder L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="3"]
+transform = Transform3D(0.947661, -0.0858871, -0.307508, 0.00703257, 0.96852, -0.248835, 0.3192, 0.233649, 0.918433, 0.000250734, 0.380407, -0.0796965)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27311e-08, 4.09243e-08, 0.088593)
+body_offset = Transform3D(1, 9.68575e-08, -5.96046e-08, -2.08616e-07, -4.80562e-07, -1, -2.23517e-08, 1, -4.61936e-07, -7.45058e-09, 0.088593, 0)
+
+[node name="Physical Bone Bicep L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
+transform = Transform3D(0.33241, 0.942748, 0.0270055, -0.943117, 0.332442, 0.00343378, -0.00574058, -0.0266108, 0.999629, 0.0246586, 0.402091, -0.26603)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16387e-07, -3.15675e-07, 0.105006)
+body_offset = Transform3D(1, -2.98023e-07, 1.93715e-07, -1.22935e-07, 6.51926e-08, -1, 8.9407e-07, 1, 7.35745e-07, 5.96046e-07, 0.105006, 2.38419e-07)
+
+[node name="Physical Bone Forearm L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
+transform = Transform3D(0.310045, 0.950501, -0.0204743, -0.950719, 0.309921, -0.00906008, -0.0022662, 0.0222744, 0.999749, 0.023628, 0.40253, -0.459174)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23292e-07, 3.01278e-07, 0.0881991)
+body_offset = Transform3D(1, 5.96046e-07, 3.89293e-07, 1.18278e-07, 3.1665e-08, -1, -2.98023e-08, 1, 6.38887e-07, -3.57628e-07, 0.0881991, -3.57628e-07)
+
+[node name="Physical Bone Wrist L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="6"]
+transform = Transform3D(0.962127, -0.201826, -0.183242, 0.228434, 0.963738, 0.137935, 0.148759, -0.17457, 0.973343, 0.0316819, 0.398628, -0.580537)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96143e-07, -1.32845e-06, 0.0340935)
+body_offset = Transform3D(1, -1.10269e-06, 5.66244e-07, 2.83122e-07, 3.8743e-07, -1, 3.57628e-07, 1, 5.02914e-07, 4.76837e-07, 0.0340935, 1.3113e-06)
+
+[node name="Physical Bone Shoulders Middle" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
+transform = Transform3D(0.0140022, 0.99918, -0.0379776, -0.00728316, -0.0378784, -0.999256, -0.999875, 0.0142684, 0.00674682, -0.0245569, 0.422442, 0.00123763)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19523e-08, 1.8156e-08, 0.0641279)
+body_offset = Transform3D(1, -4.09782e-08, -1.21072e-08, -8.44011e-09, -2.38419e-07, -1, 4.37722e-08, 1, -2.83122e-07, -1.11759e-08, 0.0641279, 0)
+
+[node name="Physical Bone Neck" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
+transform = Transform3D(0.0129747, 0.961016, -0.276187, 0.0186817, -0.276395, -0.960862, -0.999741, 0.00730725, -0.0215396, -0.0074494, 0.537559, 0.00194933)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00912e-09, 2.43728e-07, 0.053126)
+body_offset = Transform3D(1, 6.51926e-09, 2.93367e-08, 3.05008e-08, -1.16229e-06, -1, -1.86265e-09, 1, -1.2219e-06, 7.45058e-09, 0.053126, -1.78814e-07)
+
+[node name="Physical Bone Shoulder R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
+transform = Transform3D(-0.975939, -0.0749739, -0.204746, -0.0498334, 0.990867, -0.1253, 0.212271, -0.112082, -0.970762, -0.00610247, 0.371148, 0.104648)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11346e-07, -2.48914e-06, 0.102027)
+body_offset = Transform3D(1, 3.94881e-07, -6.10948e-07, -6.4075e-07, -7.45058e-08, -1, -4.32134e-07, 1, -1.39698e-07, -1.49012e-07, 0.102027, 2.5034e-06)
+
+[node name="Physical Bone Bicep R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
+transform = Transform3D(-0.0288859, 0.251491, -0.967429, 0.980564, -0.18077, -0.0762708, -0.194064, -0.950828, -0.241381, 0.12489, 0.392608, 0.231163)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55629e-06, -7.82601e-08, 0.11381)
+body_offset = Transform3D(1, -3.88362e-07, -5.7742e-08, 7.26432e-08, 7.45058e-08, -1, 3.69269e-07, 1, 1.63913e-07, -1.54972e-06, 0.11381, 5.96046e-08)
+
+[node name="Physical Bone Forearm R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
+transform = Transform3D(-0.980092, -0.0122003, -0.19817, 0.185822, -0.407917, -0.893909, -0.0699311, -0.912938, 0.402063, 0.250476, 0.471122, 0.227225)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.49562e-08, -1.73085e-07, 0.0781195)
+body_offset = Transform3D(1, -5.21541e-08, 6.4075e-07, 5.36442e-07, -2.00234e-08, -1, 1.10827e-07, 1, -7.33417e-08, 1.49012e-08, 0.0781195, 1.78814e-07)
+
+[node name="Physical Bone Wrist R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="12"]
+transform = Transform3D(0.527161, 0.545368, -0.651671, -0.248694, -0.634291, -0.732001, -0.812559, 0.547949, -0.198743, 0.281757, 0.558702, 0.200634)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60518e-07, 4.32761e-07, 0.0242448)
+body_offset = Transform3D(1, -1.78814e-07, 1.19209e-07, 2.98023e-08, 1.81794e-06, -1, 5.96046e-08, 1, 1.81794e-06, 3.57628e-07, 0.0242448, -4.76837e-07)
+
+[node name="Physical Bone Thigh L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
+transform = Transform3D(0.0510827, -0.995707, -0.0771903, 0.0661298, -0.0737492, 0.995082, -0.996503, -0.0559361, 0.0620786, 0.00945759, -0.336103, -0.101546)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.77228e-09, -2.03862e-07, 0.229556)
+body_offset = Transform3D(1, 3.1665e-07, 2.51457e-08, 5.3551e-08, 1.63913e-07, -1, -3.01749e-07, 0.99999, 1.41561e-07, 0, 0.229556, 1.71363e-07)
+
+[node name="Physical Bone Shin L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
+transform = Transform3D(0.0113802, -0.994463, 0.104472, 0.0204086, 0.104688, 0.994296, -0.999727, -0.00918316, 0.021487, 0.00844572, -0.742775, -0.119647)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1704e-07, -8.01483e-07, 0.17928)
+body_offset = Transform3D(1, -8.8755e-07, 1.32248e-07, -1.29221e-08, -7.45058e-08, -0.999999, 4.28408e-08, 0.99999, 3.39001e-06, -6.4075e-07, 0.17928, 1.93715e-07)
+
+[node name="Physical Bone Ankle L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="15"]
+transform = Transform3D(1.8943e-06, -0.686324, -0.727296, 2.71365e-07, -0.727296, 0.686324, -1, -1.49747e-06, -1.19147e-06, 0.00563458, -0.936046, -0.123499)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28725e-07, 1.09783e-06, 0.0218861)
+body_offset = Transform3D(1, -8.31753e-07, -7.21907e-07, 2.81553e-08, 3.33786e-06, -0.999995, 0, 0.999994, -6.58631e-06, -3.12924e-07, 0.021886, -9.53674e-07)
+
+[node name="Physical Bone Thigh R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="16"]
+transform = Transform3D(0.0271977, -0.996344, -0.0809843, -0.0734233, -0.0827866, 0.993859, -0.99693, -0.0210846, -0.0754064, 0.0077963, -0.337586, 0.138453)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.76918e-08, -5.71174e-08, 0.229158)
+body_offset = Transform3D(1, -2.04891e-08, 1.8673e-07, 1.78814e-07, 5.06639e-07, -1, 2.6077e-08, 0.99999, 4.76837e-07, 1.49012e-08, 0.229158, -5.21541e-08)
+
+[node name="Physical Bone Shin R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="17"]
+transform = Transform3D(0.0661922, -0.992775, 0.100079, -0.0109616, 0.0995694, 0.99497, -0.997747, -0.0669563, -0.00429167, 0.00803486, -0.747463, 0.156519)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84478e-07, -6.10984e-07, 0.183045)
+body_offset = Transform3D(1, 7.07805e-07, -1.46683e-07, 3.44589e-08, -2.01166e-07, -1, 1.78814e-07, 0.999991, 3.33786e-06, -3.57628e-07, 0.183045, 0)
+
+[node name="Physical Bone Ankle R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="18"]
+transform = Transform3D(-3.36881e-06, -0.686328, -0.727292, -3.7624e-07, -0.727292, 0.686328, -1, 2.58575e-06, 2.19189e-06, 0.00671013, -0.945623, 0.157304)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0093e-07, 1.64072e-07, 0.023367)
+body_offset = Transform3D(1, -2.16477e-07, 2.46341e-08, 2.34046e-07, 1.37091e-06, -0.999996, 1.06866e-11, 0.999995, -7.6592e-06, 7.00355e-07, 0.0233669, 1.49012e-08)
+
+[node name="FollowHip" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0162686, 0.220121, 0.022112)
+
+[node name="ragcam" type="Camera3D" parent="."]
+transform = Transform3D(0.00480386, 0.455892, -0.890022, 0.00920166, 0.889975, 0.455917, 0.999946, -0.0103798, 8.03502e-05, -39.4906, 0.502943, 0.0440815)
 
 [connection signal="body_entered" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_entered"]
 [connection signal="body_exited" from="Ranges/Spell Range" to="Ranges/Spell Range" method="_on_body_exited"]
 
-[editable path="TheCardShark"]
 [editable path="TheCardShark2"]

@@ -28,9 +28,9 @@ func get_nearest_enemy():
 	var nearest_distance = INF
 
 	for enemy in enemy_list:
-		if not is_instance_valid(enemy):
+		if not is_instance_valid(enemy): #redundant?  added a second check because a crash was caused once
 			continue
-		var distance = rb.global_position.distance_to(enemy.global_position)
+		var distance = rb.global_position.distance_to(enemy.global_position) if is_instance_valid(enemy) else null
 		if distance < nearest_distance:
 			nearest_distance = distance
 			nearest_enemy = enemy

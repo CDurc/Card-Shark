@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://dt7qm6p21wn5b"]
+
+[ext_resource type="PackedScene" uid="uid://b2spem0apb2t6" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_4_ANIMES.tscn" id="1_bryd7"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART BOMBER.gd" id="1_t7615"]
+[ext_resource type="PackedScene" uid="uid://cciphle8lxqba" path="res://Card Shark Campaign/Weapons/Bomb.glb" id="2_0f7d4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qk4cd"]
+radius = 0.284015
+height = 2.16547
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_thk17"]
+radius = 0.35
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i8fwk"]
+radius = 2.0
+
+[node name="Goblin Enemy" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+collision_layer = 3
+script = ExtResource("1_t7615")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.160202, -0.0723298)
+shape = SubResource("CapsuleShape3D_qk4cd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.355385, -0.583733)
+shape = SubResource("SphereShape3D_thk17")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="goblin_4" parent="." instance=ExtResource("1_bryd7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="goblin_4/TAMU Bones" index="0"]
+bones/1/rotation = Quaternion(0.621884, 0.00325888, -0.0040395, 0.783092)
+bones/2/rotation = Quaternion(0.344193, 0.00746123, -0.00267817, 0.938865)
+bones/2/scale = Vector3(1, 1, 0.999999)
+bones/4/scale = Vector3(1, 1, 0.999999)
+bones/5/scale = Vector3(1, 0.999999, 1)
+bones/8/rotation = Quaternion(0.0604242, 0.0641517, 0.00951138, 0.996064)
+bones/9/rotation = Quaternion(-0.000454629, -0.115105, -0.161259, 0.980177)
+bones/10/rotation = Quaternion(-0.00243473, 0.0438394, 0.0854581, 0.995374)
+bones/11/rotation = Quaternion(-0.0176587, -0.00446019, 0.0272212, 0.999463)
+bones/12/rotation = Quaternion(-0.00988525, -0.0961355, -0.0472073, 0.994199)
+bones/13/scale = Vector3(1, 1, 0.999999)
+bones/16/rotation = Quaternion(-0.00720167, 0.00786076, 0.0272227, 0.999573)
+bones/17/rotation = Quaternion(-0.0229398, -0.00381811, -0.00962523, 0.999683)
+bones/18/rotation = Quaternion(0.0210261, -0.108073, 0.167726, 0.979666)
+bones/19/rotation = Quaternion(0.0273094, 0.00416717, -0.105224, 0.994065)
+bones/20/rotation = Quaternion(-0.0715519, -0.0185472, -0.00242567, 0.997261)
+bones/21/rotation = Quaternion(-0.0553827, -0.0918379, -0.253551, 0.961359)
+bones/22/rotation = Quaternion(-0.00403247, 0.0305421, -0.0356182, 0.998891)
+bones/23/rotation = Quaternion(0.188416, 0.00287065, 0.0260321, 0.98174)
+bones/25/scale = Vector3(0.999999, 1, 1)
+bones/27/rotation = Quaternion(-0.0603249, 0.025706, -0.225499, 0.972034)
+bones/28/rotation = Quaternion(0.80206, -0.135879, -0.571576, 0.107408)
+bones/31/rotation = Quaternion(0.0856718, 0.0205668, 0.244933, 0.965528)
+bones/32/rotation = Quaternion(-0.0697367, -0.0804097, -0.71376, 0.692256)
+bones/38/rotation = Quaternion(0.0219263, -0.176253, -0.704373, 0.68725)
+bones/41/rotation = Quaternion(0.522654, 0.700743, -0.477522, 0.0881153)
+bones/45/scale = Vector3(0.999999, 1, 1)
+bones/47/scale = Vector3(1, 1, 0.999999)
+bones/48/rotation = Quaternion(0.25133, -0.075936, 0.0237965, 0.964625)
+bones/51/rotation = Quaternion(0.0130142, 0.000105232, -0.0455722, 0.998876)
+bones/53/rotation = Quaternion(0.0956351, 0.0127032, 0.0420929, 0.994445)
+bones/54/rotation = Quaternion(0.00750638, 1.85837e-05, -0.0257826, 0.999639)
+bones/55/rotation = Quaternion(-0.134045, 0.0842621, -0.0535514, 0.985933)
+bones/56/rotation = Quaternion(0.0618455, 0.00272084, 0.0163392, 0.997948)
+bones/57/rotation = Quaternion(-6.53859e-05, 2.0363e-06, 0.00021392, 1)
+bones/58/rotation = Quaternion(-0.159449, 0.0884429, -0.229969, 0.955965)
+bones/59/rotation = Quaternion(0.106927, -0.00935609, 0.0867953, 0.990427)
+bones/60/rotation = Quaternion(-0.0096768, 0.000102606, 0.0356203, 0.999319)
+bones/62/rotation = Quaternion(0.0338514, -0.0125249, 0.111211, 0.993141)
+bones/62/scale = Vector3(0.999999, 0.999999, 1)
+bones/67/scale = Vector3(1, 0.999998, 1.00002)
+bones/70/scale = Vector3(0.999999, 1, 1)
+bones/75/scale = Vector3(1, 0.999999, 0.999999)
+bones/78/scale = Vector3(1, 0.999999, 1)
+
+[node name="Bomb2" parent="." instance=ExtResource("2_0f7d4")]
+transform = Transform3D(-0.0436543, 0, 0.999047, 0, 1, 0, -0.999047, 0, -0.0436543, -0.00251922, 0.371567, -0.553165)
+
+[node name="Skeleton3D" parent="Bomb2/Fuse" index="0"]
+bones/0/position = Vector3(-0.198113, 0.344471, -0.163938)
+
+[node name="BombArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257044, 0.389257, -0.411325)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BombArea"]
+shape = SubResource("SphereShape3D_i8fwk")
+
+[editable path="goblin_4"]
+[editable path="Bomb2"]
