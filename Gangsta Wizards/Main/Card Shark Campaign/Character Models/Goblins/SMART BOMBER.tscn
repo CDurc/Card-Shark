@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt7qm6p21wn5b"]
+[gd_scene load_steps=8 format=3 uid="uid://dt7qm6p21wn5b"]
 
 [ext_resource type="PackedScene" uid="uid://b2spem0apb2t6" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_4_ANIMES.tscn" id="1_bryd7"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART BOMBER.gd" id="1_t7615"]
 [ext_resource type="PackedScene" uid="uid://cciphle8lxqba" path="res://Card Shark Campaign/Weapons/Bomb.glb" id="2_0f7d4"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="4_jp2o8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qk4cd"]
 radius = 0.284015
@@ -14,7 +15,7 @@ radius = 0.35
 [sub_resource type="SphereShape3D" id="SphereShape3D_i8fwk"]
 radius = 5.04562
 
-[node name="Goblin Enemy" type="CharacterBody3D"]
+[node name="Bomber Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
 script = ExtResource("1_t7615")
@@ -89,6 +90,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257044, 0.389257, -0.41132
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BombArea"]
 shape = SubResource("SphereShape3D_i8fwk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_jp2o8")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
 
 [editable path="goblin_4"]
 [editable path="Bomb2"]

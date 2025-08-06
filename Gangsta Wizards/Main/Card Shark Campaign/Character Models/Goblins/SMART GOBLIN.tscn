@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3w2iojgthqvv"]
+[gd_scene load_steps=7 format=3 uid="uid://c3w2iojgthqvv"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tres.gd" id="1_vufae"]
 [ext_resource type="PackedScene" uid="uid://dsg348i6y6mp2" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_1_ANIMES.tscn" id="2_n6flr"]
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_wmgx7"]
 [ext_resource type="PackedScene" uid="uid://cgqbrqx8cet6s" path="res://Card Shark Campaign/Weapons/PIPE_WEAPON_NEW.tscn" id="3_0fiey"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_ra0xm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.284015
@@ -46,5 +47,40 @@ transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330
 
 [node name="Metal Pipe" parent="Goblin/Goblin Bones/Skeleton3D/HandContainer" index="0" instance=ExtResource("3_0fiey")]
 transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_ra0xm")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
 
 [editable path="Goblin"]
