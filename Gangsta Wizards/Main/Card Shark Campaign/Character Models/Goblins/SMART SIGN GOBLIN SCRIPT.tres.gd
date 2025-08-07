@@ -1,9 +1,9 @@
-#SMART GOBLIN SCRIPT
+#BIG MAN SCRIPT
 extends CharacterBody3D
 
-@export var speed:		float = 4.0		# horizontal move speed
+@export var speed:		float = 2.8		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
-@export var target_path:	NodePath		# drag your Player node here
+@export var target_path:	NodePath
 
 @onready var target:		Node3D = get_node(target_path)
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
@@ -13,7 +13,6 @@ extends CharacterBody3D
 #Durc
 @export var follow_distance     = 10
 @export var attack_distance     = 2
-@export var follow_speed        = 2.0
 @export var gravity_strength    = 20.0
 @export var can_move            = true
 @export var can_turn            = true
@@ -25,7 +24,7 @@ extends CharacterBody3D
 #Jumping/Stuck
 var last_position: Vector3
 var stuck_timer: float = 0.0
-var stuck_threshold_time: float = 1.0
+var stuck_threshold_time: float = 2.0
 var min_movement_threshold: float = 0.1
 var jump_timer = 0.0
 @export var jump_force: float = 9
@@ -41,14 +40,11 @@ var player
 var destroyed       := false
 var attacking       = false
 
-
-@onready var pipe           = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Pipe")
-@onready var current_color  = pipe.get_active_material(0).albedo_color
-@onready var area3D         = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D")
+@onready var area3D         = $"goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2/Area3D"
 @onready var damaged_bodies = area3D.damaged_bodies
 @onready var monitor        = area3D.monitoring
-@onready var a_anime          = $Goblin/ArmAnimation
-@onready var l_anime          = $Goblin/LegAnimation
+@onready var a_anime          = $goblin/ArmAnimations
+@onready var l_anime          = $goblin/LegAnimations
 
 
 func _ready() -> void:
@@ -69,14 +65,14 @@ func _physics_process(delta: float) -> void:
 		knockback_t -= delta
 	elif can_move:
 
-		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+		if (target.global_transform.origin - nav_agent.target_position).length() > .15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
 			l_anime.play("Walking")
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
+		if (target.global_transform.origin - global_transform.origin).length() < 4.5 and not attacking: #begin attack at 4
 			attack()
 
-		if nav_agent.is_navigation_finished():
+		if nav_agent.is_navigation_finished() or (target.global_transform.origin - global_transform.origin).length() < 3.5: #stop approaching at 3
 			velocity.x = 0
 			velocity.z = 0
 		else:
