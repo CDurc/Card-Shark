@@ -126,6 +126,7 @@ signal health_updated
 @onready var UI_Card2 = $HUD/C2/Txt
 @onready var HUD = $HUD
 @onready var ranges = $Ranges
+@onready var chipbar = $HUD/Chipbar
 
 #@onready var music := $AudioStreamPlayer
 #@onready music.stream = preload("res://Card Shark Campaign/Special Effects/wet-fart-1.mp3")
@@ -175,8 +176,9 @@ var fourkind_return_goals: Array = []
 
 # Functions
 func _ready():
+	chipbar.call("display_chips", health)
 	Gen_anime.play("Idle")
-	add_to_group("Player") #So bots can communicate easily with player?
+	add_to_group("Player") #Justin case
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	#Load weapon
 	deck.shuffle()
@@ -1287,7 +1289,8 @@ func action_jump():
 
 func damage(amount):
 	health -= amount
-	health_updated.emit(health) # Update health on HUD
+	health_updated.emit(health) # Update health on HUD, possibly obselete
+	chipbar.call("display_chips",health)
 	
 	if health < 0:
 		trigger_ragdoll(Vector3(0,0,0))
