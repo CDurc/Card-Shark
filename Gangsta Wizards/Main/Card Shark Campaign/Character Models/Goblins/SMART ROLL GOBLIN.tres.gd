@@ -1,7 +1,7 @@
 #ROLL MAN
 extends CharacterBody3D
 
-@export var speed:		float = 4.0		# horizontal move speed
+@export var initial_speed:		float = 4.0		# horizontal move speed
 @export var attacking_speed:		float = 4.0
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
@@ -52,10 +52,15 @@ var phase3 = false #Roll quickly towards player
 var phase4 = false #Pick a spot just ahead of the player and roll straight to it, not updating this point
 var spying = false
 var spycount = 0
+var maxspycount = randi_range(1, 5)
+var too_close = true #True when "too close" needs to function.  Turn off when retreating or attacking
+var overshoot_dir: Vector3
+var speed
 
 
 func _ready() -> void:
-	print("healthbar",healthbar)
+	speed = initial_speed
+	print("MAXSPYCOUNTIS:   ",maxspycount)
 	if target:
 		nav_agent.target_position = target.global_transform.origin + target.global_transform.basis.z * 10
 	last_position = global_position
@@ -112,6 +117,11 @@ func _physics_process(delta: float) -> void:
 					next_point = target.global_transform.origin + target.global_transform.basis.z * 15 #get next point
 					wants_to_jump = true
 					spying = false
+					spycount += 1
+					print("PHASE 2 INCREASED THE SPYCOUNT")
+					if spycount >= maxspycount:
+						phase2 = false
+						phase3 = true
 			else:
 				var next_point: Vector3 = nav_agent.get_next_path_position()
 				var dir: Vector3 = next_point - global_transform.origin
@@ -124,6 +134,60 @@ func _physics_process(delta: float) -> void:
 				velocity.x = dir.x * speed
 				velocity.z = dir.z * speed
 
+		elif phase3: #Get VERY CLOSE before overshooting
+
+			if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+				nav_agent.target_position = target.global_transform.origin #Move towards player
+				# anime.play("Walking") Add manual rotation anime
+
+			if nav_agent.is_navigation_finished() or (target.global_transform.origin - global_transform.origin).length() < 10: #initial closing distance
+				phase3=false
+				phase4=true
+				var player_move_dir = target.movement_velocity.normalized() #get direction player is moving to aim ahead
+				next_point = target.global_transform.origin + player_move_dir * 3 #Aim ahead of player and GO
+				overshoot_dir = next_point - global_transform.origin
+				overshoot_dir.y = 0
+				overshoot_dir = overshoot_dir.normalized()
+				look_at(global_transform.origin + overshoot_dir, Vector3.UP)
+				speed = speed*2
+				print("ATTACK")
+			else:
+				var next_point: Vector3 = nav_agent.get_next_path_position()
+				var dir: Vector3 = next_point - global_transform.origin
+				dir.y = 0
+				dir = dir.normalized()
+
+				if dir.length() > 0.01 and not jumping and can_move:
+					look_at(global_transform.origin + dir, Vector3.UP)
+
+				velocity.x = dir.x * speed
+				velocity.z = dir.z * speed
+
+		elif phase4: #GO IN (needs to be triggered by phase3.  If you want to attack, turn phase3 on.
+				velocity.x = overshoot_dir.x * speed
+				velocity.z = overshoot_dir.z * speed
+		
+		#IF PLAYER GETS TOO CLOSE AT ANY TIMR, FIGHT OR FLIHGT
+		if (target.global_transform.origin - global_transform.origin).length() < 6: 
+			if too_close == true:
+				too_close = false
+				print("TARGET GOT TOO CLOSE")
+				if spycount >= maxspycount: #patience has run out, ATTACK
+					print("OUT OF PATIENCE,ATTACK")
+					phase1 = false
+					phase2 = false
+					phase3 = true
+				else: #still too shy, RUN AWAY
+					print("RETREAT")
+					speed = speed * 2
+					phase1 = false
+					var dir = (global_transform.origin - target.global_transform.origin).normalized()
+					next_point = target.global_transform.origin + dir*15
+					phase2 = true
+					await get_tree().create_timer(2).timeout
+					speed = initial_speed
+					too_close = true
+		
 		# Gravity
 		if is_on_floor():
 			if velocity.y <= 0.0:
