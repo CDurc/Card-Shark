@@ -68,6 +68,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		knockback_t -= delta
 	elif can_move:
+		
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
