@@ -1,7 +1,8 @@
-#SMART GOBLIN SCRIPT
+#ROLL MAN
 extends CharacterBody3D
 
 @export var speed:		float = 4.0		# horizontal move speed
+@export var attacking_speed:		float = 4.0
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
@@ -11,10 +12,6 @@ extends CharacterBody3D
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
-@export var follow_distance     = 10
-@export var attack_distance     = 2
-@export var follow_speed        = 2.0
-@export var gravity_strength    = 20.0
 @export var can_move            = true
 @export var can_turn            = true
 @export var damaging            = false
@@ -30,6 +27,7 @@ var min_movement_threshold: float = 0.1
 var jump_timer = 0.0
 @export var jump_force: float = 9
 var jumping = false
+var wants_to_jump = true
 var was_stuck: bool = false
 
 
@@ -40,21 +38,26 @@ var knockback_t   := 0.0
 var player
 var destroyed       := false
 var attacking       = false
+var next_point
 
 
-@onready var pipe           = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Pipe")
-@onready var current_color  = pipe.get_active_material(0).albedo_color
-@onready var area3D         = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D")
+@onready var area3D         = $Attackbox
 @onready var damaged_bodies = area3D.damaged_bodies
 @onready var monitor        = area3D.monitoring
-@onready var a_anime          = $Goblin/ArmAnimation
-@onready var l_anime          = $Goblin/LegAnimation
+@onready var anime          = $goblin/AnimationPlayer
+
+var phase1 = true #Get closer to player
+var phase2 = false #Get behind player and stare, 3x
+var phase3 = false #Roll quickly towards player
+var phase4 = false #Pick a spot just ahead of the player and roll straight to it, not updating this point
+var spying = false
+var spycount = 0
 
 
 func _ready() -> void:
 	print("healthbar",healthbar)
 	if target:
-		nav_agent.target_position = target.global_transform.origin
+		nav_agent.target_position = target.global_transform.origin + target.global_transform.basis.z * 10
 	last_position = global_position
 
 
@@ -67,37 +70,59 @@ func _physics_process(delta: float) -> void:
 		velocity = knockback_v
 		move_and_slide()
 		knockback_t -= delta
-	elif can_move:
 		
+	elif can_move:
+		if phase1: #Get 15 units away, updating target constantly
 
-		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
-			nav_agent.target_position = target.global_transform.origin #Move towards player
-			l_anime.play("Walking")
-			
-		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
-			attack()
+			if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+				nav_agent.target_position = target.global_transform.origin #Move towards player
+				# anime.play("Walking") Add manual rotation anime
 
-		if nav_agent.is_navigation_finished():
-			velocity.x = 0
-			velocity.z = 0
-		else:
-			var next_point: Vector3 = nav_agent.get_next_path_position()
-			var dir: Vector3 = next_point - global_transform.origin
-			dir.y = 0
-			dir = dir.normalized()
+			if nav_agent.is_navigation_finished() or (target.global_transform.origin - global_transform.origin).length() < 15: #initial closing distance
+				velocity.x = 0
+				velocity.z = 0
+				phase1=false
+				phase2=true
+				next_point = target.global_transform.origin + target.global_transform.basis.z * 15 #Get next point ONLY ONCE
+			else:
+				var next_point: Vector3 = nav_agent.get_next_path_position()
+				var dir: Vector3 = next_point - global_transform.origin
+				dir.y = 0
+				dir = dir.normalized()
 
-			if dir.length() > 0.01 and not jumping and can_move:
-				look_at(global_transform.origin + dir, Vector3.UP)
+				if dir.length() > 0.01 and not jumping and can_move:
+					look_at(global_transform.origin + dir, Vector3.UP)
 
-			velocity.x = dir.x * speed
-			velocity.z = dir.z * speed
+				velocity.x = dir.x * speed
+				velocity.z = dir.z * speed
 
-		# ---- ALWAYS FACE THE PLAYER ----
-		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
-		face_dir.y = 0
-		if face_dir.length() > 0.01 and not jumping and can_move:
-			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
-		# --------------------------------
+		elif phase2: #Get behind player, don't constant update
+			if (next_point - nav_agent.target_position).length() > 0.15:
+				nav_agent.target_position = next_point #move towards next point
+				# anime.play("Walking") Add manual rotation anime
+
+			if nav_agent.is_navigation_finished():
+				velocity.x = 0
+				velocity.z = 0
+				if not spying:
+					#----------------spy------------------
+					wants_to_jump = false
+					spying = true
+					await get_tree().create_timer(4).timeout
+					next_point = target.global_transform.origin + target.global_transform.basis.z * 15 #get next point
+					wants_to_jump = true
+					spying = false
+			else:
+				var next_point: Vector3 = nav_agent.get_next_path_position()
+				var dir: Vector3 = next_point - global_transform.origin
+				dir.y = 0
+				dir = dir.normalized()
+
+				if dir.length() > 0.01 and not jumping and can_move:
+					look_at(global_transform.origin + dir, Vector3.UP)
+
+				velocity.x = dir.x * speed
+				velocity.z = dir.z * speed
 
 		# Gravity
 		if is_on_floor():
@@ -105,6 +130,14 @@ func _physics_process(delta: float) -> void:
 				velocity.y = 0
 		else:
 			velocity.y -= gravity * delta
+			
+		if spying:
+					# ---- ALWAYS FACE THE PLAYER ----
+			var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
+			face_dir.y = 0
+			if face_dir.length() > 0.01 and not jumping and can_move:
+				look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
+			# --------------------------------
 
 		# Stuck detection
 		var movement_distance = global_position.distance_to(last_position)
@@ -122,7 +155,7 @@ func _physics_process(delta: float) -> void:
 		var stuck_too_long = stuck_timer >= stuck_threshold_time
 
 		# Only jump once per genuine stuck event
-		if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0:
+		if stuck_too_long and wants_to_jump and is_on_floor() and not was_stuck and jump_timer <= 0.0:
 			jump()
 			jump_timer = 1.0
 			was_stuck = true
@@ -131,6 +164,7 @@ func _physics_process(delta: float) -> void:
 			jump_timer -= delta
 
 		move_and_slide()
+	
 
 func jump():
 	#jumping = true
@@ -159,8 +193,8 @@ func damage(amount):
 
 func attack():
 	attacking = true
-	a_anime.stop()
-	a_anime.play("Attack")
+	anime.stop()
+	anime.play("Attack")
 	await get_tree().create_timer(0.9).timeout
 
 	damaging = true

@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://qeqhg3g3onog"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART ROLL GOBLIN.tres.gd" id="1_gdstj"]
+[ext_resource type="PackedScene" uid="uid://cspnb87r501ok" path="res://Card Shark Campaign/Character Models/Goblins/goblin_5.glb" id="3_kq6m3"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/roll_attack.gd" id="4_thl4u"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_mjpba"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ifq5y"]
+radius = 2.22199
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a1e2t"]
+radius = 3.05837
+
+[node name="Goblin Enemy" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+collision_layer = 3
+script = ExtResource("1_gdstj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557513, 0.676605)
+shape = SubResource("SphereShape3D_ifq5y")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_mjpba")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY HELTH OW"
+horizontal_alignment = 1
+
+[node name="Healthbar" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+
+[node name="goblin" parent="." instance=ExtResource("3_kq6m3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="goblin/gobbybones" index="0"]
+bones/1/position = Vector3(-0.226514, 0.604408, 1.86187)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(0.104948, -0.134863, 0.145805)
+bones/2/rotation = Quaternion(-0.0568575, 0.0278139, -0.200588, 0.977629)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(0.402619, 0.586319, 0.362894)
+bones/3/rotation = Quaternion(0.806653, -0.121268, -0.571177, 0.0914375)
+bones/3/scale = Vector3(1, 1, 0.999999)
+bones/4/position = Vector3(0.353989, 0.181927, 0.494236)
+bones/5/position = Vector3(0.155654, -0.558213, 0.222794)
+bones/5/rotation = Quaternion(0.80125, 0.206088, -0.555369, -0.084213)
+bones/6/position = Vector3(0.225558, -1.5148, 0.0637717)
+bones/6/rotation = Quaternion(0.0794512, 0.0243118, 0.220016, 0.971951)
+bones/7/position = Vector3(0.667238, 1.5469, 1.62606)
+bones/7/rotation = Quaternion(-0.697536, 0.70935, -0.0750136, -0.0681173)
+bones/7/scale = Vector3(-0.260882, -0.999322, -0.98204)
+bones/8/position = Vector3(0.661714, 1.1769, 1.6949)
+bones/8/rotation = Quaternion(0.697536, -0.70935, 0.0750138, 0.0681179)
+bones/8/scale = Vector3(-0.260882, -0.999322, -0.98204)
+bones/9/position = Vector3(-1.26078, 1.53729, 1.6681)
+bones/9/rotation = Quaternion(-0.0681172, -0.0750138, -0.709349, 0.697536)
+bones/9/scale = Vector3(0.305839, 0.999479, 0.98613)
+bones/10/position = Vector3(-1.26292, 1.18424, 1.69542)
+bones/10/rotation = Quaternion(-0.0681182, -0.075014, -0.70935, 0.697536)
+bones/10/scale = Vector3(0.30584, 0.999479, 0.98613)
+bones/11/rotation = Quaternion(0.696259, -0.000374838, -0.000356655, 0.71779)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(0.696257, -0.000375406, -0.000357071, 0.717793)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.0677543, -0.124624, -0.961119, 0.236913)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(-0.0878335, -0.121502, 0.716893, 0.680872)
+bones/15/rotation = Quaternion(-0.956123, 0.261325, 0.10597, -0.079424)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/rotation = Quaternion(0.565983, 0.691375, -0.421991, 0.153579)
+bones/17/rotation = Quaternion(-0.239782, 0.108848, -0.676186, 0.688062)
+bones/18/rotation = Quaternion(0.70107, -0.668594, 0.149375, -0.197914)
+
+[node name="Attackbox" type="Area3D" parent="."]
+script = ExtResource("4_thl4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Attackbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557513, 0.676605)
+shape = SubResource("SphereShape3D_a1e2t")
+
+[editable path="goblin"]
