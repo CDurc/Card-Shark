@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw4cola0uyd6i"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN SCRIPT.tres.gd" id="1_44xjp"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN SCRIPT OLD BUSTED SLOPE BUT WORKS.tres.gd" id="1_w7w6q"]
 [ext_resource type="PackedScene" uid="uid://b4fjj7o5ad5xx" path="res://Card Shark Campaign/Character Models/Goblins/goblin_3_animes.tscn" id="3_6j66n"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_r8wfy"]
 
@@ -8,18 +8,15 @@
 radius = 0.921845
 height = 4.07755
 
-[node name="Goblin Enemy" type="CharacterBody3D"]
+[node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
-script = ExtResource("1_44xjp")
+script = ExtResource("1_w7w6q")
 health = 400
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.196775, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-path_height_offset = -2.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -58,6 +55,17 @@ color = Color(0, 1, 0, 1)
 
 [node name="goblin" parent="." instance=ExtResource("3_6j66n")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Eyepatch" parent="goblin/Gobby 3/Skeleton3D" index="0"]
+transform = Transform3D(1, -9.31323e-09, 8.14045e-07, 8.00937e-08, 1, -1.26589e-07, -8.32981e-07, 1.25448e-07, 1, 0.0176042, -0.00761032, 0.00493991)
+
+[node name="HandContainer" parent="goblin/Gobby 3/Skeleton3D" index="2"]
+transform = Transform3D(0.898695, 0.37991, -0.219126, 0.00224881, -0.503617, -0.863924, -0.438569, 0.775911, -0.453453, -0.254154, -0.213549, 0.970533)
+
+[node name="Feet" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73028, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Feet"]
 
 [editable path="goblin"]
 [editable path="goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2"]

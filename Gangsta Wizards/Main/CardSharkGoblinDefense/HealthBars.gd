@@ -1,8 +1,11 @@
 extends Control
 
 @onready var label = $Healthbar
-@onready var camera = $"../../../Player/Head/Camera"
+#@onready var camera = $"../../../Player/Head/Camera"
 @onready var target = $".."
+
+@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var camera = player.get_node("Head/Camera")
 
 func _process(_delta):
 	var world_pos = target.global_transform.origin + Vector3.UP * 1.5
