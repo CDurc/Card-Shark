@@ -14,7 +14,7 @@ extends CharacterBody3D
 #Durc
 @export var can_move            = true
 @export var can_turn            = true
-@export var damaging            = true
+@export var damaging            = false
 @export var health :int
 
 @onready var initial_health = health #This HAS to be onready to recieve the export vars
@@ -119,8 +119,6 @@ func _physics_process(delta: float) -> void:
 					#attacking = false
 					#damaging = false
 					await get_tree().create_timer(4).timeout
-					attacking = true
-					damaging = true
 					next_point = target.global_transform.origin + target.global_transform.basis.z * 15 #get next point
 					wants_to_jump = true
 					spying = false
@@ -151,6 +149,9 @@ func _physics_process(delta: float) -> void:
 			if nav_agent.is_navigation_finished() or (target.global_transform.origin - global_transform.origin).length() < 10: #initial closing distance
 				phase3=false
 				phase4=true
+				#GO ATTACK (called once)
+				damaging = true
+				attacking = true
 				var player_move_dir = target.movement_velocity.normalized() #get direction player is moving to aim ahead
 				next_point = target.global_transform.origin + player_move_dir * 3 #Aim ahead of player and GO
 				overshoot_dir = next_point - global_transform.origin
@@ -161,6 +162,9 @@ func _physics_process(delta: float) -> void:
 				print("ATTACK")
 				
 				await get_tree().create_timer(2).timeout
+				#ATTACK OVER
+				damaging = false
+				attacking = false
 				too_close = true
 				speed = initial_speed
 				spycount = 0
@@ -275,6 +279,27 @@ func damage(amount):
 	healthbar.color = Color(R_color,G_color,0)
 	healthbar.scale.x = health_ratio
 	print(health_ratio)
+
+
+	if too_close == true:
+		too_close = false
+		print("TARGET shot")
+		if spycount >= maxspycount: #patience has run out, ATTACK
+			print("OUT OF PATIENCE,ATTACK")
+			phase1 = false
+			phase2 = false
+			phase3 = true
+		else: #still too shy, RUN AWAY
+			print("RETREAT")
+			speed = speed * 2
+			phase1 = false
+			var dir = (global_transform.origin - target.global_transform.origin).normalized()
+			next_point = target.global_transform.origin + dir*15
+			phase2 = true
+			await get_tree().create_timer(2).timeout
+			speed = initial_speed
+			too_close = true
+
 	
 	if health <= 0 and not destroyed:
 		destroy()

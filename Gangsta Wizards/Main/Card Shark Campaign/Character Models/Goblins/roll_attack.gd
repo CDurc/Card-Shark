@@ -26,6 +26,6 @@ func _on_body_entered(body):
 		if body not in damaged_bodies:
 			body.damage(damage)
 			damaged_bodies[body] = true
-			await get_tree().create_timer(1).timeout
+			#flatten(body)
+			await get_tree().create_timer(2).timeout
 			damaged_bodies.clear()
-			

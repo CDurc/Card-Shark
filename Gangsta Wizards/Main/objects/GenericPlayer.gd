@@ -128,6 +128,8 @@ signal health_updated
 @onready var ranges = $Ranges
 @onready var chipbar = $HUD/Chipbar
 
+@onready var flat_cam_goal = $Head/Flatcam_point
+
 #@onready var music := $AudioStreamPlayer
 #@onready music.stream = preload("res://Card Shark Campaign/Special Effects/wet-fart-1.mp3")
 
@@ -135,7 +137,8 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
-var is_disabled = false
+var is_disabled = false #Use this for ragdoll
+var generic_disable = false #Use this for everything else
 var can_double_jump = false
 var sprinting = false
 var fourkind_lifting = false
@@ -189,13 +192,15 @@ func _ready():
 	load_viewport()
 func _physics_process(delta):
 	
-	if is_disabled:
+	if is_disabled: #Currently only use this for ragdoll pls
 		#followhip.position = hip.position
 		ragcam.global_position = hip.global_position + local_pos
 		ragcam.look_at(hip.position)
 		return
 	
-
+	if generic_disable:
+		TransformUtils.lerp_slerp_node(camera, flat_cam_goal, 4, 0.2, delta)
+		return
 	
 	
 	# Handle functions
@@ -456,7 +461,28 @@ func shuffle_deck():
 	rot_acc = 3
 	rot_max_speed = 9.5
 
+@onready var flat_path = preload("res://Card Shark Campaign/Character Models/FlatShark.glb")
+func flatten():
+	#Disable characters body
+	generic_disable = true
+	self.visible = false
+	can_move = false
+	LA_anime.stop()
+	RA_anime.stop()
+	Leg_anime.stop()
+	Gen_anime.stop()
+	$Collider.disabled = true
+	#Place flat CS at feet
+	var flat_shark = flat_path.instantiate()
+	flat_shark.rotation_degrees = Vector3(0,rotation_degrees.y+270,90)
+	flat_shark.position = self.position
+	get_tree().root.add_child(flat_shark)
+	#Move cam quickly?
+
+	
+
 func trigger_ragdoll(impulse: Vector3):
+	
 	can_move = false
 	is_disabled = true
 	LA_anime.stop()
@@ -497,15 +523,15 @@ func trigger_ragdoll(impulse: Vector3):
 
 
 	#SHORTCUT SPELL 2 SPELL2
+
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flush_spell()
 		trigger_ragdoll(Vector3(30,200,30))
 
-
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		straightline_card_spell()
+		flatten()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -1094,7 +1120,7 @@ func combine_cards():
 
 func _process(delta): #Currently only used for card combine and fourkind
 	
-	if is_disabled:
+	if is_disabled or generic_disable:
 		return
 	
 	if fourkind_lifting:

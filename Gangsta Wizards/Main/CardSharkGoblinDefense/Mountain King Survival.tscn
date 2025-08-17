@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=8 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="3_fuyke"]
 [ext_resource type="PackedScene" uid="uid://c3w2iojgthqvv" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tscn" id="4_k8efo"]
-[ext_resource type="PackedScene" uid="uid://bw4cola0uyd6i" path="res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN.tscn" id="5_tjrhs"]
 [ext_resource type="PackedScene" uid="uid://qeqhg3g3onog" path="res://Card Shark Campaign/Character Models/Goblins/SMART ROLL GOBLIN.tscn" id="6_jbjd5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_bxn18"]
@@ -29,7 +28,11 @@ environment = ExtResource("1_qr17x")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_fuyke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63331, 14.2802, 21.0379)
+walk_speed = 5
+sprint_speed = 10
+jump_strength = 8
 health = 250
+can_move = true
 
 [node name="Projectiles" type="Node3D" parent="."]
 
@@ -58,27 +61,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.571, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.6692, -12.7095)
 target_path = NodePath("../../../Player")
 health = 500
-
-[node name="Rollerman2" parent="NavMap/LargeNav" instance=ExtResource("6_jbjd5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85428, 12.6692, -23.5828)
-target_path = NodePath("../../../Player")
-health = 500
-
-[node name="Rollerman3" parent="NavMap/LargeNav" instance=ExtResource("6_jbjd5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.586719, 12.6692, -23.5828)
-target_path = NodePath("../../../Player")
-health = 500
-
-[node name="Rollerman5" parent="NavMap/LargeNav" instance=ExtResource("6_jbjd5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.586719, 12.6692, -30.325)
-target_path = NodePath("../../../Player")
-health = 500
-
-[node name="Rollerman4" parent="NavMap/LargeNav" instance=ExtResource("6_jbjd5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.873, 12.6692, -23.5828)
-target_path = NodePath("../../../Player")
-health = 500
-
-[node name="Goblin Enemy2" parent="NavMap/LargeNav" instance=ExtResource("5_tjrhs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7525, -1.75751)
-target_path = NodePath("../../../Player")
