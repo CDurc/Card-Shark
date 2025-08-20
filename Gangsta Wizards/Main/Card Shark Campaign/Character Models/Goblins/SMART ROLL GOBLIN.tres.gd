@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export var target_path:	NodePath		# drag your Player node here
 
 @onready var target:		Node3D = get_node(target_path)
-@onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
+@onready var nav_agent:	NavigationAgent3D = $Feet/NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 #@onready var initial_healthbar = healthbar.scale.x
 
@@ -37,7 +37,7 @@ var knockback_t   := 0.0
 
 var player
 var destroyed       := false
-var attacking       = false
+var attacking       = true
 var next_point
 
 
@@ -45,6 +45,7 @@ var next_point
 @onready var damaged_bodies = area3D.damaged_bodies
 @onready var monitor        = area3D.monitoring
 @onready var anime          = $goblin/AnimationPlayer
+@onready var mesh = $goblin
 
 var phase1 = true #Get closer to player
 var phase2 = false #Get behind player and stare, 3x
@@ -100,6 +101,7 @@ func _physics_process(delta: float) -> void:
 
 				velocity.x = dir.x * speed
 				velocity.z = dir.z * speed
+				roll(delta)
 
 		elif phase2: #Get behind player, don't constant update
 			if (next_point - nav_agent.target_position).length() > 0.15:
@@ -113,6 +115,9 @@ func _physics_process(delta: float) -> void:
 					#----------------spy------------------
 					wants_to_jump = false
 					spying = true
+					mesh.rotation_degrees.z = 0
+					#attacking = false
+					#damaging = false
 					await get_tree().create_timer(4).timeout
 					next_point = target.global_transform.origin + target.global_transform.basis.z * 15 #get next point
 					wants_to_jump = true
@@ -133,6 +138,7 @@ func _physics_process(delta: float) -> void:
 
 				velocity.x = dir.x * speed
 				velocity.z = dir.z * speed
+				roll(delta)
 
 		elif phase3: #Get VERY CLOSE before overshooting
 
@@ -143,6 +149,9 @@ func _physics_process(delta: float) -> void:
 			if nav_agent.is_navigation_finished() or (target.global_transform.origin - global_transform.origin).length() < 10: #initial closing distance
 				phase3=false
 				phase4=true
+				#GO ATTACK (called once)
+				damaging = true
+				attacking = true
 				var player_move_dir = target.movement_velocity.normalized() #get direction player is moving to aim ahead
 				next_point = target.global_transform.origin + player_move_dir * 3 #Aim ahead of player and GO
 				overshoot_dir = next_point - global_transform.origin
@@ -151,6 +160,20 @@ func _physics_process(delta: float) -> void:
 				look_at(global_transform.origin + overshoot_dir, Vector3.UP)
 				speed = speed*2
 				print("ATTACK")
+				
+				await get_tree().create_timer(2).timeout
+				#ATTACK OVER
+				damaging = false
+				attacking = false
+				too_close = true
+				speed = initial_speed
+				spycount = 0
+				maxspycount = randi_range(1, 5)
+				phase1 = true
+				phase2 = false
+				phase4  =false
+				phase3 = false
+
 			else:
 				var next_point: Vector3 = nav_agent.get_next_path_position()
 				var dir: Vector3 = next_point - global_transform.origin
@@ -162,10 +185,12 @@ func _physics_process(delta: float) -> void:
 
 				velocity.x = dir.x * speed
 				velocity.z = dir.z * speed
+				roll(delta)
 
 		elif phase4: #GO IN (needs to be triggered by phase3.  If you want to attack, turn phase3 on.
 				velocity.x = overshoot_dir.x * speed
 				velocity.z = overshoot_dir.z * speed
+				roll(delta)
 		
 		#IF PLAYER GETS TOO CLOSE AT ANY TIMR, FIGHT OR FLIHGT
 		if (target.global_transform.origin - global_transform.origin).length() < 6: 
@@ -230,6 +255,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	
 
+func roll(delta):
+	mesh.rotation_degrees.z -= 75*speed*delta
+
 func jump():
 	#jumping = true
 	velocity.y = jump_force
@@ -251,23 +279,27 @@ func damage(amount):
 	healthbar.color = Color(R_color,G_color,0)
 	healthbar.scale.x = health_ratio
 	print(health_ratio)
+
+
+	if too_close == true:
+		too_close = false
+		print("TARGET shot")
+		if spycount >= maxspycount: #patience has run out, ATTACK
+			print("OUT OF PATIENCE,ATTACK")
+			phase1 = false
+			phase2 = false
+			phase3 = true
+		else: #still too shy, RUN AWAY
+			print("RETREAT")
+			speed = speed * 2
+			phase1 = false
+			var dir = (global_transform.origin - target.global_transform.origin).normalized()
+			next_point = target.global_transform.origin + dir*15
+			phase2 = true
+			await get_tree().create_timer(2).timeout
+			speed = initial_speed
+			too_close = true
+
 	
 	if health <= 0 and not destroyed:
 		destroy()
-
-func attack():
-	attacking = true
-	anime.stop()
-	anime.play("Attack")
-	await get_tree().create_timer(0.9).timeout
-
-	damaging = true
-	monitor = true
-	area3D.overlap_check()
-	await get_tree().create_timer(0.8).timeout
-
-	damaging = false
-	monitor = false
-	await get_tree().create_timer(1.5).timeout
-	damaged_bodies.clear()
-	attacking = false

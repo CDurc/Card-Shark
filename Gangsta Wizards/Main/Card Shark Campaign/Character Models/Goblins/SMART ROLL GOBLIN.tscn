@@ -11,16 +11,13 @@ radius = 2.22199
 [sub_resource type="SphereShape3D" id="SphereShape3D_a1e2t"]
 radius = 3.05837
 
-[node name="Goblin Enemy" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+[node name="Rollerman" type="CharacterBody3D" groups=["Enemies"]]
 collision_layer = 3
 script = ExtResource("1_gdstj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557513, 0.676605)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790327, 0.158742)
 shape = SubResource("SphereShape3D_ifq5y")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -59,6 +56,9 @@ color = Color(0, 1, 0, 1)
 
 [node name="goblin" parent="." instance=ExtResource("3_kq6m3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="gobbybones" parent="goblin" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.542724, -0.536366, 2.37232e-08)
 
 [node name="Skeleton3D" parent="goblin/gobbybones" index="0"]
 bones/1/position = Vector3(-0.226514, 0.604408, 1.86187)
@@ -100,10 +100,19 @@ bones/17/rotation = Quaternion(-0.239782, 0.108848, -0.676186, 0.688062)
 bones/18/rotation = Quaternion(0.70107, -0.668594, 0.149375, -0.197914)
 
 [node name="Attackbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.590899, -0.566)
 script = ExtResource("4_thl4u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Attackbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557513, 0.676605)
 shape = SubResource("SphereShape3D_a1e2t")
+
+[node name="Feet" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.50227, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Feet"]
+path_height_offset = -0.77
+
+[connection signal="body_entered" from="Attackbox" to="Attackbox" method="_on_body_entered"]
 
 [editable path="goblin"]
