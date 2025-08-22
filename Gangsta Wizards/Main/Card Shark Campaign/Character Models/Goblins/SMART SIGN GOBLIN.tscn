@@ -62,6 +62,9 @@ transform = Transform3D(1, -9.31323e-09, 8.14045e-07, 8.00937e-08, 1, -1.26589e-
 [node name="HandContainer" parent="goblin/Gobby 3/Skeleton3D" index="2"]
 transform = Transform3D(0.898695, 0.37991, -0.219126, 0.00224881, -0.503617, -0.863924, -0.438569, 0.775911, -0.453453, -0.254154, -0.213549, 0.970533)
 
+[node name="Area3D" parent="goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2" index="1"]
+damage = 20
+
 [node name="Feet" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73028, 0)
 
