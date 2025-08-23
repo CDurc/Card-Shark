@@ -39,12 +39,6 @@ bones/73/position = Vector3(0.904303, 1.50704, 0.614314)
 bones/75/position = Vector3(0.984244, 0.531334, 2.19688)
 bones/76/position = Vector3(-0.925834, 2.10191, 0.316863)
 
-[node name="Hat" parent="Goblin/Goblin Bones/Skeleton3D" index="0"]
-transform = Transform3D(-0.000529898, -0.0278528, -1.50877, -0.319173, 1.47464, -0.0271105, 1.47489, 0.319109, -0.00640898, 0.0824734, 1.04318, 0.215679)
-
-[node name="HandContainer" parent="Goblin/Goblin Bones/Skeleton3D" index="2"]
-transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330224, 0.286421, 0.93094, -0.226524, -0.0548961, 1.2731, 2.26035)
-
 [node name="Metal Pipe" parent="Goblin/Goblin Bones/Skeleton3D/HandContainer" index="0" instance=ExtResource("3_0fiey")]
 transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
 
