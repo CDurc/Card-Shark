@@ -3,7 +3,7 @@
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="3_fuyke"]
-[ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet.tscn" id="5_diyi0"]
+[ext_resource type="PackedScene" uid="uid://cw643hqnkhage" path="res://Card Shark Campaign/Character Models/Goblins/SMART SHOOT GOBLIN AUBURN.tscn" id="5_bbf6d"]
 [ext_resource type="PackedScene" uid="uid://qeqhg3g3onog" path="res://Card Shark Campaign/Character Models/Goblins/SMART ROLL GOBLIN.tscn" id="6_jbjd5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_bxn18"]
@@ -39,19 +39,18 @@ health = 250
 [node name="SmallNav" type="NavigationRegion3D" parent="NavMap"]
 navigation_mesh = SubResource("NavigationMesh_bxn18")
 
-[node name="Hall of the Mountain King" parent="NavMap/SmallNav" instance=ExtResource("2_d1bmk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.571, 0)
-
 [node name="LargeNav" type="NavigationRegion3D" parent="NavMap"]
 navigation_mesh = SubResource("NavigationMesh_it1xq")
-
-[node name="Hall of the Mountain King" parent="NavMap/LargeNav" instance=ExtResource("2_d1bmk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.571, 0)
 
 [node name="Rollerman" parent="NavMap/LargeNav" instance=ExtResource("6_jbjd5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.6692, -44.9887)
 target_path = NodePath("../../../Player")
 health = 500
 
-[node name="Bullet" parent="." instance=ExtResource("5_diyi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.53843, 0)
+[node name="Hall of the Mountain King" parent="NavMap/LargeNav" instance=ExtResource("2_d1bmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.7895, 0)
+
+[node name="Goblin Enemy" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5191, 0)
+target_path = NodePath("../../../Player")
+health = 200

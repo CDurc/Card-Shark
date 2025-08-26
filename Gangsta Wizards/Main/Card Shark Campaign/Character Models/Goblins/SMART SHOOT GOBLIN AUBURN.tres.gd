@@ -3,11 +3,13 @@ extends CharacterBody3D
 
 @export var speed:		float = 4.0		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
-@export var target_path:	NodePath		# drag your Player node here
+@export var target_path:	NodePath	
 
 @onready var target:		Node3D = get_node(target_path)
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
+@onready var bullet_path = preload("res://Particles/bullet.tscn")
+@onready var bullet_spawn = self.get_node("spawn")
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -33,6 +35,7 @@ var jumping = false
 var was_stuck: bool = false
 
 
+
 # Knockback state
 var knockback_v   := Vector3.ZERO
 var knockback_t   := 0.0
@@ -40,15 +43,11 @@ var knockback_t   := 0.0
 var player
 var destroyed       := false
 var attacking       = false
+var bullet_cooldown = 0.5
 
 
-@onready var pipe           = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Pipe")
-@onready var current_color  = pipe.get_active_material(0).albedo_color
-@onready var area3D         = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D")
-@onready var damaged_bodies = area3D.damaged_bodies
-@onready var monitor        = area3D.monitoring
-@onready var a_anime          = $Goblin/ArmAnimation
-@onready var l_anime          = $Goblin/LegAnimation
+#@onready var a_anime          = $Goblin/ArmAnimation
+#@onready var l_anime          = $Goblin/LegAnimation
 
 
 func _ready() -> void:
@@ -72,10 +71,15 @@ func _physics_process(delta: float) -> void:
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
-			l_anime.play("Walking")
+			#l_anime.play("Walking") NOTE
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
-			attack()
+		if (target.global_transform.origin - global_transform.origin).length() < 10 and not attacking:
+			if bullet_cooldown >= 0.5:
+				bullet_cooldown = 0
+				shoot()
+				print("bang bang")
+			else:
+				bullet_cooldown += delta
 
 		if nav_agent.is_navigation_finished():
 			velocity.x = 0
@@ -158,4 +162,8 @@ func damage(amount):
 		destroy()
 
 func shoot():
+	var bullet = bullet_path.instantiate()
+	get_tree().root.add_child(bullet)
+	bullet.global_transform = bullet_spawn.global_transform
+	
 	

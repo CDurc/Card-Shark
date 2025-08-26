@@ -13,18 +13,6 @@ height = 1.91287
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
 script = ExtResource("1_i82rv")
-speed = null
-gravity = null
-target_path = null
-follow_distance = null
-attack_distance = null
-follow_speed = null
-gravity_strength = null
-can_move = null
-can_turn = null
-damaging = null
-health = null
-jump_force = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.21556, -0.0723298)
@@ -75,7 +63,7 @@ color = Color(0, 1, 0, 1)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="spawn" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.761045, -0.723285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.761045, -1.19126)
 
 [node name="RayCast3D" type="RayCast3D" parent="spawn"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
