@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var target_path:	NodePath	
 
 @onready var target:		Node3D = get_node(target_path)
+@onready var target_center = target.get_node("CharacterCenter")
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
@@ -23,11 +24,13 @@ extends CharacterBody3D
 @export var health :int
 
 @onready var initial_health = health #This HAS to be onready to recieve the export vars
+@onready var initial_speed = speed
+
 
 #Jumping/Stuck
 var last_position: Vector3
 var stuck_timer: float = 0.0
-var stuck_threshold_time: float = 1.0
+var stuck_threshold_time: float = 1
 var min_movement_threshold: float = 0.1
 var jump_timer = 0.0
 @export var jump_force: float = 9
@@ -44,10 +47,12 @@ var player
 var destroyed       := false
 var attacking       = false
 var bullet_cooldown = 0.5
+var wants_to_jump = true
 
 
-#@onready var a_anime          = $Goblin/ArmAnimation
-#@onready var l_anime          = $Goblin/LegAnimation
+
+#@onready var upper_anime        = $Goblin/ArmAnimation
+#@onready var lower_anime          = $Goblin/LegAnimation
 
 
 func _ready() -> void:
@@ -73,18 +78,21 @@ func _physics_process(delta: float) -> void:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
 			#l_anime.play("Walking") NOTE
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 10 and not attacking:
-			if bullet_cooldown >= 0.5:
-				bullet_cooldown = 0
-				shoot()
-				print("bang bang")
-			else:
-				bullet_cooldown += delta
+		if (target.global_transform.origin - global_transform.origin).length() < 20 and not attacking:
+			attacking = true
+			shoot()
 
-		if nav_agent.is_navigation_finished():
+		#if nav_agent.is_navigation_finished():
+		#	velocity.x = 0
+		#	velocity.z = 0
+			
+		if (target.global_transform.origin - global_transform.origin).length() < 15:
+			wants_to_jump = false
 			velocity.x = 0
 			velocity.z = 0
+			
 		else:
+			wants_to_jump = true
 			var next_point: Vector3 = nav_agent.get_next_path_position()
 			var dir: Vector3 = next_point - global_transform.origin
 			dir.y = 0
@@ -126,7 +134,7 @@ func _physics_process(delta: float) -> void:
 		var stuck_too_long = stuck_timer >= stuck_threshold_time
 
 		# Only jump once per genuine stuck event
-		if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0:
+		if stuck_too_long and is_on_floor() and not was_stuck and jump_timer <= 0.0 and wants_to_jump:
 			jump()
 			jump_timer = 1.0
 			was_stuck = true
@@ -161,9 +169,47 @@ func damage(amount):
 	if health <= 0 and not destroyed:
 		destroy()
 
+var last_direction = Vector3.ZERO  # store direction of the first bullet
+
 func shoot():
+	# SLOW THE GOBBY AND ANIME
+	speed = speed / 4
+
+	for i in range(3):
+		if i == 0:
+			# First bullet targets player
+			last_direction = shoot_a_bullet(true)
+		else:
+			# Other bullets follow the same direction
+			shoot_a_bullet(false, last_direction)
+		
+		await get_tree().create_timer(0.1).timeout
+		print(i + 1)
+
+	speed = initial_speed
+	await get_tree().create_timer(1).timeout
+	attacking = false
+
+
+# Returns the direction if it's the first bullet
+func shoot_a_bullet(target_player := true, fixed_direction := Vector3.ZERO) -> Vector3:
 	var bullet = bullet_path.instantiate()
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = bullet_spawn.global_transform
+	
+	var direction = Vector3.ZERO
+	if target_player:
+		var player_move_dir = target.movement_velocity.normalized()
+		var rand_aim = randf_range(0.25,3)
+		direction = ((target_center.global_transform.origin - bullet.global_transform.origin) + player_move_dir*rand_aim).normalized()
+	else:
+		direction = fixed_direction
+	
+	bullet.look_at(bullet.global_transform.origin + direction, Vector3.UP)
+	bullet.apply_impulse(direction * 40.0)
+
+	return direction
+
+	
 	
 	
