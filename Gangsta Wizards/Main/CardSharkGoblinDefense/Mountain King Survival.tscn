@@ -45,49 +45,148 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.7895, 0)
 [node name="Auburnman" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5191, 0)
 target_path = NodePath("../../../Player")
-health = 200
+health = 80
 
 [node name="Auburnman2" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5191, -2.10167)
 target_path = NodePath("../../../Player")
-health = 200
+health = 80
 
 [node name="Auburnman3" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60969, 11.5191, 0)
 target_path = NodePath("../../../Player")
-health = 200
+health = 80
 
 [node name="Auburnman4" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23726, 11.5191, 0)
 target_path = NodePath("../../../Player")
-health = 200
+health = 80
 
 [node name="Auburnman5" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
 transform = Transform3D(0.999968, 0, 0.00801098, 0, 1, 0, -0.00801098, 0, 0.999968, 0, 11.5191, 2.15854)
 target_path = NodePath("../../../Player")
-health = 200
+health = 80
 
-[node name="Auburnman6" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.3196, -16.0324)
-target_path = NodePath("../../../Player")
-health = 200
+[node name="Lighting" type="Node3D" parent="."]
 
-[node name="Auburnman7" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.3196, -18.1341)
-target_path = NodePath("../../../Player")
-health = 200
+[node name="Chandelier" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, 22.3094, -10.0405)
+light_color = Color(1, 0.295477, 0.269611, 1)
+light_energy = 4.522
+light_size = 0.126
+light_specular = 0.399
+omni_range = 3.468
 
-[node name="Auburnman8" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60969, 15.3196, -16.0324)
-target_path = NodePath("../../../Player")
-health = 200
+[node name="Lava Lights" type="Node3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.1242, -30.922)
 
-[node name="Auburnman9" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23726, 15.3196, -16.0324)
-target_path = NodePath("../../../Player")
-health = 200
+[node name="Lava" type="OmniLight3D" parent="Lighting/Lava Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, 8.7278, 0.373394)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
 
-[node name="Auburnman10" parent="NavMap/LargeNav" instance=ExtResource("5_bbf6d")]
-transform = Transform3D(0.999968, 0, 0.00801098, 0, 1, 0, -0.00801098, 0, 0.999968, -0.128435, 15.3196, -13.8733)
-target_path = NodePath("../../../Player")
-health = 200
+[node name="Lava2" type="OmniLight3D" parent="Lighting/Lava Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, 2.99652, 0.373394)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava3" type="OmniLight3D" parent="Lighting/Lava Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, -2.63398, 0.373394)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava4" type="OmniLight3D" parent="Lighting/Lava Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, -9.03041, 0.373394)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava5" type="OmniLight3D" parent="Lighting/Lava Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0938739, -16.0661, 0.373394)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava Lights2" type="Node3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.1242, -34.3604)
+
+[node name="Lava" type="OmniLight3D" parent="Lighting/Lava Lights2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, 8.7278, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava2" type="OmniLight3D" parent="Lighting/Lava Lights2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, 2.99652, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava3" type="OmniLight3D" parent="Lighting/Lava Lights2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -2.63398, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava4" type="OmniLight3D" parent="Lighting/Lava Lights2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -9.03041, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava5" type="OmniLight3D" parent="Lighting/Lava Lights2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -16.0661, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava Lights3" type="Node3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.492, 24.1242, -34.3604)
+
+[node name="Lava" type="OmniLight3D" parent="Lighting/Lava Lights3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, 8.7278, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava2" type="OmniLight3D" parent="Lighting/Lava Lights3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, 2.99652, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava3" type="OmniLight3D" parent="Lighting/Lava Lights3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -2.63398, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava4" type="OmniLight3D" parent="Lighting/Lava Lights3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -9.03041, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava5" type="OmniLight3D" parent="Lighting/Lava Lights3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84971, -16.0661, 0.975506)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802

@@ -49,6 +49,9 @@ var attacking       = false
 var bullet_cooldown = 0.5
 var wants_to_jump = true
 
+var impatient_timer = 0
+var rush = false
+
 
 
 #@onready var upper_anime        = $Goblin/ArmAnimation
@@ -86,10 +89,19 @@ func _physics_process(delta: float) -> void:
 		#	velocity.x = 0
 		#	velocity.z = 0
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 15:
+		#CLOSE ENOUGH, TRY TO SHOOT	
+		if (target.global_transform.origin - global_transform.origin).length() < 15 and not rush:
 			wants_to_jump = false
 			velocity.x = 0
 			velocity.z = 0
+			#GETTING IMPATIENT
+			impatient_timer += delta
+			if impatient_timer >= 10:
+				rush = true
+				speed = 1.5*initial_speed
+			
+		
+			
 			
 		else:
 			wants_to_jump = true
