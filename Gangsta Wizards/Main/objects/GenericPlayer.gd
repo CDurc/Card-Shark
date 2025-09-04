@@ -891,7 +891,7 @@ func pattern_card_spell():
 	magic_cooldown.start(4)
 	#Play some sort of spell cast anime
 	#anime.play("Taunt")
-	await get_tree().create_timer(1).timeout
+	#await get_tree().create_timer(1).timeout
 	RA_anime.play("Discard")
 	combine_cards() #Merge cards to prepare to throw
 	await get_tree().create_timer(0.2).timeout
@@ -914,7 +914,7 @@ func straightline_card_spell():
 	magic_cooldown.start(4)
 	#Play some sort of spell cast anime
 	#anime.play("Taunt")
-	await get_tree().create_timer(1).timeout
+	#await get_tree().create_timer(1).timeout
 	RA_anime.play("Discard")
 	combine_cards() #Merge cards to prepare to throw
 	await get_tree().create_timer(0.2).timeout

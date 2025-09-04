@@ -6,7 +6,6 @@ extends CharacterBody3D
 @export var target_path:	NodePath	
 
 @onready var target:		Node3D = get_node(target_path)
-@onready var target_center = target.get_node("CharacterCenter")
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
@@ -36,6 +35,7 @@ var jump_timer = 0.0
 @export var jump_force: float = 9
 var jumping = false
 var was_stuck: bool = false
+var target_center
 
 
 
@@ -59,6 +59,12 @@ var rush = false
 
 
 func _ready() -> void:
+	
+	if target == null:
+		target = get_tree().get_first_node_in_group("Player")
+		
+	target_center = target.get_node("CharacterCenter")
+	
 	print("healthbar",healthbar)
 	if target:
 		nav_agent.target_position = target.global_transform.origin

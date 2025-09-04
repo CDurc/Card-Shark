@@ -60,8 +60,10 @@ var speed
 
 
 func _ready() -> void:
+	if target == null:
+		target = get_tree().get_first_node_in_group("Player")
+	
 	speed = initial_speed
-	print("MAXSPYCOUNTIS:   ",maxspycount)
 	if target:
 		nav_agent.target_position = target.global_transform.origin + target.global_transform.basis.z * 10
 	last_position = global_position

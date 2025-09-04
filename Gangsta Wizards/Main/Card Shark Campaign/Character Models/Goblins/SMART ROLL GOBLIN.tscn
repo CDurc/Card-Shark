@@ -14,6 +14,7 @@ radius = 3.05837
 [node name="Rollerman" type="CharacterBody3D" groups=["Enemies"]]
 collision_layer = 3
 script = ExtResource("1_gdstj")
+health = 400
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790327, 0.158742)
@@ -27,16 +28,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_mjpba")
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "MY HELTH OW"
-horizontal_alignment = 1
 
 [node name="Healthbar" type="ColorRect" parent="Control"]
 layout_mode = 1

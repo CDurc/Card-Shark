@@ -51,7 +51,10 @@ var path_update_timer := 0.0
 
 
 func _ready() -> void:
-	print("healthbar",healthbar)
+	
+	if target == null:
+		target = get_tree().get_first_node_in_group("Player")
+
 	if target:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position

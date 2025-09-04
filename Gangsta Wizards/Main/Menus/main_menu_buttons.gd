@@ -52,7 +52,7 @@ func _physics_process(_delta: float) -> void:
 		var area := result.collider as Area3D
 		if area != hovered_area:
 			_clear_hover()
-			_apply_hover(area)
+			#_apply_hover(area)
 	else:
 		_clear_hover()
 	
