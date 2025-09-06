@@ -955,6 +955,7 @@ func straightline_card_spell():
 
 func straight_laser_spell():
 	#if Input.is_action_pressed("Right_Click"):
+	if !magic_cooldown.is_stopped(): return
 	if !straight_laser_cooldown.is_stopped(): return
 	straight_laser_cooldown.start(6) #For 6 seconds, let _physics_process move the cards
 	straight_fly_cards(cards)
