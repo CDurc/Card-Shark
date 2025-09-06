@@ -91,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257044, 0.389257, -0.41132
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BombArea"]
 shape = SubResource("SphereShape3D_i8fwk")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -20,7 +20,7 @@ health = 400
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790327, 0.158742)
 shape = SubResource("SphereShape3D_ifq5y")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

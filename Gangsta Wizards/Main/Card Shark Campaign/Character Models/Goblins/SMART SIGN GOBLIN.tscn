@@ -18,7 +18,7 @@ health = 400
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.196775, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

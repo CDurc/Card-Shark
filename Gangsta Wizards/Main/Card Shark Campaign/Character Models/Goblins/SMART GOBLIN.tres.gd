@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
-@onready var target:		Node3D = get_node(target_path)
+@onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 #@onready var initial_healthbar = healthbar.scale.x

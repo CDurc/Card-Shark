@@ -111,6 +111,7 @@ signal health_updated
 @onready var card_container = $CardContainer
 @onready var basking_spawn = $Baskingspawn
 @onready var sound_footsteps = $SoundFootsteps
+@onready var sound_ahh = $SoundAhh
 @onready var card_cooldown = $CardCooldown
 @onready var magic_cooldown = $MagicCooldown #Timer for magic only
 @onready var gun_cooldown = $GunCooldown #Timer for magic only
@@ -526,12 +527,13 @@ func trigger_ragdoll(impulse: Vector3):
 
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		#flush_spell()
-		trigger_ragdoll(Vector3(30,200,30))
+		flush_spell()
+		#trigger_ragdoll(Vector3(30,200,30))
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
-		flatten()
+		#flatten()
+		basking_house_spell()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -712,6 +714,12 @@ func basking_house_spell():
 	# Now modify the unique duplicated mesh
 	tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
 	tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
+	
+	right_hand_container.visible = false
+	set_cards()
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.5).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
 		
 func fourkind_spell():
 	if !magic_cooldown.is_stopped(): return
@@ -827,6 +835,14 @@ func poopy_fart():
 	var tween := create_tween()
 	tween.tween_property(self, "movement_speed", 5, 5.0)
 	
+	toggle_healthbar(false)
+	right_hand_container.visible = false
+	set_cards()
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(5.2).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
+	toggle_healthbar(true)
+	
 	
 func flush_spell():
 	if !magic_cooldown.is_stopped(): return
@@ -853,11 +869,17 @@ func flush_spell():
 		pushbox.reset()
 		await get_tree().create_timer(1).timeout
 		print(i)
+	
+	right_hand_container.visible = false
+	set_cards()
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.5).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
 
 func move_shark(shark):
 	var path_follow = shark.get_node("PathFollow3D")
 	path_follow.progress = 0  # Reset position
-	path_follow.set_meta("speed", 3)  #pass speed to path3D
+	path_follow.set_meta("speed", 5)  #pass speed to path3D
 
 	# Enable per-frame movement
 	path_follow.set_process(true)
@@ -1317,6 +1339,9 @@ func damage(amount):
 	health -= amount
 	health_updated.emit(health) # Update health on HUD, possibly obselete
 	chipbar.call("display_chips",health)
+	Audio.play("sounds/ahhhhhhhhh.ogg")
+
+	
 	
 	if health < 0:
 		trigger_ragdoll(Vector3(0,0,0))
@@ -1325,7 +1350,11 @@ func damage(amount):
 		
 		#get_tree().reload_current_scene() # Reset when out of health
 		
-		
+
+func toggle_healthbar(vis: bool):
+	for bar in get_tree().get_nodes_in_group("Healthbars"):
+		bar.visible = vis
+
 @onready var int_prompt = get_node("HUD/Interact")
 func get_interact():
 	if raycast_int.is_colliding():

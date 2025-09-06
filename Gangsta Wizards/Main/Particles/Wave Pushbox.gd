@@ -1,7 +1,7 @@
 extends Area3D
 
-@export var damage = 18
-@export var force = 7.5
+@export var damage = 27
+@export var force = 8.5
 
 var player
 var collider
