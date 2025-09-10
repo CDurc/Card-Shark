@@ -91,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257044, 0.389257, -0.41132
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BombArea"]
 shape = SubResource("SphereShape3D_i8fwk")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -99,16 +99,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_jp2o8")
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "MY HELTH OW"
-horizontal_alignment = 1
 
 [node name="Healthbar" type="ColorRect" parent="Control"]
 layout_mode = 1

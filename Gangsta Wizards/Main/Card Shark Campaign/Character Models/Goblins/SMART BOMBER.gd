@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
-@onready var target:		Node3D = get_node(target_path)
+@onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 #@onready var initial_healthbar = healthbar.scale.x
@@ -50,11 +50,13 @@ var boom_effect = preload("res://Particles/BIGGER BOMB.tscn")
 
 
 func _ready() -> void:
-	print("healthbar",healthbar)
+	if target == null:
+		target = get_tree().get_first_node_in_group("Player")
+
 	if target:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
-	print("BOMB ANIME",bomb_anime)
+
 
 
 func _physics_process(delta: float) -> void:

@@ -14,6 +14,7 @@ height = 1.91287
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
 script = ExtResource("1_vufae")
+health = 100
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.21556, -0.0723298)
@@ -29,20 +30,28 @@ visible = false
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Goblin/Goblin Bones" index="0"]
+bones/5/rotation = Quaternion(-0.0113558, 0.511235, -0.77109, 0.379381)
+bones/48/rotation = Quaternion(-0.0536707, 0.993843, -0.0966377, -0.00747409)
 bones/64/rotation = Quaternion(0.973333, -0.00381346, -0.0382381, 0.226156)
 bones/65/rotation = Quaternion(0.589849, -0.0141048, -0.183501, 0.786261)
 bones/66/rotation = Quaternion(-0.651947, 0.0334044, 0.141093, 0.744273)
 bones/68/rotation = Quaternion(0.996833, -0.0217894, 0.0149244, 0.0750051)
 bones/69/rotation = Quaternion(0.485181, 0.0175067, -0.0275981, 0.873803)
 bones/70/rotation = Quaternion(-0.54464, -0.0472902, -0.0143458, 0.837213)
+bones/72/position = Vector3(-0.0958886, -0.00624156, 4.79502)
 bones/73/position = Vector3(0.904303, 1.50704, 0.614314)
 bones/75/position = Vector3(0.984244, 0.531334, 2.19688)
-bones/76/position = Vector3(-0.925834, 2.10191, 0.316863)
+bones/76/position = Vector3(-0.925835, 1.61109, 0.218328)
+bones/76/rotation = Quaternion(0.929327, -4.4019e-08, 1.10784e-07, -0.369257)
+bones/79/rotation = Quaternion(-0.839214, -0.0863456, 0.525681, -0.1092)
+
+[node name="HandContainer" parent="Goblin/Goblin Bones/Skeleton3D" index="2"]
+transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330224, 0.286421, 0.93094, -0.226524, -0.054896, 1.2731, 2.26035)
 
 [node name="Metal Pipe" parent="Goblin/Goblin Bones/Skeleton3D/HandContainer" index="0" instance=ExtResource("3_0fiey")]
 transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,16 +59,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_ra0xm")
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "MY HELTH OW"
-horizontal_alignment = 1
 
 [node name="Healthbar" type="ColorRect" parent="Control"]
 layout_mode = 1

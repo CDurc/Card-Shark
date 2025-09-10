@@ -5,8 +5,7 @@ extends CharacterBody3D
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath	
 
-@onready var target:		Node3D = get_node(target_path)
-@onready var target_center = target.get_node("CharacterCenter")
+@onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
@@ -36,6 +35,7 @@ var jump_timer = 0.0
 @export var jump_force: float = 9
 var jumping = false
 var was_stuck: bool = false
+var target_center
 
 
 
@@ -49,6 +49,9 @@ var attacking       = false
 var bullet_cooldown = 0.5
 var wants_to_jump = true
 
+var impatient_timer = 0
+var rush = false
+
 
 
 #@onready var upper_anime        = $Goblin/ArmAnimation
@@ -56,6 +59,12 @@ var wants_to_jump = true
 
 
 func _ready() -> void:
+	
+	if target == null:
+		target = get_tree().get_first_node_in_group("Player")
+		
+	target_center = target.get_node("CharacterCenter")
+	
 	print("healthbar",healthbar)
 	if target:
 		nav_agent.target_position = target.global_transform.origin
@@ -86,10 +95,19 @@ func _physics_process(delta: float) -> void:
 		#	velocity.x = 0
 		#	velocity.z = 0
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 15:
+		#CLOSE ENOUGH, TRY TO SHOOT	
+		if (target.global_transform.origin - global_transform.origin).length() < 15 and not rush:
 			wants_to_jump = false
 			velocity.x = 0
 			velocity.z = 0
+			#GETTING IMPATIENT
+			impatient_timer += delta
+			if impatient_timer >= 10:
+				rush = true
+				speed = 1.5*initial_speed
+			
+		
+			
 			
 		else:
 			wants_to_jump = true
@@ -194,6 +212,7 @@ func shoot():
 # Returns the direction if it's the first bullet
 func shoot_a_bullet(target_player := true, fixed_direction := Vector3.ZERO) -> Vector3:
 	var bullet = bullet_path.instantiate()
+	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65)
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = bullet_spawn.global_transform
 	

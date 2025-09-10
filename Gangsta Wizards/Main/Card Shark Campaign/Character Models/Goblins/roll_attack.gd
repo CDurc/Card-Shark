@@ -1,7 +1,7 @@
 
 extends Area3D
 
-@export var damage := 20
+@export var damage := 60
 
 var goblin
 @export var damaged_bodies := {} 
