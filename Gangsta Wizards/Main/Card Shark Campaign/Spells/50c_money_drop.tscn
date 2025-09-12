@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqba4pm573d0f"]
+
+[ext_resource type="Script" path="res://money_drop.gd" id="1_jplri"]
+[ext_resource type="PackedScene" uid="uid://byk05dhhe068b" path="res://Card Shark Campaign/Spells/Cash ($0.50).glb" id="2_wl1yd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nehei"]
+height = 0.111313
+radius = 0.431069
+
+[node name="50c_Money_drop" type="Node3D"]
+script = ExtResource("1_jplri")
+value = 0.5
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
+collision_layer = 8
+collision_mask = 8
+physics_material_override = SubResource("PhysicsMaterial_q5tod")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("CylinderShape3D_nehei")
+
+[node name="Cash ($0_50)" parent="RigidBody3D" instance=ExtResource("2_wl1yd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.0453287, 0)

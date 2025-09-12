@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf72a4lhccj7g"
-path.s3tc="res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"
+uid="uid://cvd61mj4ebnm8"
+path.s3tc="res://.godot/imported/Riverboat_Siding-White.jpg-d1dcf2f5d348ed6ac2d40def4da58ff8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d4edf7e16caf4a9026af6fdd4d4a9777"
+"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
 }
 
 [deps]
 
-source_file="res://Menus/Main Menu_MenuRoulette.jpg"
-dest_files=["res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"]
+source_file="res://Card Shark Campaign/Map Assets/Riverboat_Siding-White.jpg"
+dest_files=["res://.godot/imported/Riverboat_Siding-White.jpg-d1dcf2f5d348ed6ac2d40def4da58ff8.s3tc.ctex"]
 
 [params]
 

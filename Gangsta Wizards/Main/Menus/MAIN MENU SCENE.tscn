@@ -61,6 +61,7 @@ size = Vector2(0.5, 0.23)
 size = Vector3(3.22791, 0.0155273, 1.2782)
 
 [node name="Root" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000138283, 0.00102568, -0.000135422)
 
 [node name="Cam Work" type="Node3D" parent="."]
 

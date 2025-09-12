@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgyf7157jxepy"
-path="res://.godot/imported/Hall of the Mountain King.glb-e08a2e93456a91d3e6502f2f8e307f55.scn"
+uid="uid://b15pmsush7dea"
+path="res://.godot/imported/Riverboat.glb-e9f0d3111234d436e09b716ae3c5c24a.scn"
 
 [deps]
 
-source_file="res://CardSharkGoblinDefense/Hall of the Mountain King.glb"
-dest_files=["res://.godot/imported/Hall of the Mountain King.glb-e08a2e93456a91d3e6502f2f8e307f55.scn"]
+source_file="res://Card Shark Campaign/Map Assets/Riverboat.glb"
+dest_files=["res://.godot/imported/Riverboat.glb-e9f0d3111234d436e09b716ae3c5c24a.scn"]
 
 [params]
 
@@ -33,92 +33,78 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Cages": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Carpet": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Chair": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Chair_001": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_002": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_003": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_004": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_005": {
-"mesh_instance/layers": 9
-},
-"PATH:Columns": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Communit Toilets": {
-"mesh_instance/layers": 9
-},
-"PATH:Ext Walls": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Forge": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Lava Lamp": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Roof": {
+"PATH:0 - Simple Physics/2nd Floor": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Stairs": {
+"PATH:0 - Simple Physics/Cube": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Throne": {
+"PATH:0 - Simple Physics/Cube_001": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:ThroneSteps": {
+"PATH:0 - Simple Physics/First Floor": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Walls": {
+"PATH:0 - Simple Physics/Front": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Hull": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Railings": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Railings_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Roof": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Roof_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Steam Stacks": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Supports": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Walls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Windows": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:0 - Simple Physics/Windows_001": {
+"generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 }

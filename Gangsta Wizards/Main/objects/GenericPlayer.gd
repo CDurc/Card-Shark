@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var jump_strength = 8
 @export var health:int = 100
 @export var can_move = true
+@export var stamina:float = 6
 
 var initial_deck = [
 	{"rank": 2, "suit": "Clubs"},
@@ -77,6 +78,9 @@ var rotation_target: Vector3
 var input_mouse: Vector2
 
 var gravity := 0.0
+var replenishing_stamina = false
+var sprint_cooldown:float = 0
+
 
 var previously_floored := false
 
@@ -166,7 +170,7 @@ var seek_card_scene = preload("res://Card Shark/Seeking Physics Cards.tscn")
 var boom_card_scene = preload("res://Card Shark/Boom Physics Cards.tscn")
 var active_laser_path = preload("res://Card Shark/laser.tscn")
 var splash_path = preload("res://Particles/laser_splash.tscn")
-var poopy_path = preload("res://Particles/poopy_fart.tscn")
+var poopy_path = preload("res://Particles/new_poopy_fart.tscn")
 var flush_path = preload("res://Particles/flush_effect.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
 var fourkind_slam_scene = preload("res://Particles/fourkind_slam_effect.tscn")
@@ -192,6 +196,15 @@ func _ready():
 	load_bofa()
 	load_viewport()
 func _physics_process(delta):
+	
+	if sprint_cooldown > 0:
+		sprint_cooldown -= delta
+		replenishing_stamina = false
+	elif not sprinting:
+		replenishing_stamina = true
+	
+	if replenishing_stamina and stamina <6:
+		stamina += delta
 	
 	if is_disabled: #Currently only use this for ragdoll pls
 		#followhip.position = hip.position
@@ -527,7 +540,7 @@ func trigger_ragdoll(impulse: Vector3):
 
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		flush_spell()
+		poopy_fart()
 		#trigger_ragdoll(Vector3(30,200,30))
 
 func test_1_spell():
@@ -761,6 +774,12 @@ func fourkind_spell():
 	fourkind_slamming = true
 	await get_tree().create_timer(0.3).timeout
 	fourkind_slamming = false
+	
+	right_hand_container.visible = false
+	set_cards()
+	load_set_cards() #Load the textures
+	await get_tree().create_timer(0.5).timeout #Ensure it goes visible again after everything is ready
+	right_hand_container.visible = true
 
 func spawn_slam_effect(enemy,spawn):
 	await get_tree().create_timer(2.2).timeout
@@ -827,13 +846,13 @@ func poopy_fart():
 	magic_cooldown.start(5.5)
 	print("PLAY THE POOP")
 	Audio.play("Card Shark Campaign/Special Effects/wet-fart-1.mp3")
-	movement_speed = 0.1
+	#movement_speed = 0.1
 	var poop = poopy_path.instantiate()
 	var point = get_node("CharacterCenter")
 	poop.global_position = point.global_position
 	get_tree().current_scene.add_child(poop)
-	var tween := create_tween()
-	tween.tween_property(self, "movement_speed", 5, 5.0)
+	#var tween := create_tween()
+	#tween.tween_property(self, "movement_speed", 5, 5.0)
 	
 	toggle_healthbar(false)
 	right_hand_container.visible = false
@@ -1141,7 +1160,7 @@ func combine_cards():
 	combining = true
 	combine_t = 0.0  # Reset animation progress
 
-func _process(delta): #Currently only used for card combine and fourkind
+func _process(delta): 
 	
 	if is_disabled or generic_disable:
 		return
@@ -1188,16 +1207,26 @@ func _process(delta): #Currently only used for card combine and fourkind
 		# Apply new transform
 		card.transform = Transform3D(Basis(new_quat), new_pos)
 
-func sprint():
-	if Input.is_action_just_pressed("Sprint"):
-		sprinting = true
-		movement_speed = sprint_speed	
-	elif Input.is_action_just_released("Sprint"):
-		movement_speed = walk_speed
-		sprinting = false
-		await get_tree().process_frame
-		Leg_anime.play("Idle")
-		print("IDLEING")
+func sprint(delta):
+	#Start sprinting
+	if Input.is_action_pressed("Sprint") and stamina > 0:
+		if not sprinting:
+			sprinting = true
+			movement_speed = sprint_speed
+			replenishing_stamina = false
+		stamina = max(stamina - delta, 0)
+	
+	#Stop sprinting
+	if Input.is_action_just_released("Sprint") or stamina <= 0:
+		if sprinting:
+			sprinting = false
+			movement_speed = walk_speed
+			await get_tree().process_frame
+			Leg_anime.play("Idle")
+			print("STOP")
+			sprint_cooldown = 1
+			print("STAMINA =   ",stamina)
+
 
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
@@ -1261,11 +1290,14 @@ func _input(event):
 		rotation_target.y -= event.relative.x / mouse_sensitivity
 		rotation_target.x -= event.relative.y / mouse_sensitivity
 
-func handle_controls(_delta):
+func handle_controls(_delta): #Also handles sprint now
 	
+	sprint(_delta)
 	#seeking_card_spell()
-	sprint()
-	if not sprinting:
+	if sprinting:
+		pass
+		#stamina -= _delta
+	else:
 		discard()
 		shoot()
 		#straight_laser_spell()

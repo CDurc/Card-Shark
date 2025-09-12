@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf72a4lhccj7g"
-path.s3tc="res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"
+uid="uid://cu812xr78kdfm"
+path.s3tc="res://.godot/imported/Main Menu_marble-black.jpg-e13c9197c32932572d340bd737b5146d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d4edf7e16caf4a9026af6fdd4d4a9777"
+"md5": "b15c6cb122f2bb6855cce6208d67ba5c"
 }
 
 [deps]
 
-source_file="res://Menus/Main Menu_MenuRoulette.jpg"
-dest_files=["res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"]
+source_file="res://Menus/Main Menu_marble-black.jpg"
+dest_files=["res://.godot/imported/Main Menu_marble-black.jpg-e13c9197c32932572d340bd737b5146d.s3tc.ctex"]
 
 [params]
 
