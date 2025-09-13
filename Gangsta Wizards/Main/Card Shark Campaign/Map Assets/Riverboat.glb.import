@@ -35,76 +35,91 @@ _subresources={
 "nodes": {
 "PATH:0 - Simple Physics/2nd Floor": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Cube": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Cube_001": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/First Floor": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Front": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Hull": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Railings": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Railings_001": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Roof": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Roof_001": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Steam Stacks": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Supports": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Walls": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Windows": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:0 - Simple Physics/Windows_001": {
 "generate/physics": true,
+"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 }

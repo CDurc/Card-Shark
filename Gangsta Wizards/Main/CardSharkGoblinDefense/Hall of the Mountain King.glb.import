@@ -41,9 +41,9 @@ _subresources={
 },
 "PATH:Carpet": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
+"mesh_instance/layers": 8,
+"physics/layer": 8,
+"physics/mask": 8
 },
 "PATH:Chair": {
 "generate/physics": true,

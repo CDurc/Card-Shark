@@ -6,8 +6,8 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nehei"]
-height = 0.111313
-radius = 0.431069
+height = 0.250308
+radius = 0.586767
 
 [node name="50c_Money_drop" type="Node3D"]
 script = ExtResource("1_jplri")
@@ -23,4 +23,4 @@ physics_material_override = SubResource("PhysicsMaterial_q5tod")
 shape = SubResource("CylinderShape3D_nehei")
 
 [node name="Cash ($0_50)" parent="RigidBody3D" instance=ExtResource("2_wl1yd")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.0453287, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.104372, 0)

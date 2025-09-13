@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=10 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://dqba4pm573d0f" path="res://Card Shark Campaign/Spells/50c_money_drop.tscn" id="2_4rtbc"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="3_fuyke"]
-[ext_resource type="PackedScene" uid="uid://b15pmsush7dea" path="res://Card Shark Campaign/Map Assets/Riverboat.glb" id="3_xbido"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/UpdateTimer.gd" id="5_gqf0d"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/Goblin Mode.gd" id="6_fxncw"]
 
@@ -51,10 +50,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39828, 12.048, 0.261719)
 shape = SubResource("BoxShape3D_xn5qg")
 
 [node name="50c_Money_drop" parent="Map" instance=ExtResource("2_4rtbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.0142, -2.6184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.68659, 27.0142, -9.9746)
 
-[node name="Riverboat" parent="Map" instance=ExtResource("3_xbido")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44224, 11.3018, -1.40641)
+[node name="50c_Money_drop2" parent="Map" instance=ExtResource("2_4rtbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.68659, 27.0142, -3.57864)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_fuyke")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.63331, 25.2357, -9.96533)

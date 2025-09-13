@@ -711,22 +711,38 @@ func basking_house_spell():
 	basking_shark.global_transform = basking_spawn.global_transform
 	get_tree().root.add_child(basking_shark)
 	move_shark(basking_shark)
-	await get_tree().create_timer(3).timeout #wait to open mouth
+	await get_tree().create_timer(1).timeout #wait to open mouth
 	var shark_anime = basking_shark.get_node("PathFollow3D").get_node("Basking Shark").get_node("AnimationPlayer")
 	shark_anime.play("Expand")
-	shark_anime.speed_scale = 0.5
+	shark_anime.speed_scale = 0.7
 	# Increase suckbox as mouth opens
 	var tween = get_tree().create_tween()
+	var sucktween = get_tree().create_tween()
 
 	var sucking_visual = basking_shark.get_node("PathFollow3D/Basking Shark/Sucker/Sucking visual")
 	var visual_mesh = sucking_visual.mesh
+	var sucking_real = basking_shark.get_node("PathFollow3D/Basking Shark/Sucker/Suckbox")
+	var real_mesh = sucking_real.shape
 
-	# Duplicate the mesh and apply it back to the MeshInstance3D
+	# Duplicate the mesh and shape so they’re unique instances
 	sucking_visual.mesh = visual_mesh.duplicate()
+	sucking_real.shape = real_mesh.duplicate()
 
-	# Now modify the unique duplicated mesh
-	tween.tween_property(sucking_visual.mesh, "top_radius", 3, 4)
-	tween.tween_property(sucking_visual.mesh, "bottom_radius", 3, 4)
+	# Get references to the duplicates
+	var mesh = sucking_visual.mesh
+	var shape = sucking_real.shape
+
+	# Animate height
+	tween.tween_property(mesh, "height", 2, 0.75)
+	sucktween.tween_property(shape, "height", 2, 0.75)
+
+	# Animate radius (mesh uses top/bottom, shape uses radius)
+	tween.tween_property(mesh, "top_radius", 3, 0.75)
+	tween.tween_property(mesh, "bottom_radius", 3, 0.75)
+	sucktween.tween_property(shape, "radius", 3, 0.75)
+
+
+
 	
 	right_hand_container.visible = false
 	set_cards()
