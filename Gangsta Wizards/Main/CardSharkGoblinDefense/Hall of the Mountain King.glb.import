@@ -33,92 +33,94 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Cages": {
+"PATH:1 - Collisions/Cages": {
 "generate/physics": true,
 "mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Carpet": {
-"generate/physics": true,
-"mesh_instance/layers": 8,
-"physics/layer": 8,
-"physics/mask": 8
-},
-"PATH:Chair": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Chair_001": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_002": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_003": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_004": {
-"mesh_instance/layers": 9
-},
-"PATH:Chair_005": {
-"mesh_instance/layers": 9
-},
-"PATH:Columns": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Communit Toilets": {
-"mesh_instance/layers": 9
-},
-"PATH:Ext Walls": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Forge": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Lava Lamp": {
-"generate/physics": true,
-"mesh_instance/layers": 9,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:Roof": {
+"PATH:1 - Collisions/Chair": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Stairs": {
+"PATH:1 - Collisions/Chair_001": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Throne": {
+"PATH:1 - Collisions/Chair_002": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:ThroneSteps": {
+"PATH:1 - Collisions/Chair_003": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:Walls": {
+"PATH:1 - Collisions/Chair_004": {
 "generate/physics": true,
-"mesh_instance/layers": 9,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Chair_005": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Columns": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Communit Toilets": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Ext Walls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Forge": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Lava Lamp": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Roof": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Stairs": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Throne": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/ThroneSteps": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Top Walkways": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - Collisions/Walls": {
+"generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 }
