@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var health:int = 100
 @export var can_move = true
 @export var stamina:float = 6
+@export var reload_time:float = 3.25
 
 var initial_deck = [
 	{"rank": 2, "suit": "Clubs"},
@@ -132,6 +133,7 @@ signal health_updated
 @onready var HUD = $HUD
 @onready var ranges = $Ranges
 @onready var chipbar = $HUD/Chipbar
+@onready var ammo_counter = $HUD/Bottombar/Ammo
 
 @onready var flat_cam_goal = $Head/Flatcam_point
 
@@ -142,6 +144,8 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var reloading = false
+var ammo = 16
 var is_disabled = false #Use this for ragdoll
 var generic_disable = false #Use this for everything else
 var can_double_jump = false
@@ -538,6 +542,10 @@ func trigger_ragdoll(impulse: Vector3):
 
 	#SHORTCUT SPELL 2 SPELL2
 
+func reload_spell():
+	if Input.is_action_just_pressed("reload"):
+		reload()
+
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		poopy_fart()
@@ -735,11 +743,12 @@ func basking_house_spell():
 	# Animate height
 	tween.tween_property(mesh, "height", 2, 0.75)
 	sucktween.tween_property(shape, "height", 2, 0.75)
-
+	#await get_tree().create_timer(1.5).timeout
+	print("WOP")
 	# Animate radius (mesh uses top/bottom, shape uses radius)
 	tween.tween_property(mesh, "top_radius", 3, 0.75)
 	tween.tween_property(mesh, "bottom_radius", 3, 0.75)
-	sucktween.tween_property(shape, "radius", 3, 0.75)
+	#sucktween.tween_property(shape, "radius", 3, 0.75)
 
 
 
@@ -1244,13 +1253,30 @@ func sprint(delta):
 			print("STAMINA =   ",stamina)
 
 
+func reload():
+	reloading = true
+	gun_anime.play("Reload")
+	await get_tree().create_timer(0.5).timeout
+	LA_anime.play("Reload")
+	await get_tree().create_timer(reload_time - 0.5).timeout
+	ammo = 16
+	ammo_counter.text = "Ammo:  " + str(ammo)
+	await get_tree().process_frame
+	reloading = false
+
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
 	
 		if !gun_cooldown.is_stopped(): return
+		if ammo <= 0 and not reloading:
+			reload()
+			return
+		if reloading: return
 		
+		ammo -= 1
 		Audio.play("sounds/blaster_repeater.ogg")
 		gun_anime.play("Fire")
+		ammo_counter.text = "Ammo:  " + str(ammo)
 		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual
@@ -1323,6 +1349,7 @@ func handle_controls(_delta): #Also handles sprint now
 		cast_spell()
 		test_2_spell()
 		test_1_spell()
+		reload_spell()
 		# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):
