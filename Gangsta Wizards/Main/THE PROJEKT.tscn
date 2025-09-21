@@ -1,4 +1,4 @@
-[gd_scene load_steps=329 format=4 uid="uid://cvo5qsrnmwa20"]
+[gd_scene load_steps=335 format=4 uid="uid://cvo5qsrnmwa20"]
 
 [ext_resource type="PackedScene" uid="uid://bvx5cvigosg0s" path="res://objects/platform_large_grass.tscn" id="1_a674t"]
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_t7jbi"]
@@ -55,13 +55,19 @@
 [ext_resource type="PackedScene" uid="uid://dgbsjmm3wgltb" path="res://Card Shark Campaign/Map Assets/DEI Tower.glb" id="58_gw40c"]
 [ext_resource type="PackedScene" uid="uid://pll72lr818x" path="res://Card Shark Campaign/Character Models/Goblins/goblin_13.glb" id="62_cwl6q"]
 [ext_resource type="PackedScene" uid="uid://b57hglfltpbkn" path="res://Card Shark Campaign/Character Models/Goblins/goblin_15.glb" id="62_ngxxe"]
+[ext_resource type="PackedScene" uid="uid://d375x7n0eoo7e" path="res://BUILDINGS/Assembly/A-2/Casino.glb" id="63_0rc54"]
 [ext_resource type="PackedScene" uid="uid://ll8a1tl33v4q" path="res://Card Shark Campaign/Character Models/Goblins/goblin_16.glb" id="63_nsskc"]
 [ext_resource type="PackedScene" uid="uid://c8dj31sfiwqpm" path="res://Card Shark Campaign/Character Models/Goblins/goblin_14.glb" id="63_yu07t"]
 [ext_resource type="PackedScene" uid="uid://cjlpemundpthj" path="res://Card Shark Campaign/Weapons/Sniper.glb" id="64_0f0j8"]
+[ext_resource type="PackedScene" uid="uid://cwmfus5eww1x7" path="res://BUILDINGS/Residential/R-1/Casino Hotel.glb" id="64_81o4l"]
 [ext_resource type="PackedScene" uid="uid://pwg6dn1kytyy" path="res://Card Shark Campaign/Map Assets/openable_door_wooden1.tscn" id="64_m04sh"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="65_ai2mc"]
+[ext_resource type="PackedScene" uid="uid://btfgpywsdsn31" path="res://BUILDINGS/Residential/R-2/Walker Center.glb" id="65_j5fwu"]
 [ext_resource type="PackedScene" uid="uid://d3xtr7xupcsmg" path="res://Card Shark Campaign/Weapons/Flamethrower.glb" id="65_uwa5b"]
 [ext_resource type="PackedScene" uid="uid://b1v8vca37cdi6" path="res://Card Shark Campaign/Character Models/Goblins/goblin_10.glb" id="66_fdq5d"]
+[ext_resource type="PackedScene" uid="uid://bbslyfkj8do" path="res://BUILDINGS/Residential/R-3/Wizard Tower.glb" id="66_lyn5l"]
+[ext_resource type="PackedScene" uid="uid://c1j0gr7nhymgj" path="res://BUILDINGS/Mixed Use/Asian Strip Mall.glb" id="67_bx3xx"]
+[ext_resource type="PackedScene" uid="uid://bvlvuw4alvnqu" path="res://BUILDINGS/Assembly/A-2/Roadhouse.glb" id="68_70y5j"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_tserv"]
 size = Vector3(9, 4, 1)
@@ -10489,7 +10495,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.8103, 37.2533, -188.403)
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -18.3357, 33.1907, -178.989)
 
 [node name="Dentist Office" parent="." instance=ExtResource("45_wk75y")]
-transform = Transform3D(-0.0340971, 0, -0.999418, 0, 1, 0, 0.999418, 0, -0.0340971, 55.7186, 31.9021, -199.754)
+transform = Transform3D(-0.0340971, 0, -0.999418, 0, 1, 0, 0.999418, 0, -0.0340971, 63.5888, 31.9021, -199.754)
 
 [node name="Golf Course" parent="." instance=ExtResource("46_3vogt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206.266, 40.3372, -406.519)
@@ -10571,6 +10577,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4526, 33.6385, -181.3)
 
 [node name="goblin_17" parent="." instance=ExtResource("55_3sly8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5808, 33.4985, -183.193)
+
+[node name="Casino" parent="." instance=ExtResource("63_0rc54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.7485, 36.7748, -367.52)
+
+[node name="Casino Hotel" parent="." instance=ExtResource("64_81o4l")]
+transform = Transform3D(-0.0908411, 0, 0.995865, 0, 1, 0, -0.995865, 0, -0.0908411, -43.2613, 39.4609, -324.743)
+
+[node name="Walker Center" parent="." instance=ExtResource("65_j5fwu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.4942, 35.8209, -279.437)
+
+[node name="Wizard Tower" parent="." instance=ExtResource("66_lyn5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2703, 32.1552, -252.374)
+
+[node name="Asian Strip Mall" parent="." instance=ExtResource("67_bx3xx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93526, 32.4351, -255.609)
+
+[node name="Roadhouse" parent="." instance=ExtResource("68_70y5j")]
+transform = Transform3D(0.999996, 0, 0.00267037, 0, 1, 0, -0.00267037, 0, 0.999996, 24.6186, 32.1819, -224.838)
 
 [connection signal="body_entered" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_entered"]
 [connection signal="body_exited" from="Map/Openable Door/Open Zone" to="Map/Openable Door" method="on_body_exited"]

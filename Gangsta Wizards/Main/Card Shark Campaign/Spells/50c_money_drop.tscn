@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqba4pm573d0f"]
+[gd_scene load_steps=6 format=3 uid="uid://dqba4pm573d0f"]
 
-[ext_resource type="Script" path="res://money_drop.gd" id="1_jplri"]
 [ext_resource type="PackedScene" uid="uid://byk05dhhe068b" path="res://Card Shark Campaign/Spells/Cash ($0.50).glb" id="2_wl1yd"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Spells/money_pickup.gd" id="3_deux0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
 
@@ -9,9 +9,10 @@
 height = 0.336254
 radius = 0.586767
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
+radius = 1.4
+
 [node name="50c_Money_drop" type="Node3D"]
-script = ExtResource("1_jplri")
-value = 0.5
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
@@ -25,3 +26,12 @@ shape = SubResource("CylinderShape3D_nehei")
 
 [node name="Cash ($0_50)" parent="RigidBody3D" instance=ExtResource("2_wl1yd")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0319533, 0)
+
+[node name="Pickup" type="Area3D" parent="RigidBody3D"]
+script = ExtResource("3_deux0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
+shape = SubResource("SphereShape3D_53sqn")
+
+[connection signal="body_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_shape_entered"]

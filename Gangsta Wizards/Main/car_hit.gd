@@ -18,13 +18,14 @@ func _on_body_entered(body):
 		car_direction = -(global_transform.basis.x.normalized())
 		#fly_direction = (3*car_direction + Vector3.UP).normalized()
 		
-		player.can_move = false
-		flying = true
+		#player.can_move = false
+		#flying = true
+		player.trigger_ragdoll(20*(5*car_direction + Vector3.UP).normalized())
 		
-		await get_tree().create_timer(3).timeout
-		player.can_move = true
-		flying = false
-		decay = 35
+		#await get_tree().create_timer(3).timeout
+		#player.can_move = true
+		#flying = false
+		#decay = 35
 		
 func fly():
 	player.velocity = (car_direction * initial_speed) + (Vector3.UP * decay)

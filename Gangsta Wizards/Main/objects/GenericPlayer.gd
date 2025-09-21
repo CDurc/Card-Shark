@@ -144,6 +144,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var money = 0
 var reloading = false
 var ammo = 16
 var is_disabled = false #Use this for ragdoll
