@@ -6,8 +6,8 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nehei"]
-height = 0.336254
-radius = 0.586767
+height = 0.15215
+radius = 0.19225
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
 radius = 1.4
@@ -25,10 +25,11 @@ continuous_cd = true
 shape = SubResource("CylinderShape3D_nehei")
 
 [node name="Cash ($0_50)" parent="RigidBody3D" instance=ExtResource("2_wl1yd")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0319533, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.00748387, 0)
 
 [node name="Pickup" type="Area3D" parent="RigidBody3D"]
 script = ExtResource("3_deux0")
+value = 50
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
 shape = SubResource("SphereShape3D_53sqn")

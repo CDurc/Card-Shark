@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn4cctmxt26ml"]
+[gd_scene load_steps=6 format=3 uid="uid://dbr5kay0a2oev"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Spells/money_pickup.gd" id="3_0jfvf"]
-[ext_resource type="PackedScene" uid="uid://b8vwilplv4upt" path="res://Card Shark Campaign/Spells/Cash ($1).glb" id="3_kttjc"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Spells/money_pickup.gd" id="1_palwe"]
+[ext_resource type="PackedScene" uid="uid://cfdwbhxrfn7dn" path="res://Card Shark Campaign/Spells/Cash ($5).glb" id="2_0osjg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nehei"]
 height = 0.129492
-radius = 0.337867
+radius = 0.20627
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
 radius = 1.4
@@ -25,14 +25,13 @@ continuous_cd = true
 shape = SubResource("CylinderShape3D_nehei")
 
 [node name="Pickup" type="Area3D" parent="RigidBody3D"]
-script = ExtResource("3_0jfvf")
-value = 100
+script = ExtResource("1_palwe")
+value = 500
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
 shape = SubResource("SphereShape3D_53sqn")
 
-[node name="Cash ($1)" parent="RigidBody3D" instance=ExtResource("3_kttjc")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.124919, 0, 0.077059)
+[node name="Cash ($5)" parent="RigidBody3D/Pickup" instance=ExtResource("2_0osjg")]
 
 [connection signal="body_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_entered"]
 [connection signal="body_shape_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_shape_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=35 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -28,6 +28,37 @@
 [ext_resource type="PackedScene" uid="uid://btfgpywsdsn31" path="res://BUILDINGS/Residential/R-2/Walker Center.glb" id="26_cor53"]
 [ext_resource type="PackedScene" uid="uid://cumvaj707kbdi" path="res://BUILDINGS/Utility and Misc/Arboretum.glb" id="27_54lbp"]
 [ext_resource type="PackedScene" uid="uid://clu3ui44gjw1g" path="res://BUILDINGS/Utility and Misc/Water Tower.glb" id="28_dmbat"]
+[ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="30_vklu3"]
+
+[sub_resource type="Gradient" id="Gradient_or2fw"]
+colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_42aqb"]
+gradient = SubResource("Gradient_or2fw")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vrrql"]
+panorama = SubResource("GradientTexture2D_42aqb")
+
+[sub_resource type="Sky" id="Sky_rsjuq"]
+sky_material = SubResource("PanoramaSkyMaterial_vrrql")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_fh68l"]
+background_mode = 2
+sky = SubResource("Sky_rsjuq")
+ambient_light_source = 2
+ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 1.0
+ssao_power = 5.0
+glow_enabled = true
+glow_levels/2 = 0.6
+glow_levels/3 = 0.6
+glow_levels/5 = 0.0
+glow_intensity = 2.0
 
 [node name="RootNode" type="Node3D"]
 
@@ -93,26 +124,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.533, 33.3946, -103.638)
 [node name="Garbage" parent="MAP" instance=ExtResource("20_mu2ki")]
 transform = Transform3D(0.978289, 0, -0.207246, 0, 1, 0, 0.207246, 0, 0.978289, 86.6895, 36.7687, -116.625)
 
-[node name="White House" parent="." instance=ExtResource("21_m3ctc")]
+[node name="White House" parent="MAP" instance=ExtResource("21_m3ctc")]
 transform = Transform3D(0.128951, 0, 0.991651, 0, 1, 0, -0.991651, 0, 0.128951, 58.8621, 32.2863, -86.9799)
 
-[node name="Asian Strip Mall" parent="." instance=ExtResource("22_062sa")]
+[node name="Asian Strip Mall" parent="MAP" instance=ExtResource("22_062sa")]
 transform = Transform3D(-0.00570716, 0, -0.999984, 0, 1, 0, 0.999984, 0, -0.00570716, -65.2979, 32.1279, 194.861)
 
-[node name="Strip Mall 1" parent="." instance=ExtResource("23_sgfm1")]
+[node name="Strip Mall 1" parent="MAP" instance=ExtResource("23_sgfm1")]
 transform = Transform3D(-0.0110826, 0, -0.999939, 0, 1, 0, 0.999939, 0, -0.0110826, -99.8585, 36.3323, 272.482)
 
-[node name="Strip Mall 3" parent="." instance=ExtResource("24_j7afh")]
+[node name="Strip Mall 3" parent="MAP" instance=ExtResource("24_j7afh")]
 transform = Transform3D(0.0740911, 0, 0.997252, 0, 1, 0, -0.997252, 0, 0.0740911, 80.3571, 32.9292, -93.1254)
 
-[node name="Casino Hotel" parent="." instance=ExtResource("25_ofkor")]
+[node name="Casino Hotel" parent="MAP" instance=ExtResource("25_ofkor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.052, 34.9269, 8.44445)
 
-[node name="Walker Center" parent="." instance=ExtResource("26_cor53")]
+[node name="Walker Center" parent="MAP" instance=ExtResource("26_cor53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -195.957, 36.8422, 167.694)
 
-[node name="Arboretum" parent="." instance=ExtResource("27_54lbp")]
+[node name="Arboretum" parent="MAP" instance=ExtResource("27_54lbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.502, 32.708, 232.578)
 
-[node name="Water Tower" parent="." instance=ExtResource("28_dmbat")]
+[node name="Water Tower" parent="MAP" instance=ExtResource("28_dmbat")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -334.189, 58.3915, 79.4819)
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -98.4716, 20.5558, 322.226)
+health = 250
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fh68l")
