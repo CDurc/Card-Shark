@@ -875,7 +875,7 @@ func poopy_fart():
 	#movement_speed = 0.1
 	var poop = poopy_path.instantiate()
 	var point = get_node("CharacterCenter")
-	poop.global_position = point.global_position
+	poop.global_position = point.global_position + 0.3*Vector3.UP
 	get_tree().current_scene.add_child(poop)
 	#var tween := create_tween()
 	#tween.tween_property(self, "movement_speed", 5, 5.0)

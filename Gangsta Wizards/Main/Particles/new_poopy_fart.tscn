@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bwcpw01wgs26t"]
+[gd_scene load_steps=38 format=3 uid="uid://bwcpw01wgs26t"]
 
 [ext_resource type="Script" path="res://Particles/poopy_fart.gd" id="1_r3o3s"]
 [ext_resource type="Script" path="res://Particles/falling_node.gd" id="2_epkrp"]
@@ -167,10 +167,22 @@ radius = 0.15
 height = 4.0
 radius = 10.0
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_pk0y0"]
+top_radius = 10.0
+bottom_radius = 10.0
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gb1de"]
+transparency = 1
+albedo_color = Color(1, 0.431373, 1, 0.0823529)
+
 [node name="Particles" type="Node3D"]
 script = ExtResource("1_r3o3s")
+auto_remove_after = 12
 
 [node name="Poop" type="RigidBody3D" parent="."]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("2_epkrp")
 
 [node name="Explosive" type="GPUParticles3D" parent="Poop"]
@@ -193,7 +205,7 @@ process_material = SubResource("ParticleProcessMaterial_lcnvv")
 draw_pass_1 = SubResource("SphereMesh_2c6fo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Poop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26737, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.902626, 0)
 shape = SubResource("SphereShape3D_mxu8c")
 
 [node name="Slowbox" type="Area3D" parent="Poop"]
@@ -201,6 +213,11 @@ script = ExtResource("3_vqdyq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Poop/Slowbox"]
 shape = SubResource("CylinderShape3D_qy273")
+
+[node name="visual indicator" type="MeshInstance3D" parent="Poop"]
+visible = false
+mesh = SubResource("CylinderMesh_pk0y0")
+surface_material_override/0 = SubResource("StandardMaterial3D_gb1de")
 
 [connection signal="body_entered" from="Poop" to="Poop" method="_on_body_entered"]
 [connection signal="body_entered" from="Poop/Slowbox" to="Poop/Slowbox" method="_on_body_entered"]

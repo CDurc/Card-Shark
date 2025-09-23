@@ -4,6 +4,9 @@ extends Area3D
 var inside = false
 
 
+func _ready() -> void:
+	await get_tree().create_timer(9).timeout
+	queue_free()
 
 func _on_body_entered(body: Node3D) -> void:
 	if body == player:
