@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlef2n2m4xln"
+uid="uid://2si87c4hn5po"
 path.s3tc="res://.godot/imported/Bank_grass.jpg-767e1ec019eaba10adafb881d35db783.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "860b54557fdde542776d96f3ee70f363"
 }
 
 [deps]
