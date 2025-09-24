@@ -31,6 +31,134 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Canopies": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Casework": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Ceiling": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Chairs": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Computer Workstations": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/End Tables": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Exterior Walls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Hospital Beds": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Interior Walls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Planters": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Plumbing Vents": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/RTU Screenwalls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Roller Chairs": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Roof Hatch": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Sinks": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Site": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Stationary Doors": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Stools": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tables": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Toilets": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Windows": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

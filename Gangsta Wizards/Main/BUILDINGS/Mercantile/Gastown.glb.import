@@ -31,6 +31,49 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Cube": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cube_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cylinder": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cylinder_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cylinder_002": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tank": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tank_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tank_002": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

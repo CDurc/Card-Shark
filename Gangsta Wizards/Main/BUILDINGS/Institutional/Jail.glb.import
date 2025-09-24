@@ -31,6 +31,54 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Cage": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cage Door": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cage Door_002": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Deck": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Deck_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Supports": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Walls": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
