@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=82 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -67,6 +67,15 @@
 [ext_resource type="PackedScene" uid="uid://b0iogy187nnnb" path="res://BUILDINGS/Mercantile/Pharmacy.glb" id="56_eayfe"]
 [ext_resource type="PackedScene" uid="uid://v3jouk2wmjtq" path="res://BUILDINGS/Mercantile/Gastown.glb" id="57_xnbsb"]
 [ext_resource type="PackedScene" uid="uid://do65oehrnioei" path="res://MAP - NON-BUILDINGS/Chinaville.glb" id="58_maxk2"]
+[ext_resource type="PackedScene" uid="uid://u24g5cxrd6oj" path="res://MAP - NON-BUILDINGS/Goblin Fort.glb" id="59_taptl"]
+[ext_resource type="PackedScene" uid="uid://dws7lq4dcmj7v" path="res://MAP - NON-BUILDINGS/Golf Course.glb" id="60_rr00k"]
+[ext_resource type="PackedScene" uid="uid://chk0a5hf3k111" path="res://MAP - NON-BUILDINGS/Gourdtown Cemetery.glb" id="61_o8ffx"]
+[ext_resource type="PackedScene" uid="uid://ssk13adeyano" path="res://MAP - NON-BUILDINGS/Grassy Area.glb" id="62_bla1o"]
+[ext_resource type="PackedScene" uid="uid://db215pyrq4icu" path="res://MAP - NON-BUILDINGS/Music Stage.glb" id="63_nt00c"]
+[ext_resource type="PackedScene" uid="uid://dptw0podvkmr" path="res://MAP - NON-BUILDINGS/Riverboat.glb" id="64_pdl7t"]
+[ext_resource type="PackedScene" uid="uid://ege1bma4bxit" path="res://MAP - NON-BUILDINGS/Scenic Overlook.glb" id="65_x6a1w"]
+[ext_resource type="PackedScene" uid="uid://cxilxymhpr8c3" path="res://MAP - NON-BUILDINGS/Time Square.glb" id="66_h7nj4"]
+[ext_resource type="PackedScene" uid="uid://rs36a1ol6iuy" path="res://MAP - NON-BUILDINGS/WindTurbine.glb" id="67_ivgyn"]
 
 [sub_resource type="Gradient" id="Gradient_or2fw"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -115,7 +124,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -226.992, 32.9691, 43.9235)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1405, 37.8932, 104.668)
 
 [node name="Golf Clubhouse" parent="MAP" instance=ExtResource("5_04wnq")]
-transform = Transform3D(0.854432, 0, -0.519564, 0, 1, 0, 0.519564, 0, 0.854432, -304.167, 31.5018, 147.232)
+transform = Transform3D(0.854432, 0, -0.519564, 0, 1, 0, 0.519564, 0, 0.854432, -312.643, 32.88, 90.5774)
 
 [node name="Macrowave" parent="MAP" instance=ExtResource("6_hyfyx")]
 transform = Transform3D(-0.986827, 0, -0.161776, 0, 1, 0, 0.161776, 0, -0.986827, -323.798, 34.6236, 348.8)
@@ -157,7 +166,7 @@ transform = Transform3D(0.962564, 0, 0.271054, 0, 1, 0, -0.271054, 0, 0.962564, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22314, 32.8423, 139.346)
 
 [node name="Construction Skyscraper" parent="MAP" instance=ExtResource("19_fq4q7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.533, 33.3946, -103.638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.079, 33.3946, -118.405)
 
 [node name="Garbage" parent="MAP" instance=ExtResource("20_mu2ki")]
 transform = Transform3D(0.978289, 0, -0.207246, 0, 1, 0, 0.207246, 0, 0.978289, 86.6895, 36.7687, -116.625)
@@ -175,7 +184,7 @@ transform = Transform3D(-0.0110826, 0, -0.999939, 0, 1, 0, 0.999939, 0, -0.01108
 transform = Transform3D(0.0740911, 0, 0.997252, 0, 1, 0, -0.997252, 0, 0.0740911, 80.3571, 32.9292, -93.1254)
 
 [node name="Casino Hotel" parent="MAP" instance=ExtResource("25_ofkor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.052, 34.9269, 8.44445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.052, 33.23, 8.44445)
 
 [node name="Walker Center" parent="MAP" instance=ExtResource("26_cor53")]
 transform = Transform3D(0.999166, 0, -0.0408294, 0, 1, 0, 0.0408294, 0, 0.999166, -196.056, 36.8422, 166.902)
@@ -184,7 +193,7 @@ transform = Transform3D(0.999166, 0, -0.0408294, 0, 1, 0, 0.0408294, 0, 0.999166
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.502, 32.708, 232.578)
 
 [node name="Water Tower" parent="MAP" instance=ExtResource("28_dmbat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -334.189, 58.3915, 79.4819)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -327.64, 58.3915, 62.2903)
 
 [node name="Capitol" parent="MAP" instance=ExtResource("29_k32w2")]
 transform = Transform3D(-0.0236645, 0, 0.99972, 0, 1, 0, -0.99972, 0, -0.0236645, -230.619, 35.7452, 252.535)
@@ -241,10 +250,10 @@ transform = Transform3D(0.999639, 0, -0.0268748, 0, 1, 0, 0.0268748, 0, 0.999639
 transform = Transform3D(-0.569107, 0, -0.822263, 0, 1, 0, 0.822263, 0, -0.569107, -39.0622, 32.8792, 296.603)
 
 [node name="WooCorp Tower" parent="MAP" instance=ExtResource("47_b0t5c")]
-transform = Transform3D(0.813578, 0, 0.581456, 0, 1, 0, -0.581456, 0, 0.813578, -145.333, 28.4571, -78.9927)
+transform = Transform3D(0.813578, 0, 0.581456, 0, 1, 0, -0.581456, 0, 0.813578, -145.787, 32.0992, -94.2141)
 
 [node name="Factory" parent="MAP" instance=ExtResource("48_fp3ge")]
-transform = Transform3D(0.999759, 0, -0.021937, 0, 1, 0, 0.021937, 0, 0.999759, -202.44, 39.4234, 76.43)
+transform = Transform3D(0.999759, 0, -0.021937, 0, 1, 0, 0.021937, 0, 0.999759, -202.44, 32.9447, 76.43)
 
 [node name="Hospital" parent="MAP" instance=ExtResource("49_6h740")]
 transform = Transform3D(-0.625338, 0, -0.780354, 0, 1, 0, 0.780354, 0, -0.625338, -127.02, 34.068, -285.444)
@@ -256,7 +265,7 @@ transform = Transform3D(-0.5656, 0, 0.824679, 0, 1, 0, -0.824679, 0, -0.5656, -1
 transform = Transform3D(0.933693, 0, 0.358075, 0, 1, 0, -0.358075, 0, 0.933693, -231.699, 32.0024, 307.915)
 
 [node name="DanFuel" parent="MAP" instance=ExtResource("52_bchf1")]
-transform = Transform3D(0.999486, 0, -0.0320562, 0, 1, 0, 0.0320562, 0, 0.999486, -248.262, 34.849, -203.292)
+transform = Transform3D(0.999486, 0, -0.0320562, 0, 1, 0, 0.0320562, 0, 0.999486, -251.6, 34.849, -199.286)
 
 [node name="Gas Station" parent="MAP" instance=ExtResource("53_uvbt5")]
 transform = Transform3D(0.875928, 0, 0.482442, 0, 1, 0, -0.482442, 0, 0.875928, -163.017, 37.4352, 279.731)
@@ -275,6 +284,39 @@ transform = Transform3D(0.182115, 0, 0.983277, 0, 1, 0, -0.983277, 0, 0.182115, 
 
 [node name="Chinaville" parent="MAP" instance=ExtResource("58_maxk2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6406, -0.979485, 178.957)
+
+[node name="Goblin Fort" parent="MAP" instance=ExtResource("59_taptl")]
+transform = Transform3D(0.998222, 0, 0.0596026, 0, 1, 0, -0.0596026, 0, 0.998222, -289.283, 34.996, 239.48)
+
+[node name="Golf Course" parent="MAP" instance=ExtResource("60_rr00k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -331.194, 41.1758, 69.8482)
+
+[node name="Gourdtown Cemetery" parent="MAP" instance=ExtResource("61_o8ffx")]
+transform = Transform3D(0.990396, 0, -0.138257, 0, 1, 0, 0.138257, 0, 0.990396, 35.5501, 28.6018, -19.8128)
+
+[node name="Grassy Area" parent="MAP" instance=ExtResource("62_bla1o")]
+transform = Transform3D(0.99998, 0, -0.00626569, 0, 1, 0, 0.00626569, 0, 0.99998, -154.681, 32.2199, 36.6578)
+
+[node name="Music Stage" parent="MAP" instance=ExtResource("63_nt00c")]
+transform = Transform3D(-0.240008, 0, 0.970771, 0, 1, 0, -0.970771, 0, -0.240008, 42.9813, 33.5221, 318.456)
+
+[node name="Riverboat" parent="MAP" instance=ExtResource("64_pdl7t")]
+transform = Transform3D(0.0324574, 0, -0.999473, 0, 1, 0, 0.999473, 0, 0.0324574, -128.982, -3.2804, 477.116)
+
+[node name="Scenic Overlook" parent="MAP" instance=ExtResource("65_x6a1w")]
+transform = Transform3D(-0.700934, 0, -0.713226, 0, 1, 0, 0.713226, 0, -0.700934, -243.354, 33.2004, -209.004)
+
+[node name="Time Square" parent="MAP" instance=ExtResource("66_h7nj4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.602, 0.201931, -56.1431)
+
+[node name="WindTurbine" parent="MAP" instance=ExtResource("67_ivgyn")]
+transform = Transform3D(-0.876936, 0, -0.480606, 0, 1, 0, 0.480606, 0, -0.876936, 221.937, 159.035, -156.88)
+
+[node name="WindTurbine" parent="MAP/WindTurbine" instance=ExtResource("67_ivgyn")]
+transform = Transform3D(0.997054, 0, -0.0767014, 0, 1, 0, 0.0767014, 0, 0.997054, -124.877, -0.27626, 70.8908)
+
+[node name="WindTurbine" parent="MAP/WindTurbine/WindTurbine" instance=ExtResource("67_ivgyn")]
+transform = Transform3D(0.997054, 0, -0.0767014, 0, 1, 0, 0.0767014, 0, 0.997054, 44.2582, -0.27626, -270.209)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -98.4716, 20.5558, 322.226)
@@ -301,7 +343,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201.596, 32.0276, -5.28838)
 transform = Transform3D(0.907272, 0, 0.420545, 0, 1, 0, -0.420545, 0, 0.907272, -161.99, 32.9327, -25.5984)
 
 [node name="DEI Tower" parent="." instance=ExtResource("54_e3yx4")]
-transform = Transform3D(0.829506, 0, 0.558498, 0, 1, 0, -0.558498, 0, 0.829506, -132.9, 33.5722, -118.633)
+transform = Transform3D(0.829506, 0, 0.558498, 0, 1, 0, -0.558498, 0, 0.829506, -134.377, 33.5722, -137.035)
 
 [node name="Dentist Office" parent="." instance=ExtResource("55_5rfwt")]
 transform = Transform3D(-0.648983, 0, 0.760803, 0, 1, 0, -0.760803, 0, -0.648983, -112.061, 33.5856, -325.104)

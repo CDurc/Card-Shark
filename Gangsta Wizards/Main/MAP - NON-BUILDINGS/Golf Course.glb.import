@@ -31,6 +31,198 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/BASE PALM TREE": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Bridge": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Cart Path": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Fence": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Greens": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Ladder": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Ladder_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_001": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_002": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_003": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_004": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_005": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_006": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_007": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_008": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_009": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_010": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_011": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_012": {
+"generate/physics": true,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_013": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_014": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_015": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_016": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_017": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_018": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Tree_019": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Road": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Rock": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Signs": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tee Boxes": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tree": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tree2": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tree3": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tree4": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

@@ -31,6 +31,21 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Rotor Bones/Skeleton3D": {
+"rest_pose/external_animation_library": null
+},
+"PATH:1 - PHYS/Rotor Bones/Skeleton3D/Rotors": {
+"physics/layer": 9,
+"physics/mask": 9
+},
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true,
+"physics/layer": 9,
+"physics/mask": 9
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
