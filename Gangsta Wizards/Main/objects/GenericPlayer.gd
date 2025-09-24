@@ -549,7 +549,7 @@ func reload_spell():
 
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		poopy_fart()
+		straight_laser_spell()
 		#trigger_ragdoll(Vector3(30,200,30))
 
 func test_1_spell():
