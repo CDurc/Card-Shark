@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://12b86jh82p0e"
+path="res://.godot/imported/Card Shark Arcade Song.mp3-6aa8154d54dfda8951fbe79c35b5c4e5.mp3str"
+
+[deps]
+
+source_file="res://Music/Card Shark Arcade Song.mp3"
+dest_files=["res://.godot/imported/Card Shark Arcade Song.mp3-6aa8154d54dfda8951fbe79c35b5c4e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
