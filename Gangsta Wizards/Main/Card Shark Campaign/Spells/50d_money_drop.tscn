@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7m1wdpib5nr6"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Spells/money_pickup.gd" id="1_qn8yi"]
+[ext_resource type="PackedScene" uid="uid://ry313bwnu1lm" path="res://Card Shark Campaign/Spells/Cash ($50).glb" id="2_yh5l1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vnnhx"]
+height = 0.560992
+radius = 0.308884
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2je31"]
+radius = 0.309
+height = 0.785221
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
+radius = 1.4
+
+[node name="50d_Money_drop" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
+collision_layer = 8
+collision_mask = 8
+mass = 35.0
+physics_material_override = SubResource("PhysicsMaterial_q5tod")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0.05, -0.05, 0.05)
+continuous_cd = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0343703, 0)
+shape = SubResource("CylinderShape3D_vnnhx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127393, 0)
+shape = SubResource("CapsuleShape3D_2je31")
+
+[node name="Pickup" type="Area3D" parent="RigidBody3D"]
+script = ExtResource("1_qn8yi")
+value = 5000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
+shape = SubResource("SphereShape3D_53sqn")
+
+[node name="Cash ($50)" parent="RigidBody3D" instance=ExtResource("2_yh5l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0318382, 0)
+
+[connection signal="body_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_shape_entered"]

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnc8atp8ohtag"
+uid="uid://dnmgpsfh4vnlr"
 path.s3tc="res://.godot/imported/Nakatomi Plaza_Siding-White.jpg-dd70c50701de07ae23babed556101af8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
 }
 
 [deps]

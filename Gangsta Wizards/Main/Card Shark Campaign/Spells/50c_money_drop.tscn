@@ -18,6 +18,7 @@ radius = 1.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
 collision_layer = 8
 collision_mask = 8
+mass = 0.5
 physics_material_override = SubResource("PhysicsMaterial_q5tod")
 continuous_cd = true
 

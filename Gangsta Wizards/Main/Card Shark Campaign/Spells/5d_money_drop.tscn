@@ -5,24 +5,25 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_nehei"]
-height = 0.129492
-radius = 0.20627
+[sub_resource type="BoxShape3D" id="BoxShape3D_sj6fb"]
+size = Vector3(0.303497, 0.0974808, 0.154755)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
 radius = 1.4
 
-[node name="1d_Money_drop" type="Node3D"]
+[node name="5d_Money_drop" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
 collision_layer = 8
 collision_mask = 8
+mass = 3.0
 physics_material_override = SubResource("PhysicsMaterial_q5tod")
 continuous_cd = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("CylinderShape3D_nehei")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00205994, -0.00155258, 0)
+shape = SubResource("BoxShape3D_sj6fb")
 
 [node name="Pickup" type="Area3D" parent="RigidBody3D"]
 script = ExtResource("1_palwe")

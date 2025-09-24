@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcdtc03qsjvyc"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Spells/money_pickup.gd" id="1_67ase"]
+[ext_resource type="PackedScene" uid="uid://b5lbmdt6qgbe0" path="res://Card Shark Campaign/Spells/Cash ($100).glb" id="2_5f3xj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5tod"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5o4he"]
+height = 0.657817
+radius = 0.299214
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7arnn"]
+radius = 0.299
+height = 0.675933
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_53sqn"]
+radius = 1.4
+
+[node name="50d_Money_drop" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0707443, 0)
+collision_layer = 8
+collision_mask = 8
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_q5tod")
+continuous_cd = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104382, 0.0639801, 0.364117)
+shape = SubResource("CylinderShape3D_5o4he")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299931, 0.0639801, -0.145887)
+shape = SubResource("CylinderShape3D_5o4he")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254588, 0.0639801, -0.145887)
+shape = SubResource("CylinderShape3D_5o4he")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104382, 0.253017, 0.364117)
+shape = SubResource("CapsuleShape3D_7arnn")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299931, 0.253017, -0.145887)
+shape = SubResource("CapsuleShape3D_7arnn")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254588, 0.253017, -0.145887)
+shape = SubResource("CapsuleShape3D_7arnn")
+
+[node name="Pickup" type="Area3D" parent="RigidBody3D"]
+script = ExtResource("1_67ase")
+value = 5000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
+shape = SubResource("SphereShape3D_53sqn")
+
+[node name="Cash ($100)" parent="RigidBody3D" instance=ExtResource("2_5f3xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0370991, 0.382521)
+
+[connection signal="body_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="RigidBody3D/Pickup" to="RigidBody3D/Pickup" method="_on_body_shape_entered"]
