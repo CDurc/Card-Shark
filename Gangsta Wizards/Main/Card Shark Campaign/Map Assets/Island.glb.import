@@ -30,88 +30,53 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS OBJECTS/Beach Caves Entrance": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Beach - Grass & Walkway": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Beach Ground": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Beach - Sand Ground": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Casino Ground": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Beach Caves Entrance": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Cobb Wall": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Casino Ground": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Ground_002": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Cobb Wall": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Highway Supports": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Highway Supports": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Island Rock Faces": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Island Rock Faces": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Lake": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Lake": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Ocean": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ocean": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Parking Lot": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Parking Lot": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Ramp": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ramp": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Road": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Road": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Stairs": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Tunnel": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Tunnel": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Volcano": {
+"generate/physics": true
 },
-"PATH:1 - PHYS OBJECTS/Volcano": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
-},
-"PATH:1 - PHYS OBJECTS/Volcano Ground": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Volcano Ground": {
+"generate/physics": true
 }
 }
 }
