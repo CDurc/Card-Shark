@@ -389,7 +389,7 @@ transform = Transform3D(0.798499, 0, -0.601996, 0, 1, 0, 0.601996, 0, 0.798499, 
 transform = Transform3D(0.6131, 0, -0.790005, 0, 1, 0, 0.790005, 0, 0.6131, -94.2125, 33.1699, -31.5756)
 
 [node name="Nukehouses" parent="MAP" instance=ExtResource("84_bvjjl")]
-transform = Transform3D(-0.665947, 0, -0.745999, 0, 1, 0, 0.745999, 0, -0.665947, -182.958, 32.5823, -159.725)
+transform = Transform3D(-0.665947, 0, -0.745999, 0, 1, 0, 0.745999, 0, -0.665947, -175.367, 32.5823, -172.162)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -98.4716, 20.5558, 322.226)
