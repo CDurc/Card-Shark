@@ -30,7 +30,46 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
-_subresources={}
+import_script/path="res://MAP/post_import_settings.gd"
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Walls_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Walls_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Fences": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Loading Dock": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roofs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Site": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window_003": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

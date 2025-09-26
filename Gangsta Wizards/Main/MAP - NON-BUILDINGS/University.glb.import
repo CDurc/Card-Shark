@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbupn4owmwuh"
-path="res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"
+uid="uid://cu1rxs56j8h8q"
+path="res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field.glb"
-dest_files=["res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"]
+source_file="res://MAP - NON-BUILDINGS/University.glb"
+dest_files=["res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"]
 
 [params]
 
@@ -30,26 +30,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
+import_script/path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fence - Outer": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Field": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost_001": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Track": {
-"generate/physics": true
+"generate/physics": true,
+"physics/layer": 11,
+"physics/mask": 11
 }
 }
 }

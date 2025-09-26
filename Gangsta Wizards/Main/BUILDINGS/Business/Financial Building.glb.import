@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbupn4owmwuh"
-path="res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"
+uid="uid://c1afjp4lwwx7q"
+path="res://.godot/imported/Financial Building.glb-8e0a4a55e6caf78a8338e52ea9c83f26.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field.glb"
-dest_files=["res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"]
+source_file="res://BUILDINGS/Business/Financial Building.glb"
+dest_files=["res://.godot/imported/Financial Building.glb-8e0a4a55e6caf78a8338e52ea9c83f26.scn"]
 
 [params]
 
@@ -33,22 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fence - Outer": {
+"PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Field": {
+"PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Goalpost": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Track": {
+"PATH:1 - PHYS/Floor & Ground": {
 "generate/physics": true
 }
 }

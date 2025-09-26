@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbupn4owmwuh"
-path="res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"
+uid="uid://bacf4icynuusm"
+path="res://.godot/imported/Airport.glb-be8bbdebb51c9467d142a0e20a55c89b.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field.glb"
-dest_files=["res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"]
+source_file="res://MAP - NON-BUILDINGS/Airport.glb"
+dest_files=["res://.godot/imported/Airport.glb-be8bbdebb51c9467d142a0e20a55c89b.scn"]
 
 [params]
 
@@ -33,22 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fence - Outer": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Field": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost_001": {
+"PATH:1 - PHYS/Cube": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Track": {
+"PATH:1 - PHYS/Landing Strip": {
 "generate/physics": true
 }
 }

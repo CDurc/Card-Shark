@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbupn4owmwuh"
-path="res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"
+uid="uid://e1llwt7apkpp"
+path="res://.godot/imported/Central Park.glb-d8c38ff98f6d26ddfd1d69ba35fc5ee0.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field.glb"
-dest_files=["res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"]
+source_file="res://MAP - NON-BUILDINGS/Central Park.glb"
+dest_files=["res://.godot/imported/Central Park.glb-d8c38ff98f6d26ddfd1d69ba35fc5ee0.scn"]
 
 [params]
 
@@ -33,22 +33,16 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fence - Outer": {
+"PATH:1 - PHYS/Fountain": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Field": {
+"PATH:1 - PHYS/Grass": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Goalpost": {
+"PATH:1 - PHYS/Walks": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Goalpost_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Track": {
+"PATH:1 - PHYS/Walls": {
 "generate/physics": true
 }
 }

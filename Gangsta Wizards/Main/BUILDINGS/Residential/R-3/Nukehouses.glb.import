@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbupn4owmwuh"
-path="res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"
+uid="uid://db162i5q7guo0"
+path="res://.godot/imported/Nukehouses.glb-c37119de34cb04a2e4477651e22c039c.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field.glb"
-dest_files=["res://.godot/imported/Sports Field.glb-c15eb329983197364e347553a59d953d.scn"]
+source_file="res://BUILDINGS/Residential/R-3/Nukehouses.glb"
+dest_files=["res://.godot/imported/Nukehouses.glb-c37119de34cb04a2e4477651e22c039c.scn"]
 
 [params]
 
@@ -33,22 +33,16 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fence - Outer": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Field": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Goalpost_001": {
+"PATH:1 - PHYS/Fences": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Track": {
+"PATH:1 - PHYS/House 1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/House 2": {
 "generate/physics": true
 }
 }
