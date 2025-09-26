@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@export var damage_amount: int = 75
+#@export var damage_amount: int = 25
 var has_exploded: bool = false  # To prevent multiple triggers
 var boom_scene = preload("res://Particles/big_explosion.tscn")
 
@@ -16,8 +16,8 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		var collider = state.get_contact_collider_object(i) as Node
 		if collider:
 			# Optional: only damage if method exists
-			if collider.has_method("damage"):
-				collider.call("damage", damage_amount)
+			#if collider.has_method("damage"):
+				#collider.call("damage", damage_amount)
 
 			# Explosion effects
 			var boom = boom_scene.instantiate()
@@ -25,7 +25,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 			get_tree().root.add_child(boom)
 			#boom.get_node("Fire").emitting = true
 			#boom.get_node("Smoke").emitting = true
-			print("FIRE")
+			print("BOOM card")
 
 			has_exploded = true
 			queue_free()  # Remove the projectile

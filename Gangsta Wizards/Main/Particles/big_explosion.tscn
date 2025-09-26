@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://faybe3u3uif4"]
+[gd_scene load_steps=20 format=3 uid="uid://faybe3u3uif4"]
 
 [ext_resource type="Script" path="res://Particles/boom_effect.gd" id="1_1rtt1"]
+[ext_resource type="Script" path="res://Card Shark/card_damage.gd" id="2_l3aka"]
 
 [sub_resource type="Gradient" id="Gradient_gud1c"]
 colors = PackedColorArray(0.780392, 0.627451, 0, 1, 1, 0, 0, 1)
@@ -25,7 +26,7 @@ curve = SubResource("Curve_uop62")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nl0he"]
 emission_shape = 1
-emission_sphere_radius = 2.5
+emission_sphere_radius = 5.0
 direction = Vector3(0, -1, 0)
 spread = 135.0
 initial_velocity_min = 3.0
@@ -64,7 +65,7 @@ curve = SubResource("Curve_hk5g0")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_077fe"]
 emission_shape = 1
-emission_sphere_radius = 2.5
+emission_sphere_radius = 3.2
 direction = Vector3(0, 0, 0)
 spread = 60.0
 initial_velocity_min = 1.0
@@ -86,13 +87,16 @@ height = 0.4
 radial_segments = 8
 rings = 6
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_3t7ke"]
+radius = 2.0
+
 [node name="Particles" type="Node3D"]
 script = ExtResource("1_1rtt1")
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 emitting = false
-amount = 30
+amount = 40
 lifetime = 0.9
 one_shot = true
 explosiveness = 0.99
@@ -108,3 +112,13 @@ one_shot = true
 explosiveness = 0.99
 process_material = SubResource("ParticleProcessMaterial_077fe")
 draw_pass_1 = SubResource("SphereMesh_ctcow")
+
+[node name="Boombox" type="Area3D" parent="."]
+script = ExtResource("2_l3aka")
+damage = 75.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boombox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00106315, -0.00952149, 0.000122075)
+shape = SubResource("SphereShape3D_3t7ke")
+
+[connection signal="body_entered" from="Boombox" to="Boombox" method="_on_body_entered"]
