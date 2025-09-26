@@ -4,9 +4,13 @@ extends EditorScenePostImport
 # Called automatically after a .glb is imported
 func _post_import(scene: Node) -> Node:
 	var phys_node = scene.get_node_or_null("1 - PHYS")
+	var manual_node = scene.get_node_or_null("2 - Manual")
 	if phys_node:
 		_setup_physics_for_meshes(phys_node)
 		print("RUNNING AUTO PHYSICS ENABLER 1-2-4")
+		
+		
+		
 	return scene
 
 # Recursively find MeshInstance3D and enable physics
