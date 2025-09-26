@@ -30,7 +30,67 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
-_subresources={}
+import_script/path="res://MAP/post_import_settings.gd"
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Bar": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bench": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Boardwalk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Boxes": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Building 2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Flagstand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Game or Food Bldg": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Info Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Info Sign_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/JetSkiSign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lamppost": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Railing": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tables": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Target": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/TrashCan": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Worm": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
