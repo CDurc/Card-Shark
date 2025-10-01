@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpqssro3f34wd"]
+
+[ext_resource type="PackedScene" uid="uid://cnoyrcbmf8a28" path="res://MULTIPLAYER/Tiles/MapBorders.glb" id="1_f8pif"]
+[ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="2_ighsf"]
+
+[sub_resource type="Gradient" id="Gradient_vxynd"]
+colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_42aqb"]
+gradient = SubResource("Gradient_vxynd")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ygtik"]
+panorama = SubResource("GradientTexture2D_42aqb")
+
+[sub_resource type="Sky" id="Sky_rsjuq"]
+sky_material = SubResource("PanoramaSkyMaterial_ygtik")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_vwc2a"]
+background_mode = 2
+sky = SubResource("Sky_rsjuq")
+ambient_light_source = 2
+ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 1.0
+ssao_power = 5.0
+glow_enabled = true
+glow_levels/2 = 0.6
+glow_levels/3 = 0.6
+glow_levels/5 = 0.0
+glow_intensity = 2.0
+
+[node name="TheMultiplayerMap" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vwc2a")
+
+[node name="MAP" type="Node3D" parent="."]
+
+[node name="MapBorders" parent="MAP" instance=ExtResource("1_f8pif")]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_ighsf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.02849, 7.95661, -0.598865)
+health = 250
+
+[node name="Projectiles" type="Node3D" parent="."]
