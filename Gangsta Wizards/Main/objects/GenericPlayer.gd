@@ -134,8 +134,11 @@ signal health_updated
 @onready var ranges = $Ranges
 @onready var chipbar = $HUD/Chipbar
 @onready var ammo_counter = $HUD/Bottombar/Ammo
+@onready var pause_menu = $HUD/PauseMenu
 
 @onready var flat_cam_goal = $Head/Flatcam_point
+
+
 
 #@onready var music := $AudioStreamPlayer
 #@onready music.stream = preload("res://Card Shark Campaign/Special Effects/wet-fart-1.mp3")
@@ -546,6 +549,11 @@ func trigger_ragdoll(impulse: Vector3):
 func reload_spell():
 	if Input.is_action_just_pressed("reload"):
 		reload()
+
+func pause_game():
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused = !get_tree().paused #flip the boolean
+		pause_menu.visible = get_tree().paused #match menu UI to pause state
 
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
@@ -1180,6 +1188,7 @@ var combining = false
 var combine_t = 0.0  # Progress variable for lerp/slerp
 
 func combine_cards():
+	
 	if combining:
 		return  # Prevent duplicate calls
 
@@ -1351,6 +1360,7 @@ func handle_controls(_delta): #Also handles sprint now
 		test_2_spell()
 		test_1_spell()
 		reload_spell()
+		pause_game()
 		# Mouse capture
 	
 	if Input.is_action_just_pressed("mouse_capture"):
