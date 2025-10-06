@@ -1,7 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpqssro3f34wd"]
+[gd_scene load_steps=38 format=3 uid="uid://bpqssro3f34wd"]
 
 [ext_resource type="PackedScene" uid="uid://cnoyrcbmf8a28" path="res://MULTIPLAYER/Tiles/MapBorders.glb" id="1_f8pif"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="2_ighsf"]
+[ext_resource type="PackedScene" uid="uid://bbjbspwafjnw3" path="res://MULTIPLAYER/Tiles/1-B-W.glb" id="3_f60nm"]
+[ext_resource type="PackedScene" uid="uid://dr238c52upnlg" path="res://MULTIPLAYER/Tiles/2-B-W.glb" id="4_1loek"]
+[ext_resource type="PackedScene" uid="uid://bu3yw6gjq32ka" path="res://MULTIPLAYER/Tiles/3-B-W.glb" id="5_h4vei"]
+[ext_resource type="PackedScene" uid="uid://di6gbloppk1yb" path="res://MULTIPLAYER/Tiles/4-G-W.glb" id="6_wwwq0"]
+[ext_resource type="PackedScene" uid="uid://cmxgx2cakk8q3" path="res://MULTIPLAYER/Tiles/5-G-W.glb" id="7_ukeuk"]
+[ext_resource type="PackedScene" uid="uid://cowlhc2mnnfwl" path="res://MULTIPLAYER/Tiles/6-G-W.glb" id="8_p3tjx"]
+[ext_resource type="PackedScene" uid="uid://f8yce0acsxjd" path="res://MULTIPLAYER/Tiles/7-D-W.glb" id="9_876gs"]
+[ext_resource type="PackedScene" uid="uid://cr0joe7vxcjo7" path="res://MULTIPLAYER/Tiles/8-S-W.glb" id="10_vswfk"]
+[ext_resource type="PackedScene" uid="uid://bm7xaswjs3qbe" path="res://MULTIPLAYER/Tiles/9-S-W.glb" id="11_7rvrd"]
+[ext_resource type="PackedScene" uid="uid://ci76gmilcerth" path="res://MULTIPLAYER/Tiles/10-S-W.glb" id="12_f7p5u"]
+[ext_resource type="PackedScene" uid="uid://dy3lovbago20g" path="res://MULTIPLAYER/Tiles/11-O-W.glb" id="13_1eaid"]
+[ext_resource type="PackedScene" uid="uid://ccfdusfugyhao" path="res://MULTIPLAYER/Tiles/12-O-W.glb" id="14_583gw"]
+[ext_resource type="PackedScene" uid="uid://r3a3ws4trkky" path="res://MULTIPLAYER/Tiles/13-W-W.glb" id="15_smle6"]
+[ext_resource type="PackedScene" uid="uid://dpmesv57eyjn6" path="res://MULTIPLAYER/Tiles/14-W-W.glb" id="16_1kphe"]
+[ext_resource type="PackedScene" uid="uid://bw8icf1dcx87t" path="res://MULTIPLAYER/Tiles/15-W-W.glb" id="17_4pnbm"]
+[ext_resource type="PackedScene" uid="uid://5y6242rld4oy" path="res://MULTIPLAYER/Tiles/16-B-B.glb" id="18_bvnqf"]
+[ext_resource type="PackedScene" uid="uid://co65csd181xtr" path="res://MULTIPLAYER/Tiles/17-B-B.glb" id="19_n2gn7"]
+[ext_resource type="PackedScene" uid="uid://bxu6ujvii55im" path="res://MULTIPLAYER/Tiles/18-D-B.glb" id="20_7hm4b"]
+[ext_resource type="PackedScene" uid="uid://52vi328085gf" path="res://MULTIPLAYER/Tiles/19-S-B.glb" id="21_eiwgr"]
+[ext_resource type="PackedScene" uid="uid://c6uvkpsr3mph1" path="res://MULTIPLAYER/Tiles/20-S-B.glb" id="22_pdm71"]
+[ext_resource type="PackedScene" uid="uid://cw86aah4aa8ee" path="res://MULTIPLAYER/Tiles/21-S-B.glb" id="23_p8kdq"]
+[ext_resource type="PackedScene" uid="uid://dlg3l42uqecd1" path="res://MULTIPLAYER/Tiles/22-O-B.glb" id="24_xx3oh"]
+[ext_resource type="PackedScene" uid="uid://isk2hcsr1mcp" path="res://MULTIPLAYER/Tiles/23-O-B.glb" id="25_uss27"]
+[ext_resource type="PackedScene" uid="uid://byvffgdbtc6ul" path="res://MULTIPLAYER/Tiles/24-W-B.glb" id="26_1uctv"]
+[ext_resource type="PackedScene" uid="uid://chl0t8wjh8rcs" path="res://MULTIPLAYER/Tiles/25-W-B.glb" id="27_1lpvn"]
+[ext_resource type="PackedScene" uid="uid://8wciam5mjkiy" path="res://MULTIPLAYER/Tiles/26-W-B.glb" id="28_1jujd"]
+[ext_resource type="PackedScene" uid="uid://cpfaq56e7y0u3" path="res://MULTIPLAYER/Tiles/27-G-B.glb" id="29_3st4s"]
+[ext_resource type="PackedScene" uid="uid://bnyla3oyvrtkj" path="res://MULTIPLAYER/Tiles/28-G-B.glb" id="30_ai534"]
+[ext_resource type="PackedScene" uid="uid://b7it5vto5lt0t" path="res://MULTIPLAYER/Tiles/29-G-B.glb" id="31_qpsjj"]
+[ext_resource type="PackedScene" uid="uid://c5t4a51qv7mde" path="res://MULTIPLAYER/Tiles/30-O-B.glb" id="32_ksqqb"]
 
 [sub_resource type="Gradient" id="Gradient_vxynd"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -41,6 +71,96 @@ environment = SubResource("Environment_vwc2a")
 [node name="MAP" type="Node3D" parent="."]
 
 [node name="MapBorders" parent="MAP" instance=ExtResource("1_f8pif")]
+
+[node name="1-B-W" parent="MAP" instance=ExtResource("3_f60nm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.6109, 0.0740347, 46.674)
+
+[node name="2-B-W" parent="MAP" instance=ExtResource("4_1loek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96752, 0, -93.1417)
+
+[node name="3-B-W" parent="MAP" instance=ExtResource("5_h4vei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07442, 0, -21.7755)
+
+[node name="4-G-W" parent="MAP" instance=ExtResource("6_wwwq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7007, 0, -126.539)
+
+[node name="5-G-W" parent="MAP" instance=ExtResource("7_ukeuk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0016, 0, 83.2273)
+
+[node name="6-G-W" parent="MAP" instance=ExtResource("8_p3tjx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2743, 0, -56.8109)
+
+[node name="7-D-W" parent="MAP" instance=ExtResource("9_876gs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1595, 0, 13.2791)
+
+[node name="8-S-W" parent="MAP" instance=ExtResource("10_vswfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.8898, 0, 11.8605)
+
+[node name="9-S-W" parent="MAP" instance=ExtResource("11_7rvrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3618, 0, 47.265)
+
+[node name="10-S-W" parent="MAP" instance=ExtResource("12_f7p5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67372, 0, 44.6591)
+
+[node name="11-O-W" parent="MAP" instance=ExtResource("13_1eaid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1363, 0, -23.173)
+
+[node name="12-O-W" parent="MAP" instance=ExtResource("14_583gw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.1759, 0, 10.63)
+
+[node name="13-W-W" parent="MAP" instance=ExtResource("15_smle6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5243, 0, -125.221)
+
+[node name="14-W-W" parent="MAP" instance=ExtResource("16_1kphe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3009, 0, 80.5262)
+
+[node name="15-W-W" parent="MAP" instance=ExtResource("17_4pnbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.7476, 0, -22.5339)
+
+[node name="16-B-B" parent="MAP" instance=ExtResource("18_bvnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.9092, 0, -93.5364)
+
+[node name="17-B-B" parent="MAP" instance=ExtResource("19_n2gn7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.731, 0, -23.9907)
+
+[node name="18-D-B" parent="MAP" instance=ExtResource("20_7hm4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.741, 0, -56.7646)
+
+[node name="19-S-B" parent="MAP" instance=ExtResource("21_eiwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.4749, 0, -91.6514)
+
+[node name="20-S-B" parent="MAP" instance=ExtResource("22_pdm71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.418, 0, -127.073)
+
+[node name="21-S-B" parent="MAP" instance=ExtResource("23_p8kdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.01, 0, 10.7784)
+
+[node name="22-O-B" parent="MAP" instance=ExtResource("24_xx3oh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.6854, 0, -91.3382)
+
+[node name="23-O-B" parent="MAP" instance=ExtResource("25_uss27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8486, 0, 47.292)
+
+[node name="24-W-B" parent="MAP" instance=ExtResource("26_1uctv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3608, 0, -57.6198)
+
+[node name="25-W-B" parent="MAP" instance=ExtResource("27_1lpvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.8486, 0, -23.1129)
+
+[node name="26-W-B" parent="MAP" instance=ExtResource("28_1jujd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2902, 0, -57.062)
+
+[node name="27-G-B" parent="MAP" instance=ExtResource("29_3st4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7618, 0, -56.5356)
+
+[node name="28-G-B" parent="MAP" instance=ExtResource("30_ai534")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6302, 0, 12.5469)
+
+[node name="29-G-B" parent="MAP" instance=ExtResource("31_qpsjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.87, 0, -24.6203)
+
+[node name="30-O-B" parent="MAP" instance=ExtResource("32_ksqqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.4208, 0, 81.065)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_ighsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.02849, 7.95661, -0.598865)
