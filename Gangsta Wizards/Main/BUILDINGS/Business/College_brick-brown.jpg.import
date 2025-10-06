@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf72a4lhccj7g"
-path.s3tc="res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"
+uid="uid://b7yoh04ramk31"
+path.s3tc="res://.godot/imported/College_brick-brown.jpg-308450020bccca73699027dd5cb0fd32.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8af3b715d42c8ab9e876f73e64f8359b"
+"md5": "6020e82dde3319aa04a065a8f076e527"
 }
 
 [deps]
 
-source_file="res://Menus/Main Menu_MenuRoulette.jpg"
-dest_files=["res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/College_brick-brown.jpg"
+dest_files=["res://.godot/imported/College_brick-brown.jpg-308450020bccca73699027dd5cb0fd32.s3tc.ctex"]
 
 [params]
 

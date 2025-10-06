@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
 [ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
 [ext_resource type="Script" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
-[ext_resource type="PackedScene" uid="uid://cvo5qsrnmwa20" path="res://THE PROJEKT.tscn" id="9_m4vlu"]
+[ext_resource type="PackedScene" uid="uid://b8oj3mxi1uk5q" path="res://Card Shark Campaign/Spells/empty.tscn" id="9_m4vlu"]
 [ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
 
 [sub_resource type="Gradient" id="Gradient_ex873"]
