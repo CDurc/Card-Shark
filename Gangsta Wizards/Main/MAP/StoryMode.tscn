@@ -85,7 +85,7 @@
 [ext_resource type="PackedScene" uid="uid://copf0mokrtkru" path="res://SIGNS/BBQ Billboard.glb" id="74_l8f5a"]
 [ext_resource type="PackedScene" uid="uid://umb8ja4wbyw" path="res://SIGNS/Chinaville.glb" id="75_pm1g5"]
 [ext_resource type="PackedScene" uid="uid://cfbdc66010iw1" path="res://SIGNS/Distances.glb" id="76_dgxo0"]
-[ext_resource type="PackedScene" uid="uid://ca6jbiadkhmw7" path="res://BUILDINGS/Educational/College.glb" id="77_xpd07"]
+[ext_resource type="PackedScene" uid="uid://l568vj504tdh" path="res://BUILDINGS/Business/College.glb" id="77_xpd07"]
 [ext_resource type="PackedScene" uid="uid://rofm4u8cq3eg" path="res://BUILDINGS/Educational/K-12 School.glb" id="78_87k4x"]
 [ext_resource type="PackedScene" uid="uid://nwf7yqyy7qvo" path="res://SIGNS/GatsbyBillboard.glb" id="79_apsqp"]
 [ext_resource type="PackedScene" uid="uid://bp1qv7xs0e7de" path="res://MAP - NON-BUILDINGS/Public Executions.glb" id="80_ehedl"]

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf72a4lhccj7g"
-path.s3tc="res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"
+uid="uid://gxmbdwerxhpl"
+path.s3tc="res://.godot/imported/Main Menu_Sand.jpg-2414095a5fec5dca2c377c28649b47c9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8af3b715d42c8ab9e876f73e64f8359b"
+"md5": "f3d17facc42d23f22a53d53418edde37"
 }
 
 [deps]
 
-source_file="res://Menus/Main Menu_MenuRoulette.jpg"
-dest_files=["res://.godot/imported/Main Menu_MenuRoulette.jpg-78b6d0bc015c086dcfe721cb7dbbb096.s3tc.ctex"]
+source_file="res://Menus/Main Menu_Sand.jpg"
+dest_files=["res://.godot/imported/Main Menu_Sand.jpg-2414095a5fec5dca2c377c28649b47c9.s3tc.ctex"]
 
 [params]
 
