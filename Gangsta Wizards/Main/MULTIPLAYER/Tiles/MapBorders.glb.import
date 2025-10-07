@@ -40,9 +40,6 @@ _subresources={
 "PATH:1 - PHYS/Table": {
 "generate/physics": true,
 "physics/layer": 11
-},
-"PATH:3 - No Cols/World-Ceiling": {
-"import/skip_import": true
 }
 }
 }
