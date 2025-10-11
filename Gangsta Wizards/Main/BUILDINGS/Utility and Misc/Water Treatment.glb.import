@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d1as7ncd4q0ba"
-path="res://.godot/imported/Seedy Bar.glb-91f46573d022aa5aabb63e03bafed6b4.scn"
+uid="uid://b28pw5n0va2ew"
+path="res://.godot/imported/Water Treatment.glb-cadaa7fb264d4483d4dc9e19eb6aed86.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Seedy Bar.glb"
-dest_files=["res://.godot/imported/Seedy Bar.glb-91f46573d022aa5aabb63e03bafed6b4.scn"]
+source_file="res://BUILDINGS/Utility and Misc/Water Treatment.glb"
+dest_files=["res://.godot/imported/Water Treatment.glb-cadaa7fb264d4483d4dc9e19eb6aed86.scn"]
 
 [params]
 
@@ -33,19 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Floor & Site": {
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floor & Ground": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Sign": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Sign_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Walls": {
 "generate/physics": true
 }
 }

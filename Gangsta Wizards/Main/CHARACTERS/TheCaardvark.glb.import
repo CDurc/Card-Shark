@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crprf1ptriqg3"
-path="res://.godot/imported/Gourdtown City Square.glb-b1cb5ca50925bf5f41bd749d56634024.scn"
+uid="uid://dt3g281gptru6"
+path="res://.godot/imported/TheCaardvark.glb-3f1e54306380440a2d13952df3f0ef4d.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Gourdtown City Square.glb"
-dest_files=["res://.godot/imported/Gourdtown City Square.glb-b1cb5ca50925bf5f41bd749d56634024.scn"]
+source_file="res://CHARACTERS/TheCaardvark.glb"
+dest_files=["res://.godot/imported/TheCaardvark.glb-3f1e54306380440a2d13952df3f0ef4d.scn"]
 
 [params]
 
@@ -30,19 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Bag": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Fountain": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-}
-}
-}
+import_script/path=""
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
