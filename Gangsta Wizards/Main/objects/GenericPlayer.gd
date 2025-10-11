@@ -133,7 +133,7 @@ signal health_updated
 @onready var HUD = $HUD
 @onready var ranges = $Ranges
 @onready var chipbar = $HUD/Chipbar
-@onready var ammo_counter = $HUD/Bottombar/Ammo
+@onready var ammo_counter = $HUD/Bottombar/Ammo_icon/Ammo
 @onready var pause_menu = $HUD/PauseMenu
 
 @onready var flat_cam_goal = $Head/Flatcam_point
@@ -1270,7 +1270,7 @@ func reload():
 	LA_anime.play("Reload")
 	await get_tree().create_timer(reload_time - 0.5).timeout
 	ammo = 16
-	ammo_counter.text = "Ammo:  " + str(ammo)
+	ammo_counter.text = str(ammo)
 	await get_tree().process_frame
 	reloading = false
 
@@ -1286,7 +1286,7 @@ func shoot():
 		ammo -= 1
 		Audio.play("sounds/blaster_repeater.ogg")
 		gun_anime.play("Fire")
-		ammo_counter.text = "Ammo:  " + str(ammo)
+		ammo_counter.text = str(ammo)
 		
 		
 		left_container.position.z += 0.25 # Knockback of weapon visual
