@@ -30,98 +30,83 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - Collisions/Cages": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Cages": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair_001": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair_001": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair_002": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair_002": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair_003": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair_003": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair_004": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair_004": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Chair_005": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Chair_005": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Columns": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Columns": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Communit Toilets": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Communit Toilets": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Ext Walls": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Wall": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Forge": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Wall_001": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Lava Lamp": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Wall_002": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Roof": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Wall_003": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Stairs": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Throne": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Walls_001": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/ThroneSteps": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Ext Walls_002": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Top Walkways": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Fence": {
+"generate/physics": true
 },
-"PATH:1 - Collisions/Walls": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Forge": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lava Lamp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roofs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Throne": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/ThroneSteps": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Top Walkways": {
+"generate/physics": true
 }
 }
 }
