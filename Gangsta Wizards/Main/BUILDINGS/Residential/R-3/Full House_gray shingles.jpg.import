@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bix057ykx80ne"
-path.s3tc="res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"
+uid="uid://nw4j711qhusp"
+path.s3tc="res://.godot/imported/Full House_gray shingles.jpg-e8edfd2cda12e0efa326feace02b9944.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8cf7555003730f46e73e3f50b31ce8f2"
+"md5": "172836f760779a1dd277e074c7d03e8e"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Chinaville_Grass-Light.jpg"
-dest_files=["res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Full House_gray shingles.jpg"
+dest_files=["res://.godot/imported/Full House_gray shingles.jpg-e8edfd2cda12e0efa326feace02b9944.s3tc.ctex"]
 
 [params]
 

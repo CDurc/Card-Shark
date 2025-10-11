@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bix057ykx80ne"
-path.s3tc="res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"
+uid="uid://yjugm1xq8nku"
+path.s3tc="res://.godot/imported/Math Tutoring_grass.jpg-0c32234363e7edfbd6f7134ab05bc25e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8cf7555003730f46e73e3f50b31ce8f2"
+"md5": "860b54557fdde542776d96f3ee70f363"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Chinaville_Grass-Light.jpg"
-dest_files=["res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"]
+source_file="res://BUILDINGS/Educational/Math Tutoring_grass.jpg"
+dest_files=["res://.godot/imported/Math Tutoring_grass.jpg-0c32234363e7edfbd6f7134ab05bc25e.s3tc.ctex"]
 
 [params]
 

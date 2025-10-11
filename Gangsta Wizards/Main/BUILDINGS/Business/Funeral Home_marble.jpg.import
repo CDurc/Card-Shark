@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bix057ykx80ne"
-path.s3tc="res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"
+uid="uid://bckirbqgwyu4n"
+path.s3tc="res://.godot/imported/Funeral Home_marble.jpg-fa26958a0f0d641293b00b1f3e9ec71b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8cf7555003730f46e73e3f50b31ce8f2"
+"md5": "f95feafb0b29d3327559e2d3f5a2ad54"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Chinaville_Grass-Light.jpg"
-dest_files=["res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Funeral Home_marble.jpg"
+dest_files=["res://.godot/imported/Funeral Home_marble.jpg-fa26958a0f0d641293b00b1f3e9ec71b.s3tc.ctex"]
 
 [params]
 

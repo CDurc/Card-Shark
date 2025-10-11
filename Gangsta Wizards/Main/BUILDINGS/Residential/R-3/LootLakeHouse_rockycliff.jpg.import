@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bix057ykx80ne"
-path.s3tc="res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"
+uid="uid://cmu7u4axtrrpe"
+path.s3tc="res://.godot/imported/LootLakeHouse_rockycliff.jpg-23ae77174bc33304426ac5c184aa74ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8cf7555003730f46e73e3f50b31ce8f2"
+"md5": "a3cae00147220c0b4471e706ac3e06da"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Chinaville_Grass-Light.jpg"
-dest_files=["res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/LootLakeHouse_rockycliff.jpg"
+dest_files=["res://.godot/imported/LootLakeHouse_rockycliff.jpg-23ae77174bc33304426ac5c184aa74ed.s3tc.ctex"]
 
 [params]
 
