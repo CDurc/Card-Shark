@@ -8,6 +8,7 @@ extends CharacterBody3D
 @onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
+@onready var money_drop = preload("res://Card Shark Campaign/Spells/2_50d_money_drop.tscn")
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -150,6 +151,7 @@ func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
 	destroyed = true
 	queue_free()
+	drop_money()
 
 func damage(amount):
 	health -= amount
@@ -200,3 +202,7 @@ func fuse():
 	await get_tree().create_timer(5).timeout
 	explode()
 	
+func drop_money():
+	var money = money_drop.instantiate()
+	money.global_position = self.global_position
+	get_tree().root.add_child(money)

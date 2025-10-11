@@ -10,6 +10,7 @@ extends CharacterBody3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
 @onready var bullet_spawn = self.get_node("spawn")
+@onready var money_drop = preload("res://Card Shark Campaign/Spells/20d_money_drop.tscn")
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -174,6 +175,7 @@ func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
 	destroyed = true
 	queue_free()
+	drop_money()
 
 func damage(amount):
 	health -= amount
@@ -229,6 +231,9 @@ func shoot_a_bullet(target_player := true, fixed_direction := Vector3.ZERO) -> V
 
 	return direction
 
-	
+func drop_money():
+	var money = money_drop.instantiate()
+	money.global_position = self.global_position
+	get_tree().root.add_child(money)
 	
 	
