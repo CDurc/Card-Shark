@@ -33,6 +33,12 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Ammo Refill": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bath Ground": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cages": {
 "generate/physics": true
 },
@@ -60,6 +66,12 @@ _subresources={
 "PATH:1 - PHYS/Communit Toilets": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Corner Guards": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Wall": {
 "generate/physics": true
 },
@@ -81,9 +93,6 @@ _subresources={
 "PATH:1 - PHYS/Ext Walls_002": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Fence": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
@@ -91,6 +100,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lava Lamp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/OA Duct": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platform": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platform_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
