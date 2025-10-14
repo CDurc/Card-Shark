@@ -108,8 +108,8 @@ signal health_updated
 @onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
 @onready var test_spawn = $Laserspawn #For parenting
 @onready var cards_in_hand = right_hand_container.get_node("Card")
-@onready var skel = $TheCardShark2/SharkBones/Skeleton3D
-@onready var hip = $"TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips"
+#@onready var skel = $RAGDOLL/SharkBones/Skeleton3D
+#@onready var hip = $"RAGDOLL/SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips"
 @onready var ragcam = $ragcam
 @onready var followhip = $FollowHip
 
@@ -137,6 +137,7 @@ signal health_updated
 @onready var pause_menu = $HUD/PauseMenu
 
 @onready var flat_cam_goal = $Head/Flatcam_point
+@onready var Player_glb = $TheCardShark2
 
 
 
@@ -171,6 +172,7 @@ var phys_card #phys_cards are affected by gravity/ physics
 var bofa
 var splash
 var local_pos
+var hip
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
 var phys_card_scene = preload("res://Card Shark/Physics Cards.tscn")
@@ -182,6 +184,7 @@ var poopy_path = preload("res://Particles/new_poopy_fart.tscn")
 var flush_path = preload("res://Particles/flush_effect.tscn")
 var basking_shark_path = preload("res://Card Shark/basking_path.tscn")
 var fourkind_slam_scene = preload("res://Particles/fourkind_slam_effect.tscn")
+var ragdoll_glb = preload("res://Card Shark Campaign/CS_RAGDOLL.tscn")
 
 
 #For fourkind in range enemies
@@ -216,7 +219,7 @@ func _physics_process(delta):
 	
 	if is_disabled: #Currently only use this for ragdoll pls
 		#followhip.position = hip.position
-		ragcam.global_position = hip.global_position + local_pos
+		ragcam.global_position = hip.global_position - local_pos
 		ragcam.look_at(hip.position)
 		return
 	
@@ -505,26 +508,45 @@ func flatten():
 
 func trigger_ragdoll(impulse: Vector3):
 	
+	var ragdoll = ragdoll_glb.instantiate()
+	ragdoll.global_position = self.global_position
+	#ragdoll.global_rotation = self.global_rotation + Vector3(0,90,0)
+	
+	Player_glb.visible = false
+	ragdoll.visible = true
+	
 	can_move = false
 	is_disabled = true
 	LA_anime.stop()
 	RA_anime.stop()
 	Leg_anime.stop()
 	Gen_anime.stop()
-	skel.set_animate_physical_bones(false)
-	skel.get_node("PhysicalBoneSimulator3D").physical_bones_start_simulation()
-	skel.get_node("PhysicalBoneSimulator3D").active = true
-	$Collider.disabled = true
 	
-	followhip.position = hip.position #Properly position parent node
+	var skel = ragdoll.get_node("SharkBones/Skeleton3D")
+	hip = ragdoll.get_node("SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips")
+	var phys = skel.get_node("PhysicalBoneSimulator3D")
+	
+	
+	skel.set_animate_physical_bones(false)
+	phys.physical_bones_start_simulation()
+	phys.active = true
+	$Collider.disabled = true
+	get_tree().root.add_child(ragdoll)
+	
+	
+
+
+	
+	#followhip.position = hip.position #Properly position parent node
 	#var dir = impulse.normalized()
 	#var cam_pos = (hip.position + dir) * 2 #position cam 5 meters back towards the impulse
 	#ragcam.global_transform.origin = cam_pos
 	#ragcam.look_at(hip.position)
 	
 	if impulse != Vector3(0,0,0):
-		local_pos = impulse.normalized() * 2.5
-		ragcam.global_position = hip.global_position + local_pos
+		local_pos = impulse.normalized()
+		local_pos = Vector3(local_pos.x,-0.3*local_pos.y,local_pos.z).normalized() * 3.5
+		ragcam.global_position = hip.global_position - local_pos
 		print("LOCAL POS",local_pos)
 		ragcam.look_at(hip.position)
 		
@@ -534,14 +556,19 @@ func trigger_ragdoll(impulse: Vector3):
 	
 	else:
 		var back_pos = 2*transform.basis.z
-		local_pos = Vector3(0,1.5,0) + back_pos
-		ragcam.global_position = hip.global_position + local_pos
+		local_pos = -(Vector3(0,1.5,0) + back_pos)
+		ragcam.global_position = hip.global_position - local_pos
 		print("LOCAL POS",local_pos)
 		ragcam.look_at(hip.position)
 		
 		hip.apply_central_impulse(impulse)
 		
 		ragcam.make_current()
+		
+	#Get back up	
+	#get_tree().paused = !get_tree().paused #flip the boolean
+	await wait_and_get_up(ragdoll)
+
 
 
 	#SHORTCUT SPELL 2 SPELL2
@@ -557,8 +584,9 @@ func pause_game():
 
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
-		flatten()
-		#trigger_ragdoll(Vector3(30,200,30))
+		#flatten()
+		trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
+		#trigger_ragdoll(Vector3(0,0,0))
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
@@ -1457,3 +1485,53 @@ func get_interact():
 	else:
 		int_prompt.visible = false
 #Fin
+
+func get_up(ragdoll):
+	
+	var skel = ragdoll.get_node("SharkBones/Skeleton3D")
+	var hip = ragdoll.get_node("SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips")
+	
+	ragdoll.queue_free()
+	Player_glb.visible = true
+	self.global_position = hip.global_position + Vector3.UP
+	can_move = true
+	is_disabled = false
+	#LA_anime.start()
+	#RA_anime.stop()
+	#Leg_anime.stop()
+	#Gen_anime.stop()
+	#skel.set_animate_physical_bones(false)
+	#skel.get_node("PhysicalBoneSimulator3D").physical_bone_s
+	skel.get_node("PhysicalBoneSimulator3D").active = false
+	$Collider.disabled = false
+	camera.make_current()
+	
+	#await get_tree().create_timer(1).timeout
+
+
+func wait_and_get_up(ragdoll):
+	var hip = ragdoll.get_node("SharkBones/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone Hips")
+	if hip == null:
+		print("Error: Hip bone not found!")
+		return
+	
+	var min_wait = 2.0
+	var max_wait = 7.0
+	var elapsed = 0.0
+	var delta = 0.1  # check interval
+	var speed_threshold = 0.5  # velocity magnitude considered "slow enough"
+
+	while elapsed < max_wait:
+		await get_tree().create_timer(delta).timeout
+		elapsed += delta
+		
+		# Only allow get_up if minimum time passed AND hip is slow enough
+		if elapsed >= min_wait and hip.linear_velocity.length() <= speed_threshold:
+			break
+	
+	await get_tree().create_timer(0.5).timeout
+	if health > 0:
+		get_up(ragdoll)
+
+	
+	
