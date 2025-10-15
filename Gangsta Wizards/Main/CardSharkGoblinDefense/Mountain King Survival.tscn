@@ -280,7 +280,14 @@ light_specular = 0.198
 omni_range = 22.802
 
 [node name="Lava" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2363, 9.35757, -15.0225)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.756, 9.35757, -16.6567)
+light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
+light_energy = 6.233
+light_specular = 0.198
+omni_range = 22.802
+
+[node name="Lava2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.756, 9.35757, -13.1573)
 light_color = Color(0.868419, 0.240721, 3.85046e-07, 1)
 light_energy = 6.233
 light_specular = 0.198
