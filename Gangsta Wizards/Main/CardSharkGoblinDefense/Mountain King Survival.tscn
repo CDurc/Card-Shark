@@ -1,18 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=10 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
-[ext_resource type="PackedScene" uid="uid://dqba4pm573d0f" path="res://Card Shark Campaign/Spells/50c_money_drop.tscn" id="2_4rtbc"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
 [ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="3_fuyke"]
-[ext_resource type="PackedScene" uid="uid://cn4cctmxt26ml" path="res://Card Shark Campaign/Spells/1d_money_drop.tscn" id="3_vfpor"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/UpdateTimer.gd" id="5_gqf0d"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/Goblin Mode.gd" id="6_fxncw"]
-[ext_resource type="PackedScene" uid="uid://dbr5kay0a2oev" path="res://Card Shark Campaign/Spells/5d_money_drop.tscn" id="6_x2xb7"]
 [ext_resource type="PackedScene" uid="uid://c4mnpjd4n04ns" path="res://CardSharkGoblinDefense/mountain king test scene.tscn" id="7_y4b1k"]
-[ext_resource type="PackedScene" uid="uid://cmdx3o5cqokei" path="res://Card Shark Campaign/Spells/10d_money_drop.tscn" id="9_g0qon"]
-[ext_resource type="PackedScene" uid="uid://cyh88yr6fchea" path="res://Card Shark Campaign/Spells/20d_money_drop.tscn" id="10_hay6t"]
-[ext_resource type="PackedScene" uid="uid://b7m1wdpib5nr6" path="res://Card Shark Campaign/Spells/50d_money_drop.tscn" id="11_fj23e"]
-[ext_resource type="PackedScene" uid="uid://dcdtc03qsjvyc" path="res://Card Shark Campaign/Spells/100d_money_drop.tscn" id="12_t7l1i"]
 [ext_resource type="AudioStream" uid="uid://12b86jh82p0e" path="res://Music/Card Shark Arcade Song.mp3" id="13_hfiix"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4xw1"]
@@ -38,17 +31,8 @@ environment = ExtResource("1_qr17x")
 
 [node name="Map" type="Node3D" parent="."]
 
-[node name="50c_Money_drop" parent="Map" instance=ExtResource("2_4rtbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38319, 27.0142, 26.6553)
-
-[node name="50c_Money_drop2" parent="Map" instance=ExtResource("2_4rtbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.68659, 27.0142, -3.57864)
-
-[node name="1d_Money_drop" parent="Map" instance=ExtResource("3_vfpor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.320291, 26.5871, 26.6866)
-
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_fuyke")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.63331, 25.2357, 17.8394)
+transform = Transform3D(0.999417, 0, 0.0341494, 0, 1, 0, -0.0341494, 0, 0.999417, -1.63331, 8.47422, -29.6354)
 health = 250
 
 [node name="Projectiles" type="Node3D" parent="."]
@@ -69,9 +53,6 @@ affect_navigation_mesh = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1372, 24.3227, -34.1232)
 radius = 4.0
 affect_navigation_mesh = true
-
-[node name="1d_Money_drop" parent="NavMap/LargeNav" instance=ExtResource("6_x2xb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23643, 28.343, 26.7126)
 
 [node name="Hall of the Mountain King2" parent="NavMap/LargeNav" instance=ExtResource("7_y4b1k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.88, 22.7895, 0)
@@ -366,21 +347,6 @@ offset_top = -39.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Round 1"
-
-[node name="10d_Money_drop" parent="." instance=ExtResource("9_g0qon")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.182968, 28.9782, 26.6648)
-
-[node name="20d_Money_drop" parent="." instance=ExtResource("10_hay6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.128947, 29.8114, 26.57)
-
-[node name="50d_Money_drop" parent="." instance=ExtResource("11_fj23e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0615561, 30.5913, 26.4405)
-
-[node name="50d_Money_drop3" parent="." instance=ExtResource("11_fj23e")]
-transform = Transform3D(1, 0, 0, 0, 0.162465, -0.986714, 0, 0.986714, 0.162465, -16.5094, 30.5913, -11.3522)
-
-[node name="50d_Money_drop2" parent="." instance=ExtResource("12_t7l1i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0682242, 32.4827, 26.8796)
 
 [node name="Wethebestmusic" type="Node3D" parent="."]
 

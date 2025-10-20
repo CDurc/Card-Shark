@@ -73,8 +73,9 @@ var gamepad_sensitivity := 0.075
 
 var mouse_captured := true
 
-var movement_velocity: Vector3
+var movement_velocity: Vector3 #What the player is trying to do from a global perspective, also considering movement speed
 var rotation_target: Vector3
+var local_velocity: Vector3 #What the player is trying to do relative to their perspective
 
 var input_mouse: Vector2
 
@@ -138,6 +139,10 @@ signal health_updated
 
 @onready var flat_cam_goal = $Head/Flatcam_point
 @onready var Player_glb = $TheCardShark2
+
+@onready var lowcast = $Autostepper/Lowcast
+@onready var highcast = $Autostepper/Highcast
+@onready var headcast = $Autostepper/Headcast
 
 
 
@@ -238,12 +243,18 @@ func _physics_process(delta):
 	
 	# Movement
 	var applied_velocity: Vector3
+	var local_input = movement_velocity # <- this is before basis transform so relative to player cords
 	movement_velocity = transform.basis * movement_velocity #"Transform.basis" is relative to parent cords
 	applied_velocity = velocity.lerp(movement_velocity, delta * 10)
 	applied_velocity.y = -gravity
 	velocity = applied_velocity
 	if can_move:
 		move_and_slide()
+		if lowcast.is_colliding() and not highcast.is_colliding() and not headcast.is_colliding() and get_floor_normal().y > 0.9 and local_velocity.z < 0:
+			#global_position.y = lerp(global_position.y, global_position.y + 0.5, delta * 30)
+			global_position.y += 0.32
+				
+
 	
 	# Rotation
 	if can_look:
@@ -1361,6 +1372,10 @@ func shoot():
 			
 			impact_instance.position = raycast.get_collision_point() + (raycast.get_collision_normal() / 10)
 			impact_instance.look_at(camera.global_transform.origin, Vector3.UP, true) 
+				
+		if ammo == 0:
+			await get_tree().create_timer(0.3).timeout
+			reload()
 # Mouse movement
 func _input(event):
 	if event is InputEventMouseMotion and mouse_captured:
@@ -1405,7 +1420,12 @@ func handle_controls(_delta): #Also handles sprint now
 	
 	var input := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	
-	movement_velocity = Vector3(input.x, 0, input.y).normalized() * movement_speed
+	local_velocity = Vector3(input.x, 0, input.y).normalized()
+	
+	movement_velocity =  local_velocity * movement_speed
+	if get_floor_normal().y < 0.9:
+		movement_velocity *= 1.4
+	
 	
 	# Rotation
 	
