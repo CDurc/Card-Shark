@@ -30,7 +30,22 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
-_subresources={}
+import_script/path="res://MAP/post_import_settings.gd"
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Base": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Cage": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trap Supports": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

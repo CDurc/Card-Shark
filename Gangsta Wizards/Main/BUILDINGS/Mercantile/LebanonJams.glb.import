@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://umb8ja4wbyw"
-path="res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"
+uid="uid://c0pl8ie1h42mp"
+path="res://.godot/imported/LebanonJams.glb-ff520a821c60dbe1d6875594f23c741f.scn"
 
 [deps]
 
-source_file="res://SIGNS/Chinaville.glb"
-dest_files=["res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"]
+source_file="res://BUILDINGS/Mercantile/LebanonJams.glb"
+dest_files=["res://.godot/imported/LebanonJams.glb-ff520a821c60dbe1d6875594f23c741f.scn"]
 
 [params]
 
@@ -33,10 +33,22 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Arch": {
+"PATH:1 - PHYS/Canopy": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Posts": {
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Foundation": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Site": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Supports": {
 "generate/physics": true
 }
 }

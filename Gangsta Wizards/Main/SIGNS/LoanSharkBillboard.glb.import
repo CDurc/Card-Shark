@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://umb8ja4wbyw"
-path="res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"
+uid="uid://b8l32rktkf0cu"
+path="res://.godot/imported/LoanSharkBillboard.glb-21c80020a3117501a2663fbdb834e9eb.scn"
 
 [deps]
 
-source_file="res://SIGNS/Chinaville.glb"
-dest_files=["res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"]
+source_file="res://SIGNS/LoanSharkBillboard.glb"
+dest_files=["res://.godot/imported/LoanSharkBillboard.glb-21c80020a3117501a2663fbdb834e9eb.scn"]
 
 [params]
 
@@ -33,10 +33,10 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Arch": {
+"PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Posts": {
+"PATH:1 - PHYS/Stand": {
 "generate/physics": true
 }
 }

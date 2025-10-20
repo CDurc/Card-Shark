@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://umb8ja4wbyw"
-path="res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"
+uid="uid://b0crq1lp6enmf"
+path="res://.godot/imported/Big Rock.glb-87b29060d796b631fa81d32ff5c5f637.scn"
 
 [deps]
 
-source_file="res://SIGNS/Chinaville.glb"
-dest_files=["res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"]
+source_file="res://BEACH ASSETS/Big Rock.glb"
+dest_files=["res://.godot/imported/Big Rock.glb-87b29060d796b631fa81d32ff5c5f637.scn"]
 
 [params]
 
@@ -30,16 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Arch": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Posts": {
-"generate/physics": true
-}
-}
-}
+import_script/path=""
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://umb8ja4wbyw"
-path="res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"
+uid="uid://q785rb2mpxgp"
+path="res://.godot/imported/GamblingAddictionBillboard2.glb-7df5178cac3cb8dde4f57cfded1bc935.scn"
 
 [deps]
 
-source_file="res://SIGNS/Chinaville.glb"
-dest_files=["res://.godot/imported/Chinaville.glb-ff151b1b62a388a5357f6eec05bf77ab.scn"]
+source_file="res://SIGNS/GamblingAddictionBillboard2.glb"
+dest_files=["res://.godot/imported/GamblingAddictionBillboard2.glb-7df5178cac3cb8dde4f57cfded1bc935.scn"]
 
 [params]
 
@@ -33,10 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Arch": {
+"PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Posts": {
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
 "generate/physics": true
 }
 }
