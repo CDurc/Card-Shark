@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=134 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://b6gspxhdlsl62" path="res://Card Shark Campaign/Map Assets/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -120,6 +120,8 @@
 [ext_resource type="PackedScene" uid="uid://bnrrlo8hxpuh1" path="res://BEACH ASSETS/Tiki Bar.glb" id="111_u66mc"]
 [ext_resource type="PackedScene" uid="uid://64is1euyaxcm" path="res://BUILDINGS/Business/1-2-3 Bank.glb" id="113_gx8li"]
 [ext_resource type="PackedScene" uid="uid://c6l7x04h5p6h6" path="res://BUILDINGS/Assembly/A-2/Pinacoladaville.glb" id="114_vydln"]
+[ext_resource type="PackedScene" uid="uid://bfq3i6kt4v7bo" path="res://BUILDINGS/Assembly/A-2/Honky Tonk.glb" id="115_6ew4a"]
+[ext_resource type="PackedScene" uid="uid://bnn7ijs7tptp3" path="res://BUILDINGS/Business/CopyrightOffices.glb" id="122_lgg3b"]
 
 [sub_resource type="Gradient" id="Gradient_or2fw"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -240,7 +242,7 @@ transform = Transform3D(0.958566, 0, 0.284869, 0, 1, 0, -0.284869, 0, 0.958566, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56948, 32.9211, 140.892)
 
 [node name="Construction Skyscraper" parent="MAP" instance=ExtResource("19_fq4q7")]
-transform = Transform3D(0.999987, 0, 0.00504398, 0, 1, 0, -0.00504398, 0, 0.999987, -172.196, 32.4166, -122.675)
+transform = Transform3D(0.999987, 0, 0.00504398, 0, 1, 0, -0.00504398, 0, 0.999987, -172.495, 32.3861, -122.75)
 
 [node name="Garbage" parent="MAP" instance=ExtResource("20_mu2ki")]
 transform = Transform3D(0.979163, 0, -0.203078, 0, 1, 0, 0.203078, 0, 0.979163, 88.67, 36.7687, -122.567)
@@ -321,7 +323,7 @@ transform = Transform3D(0.33749, 0, -0.941329, 0, 1, 0, 0.941329, 0, 0.33749, -2
 transform = Transform3D(0.999944, 0, 0.010594, 0, 1, 0, -0.010594, 0, 0.999944, -307.342, 33.1999, 345.677)
 
 [node name="TheLoanShark" parent="MAP" instance=ExtResource("46_tkrrx")]
-transform = Transform3D(-0.569107, 0, -0.822263, 0, 1, 0, 0.822263, 0, -0.569107, -39.0622, 32.8792, 296.603)
+transform = Transform3D(-0.569107, 0, -0.822263, 0, 1, 0, 0.822263, 0, -0.569107, -39.8452, 32.9889, 295.648)
 
 [node name="WooCorp Tower" parent="MAP" instance=ExtResource("47_b0t5c")]
 transform = Transform3D(0.801995, 0, 0.597331, 0, 1, 0, -0.597331, 0, 0.801995, -147.784, 33.0506, -95.8783)
@@ -541,6 +543,9 @@ transform = Transform3D(-0.867297, 0, -0.497792, 0, 1, 0, 0.497792, 0, -0.867297
 
 [node name="Pinacoladaville" parent="MAP" instance=ExtResource("114_vydln")]
 transform = Transform3D(-0.0254267, 0, 0.999677, 0, 1, 0, -0.999677, 0, -0.0254267, -153.48, 32.9381, 268.161)
+
+[node name="Honky Tonk" parent="MAP" instance=ExtResource("115_6ew4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -219.574, 33.1039, -91.7482)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -98.4716, 20.5558, 322.226)
@@ -780,6 +785,9 @@ script = ExtResource("101_bkb02")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path3/C5/Cybertruck/Area3D"]
 shape = SubResource("BoxShape3D_1b7e0")
+
+[node name="CopyrightOffices" parent="." instance=ExtResource("122_lgg3b")]
+transform = Transform3D(0.520667, 0, 0.85376, 0, 1, 0, -0.85376, 0, 0.520667, -27.1607, 32.9353, 302.151)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
