@@ -369,6 +369,10 @@ func load_set_cards(): #This CANNOT be same fn as set_cards because viewport nee
 			if i >= len(hand):
 				print("Invis card:",(i+1))
 				cards_in_hand.get_node("C%d" % (i+1)).visible = false
+	if len(hand) < 1:
+		await magic_cooldown.timeout
+		shuffle_deck()
+		print("auto shuffled")
 
 func discard():
 	if Input.is_action_pressed("Ability1"):
@@ -759,7 +763,10 @@ func seek_throw_cards():
 
 func basking_house_spell():
 	#if Input.is_action_pressed("Ability2"):
+	#cum
 	if !basking_house_cooldown.is_stopped(): return
+	if !magic_cooldown.is_stopped(): return
+	magic_cooldown.start(5)
 	print ("F")
 	var flying = true
 	basking_house_cooldown.start(5)
@@ -1092,7 +1099,7 @@ func cast_spell():
 				print("YOU AINT GOT SHIT BOI but frfr wtf do you have cause idk")
 		else:
 			shuffle_deck()
-			print("auto shuffle")
+			print("shuffle")
 
 #Cards forming pentagon for straight_laser
 var rot_speed = 0.7
