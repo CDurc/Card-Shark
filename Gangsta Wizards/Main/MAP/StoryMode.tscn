@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=158 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -142,6 +142,7 @@
 [ext_resource type="PackedScene" uid="uid://c26w4jtrcwe3b" path="res://BUILDINGS/Residential/R-2/Luxury Apartments.glb" id="134_moxhq"]
 [ext_resource type="PackedScene" uid="uid://ch3ld0ohjmqil" path="res://SIGNS/Gourdtown Sign.glb" id="135_wlf71"]
 [ext_resource type="PackedScene" uid="uid://dq1uy6ndj3rjx" path="res://BUILDINGS/Assembly/A-2/PinacoladavilleBillboard.glb" id="136_68q8o"]
+[ext_resource type="PackedScene" uid="uid://luk8wjhkpvui" path="res://BUILDINGS/Utility and Misc/Lighthouse.glb" id="137_oc06b"]
 [ext_resource type="PackedScene" uid="uid://cw3tx8f7wcrrc" path="res://BEACH ASSETS/Beach Shower.glb" id="138_d71y8"]
 [ext_resource type="PackedScene" uid="uid://d1tw8kpi8wukq" path="res://BEACH ASSETS/Outdoor Wedding Scene.glb" id="139_u0p4i"]
 [ext_resource type="PackedScene" uid="uid://b0crq1lp6enmf" path="res://BEACH ASSETS/Big Rock.glb" id="140_g5i8t"]
@@ -538,7 +539,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.9956, 32.8242, -107.554)
 transform = Transform3D(0.0567281, 0, 0.99839, 0, 1, 0, -0.99839, 0, 0.0567281, 7.20346, 33.1452, -78.0271)
 
 [node name="Parking Lot Island" parent="MAP" instance=ExtResource("108_7g5fq")]
-transform = Transform3D(0.689822, 0, -0.723979, 0, 1, 0, 0.723979, 0, 0.689822, 714.933, 0.352577, -612.497)
+transform = Transform3D(0.67176, 0, -0.740769, 0, 1, 0, 0.740769, 0, 0.67176, 735.82, 0.352577, -591.164)
 
 [node name="Math Tutoring" parent="MAP" instance=ExtResource("109_j0jwd")]
 transform = Transform3D(-0.0674232, 0, -0.997724, 0, 1, 0, 0.997724, 0, -0.0674232, -5.25218, 32.9642, 121.604)
@@ -776,6 +777,9 @@ transform = Transform3D(-0.544214, 0, 0.838946, 0, 1, 0, -0.838946, 0, -0.544214
 
 [node name="PinacoladavilleBillboard" parent="MAP" instance=ExtResource("136_68q8o")]
 transform = Transform3D(0.987737, 0, -0.156124, 0, 1, 0, 0.156124, 0, 0.987737, 54.0603, 33.1228, -23.0661)
+
+[node name="Lighthouse" parent="MAP" instance=ExtResource("137_oc06b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.12704, 4.43369, 403.373)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -98.4716, 20.5558, 322.226)
