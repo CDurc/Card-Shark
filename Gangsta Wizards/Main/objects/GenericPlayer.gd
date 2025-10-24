@@ -147,7 +147,9 @@ signal health_updated
 @onready var headcast = $Autostepper/Headcast
 @onready var melee_hitbox = $Melee_Hit
 @onready var cam2 = $"Head/2nd_cam"
-@onready var melee_camgoal = $melee_camgoal
+@onready var cursor = $HUD/Crosshair
+@onready var player_collider = $Collider
+#@onready var melee_camgoal = $melee_camgoal
 
 
 
@@ -158,6 +160,8 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var vulnerable = true
+var melee_camgoal = Node3D
 var money = 0
 var reloading = false
 var ammo = 16
@@ -1306,7 +1310,7 @@ func sprint(delta):
 			movement_speed = sprint_speed
 			replenishing_stamina = false
 		stamina = max(stamina - delta, 0)
-	
+
 	#Stop sprinting
 	if Input.is_action_just_released("Sprint") or stamina <= 0:
 		if sprinting:
@@ -1467,7 +1471,6 @@ func handle_controls(_delta): #Also handles sprint now
 			
 		if(jump_single): action_jump()
 		
-
 # Handle gravity
 
 func handle_gravity(delta):
@@ -1489,37 +1492,69 @@ func action_jump():
 	jump_single = false;
 	jump_double = true;
 
+var melee_scene = preload("res://Card Shark Campaign/CS_MELEE.tscn")
+
 func melee():
-	var goal = $melee_camgoal
-	var lerpspeed = 2
-	var slerpspeed = 2
+	#melee_camgoal = $melee_camgoal
+	#ar lerpspeed = 4
+	#var slerpspeed = 3
 	if not acting:
+		player_collider.disabled = true
+		vulnerable = false
+		cursor.visible = false
+		self.visible = false
+		can_move = false
+		can_look = false
+		var center = get_node("CharacterCenter")
+		var melee_bullet = melee_scene.instantiate()
+		var melee_hitbox = melee_bullet.get_node("Melee_Hit")
+		melee_camgoal = melee_bullet.get_node("cam_goal") #FOLLOW THE CAM GOAL NODE
+		get_tree().root.add_child(melee_bullet)
+		melee_bullet.global_transform = center.global_transform
+		#melee_bullet.global_position = self.global_position
 		acting = true
-		Gen_anime.play("Melee Attack")
-		#MOVE THE CAM
+		melee_bullet.get_node("GenericController").play("Melee Attack")
+		melee_bullet.rotate_y(deg_to_rad(90))
+		var forward_dir = melee_bullet.global_transform.basis.x
+		await get_tree().process_frame
 		moving_cam = true
-		cam2.make_current()
-		movement_speed *= 4
-		await get_tree().create_timer(0.6).timeout
+		#MOVE THE CAM
+		#cam2.make_current()
+		await get_tree().create_timer(0.2).timeout
+		melee_bullet.apply_central_impulse(10*forward_dir)
+		melee_hitbox.monitoring = true
+		melee_hitbox.overlap_check()
 		print("MELEE DMG")
-		melee_hitbox.attack()
-		await get_tree().create_timer(0.6).timeout
-		movement_speed /= 4
+		#melee_hitbox.attack()
+		await get_tree().create_timer(1.1).timeout
+		self.velocity = Vector3.ZERO
+		self.global_position = melee_bullet.global_position
+		melee_bullet.queue_free()
+		player_collider.disabled = false
+		cursor.visible = true
+		vulnerable = true
+		camera.global_transform = camera_origin.global_transform
+		self.visible = true
+		can_move = true
+		can_look = true
 		moving_cam = false
 		acting = false
-		camera.make_current()
-		cam2.global_position = camera.global_position
+		#camera.make_current()
+		#cam2.global_position = camera.global_position
 
 func move_cam(delta):
-	TransformUtils.lerp_slerp_node(cam2, melee_camgoal, 1, 1, delta)
+	TransformUtils.lerp_slerp_node(camera, melee_camgoal, 2, 2, delta)
 	print("MOVING THE CAM")
 
 
 func damage(amount):
-	health -= amount
-	health_updated.emit(health) # Update health on HUD, possibly obselete
-	chipbar.call("display_chips",health)
-	Audio.play("sounds/ahhhhhhhhh.ogg")
+	if vulnerable:
+		health -= amount
+		health_updated.emit(health) # Update health on HUD, possibly obselete
+		chipbar.call("display_chips",health)
+		Audio.play("sounds/ahhhhhhhhh.ogg")
+	else:
+		print("player is invulnerable, cant be dmged")
 
 	
 	
