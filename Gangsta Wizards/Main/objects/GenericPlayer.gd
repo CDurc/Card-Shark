@@ -88,6 +88,8 @@ var previously_floored := false
 
 var jump_single := true
 var jump_double := true
+var acting = false #Enable this for any action that should block all other actions
+var moving_cam = false
 
 var left_container_offset = Vector3(-0.38 , -0.3, -1) # weapon location
 var right_container_offset = Vector3(.8, -.5, -2.3) # card location
@@ -143,6 +145,9 @@ signal health_updated
 @onready var lowcast = $Autostepper/Lowcast
 @onready var highcast = $Autostepper/Highcast
 @onready var headcast = $Autostepper/Headcast
+@onready var melee_hitbox = $Melee_Hit
+@onready var cam2 = $"Head/2nd_cam"
+@onready var melee_camgoal = $melee_camgoal
 
 
 
@@ -232,6 +237,8 @@ func _physics_process(delta):
 		TransformUtils.lerp_slerp_node(camera, flat_cam_goal, 4, 0.2, delta)
 		return
 	
+	if moving_cam:
+		move_cam(delta)
 	
 	# Handle functions
 	handle_gravity(delta)
@@ -586,7 +593,7 @@ func trigger_ragdoll(impulse: Vector3):
 
 
 
-	#SHORTCUT SPELL 2 SPELL2
+
 
 func reload_spell():
 	if Input.is_action_just_pressed("reload"):
@@ -597,6 +604,8 @@ func pause_game():
 		get_tree().paused = !get_tree().paused #flip the boolean
 		pause_menu.visible = get_tree().paused #match menu UI to pause state
 
+	#SHORTCUT SPELL 2 SPELL2
+
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flatten()
@@ -606,7 +615,8 @@ func test_2_spell():
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
 		#flatten()
-		basking_house_spell()
+		#basking_house_spell()
+		melee()
 			
 func throw_cards():
 	for i in range(len(hand)):
@@ -1072,7 +1082,7 @@ func straight_laser_spell():
 	active_laser = null
 
 func cast_spell():
-	if Input.is_action_pressed("Right_Click"):
+	if Input.is_action_pressed("Right_Click") and not acting:
 		if len(hand) > 0:
 			if best_hand == "One Pair":
 				pattern_card_spell()
@@ -1290,7 +1300,7 @@ func _process(delta):
 
 func sprint(delta):
 	#Start sprinting
-	if Input.is_action_pressed("Sprint") and stamina > 0:
+	if Input.is_action_pressed("Sprint") and stamina > 0 and not acting:
 		if not sprinting:
 			sprinting = true
 			movement_speed = sprint_speed
@@ -1310,6 +1320,7 @@ func sprint(delta):
 
 
 func reload():
+	if acting == true: return
 	reloading = true
 	gun_anime.play("Reload")
 	await get_tree().create_timer(0.5).timeout
@@ -1323,6 +1334,7 @@ func reload():
 func shoot():
 	if Input.is_action_pressed("Left_Click"):
 	
+		if acting == true: return
 		if !gun_cooldown.is_stopped(): return
 		if ammo <= 0 and not reloading:
 			reload()
@@ -1476,6 +1488,32 @@ func action_jump():
 	
 	jump_single = false;
 	jump_double = true;
+
+func melee():
+	var goal = $melee_camgoal
+	var lerpspeed = 2
+	var slerpspeed = 2
+	if not acting:
+		acting = true
+		Gen_anime.play("Melee Attack")
+		#MOVE THE CAM
+		moving_cam = true
+		cam2.make_current()
+		movement_speed *= 4
+		await get_tree().create_timer(0.6).timeout
+		print("MELEE DMG")
+		melee_hitbox.attack()
+		await get_tree().create_timer(0.6).timeout
+		movement_speed /= 4
+		moving_cam = false
+		acting = false
+		camera.make_current()
+		cam2.global_position = camera.global_position
+
+func move_cam(delta):
+	TransformUtils.lerp_slerp_node(cam2, melee_camgoal, 1, 1, delta)
+	print("MOVING THE CAM")
+
 
 func damage(amount):
 	health -= amount
