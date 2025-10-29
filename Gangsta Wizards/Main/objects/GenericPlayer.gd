@@ -108,7 +108,7 @@ signal health_updated
 @onready var right_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/RightContainer
 @onready var left_container = $Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer
 @onready var right_hand_container = $TheCardShark2/SharkBones/Skeleton3D/RightHandContainer
-@onready var laser_spawn = right_hand_container.get_node("Card").get_node("Target").get_node("spawn")#For position
+@onready var laser_spawn = right_hand_container.get_node("Card/Target/spawn")
 @onready var test_spawn = $Laserspawn #For parenting
 @onready var cards_in_hand = right_hand_container.get_node("Card")
 #@onready var skel = $RAGDOLL/SharkBones/Skeleton3D
@@ -613,8 +613,9 @@ func pause_game():
 func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flatten()
-		trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
+		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(0,0,0))
+		straight_laser_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
