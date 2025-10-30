@@ -33,10 +33,28 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fences": {
+"PATH:1 - PHYS/Lights": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Gourdtown Ground": {
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shantytown": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shantytown_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trash": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trash 2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trash 3": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land": {
 "generate/physics": true
 }
 }
