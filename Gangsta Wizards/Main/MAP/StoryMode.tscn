@@ -196,11 +196,11 @@ radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_fh68l"]
 background_mode = 2
-background_energy_multiplier = 0.15
+background_energy_multiplier = 0.9
 sky = SubResource("Sky_ah5w1")
 ambient_light_source = 2
 ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
-ambient_light_energy = 0.1
+ambient_light_energy = 0.9
 tonemap_mode = 2
 ssao_enabled = true
 ssao_radius = 0.45
@@ -861,7 +861,7 @@ transform = Transform3D(0.945876, 0, -0.324528, 0, 1, 0, 0.324528, 0, 0.945876, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.9868, 33.0057, -19.8584)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46.0769, 51.9007, -100.64)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -149.697, 160.496, -97.0658)
 health = 250
 
 [node name="Projectiles" type="Node3D" parent="."]

@@ -11,7 +11,7 @@ var print_timer = 0.0
 var dist_from_noon: float
 var energy: float
 
-var day_length: float = 60 #In irl seconds, this is how long a 24h day should be
+var day_length: float = 600 #In irl seconds, this is how long a 24h day should be
 var rotation_deg: float = 0
 
 func _ready() -> void:
