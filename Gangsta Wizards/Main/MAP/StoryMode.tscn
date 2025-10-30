@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=165 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -148,6 +148,7 @@
 [ext_resource type="PackedScene" uid="uid://b0crq1lp6enmf" path="res://BEACH ASSETS/Big Rock.glb" id="140_g5i8t"]
 [ext_resource type="PackedScene" uid="uid://cbqxwjlqgplpj" path="res://MAP - NON-BUILDINGS/Transmission Tower.glb" id="141_f6iop"]
 [ext_resource type="PackedScene" uid="uid://bg0nb7ijkpejb" path="res://SIGNS/Pandemic Sign.glb" id="142_2am35"]
+[ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -195,9 +196,11 @@ radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_fh68l"]
 background_mode = 2
+background_energy_multiplier = 0.15
 sky = SubResource("Sky_ah5w1")
 ambient_light_source = 2
 ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
+ambient_light_energy = 0.1
 tonemap_mode = 2
 ssao_enabled = true
 ssao_radius = 0.45
@@ -208,6 +211,26 @@ glow_levels/2 = 0.6
 glow_levels/3 = 0.6
 glow_levels/5 = 0.0
 glow_intensity = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_7oes6"]
+radius = 280.0
+height = 560.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4uqv"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.765871, 0.112422, 1)
+emission_energy_multiplier = 8.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmpp0"]
+albedo_color = Color(0.259294, 0.259294, 0.259294, 1)
+emission_enabled = true
+emission = Color(0.678944, 0.678944, 0.678944, 1)
+emission_energy_multiplier = 4.47
+
+[sub_resource type="SphereMesh" id="SphereMesh_05b07"]
+radius = 160.0
+height = 320.0
 
 [node name="RootNode" type="Node3D"]
 
@@ -1074,15 +1097,39 @@ script = ExtResource("101_bkb02")
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Environment" type="Node3D" parent="."]
+script = ExtResource("149_1fhlb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_fh68l")
 
-[node name="Sun" type="DirectionalLight3D" parent="Environment"]
+[node name="CelestialBodies" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.0285, 0, 1.38086)
+
+[node name="Sun" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1000, 0)
 light_color = Color(1, 1, 0.894118, 1)
-light_energy = 0.899
+light_energy = 0.9
 shadow_enabled = true
+
+[node name="Moon" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1000, 0)
+light_color = Color(1, 1, 0.894118, 1)
+light_energy = 0.1
+shadow_enabled = true
+
+[node name="Great Sun Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
+transform = Transform3D(1, 0, 1.9766e-22, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 1422, -1.84774e-05)
+cast_shadow = 0
+mesh = SubResource("SphereMesh_7oes6")
+skeleton = NodePath("../Moon")
+surface_material_override/0 = SubResource("StandardMaterial3D_l4uqv")
+
+[node name="Great Moon Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, -1422, -1.84774e-05)
+material_override = SubResource("StandardMaterial3D_fmpp0")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_05b07")
+skeleton = NodePath("../Moon")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
