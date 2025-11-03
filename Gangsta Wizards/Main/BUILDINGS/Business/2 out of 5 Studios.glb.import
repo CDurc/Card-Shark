@@ -30,33 +30,64 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Computer": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Conc Pad": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Cubicle Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ext": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Fixture": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Garage Door": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/RA Duct": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Raised Floor": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Stairs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Reception Desk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/SA Duct": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sink": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Toilet": {
+"generate/physics": true
 }
 }
 }

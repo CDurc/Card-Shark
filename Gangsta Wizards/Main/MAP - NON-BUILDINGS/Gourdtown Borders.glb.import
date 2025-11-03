@@ -33,16 +33,61 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arch": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Arch_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Arch_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Arch_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Benches": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Drums": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Drums_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Drums_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Houston Sign": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lights": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Rocks": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Shantytown": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Shantytown_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Street Sign 2": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trash": {
