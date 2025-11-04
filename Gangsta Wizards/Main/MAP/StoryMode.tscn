@@ -786,7 +786,7 @@ transform = Transform3D(0.46924, 0, 0.88307, 0.0779166, 0.9961, -0.0414028, -0.8
 transform = Transform3D(-0.00197212, 0, -0.999998, 0, 1, 0, 0.999998, 0, -0.00197212, -172.951, 33.0068, 215.372)
 
 [node name="Pawn Shop" parent="MAP" instance=ExtResource("133_pfe1e")]
-transform = Transform3D(-0.392449, 0, 0.919774, 0, 1, 0, -0.919774, 0, -0.392449, -3.23476, 32.9856, -62.8819)
+transform = Transform3D(-0.382312, 0, 0.924033, 0, 1, 0, -0.924033, 0, -0.382312, -4.38982, 32.8744, -58.3896)
 
 [node name="Luxury Apartments" parent="MAP" instance=ExtResource("134_moxhq")]
 transform = Transform3D(0.589845, 0, -0.807517, 0, 1, 0, 0.807517, 0, 0.589845, -118.69, 33.1046, -73.4851)

@@ -84,6 +84,12 @@ _subresources={
 "PATH:1 - PHYS/Rocks": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Scrap": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Scrap_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Shantytown": {
 "generate/physics": true
 },
