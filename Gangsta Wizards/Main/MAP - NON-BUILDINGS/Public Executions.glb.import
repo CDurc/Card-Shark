@@ -33,16 +33,31 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bleacher": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bleacher_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Platform": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Posts": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Press": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairs": {
+"PATH:1 - PHYS/Press Frame": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Press Platform": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Supports": {

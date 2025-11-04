@@ -33,10 +33,19 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Balls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chairs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Computer": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Conc Pad": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Conf Table": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Cube": {
@@ -48,6 +57,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Desks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Detector": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Dumpster": {
@@ -84,6 +96,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sink": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sofas": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Toilet": {

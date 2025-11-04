@@ -66,6 +66,12 @@ _subresources={
 "PATH:1 - PHYS/Drums_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Fences_001cols": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Fencescols": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Houston Sign": {
 "generate/physics": true
 },
