@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brvb4ohbntbq6"
+uid="uid://cnl0vpkv1u0pj"
 path.s3tc="res://.godot/imported/Megachurch_Siding-Black.jpg-e29d22f9bc0876a39bce076267ef6311.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "b3c57b83e7f464ee2abae2cb2ed1704f"
 }
 
 [deps]

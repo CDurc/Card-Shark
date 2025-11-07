@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dktoh5kytok4c"
+uid="uid://of2daoy0g6ah"
 path.s3tc="res://.godot/imported/Pharmacy_grass.jpg-ae400231a926511cbffba12744e0e5ca.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "860b54557fdde542776d96f3ee70f363"
 }
 
 [deps]

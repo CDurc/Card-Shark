@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba50su43kh3hw"
+uid="uid://bh8agi8ss3io0"
 path.s3tc="res://.godot/imported/Forest_Lake.jpg-35b176e190c498e10ffb9a161559bc0c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "46eb2ddcca61fbf4e8162e7b68c26fcd"
 }
 
 [deps]

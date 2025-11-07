@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clhpno8brbp71"
+uid="uid://d2da53k1tyn7p"
 path.s3tc="res://.godot/imported/Pool Bar_GreenFeltTexture.jpg-1d981a5a00cf51b606e9fdb8b1916aea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "bd3d4b626539355fb955efa21715a238"
 }
 
 [deps]

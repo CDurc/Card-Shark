@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4ubktkhspvea"
+uid="uid://cqlxus6tdh7gc"
 path.s3tc="res://.godot/imported/123 Rainey Street_Siding-White.jpg-6a600db806e19d5acf9ff9249e48a573.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
 }
 
 [deps]

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5v2epusu0818"
+uid="uid://e4qph04s01fq"
 path.s3tc="res://.godot/imported/308 Negra Arroyo Lane_Siding-White.jpg-e12f17e9cde9a46a52e8107ffb158ae1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
 }
 
 [deps]

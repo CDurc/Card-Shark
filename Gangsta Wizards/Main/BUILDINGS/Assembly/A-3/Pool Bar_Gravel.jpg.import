@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vqjs4y7ochuf"
+uid="uid://omvri0vi6pty"
 path.s3tc="res://.godot/imported/Pool Bar_Gravel.jpg-d65af085d58abf4fdaed7ad808e9bc20.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "0bd2f495d263ab304bacbecb733f2170"
 }
 
 [deps]

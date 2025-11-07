@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmfmn7sb15rri"
+uid="uid://do5abxktdi5fo"
 path.s3tc="res://.godot/imported/ETower_Luxembourg.jpg-a7f0ca783876ef372987831d9109acf6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "3737d356b1d77a94e9bc36444c3fbc4c"
 }
 
 [deps]

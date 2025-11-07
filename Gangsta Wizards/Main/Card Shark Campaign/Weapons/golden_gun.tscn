@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://do0gx3te0eliw"]
+
+[ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="1_ojk31"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/shark_gun_script.gd" id="2_u83si"]
+
+[node name="Golden_Gun" type="Node3D"]
+
+[node name="SharkGun2" parent="." instance=ExtResource("1_ojk31")]
+script = ExtResource("2_u83si")
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kbl68kl1t0pe"
+uid="uid://b1xksk2bmq3bj"
 path.s3tc="res://.godot/imported/The Shark House_brick-sandstone.jpg-a2efd4b1456b03ac0f3eb59176112ea3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "34f950ce57216913440fe5c5ea9d897e"
 }
 
 [deps]

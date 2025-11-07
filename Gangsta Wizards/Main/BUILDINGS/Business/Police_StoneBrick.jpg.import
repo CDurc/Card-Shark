@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dldav4ykcl8nq"
+uid="uid://bjq5ahaj1sbsf"
 path.s3tc="res://.godot/imported/Police_StoneBrick.jpg-9224745d44ef4669cd0f3d281c780fc9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "4b6f1b57e58016865b364d67c28a2ef2"
 }
 
 [deps]

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck5th8eutahyp"
+uid="uid://bko4wiah1qh3h"
 path.s3tc="res://.godot/imported/Golf Course_rockycliff.jpg-65ff07a636be58457bb074033075fdad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "a3cae00147220c0b4471e706ac3e06da"
 }
 
 [deps]

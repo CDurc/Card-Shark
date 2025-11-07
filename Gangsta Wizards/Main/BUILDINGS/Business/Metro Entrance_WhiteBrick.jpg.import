@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7h50nm2ueusi"
+uid="uid://q3sgvpgj86aw"
 path.s3tc="res://.godot/imported/Metro Entrance_WhiteBrick.jpg-c38a6e33a9f3cef08f0fdd3160e75a2f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "77e5fe3b37c0cf43d3649d56339c8348"
 }
 
 [deps]

@@ -122,7 +122,7 @@ signal health_updated
 @onready var sound_ahh = $SoundAhh
 @onready var card_cooldown = $CardCooldown
 @onready var magic_cooldown = $MagicCooldown #Timer for magic only
-@onready var gun_cooldown = $GunCooldown #Timer for magic only
+@onready var gun_cooldown = $GunCooldown #Timer for gun only, SOON TO BE OBSELETE
 @onready var straight_laser_cooldown = $StraightLaserCooldown
 @onready var basking_house_cooldown = $BaskingHouseCooldown
 
