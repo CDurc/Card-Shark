@@ -1,18 +1,18 @@
 extends Node3D
-@onready var gun_cooldown = $"../GunCooldown"
+@onready var gun_cooldown = $GunCooldown
 @onready var player = get_tree().get_first_node_in_group("Player")
-@onready var gun_anime = $AnimationPlayer
+@onready var gun_anime = $SharkGun2/AnimationPlayer
 
 var reloading = false
 var reload_time = 2
 
-var ammo = player.ammo
-var acting = player.acting
-var ammo_counter = player.ammo_counter
-var left_container = player.left_container
-var camera = player.camera
-var raycast = player.raycast
-var LA_anime = player.LA_anime
+@onready var ammo = player.ammo
+@onready var acting = player.acting
+@onready var ammo_counter = player.get_node("HUD/Bottombar/Ammo_icon/Ammo")
+@onready var left_container = player.get_node("Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer")
+@onready var camera = player.get_node("Head/Camera")
+@onready  var raycast = player.get_node("Head/Camera/RayCast")
+@onready var LA_anime = player.get_node("TheCardShark2/LeftArmController")
 
 
 # Called when the node enters the scene tree for the first time.

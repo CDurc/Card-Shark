@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://Card Shark Campaign/Weapons/shark_gun_script.gd" id="2_u83si"]
 
 [node name="Golden_Gun" type="Node3D"]
+script = ExtResource("2_u83si")
 
 [node name="SharkGun2" parent="." instance=ExtResource("1_ojk31")]
-script = ExtResource("2_u83si")
 
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true

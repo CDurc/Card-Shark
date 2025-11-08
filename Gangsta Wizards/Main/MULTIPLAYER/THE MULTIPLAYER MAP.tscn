@@ -1,7 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://bpqssro3f34wd"]
 
 [ext_resource type="PackedScene" uid="uid://cnoyrcbmf8a28" path="res://MULTIPLAYER/Tiles/MapBorders.glb" id="1_f8pif"]
-[ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="2_ighsf"]
 [ext_resource type="PackedScene" uid="uid://bbjbspwafjnw3" path="res://MULTIPLAYER/Tiles/1-B-W.glb" id="3_f60nm"]
 [ext_resource type="PackedScene" uid="uid://dr238c52upnlg" path="res://MULTIPLAYER/Tiles/2-B-W.glb" id="4_1loek"]
 [ext_resource type="PackedScene" uid="uid://bu3yw6gjq32ka" path="res://MULTIPLAYER/Tiles/3-B-W.glb" id="5_h4vei"]
@@ -31,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfaq56e7y0u3" path="res://MULTIPLAYER/Tiles/27-G-B.glb" id="29_3st4s"]
 [ext_resource type="PackedScene" uid="uid://bnyla3oyvrtkj" path="res://MULTIPLAYER/Tiles/28-G-B.glb" id="30_ai534"]
 [ext_resource type="PackedScene" uid="uid://b7it5vto5lt0t" path="res://MULTIPLAYER/Tiles/29-G-B.glb" id="31_qpsjj"]
+[ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="32_3gh50"]
 [ext_resource type="PackedScene" uid="uid://c5t4a51qv7mde" path="res://MULTIPLAYER/Tiles/30-O-B.glb" id="32_ksqqb"]
 
 [sub_resource type="Gradient" id="Gradient_vxynd"]
@@ -162,8 +162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.87, 0, -24.6203)
 [node name="30-O-B" parent="MAP" instance=ExtResource("32_ksqqb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.4208, 0, 81.065)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_ighsf")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.02849, 7.95661, -0.598865)
-health = 250
-
 [node name="Projectiles" type="Node3D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("32_3gh50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95962, 7.45647)

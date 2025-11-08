@@ -1,36 +1,36 @@
-[gd_scene load_steps=39 format=3 uid="uid://c3vo81ssgfsj6"]
+[gd_scene load_steps=39 format=3 uid="uid://b53m2mj6gegky"]
 
-[ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
-[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
-[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="4_kg30k"]
-[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_rfl7a"]
-[ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="6_ikpl2"]
-[ext_resource type="Script" path="res://objects/in_range.gd" id="8_p0iay"]
-[ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="10_dggtj"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="10_i78g7"]
-[ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="11_5uwfn"]
-[ext_resource type="Texture2D" uid="uid://cjt2akxcc2c8e" path="res://Menus/AmmoIcon.png" id="11_87q8d"]
-[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="11_bcmfb"]
-[ext_resource type="PackedScene" uid="uid://be8aktxpp8odf" path="res://Card Shark Campaign/TheCardSharkCURRENT.tscn" id="12_17kw0"]
-[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="12_rjtn7"]
-[ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="13_jci75"]
-[ext_resource type="Texture2D" uid="uid://ds4mtht5kc2gx" path="res://Menus/DeathScreen.png" id="14_qcibk"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/chipbar.gd" id="15_c6g67"]
-[ext_resource type="Texture2D" uid="uid://bhdnhmaur6tfi" path="res://Menus/HealthChips/BlackChip100.png" id="15_ueeh3"]
-[ext_resource type="Texture2D" uid="uid://jkx2gaiu3y1a" path="res://Menus/HealthChips/BlueChip10.png" id="16_o4ex0"]
-[ext_resource type="Texture2D" uid="uid://l6vpswr50lho" path="res://Menus/HealthChips/GreenChip25.png" id="17_j6obe"]
-[ext_resource type="Texture2D" uid="uid://cbah65w672dxb" path="res://Menus/HealthChips/RedChip5.png" id="18_empbr"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/bottombar.gd" id="20_lx3rq"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/pause_menu.gd" id="21_o5526"]
-[ext_resource type="Texture2D" uid="uid://c6o1fpll1dciq" path="res://Menus/CashIcon.png" id="22_n3fv3"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/resume.gd" id="22_p8c2x"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/go_to_main_menu.gd" id="23_g3t70"]
-[ext_resource type="PackedScene" uid="uid://cyolbxh2dunh4" path="res://Card Shark Campaign/Spells/empty.tscn" id="24_tc8cu"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/fold.gd" id="25_gvw6i"]
-[ext_resource type="Texture2D" uid="uid://bne84pb8w03h2" path="res://Menus/PokerChipCursor.png" id="26_duqyg"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/save_game.gd" id="27_2xi52"]
-[ext_resource type="Texture2D" uid="uid://c1xj00ubbvyfs" path="res://Menus/Pause - Story Mode.jpg" id="28_f5cal"]
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/melee_hit.gd" id="31_m3jat"]
+[ext_resource type="Script" path="res://Player/player_v3_script.gd" id="1_2tanh"]
+[ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_d4skl"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="3_dkwgm"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="4_cr6ej"]
+[ext_resource type="PackedScene" uid="uid://byl5ircs8tlxp" path="res://Card Shark Campaign/Weapons/SharkGun.glb" id="5_ranty"]
+[ext_resource type="Script" path="res://objects/in_range.gd" id="6_ycre2"]
+[ext_resource type="PackedScene" uid="uid://be8aktxpp8odf" path="res://Card Shark Campaign/TheCardSharkCURRENT.tscn" id="7_txfuf"]
+[ext_resource type="PackedScene" uid="uid://do0gx3te0eliw" path="res://Card Shark Campaign/Weapons/golden_gun.tscn" id="8_udu6d"]
+[ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="9_00ky1"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="10_itajd"]
+[ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="11_nmkgg"]
+[ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="12_qt802"]
+[ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="13_0w81o"]
+[ext_resource type="Texture2D" uid="uid://ds4mtht5kc2gx" path="res://Menus/DeathScreen.png" id="14_y5n83"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/chipbar.gd" id="15_bxqv1"]
+[ext_resource type="Texture2D" uid="uid://bhdnhmaur6tfi" path="res://Menus/HealthChips/BlackChip100.png" id="16_6x50a"]
+[ext_resource type="Texture2D" uid="uid://jkx2gaiu3y1a" path="res://Menus/HealthChips/BlueChip10.png" id="17_qpoa4"]
+[ext_resource type="Texture2D" uid="uid://l6vpswr50lho" path="res://Menus/HealthChips/GreenChip25.png" id="18_ml8gn"]
+[ext_resource type="Texture2D" uid="uid://cbah65w672dxb" path="res://Menus/HealthChips/RedChip5.png" id="19_y05g7"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/bottombar.gd" id="20_aa8wv"]
+[ext_resource type="Texture2D" uid="uid://cjt2akxcc2c8e" path="res://Menus/AmmoIcon.png" id="21_vev5w"]
+[ext_resource type="Texture2D" uid="uid://c6o1fpll1dciq" path="res://Menus/CashIcon.png" id="22_dvcy8"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/pause_menu.gd" id="23_0w36x"]
+[ext_resource type="Texture2D" uid="uid://c1xj00ubbvyfs" path="res://Menus/Pause - Story Mode.jpg" id="24_jxbm7"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/resume.gd" id="25_apklg"]
+[ext_resource type="Texture2D" uid="uid://bne84pb8w03h2" path="res://Menus/PokerChipCursor.png" id="26_74ck4"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/save_game.gd" id="27_kvv8v"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/go_to_main_menu.gd" id="28_se670"]
+[ext_resource type="PackedScene" uid="uid://cyolbxh2dunh4" path="res://Card Shark Campaign/Spells/empty.tscn" id="29_3fyrk"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/fold.gd" id="30_x8df6"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/melee_hit.gd" id="31_85p72"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.23
@@ -49,7 +49,7 @@ height = 8.0
 radius = 20.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcuhi"]
-font = ExtResource("12_rjtn7")
+font = ExtResource("12_qt802")
 font_size = 23
 outline_size = 12
 outline_color = Color(0, 0, 0, 0.470588)
@@ -60,9 +60,9 @@ font_size = 22
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qehix"]
 radius = 0.543226
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-script = ExtResource("1_tjpgj")
+script = ExtResource("1_2tanh")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.682756, 0.0264268)
@@ -105,7 +105,7 @@ visible = false
 [node name="RightMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203494, 1.63791, -2.51712)
 layers = 2
-sprite_frames = ExtResource("2_jg68g")
+sprite_frames = ExtResource("2_d4skl")
 frame = 2
 
 [node name="LeftContainer" type="Node3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
@@ -115,7 +115,7 @@ visible = false
 [node name="LeftMuzzle" type="AnimatedSprite3D" parent="Head/Camera/SubViewportContainer/SubViewport/CameraItem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19594, 1.63791, -2.51712)
 layers = 2
-sprite_frames = ExtResource("2_jg68g")
+sprite_frames = ExtResource("2_d4skl")
 frame = 2
 
 [node name="RayCast" type="RayCast3D" parent="Head/Camera"]
@@ -148,12 +148,12 @@ transform = Transform3D(1, 0, 0, 0, 0.762815, 0.646617, 0, -0.646617, 0.762815, 
 [node name="Shadow" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
 size = Vector3(1, 2, 1)
-texture_albedo = ExtResource("4_kg30k")
+texture_albedo = ExtResource("3_dkwgm")
 modulate = Color(1, 1, 1, 0.705882)
 normal_fade = 0.5
 
 [node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_rfl7a")
+stream = ExtResource("4_cr6ej")
 volume_db = -5.0
 autoplay = true
 
@@ -192,7 +192,7 @@ mesh = SubResource("CapsuleMesh_03cjf")
 [node name="3rd_person_point" type="Marker3D" parent="."]
 transform = Transform3D(0.866025, -0.12941, 0.482963, 0, 0.965926, 0.258819, -0.5, -0.224144, 0.836516, 0.937163, 1.19932, 0.745126)
 
-[node name="Testgun" parent="3rd_person_point" instance=ExtResource("6_ikpl2")]
+[node name="Testgun" parent="3rd_person_point" instance=ExtResource("5_ranty")]
 transform = Transform3D(-0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, 0, -0.058812, 0)
 visible = false
 
@@ -211,13 +211,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201488, 0.909521, 0.1210
 [node name="Ranges" type="Node3D" parent="."]
 
 [node name="Spell Range" type="Area3D" parent="Ranges"]
-script = ExtResource("8_p0iay")
+script = ExtResource("6_ycre2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ranges/Spell Range"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623286, 0)
 shape = SubResource("CylinderShape3D_5ilxy")
 
-[node name="TheCardShark2" parent="." instance=ExtResource("12_17kw0")]
+[node name="TheCardShark2" parent="." instance=ExtResource("7_txfuf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.864053, 0.0929689)
 
 [node name="Skeleton3D" parent="TheCardShark2/SharkBones" index="0"]
@@ -247,33 +247,31 @@ bones/32/rotation = Quaternion(-0.221894, -0.0810468, 0.681003, 0.69313)
 [node name="LeftHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="1"]
 transform = Transform3D(-0.937552, 0.335105, -0.0932654, -0.0441998, 0.151184, 0.987517, 0.345023, 0.929972, -0.126931, 0.270919, 0.543758, -0.102768)
 
-[node name="Rifle" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="0" instance=ExtResource("10_dggtj")]
-transform = Transform3D(0.448846, 0.768118, 0.456651, 0.704188, -0.618637, 0.348437, 0.550142, 0.165174, -0.818572, -0.00521445, -0.121753, 0.0968415)
-visible = false
+[node name="Held_Item" type="Node3D" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="0"]
+transform = Transform3D(0.990277, -0.0629982, 0.124027, 0.134885, 0.216792, -0.966854, 0.0340222, 0.974183, 0.223182, 0.026121, -0.0229101, 0.0462505)
 
-[node name="SharkGun2" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer" index="1" instance=ExtResource("6_ikpl2")]
-transform = Transform3D(0.792224, -0.0503983, 0.0992226, 0.107908, 0.173434, -0.773485, 0.0272178, 0.779348, 0.178546, 0.026121, -0.0229101, 0.0462505)
+[node name="Golden_Gun" parent="TheCardShark2/SharkBones/Skeleton3D/LeftHandContainer/Held_Item" instance=ExtResource("8_udu6d")]
 
 [node name="RightHandContainer" parent="TheCardShark2/SharkBones/Skeleton3D" index="2"]
 transform = Transform3D(0.427017, 0.902283, 0.0595149, -0.415097, 0.254072, -0.87358, -0.803338, 0.348328, 0.483027, 0.297557, 0.576449, 0.205453)
 
-[node name="Card" parent="TheCardShark2/SharkBones/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("11_5uwfn")]
+[node name="Card" parent="TheCardShark2/SharkBones/Skeleton3D/RightHandContainer" index="0" instance=ExtResource("9_00ky1")]
 transform = Transform3D(-0.0185427, -0.0392659, -0.0900797, 0.00181571, 0.0915168, -0.0402662, 0.0982489, -0.00910207, -0.0162567, -0.00687259, 0.0280638, -0.0368331)
 
 [node name="Physical Bone Hips" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
-transform = Transform3D(-0.0022908, -0.999997, 5.95743e-08, -1.31549e-08, 5.96046e-08, 1, 0.999997, -0.0022908, 1.32914e-08, 6.96629e-06, -2.6226e-06, -0.000221055)
+transform = Transform3D(-0.00229081, -0.999997, 5.95715e-08, -1.43773e-08, 5.96046e-08, 1, 0.999997, -0.00229081, 1.45138e-08, 6.96629e-06, -2.6226e-06, -0.000221055)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0230455, 0.000717171, -0.188023)
-body_offset = Transform3D(-0.999949, 1.7904e-05, -0.0101283, -0.00986101, 0.226511, 0.973959, -0.00231161, -0.974009, 0.226499, 0.0211399, 0.183192, 0.0433389)
+body_offset = Transform3D(-0.999949, 1.79093e-05, -0.0101283, -0.00986101, 0.226511, 0.973959, -0.00231162, -0.974009, 0.226499, 0.0211399, 0.183192, 0.0433389)
 
 [node name="Physical Bone Stomach" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
-transform = Transform3D(0.0133171, -0.999911, -4.46849e-07, -1.0943e-08, -4.47035e-07, 1, 0.999911, 0.0133171, 1.68953e-08, 0.000318475, 4.76837e-07, -0.000196265)
+transform = Transform3D(0.0133171, -0.999911, -5.06449e-07, -1.0943e-08, -5.0664e-07, 1, 0.999911, 0.0133171, 1.7689e-08, 0.000318475, 4.76837e-07, -0.000196265)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0211685, 0.0323756, -0.0546779)
-body_offset = Transform3D(-0.999907, -0.00012286, -0.0136133, -0.0120534, -0.45687, 0.889452, 0.00632881, -0.889533, -0.456826, 0.0204262, 0.0636799, 0.0036869)
+body_offset = Transform3D(-0.999907, -0.000122859, -0.0136133, -0.0120534, -0.45687, 0.889451, 0.00632881, -0.889533, -0.456826, 0.0204262, 0.0636799, 0.0036869)
 
 [node name="Physical Bone Chest" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="2"]
-transform = Transform3D(-0.0278197, -0.999613, 1.1907e-06, -3.35276e-08, 1.19209e-06, 1, 0.999613, -0.0278197, 6.66783e-08, -0.000578061, 0, -9.82508e-05)
+transform = Transform3D(-0.0278197, -0.999613, 1.33965e-06, -3.35276e-08, 1.3411e-06, 1, 0.999613, -0.0278197, 7.08238e-08, -0.000578061, 0, -9.82508e-05)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016319, -0.0587424, 0.119564)
-body_offset = Transform3D(-0.998325, 0.000257656, -0.0578527, -0.0544199, 0.335183, 0.94058, -0.0196336, -0.942153, 0.334608, 0.0232239, -0.0918816, -0.0950308)
+body_offset = Transform3D(-0.998325, 0.000257643, -0.0578527, -0.0544199, 0.335183, 0.94058, -0.0196336, -0.942153, 0.334608, 0.0232239, -0.0918816, -0.0950308)
 
 [node name="Physical Bone Shoulder L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="3"]
 transform = Transform3D(-0.950075, 0.312023, 3.36485e-08, -2.65427e-07, -7.00355e-07, -1, -0.312023, -0.950075, 7.48208e-07, 0.000518836, -3.57628e-07, 6.51435e-05)
@@ -281,8 +279,8 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0256367, -0.0101094, -0.
 body_offset = Transform3D(-0.999948, -0.00757137, -0.00703241, -0.00558332, 0.96853, -0.248835, 0.00869504, -0.248783, -0.96852, 0.0230387, -0.0792389, -0.349819)
 
 [node name="Physical Bone Bicep L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
-transform = Transform3D(-0.54072, -0.733988, 0.410955, -0.332626, -0.262159, -0.905888, -0.772646, 0.626526, 0.102389, 0.056931, -0.0150774, -0.0427364)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0315393, -0.161987, -0.402448)
+transform = Transform3D(-0.54072, -0.733988, 0.410955, -0.332626, -0.262159, -0.905888, -0.772646, 0.626526, 0.102389, 0.0569311, -0.0150774, -0.0427364)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0315392, -0.161987, -0.402447)
 body_offset = Transform3D(-0.332453, 0.00197089, 0.943119, 0.00381729, -0.999987, 0.00343597, -0.943113, -0.00474295, -0.33244, 0.36939, -0.160482, -0.164303)
 
 [node name="Physical Bone Forearm L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
@@ -291,29 +289,29 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00208661, 0.375352, -0.4
 body_offset = Transform3D(-0.309259, 0.0221889, 0.95072, 0.0438304, 0.998998, -0.0090569, -0.949967, 0.0388688, -0.309922, 0.374248, -0.378706, -0.137112)
 
 [node name="Physical Bone Wrist L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="6"]
-transform = Transform3D(0.977937, -0.208153, 0.0176752, -0.0117387, 0.0297211, 0.999489, -0.208572, -0.977645, 0.0266219, 0.07453, 0.16911, -0.703695)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0639385, -0.549722, 0.403331)
-body_offset = Transform3D(-0.973523, -0.00850935, 0.228435, -0.0237097, -0.990158, -0.137935, 0.22736, -0.139699, 0.963739, -0.034567, -0.487162, -0.480038)
+transform = Transform3D(0.977937, -0.208152, 0.0176753, -0.0117388, 0.029721, 0.999489, -0.208571, -0.977645, 0.0266218, 0.07453, 0.16911, -0.703695)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0639387, -0.549722, 0.403331)
+body_offset = Transform3D(-0.973523, -0.00850977, 0.228435, -0.0237093, -0.990158, -0.137935, 0.22736, -0.139699, 0.963739, -0.034567, -0.487162, -0.480038)
 
 [node name="Physical Bone Shoulders Middle" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(-0.0141394, -0.9999, -4.29344e-08, -1.24801e-07, 4.47035e-08, -1, 0.9999, -0.0141394, -1.2542e-07, 0.000272684, 2.18153e-05, -1.24746e-05)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00206805, 0.0272385, -0.35834)
-body_offset = Transform3D(-0.999973, 0.000136848, 0.00728327, -0.00728323, -0.0378781, -0.999256, 0.000139127, -0.999282, 0.0378781, 0.00467416, -0.357027, 0.0407919)
+transform = Transform3D(-0.0141394, -0.9999, -4.27896e-08, -1.35045e-07, 4.47035e-08, -1, 0.9999, -0.0141394, -1.35664e-07, 0.000272781, 2.44379e-05, -1.2483e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00206806, 0.0272386, -0.358337)
+body_offset = Transform3D(-0.999973, 0.000136849, 0.00728328, -0.00728324, -0.0378781, -0.999256, 0.000139127, -0.999282, 0.0378781, 0.00467415, -0.357024, 0.0407919)
 
 [node name="Physical Bone Neck" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
-transform = Transform3D(-0.0129761, -0.990578, -0.136337, 0.00178594, 0.136326, -0.990663, 0.999914, -0.0130984, 1.4271e-07, -0.0663214, 0.00148797, -1.97564e-05)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011174, 0.0223275, -0.486522)
-body_offset = Transform3D(-0.999825, 0.000121467, -0.0186817, 0.0179201, -0.276445, -0.960863, -0.00528118, -0.96103, 0.276394, -0.00797456, -0.461328, 0.155935)
+transform = Transform3D(-0.0129761, -0.990578, -0.136337, 0.00178594, 0.136326, -0.990663, 0.999914, -0.0130984, 1.42473e-07, -0.0663214, 0.00148797, -1.97564e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011174, 0.0223275, -0.486521)
+body_offset = Transform3D(-0.999825, 0.000121468, -0.0186817, 0.0179201, -0.276445, -0.960863, -0.00528118, -0.96103, 0.276394, -0.00797456, -0.461328, 0.155935)
 
 [node name="Physical Bone Shoulder R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
-transform = Transform3D(0.978396, 0.206741, 5.49962e-08, 3.35276e-08, -4.24683e-07, 1, -0.206741, 0.978396, 4.2244e-07, 0.000476852, -3.57628e-07, -9.98019e-05)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280548, -9.875e-05, 0.358362)
-body_offset = Transform3D(-0.99874, 0.00591834, -0.0498329, -0.000372797, 0.992119, 0.1253, -0.0501817, -0.125161, 0.990866, -0.0101606, -0.0448154, -0.356509)
+transform = Transform3D(0.978396, 0.206741, 4.77066e-08, 4.09782e-08, -4.24683e-07, 1, -0.206741, 0.978396, 4.2398e-07, 0.000476852, -3.57628e-07, -9.98019e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280548, -9.87537e-05, 0.358362)
+body_offset = Transform3D(-0.99874, 0.00591832, -0.0498329, -0.000372812, 0.992119, 0.1253, -0.0501817, -0.125161, 0.990866, -0.0101606, -0.0448154, -0.356509)
 
 [node name="Physical Bone Bicep R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
-transform = Transform3D(0.150229, -0.988651, 1.45551e-06, 3.72529e-07, -1.41561e-06, -1, 0.988651, 0.150229, 1.55635e-07, -0.000150412, -1.07288e-06, -0.00204518)
+transform = Transform3D(0.150229, -0.988651, 1.42605e-06, 3.72529e-07, -1.38581e-06, -1, 0.988651, 0.150229, 1.60112e-07, -0.000150442, -1.07288e-06, -0.00204507)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205645, 0.0161391, -0.383931)
-body_offset = Transform3D(-0.1962, -0.000597317, -0.980564, 0.383978, -0.920187, -0.0762694, -0.902256, -0.391479, 0.18077, -0.336111, -0.0933944, 0.261266)
+body_offset = Transform3D(-0.1962, -0.000597281, -0.980564, 0.383978, -0.920187, -0.0762695, -0.902256, -0.391479, 0.18077, -0.336111, -0.0933944, 0.261266)
 
 [node name="Physical Bone Forearm R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
 transform = Transform3D(-0.97499, 0.22225, 1.25095e-06, 1.2219e-06, -2.68221e-07, 1, -0.22225, -0.97499, 1.00533e-08, -0.00232457, -8.34465e-07, -0.00258958)
@@ -321,19 +319,19 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289441, -0.201947, 0.40
 body_offset = Transform3D(0.971122, -0.149643, 0.185821, -0.103854, 0.43605, 0.89391, 0.214795, 0.887393, -0.407917, 0.176294, -0.300719, 0.40507)
 
 [node name="Physical Bone Wrist R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="12"]
-transform = Transform3D(-0.548549, -0.836118, 1.2578e-07, -1.3411e-07, 2.38419e-07, 1, 0.836119, -0.548549, 2.42916e-07, -0.0026371, -5.00679e-06, -0.00199075)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0180528, -0.333083, 0.54096)
-body_offset = Transform3D(-0.968569, 0.00495961, -0.248694, -0.1913, -0.653896, 0.732, 0.15899, -0.756569, -0.634293, 0.153671, -0.610331, 0.0882564)
+transform = Transform3D(-0.548549, -0.836119, -3.29066e-07, -8.27015e-07, 1.49012e-07, 1, 0.836119, -0.548549, 7.73222e-07, -0.0026371, -5.00679e-06, -0.00199077)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0180525, -0.333083, 0.54096)
+body_offset = Transform3D(-0.968569, 0.00495946, -0.248695, -0.191301, -0.653896, 0.732, 0.158991, -0.756569, -0.634293, 0.153671, -0.610331, 0.0882564)
 
 [node name="Physical Bone Thigh L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
-transform = Transform3D(-0.0513602, 0.99868, 2.17219e-05, 1.6402e-06, -2.16663e-05, 1, 0.99868, 0.0513602, -5.25255e-07, 2.11224e-05, -1.49012e-05, 0.00101876)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0877721, -0.0128054, -0.107661)
-body_offset = Transform3D(-0.997811, 0.00051038, 0.0661298, -0.0659111, 0.0739444, -0.995082, -0.00539776, -0.997252, -0.0737482, -0.0804538, -0.11197, -0.0211838)
+transform = Transform3D(-0.0513602, 0.99868, 2.17815e-05, 1.6402e-06, -2.17259e-05, 1, 0.99868, 0.0513602, -5.22194e-07, 2.11075e-05, -1.49012e-05, 0.0010187)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.087772, -0.0128054, -0.107661)
+body_offset = Transform3D(-0.997811, 0.000510372, 0.0661298, -0.0659111, 0.0739445, -0.995082, -0.00539776, -0.997252, -0.0737482, -0.0804537, -0.11197, -0.0211838)
 
 [node name="Physical Bone Shin L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
-transform = Transform3D(-0.0119427, 0.999929, 4.18153e-05, 5.46289e-06, -4.17531e-05, 1, 0.999929, 0.0119427, -4.96386e-06, -0.000319637, 2.14577e-06, 0.00119915)
+transform = Transform3D(-0.0119427, 0.999929, 4.18158e-05, 5.50396e-06, -4.17531e-05, 1, 0.999929, 0.0119427, -5.00492e-06, -0.000319637, 2.14577e-06, 0.00119915)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117294, 0.0261299, -0.564519)
-body_offset = Transform3D(-0.999792, 0.000117449, 0.0204087, -0.0203087, -0.104708, -0.994295, 0.00202107, -0.994493, 0.104691, -0.105751, -0.560945, 0.0853232)
+body_offset = Transform3D(-0.999792, 0.000117453, 0.0204088, -0.0203087, -0.104708, -0.994295, 0.00202107, -0.994493, 0.104691, -0.105751, -0.560945, 0.0853232)
 
 [node name="Physical Bone Ankle L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="15"]
 transform = Transform3D(3.97687e-06, 1, 1.04308e-06, -3.29226e-07, -1.04308e-06, 1, 1, -3.97687e-06, 3.29222e-07, 0.000103213, 8.34465e-07, 0.00123563)
@@ -341,14 +339,14 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124734, -0.0103861, -0.
 body_offset = Transform3D(-1, 5.51486e-06, 3.64296e-07, 2.99899e-06, 0.727291, -0.686323, -3.22971e-06, -0.686315, -0.727297, -0.124734, -0.624567, -0.676988)
 
 [node name="Physical Bone Thigh R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="16"]
-transform = Transform3D(-0.0280632, 0.999606, 5.45045e-05, 1.76553e-06, 5.45755e-05, -1, 0.999606, 0.0280632, 3.2964e-06, 0.000237949, 5.72205e-06, -0.00137251)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122806, -0.00756239, 0.109841)
-body_offset = Transform3D(-0.997301, 0.000273626, 0.0734222, 0.0731916, 0.0829896, 0.993859, 0.00582127, -0.99654, 0.0827849, 0.114412, -0.117527, -0.0173443)
+transform = Transform3D(-0.0280632, 0.999606, 5.45119e-05, 1.76521e-06, 5.4583e-05, -1, 0.999606, 0.0280632, 3.29629e-06, 0.000237748, 8.34465e-06, -0.00137267)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122806, -0.00756218, 0.109844)
+body_offset = Transform3D(-0.997301, 0.000273621, 0.0734222, 0.0731916, 0.0829896, 0.993859, 0.00582127, -0.99654, 0.0827848, 0.114412, -0.11753, -0.0173443)
 
 [node name="Physical Bone Shin R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="17"]
-transform = Transform3D(-0.0666044, 0.997779, -4.09002e-05, -5.4416e-06, 4.0628e-05, 1, 0.997779, 0.0666044, 2.72351e-06, -0.000131458, 7.15256e-07, -0.00155114)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155216, 0.0368705, -0.565337)
-body_offset = Transform3D(-0.99994, 0.00065738, -0.0109617, 0.0108416, -0.099582, -0.99497, -0.00174658, -0.99502, 0.0995716, 0.148985, -0.560505, 0.0932495)
+transform = Transform3D(-0.0666044, 0.997779, -4.064e-05, -5.4416e-06, 4.03672e-05, 1, 0.997779, 0.0666044, 2.74088e-06, -0.000131458, 7.15256e-07, -0.00155114)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155216, 0.0368706, -0.565337)
+body_offset = Transform3D(-0.99994, 0.000657387, -0.0109617, 0.0108416, -0.0995817, -0.99497, -0.00174658, -0.99502, 0.0995713, 0.148985, -0.560505, 0.0932495)
 
 [node name="Physical Bone Ankle R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="18"]
 transform = Transform3D(4.37582e-06, 1, 6.25849e-06, -4.83322e-07, 6.25849e-06, -1, 1, -4.37582e-06, -4.83349e-07, 9.82955e-05, 9.53674e-07, -0.00157163)
@@ -368,7 +366,7 @@ transform = Transform3D(1, 0, 0, 0, 0.977582, 0.210557, 0, -0.210557, 0.977582, 
 visible = false
 
 [node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("10_i78g7")
+script = ExtResource("10_itajd")
 
 [node name="Crosshair" type="TextureRect" parent="HUD"]
 anchors_preset = 8
@@ -384,7 +382,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
 pivot_offset = Vector2(64, 64)
-texture = ExtResource("11_bcmfb")
+texture = ExtResource("11_nmkgg")
 
 [node name="Health" type="Label" parent="HUD"]
 visible = false
@@ -447,7 +445,7 @@ color = Color(0.930577, 0.928115, 0.890927, 1)
 layout_mode = 0
 offset_right = 36.0
 offset_bottom = 36.0
-texture = ExtResource("13_jci75")
+texture = ExtResource("13_0w81o")
 expand_mode = 1
 
 [node name="Txt" type="Label" parent="HUD/C1"]
@@ -494,7 +492,7 @@ color = Color(0.930577, 0.928115, 0.890927, 1)
 layout_mode = 0
 offset_right = 36.0
 offset_bottom = 36.0
-texture = ExtResource("13_jci75")
+texture = ExtResource("13_0w81o")
 expand_mode = 1
 
 [node name="Txt" type="Label" parent="HUD/C2"]
@@ -515,7 +513,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 179.0
 offset_bottom = 179.0
-texture = ExtResource("14_qcibk")
+texture = ExtResource("14_y5n83")
 expand_mode = 1
 
 [node name="Chipbar" type="Control" parent="HUD"]
@@ -525,13 +523,13 @@ anchor_right = 1.0
 anchor_bottom = 0.09
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("15_c6g67")
+script = ExtResource("15_bxqv1")
 
 [node name="C1" type="TextureRect" parent="HUD/Chipbar"]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 1.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C2" type="TextureRect" parent="HUD/Chipbar"]
@@ -542,7 +540,7 @@ offset_left = 15.0
 offset_top = 10.0
 offset_right = 91.0
 offset_bottom = 10.0
-texture = ExtResource("16_o4ex0")
+texture = ExtResource("17_qpoa4")
 expand_mode = 2
 
 [node name="C3" type="TextureRect" parent="HUD/Chipbar"]
@@ -551,7 +549,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 30.0
 offset_right = 106.0
-texture = ExtResource("17_j6obe")
+texture = ExtResource("18_ml8gn")
 expand_mode = 2
 
 [node name="C4" type="TextureRect" parent="HUD/Chipbar"]
@@ -562,7 +560,7 @@ offset_left = 45.0
 offset_top = 10.0
 offset_right = 121.0
 offset_bottom = 10.0
-texture = ExtResource("18_empbr")
+texture = ExtResource("19_y05g7")
 expand_mode = 2
 
 [node name="C5" type="TextureRect" parent="HUD/Chipbar"]
@@ -571,7 +569,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 60.0
 offset_right = 136.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C6" type="TextureRect" parent="HUD/Chipbar"]
@@ -582,7 +580,7 @@ offset_left = 75.0
 offset_top = 10.0
 offset_right = 151.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C7" type="TextureRect" parent="HUD/Chipbar"]
@@ -591,7 +589,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 90.0
 offset_right = 166.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C8" type="TextureRect" parent="HUD/Chipbar"]
@@ -602,7 +600,7 @@ offset_left = 105.0
 offset_top = 10.0
 offset_right = 181.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C9" type="TextureRect" parent="HUD/Chipbar"]
@@ -611,7 +609,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 120.0
 offset_right = 196.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C10" type="TextureRect" parent="HUD/Chipbar"]
@@ -622,7 +620,7 @@ offset_left = 135.0
 offset_top = 10.0
 offset_right = 211.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C11" type="TextureRect" parent="HUD/Chipbar"]
@@ -631,7 +629,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 150.0
 offset_right = 226.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C12" type="TextureRect" parent="HUD/Chipbar"]
@@ -642,7 +640,7 @@ offset_left = 165.0
 offset_top = 10.0
 offset_right = 241.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C13" type="TextureRect" parent="HUD/Chipbar"]
@@ -651,7 +649,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 180.0
 offset_right = 256.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C14" type="TextureRect" parent="HUD/Chipbar"]
@@ -662,7 +660,7 @@ offset_left = 195.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C15" type="TextureRect" parent="HUD/Chipbar"]
@@ -671,7 +669,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 210.0
 offset_right = 286.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C16" type="TextureRect" parent="HUD/Chipbar"]
@@ -682,7 +680,7 @@ offset_left = 225.0
 offset_top = 10.0
 offset_right = 301.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C17" type="TextureRect" parent="HUD/Chipbar"]
@@ -691,7 +689,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 240.0
 offset_right = 316.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C18" type="TextureRect" parent="HUD/Chipbar"]
@@ -702,7 +700,7 @@ offset_left = 255.0
 offset_top = 10.0
 offset_right = 331.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C19" type="TextureRect" parent="HUD/Chipbar"]
@@ -711,7 +709,7 @@ anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = 270.0
 offset_right = 346.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="C20" type="TextureRect" parent="HUD/Chipbar"]
@@ -722,7 +720,7 @@ offset_left = 285.0
 offset_top = 10.0
 offset_right = 361.0
 offset_bottom = 10.0
-texture = ExtResource("15_ueeh3")
+texture = ExtResource("16_6x50a")
 expand_mode = 2
 
 [node name="Bottombar" type="Control" parent="HUD"]
@@ -730,7 +728,7 @@ layout_mode = 3
 anchor_top = 0.818
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource("20_lx3rq")
+script = ExtResource("20_aa8wv")
 
 [node name="Ammo_icon" type="TextureRect" parent="HUD/Bottombar"]
 layout_mode = 1
@@ -741,7 +739,7 @@ anchor_right = 0.054
 anchor_bottom = 0.932
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("11_87q8d")
+texture = ExtResource("21_vev5w")
 expand_mode = 1
 
 [node name="Ammo" type="Label" parent="HUD/Bottombar/Ammo_icon"]
@@ -765,7 +763,7 @@ anchor_right = 0.054
 anchor_bottom = 0.489
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_n3fv3")
+texture = ExtResource("22_dvcy8")
 expand_mode = 1
 
 [node name="Money" type="Label" parent="HUD/Bottombar/Money_icon"]
@@ -794,7 +792,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("21_o5526")
+script = ExtResource("23_0w36x")
 
 [node name="TextureRect" type="TextureRect" parent="HUD/PauseMenu"]
 layout_mode = 1
@@ -805,7 +803,7 @@ anchor_right = 0.75
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("28_f5cal")
+texture = ExtResource("24_jxbm7")
 expand_mode = 1
 
 [node name="Resume" type="Button" parent="HUD/PauseMenu/TextureRect"]
@@ -818,7 +816,7 @@ anchor_right = 0.965
 anchor_bottom = 0.189
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("22_p8c2x")
+script = ExtResource("25_apklg")
 
 [node name="Chip" type="TextureRect" parent="HUD/PauseMenu/TextureRect/Resume"]
 visible = false
@@ -830,7 +828,7 @@ anchor_right = 0.331
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_duqyg")
+texture = ExtResource("26_74ck4")
 expand_mode = 1
 
 [node name="Options" type="Button" parent="HUD/PauseMenu/TextureRect"]
@@ -845,7 +843,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "OPTIONS
 "
-script = ExtResource("27_2xi52")
+script = ExtResource("27_kvv8v")
 
 [node name="Chip" type="TextureRect" parent="HUD/PauseMenu/TextureRect/Options"]
 visible = false
@@ -857,7 +855,7 @@ anchor_right = 0.451
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_duqyg")
+texture = ExtResource("26_74ck4")
 expand_mode = 1
 
 [node name="Main_menu" type="Button" parent="HUD/PauseMenu/TextureRect"]
@@ -869,8 +867,8 @@ anchor_top = 0.296
 anchor_right = 0.966
 anchor_bottom = 0.354
 text = "MAIN MENU"
-script = ExtResource("23_g3t70")
-new_scene = ExtResource("24_tc8cu")
+script = ExtResource("28_se670")
+new_scene = ExtResource("29_3fyrk")
 
 [node name="Chip" type="TextureRect" parent="HUD/PauseMenu/TextureRect/Main_menu"]
 visible = false
@@ -882,7 +880,7 @@ anchor_right = 0.352
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_duqyg")
+texture = ExtResource("26_74ck4")
 expand_mode = 1
 
 [node name="Fold" type="Button" parent="HUD/PauseMenu/TextureRect"]
@@ -896,7 +894,7 @@ anchor_bottom = 0.44
 grow_horizontal = 2
 grow_vertical = 2
 text = "FOLD"
-script = ExtResource("25_gvw6i")
+script = ExtResource("30_x8df6")
 
 [node name="Chip" type="TextureRect" parent="HUD/PauseMenu/TextureRect/Fold"]
 visible = false
@@ -908,7 +906,7 @@ anchor_right = 0.359
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_duqyg")
+texture = ExtResource("26_74ck4")
 expand_mode = 1
 
 [node name="Autostepper" type="Node3D" parent="."]
@@ -928,7 +926,7 @@ target_position = Vector3(0, 0, -0.2)
 
 [node name="Melee_Hit" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.906759, -0.848087)
-script = ExtResource("31_m3jat")
+script = ExtResource("31_85p72")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Melee_Hit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.214914)
