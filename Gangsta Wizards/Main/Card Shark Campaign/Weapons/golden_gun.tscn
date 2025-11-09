@@ -5,6 +5,9 @@
 
 [node name="Golden_Gun" type="Node3D"]
 script = ExtResource("2_u83si")
+dmg = 20.0
+clip_ammo = 16
+cooldown = 0.7
 
 [node name="SharkGun2" parent="." instance=ExtResource("1_ojk31")]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b33gugfpxauvs"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_0k1tp"]
+[ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="2_5bw1s"]
+
+[node name="SharkRifle" type="Node3D"]
+script = ExtResource("1_0k1tp")
+dmg = 15.0
+
+[node name="Rifle" parent="." instance=ExtResource("2_5bw1s")]
+transform = Transform3D(-0.9979, 0, 0.0647761, 0, 1, 0, -0.0647761, 0, -0.9979, 0.0139837, 0, 0.148017)
+
+[node name="GunCooldown" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+
+[node name="Bullet_spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143507, 0.0189154, 0.631172)

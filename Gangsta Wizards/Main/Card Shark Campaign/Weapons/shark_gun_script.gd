@@ -1,3 +1,4 @@
+#Use this for any hitscan weapon
 extends Node3D
 @onready var gun_cooldown = $GunCooldown
 @onready var player = get_tree().get_first_node_in_group("Player")
@@ -13,6 +14,10 @@ var reload_time = 2
 @onready var camera = player.get_node("Head/Camera")
 @onready  var raycast = player.get_node("Head/Camera/RayCast")
 @onready var LA_anime = player.get_node("TheCardShark2/LeftArmController")
+
+@export var dmg: float
+@export var clip_ammo: int
+@export var cooldown: float
 
 
 # Called when the node enters the scene tree for the first time.
@@ -53,7 +58,7 @@ func use_item():
 	
 	
 	
-	gun_cooldown.start(0.7)
+	gun_cooldown.start(cooldown)
 	
 	# Shoot the weapon, amount based on shot count
 	
@@ -70,7 +75,7 @@ func use_item():
 		# Hitting an enemy
 		
 		if collider.has_method("damage"):
-			collider.damage(20)
+			collider.damage(dmg)
 		
 		# Creating an impact animation
 		
@@ -96,7 +101,7 @@ func reload():
 	await get_tree().create_timer(0.5).timeout
 	LA_anime.play("Reload")
 	await get_tree().create_timer(reload_time - 0.5).timeout
-	ammo = 16
+	ammo = clip_ammo
 	ammo_counter.text = str(ammo)
 	await get_tree().process_frame
 	reloading = false
