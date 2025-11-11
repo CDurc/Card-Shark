@@ -36,6 +36,9 @@ _subresources={
 "PATH:1 - PHYS/Balls": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Chairs": {
 "generate/physics": true
 },
