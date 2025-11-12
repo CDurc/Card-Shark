@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=166 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -146,7 +146,10 @@
 [ext_resource type="PackedScene" uid="uid://b0crq1lp6enmf" path="res://BEACH ASSETS/Big Rock.glb" id="140_g5i8t"]
 [ext_resource type="PackedScene" uid="uid://cbqxwjlqgplpj" path="res://MAP - NON-BUILDINGS/Transmission Tower.glb" id="141_f6iop"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
+[ext_resource type="PackedScene" uid="uid://bowjekmxrtna2" path="res://DOORS/Openable Light Brown Metal Door.tscn" id="148_irqwt"]
 [ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
+[ext_resource type="PackedScene" uid="uid://bd2mowq8b4qkn" path="res://DOORS/Openable Wood Door - Steel Handle.tscn" id="149_bl4xi"]
+[ext_resource type="PackedScene" uid="uid://buf4s1n7hpjj2" path="res://DOORS/Openable Sliding Glass Door.tscn" id="150_xycsw"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -853,7 +856,7 @@ transform = Transform3D(0.945876, 0, -0.324528, 0, 1, 0, 0.324528, 0, 0.945876, 
 transform = Transform3D(0.0453631, 0, 0.998971, 0, 1, 0, -0.998971, 0, 0.0453631, 17.068, 34.985, -96.755)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 51.6619, 33.898, -105.303)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -96.9883, 44.4519, -305.738)
 health = 250
 
 [node name="Projectiles" type="Node3D" parent="."]
@@ -1122,6 +1125,17 @@ material_override = SubResource("StandardMaterial3D_fmpp0")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_05b07")
 skeleton = NodePath("../Moon")
+
+[node name="Openable Light Brown Metal Door" parent="." instance=ExtResource("148_irqwt")]
+transform = Transform3D(-0.77925, 0, 0.626713, 0, 1, 0, -0.626713, 0, -0.77925, -100.527, 34.1057, -301.572)
+Door_open_angle = 90.0
+
+[node name="Openable Door" parent="." instance=ExtResource("149_bl4xi")]
+transform = Transform3D(-0.625215, 0, -0.780452, 0, 1, 0, 0.780452, 0, -0.625215, -104.012, 34.108, -296.231)
+Door_open_angle = 90.0
+
+[node name="Sliding Door" parent="." instance=ExtResource("150_xycsw")]
+transform = Transform3D(-0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, -0.614574, -115.211, 34.1332, -307.927)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

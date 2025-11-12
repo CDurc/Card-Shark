@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://buf4s1n7hpjj2"]
+
+[ext_resource type="Script" path="res://DOORS/sliding_door.gd" id="1_4yh73"]
+[ext_resource type="PackedScene" uid="uid://baml1hf8dajxm" path="res://DOORS/Slidng Glass Door.glb" id="2_cbvkq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4env3"]
+size = Vector3(0.200792, 2.16693, 1.31004)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l12c5"]
+size = Vector3(2.70498, 2.2283, 3.37494)
+
+[node name="Sliding Door" type="Node3D"]
+
+[node name="Black Metal Door" type="StaticBody3D" parent="."]
+collision_layer = 3
+script = ExtResource("1_4yh73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Black Metal Door"]
+transform = Transform3D(-0.0102274, 0, -0.999948, 0, 1, 0, 0.999948, 0, -0.0102274, -0.029202, 0.0152897, 0.0120703)
+shape = SubResource("BoxShape3D_4env3")
+
+[node name="Slidng Glass Door" parent="Black Metal Door" instance=ExtResource("2_cbvkq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0713927)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.327123, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.355303, 0.00218201, 0.0863342)
+shape = SubResource("BoxShape3D_l12c5")
+
+[node name="open_pos" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24062, 0, 0)
+
+[connection signal="body_entered" from="Area3D" to="Black Metal Door" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Black Metal Door" method="_on_area_3d_body_exited"]

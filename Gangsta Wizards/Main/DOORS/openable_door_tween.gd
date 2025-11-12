@@ -1,6 +1,6 @@
 extends Node3D
 @onready var player = get_tree().get_first_node_in_group("Player")
-@onready var rot_node = $".."
+@onready var rot_node = $".." #This is both the "root" node and the "rotated" node
 
 var moving = false
 
@@ -9,11 +9,13 @@ var closed = true
 
 var original_rotation: Vector3
 var target_rotation: Vector3
+var open_rot: float
 
 
 func _ready() -> void:
 	original_rotation = rot_node.rotation_degrees
-	target_rotation = original_rotation + Vector3(0,110,0)
+	open_rot = rot_node.get("Door_open_angle")
+	target_rotation = original_rotation + Vector3(0,open_rot,0)
 
 
 

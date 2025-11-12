@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bowjekmxrtna2"]
+
+[ext_resource type="Script" path="res://DOORS/Door_Parameters.gd" id="1_cwv5m"]
+[ext_resource type="Script" path="res://DOORS/openable_door_tween.gd" id="1_le06w"]
+[ext_resource type="PackedScene" uid="uid://daspcirifg6h3" path="res://DOORS/Light Brown Metal Door.glb" id="2_lr2xv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4env3"]
+size = Vector3(0.200792, 2.11279, 0.909042)
+
+[node name="Openable Light Brown Metal Door" type="Node3D"]
+script = ExtResource("1_cwv5m")
+Door_open_angle = 110.0
+
+[node name="Door" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449726, 0, 0)
+collision_layer = 3
+script = ExtResource("1_le06w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door"]
+transform = Transform3D(-0.0102274, 0, -0.999948, 0, 1, 0, 0.999948, 0, -0.0102274, 0.00420048, 0.00488286, 0.0124119)
+shape = SubResource("BoxShape3D_4env3")
+
+[node name="Light Brown Metal Door" parent="Door" instance=ExtResource("2_lr2xv")]

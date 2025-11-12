@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=4 uid="uid://ctjakwn6w32gr"]
+
+[ext_resource type="Script" path="res://DOORS/openable_door_tween.gd" id="1_bjklr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4d0n4"]
+resource_name = "Door Handle"
+cull_mode = 2
+albedo_color = Color(0.59091, 0.59091, 0.59091, 1)
+metallic = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lm77"]
+resource_name = "Door (Solid)"
+cull_mode = 2
+albedo_color = Color(0.551132, 0.51477, 0.422635, 1)
+metallic = 1.0
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dmr1w"]
+_surfaces = [{
+"aabb": AABB(-40.2575, 1.20586, 9.34189, 0.319969, 0.038938, 0.231975),
+"format": 34359742465,
+"index_count": 168,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABwAMAAYABwANAAwABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEACAALAAkACAAKAAsABgAIAAIABgAKAAgAAwALAAcAAwAJAAsAAgAJAAMAAgAIAAkADQAOAAwADQAPAA4ACwANAAcACwAPAA0ACgAPAAsACgAOAA8ABgAOAAoABgAMAA4AEAATABEAEAASABMAFwAcABYAFwAdABwAFgAVABcAFgAUABUAFAARABUAFAAQABEAEgAUABYAEgAQABQAFwARABMAFwAVABEAGAAbABkAGAAaABsAFgAYABIAFgAaABgAEwAbABcAEwAZABsAEgAZABMAEgAYABkAHQAeABwAHQAfAB4AGwAdABcAGwAfAB0AGgAfABsAGgAeAB8AFgAeABoAFgAcAB4A"),
+"name": "Door Handle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("DoIgwrRZmj+OLhlBDoIgwp5Vnz+OLhlBVOUgwrRZmj+OLhlBVOUgwp5Vnz+OLhlBDoIgwrRZmj8QjxhBDoIgwp5Vnz8QjxhBVOUgwrRZmj8QjxhBVOUgwp5Vnz8QjxhBuAchwrRZmj+OLhlBuAchwp5Vnz+OLhlBuAchwrRZmj8QjxhBuAchwp5Vnz8QjxhBqO8gwvHYmz9jeBVBqO8gwmLWnT9jeBVBZP0gwvHYmz9jeBVBZP0gwmLWnT9jeBVBvEUgwrVZmj+OLhlBvEUgwqBVnz+OLhlBduIfwrVZmj+OLhlBduIfwqBVnz+OLhlBvEUgwrVZmj8RjxhBvEUgwqBVnz8RjxhBduIfwrVZmj8RjxhBduIfwqBVnz8RjxhBEsAfwrVZmj+OLhlBEsAfwqBVnz+OLhlBEsAfwrVZmj8RjxhBEsAfwqBVnz8RjxhBItgfwvLYmz9keBVBItgfwmTWnT9keBVBZsofwvLYmz9keBVBZsofwmTWnT9keBVB")
+}, {
+"aabb": AABB(-40.131, -0.0480392, 8.40357, 0.0710411, 2.79565, 1.28911),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Door (Solid)",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAD///////8AAAAAAAD//wAAAAD/////AAD//wAAAAAAAP////8AAAAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6veig"]
+resource_name = "Test Hospital_Cube_013"
+_surfaces = [{
+"aabb": AABB(-40.2575, 1.20586, 9.34189, 0.319969, 0.038938, 0.231975),
+"attribute_data": PackedByteArray("AAAAPgAAgD4AAMA+AACAPwAAwD4AAAAAAAAgPwAAgD8AAGA/AACAPgAAID8AAAAAAAAAPgAAAD8AAMA+AABAPwAAID8AAEA/AABgPwAAAD8AAMA+AACAPgAAwD4AAIA+AADAPgAAgD4AACA/AACAPgAAID8AAIA+AAAgPwAAgD4AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAID8AAAA/AADAPgAAQD8AAAA+AAAAPwAAwD4AAEA/AAAgPwAAQD8AACA/AABAPwAAYD8AAAA/AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AACA/AAAAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAwD4AAIA/AAAAPgAAgD4AAMA+AAAAAAAAYD8AAIA+AAAgPwAAgD8AACA/AAAAAAAAwD4AAEA/AAAAPgAAAD8AAGA/AAAAPwAAID8AAEA/AADAPgAAgD4AAMA+AACAPgAAwD4AAIA+AAAgPwAAgD4AACA/AACAPgAAID8AAIA+AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AACA/AAAAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAwD4AAEA/AADAPgAAQD8AAAA+AAAAPwAAID8AAEA/AABgPwAAAD8AACA/AABAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AAAgPwAAAD8AACA/AAAAPwAAID8AAAA/AAAgPwAAAD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AACA/AAAAPwAAID8AAAA/AAAgPwAAAD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AACA/AAAAPwAAID8AAAA/AAAgPwAAAD8="),
+"format": 34359742487,
+"index_count": 168,
+"index_data": PackedByteArray("AQAIAAMAAQAHAAgAFwAoABMAFwArACgAEgANABQAEgALAA0ADAAFAA8ADAACAAUABgAKABAABgAAAAoAFgAEAAkAFgAOAAQAGAAiABsAGAAeACIAEAAZAAYAEAAgABkACQAlABYACQAdACUABwAcAAgABwAaABwAKQAuACcAKQAwAC4AJAAqABUAJAAxACoAHwAvACMAHwAsAC8AEQAtACEAEQAmAC0AMgA7ADYAMgA4ADsASQBaAEUASQBdAFoAQgBAAEgAQgA8AEAAPgA3AEEAPgA0ADcAOQA9AEQAOQAzAD0ARgA1ADoARgA/ADUASgBUAE0ASgBQAFQARABMADkARABTAEwAOgBWAEYAOgBOAFYAOABPADsAOABLAE8AXABfAFgAXABjAF8AVwBbAEcAVwBiAFsAUQBhAFUAUQBeAGEAQwBgAFIAQwBZAGAA"),
+"material": SubResource("StandardMaterial3D_4d0n4"),
+"name": "Door Handle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 100,
+"vertex_data": PackedByteArray("DoIgwrRZmj+OLhlBDoIgwrRZmj+OLhlBDoIgwrRZmj+OLhlBDoIgwp5Vnz+OLhlBDoIgwp5Vnz+OLhlBDoIgwp5Vnz+OLhlBVOUgwrRZmj+OLhlBVOUgwrRZmj+OLhlBVOUgwp5Vnz+OLhlBVOUgwp5Vnz+OLhlBDoIgwrRZmj8QjxhBDoIgwrRZmj8QjxhBDoIgwrRZmj8QjxhBDoIgwp5Vnz8QjxhBDoIgwp5Vnz8QjxhBDoIgwp5Vnz8QjxhBVOUgwrRZmj8QjxhBVOUgwrRZmj8QjxhBVOUgwrRZmj8QjxhBVOUgwrRZmj8QjxhBVOUgwp5Vnz8QjxhBVOUgwp5Vnz8QjxhBVOUgwp5Vnz8QjxhBVOUgwp5Vnz8QjxhBuAchwrRZmj+OLhlBuAchwrRZmj+OLhlBuAchwrRZmj+OLhlBuAchwp5Vnz+OLhlBuAchwp5Vnz+OLhlBuAchwp5Vnz+OLhlBuAchwrRZmj8QjxhBuAchwrRZmj8QjxhBuAchwrRZmj8QjxhBuAchwrRZmj8QjxhBuAchwp5Vnz8QjxhBuAchwp5Vnz8QjxhBuAchwp5Vnz8QjxhBuAchwp5Vnz8QjxhBqO8gwvHYmz9jeBVBqO8gwvHYmz9jeBVBqO8gwvHYmz9jeBVBqO8gwmLWnT9jeBVBqO8gwmLWnT9jeBVBqO8gwmLWnT9jeBVBZP0gwvHYmz9jeBVBZP0gwvHYmz9jeBVBZP0gwvHYmz9jeBVBZP0gwmLWnT9jeBVBZP0gwmLWnT9jeBVBZP0gwmLWnT9jeBVBvEUgwrVZmj+OLhlBvEUgwrVZmj+OLhlBvEUgwrVZmj+OLhlBvEUgwqBVnz+OLhlBvEUgwqBVnz+OLhlBvEUgwqBVnz+OLhlBduIfwrVZmj+OLhlBduIfwrVZmj+OLhlBduIfwqBVnz+OLhlBduIfwqBVnz+OLhlBvEUgwrVZmj8RjxhBvEUgwrVZmj8RjxhBvEUgwrVZmj8RjxhBvEUgwqBVnz8RjxhBvEUgwqBVnz8RjxhBvEUgwqBVnz8RjxhBduIfwrVZmj8RjxhBduIfwrVZmj8RjxhBduIfwrVZmj8RjxhBduIfwrVZmj8RjxhBduIfwqBVnz8RjxhBduIfwqBVnz8RjxhBduIfwqBVnz8RjxhBduIfwqBVnz8RjxhBEsAfwrVZmj+OLhlBEsAfwrVZmj+OLhlBEsAfwrVZmj+OLhlBEsAfwqBVnz+OLhlBEsAfwqBVnz+OLhlBEsAfwqBVnz+OLhlBEsAfwrVZmj8RjxhBEsAfwrVZmj8RjxhBEsAfwrVZmj8RjxhBEsAfwrVZmj8RjxhBEsAfwqBVnz8RjxhBEsAfwqBVnz8RjxhBEsAfwqBVnz8RjxhBEsAfwqBVnz8RjxhBItgfwvLYmz9keBVBItgfwvLYmz9keBVBItgfwvLYmz9keBVBItgfwmTWnT9keBVBItgfwmTWnT9keBVBItgfwmTWnT9keBVBZsofwvLYmz9keBVBZsofwvLYmz9keBVBZsofwvLYmz9keBVBZsofwmTWnT9keBVBZsofwmTWnT9keBVBZsofwmTWnT9keBVB/38AAP//////f/9//3///////3//f////3//f/9/////f////3//v////3//f////38AAP//////f/9//3////9//3//f////3////9//7//fwAA////////////f///////f/9//////////3////9/////f/+/////f/9/////fwAA/////1CHAAD///+///////9//////1uG////v///////f///UIf//////7//f////3//v///W4b///+/AAD/f/9/////fwAA////v/9//3////8/AAD/f/9/////f/9/////P/9///////+/AAD/f/9///8AAFuG////v/9/AAD///+/UIcAAP///78AAP9//3///wAAW4b///+/UIf//////7//f///////v1CHAAD///+//////////7///1uG////v/////////+/UIf//////7///1uG////vwAAW4b///+/UIcAAP///7//////////vwAAW4b///+//////////79Qh///////v///////f////3////////////9//3////9/AAD/f/+///////9///////9//3//////////f////3//////////fwAA/3//v///////f////3//f/9/////f////////////3//f////38AAP9//7//f/9//3///////3//f////3//f/9/////f674////P/9/////////o/n/f////z//fwAA/3//v/9/UAf///8//3//f/9///+j+f9/////PwAA/3//f////////////7//f///////vwAA/3//f////38AAP///7//////////vwAA/3//f///Wwb/f////z//f674////P/9///////+/AAD/f/9///9bBv9/////P/9/AAD///+//39QB////z//f/9/////P/9/rvj///8/o/n/f////z//f1AH////P/9//3////8/o/n/f////z9bBv9/////P/9//3////8//3+u+P///z9bBv9/////P/9/UAf///8//3//f////z8=")
+}, {
+"aabb": AABB(-40.131, -0.0480392, 8.40357, 0.0710411, 2.79565, 1.28911),
+"attribute_data": PackedByteArray("/x//P/9f////XwAA/5/////f/z//nwAA/1//v/8f/3//X/+//5//v/+f/7//3/9//1//P/9f/z//X/8//5//P/+f/z//n/8//1//f/9f/3//X/9//5//f/+f/3//n/9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AQAKAAMAAQAIAAoABgAVAAkABgASABUAFAAPABYAFAANAA8ADgAFABEADgACAAUABwAMABMABwAAAAwAFwAEAAsAFwAQAAQA"),
+"material": SubResource("StandardMaterial3D_3lm77"),
+"name": "Door (Solid)",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP//VNX//wAA////v///AAD//1TV/////////7////////9U1f///////1TVAAAAAP//VNUAAAAA//9U1QAAAAD///+/AAD/////VNUAAP//////vwAA/////1TV//8AAAAAVNX//wAAAAD/////AAAAAFTV/////wAA////////AABU1f////8AAFTVAAAAAAAAVNUAAAAAAABU1QAAAAAAAP//AAD//wAAVNUAAP//AAD//wAA//8AAFTVVFVUVf////+qKqoq/////6qqqqqqKqoqVNVU1VRVVFX/////VNVU1f////+qqqqqVFVUVf+//7+qKqoq/7//v6qqqqqqKqoqVNVU1VRVVFX/v/+/VNVU1f+//7+qqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dmr1w")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8112d"]
+size = Vector3(0.302193, 2.82007, 1.34558)
+
+[node name="Openable Door" type="Node3D"]
+
+[node name="Gray Door" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449726, 0, 0)
+collision_layer = 3
+script = ExtResource("1_bjklr")
+
+[node name="Door" type="MeshInstance3D" parent="Gray Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1518, -1.40959, -8.41583)
+mesh = SubResource("ArrayMesh_6veig")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gray Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0730934, -0.0462646, 0.619257)
+shape = SubResource("BoxShape3D_8112d")
