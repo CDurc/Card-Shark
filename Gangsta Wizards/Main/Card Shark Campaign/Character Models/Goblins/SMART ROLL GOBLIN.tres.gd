@@ -1,8 +1,8 @@
 #ROLL MAN
 extends CharacterBody3D
 
-@export var initial_speed:		float = 4.0		# horizontal move speed
-@export var attacking_speed:		float = 4.0
+@export var initial_speed:		float = 5.0		# horizontal move speed
+#@export var attacking_speed:		float = 4.0
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
@@ -32,6 +32,7 @@ var jumping = false
 var wants_to_jump = true
 var was_stuck: bool = false
 
+var rollerman #This is a check to see if rollerman should shrink upon touching anything with the var "rollerman" in it.
 
 # Knockback state
 var knockback_v   := Vector3.ZERO
@@ -55,7 +56,7 @@ var phase3 = false #Roll quickly towards player
 var phase4 = false #Pick a spot just ahead of the player and roll straight to it, not updating this point
 var spying = false
 var spycount = 0
-var maxspycount = randi_range(1, 5)
+var maxspycount = randi_range(1, 4)
 var too_close = true #True when "too close" needs to function.  Turn off when retreating or attacking
 var overshoot_dir: Vector3
 var speed
@@ -172,7 +173,7 @@ func _physics_process(delta: float) -> void:
 				too_close = true
 				speed = initial_speed
 				spycount = 0
-				maxspycount = randi_range(1, 5)
+				maxspycount = randi_range(1, 3)
 				phase1 = true
 				phase2 = false
 				phase4  =false
@@ -296,7 +297,7 @@ func damage(amount):
 			phase3 = true
 		else: #still too shy, RUN AWAY
 			print("RETREAT")
-			speed = speed * 2
+			speed = speed * 1.75
 			phase1 = false
 			var dir = (global_transform.origin - target.global_transform.origin).normalized()
 			next_point = target.global_transform.origin + dir*15

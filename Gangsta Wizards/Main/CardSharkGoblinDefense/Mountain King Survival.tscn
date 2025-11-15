@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=12 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
-[ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="3_fuyke"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/UpdateTimer.gd" id="5_gqf0d"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/Goblin Mode.gd" id="6_fxncw"]
+[ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="7_lq2qr"]
 [ext_resource type="PackedScene" uid="uid://c4mnpjd4n04ns" path="res://CardSharkGoblinDefense/mountain king test scene.tscn" id="7_y4b1k"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/weapon_pickup.gd" id="8_8ywqv"]
 [ext_resource type="AudioStream" uid="uid://12b86jh82p0e" path="res://Music/Card Shark Arcade Song.mp3" id="13_hfiix"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4xw1"]
@@ -24,16 +25,16 @@ agent_height = 2.5
 agent_radius = 1.0
 agent_max_slope = 60.0
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cbs3a"]
+radius = 0.138185
+height = 1.01481
+
 [node name="Rootbeer" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_qr17x")
 
 [node name="Map" type="Node3D" parent="."]
-
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("3_fuyke")]
-transform = Transform3D(0.999417, 0, 0.0341494, 0, 1, 0, -0.0341494, 0, 0.999417, -1.63331, 8.47422, -29.6354)
-health = 250
 
 [node name="Projectiles" type="Node3D" parent="."]
 
@@ -355,3 +356,19 @@ stream = ExtResource("13_hfiix")
 volume_db = -15.0
 autoplay = true
 parameters/looping = true
+
+[node name="Player" parent="." instance=ExtResource("7_lq2qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.4893, 0)
+health = 250
+
+[node name="Store" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1806, 10.167, -11.4069)
+
+[node name="M16" type="StaticBody3D" parent="Store"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492306, -0.540041, 1.27105)
+collision_layer = 17
+script = ExtResource("8_8ywqv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Store/M16"]
+transform = Transform3D(0.102289, 0.508745, -0.854819, -0.994755, 0.0523135, -0.0878997, 0, 0.859326, 0.511428, 0.105506, 0.0909615, -0.0108209)
+shape = SubResource("CapsuleShape3D_cbs3a")

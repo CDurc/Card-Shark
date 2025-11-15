@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://da6ygpuv1b7ee"
+path.s3tc="res://.godot/imported/Art Gallery_art18.jpg-0fb7484a018c3cfd4570da5a38e320bc.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2e30be32fdea1694e901179b9509cad0"
+}
+
+[deps]
+
+source_file="res://BUILDINGS/Assembly/A-3/Art Gallery_art18.jpg"
+dest_files=["res://.godot/imported/Art Gallery_art18.jpg-0fb7484a018c3cfd4570da5a38e320bc.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

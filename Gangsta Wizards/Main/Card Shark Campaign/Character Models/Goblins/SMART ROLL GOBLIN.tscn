@@ -11,7 +11,7 @@ radius = 2.22199
 [sub_resource type="SphereShape3D" id="SphereShape3D_a1e2t"]
 radius = 3.05837
 
-[node name="Rollerman" type="CharacterBody3D" groups=["Enemies"]]
+[node name="Rollerman" type="CharacterBody3D" groups=["Enemies", "Roller"]]
 collision_layer = 3
 script = ExtResource("1_gdstj")
 health = 400

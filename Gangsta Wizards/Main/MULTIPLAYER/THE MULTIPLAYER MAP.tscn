@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bpqssro3f34wd"]
+[gd_scene load_steps=39 format=3 uid="uid://bpqssro3f34wd"]
 
 [ext_resource type="PackedScene" uid="uid://cnoyrcbmf8a28" path="res://MULTIPLAYER/Tiles/MapBorders.glb" id="1_f8pif"]
 [ext_resource type="PackedScene" uid="uid://bbjbspwafjnw3" path="res://MULTIPLAYER/Tiles/1-B-W.glb" id="3_f60nm"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://b7it5vto5lt0t" path="res://MULTIPLAYER/Tiles/29-G-B.glb" id="31_qpsjj"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="32_3gh50"]
 [ext_resource type="PackedScene" uid="uid://c5t4a51qv7mde" path="res://MULTIPLAYER/Tiles/30-O-B.glb" id="32_ksqqb"]
+[ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="33_5q8nc"]
 
 [sub_resource type="Gradient" id="Gradient_vxynd"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -166,3 +167,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.4208, 0, 81.065)
 
 [node name="Player" parent="." instance=ExtResource("32_3gh50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95962, 7.45647)
+
+[node name="Openable Door" parent="." instance=ExtResource("33_5q8nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289787, 2.72559, 1.51429)

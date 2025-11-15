@@ -9,7 +9,7 @@ var reloading = false
 var reload_time = 2
 var bullet_path = preload("res://Particles/bullet.tscn")
 
-@onready var ammo = player.ammo
+#@onready var ammo = player.ammo
 @onready var acting = player.acting
 @onready var ammo_counter = player.get_node("HUD/Bottombar/Ammo_icon/Ammo")
 @onready var left_container = player.get_node("Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer")
@@ -19,10 +19,11 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 
 @export var dmg: float
 @export var clip_ammo: int
-@export var cooldown: float
-
+@export var cooldown: float #Theres now a GunCooldown thing in editor so this is probs obsolete
+var ammo: int
 
 func _ready() -> void:
+	ammo = clip_ammo
 	pass
 
 
@@ -47,7 +48,7 @@ func use_item():
 		shoot_a_bullet()
 		await get_tree().create_timer(0.07).timeout
 
-	if ammo == 0:
+	if ammo <= 0:
 		await get_tree().create_timer(0.3).timeout
 		reload()
 
@@ -57,7 +58,7 @@ func reload():
 	reloading = true
 	#gun_anime.play("Reload")
 	await get_tree().create_timer(0.5).timeout
-	#LA_anime.play("Reload")
+	player.LA_anime.play("Reload")
 	await get_tree().create_timer(reload_time - 0.5).timeout
 	ammo = clip_ammo
 	ammo_counter.text = str(ammo)
@@ -67,8 +68,9 @@ func reload():
 
 func shoot_a_bullet():
 	var bullet = bullet_path.instantiate()
+	bullet.target_group = "Enemies"
+	bullet.damage_amount = dmg
 	
-	# --- New direction calculation using raycast ---
 	raycast.target_position.x = randf_range(-0.5, 0.5)  # optional spread
 	raycast.target_position.y = randf_range(-0.5, 0.5)
 	raycast.force_raycast_update()
@@ -81,7 +83,7 @@ func shoot_a_bullet():
 		# If nothing hit, shoot forward from camera
 		dir = -camera.global_transform.basis.z
 
-	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65)
+	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65) #Consider adding a pitch RV
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = bullet_spawn.global_transform
 	bullet.look_at(bullet.global_transform.origin + dir)

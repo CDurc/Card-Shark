@@ -40,6 +40,7 @@ movie_writer/movie_file="D:/Godot/test.avi"
 Player="List of players"
 Enemies=""
 Healthbars="This could also be any visual UI element the player sees that needs to be toggleable when a poopy fart or smoke plays"
+Roller="Things that can make rollers shrink, especially other rollers"
 
 [input]
 
