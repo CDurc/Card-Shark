@@ -164,7 +164,7 @@ signal health_updated
 var item: Node3D #Assigned to the singular child of item_container
 var vulnerable = true
 var melee_camgoal = Node3D
-var money = 0
+var money = 3500
 var reloading = false
 var ammo = 16
 var is_disabled = false #Use this for ragdoll

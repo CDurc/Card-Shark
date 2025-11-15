@@ -3,6 +3,7 @@ extends StaticBody3D
 @export var gun_type_path = preload("res://Card Shark Campaign/Weapons/shark_rifle.tscn")
 var player
 var item_container
+var can_pickup = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,7 +17,8 @@ func _process(delta: float) -> void:
 
 
 func interac():
-	if player.money >= 3500:
+	if player.money >= 3500 and can_pickup:
+		can_pickup = false
 		player.money - 3500
 		print("item pickup")
 		item_container.get_child(0).queue_free()
