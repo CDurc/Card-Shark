@@ -358,7 +358,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Player" parent="." instance=ExtResource("7_lq2qr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.4893, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18428, 19.5604, 0.664682)
 health = 250
 
 [node name="Store" type="Node3D" parent="."]

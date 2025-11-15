@@ -1574,5 +1574,5 @@ func wait_and_get_up(ragdoll):
 	if health > 0:
 		get_up(ragdoll)
 
-	
-	
+func new_item():
+	item = item_container.get_child(0)

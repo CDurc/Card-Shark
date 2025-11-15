@@ -18,15 +18,16 @@ var current_round = 0
 
 
 var rounds = [
-	{ "small": {"pipe": 0}, "big": {"roll": 15} },
-	{ "small": {"pipe": 0, "gun": 0}, "big": {} },
-	{ "small": {"pipe": 0}, "big": {"sign": 0} },
-	{ "small": {"pipe": 5, "bomb": 2}, "big": {} },
+	{ "small": {"pipe": 4}, "big": {} },
+	{ "small": {"pipe": 6, "gun": 0}, "big": {} },
+	{ "small": {"pipe": 5, "gun": 1}, "big": {"sign": 0} },
+	{ "small": {"pipe": 6, "gun": 0}, "big": {"sign": 1} },
+	{ "small": {"pipe": 6, "bomb": 2}, "big": {} },
 	{ "small": {"pipe": 8, "gun": 2}, "big": {} },
 	{ "small": {}, "big": {"roll": 3} },
 	{ "small": {"bomb": 14}, "big": {} },
 	{ "small": {"bomb": 4, "gun": 4}, "big": {} },
-	{ "small": {"pipe": 2, "gun": 2}, "big": {"sign": 4} },
+	{ "small": {"pipe": 2, "gun": 2}, "big": {"sign": 3} },
 	{ "small": {"pipe": 5, "gun": 2, "bomb": 2}, "big": {"roll": 2} },
 	{ "small": {}, "big": {"roll": 8} }
 ]

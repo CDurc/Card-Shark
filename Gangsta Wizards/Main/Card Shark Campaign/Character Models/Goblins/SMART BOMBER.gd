@@ -196,7 +196,7 @@ func boom():
 	destroy()
 
 func fuse():
-	speed = 5
+	speed = 6
 	fuse_ticking = true
 	bomb_anime.play("Fuse")
 	await get_tree().create_timer(5).timeout

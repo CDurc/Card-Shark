@@ -6,7 +6,6 @@ extends Node3D
 @onready var bullet_spawn = $Bullet_spawn
 
 var reloading = false
-var reload_time = 2
 var bullet_path = preload("res://Particles/bullet.tscn")
 
 #@onready var ammo = player.ammo
@@ -20,6 +19,7 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 @export var dmg: float
 @export var clip_ammo: int
 @export var cooldown: float #Theres now a GunCooldown thing in editor so this is probs obsolete
+@export var reload_time: float
 var ammo: int
 
 func _ready() -> void:

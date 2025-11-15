@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var speed:		float = 4.0		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath	
+@export var dmg: float
 
 @onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
@@ -214,6 +215,8 @@ func shoot():
 # Returns the direction if it's the first bullet
 func shoot_a_bullet(target_player := true, fixed_direction := Vector3.ZERO) -> Vector3:
 	var bullet = bullet_path.instantiate()
+	bullet.target_group = "Player"
+	bullet.damage_amount = dmg
 	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65)
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = bullet_spawn.global_transform

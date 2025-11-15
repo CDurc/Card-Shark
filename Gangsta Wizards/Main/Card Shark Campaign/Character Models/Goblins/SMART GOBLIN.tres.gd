@@ -1,7 +1,7 @@
 #SMART GOBLIN SCRIPT
 extends CharacterBody3D
 
-@export var speed:		float = 4.0		# horizontal move speed
+@export var speed:		float = 5.0		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
