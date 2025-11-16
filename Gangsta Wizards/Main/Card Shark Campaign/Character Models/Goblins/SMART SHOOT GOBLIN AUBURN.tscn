@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw643hqnkhage"]
+[gd_scene load_steps=8 format=3 uid="uid://cw643hqnkhage"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART SHOOT GOBLIN AUBURN.tres.gd" id="1_i82rv"]
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_psg4o"]
@@ -6,18 +6,24 @@
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_o5tc1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
-radius = 0.284015
-height = 1.91287
+radius = 0.227039
+height = 1.8598
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y6h53"]
+radius = 0.145566
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nyec"]
+radius = 0.237767
+height = 1.54634
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
-collision_layer = 3
 script = ExtResource("1_i82rv")
 dmg = 6.0
 health = 80
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.21556, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0373318, 0.216, -0.046)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin_old" parent="." instance=ExtResource("2_psg4o")]
@@ -56,3 +62,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 
 [node name="spawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.761045, -1.19126)
+
+[node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.952394, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Headshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0762234, 0)
+shape = SubResource("SphereShape3D_y6h53")
+
+[node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.932884, -0.0256855)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75335, 0)
+shape = SubResource("CapsuleShape3D_2nyec")

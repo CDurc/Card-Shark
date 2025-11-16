@@ -1213,9 +1213,11 @@ func laser(delta):
 		var hit_position
 		if raycast.is_colliding():
 			var collider = raycast.get_collider()
-			if collider and collider.has_method("damage"):
-				collider.damage(100*delta)
-			
+			if collider:
+				if collider.has_method("damage"):
+					collider.damage(100*delta)
+				elif collider.get_parent().has_method("damage"):
+					collider.get_parent().damage(100*delta)
 			
 			hit_position = raycast.get_collision_point()
 

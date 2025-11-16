@@ -18,7 +18,7 @@ var current_round = 0
 
 
 var rounds = [
-	{ "small": {"pipe": 4}, "big": {} },
+	{ "small": {"pipe": 5, "gun": 5, "bomb": 0}, "big": {"roll": 0} },
 	{ "small": {"pipe": 6, "gun": 0}, "big": {} },
 	{ "small": {"pipe": 5, "gun": 1}, "big": {"sign": 0} },
 	{ "small": {"pipe": 6, "gun": 0}, "big": {"sign": 1} },
@@ -118,4 +118,4 @@ func spawn_enemy(enemy_type: String, spawn_point: Node3D, parent_node) -> void:
 	parent_node.add_child(enemy_instance) 
 	
 	enemy_instance.global_transform.origin = spawn_point.global_transform.origin
-	print("Spawned %s at %s" % [enemy_type, spawn_point.name])
+	print("Spawned %s at %s parented to %s" % [enemy_type, spawn_point.name, parent_node])

@@ -59,6 +59,7 @@ damage = 20
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73028, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Feet"]
+navigation_layers = 2
 
 [editable path="goblin"]
 [editable path="goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2"]

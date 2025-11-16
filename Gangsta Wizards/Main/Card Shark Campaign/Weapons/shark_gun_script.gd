@@ -18,6 +18,8 @@ var reload_time = 2
 @export var dmg: float
 @export var clip_ammo: int
 @export var cooldown: float
+@export var HS_Mult: float
+@export var spread: float
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,9 +46,6 @@ func use_item():
 	ammo_counter.text = str(ammo)
 	
 	
-	left_container.position.z += 0.25 # Knockback of weapon visual
-	camera.rotation.x += 0.025 # Knockback of camera
-	
 	# Set muzzle flash position, play animation	
 	#left_muzzle.rotation_degrees.z = randf_range(-45, 45)
 	#left_muzzle.scale = Vector3(0.5,0.5,0.5) * randf_range(0.40, 0.75)
@@ -64,8 +63,8 @@ func use_item():
 	
 	for n in range(1):
 	
-		raycast.target_position.x = randf_range(-0.4, 0.4)
-		raycast.target_position.y = randf_range(-0.4, 0.4)
+		raycast.target_position.x = randf_range(-spread, spread) * raycast.target_position.z
+		raycast.target_position.y = randf_range(-spread, spread) * raycast.target_position.z
 		
 		raycast.force_raycast_update()
 		
@@ -74,8 +73,13 @@ func use_item():
 		var collider = raycast.get_collider()
 		# Hitting an enemy
 		
-		if collider.has_method("damage"):
+		if collider.has_method("damage"): #Should become obsolete
 			collider.damage(dmg)
+		elif collider.get_parent().has_method("damage"):
+			if collider.is_in_group("Headshot"):
+				collider.get_parent().damage(dmg * HS_Mult)
+			elif collider.is_in_group("Bodyshot"):
+				collider.get_parent().damage(dmg)
 		
 		# Creating an impact animation
 		
@@ -88,6 +92,9 @@ func use_item():
 		
 		impact_instance.position = raycast.get_collision_point() + (raycast.get_collision_normal() / 10)
 		impact_instance.look_at(camera.global_transform.origin, Vector3.UP, true) 
+		
+		left_container.position.z += 0.25 # Knockback of weapon visual
+		camera.rotation.x += 0.025 # Knockback of camera
 			
 	if ammo == 0:
 		await get_tree().create_timer(0.3).timeout
