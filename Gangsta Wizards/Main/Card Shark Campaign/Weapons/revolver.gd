@@ -21,9 +21,6 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 @export var cooldown: float #Theres now a GunCooldown thing in editor so this is probs obsolete
 @export var reload_time: float
 @export var spread: float
-@export var burst: int
-@export var HS_mult: float
-@export var Velocity: float
 var ammo: int
 
 func _ready() -> void:
@@ -46,7 +43,7 @@ func use_item():
 	#gun_anime.play("Fire")
 	gun_cooldown.start(cooldown)
 	
-	for i in range(burst):
+	for i in range(1):
 		ammo -= 1
 		ammo_counter.text = str(ammo)
 		shoot_a_bullet()
@@ -61,9 +58,9 @@ func reload():
 	if player.acting == true: return
 	reloading = true
 	#gun_anime.play("Reload")
-	await get_tree().create_timer(max(reload_time - 2,0.1)).timeout
+	await get_tree().create_timer(0.5).timeout
 	player.LA_anime.play("Reload")
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(reload_time - 0.5).timeout
 	ammo = clip_ammo
 	ammo_counter.text = str(ammo)
 	await get_tree().process_frame
@@ -74,7 +71,6 @@ func shoot_a_bullet():
 	var bullet = bullet_path.instantiate()
 	bullet.target_group = "Enemies"
 	bullet.damage_amount = dmg
-	bullet.HS_mult = HS_mult
 	
 	raycast.target_position.x = randf_range(-spread, spread) * raycast.target_position.z
 	raycast.target_position.y = randf_range(-spread, spread) * raycast.target_position.z
@@ -96,4 +92,4 @@ func shoot_a_bullet():
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = bullet_spawn.global_transform
 	bullet.look_at(bullet.global_transform.origin + dir)
-	bullet.apply_impulse(dir * Velocity)
+	bullet.apply_impulse(dir * 60.0)

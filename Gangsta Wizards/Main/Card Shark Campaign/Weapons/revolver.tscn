@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://qauvwuftnp8v"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_lpju1"]
+[ext_resource type="PackedScene" uid="uid://cvh45hy5lkpb4" path="res://Card Shark Campaign/Weapons/Revolver.glb" id="1_ttaqt"]
+
+[node name="Revolver" type="Node3D"]
+script = ExtResource("1_lpju1")
+dmg = 34.0
+clip_ammo = 6
+reload_time = 4.0
+spread = 0.01
+burst = 1
+HS_mult = 2.0
+Velocity = 75.0
+
+[node name="Revolver" parent="." instance=ExtResource("1_ttaqt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="GunCooldown" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+
+[node name="Bullet_spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57039e-05, 0.0189154, 0.242954)

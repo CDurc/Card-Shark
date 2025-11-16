@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3w2iojgthqvv"]
+[gd_scene load_steps=9 format=3 uid="uid://c3w2iojgthqvv"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tres.gd" id="1_vufae"]
 [ext_resource type="PackedScene" uid="uid://dsg348i6y6mp2" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_1_ANIMES.tscn" id="2_n6flr"]
@@ -8,16 +8,22 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.284015
-height = 1.91287
+height = 1.61854
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_50u46"]
+radius = 0.24218
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g751g"]
+radius = 0.266229
+height = 1.54634
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
-collision_layer = 3
 script = ExtResource("1_vufae")
 health = 100
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.21556, -0.0723298)
+[node name="Body collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 0.275791, -0.0723298)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin_old" parent="." instance=ExtResource("2_wmgx7")]
@@ -78,5 +84,22 @@ anchor_top = 0.15
 anchor_right = 0.975
 anchor_bottom = 0.85
 color = Color(0, 1, 0, 1)
+
+[node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.916796, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Headshot"]
+shape = SubResource("SphereShape3D_50u46")
+
+[node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.916796, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75335, 0)
+shape = SubResource("CapsuleShape3D_g751g")
 
 [editable path="Goblin"]
