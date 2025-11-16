@@ -64,8 +64,8 @@ func use_item():
 	
 	for n in range(1):
 	
-		raycast.target_position.x = randf_range(-0.5, 0.5)
-		raycast.target_position.y = randf_range(-0.5, 0.5)
+		raycast.target_position.x = randf_range(-0.4, 0.4)
+		raycast.target_position.y = randf_range(-0.4, 0.4)
 		
 		raycast.force_raycast_update()
 		

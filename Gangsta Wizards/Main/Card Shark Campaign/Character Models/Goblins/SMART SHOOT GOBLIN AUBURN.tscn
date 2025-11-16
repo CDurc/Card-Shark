@@ -13,7 +13,7 @@ height = 1.91287
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 collision_layer = 3
 script = ExtResource("1_i82rv")
-dmg = 8.0
+dmg = 6.0
 health = 80
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

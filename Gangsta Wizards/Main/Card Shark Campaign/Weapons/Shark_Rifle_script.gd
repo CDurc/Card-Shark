@@ -20,6 +20,7 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 @export var clip_ammo: int
 @export var cooldown: float #Theres now a GunCooldown thing in editor so this is probs obsolete
 @export var reload_time: float
+@export var spread: float
 var ammo: int
 
 func _ready() -> void:
@@ -71,8 +72,8 @@ func shoot_a_bullet():
 	bullet.target_group = "Enemies"
 	bullet.damage_amount = dmg
 	
-	raycast.target_position.x = randf_range(-0.5, 0.5)  # optional spread
-	raycast.target_position.y = randf_range(-0.5, 0.5)
+	raycast.target_position.x = randf_range(-spread, spread) * raycast.target_position.z
+	raycast.target_position.y = randf_range(-spread, spread) * raycast.target_position.z
 	raycast.force_raycast_update()
 	
 	var dir: Vector3
@@ -82,6 +83,10 @@ func shoot_a_bullet():
 	else:
 		# If nothing hit, shoot forward from camera
 		dir = -camera.global_transform.basis.z
+		
+		dir.x += randf_range(-spread, spread)
+		dir.y += randf_range(-spread, spread)
+		dir = dir.normalized()
 
 	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65) #Consider adding a pitch RV
 	get_tree().root.add_child(bullet)
