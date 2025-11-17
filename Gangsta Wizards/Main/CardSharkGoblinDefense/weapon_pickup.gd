@@ -20,8 +20,8 @@ func _process(delta: float) -> void:
 func interac():
 	if player.money >= price and can_pickup:
 		can_pickup = false
-		player.money - price
-		GameState.money - price
+		player.money -= price
+		GameState.money -= price
 		print("item pickup")
 		item_container.get_child(0).queue_free()
 		await get_tree().process_frame
