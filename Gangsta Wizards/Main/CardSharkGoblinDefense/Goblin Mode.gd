@@ -18,18 +18,16 @@ var current_round = 0
 
 
 var rounds = [
-	{ "small": {"pipe": 5, "gun": 5, "bomb": 0}, "big": {"roll": 0} },
-	{ "small": {"pipe": 6, "gun": 0}, "big": {} },
-	{ "small": {"pipe": 5, "gun": 1}, "big": {"sign": 0} },
-	{ "small": {"pipe": 6, "gun": 0}, "big": {"sign": 1} },
-	{ "small": {"pipe": 6, "bomb": 2}, "big": {} },
-	{ "small": {"pipe": 8, "gun": 2}, "big": {} },
-	{ "small": {}, "big": {"roll": 3} },
-	{ "small": {"bomb": 14}, "big": {} },
-	{ "small": {"bomb": 4, "gun": 4}, "big": {} },
-	{ "small": {"pipe": 2, "gun": 2}, "big": {"sign": 3} },
-	{ "small": {"pipe": 5, "gun": 2, "bomb": 2}, "big": {"roll": 2} },
-	{ "small": {}, "big": {"roll": 8} }
+	{ "small": {"pipe": 4, "gun": 0, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 6, "gun": 0, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 4, "gun": 2, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 6, "gun": 0, "bomb": 0}, "big": {"roll": 0, "sign": 1} },
+	{ "small": {"pipe": 8, "gun": 3, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 0}, "big": {"roll": 3, "sign": 0} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 14}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 4, "gun": 4, "bomb": 4}, "big": {"roll": 0, "sign": 0} },
+	{ "small": {"pipe": 0, "gun": 3, "bomb": 0}, "big": {"roll": 0, "sign": 3} },
+	{ "small": {"pipe": 8, "gun": 0, "bomb": 8}, "big": {"roll": 2, "sign": 0} }
 ]
 
 # Track cooldowns for each spawn point

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://qeqhg3g3onog"]
+[gd_scene load_steps=8 format=3 uid="uid://qeqhg3g3onog"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART ROLL GOBLIN.tres.gd" id="1_gdstj"]
 [ext_resource type="PackedScene" uid="uid://cspnb87r501ok" path="res://Card Shark Campaign/Character Models/Goblins/goblin_5.glb" id="3_kq6m3"]
@@ -6,18 +6,21 @@
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_mjpba"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ifq5y"]
-radius = 2.22199
+radius = 2.08238
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_a1e2t"]
-radius = 3.05837
+radius = 2.81398
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dhlpo"]
+radius = 2.3086
 
 [node name="Rollerman" type="CharacterBody3D" groups=["Enemies", "Roller"]]
-collision_layer = 3
 script = ExtResource("1_gdstj")
 health = 400
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790327, 0.158742)
+visible = false
 shape = SubResource("SphereShape3D_ifq5y")
 
 [node name="Control" type="Control" parent="." groups=["Healthbars"]]
@@ -96,6 +99,7 @@ script = ExtResource("4_thl4u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Attackbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557513, 0.676605)
+visible = false
 shape = SubResource("SphereShape3D_a1e2t")
 
 [node name="Feet" type="Node3D" parent="."]
@@ -103,6 +107,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.50227, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Feet"]
 path_height_offset = -0.77
+
+[node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.932884, -0.0256855)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0339747, -1.03177, 0.24383)
+shape = SubResource("SphereShape3D_dhlpo")
 
 [connection signal="body_entered" from="Attackbox" to="Attackbox" method="_on_body_entered"]
 

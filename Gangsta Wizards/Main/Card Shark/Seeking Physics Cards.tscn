@@ -75,7 +75,7 @@ skeleton = NodePath("../../C2")
 [node name="Hurtbox" type="Area3D" parent="Rig"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0150805, 0)
 script = ExtResource("4_e55h3")
-damage = 25.0
+damage = 30.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rig/Hurtbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00106315, -0.00952149, 0.000122075)

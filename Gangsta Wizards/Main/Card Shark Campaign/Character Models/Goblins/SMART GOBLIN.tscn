@@ -11,19 +11,21 @@ radius = 0.284015
 height = 1.61854
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_50u46"]
-radius = 0.188798
+radius = 0.179709
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g751g"]
-radius = 0.266229
+radius = 0.251313
 height = 1.54634
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 script = ExtResource("1_vufae")
+avg_speed = 5.0
 health = 100
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 0.275791, -0.0723298)
+visible = false
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin_old" parent="." instance=ExtResource("2_wmgx7")]
@@ -99,7 +101,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75335, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75335, -0.0593958)
 shape = SubResource("CapsuleShape3D_g751g")
 
 [editable path="Goblin"]

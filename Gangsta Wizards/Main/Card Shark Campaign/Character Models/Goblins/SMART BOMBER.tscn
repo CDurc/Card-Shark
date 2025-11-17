@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt7qm6p21wn5b"]
+[gd_scene load_steps=11 format=3 uid="uid://dt7qm6p21wn5b"]
 
 [ext_resource type="PackedScene" uid="uid://b2spem0apb2t6" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_4_ANIMES.tscn" id="1_bryd7"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART BOMBER.gd" id="1_t7615"]
@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="4_jp2o8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qk4cd"]
-radius = 0.284015
-height = 2.16547
+radius = 0.243603
+height = 2.03182
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_thk17"]
 radius = 0.35
@@ -15,17 +15,26 @@ radius = 0.35
 [sub_resource type="SphereShape3D" id="SphereShape3D_i8fwk"]
 radius = 5.04562
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_tt8kc"]
+radius = 0.145566
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yw5bu"]
+radius = 0.343544
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vbcsl"]
+radius = 0.256747
+height = 1.61407
+
 [node name="Bomber Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
-collision_layer = 3
 script = ExtResource("1_t7615")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.160202, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0351769, -0.160202, -0.0723298)
 shape = SubResource("CapsuleShape3D_qk4cd")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, 0.355385, -0.583733)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53176e-05, 0.355385, -0.36929)
 shape = SubResource("SphereShape3D_thk17")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -115,6 +124,28 @@ anchor_top = 0.15
 anchor_right = 0.975
 anchor_bottom = 0.85
 color = Color(0, 1, 0, 1)
+
+[node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0384609, 0.677739, -0.0334198)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Headshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0762234, 0)
+shape = SubResource("SphereShape3D_tt8kc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Headshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365638, -0.319031, -0.338866)
+shape = SubResource("SphereShape3D_yw5bu")
+
+[node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.932884, -0.0256855)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822181, -1.09476, 0)
+shape = SubResource("CapsuleShape3D_vbcsl")
 
 [editable path="goblin_4"]
 [editable path="Bomb2"]

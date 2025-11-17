@@ -12,6 +12,7 @@ spread = 0.01
 burst = 1
 HS_mult = 2.0
 Velocity = 75.0
+recoil = 0.025
 
 [node name="Revolver" parent="." instance=ExtResource("1_ttaqt")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

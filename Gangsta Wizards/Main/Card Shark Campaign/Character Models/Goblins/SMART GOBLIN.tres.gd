@@ -1,7 +1,7 @@
 #SMART GOBLIN SCRIPT
 extends CharacterBody3D
 
-@export var speed:		float = 5.0		# horizontal move speed
+@export var avg_speed: float		# horizontal move speed
 @export var gravity:	float = 20.0	# downward acceleration
 @export var target_path:	NodePath		# drag your Player node here
 
@@ -9,6 +9,7 @@ extends CharacterBody3D
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/1d_money_drop.tscn")
+@onready var speed = avg_speed + randf_range(-1,1)
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc

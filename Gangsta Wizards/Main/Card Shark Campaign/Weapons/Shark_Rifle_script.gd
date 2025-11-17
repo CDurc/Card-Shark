@@ -24,6 +24,7 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 @export var burst: int
 @export var HS_mult: float
 @export var Velocity: float
+@export var recoil: float
 var ammo: int
 
 func _ready() -> void:
@@ -50,6 +51,7 @@ func use_item():
 		ammo -= 1
 		ammo_counter.text = str(ammo)
 		shoot_a_bullet()
+		camera.rotation.x += recoil
 		await get_tree().create_timer(0.07).timeout
 
 	if ammo <= 0:

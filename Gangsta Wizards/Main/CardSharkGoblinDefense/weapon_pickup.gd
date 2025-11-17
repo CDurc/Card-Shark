@@ -1,6 +1,7 @@
 extends StaticBody3D
 
 @export var gun_type_path = preload("res://Card Shark Campaign/Weapons/shark_rifle.tscn")
+@export var price: int
 var player
 var item_container
 var can_pickup = true
@@ -17,9 +18,10 @@ func _process(delta: float) -> void:
 
 
 func interac():
-	if player.money >= 3500 and can_pickup:
+	if player.money >= price and can_pickup:
 		can_pickup = false
-		player.money - 3500
+		player.money - price
+		GameState.money - price
 		print("item pickup")
 		item_container.get_child(0).queue_free()
 		await get_tree().process_frame

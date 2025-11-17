@@ -1,21 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw4cola0uyd6i"]
+[gd_scene load_steps=7 format=3 uid="uid://bw4cola0uyd6i"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN SCRIPT OLD BUSTED SLOPE BUT WORKS.tres.gd" id="1_w7w6q"]
 [ext_resource type="PackedScene" uid="uid://b4fjj7o5ad5xx" path="res://Card Shark Campaign/Character Models/Goblins/goblin_3_animes.tscn" id="3_6j66n"]
 [ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_r8wfy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
-radius = 0.921845
-height = 4.07755
+radius = 0.753238
+height = 3.87239
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b6qu6"]
+radius = 0.316669
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cnuh1"]
+radius = 0.934387
+height = 3.2025
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
-collision_layer = 3
 script = ExtResource("1_w7w6q")
+speed = 3.8
 health = 400
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267607, -0.196775, -0.0723298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0298798, -0.196775, -0.0723298)
+visible = false
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Control" type="Control" parent="." groups=["Healthbars"]]
@@ -60,6 +68,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73028, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Feet"]
 navigation_layers = 2
+
+[node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.952394, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Headshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.412494, 0)
+shape = SubResource("SphereShape3D_b6qu6")
+
+[node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.932884, -0.0256855)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bodyshot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.37417, 0.0899043)
+shape = SubResource("CapsuleShape3D_cnuh1")
 
 [editable path="goblin"]
 [editable path="goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2"]
