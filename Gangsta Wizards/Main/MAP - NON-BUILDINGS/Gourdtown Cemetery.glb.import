@@ -33,6 +33,9 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arches": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Fence": {
 "generate/physics": true,
 "physics/layer": 9,
