@@ -29,3 +29,5 @@ func interac():
 		new_item.transform = Transform3D()
 		item_container.add_child(new_item)
 		player.new_item()
+		await get_tree().create_timer(3).timeout
+		can_pickup = true

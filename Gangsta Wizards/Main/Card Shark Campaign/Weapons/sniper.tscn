@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://covvkwphtcdih"]
+
+[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_fsiuh"]
+[ext_resource type="PackedScene" uid="uid://cjlpemundpthj" path="res://Card Shark Campaign/Weapons/Sniper.glb" id="2_aglpa"]
+
+[node name="Sniper" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00145006, -2.98023e-08, 0.000775874)
+script = ExtResource("1_fsiuh")
+dmg = 60.0
+clip_ammo = 8
+reload_time = 3.0
+spread = 0.01
+burst = 1
+HS_mult = 2.0
+Velocity = 75.0
+recoil = 0.025
+
+[node name="GunCooldown" type="Timer" parent="."]
+wait_time = 1.8
+one_shot = true
+
+[node name="Bullet_spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00468104, 0.0189154, 0.934081)
+
+[node name="Sniper" parent="." instance=ExtResource("2_aglpa")]
+transform = Transform3D(0.999998, -9.70044e-05, -0.00207467, 0, 0.998909, -0.0467055, 0.00207694, 0.0467054, 0.998907, 8.24901e-08, -0.00478062, 0.182665)
