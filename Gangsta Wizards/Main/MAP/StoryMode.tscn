@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=167 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -150,6 +150,7 @@
 [ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
 [ext_resource type="PackedScene" uid="uid://bd2mowq8b4qkn" path="res://DOORS/Openable Wood Door - Steel Handle.tscn" id="149_bl4xi"]
 [ext_resource type="PackedScene" uid="uid://buf4s1n7hpjj2" path="res://DOORS/Openable Sliding Glass Door.tscn" id="150_xycsw"]
+[ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -551,9 +552,6 @@ transform = Transform3D(0.106177, 0, -0.994347, 0, 1, 0, 0.994347, 0, 0.106177, 
 
 [node name="Financial Building2" parent="MAP" instance=ExtResource("83_rio7a")]
 transform = Transform3D(0.857113, 0, 0.515128, 0, 1, 0, -0.515128, 0, 0.857113, -165.305, 32.9537, -27.4522)
-
-[node name="Metro Entrance2" parent="MAP" instance=ExtResource("38_prmrx")]
-transform = Transform3D(0.068886, 0, 0.997625, 0, 1, 0, -0.997625, 0, 0.068886, 85.6662, 32.9113, -105.992)
 
 [node name="Gourdtown City Square" parent="MAP" instance=ExtResource("106_gbbn8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.9956, 32.8242, -107.554)
@@ -1136,6 +1134,9 @@ Door_open_angle = 90.0
 
 [node name="Sliding Door" parent="." instance=ExtResource("150_xycsw")]
 transform = Transform3D(-0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, -0.614574, -115.211, 34.1332, -307.927)
+
+[node name="Metro Entrance - Gourdtown" parent="." instance=ExtResource("151_ktwea")]
+transform = Transform3D(0.0637312, 0, 0.997967, 0, 1, 0, -0.997967, 0, 0.0637312, 85.663, 32.9542, -105.895)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

@@ -30,7 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Casework": {
@@ -63,16 +63,6 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Computers": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Connectors": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Dividing Walls": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -98,11 +88,6 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Grid": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Interior Walls": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -114,11 +99,6 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/RTU": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
@@ -143,10 +123,11 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Toy": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Trees": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Unused Spaces": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,

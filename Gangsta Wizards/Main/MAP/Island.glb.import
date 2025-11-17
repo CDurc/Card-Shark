@@ -51,6 +51,9 @@ _subresources={
 "PATH:1 - PHYS/Concert Area": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elec Wires - Gourdtown": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Highway Supports": {
 "generate/physics": true
 },
