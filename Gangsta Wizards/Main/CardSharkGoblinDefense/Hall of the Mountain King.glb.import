@@ -39,6 +39,9 @@ _subresources={
 "PATH:1 - PHYS/Bath Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bathcol": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cages": {
 "generate/physics": true
 },
@@ -99,16 +102,19 @@ _subresources={
 "PATH:1 - PHYS/Forge": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Frame": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lava Lamp": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/OA Duct": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Platform": {
+"PATH:1 - PHYS/Platform_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Platform_001": {
+"PATH:1 - PHYS/Platformcol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
@@ -117,10 +123,10 @@ _subresources={
 "PATH:1 - PHYS/Roofs": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Throne": {
+"PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/ThroneSteps": {
+"PATH:1 - PHYS/Throne": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Top Walkways": {

@@ -81,7 +81,6 @@ affect_navigation_mesh = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.789, 0)
 
 [node name="SmallNav" type="NavigationRegion3D" parent="NavMap"]
-visible = false
 navigation_mesh = SubResource("NavigationMesh_ntpda")
 
 [node name="Hall of the Mountain King" parent="NavMap/SmallNav" instance=ExtResource("2_d1bmk")]
