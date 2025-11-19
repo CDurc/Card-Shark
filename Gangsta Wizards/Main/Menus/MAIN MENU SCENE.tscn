@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://ccahg3ocwrgd2"]
+[gd_scene load_steps=19 format=3 uid="uid://ccahg3ocwrgd2"]
 
 [ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_w3sgo"]
-[ext_resource type="PackedScene" uid="uid://birbvoma6dskv" path="res://Card Shark Campaign/Character Models/Goblins/goblin_8.glb" id="2_5o5jd"]
 [ext_resource type="PackedScene" uid="uid://dxutsuyx1icch" path="res://Menus/The Shark Arm TM.tscn" id="4_foeht"]
 [ext_resource type="Script" path="res://Menus/play_intro.gd" id="4_kbo7x"]
 [ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
@@ -86,18 +85,6 @@ environment = SubResource("Environment_x1h13")
 [node name="World" type="Node3D" parent="."]
 
 [node name="Main Menu" parent="World" instance=ExtResource("1_w3sgo")]
-
-[node name="goblin_8" parent="World" instance=ExtResource("2_5o5jd")]
-transform = Transform3D(-5.68248e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.68248e-08, 0.246229, 1.12087, -1.24207)
-
-[node name="Beads" parent="World/goblin_8/gobby bones8/Skeleton3D" index="0"]
-transform = Transform3D(1, 2.01166e-07, -2.04891e-08, 4.84288e-08, 1, -3.28291e-08, 1.10827e-07, -3.07919e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
-
-[node name="Beads_001" parent="World/goblin_8/gobby bones8/Skeleton3D" index="1"]
-transform = Transform3D(1, 2.01166e-07, -2.04891e-08, 4.84288e-08, 1, -3.28291e-08, 1.10827e-07, -3.07919e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
-
-[node name="Beads_002" parent="World/goblin_8/gobby bones8/Skeleton3D" index="2"]
-transform = Transform3D(1, 2.01166e-07, -2.04891e-08, 4.84288e-08, 1, -3.28291e-08, 1.10827e-07, -3.07919e-08, 1, -1.08033e-07, 2.98023e-08, 2.51457e-08)
 
 [node name="Arm" parent="World" instance=ExtResource("4_foeht")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00498766, 1.457, 0.709)
@@ -227,5 +214,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
-
-[editable path="World/goblin_8"]
