@@ -36,9 +36,6 @@ _subresources={
 "PATH:1 - PHYS/Ammo Refill": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Bath Ground": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Bathcol": {
 "generate/physics": true
 },
