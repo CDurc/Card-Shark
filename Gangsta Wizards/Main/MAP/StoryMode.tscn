@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=156 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -132,6 +132,7 @@
 [ext_resource type="PackedScene" uid="uid://luk8wjhkpvui" path="res://BUILDINGS/Utility and Misc/Lighthouse.glb" id="137_oc06b"]
 [ext_resource type="PackedScene" uid="uid://cuieys6omvct6" path="res://MAP - NON-BUILDINGS/Beach.glb" id="138_yjoxc"]
 [ext_resource type="PackedScene" uid="uid://c84dpu61ogdmr" path="res://MAP - NON-BUILDINGS/Signs Linked.glb" id="139_lpdoe"]
+[ext_resource type="PackedScene" uid="uid://sxuic48dj761" path="res://BUILDINGS/Business/Astro Building.glb" id="140_0aabl"]
 [ext_resource type="PackedScene" uid="uid://cbqxwjlqgplpj" path="res://MAP - NON-BUILDINGS/Transmission Tower.glb" id="141_f6iop"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
 [ext_resource type="PackedScene" uid="uid://bowjekmxrtna2" path="res://DOORS/Openable Light Brown Metal Door.tscn" id="148_irqwt"]
@@ -545,7 +546,7 @@ transform = Transform3D(0.67176, 0, -0.740769, 0, 1, 0, 0.740769, 0, 0.67176, 73
 transform = Transform3D(-0.0674232, 0, -0.997724, 0, 1, 0, 0.997724, 0, -0.0674232, -5.25218, 32.9642, 121.604)
 
 [node name="LootLakeHouse" parent="MAP" instance=ExtResource("110_kfudl")]
-transform = Transform3D(-0.987579, 0, 0.157124, 0, 1, 0, -0.157124, 0, -0.987579, -55.1034, 28.017, -107.567)
+transform = Transform3D(-0.987579, 0, 0.157124, 0, 1, 0, -0.157124, 0, -0.987579, -55.1034, 32.1519, -107.567)
 
 [node name="Metro Entrance3" parent="MAP" instance=ExtResource("38_prmrx")]
 transform = Transform3D(-0.846519, 0, -0.532359, 0, 1, 0, 0.532359, 0, -0.846519, -90.6977, 32.9253, -364.91)
@@ -994,6 +995,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.933, 1.17376, 184.166)
 
 [node name="Signs Linked" parent="." instance=ExtResource("139_lpdoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.439, -0.0842438, 182.929)
+
+[node name="Astro Building" parent="." instance=ExtResource("140_0aabl")]
+transform = Transform3D(0.950835, 0, 0.309697, 0, 1, 0, -0.309697, 0, 0.950835, -126.878, 33.2352, -124.952)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
