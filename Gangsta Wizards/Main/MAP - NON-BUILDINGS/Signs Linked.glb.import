@@ -1,0 +1,93 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c84dpu61ogdmr"
+path="res://.godot/imported/Signs Linked.glb-92d9edc3df1742208a233a986cbe4fdb.scn"
+
+[deps]
+
+source_file="res://MAP - NON-BUILDINGS/Signs Linked.glb"
+dest_files=["res://.godot/imported/Signs Linked.glb-92d9edc3df1742208a233a986cbe4fdb.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Board": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Highway Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Street Sign Tops": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Supports": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,0 +1,72 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cuieys6omvct6"
+path="res://.godot/imported/Beach.glb-c63c5822c14c1f3550311e9d928e86eb.scn"
+
+[deps]
+
+source_file="res://MAP - NON-BUILDINGS/Beach.glb"
+dest_files=["res://.godot/imported/Beach.glb-c63c5822c14c1f3550311e9d928e86eb.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path="res://MAP/post_import_settings.gd"
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Arch": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach - Grass & Walkway": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach - Sand Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Castle Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CastleStairsCol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Hammock Trees": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rocks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rocks_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shower_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trees": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

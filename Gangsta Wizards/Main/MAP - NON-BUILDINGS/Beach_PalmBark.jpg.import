@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cmf32l86rdnxb"
+path.s3tc="res://.godot/imported/Beach_PalmBark.jpg-a98ee14f5f13ada589ba196871d0be51.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c36421f29ca042c2e99e1d962db14770"
+}
+
+[deps]
+
+source_file="res://MAP - NON-BUILDINGS/Beach_PalmBark.jpg"
+dest_files=["res://.godot/imported/Beach_PalmBark.jpg-a98ee14f5f13ada589ba196871d0be51.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

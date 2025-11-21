@@ -51,6 +51,9 @@ _subresources={
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard_001": {
 "generate/physics": true
 },

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7jqx35csgtu6"
+path="res://.godot/imported/CS_Damage_1.wav-a33e62d0a88bd9f1fbecb5353b59cc04.sample"
+
+[deps]
+
+source_file="res://SOUND EFFECTS & VOICE LINES/CS_Damage_1.wav"
+dest_files=["res://.godot/imported/CS_Damage_1.wav-a33e62d0a88bd9f1fbecb5353b59cc04.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
