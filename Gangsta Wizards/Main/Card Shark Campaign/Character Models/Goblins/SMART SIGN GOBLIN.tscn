@@ -54,11 +54,32 @@ color = Color(0, 1, 0, 1)
 [node name="goblin" parent="." instance=ExtResource("3_6j66n")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
+[node name="Skeleton3D" parent="goblin/Gobby 3" index="0"]
+bones/2/rotation = Quaternion(0.344193, 0.00746128, -0.00267816, 0.938865)
+bones/5/rotation = Quaternion(-0.212317, 0.344002, -0.658877, 0.634402)
+bones/6/rotation = Quaternion(0.00200278, 0.012683, 0.00317303, 0.999913)
+bones/7/rotation = Quaternion(0.0357135, -0.123421, -0.103294, 0.986317)
+bones/24/rotation = Quaternion(0.281737, 0.0181431, -0.0361275, 0.95864)
+bones/29/rotation = Quaternion(0.806097, -0.00423744, -0.591747, -0.00500106)
+bones/30/rotation = Quaternion(0.794712, 0.228567, -0.553769, -0.0976166)
+bones/32/rotation = Quaternion(-0.693075, 0.713763, -0.0765, -0.0658531)
+bones/32/scale = Vector3(-0.413201, -0.999869, -0.999987)
+bones/33/rotation = Quaternion(-0.693074, 0.713765, -0.0765001, -0.0658534)
+bones/33/scale = Vector3(-0.413201, -0.999869, -0.999987)
+bones/45/rotation = Quaternion(-0.446616, 0.412549, 0.583614, 0.538269)
+bones/46/rotation = Quaternion(-0.0215047, 0.634725, -0.525549, 0.566091)
+bones/47/rotation = Quaternion(-0.053761, -0.0116099, -0.334088, 0.940936)
+bones/48/rotation = Quaternion(-0.643247, 0.234407, 0.0541918, 0.726877)
+bones/72/position = Vector3(-0.136335, -0.605942, 1.88312)
+bones/72/rotation = Quaternion(0.0529115, 0.332057, -0.861858, -0.379656)
+bones/77/position = Vector3(-0.929026, -0.0561791, 2.75252)
+bones/79/rotation = Quaternion(-0.853768, 0.503331, -0.125236, 0.045332)
+
 [node name="Eyepatch" parent="goblin/Gobby 3/Skeleton3D" index="0"]
-transform = Transform3D(1, -9.31323e-09, 8.14045e-07, 8.00937e-08, 1, -1.26589e-07, -8.32981e-07, 1.25448e-07, 1, 0.0176042, -0.00761032, 0.00493991)
+transform = Transform3D(1, -6.89179e-08, 8.17799e-07, 8.00937e-08, 1, -1.34039e-07, -8.3675e-07, 1.28122e-07, 1, 0.0176042, -0.00761032, 0.00493991)
 
 [node name="HandContainer" parent="goblin/Gobby 3/Skeleton3D" index="2"]
-transform = Transform3D(0.898695, 0.37991, -0.219126, 0.00224881, -0.503617, -0.863924, -0.438569, 0.775911, -0.453453, -0.254154, -0.213549, 0.970533)
+transform = Transform3D(0.898695, 0.379911, -0.219124, 0.00225043, -0.503616, -0.863925, -0.438569, 0.775912, -0.453452, -0.254152, -0.213549, 0.970534)
 
 [node name="Area3D" parent="goblin/Gobby 3/Skeleton3D/HandContainer/Street Sign2" index="1"]
 damage = 20

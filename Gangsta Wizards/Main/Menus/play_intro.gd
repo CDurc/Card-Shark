@@ -19,6 +19,7 @@ func _ready() -> void:
 	await get_tree().create_timer(1).timeout
 	fading = true
 	anime.play("MainMenuAction")
+	anime.play("MainMenuAction2")
 	await get_tree().create_timer(4.5).timeout
 	moving_cam1 = true
 	await get_tree().create_timer(3.5).timeout

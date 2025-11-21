@@ -1,43 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://ccahg3ocwrgd2"]
+[gd_scene load_steps=7 format=3 uid="uid://ct42b6cror4eg"]
 
-[ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_w3sgo"]
-[ext_resource type="PackedScene" uid="uid://dxutsuyx1icch" path="res://Menus/The Shark Arm TM.tscn" id="4_foeht"]
-[ext_resource type="Script" path="res://Menus/play_intro.gd" id="4_kbo7x"]
-[ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
-[ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
-[ext_resource type="Script" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
-[ext_resource type="PackedScene" uid="uid://cyolbxh2dunh4" path="res://Card Shark Campaign/Spells/empty.tscn" id="9_m4vlu"]
-[ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
-
-[sub_resource type="Gradient" id="Gradient_ex873"]
-colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4e6px"]
-gradient = SubResource("Gradient_ex873")
-fill_to = Vector2(0, 1)
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_s4wqd"]
-panorama = SubResource("GradientTexture2D_4e6px")
-
-[sub_resource type="Sky" id="Sky_7bk1c"]
-sky_material = SubResource("PanoramaSkyMaterial_s4wqd")
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_x1h13"]
-background_mode = 2
-sky = SubResource("Sky_7bk1c")
-ambient_light_source = 2
-ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
-tonemap_mode = 2
-ssao_enabled = true
-ssao_radius = 0.45
-ssao_intensity = 1.0
-ssao_power = 5.0
-glow_enabled = true
-glow_levels/2 = 0.6
-glow_levels/3 = 0.6
-glow_levels/5 = 0.0
-glow_intensity = 2.0
+[ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_jpcdq"]
 
 [sub_resource type="Animation" id="Animation_ktyxt"]
 resource_name = "MainMenuAction"
@@ -1856,57 +1819,9 @@ _data = {
 "Waves Action": SubResource("Animation_p3qf5")
 }
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_kvsuo"]
-size = Vector2(0.5, 0.23)
+[node name="Main Menu" instance=ExtResource("1_jpcdq")]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rgy0"]
-transparency = 1
-albedo_color = Color(0, 0, 0, 0)
-emission = Color(0, 0.716674, 0.331765, 1)
-emission_energy_multiplier = 2.52
-rim_tint = 0.72
-grow_amount = 0.36
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_udr17"]
-size = Vector3(0.5, 0.155225, 0.23)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_gchj1"]
-size = Vector2(0.5, 0.23)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_u0svg"]
-size = Vector3(3.22791, 0.0155273, 1.2782)
-
-[node name="Root" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000138283, 0.00102568, -0.000135422)
-
-[node name="Cam Work" type="Node3D" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="Cam Work"]
-transform = Transform3D(-1, 1.14376e-08, -1.48409e-07, -7.65797e-09, 0.99177, 0.128034, 1.48652e-07, 0.128034, -0.99177, 0.259206, 1.96951, -1.10206)
-fov = 68.0
-
-[node name="Step1" type="Marker3D" parent="Cam Work"]
-transform = Transform3D(-1, 1.14374e-08, -1.48408e-07, -1.61145e-08, 0.982865, 0.184329, 1.47974e-07, 0.184329, -0.982865, 0.259208, 1.99933, -1.10136)
-
-[node name="Step2" type="Marker3D" parent="Cam Work"]
-transform = Transform3D(1, 0, 0, 0, 0.987854, 0.155383, 0, -0.155383, 0.987854, 0.259208, 2.23972, 0.709082)
-
-[node name="Step3" type="Marker3D" parent="Cam Work"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.259208, 2.37847, 0.012137)
-
-[node name="Lighting" type="Node3D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
-environment = SubResource("Environment_x1h13")
-
-[node name="World" type="Node3D" parent="."]
-
-[node name="Main Menu" parent="World" instance=ExtResource("1_w3sgo")]
-visible = false
-
-[node name="Non-Auto Updated Main  Menu" parent="World" instance=ExtResource("1_w3sgo")]
-
-[node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/SharkBones" index="0"]
+[node name="Skeleton3D" parent="SharkBones" index="0"]
 bones/0/position = Vector3(0.348781, -0.948659, 2.13234)
 bones/0/rotation = Quaternion(-0.0214421, -0.706782, -0.706782, 0.0214422)
 bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
@@ -1936,12 +1851,9 @@ bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
 bones/30/position = Vector3(-0.411779, 0.355831, 1.32976)
 bones/31/rotation = Quaternion(0.999964, -4.70487e-09, 4.4276e-07, -0.0085224)
 bones/32/position = Vector3(-0.252724, 0.184124, 0.97181)
-bones/32/rotation = Quaternion(-0.613758, -0.513475, 0.370614, 0.471476)
+bones/32/rotation = Quaternion(-0.221894, -0.0810468, 0.681003, 0.69313)
 
-[node name="Water" parent="World/Non-Auto Updated Main  Menu" index="8"]
-visible = false
-
-[node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/Caardvark" index="0"]
+[node name="Skeleton3D" parent="Caardvark" index="0"]
 bones/0/rotation = Quaternion(-0.5, 0.5, 0.5, 0.5)
 bones/2/rotation = Quaternion(0.344193, 0.00746123, -0.00267816, 0.938865)
 bones/5/rotation = Quaternion(-0.17891, 0.593639, -0.0814222, 0.780355)
@@ -1969,148 +1881,17 @@ bones/75/rotation = Quaternion(0.929327, 1.34914e-07, 8.70511e-08, -0.369257)
 bones/77/rotation = Quaternion(0.999964, -9.31366e-10, 1.24263e-07, -0.00852212)
 bones/78/rotation = Quaternion(-0.246923, -0.107326, 0.673868, 0.688049)
 
-[node name="CardAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
+[node name="CardAnime" type="AnimationPlayer" parent="." index="16"]
 libraries = {
 "": SubResource("AnimationLibrary_ysj8p")
 }
 
-[node name="WaveAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
+[node name="WaveAnime" type="AnimationPlayer" parent="." index="17"]
 libraries = {
 "": SubResource("AnimationLibrary_ysj8p")
 }
 
-[node name="VarkAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
+[node name="VarkAnime" type="AnimationPlayer" parent="." index="18"]
 libraries = {
 "": SubResource("AnimationLibrary_ysj8p")
 }
-
-[node name="Arm" parent="World" instance=ExtResource("4_foeht")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00498766, 1.457, 0.709)
-visible = false
-
-[node name="Scripts" type="Node3D" parent="."]
-
-[node name="Play_Intro" type="Node3D" parent="Scripts"]
-script = ExtResource("4_kbo7x")
-
-[node name="Buttons" type="Node3D" parent="Scripts"]
-script = ExtResource("5_j5xvy")
-arm_path = NodePath("../../World/Arm")
-arm_base_length = 1.2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scripts"]
-stream = ExtResource("6_swmh5")
-autoplay = true
-parameters/looping = true
-
-[node name="Buttons" type="Node3D" parent="."]
-
-[node name="Story Mode" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230265, 1.34731, 0.2014)
-mesh = SubResource("PlaneMesh_kvsuo")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/Story Mode"]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("8_p0l6d")
-new_scene = ExtResource("9_m4vlu")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Story Mode/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0770565, 0)
-shape = SubResource("BoxShape3D_udr17")
-
-[node name="TOP" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243123, 1.34731, -0.511321)
-mesh = SubResource("PlaneMesh_gchj1")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/TOP"]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/TOP/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142395, -0.00720787, -0.0375391)
-shape = SubResource("BoxShape3D_u0svg")
-
-[node name="LEFT" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94149, 1.32023, 0.12554)
-mesh = SubResource("PlaneMesh_gchj1")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/LEFT"]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/LEFT/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142395, -0.00720787, -0.0375391)
-shape = SubResource("BoxShape3D_u0svg")
-
-[node name="RIGHT" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77211, 1.32023, 0.12554)
-mesh = SubResource("PlaneMesh_gchj1")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/RIGHT"]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/RIGHT/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142395, -0.00720787, -0.0375391)
-shape = SubResource("BoxShape3D_u0svg")
-
-[node name="BOTTOM" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243123, 1.34731, 0.995562)
-mesh = SubResource("PlaneMesh_gchj1")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/BOTTOM"]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/BOTTOM/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142395, -0.00720787, -0.0375391)
-shape = SubResource("BoxShape3D_u0svg")
-
-[node name="Random" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273005, 1.34731, 0.2014)
-mesh = SubResource("PlaneMesh_kvsuo")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/Random"]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("8_p0l6d")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Random/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
-shape = SubResource("BoxShape3D_udr17")
-
-[node name="Goblin Mode" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.776716, 1.34731, 0.2014)
-mesh = SubResource("PlaneMesh_kvsuo")
-surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
-
-[node name="Area3D" type="Area3D" parent="Buttons/Goblin Mode"]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("8_p0l6d")
-new_scene = ExtResource("10_hsfdo")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Goblin Mode/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00720787, 0)
-shape = SubResource("BoxShape3D_udr17")
-
-[node name="GUI" type="Node2D" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="GUI"]
-
-[node name="BlackBox" type="ColorRect" parent="GUI/CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[editable path="World/Non-Auto Updated Main  Menu"]
