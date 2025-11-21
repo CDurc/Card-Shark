@@ -1495,7 +1495,12 @@ func damage(amount):
 		health -= amount
 		health_updated.emit(health) # Update health on HUD, possibly obselete
 		chipbar.call("display_chips",health)
-		Audio.play("sounds/ahhhhhhhhh.ogg")
+		#Audio.play("sounds/ahhhhhhhhh.ogg")
+		if amount <= 45:
+			var rand_sound = randi_range(1,6)
+			Audio.play("SOUND EFFECTS & VOICE LINES/CS_Damage_%d.wav" % rand_sound)
+		elif amount > 45:
+			Audio.play("SOUND EFFECTS & VOICE LINES/CS_Damage_7.wav")
 	else:
 		print("player is invulnerable, cant be dmged")
 

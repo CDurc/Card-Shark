@@ -704,6 +704,29 @@ transform = Transform3D(0.945876, 0, -0.324528, 0, 1, 0, 0.324528, 0, 0.945876, 
 [node name="Black Metal Door" parent="MAP" instance=ExtResource("147_yg6vf")]
 transform = Transform3D(0.0453631, 0, 0.998971, 0, 1, 0, -0.998971, 0, 0.0453631, 17.068, 34.985, -96.755)
 
+[node name="Openable Light Brown Metal Door" parent="MAP" instance=ExtResource("148_irqwt")]
+transform = Transform3D(-0.77925, 0, 0.626713, 0, 1, 0, -0.626713, 0, -0.77925, -100.527, 34.1057, -301.572)
+Door_open_angle = 90.0
+
+[node name="Openable Door" parent="MAP" instance=ExtResource("149_bl4xi")]
+transform = Transform3D(-0.625215, 0, -0.780452, 0, 1, 0, 0.780452, 0, -0.625215, -104.012, 34.108, -296.231)
+Door_open_angle = 90.0
+
+[node name="Sliding Door" parent="MAP" instance=ExtResource("150_xycsw")]
+transform = Transform3D(-0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, -0.614574, -115.211, 34.1332, -307.927)
+
+[node name="Metro Entrance - Gourdtown" parent="MAP" instance=ExtResource("151_ktwea")]
+transform = Transform3D(0.0637312, 0, 0.997967, 0, 1, 0, -0.997967, 0, 0.0637312, 85.663, 32.9542, -105.895)
+
+[node name="Beach" parent="MAP" instance=ExtResource("138_yjoxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.933, 1.17376, 184.166)
+
+[node name="Signs Linked" parent="MAP" instance=ExtResource("139_lpdoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.439, -0.0842438, 182.929)
+
+[node name="Astro Building" parent="MAP" instance=ExtResource("140_0aabl")]
+transform = Transform3D(0.950835, 0, 0.309697, 0, 1, 0, -0.309697, 0, 0.950835, -126.878, 33.2352, -124.952)
+
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -96.9883, 44.4519, -305.738)
 health = 250
@@ -963,7 +986,6 @@ shadow_enabled = true
 
 [node name="Great Sun Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 1.9766e-22, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 1422, -1.84774e-05)
-visible = false
 cast_shadow = 0
 mesh = SubResource("SphereMesh_7oes6")
 skeleton = NodePath("../Moon")
@@ -975,29 +997,6 @@ material_override = SubResource("StandardMaterial3D_fmpp0")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_05b07")
 skeleton = NodePath("../Moon")
-
-[node name="Openable Light Brown Metal Door" parent="." instance=ExtResource("148_irqwt")]
-transform = Transform3D(-0.77925, 0, 0.626713, 0, 1, 0, -0.626713, 0, -0.77925, -100.527, 34.1057, -301.572)
-Door_open_angle = 90.0
-
-[node name="Openable Door" parent="." instance=ExtResource("149_bl4xi")]
-transform = Transform3D(-0.625215, 0, -0.780452, 0, 1, 0, 0.780452, 0, -0.625215, -104.012, 34.108, -296.231)
-Door_open_angle = 90.0
-
-[node name="Sliding Door" parent="." instance=ExtResource("150_xycsw")]
-transform = Transform3D(-0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, -0.614574, -115.211, 34.1332, -307.927)
-
-[node name="Metro Entrance - Gourdtown" parent="." instance=ExtResource("151_ktwea")]
-transform = Transform3D(0.0637312, 0, 0.997967, 0, 1, 0, -0.997967, 0, 0.0637312, 85.663, 32.9542, -105.895)
-
-[node name="Beach" parent="." instance=ExtResource("138_yjoxc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.933, 1.17376, 184.166)
-
-[node name="Signs Linked" parent="." instance=ExtResource("139_lpdoe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.439, -0.0842438, 182.929)
-
-[node name="Astro Building" parent="." instance=ExtResource("140_0aabl")]
-transform = Transform3D(0.950835, 0, 0.309697, 0, 1, 0, -0.309697, 0, 0.950835, -126.878, 33.2352, -124.952)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

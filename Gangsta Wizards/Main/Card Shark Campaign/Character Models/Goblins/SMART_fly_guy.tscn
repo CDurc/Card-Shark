@@ -1,7 +1,9 @@
-[gd_scene load_steps=24 format=4 uid="uid://8egsnfdn7ovj"]
+[gd_scene load_steps=28 format=4 uid="uid://8egsnfdn7ovj"]
 
 [ext_resource type="Script" path="res://fly_guy.gd" id="1_skh8e"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/FlyGuy_attack.gd" id="2_4wd7u"]
+[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="3_wnck4"]
+[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/dmg.gd" id="4_3f6bt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5u1e"]
 resource_name = "Skin"
@@ -2508,13 +2510,22 @@ height = 1.05237
 [sub_resource type="SphereShape3D" id="SphereShape3D_53u07"]
 radius = 0.2466
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_efnqq"]
+radius = 0.362642
+height = 1.60729
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hcfsc"]
+radius = 0.56143
+height = 1.61808
+
 [node name="FlyGuy" type="PathFollow3D"]
 script = ExtResource("1_skh8e")
-mps = 5.0
+mps = 10.0
 
-[node name="goblin_6" type="Node3D" parent="."]
+[node name="goblin_6" type="CharacterBody3D" parent="." groups=["Enemies"]]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
 script = ExtResource("2_4wd7u")
+health = 100
 
 [node name="gobby bones6" type="Node3D" parent="goblin_6"]
 transform = Transform3D(-0.115182, 2.24803e-09, -9.81543e-09, 0, 0.112275, 0.0257145, 1.00696e-08, 0.0257145, -0.112275, -0.00913914, 0.12887, -0.0276514)
@@ -3084,6 +3095,8 @@ libraries = {
 }
 
 [node name="Bodyshot" type="Area3D" parent="goblin_6" groups=["Bodyshot"]]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="goblin_6/Bodyshot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0411373, -0.134663)
@@ -3091,6 +3104,48 @@ shape = SubResource("CapsuleShape3D_3od5n")
 
 [node name="Headshot" type="Area3D" parent="goblin_6" groups=["Headshot"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.600065, -0.214295)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="goblin_6/Headshot"]
 shape = SubResource("SphereShape3D_53u07")
+
+[node name="Collider" type="CollisionShape3D" parent="goblin_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.280082, -0.107624)
+shape = SubResource("CapsuleShape3D_efnqq")
+
+[node name="Control" type="Control" parent="goblin_6" groups=["Healthbars"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_wnck4")
+
+[node name="Healthbar" type="ColorRect" parent="goblin_6/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="goblin_6/Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+
+[node name="Attackbox" type="Area3D" parent="goblin_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.590899, -0.780689)
+script = ExtResource("4_3f6bt")
+damage = 20
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="goblin_6/Attackbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.940891, 0.676605)
+shape = SubResource("CapsuleShape3D_hcfsc")
+
+[connection signal="body_entered" from="goblin_6/Attackbox" to="goblin_6/Attackbox" method="_on_body_entered"]

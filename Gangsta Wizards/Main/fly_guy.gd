@@ -1,6 +1,6 @@
 extends PathFollow3D
 
-@export var mps: float = 10
+@export var mps: float
 
 @onready var anime: AnimationPlayer = $goblin_6/AnimationPlayer
 
