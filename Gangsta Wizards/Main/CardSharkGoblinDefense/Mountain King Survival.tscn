@@ -403,7 +403,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1806, 10.167, -11.4069)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492306, -0.540041, 1.27105)
 collision_layer = 17
 script = ExtResource("8_8ywqv")
-price = 6000
+price = 5000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Store/M16"]
 transform = Transform3D(0.102289, 0.508745, -0.854819, -0.994755, 0.0523135, -0.0878997, 0, 0.859326, 0.511428, 0.105506, 0.0909615, -0.0108209)
@@ -425,7 +425,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492306, -0.540041, 2.07144)
 collision_layer = 17
 script = ExtResource("8_8ywqv")
 gun_type_path = ExtResource("8_to54h")
-price = 3000
+price = 2500
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Store/Revolver"]
 transform = Transform3D(0.102289, 0.81942, 0.563993, -0.994755, 0.0842597, 0.0579944, -6.95811e-10, -0.566967, 0.823741, 0.242872, 0.105087, -0.0313277)
@@ -441,13 +441,13 @@ curve = SubResource("Curve3D_f8nrl")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="FlyGuy2" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.769434, 0, -0.638724, 0, 1, 0, 0.638724, 0, 0.769434, 11.8867, 0, -3.29965)
+transform = Transform3D(0.769434, 0, -0.638724, 0, 1, 0, 0.638724, 0, 0.769434, 11.8867, 0, -3.29966)
 progress = 12.6877
 
 [node name="FlyGuy3" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.945238, 0, -0.326376, 0, 1, 0, 0.326376, 0, 0.945238, 17.5715, 0, -14.1738)
+transform = Transform3D(0.945238, 0, -0.326377, 0, 1, 0, 0.326377, 0, 0.945238, 17.5715, 0, -14.1738)
 progress = 25.0057
 
 [node name="FlyGuy4" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.718442, 0, 0.695583, 0, 1, 0, -0.695583, 0, -0.718442, -7.17698, 0, -10.3146)
+transform = Transform3D(-0.71844, 0, 0.695585, 0, 1, 0, -0.695585, 0, -0.71844, -7.177, 0, -10.3146)
 progress = 66.451

@@ -26,7 +26,7 @@ shape = SubResource("CylinderShape3D_nehei")
 
 [node name="Pickup" type="Area3D" parent="RigidBody3D"]
 script = ExtResource("1_vixi0")
-value = 250
+value = 200
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
 shape = SubResource("SphereShape3D_53sqn")

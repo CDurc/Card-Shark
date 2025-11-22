@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_sj6fb")
 
 [node name="Pickup" type="Area3D" parent="RigidBody3D"]
 script = ExtResource("1_palwe")
-value = 500
+value = 300
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Pickup"]
 shape = SubResource("SphereShape3D_53sqn")

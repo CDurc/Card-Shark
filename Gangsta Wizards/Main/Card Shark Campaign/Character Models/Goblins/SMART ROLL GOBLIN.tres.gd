@@ -9,7 +9,7 @@ extends CharacterBody3D
 @onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $Feet/NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
-@onready var money_drop = preload("res://Card Shark Campaign/Spells/100d_money_drop.tscn")
+@onready var money_drop = preload("res://Card Shark Campaign/Spells/50d_money_drop.tscn")
 
 #@onready var initial_healthbar = healthbar.scale.x
 

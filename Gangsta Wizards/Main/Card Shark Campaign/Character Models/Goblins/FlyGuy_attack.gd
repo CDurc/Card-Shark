@@ -10,7 +10,7 @@ extends CharacterBody3D
 @onready var mesh_flying_rot = mesh_attacking_rot + Vector3(90,0,0)
 @onready var anime = $AnimationPlayer
 @onready var healthbar = $Control/Healthbar/Helth
-@onready var money_drop = preload("res://Card Shark Campaign/Spells/50d_money_drop.tscn")
+@onready var money_drop = preload("res://Card Shark Campaign/Spells/5d_money_drop.tscn")
 
 var dist: float = 1000
 var attacking = false
