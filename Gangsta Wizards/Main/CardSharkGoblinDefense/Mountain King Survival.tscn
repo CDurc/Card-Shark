@@ -414,7 +414,7 @@ transform = Transform3D(0.999872, 0, 0.0159865, 0, 1, 0, -0.0159865, 0, 0.999872
 collision_layer = 17
 script = ExtResource("8_8ywqv")
 gun_type_path = ExtResource("8_cijjr")
-price = 10000
+price = 12000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Store/Sniper"]
 transform = Transform3D(0.102289, -0.0188541, -0.994576, -0.994755, -0.00193864, -0.102271, -3.72529e-09, 0.99982, -0.0189534, 0.0984707, 0.15938, -0.0108209)
