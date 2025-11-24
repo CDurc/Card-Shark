@@ -41,13 +41,14 @@ func reset():
 	damaged_bodies = {}
 
 func push(body: CharacterBody3D) -> void:
-	var dir: Vector3 = body.global_position - global_position
-	dir.y = 0
-	if dir.length_squared() == 0:
-		return
-	dir = dir.normalized()
-	dir.y = 0.15
-	body.knockback_v = dir * force
-	body.knockback_t = 0.25
-	print(body.knockback_v)
-	print("PUSH")
+	if body.knockback_v:
+		var dir: Vector3 = body.global_position - global_position
+		dir.y = 0
+		if dir.length_squared() == 0:
+			return
+		dir = dir.normalized()
+		dir.y = 0.15
+		body.knockback_v = dir * force
+		body.knockback_t = 0.25
+		print(body.knockback_v)
+		print("PUSH")
