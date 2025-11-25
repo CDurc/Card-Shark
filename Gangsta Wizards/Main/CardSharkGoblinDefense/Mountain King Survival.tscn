@@ -460,51 +460,51 @@ curve = SubResource("Curve3D_f8nrl")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="FlyGuy2" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.163294, 0, -0.986577, 0, 1, 0, 0.986577, 0, 0.163294, 6.17655, 0, -0.904941)
+transform = Transform3D(0.163294, 0, -0.986575, 0, 1, 0, 0.986575, 0, 0.163294, 6.17656, 0, -0.904941)
 progress = 6.24682
 
 [node name="FlyGuy3" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.493869, 0, 0.869534, 0, 1, 0, -0.869534, 0, 0.493869, 17.2479, 0, -22.77)
+transform = Transform3D(0.493857, 0, 0.869541, 0, 1, 0, -0.869541, 0, 0.493857, 17.2479, 0, -22.77)
 progress = 34.2374
 
 [node name="FlyGuy4" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.383744, 0, 0.923438, 0, 1, 0, -0.923438, 0, -0.383744, -9.1396, 0, -8.8937)
+transform = Transform3D(-0.383735, 0, 0.923442, 0, 1, 0, -0.923442, 0, -0.383735, -9.13963, 0, -8.89368)
 progress = 68.8906
 
 [node name="P2" type="Path3D" parent="FlyRails"]
 curve = SubResource("Curve3D_ppwji")
 
 [node name="FlyGuy" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.843361, 0.532962, 0.0685101, -0.53329, 0.8458, -0.0149485, -0.0659129, -0.0239288, 0.997538, 18.1504, 0.318729, -24.6773)
+transform = Transform3D(0.843361, 0.532961, 0.0685094, -0.53329, 0.845799, -0.0149485, -0.0659124, -0.0239284, 0.997536, 18.1505, 0.318729, -24.6773)
 progress = 41.0162
 
 [node name="FlyGuy2" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.512718, 0.775226, 0.368975, -0.831974, 0.554734, -0.00942345, -0.211989, -0.302146, 0.92939, 14.9594, 0.49211, -38.4581)
+transform = Transform3D(0.512719, 0.775228, 0.368966, -0.831971, 0.554735, -0.00942493, -0.211985, -0.302138, 0.929392, 14.9595, 0.492112, -38.4581)
 progress = 58.1265
 
 [node name="FlyGuy3" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.983333, -0.100838, -0.151276, -0.150144, 0.919624, 0.362968, 0.102516, 0.379632, -0.919438, -14.593, -6.43462, -6.16781)
+transform = Transform3D(-0.983333, -0.100825, -0.151287, -0.150138, 0.919619, 0.362984, 0.102528, 0.379649, -0.91943, -14.5929, -6.43489, -6.16759)
 progress = 119.773
 
 [node name="FlyGuy4" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.004202, 0.184527, -0.982817, -0.998791, -0.0473313, -0.0131569, -0.0489459, 0.981685, 0.184106, 5.45066, -16.6793, -29.4422)
+transform = Transform3D(0.00419818, 0.18451, -0.98282, -0.998791, -0.0473263, -0.0131513, -0.04894, 0.981685, 0.184089, 5.45097, -16.6793, -29.4421)
 progress = 178.847
 
 [node name="P3" type="Path3D" parent="FlyRails"]
 curve = SubResource("Curve3D_pl7ux")
 
 [node name="FlyGuy" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.971328, 0.234512, -0.0390502, -0.235233, 0.971823, -0.0149401, 0.0344463, 0.0236977, 0.999125, 31.595, -16.6198, -31.9331)
+transform = Transform3D(0.971328, 0.234512, -0.0390473, -0.235233, 0.971823, -0.0149387, 0.0344439, 0.0236956, 0.999123, 31.595, -16.6198, -31.933)
 progress = 60.9021
 
 [node name="FlyGuy2" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.0403955, 0.0663812, 0.996976, -0.0184605, 0.99767, -0.0656794, -0.999013, -0.0157515, 0.0415268, -6.14556, -12.5663, -49.3901)
+transform = Transform3D(0.0403976, 0.0663964, 0.996973, -0.0184583, 0.997667, -0.0656947, -0.999011, -0.0157485, 0.041529, -6.14515, -12.5661, -49.3901)
 progress = 108.267
 
 [node name="FlyGuy3" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.244186, -0.151569, -0.957808, -0.274013, 0.958242, -0.0817792, 0.930208, 0.242483, -0.275521, -19.0201, -16.4622, -3.43847)
+transform = Transform3D(-0.244188, -0.151567, -0.957808, -0.274009, 0.958243, -0.0817782, 0.930209, 0.24248, -0.275522, -19.0201, -16.4623, -3.43847)
 progress = 184.381
 
 [node name="FlyGuy4" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.455718, 0.890123, -2.01435e-05, -0.890123, 0.455718, 2.83367e-05, 3.44029e-05, 5.01666e-06, 0.999999, -16.7847, -1.25047, 16.0287)
+transform = Transform3D(0.455719, 0.890122, -2.21473e-05, -0.890122, 0.455719, 2.81982e-05, 3.51929e-05, 6.86331e-06, 0.999999, -16.7847, -1.25047, 16.0283)
 progress = 252.038

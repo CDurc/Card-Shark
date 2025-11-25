@@ -619,7 +619,8 @@ func test_2_spell():
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(0,0,0))
-		straight_laser_spell()
+		#straight_laser_spell()
+		flush_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
@@ -975,6 +976,7 @@ func flush_spell():
 	flush.global_position = point.global_position
 	get_tree().current_scene.add_child(flush)
 	for i in range (0,5):
+		print(i)
 		flush.global_position = point.global_position
 		wave.emitting = true
 		white.emitting = true
@@ -986,7 +988,6 @@ func flush_spell():
 		pushbox.monitoring = false
 		pushbox.reset()
 		await get_tree().create_timer(1).timeout
-		print(i)
 	
 	right_hand_container.visible = false
 	set_cards()

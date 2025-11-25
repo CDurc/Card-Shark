@@ -9,7 +9,7 @@ extends CharacterBody3D
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/1d_money_drop.tscn")
-@onready var speed = avg_speed + randf_range(-1,1)
+@onready var speed = avg_speed + randf_range(-3,3)
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
