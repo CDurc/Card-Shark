@@ -1413,7 +1413,7 @@ func handle_controls(_delta): #Also handles sprint now
 			gravity = -jump_strength
 			jump_double = false
 			
-		if(jump_single): action_jump()
+		if(jump_single) and is_on_floor(): action_jump()
 		
 # Handle gravity
 
