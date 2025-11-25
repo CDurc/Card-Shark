@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2s16acnqpe4f"
-path.s3tc="res://.godot/imported/1240 Santos Pl_Siding-White.jpg-2df5b989839665d0ce44fcd515285388.s3tc.ctex"
+uid="uid://bxcnoxew238y6"
+path.s3tc="res://.godot/imported/University_cobblestone.jpg-5f328a664a7d959de143e835c1ec147c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
+"md5": "8cb2a4dab047a5c1b790e1acb1223732"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/1240 Santos Pl_Siding-White.jpg"
-dest_files=["res://.godot/imported/1240 Santos Pl_Siding-White.jpg-2df5b989839665d0ce44fcd515285388.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/University_cobblestone.jpg"
+dest_files=["res://.godot/imported/University_cobblestone.jpg-5f328a664a7d959de143e835c1ec147c.s3tc.ctex"]
 
 [params]
 

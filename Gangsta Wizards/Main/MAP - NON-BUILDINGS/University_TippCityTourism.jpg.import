@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq52iyw1adxd8"
-path.s3tc="res://.godot/imported/808 Hawk_Siding-White.jpg-1a2bf010dbd485ac9476218cc25e9855.s3tc.ctex"
+uid="uid://ivkne33agg6k"
+path.s3tc="res://.godot/imported/University_TippCityTourism.jpg-f20a06ec3e6ad10bacb95089a8fa015e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d32714a3ac235ee603fb47eaa6b4b1af"
+"md5": "f548f553024b48f3c8430f58c2557b09"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/808 Hawk_Siding-White.jpg"
-dest_files=["res://.godot/imported/808 Hawk_Siding-White.jpg-1a2bf010dbd485ac9476218cc25e9855.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/University_TippCityTourism.jpg"
+dest_files=["res://.godot/imported/University_TippCityTourism.jpg-f20a06ec3e6ad10bacb95089a8fa015e.s3tc.ctex"]
 
 [params]
 

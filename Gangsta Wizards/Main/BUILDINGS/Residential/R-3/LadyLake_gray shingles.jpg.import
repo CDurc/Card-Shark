@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch5dplkvtln2n"
-path.s3tc="res://.godot/imported/1240 Santos Pl_gray shingles.jpg-d1e2302d98ef8fa17a8e0abad873750c.s3tc.ctex"
+uid="uid://cr84fnrfmmkc0"
+path.s3tc="res://.godot/imported/LadyLake_gray shingles.jpg-71b00c3745e79d891210ac652f69f6d3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/1240 Santos Pl_gray shingles.jpg"
-dest_files=["res://.godot/imported/1240 Santos Pl_gray shingles.jpg-d1e2302d98ef8fa17a8e0abad873750c.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/LadyLake_gray shingles.jpg"
+dest_files=["res://.godot/imported/LadyLake_gray shingles.jpg-71b00c3745e79d891210ac652f69f6d3.s3tc.ctex"]
 
 [params]
 

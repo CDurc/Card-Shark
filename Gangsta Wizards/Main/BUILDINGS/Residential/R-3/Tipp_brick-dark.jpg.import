@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dys8ui6fdt413"
-path.s3tc="res://.godot/imported/1240 Santos Pl_grass.jpg-27a03f2d7fbe5a6b90a21ecc7a2d145e.s3tc.ctex"
+uid="uid://c8c5udc66h5uh"
+path.s3tc="res://.godot/imported/Tipp_brick-dark.jpg-3dae1d08f3ae1f6d46a3a7cb94943024.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "860b54557fdde542776d96f3ee70f363"
+"md5": "95e191ef097377b5ac55b403f642d566"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/1240 Santos Pl_grass.jpg"
-dest_files=["res://.godot/imported/1240 Santos Pl_grass.jpg-27a03f2d7fbe5a6b90a21ecc7a2d145e.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Tipp_brick-dark.jpg"
+dest_files=["res://.godot/imported/Tipp_brick-dark.jpg-3dae1d08f3ae1f6d46a3a7cb94943024.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cu1rxs56j8h8q"
-path="res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"
+uid="uid://b7osu6o8jya7w"
+path="res://.godot/imported/Neighborhood.glb-a74e17dfa5c3bcfae9de94e6bf25da0c.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/University.glb"
-dest_files=["res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"]
+source_file="res://MAP - NON-BUILDINGS/Neighborhood.glb"
+dest_files=["res://.godot/imported/Neighborhood.glb-a74e17dfa5c3bcfae9de94e6bf25da0c.scn"]
 
 [params]
 
@@ -33,18 +33,25 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fences": {
+"PATH:1 - PHYS/Bases": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
-},
-"PATH:1 - PHYS/Sign": {
+"PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stand": {
+"PATH:1 - PHYS/Neighborhood Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 }
 }

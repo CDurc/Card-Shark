@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clmpvkjfpxcrc"
-path.s3tc="res://.godot/imported/Island_Dirt.jpg-4e822901d283d75afd8cce372c0d4ae9.s3tc.ctex"
+uid="uid://c1d8mqsercvcm"
+path.s3tc="res://.godot/imported/Tipp_grass.jpg-0c5671f81b9dbf6efc67392c46a2da4c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "901fa1c0c293124c13d7725b5c0af0f0"
+"md5": "860b54557fdde542776d96f3ee70f363"
 }
 
 [deps]
 
-source_file="res://MAP/Island_Dirt.jpg"
-dest_files=["res://.godot/imported/Island_Dirt.jpg-4e822901d283d75afd8cce372c0d4ae9.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Tipp_grass.jpg"
+dest_files=["res://.godot/imported/Tipp_grass.jpg-0c5671f81b9dbf6efc67392c46a2da4c.s3tc.ctex"]
 
 [params]
 

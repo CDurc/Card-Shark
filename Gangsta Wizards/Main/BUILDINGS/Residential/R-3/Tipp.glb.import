@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dsnmbvxobn8wc"
-path="res://.godot/imported/1240 Santos Pl.glb-d7e2e705bd450418d40b5656aafa0039.scn"
+uid="uid://dywdn1d7dctag"
+path="res://.godot/imported/Tipp.glb-056c816f322605578dd4a5140fd3e470.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/1240 Santos Pl.glb"
-dest_files=["res://.godot/imported/1240 Santos Pl.glb-d7e2e705bd450418d40b5656aafa0039.scn"]
+source_file="res://BUILDINGS/Residential/R-3/Tipp.glb"
+dest_files=["res://.godot/imported/Tipp.glb-056c816f322605578dd4a5140fd3e470.scn"]
 
 [params]
 
@@ -30,22 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Ext Walls": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Floor": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Roof": {
-"generate/physics": true
-}
-}
-}
+import_script/path=""
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

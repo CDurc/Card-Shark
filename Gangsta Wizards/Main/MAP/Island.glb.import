@@ -33,12 +33,6 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Beach - Grass & Walkway": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Beach - Sand Ground": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Beach Caves Entrance": {
 "generate/physics": true
 },

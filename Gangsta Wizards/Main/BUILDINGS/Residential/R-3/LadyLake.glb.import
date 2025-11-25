@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cu1rxs56j8h8q"
-path="res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"
+uid="uid://bwpqv23iuenqk"
+path="res://.godot/imported/LadyLake.glb-0c8e534275f3e53996310b93a4cf43d2.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/University.glb"
-dest_files=["res://.godot/imported/University.glb-1ab4e326dffca1792fec5bcb481feabf.scn"]
+source_file="res://BUILDINGS/Residential/R-3/LadyLake.glb"
+dest_files=["res://.godot/imported/LadyLake.glb-0c8e534275f3e53996310b93a4cf43d2.scn"]
 
 [params]
 
@@ -30,24 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Fences": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true,
-"physics/layer": 11,
-"physics/mask": 11
-},
-"PATH:1 - PHYS/Sign": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Stand": {
-"generate/physics": true
-}
-}
-}
+import_script/path=""
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

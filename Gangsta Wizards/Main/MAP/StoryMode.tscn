@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=155 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://b3oj074q68tlj" path="res://BUILDINGS/Residential/R-3/123 Rainey Street.glb" id="14_fqp0g"]
 [ext_resource type="PackedScene" uid="uid://26t5ulpbxmhw" path="res://BUILDINGS/Residential/R-3/308 Negra Arroyo Lane.glb" id="15_g32oj"]
 [ext_resource type="PackedScene" uid="uid://qf4y382oka74" path="res://BUILDINGS/Residential/R-3/742 Evergreen Terrace.glb" id="16_aqix1"]
-[ext_resource type="PackedScene" uid="uid://b1mdnpk26v2xn" path="res://BUILDINGS/Residential/R-3/808 Hawk.glb" id="17_2fqcd"]
 [ext_resource type="PackedScene" uid="uid://bbslyfkj8do" path="res://BUILDINGS/Residential/R-3/Wizard Tower.glb" id="18_b8ggr"]
 [ext_resource type="PackedScene" uid="uid://bkavxoa6utrfa" path="res://BUILDINGS/Utility and Misc/Construction Skyscraper.glb" id="19_fq4q7"]
 [ext_resource type="PackedScene" uid="uid://8ac237yn4d36" path="res://BUILDINGS/Utility and Misc/Garbage.glb" id="20_mu2ki"]
@@ -105,7 +104,6 @@
 [ext_resource type="PackedScene" uid="uid://brvpxrtg4httd" path="res://BUILDINGS/Assembly/A-2/The Shark House.glb" id="103_cnuk1"]
 [ext_resource type="PackedScene" uid="uid://cykkxa10kdo7d" path="res://VEHICLES/Cybertruck.glb" id="103_g16e2"]
 [ext_resource type="PackedScene" uid="uid://bcv70plmt6r6k" path="res://BUILDINGS/Residential/R-3/Glass House.glb" id="104_rf22a"]
-[ext_resource type="PackedScene" uid="uid://dsnmbvxobn8wc" path="res://BUILDINGS/Residential/R-3/1240 Santos Pl.glb" id="105_ecv4c"]
 [ext_resource type="PackedScene" uid="uid://vq54bklv8wxk" path="res://BUILDINGS/Mixed Use/Mall.glb" id="105_vg2dd"]
 [ext_resource type="PackedScene" uid="uid://crprf1ptriqg3" path="res://MAP - NON-BUILDINGS/Gourdtown City Square.glb" id="106_gbbn8"]
 [ext_resource type="PackedScene" uid="uid://d1as7ncd4q0ba" path="res://BUILDINGS/Assembly/A-2/Seedy Bar.glb" id="107_t5brg"]
@@ -132,6 +130,7 @@
 [ext_resource type="PackedScene" uid="uid://luk8wjhkpvui" path="res://BUILDINGS/Utility and Misc/Lighthouse.glb" id="137_oc06b"]
 [ext_resource type="PackedScene" uid="uid://cuieys6omvct6" path="res://MAP - NON-BUILDINGS/Beach.glb" id="138_yjoxc"]
 [ext_resource type="PackedScene" uid="uid://c84dpu61ogdmr" path="res://MAP - NON-BUILDINGS/Signs Linked.glb" id="139_lpdoe"]
+[ext_resource type="PackedScene" uid="uid://b7osu6o8jya7w" path="res://MAP - NON-BUILDINGS/Neighborhood.glb" id="139_satoe"]
 [ext_resource type="PackedScene" uid="uid://sxuic48dj761" path="res://BUILDINGS/Business/Astro Building.glb" id="140_0aabl"]
 [ext_resource type="PackedScene" uid="uid://cbqxwjlqgplpj" path="res://MAP - NON-BUILDINGS/Transmission Tower.glb" id="141_f6iop"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
@@ -274,9 +273,6 @@ transform = Transform3D(-0.669792, 0, -0.742549, 0, 1, 0, 0.742549, 0, -0.669792
 
 [node name="742 Evergreen Terrace" parent="MAP" instance=ExtResource("16_aqix1")]
 transform = Transform3D(-0.67088, 0, -0.741566, 0, 1, 0, 0.741566, 0, -0.67088, -217.885, 33.5546, -181.419)
-
-[node name="808 Hawk" parent="MAP" instance=ExtResource("17_2fqcd")]
-transform = Transform3D(0.958566, 0, 0.284869, 0, 1, 0, -0.284869, 0, 0.958566, -232.697, 33.2529, -182.462)
 
 [node name="Wizard Tower" parent="MAP" instance=ExtResource("18_b8ggr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56948, 32.9211, 140.892)
@@ -456,7 +452,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -184.095, 32.9644, 47.7465)
 transform = Transform3D(-0.999688, 0, 0.0249731, 0, 1, 0, -0.0249731, 0, -0.999688, -80.0032, 35.2336, 168.029)
 
 [node name="College" parent="MAP" instance=ExtResource("77_xpd07")]
-transform = Transform3D(0.989706, 0, 0.143113, 0, 1, 0, -0.143113, 0, 0.989706, 94.8054, 32.8505, 221.844)
+transform = Transform3D(0.999974, 0, -0.00710299, 0, 1, 0, 0.00710299, 0, 0.999974, 87.3384, 32.7108, 231.643)
 
 [node name="K-12 School" parent="MAP" instance=ExtResource("78_87k4x")]
 transform = Transform3D(-0.836028, 0, -0.548687, 0, 1, 0, 0.548687, 0, -0.836028, -44.6217, 35.1553, 175.513)
@@ -526,9 +522,6 @@ transform = Transform3D(-0.604349, 0, -0.79672, 0, 1, 0, 0.79672, 0, -0.604349, 
 
 [node name="Glass House" parent="MAP" instance=ExtResource("104_rf22a")]
 transform = Transform3D(0.134712, 0, -0.990885, 0, 1, 0, 0.990885, 0, 0.134712, -158.083, 32.9549, -174.833)
-
-[node name="1240 Santos Pl" parent="MAP" instance=ExtResource("105_ecv4c")]
-transform = Transform3D(0.106177, 0, -0.994347, 0, 1, 0, 0.994347, 0, 0.106177, -178.598, 34.6514, -170.371)
 
 [node name="Financial Building2" parent="MAP" instance=ExtResource("83_rio7a")]
 transform = Transform3D(0.857113, 0, 0.515128, 0, 1, 0, -0.515128, 0, 0.857113, -165.305, 32.9537, -27.4522)
@@ -726,6 +719,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.439, -0.0842438, 182.929
 
 [node name="Astro Building" parent="MAP" instance=ExtResource("140_0aabl")]
 transform = Transform3D(0.950835, 0, 0.309697, 0, 1, 0, -0.309697, 0, 0.950835, -126.878, 33.2352, -124.952)
+
+[node name="Neighborhood" parent="MAP" instance=ExtResource("139_satoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.125, 32.209, 183.716)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -96.9883, 44.4519, -305.738)
