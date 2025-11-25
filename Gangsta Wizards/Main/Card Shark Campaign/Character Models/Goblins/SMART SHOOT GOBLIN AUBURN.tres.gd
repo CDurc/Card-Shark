@@ -89,7 +89,7 @@ func _physics_process(delta: float) -> void:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
 			#l_anime.play("Walking") NOTE
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 20 and not attacking:
+		if (target.global_transform.origin - global_transform.origin).length() < 35 and not attacking:
 			attacking = true
 			shoot()
 

@@ -1,7 +1,7 @@
 extends Area3D
 
-@export var damage = 27
-@export var force = 8.5
+@export var damage = 33
+@export var force = 10
 
 var player
 var collider
@@ -41,7 +41,7 @@ func reset():
 	damaged_bodies = {}
 
 func push(body: CharacterBody3D) -> void:
-	if body.knockback_v:
+	if body.get("knockback_v") != null:
 		var dir: Vector3 = body.global_position - global_position
 		dir.y = 0
 		if dir.length_squared() == 0:

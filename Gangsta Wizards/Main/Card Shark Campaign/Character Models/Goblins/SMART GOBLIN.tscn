@@ -20,7 +20,7 @@ height = 1.54634
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 script = ExtResource("1_vufae")
-avg_speed = 5.0
+avg_speed = 4.0
 health = 100
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
@@ -63,6 +63,7 @@ transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330
 transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
 
 [node name="Control" type="Control" parent="." groups=["Healthbars"]]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
