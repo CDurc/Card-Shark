@@ -3124,6 +3124,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_wnck4")
 
+[node name="Hbar_Expire" type="Timer" parent="goblin_6/Control"]
+wait_time = 8.0
+one_shot = true
+
 [node name="Healthbar" type="ColorRect" parent="goblin_6/Control"]
 layout_mode = 1
 anchors_preset = -1
@@ -3149,4 +3153,5 @@ damage = 20
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.940891, 0.676605)
 shape = SubResource("CapsuleShape3D_hcfsc")
 
+[connection signal="timeout" from="goblin_6/Control/Hbar_Expire" to="goblin_6" method="_on_hbar_expire_timeout"]
 [connection signal="body_entered" from="goblin_6/Attackbox" to="goblin_6/Attackbox" method="_on_body_entered"]

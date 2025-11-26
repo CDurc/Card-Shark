@@ -365,7 +365,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.43094, -7.88256, -45.6681)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69271, -7.88256, -45.6681)
 
 [node name="RoundTimer" type="Timer" parent="Spawns"]
-wait_time = 25.0
+wait_time = 35.0
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Spawns/RoundTimer"]
@@ -469,11 +469,11 @@ progress = 68.8906
 curve = SubResource("Curve3D_ppwji")
 
 [node name="FlyGuy" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.843361, 0.532961, 0.0685093, -0.53329, 0.845799, -0.0149485, -0.0659124, -0.0239284, 0.997535, 18.1505, 0.318729, -24.6773)
+transform = Transform3D(0.843361, 0.532961, 0.068509, -0.53329, 0.845799, -0.0149484, -0.0659124, -0.0239284, 0.997531, 18.1505, 0.318729, -24.6773)
 progress = 41.0162
 
 [node name="FlyGuy2" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.512719, 0.775228, 0.368966, -0.83197, 0.554735, -0.00942492, -0.211985, -0.302138, 0.929392, 14.9595, 0.492112, -38.4581)
+transform = Transform3D(0.512717, 0.775228, 0.368966, -0.831967, 0.554735, -0.00942492, -0.211984, -0.302138, 0.929392, 14.9595, 0.492112, -38.4581)
 progress = 58.1265
 
 [node name="FlyGuy3" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
@@ -481,18 +481,18 @@ transform = Transform3D(-0.983333, -0.100825, -0.151287, -0.150138, 0.919619, 0.
 progress = 119.773
 
 [node name="FlyGuy4" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.00419818, 0.18451, -0.98282, -0.998791, -0.0473262, -0.0131513, -0.04894, 0.981685, 0.184089, 5.45097, -16.6793, -29.4421)
+transform = Transform3D(0.00419818, 0.184509, -0.98282, -0.998791, -0.0473261, -0.0131513, -0.04894, 0.981682, 0.184089, 5.45097, -16.6793, -29.4421)
 progress = 178.847
 
 [node name="P3" type="Path3D" parent="FlyRails"]
 curve = SubResource("Curve3D_pl7ux")
 
 [node name="FlyGuy" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.971328, 0.234512, -0.0390473, -0.235232, 0.971823, -0.0149387, 0.0344439, 0.0236956, 0.999123, 31.595, -16.6198, -31.933)
+transform = Transform3D(0.971328, 0.234512, -0.0390472, -0.235232, 0.971823, -0.0149387, 0.0344439, 0.0236956, 0.999121, 31.595, -16.6198, -31.933)
 progress = 60.9021
 
 [node name="FlyGuy2" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.0403976, 0.0663964, 0.996973, -0.0184583, 0.997667, -0.0656946, -0.999011, -0.0157485, 0.041529, -6.14515, -12.5661, -49.3901)
+transform = Transform3D(0.0403975, 0.0663963, 0.996971, -0.0184582, 0.997665, -0.0656945, -0.999009, -0.0157485, 0.0415289, -6.14515, -12.5661, -49.3901)
 progress = 108.267
 
 [node name="FlyGuy3" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]

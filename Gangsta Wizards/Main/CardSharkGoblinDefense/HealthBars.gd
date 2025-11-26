@@ -7,6 +7,8 @@ extends Control
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var camera = player.get_node("Head/Camera")
 
+var can_appear = true
+
 func _process(_delta):
 	var world_pos = target.global_transform.origin + Vector3.UP * 1.5
 	var screen_pos = camera.unproject_position(world_pos)

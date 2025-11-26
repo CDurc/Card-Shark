@@ -9,6 +9,8 @@ extends CharacterBody3D
 @onready var target: Node3D = get_node(target_path) if target_path else null #if no target path, Ready() will find player
 @onready var nav_agent:	NavigationAgent3D = $NavigationAgent3D
 @onready var healthbar = $Control/Healthbar/Helth
+@onready var healthbar_control = $Control
+@onready var healthbar_timer = $Control/Hbar_Expire
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
 @onready var bullet_spawn = self.get_node("spawn")
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/10d_money_drop.tscn")
@@ -185,7 +187,11 @@ func damage(amount):
 	var G_color = health_ratio
 	healthbar.color = Color(R_color,G_color,0)
 	healthbar.scale.x = health_ratio
-	print(health_ratio)
+	
+	if healthbar_control.can_appear:
+		healthbar_control.visible = true
+		healthbar_timer.start()
+
 	
 	if health <= 0 and not destroyed:
 		destroy()
@@ -239,4 +245,5 @@ func drop_money():
 	money.global_position = self.global_position
 	get_tree().root.add_child(money)
 	
-	
+func _on_hbar_expire_timeout() -> void:
+	healthbar_control.visible = false

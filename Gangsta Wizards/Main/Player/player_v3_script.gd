@@ -1517,7 +1517,9 @@ func damage(amount):
 
 func toggle_healthbar(vis: bool):
 	for bar in get_tree().get_nodes_in_group("Healthbars"):
-		bar.visible = vis
+		bar.can_appear = vis
+		if vis == false:
+			bar.visible = vis
 
 @onready var int_prompt = get_node("HUD/Interact")
 func get_interact():

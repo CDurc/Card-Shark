@@ -83,6 +83,7 @@ draw_pass_1 = SubResource("SphereMesh_os5nt")
 [node name="Pushbox" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
 script = ExtResource("4_yjfuc")
+force = 12
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pushbox"]
 shape = SubResource("CylinderShape3D_jndmg")

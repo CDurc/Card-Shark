@@ -23,31 +23,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790327, 0.158742)
 visible = false
 shape = SubResource("SphereShape3D_ifq5y")
 
-[node name="Control" type="Control" parent="." groups=["Healthbars"]]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("5_mjpba")
-
-[node name="Healthbar" type="ColorRect" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.075
-anchor_bottom = 0.02
-color = Color(0, 0, 0, 1)
-
-[node name="Helth" type="ColorRect" parent="Control/Healthbar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.15
-anchor_right = 0.975
-anchor_bottom = 0.85
-color = Color(0, 1, 0, 1)
-
 [node name="goblin" parent="." instance=ExtResource("3_kq6m3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
@@ -117,6 +92,37 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0339747, -1.03177, 0.24383)
 shape = SubResource("SphereShape3D_dhlpo")
 
+[node name="Control" type="Control" parent="." groups=["Healthbars"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_mjpba")
+
+[node name="Hbar_Expire" type="Timer" parent="Control"]
+wait_time = 8.0
+one_shot = true
+
+[node name="Healthbar" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.02
+color = Color(0, 0, 0, 1)
+
+[node name="Helth" type="ColorRect" parent="Control/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15
+anchor_right = 0.975
+anchor_bottom = 0.85
+color = Color(0, 1, 0, 1)
+
 [connection signal="body_entered" from="Attackbox" to="Attackbox" method="_on_body_entered"]
+[connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_hbar_expire_timeout"]
 
 [editable path="goblin"]

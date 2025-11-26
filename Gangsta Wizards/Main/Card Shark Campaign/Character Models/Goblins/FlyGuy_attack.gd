@@ -1,3 +1,4 @@
+#FLY GUY
 extends CharacterBody3D
 
 @export var health :int
@@ -10,6 +11,8 @@ extends CharacterBody3D
 @onready var mesh_flying_rot = mesh_attacking_rot + Vector3(90,0,0)
 @onready var anime = $AnimationPlayer
 @onready var healthbar = $Control/Healthbar/Helth
+@onready var healthbar_control = $Control
+@onready var healthbar_timer = $Control/Hbar_Expire
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/5d_money_drop.tscn")
 
 var dist: float = 1000
@@ -108,8 +111,14 @@ func damage(amount):
 	print(health_ratio)
 	if health <= 0 and not destroyed:
 		destroy()
+	if healthbar_control.can_appear:
+		healthbar_control.visible = true
+		healthbar_timer.start()
 
 func drop_money():
 	var money = money_drop.instantiate()
 	money.global_position = self.global_position
 	get_tree().root.add_child(money)
+
+func _on_hbar_expire_timeout() -> void:
+	healthbar_control.visible = false

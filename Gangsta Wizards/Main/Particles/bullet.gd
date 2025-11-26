@@ -24,12 +24,15 @@ func _on_area_entered(area: Area3D) -> void:
 		return
 	hit = true
 	
-	print("AREA DETECTED")
-	if area.is_in_group("Headshot"):
-		area.get_parent().damage(damage_amount * HS_mult)
-		print("HEADSHOT")
-		queue_free()
-	elif area.is_in_group("Bodyshot"):
-		area.get_parent().damage(damage_amount)
-		print("BODYSHOT")
+	if area.get_parent().is_in_group(target_group):
+	
+		if area.is_in_group("Headshot"):
+			area.get_parent().damage(damage_amount * HS_mult)
+			print("HEADSHOT")
+			queue_free()
+		elif area.is_in_group("Bodyshot"):
+			area.get_parent().damage(damage_amount)
+			print("BODYSHOT")
+			queue_free()
+	else:
 		queue_free()
