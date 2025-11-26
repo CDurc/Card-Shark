@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clak6o7aikpik"
-path.s3tc="res://.godot/imported/2 out of 5 Studios_Dirt.jpg-e674fbb0ad07a7df826625736241ba17.s3tc.ctex"
+uid="uid://6tdiv2tr4v2g"
+path.s3tc="res://.godot/imported/2 out of 5 Studios_Gray Metal Siding.jpg-525f5bfa43786d1a36a216a3f7a4bfbe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
+"md5": "cd988547e7b7b35e2b2829ced5fc7628"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/2 out of 5 Studios_Dirt.jpg"
-dest_files=["res://.godot/imported/2 out of 5 Studios_Dirt.jpg-e674fbb0ad07a7df826625736241ba17.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/2 out of 5 Studios_Gray Metal Siding.jpg"
+dest_files=["res://.godot/imported/2 out of 5 Studios_Gray Metal Siding.jpg-525f5bfa43786d1a36a216a3f7a4bfbe.s3tc.ctex"]
 
 [params]
 

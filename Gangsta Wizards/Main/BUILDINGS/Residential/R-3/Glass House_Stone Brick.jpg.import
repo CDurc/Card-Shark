@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clak6o7aikpik"
-path.s3tc="res://.godot/imported/2 out of 5 Studios_Dirt.jpg-e674fbb0ad07a7df826625736241ba17.s3tc.ctex"
+uid="uid://dhg0fvuylrr58"
+path.s3tc="res://.godot/imported/Glass House_Stone Brick.jpg-c2273ef7ae05832d097ce25374d0533f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
+"md5": "ca357c21a6ca4ced44402c18d86a7dcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/2 out of 5 Studios_Dirt.jpg"
-dest_files=["res://.godot/imported/2 out of 5 Studios_Dirt.jpg-e674fbb0ad07a7df826625736241ba17.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Glass House_Stone Brick.jpg"
+dest_files=["res://.godot/imported/Glass House_Stone Brick.jpg-c2273ef7ae05832d097ce25374d0533f.s3tc.ctex"]
 
 [params]
 
