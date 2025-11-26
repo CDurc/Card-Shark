@@ -2,11 +2,13 @@ extends Button
 
 @onready var pause_menu = $"../.."
 @onready var chip = $Chip
+@onready var crosshair = $"../../../Crosshair"
 
 func _on_pressed() -> void:
 	print("RESUME GAMBLING LETS GOOOOOOOOOOOOOO")
 	get_tree().paused = false
 	pause_menu.visible = false
+	crosshair.visible = true
 
 
 

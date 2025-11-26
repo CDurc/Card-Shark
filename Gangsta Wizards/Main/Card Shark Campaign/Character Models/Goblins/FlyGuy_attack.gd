@@ -20,6 +20,7 @@ var attacking = false
 var looking = false
 var can_attack = true
 var destroyed = false
+var can_move = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -39,6 +40,7 @@ func _process(delta: float) -> void:
 		look_at(player.global_position)
 
 func attack():
+	if not can_move: return
 	looking = true
 	var tween = create_tween()
 	tween.tween_property(mesh, "rotation_degrees", mesh_attacking_rot, 1.0)

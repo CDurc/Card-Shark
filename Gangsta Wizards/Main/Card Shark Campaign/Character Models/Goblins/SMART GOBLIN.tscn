@@ -20,7 +20,7 @@ height = 1.54634
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
 script = ExtResource("1_vufae")
-avg_speed = 4.0
+avg_speed = 5.0
 health = 100
 
 [node name="Body collider" type="CollisionShape3D" parent="."]

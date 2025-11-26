@@ -102,6 +102,9 @@ _subresources={
 "PATH:1 - PHYS/Frame": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Gobby Tunnels": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lava Lamp": {
 "generate/physics": true
 },

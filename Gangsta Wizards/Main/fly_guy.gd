@@ -3,6 +3,7 @@ extends PathFollow3D
 @export var mps: float
 
 @onready var anime: AnimationPlayer = $goblin_6/AnimationPlayer
+@onready var gob = $goblin_6
 
 var flying = true
 var mod_speed: int
@@ -14,7 +15,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if flying:
+	if flying and gob.can_move:
 		progress += mod_speed * delta
 
 

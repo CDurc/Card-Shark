@@ -136,6 +136,7 @@ signal health_updated
 @onready var chipbar = $HUD/Chipbar
 @onready var ammo_counter = $HUD/Bottombar/Ammo_icon/Ammo
 @onready var pause_menu = $HUD/PauseMenu
+@onready var death_menu = $HUD/DeathMenu
 
 @onready var flat_cam_goal = $Head/Flatcam_point
 @onready var Player_glb = $TheCardShark2
@@ -404,9 +405,10 @@ func discard():
 				var card = right_hand_container.get_node("Card").get_node("C%d" % i)
 				var t_node = right_hand_container.get_node("Card").get_node("P%d" % i)
 				card.transform = t_node.transform
+			RA_anime.play("Shuffle")
 			set_cards() #Pick cards from deck
 			load_set_cards() #Load the textures
-			await get_tree().create_timer(0.2).timeout #Ensure it goes visible again after everything is ready
+			await get_tree().create_timer(0.4).timeout #Ensure it goes visible again after everything is ready
 			right_hand_container.visible = true
 		else:
 			print("auto shuffle")
@@ -414,7 +416,7 @@ func discard():
 
 func shuffle_deck():
 	if !magic_cooldown.is_stopped(): return
-	magic_cooldown.start(16)
+	magic_cooldown.start(14)
 	
 	var t = 0 #Controls rate of card changes while spinning
 	var change_delay = 0 #Controls delay until cards begin changing
@@ -426,8 +428,8 @@ func shuffle_deck():
 	var shuffle_node = cards_in_hand.get_node("Shuffles")
 	
 	combine_cards()
-	await get_tree().create_timer(0.5).timeout
-	RA_anime.play("Discard")
+	RA_anime.play("Shuffle")
+	#await get_tree().create_timer(0.5).timeout
 	
 	
 	var C1 = HUD.get_node("C1")
@@ -440,7 +442,7 @@ func shuffle_deck():
 	tween2.tween_property(C2, "position", Vector2(C2.position.x + 250, C2.position.y), 0.7)
 	
 	
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(0.5).timeout
 	for i in range (0,5):
 		cards_in_hand.get_node("C%d" % (i+1)).visible = false
 	cards_in_hand.get_node("Shuffles").visible = true
@@ -499,7 +501,7 @@ func shuffle_deck():
 	tween_r2.tween_property(C2, "position", Vector2(C2.position.x - 250, C2.position.y), 0.7)
 	
 	await get_tree().create_timer(0.75).timeout
-	RA_anime.play("Discard")
+	RA_anime.play("Shuffle")
 	await get_tree().create_timer(1).timeout
 	for i in range (0,5): #Make hand visible and cards in correct places
 		var card = cards_in_hand.get_node("C%d" % (i+1))
@@ -611,6 +613,8 @@ func pause_game():
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = !get_tree().paused #flip the boolean
 		pause_menu.visible = get_tree().paused #match menu UI to pause state
+		cursor.visible = !get_tree().paused
+		print("!!!!!!!")
 
 	#SHORTCUT SPELL 2 SPELL2
 
@@ -620,7 +624,8 @@ func test_2_spell():
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(0,0,0))
 		#straight_laser_spell()
-		flush_spell()
+		#flush_spell()
+		basking_house_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
@@ -1505,12 +1510,17 @@ func damage(amount):
 	else:
 		print("player is invulnerable, cant be dmged")
 
-	
-	
-	if health < 0:
+
+
+	if health <= 0:
 		trigger_ragdoll(Vector3(0,0,0))
 		$HUD/BUST.visible = true
 		$HUD/Crosshair.visible = false
+		await get_tree().create_timer(4).timeout
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		$HUD/BUST.visible = false
+		get_tree().paused = true
+		death_menu.visible = get_tree().paused #match menu UI to pause state
 		
 		#get_tree().reload_current_scene() # Reset when out of health
 		
