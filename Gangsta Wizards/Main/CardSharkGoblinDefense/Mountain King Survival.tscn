@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=17 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
@@ -46,26 +46,11 @@ height = 1.20077
 radius = 0.121772
 height = 0.445561
 
-[sub_resource type="Curve3D" id="Curve3D_f8nrl"]
+[sub_resource type="Curve3D" id="Curve3D_4a4gl"]
+bake_interval = 19.0
 _data = {
-"points": PackedVector3Array(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 9.32252, 0, -1.43549, 0, 0, 0, 0, 0, 0, 14.3475, 0, -6.9679, 8, 0, 0, 0, 0, 0, 15.3901, 0, -23.1909, 0, 0, -5, 0, 0, 0, -1.93389, 0, -20.5759, 5, 0, 0, -3, 0, 0, -10.4538, 0, -8.61991, -5, 0, 0, 0, 0, 0, -10.454, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 8
-
-[sub_resource type="Curve3D" id="Curve3D_ppwji"]
-bake_interval = 16.72
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19.6112, 0, -3.40797, 0, 0, 0, 0, 0, 0, 17.2188, 0.522012, -38.2427, 0, 0, 0, 0, 0, 0, -16.0316, 0, -36.2895, 0, 0, 0, 0, 0, 0, -16.035, -3.39363, -9.61792, 0, 0, 0, 0, 0, 0, -10.6037, -13.2335, -1.65205, 0, 0, 0, 0, 0, 0, -4.45267, -16.6014, -1.56996, 0, 0, 0, 0, 0, 0, -3.38181, -17.1683, -7.16607, 0, 0, 0, 0, 0, 0, -12.5081, -17.0261, -21.8897, 0, 0, 0, 0, 0, 0, -4.49576, -16.5385, -28.6708, 0, 0, 0, 0, 0, 0, 8.37595, -16.5399, -28.6714, 0, 0, 0, 0, 0, 0, 12.9301, -14.411, -20.3177, 0, 0, 0, 0, 0, 0, -0.295641, -10.2221, -4.84983, 0, 0, 0, 0, 0, 0, -5.53987, -1.05603, 15.2651, 0, 0, 0, 0, 0, 0, -16.3515, -0.979235, 7.51917, 0, 0, 0, 0, 0, 0, -12.887, 0, -0.768, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 17
-
-[sub_resource type="Curve3D" id="Curve3D_pl7ux"]
-bake_interval = 16.72
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10.728, -8.95893, 0, 0, 0, 0, 0, 0, 0, 20.8979, -17.4395, -3.16805, 0, 0, 0, 0, 0, 0, 29.7578, -17.0208, -8.37061, 0, 0, 0, 0, 0, 0, 30.7819, -16.629, -34.5748, 0, 0, 0, 0, 0, 0, 17.8418, -17.2501, -39.7056, 0, 0, 0, 0, 0, 0, 14.5598, -15.6296, -47.9394, 0, 0, 0, 0, 0, 0, -0.226984, -11.1253, -49.0186, 0, 0, 0, 0, 0, 0, -15.3977, -16.7034, -48.7873, 0, 0, 0, 0, 0, 0, -16.3883, -17.0913, -39.7498, 0, 0, 0, 0, 0, 0, -31.5005, -17.6625, -35.1243, 0, 0, 0, 0, 0, 0, -30.9743, -17.4677, -6.83997, 0, 0, 0, 0, 0, 0, -9.06066, -15.5967, -0.536319, 0, 0, 0, 0, 0, 0, -1.23302, -10.7944, 11.824, 0, 0, 0, 0, 0, 0, -0.417022, -2.55594, 21.4758, 0, 0, 0, 0, 0, 0, -4.71849, -2.17826, 27.5873, 0, 0, 0, 0, 0, 0, -16.7801, -1.24985, 25.3847, 0, 0, 0, 0, 0, 0, -16.7797, -1.25036, 7.29928, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.15133, 0, -6, 0, 0, 0, 0, 0, 0, 22.6665, 2.58014, -6.07626, 0, 0, 0, 0, 0, 0, 24.5924, -1.28192, -0.00600292, 0, 0, 0, 0, 0, 0, 24.756, -0.363742, 6.77897, 0, 0, 0, 0, 0, 0, 27.6875, -2.25285, 13.0598, 0, 0, 0, 0, 0, 0, 33.7831, -1.26146, 19.3, 0, 0, 0, 0, 0, 0, 50.853, -2.90187, 8.13789, 0, 0, 0, 0, 0, 0, 55.8164, -1.0159, 14.311, 0, 0, 0, 0, 0, 0, 48.4185, -0.135524, 20.955, 0, 0, 0, 0, 0, 0, 42.7966, -4.37376, 27.1145, 0, 0, 0, 0, 0, 0, 42.3637, -7.97116, 23.6206, 0, 0, 0, 0, 0, 0, 44.1035, -15.7585, 14.6819, 0, 0, 0, 0, 0, 0, 55.5824, -14.8348, -0.995707, 0, 0, 0, 0, 0, 0, 44.2084, -7.93643, -15.3272, 0, 0, 0, 0, 0, 0, 46.721, -1.95881, -20.8591, 0, 0, 0, 0, 0, 0, 62.0119, 2.59442, -22.4719, 0, 0, 0, 0, 0, 0, 79.4239, 2.98024, -21.4706, 0, 0, 0, 0, 0, 0, 82.8301, 3.55613, -10.2659),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.3, 1.3, 1.35, 0, 0, 1.25, 0, 0)
 }
 point_count = 19
 
@@ -445,60 +430,10 @@ transform = Transform3D(0.102289, 0.81942, 0.563993, -0.994755, 0.0842597, 0.057
 shape = SubResource("CapsuleShape3D_6h8ms")
 
 [node name="FlyRails" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.9325, 5.60434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.4247, 29.9325, -0.588296)
 
-[node name="P1" type="Path3D" parent="FlyRails"]
-curve = SubResource("Curve3D_f8nrl")
+[node name="Path3D" type="Path3D" parent="FlyRails"]
+curve = SubResource("Curve3D_4a4gl")
 
-[node name="FlyGuy" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="FlyGuy2" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.163294, 0, -0.986575, 0, 1, 0, 0.986575, 0, 0.163294, 6.17656, 0, -0.904941)
-progress = 6.24682
-
-[node name="FlyGuy3" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.493857, 0, 0.869541, 0, 1, 0, -0.869541, 0, 0.493857, 17.2479, 0, -22.77)
-progress = 34.2374
-
-[node name="FlyGuy4" parent="FlyRails/P1" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.383735, 0, 0.923442, 0, 1, 0, -0.923442, 0, -0.383735, -9.13963, 0, -8.89368)
-progress = 68.8906
-
-[node name="P2" type="Path3D" parent="FlyRails"]
-curve = SubResource("Curve3D_ppwji")
-
-[node name="FlyGuy" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.843361, 0.532961, 0.0685085, -0.53329, 0.845799, -0.0149483, -0.0659124, -0.0239284, 0.997524, 18.1505, 0.318729, -24.6773)
-progress = 41.0162
-
-[node name="FlyGuy2" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.512713, 0.775228, 0.368966, -0.831961, 0.554735, -0.00942493, -0.211983, -0.302138, 0.929392, 14.9595, 0.492112, -38.4581)
-progress = 58.1265
-
-[node name="FlyGuy3" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.983333, -0.100825, -0.151287, -0.150138, 0.919619, 0.362984, 0.102528, 0.379649, -0.91943, -14.5929, -6.43489, -6.16759)
-progress = 119.773
-
-[node name="FlyGuy4" parent="FlyRails/P2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.00419818, 0.184508, -0.98282, -0.998791, -0.0473257, -0.0131513, -0.04894, 0.981674, 0.184089, 5.45097, -16.6793, -29.4421)
-progress = 178.847
-
-[node name="P3" type="Path3D" parent="FlyRails"]
-curve = SubResource("Curve3D_pl7ux")
-
-[node name="FlyGuy" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.971328, 0.234512, -0.039047, -0.235232, 0.971823, -0.0149386, 0.0344439, 0.0236956, 0.999116, 31.595, -16.6198, -31.933)
-progress = 60.9021
-
-[node name="FlyGuy2" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.0403973, 0.0663959, 0.996965, -0.0184581, 0.99766, -0.0656941, -0.999004, -0.0157484, 0.0415287, -6.14515, -12.5661, -49.3901)
-progress = 108.267
-
-[node name="FlyGuy3" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.244188, -0.151567, -0.957808, -0.274009, 0.958243, -0.0817782, 0.930209, 0.24248, -0.275522, -19.0201, -16.4623, -3.43847)
-progress = 184.381
-
-[node name="FlyGuy4" parent="FlyRails/P3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.455719, 0.890122, -2.21473e-05, -0.890122, 0.455719, 2.81982e-05, 3.51928e-05, 6.86331e-06, 0.999999, -16.7847, -1.25047, 16.0283)
-progress = 252.038
+[node name="FlyGuy" parent="FlyRails/Path3D" instance=ExtResource("10_qhabr")]
+transform = Transform3D(0.941319, 0, -0.337515, 0, 0.999999, 0, 0.337514, 0, 0.941319, 0, 0, 0)
