@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bix057ykx80ne"
-path.s3tc="res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"
+uid="uid://0se2sxxnn6hd"
+path.s3tc="res://.godot/imported/Hiding Place_Dirt.jpg-276d5761b7be39cd1b9540a626666933.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7d523a186494d1218dc8eb6e780630ab"
+"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Chinaville_Grass-Light.jpg"
-dest_files=["res://.godot/imported/Chinaville_Grass-Light.jpg-003e4390a5d2e1284820e92b803b9b6c.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Hiding Place_Dirt.jpg"
+dest_files=["res://.godot/imported/Hiding Place_Dirt.jpg-276d5761b7be39cd1b9540a626666933.s3tc.ctex"]
 
 [params]
 

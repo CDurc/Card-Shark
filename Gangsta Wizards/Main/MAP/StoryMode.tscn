@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=161 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -137,6 +137,8 @@
 [ext_resource type="PackedScene" uid="uid://b7osu6o8jya7w" path="res://MAP - NON-BUILDINGS/Neighborhood.glb" id="139_satoe"]
 [ext_resource type="PackedScene" uid="uid://sxuic48dj761" path="res://BUILDINGS/Business/Astro Building.glb" id="140_0aabl"]
 [ext_resource type="PackedScene" uid="uid://cbqxwjlqgplpj" path="res://MAP - NON-BUILDINGS/Transmission Tower.glb" id="141_f6iop"]
+[ext_resource type="PackedScene" uid="uid://7qhvl4d07pjt" path="res://MAP - NON-BUILDINGS/Big Tree Area.glb" id="144_kprpg"]
+[ext_resource type="PackedScene" uid="uid://cy85r304h02hx" path="res://MAP - NON-BUILDINGS/Hiding Place.glb" id="145_2y1o6"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
 [ext_resource type="PackedScene" uid="uid://bowjekmxrtna2" path="res://DOORS/Openable Light Brown Metal Door.tscn" id="148_irqwt"]
 [ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
@@ -276,10 +278,10 @@ transform = Transform3D(0.658033, 0, 0.752989, 0, 1, 0, -0.752989, 0, 0.658033, 
 transform = Transform3D(-0.669792, 0, -0.742549, 0, 1, 0, 0.742549, 0, -0.669792, -201.471, 32.7461, -209.439)
 
 [node name="742 Evergreen Terrace" parent="MAP" instance=ExtResource("16_aqix1")]
-transform = Transform3D(-0.67088, 0, -0.741566, 0, 1, 0, 0.741566, 0, -0.67088, -217.885, 33.1079, -181.419)
+transform = Transform3D(-0.583584, 0, -0.812053, 0, 1, 0, 0.812053, 0, -0.583584, -141.773, 33.1079, -205.62)
 
 [node name="Wizard Tower" parent="MAP" instance=ExtResource("18_b8ggr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56948, 32.9211, 140.892)
+transform = Transform3D(0.228827, 0, -0.973467, 0, 1, 0, 0.973467, 0, 0.228827, -4.56948, 32.9211, 140.892)
 
 [node name="Construction Skyscraper" parent="MAP" instance=ExtResource("19_fq4q7")]
 transform = Transform3D(0.999997, 0, 0.00216421, 0, 1, 0, -0.00216421, 0, 0.999997, -172.11, 32.3861, -122.323)
@@ -731,7 +733,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.125, 32.6384, 183.716)
 transform = Transform3D(0.127134, 0, -0.991886, 0, 1, 0, 0.991886, 0, 0.127134, -45.8815, 33.0398, -192.297)
 
 [node name="461 Ocean Blvd" parent="MAP" instance=ExtResource("134_urb1b")]
-transform = Transform3D(0.769255, 0, -0.638942, 0, 1, 0, 0.638942, 0, 0.769255, -138.237, 32.8763, -220.866)
+transform = Transform3D(0.769255, 0, -0.638942, 0, 1, 0, 0.638942, 0, 0.769255, -220.586, 32.8763, -186.403)
 
 [node name="Tipp" parent="MAP" instance=ExtResource("135_soscp")]
 transform = Transform3D(0.964465, 0, 0.26421, 0, 1, 0, -0.26421, 0, 0.964465, -231.834, 32.6049, -181.713)
@@ -1009,6 +1011,12 @@ material_override = SubResource("StandardMaterial3D_fmpp0")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_05b07")
 skeleton = NodePath("../Moon")
+
+[node name="Big Tree Area" parent="." instance=ExtResource("144_kprpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.991, 0.372253, 183.745)
+
+[node name="Hiding Place" parent="." instance=ExtResource("145_2y1o6")]
+transform = Transform3D(0.756504, 0, -0.653989, 0, 1, 0, 0.653989, 0, 0.756504, 10.3635, 31.8569, 146.255)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
