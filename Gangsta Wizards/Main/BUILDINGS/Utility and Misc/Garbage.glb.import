@@ -39,7 +39,25 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Platform": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ramp": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Scrapcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/TrashPile": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {

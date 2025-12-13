@@ -686,7 +686,7 @@ transform = Transform3D(-0.382312, 0, 0.924033, 0, 1, 0, -0.924033, 0, -0.382312
 transform = Transform3D(0.589845, 0, -0.807517, 0, 1, 0, 0.807517, 0, 0.589845, -118.69, 33.1046, -73.4851)
 
 [node name="Lighthouse" parent="MAP" instance=ExtResource("137_oc06b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.12704, 4.43369, 403.373)
+transform = Transform3D(0.986464, 0, -0.16398, 0, 1, 0, 0.16398, 0, 0.986464, -5.68104, 5.8691, 403.373)
 
 [node name="Transmission Tower" parent="MAP" instance=ExtResource("141_f6iop")]
 transform = Transform3D(0.724039, 0, 0.689759, 0, 1, 0, -0.689759, 0, 0.724039, 52.7582, 33.2355, -94.1843)

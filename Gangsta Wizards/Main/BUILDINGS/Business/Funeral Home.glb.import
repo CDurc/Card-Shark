@@ -33,10 +33,22 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor & Site": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/IntBlock": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {

@@ -33,13 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Bag": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Fountain": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/QuestBoard": {
 "generate/physics": true
 }
 }

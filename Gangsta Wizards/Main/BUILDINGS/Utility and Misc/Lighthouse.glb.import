@@ -39,10 +39,13 @@ _subresources={
 "PATH:1 - PHYS/Body": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Top": {
+"PATH:1 - PHYS/Center Post": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Top_001": {
+"PATH:1 - PHYS/Stairramp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Top": {
 "generate/physics": true
 }
 }

@@ -41,10 +41,25 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Flat Headstone_005": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Headstone_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trad Headstone": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree3": {
+"generate/physics": true
 }
 }
 }

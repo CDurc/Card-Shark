@@ -33,6 +33,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Chairs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Crystal": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -47,6 +50,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Pillar_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platforms": {
+"generate/physics": true
 }
 }
 }

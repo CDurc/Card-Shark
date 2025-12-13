@@ -38,6 +38,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Door": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -47,6 +50,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Front Sign": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Patio": {
 "generate/physics": true,
@@ -63,6 +69,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Planter": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -73,15 +82,16 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Stairs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Staircol": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Stairs_001": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Table": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
