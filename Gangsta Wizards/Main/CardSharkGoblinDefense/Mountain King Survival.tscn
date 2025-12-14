@@ -458,10 +458,10 @@ transform = Transform3D(0.941319, 0, -0.337515, 0, 0.999999, 0, 0.337515, 0, 0.9
 curve = SubResource("Curve3D_c2j0s")
 
 [node name="FlyGuy" parent="LeftFlyRails/2" instance=ExtResource("10_qhabr")]
-transform = Transform3D(-0.955193, -0.0583722, -0.290166, -1.86264e-09, 0.980359, -0.197217, 0.295979, -0.188381, -0.936433, 0, 0, 0)
+transform = Transform3D(-0.955192, -0.0583722, -0.290166, -1.86264e-09, 0.980358, -0.197217, 0.295979, -0.188381, -0.936433, 0, 0, 0)
 
 [node name="3" type="Path3D" parent="LeftFlyRails"]
 curve = SubResource("Curve3D_wbl8k")
 
 [node name="FlyGuy" parent="LeftFlyRails/3" instance=ExtResource("10_qhabr")]
-transform = Transform3D(0.911002, 0.0508496, -0.409251, 1.86264e-09, 0.992368, 0.123302, 0.412398, -0.112329, 0.904051, 0, 0, 0)
+transform = Transform3D(0.911002, 0.0508495, -0.409251, 1.86264e-09, 0.992367, 0.123302, 0.412398, -0.112329, 0.904051, 0, 0, 0)
