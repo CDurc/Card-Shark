@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lxyqhpsulaif"
-path.s3tc="res://.godot/imported/Gourdtown Borders_cobblestone.jpg-924b0d766aeb7a1377e28567e1f2282b.s3tc.ctex"
+uid="uid://qlhdjxg5lo4r"
+path.s3tc="res://.godot/imported/Gourdtown Borders_Gray Metal Siding.jpg-93f6b67420eba63383d89d47c734563a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "89ab4cb86e646b1ccb2db0c6deaab4b1"
+"md5": "90ebb421d4442f5dba591614986c6fcd"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Gourdtown Borders_cobblestone.jpg"
-dest_files=["res://.godot/imported/Gourdtown Borders_cobblestone.jpg-924b0d766aeb7a1377e28567e1f2282b.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Gourdtown Borders_Gray Metal Siding.jpg"
+dest_files=["res://.godot/imported/Gourdtown Borders_Gray Metal Siding.jpg-93f6b67420eba63383d89d47c734563a.s3tc.ctex"]
 
 [params]
 

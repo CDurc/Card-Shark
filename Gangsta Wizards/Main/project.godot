@@ -44,6 +44,13 @@ Roller="Things that can make rollers shrink, especially other rollers"
 Headshot="Headshot Area3D"
 Bodyshot="Bodyshot Area3D"
 
+[importer_defaults]
+
+animation_library={
+"animation/trimming": true,
+"blender/meshes/export_bones_deforming_mesh_only": true
+}
+
 [input]
 
 move_right={
