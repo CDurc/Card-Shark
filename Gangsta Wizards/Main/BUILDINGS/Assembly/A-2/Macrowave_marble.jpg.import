@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv0hnxygbd80f"
-path.s3tc="res://.godot/imported/Psychologist_gray shingles.jpg-2b38768c379fff3dd4d28ae8591224ae.s3tc.ctex"
+uid="uid://dnenxid50tyg4"
+path.s3tc="res://.godot/imported/Macrowave_marble.jpg-c54c2ce13c4b523c338d55baffa5dbf6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "bad7cd64f89f94657e6461143ab0f70c"
+"md5": "ef86a91cb477ed0354a27546c87a8cce"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Psychologist_gray shingles.jpg"
-dest_files=["res://.godot/imported/Psychologist_gray shingles.jpg-2b38768c379fff3dd4d28ae8591224ae.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Macrowave_marble.jpg"
+dest_files=["res://.godot/imported/Macrowave_marble.jpg-c54c2ce13c4b523c338d55baffa5dbf6.s3tc.ctex"]
 
 [params]
 

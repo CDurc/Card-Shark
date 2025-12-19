@@ -45,9 +45,6 @@ _subresources={
 "PATH:1 - PHYS/Concert Area": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Elec Wires - Gourdtown": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Highway Supports": {
 "generate/physics": true
 },
@@ -82,9 +79,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Undeveloped Land": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Volcano": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Volcano Ground": {

@@ -30,48 +30,41 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - Phys/Door": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Ground": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Macrowave Outer": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Main Kitchen": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Lamps": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Macrowave Outer": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Ropes": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Main Kitchen": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Rotators": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Turntable": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ropes": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rotators": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Table_022": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Turntable": {
+"generate/physics": true
 }
 }
 }

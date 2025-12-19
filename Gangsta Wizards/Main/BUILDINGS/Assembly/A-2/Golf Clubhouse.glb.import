@@ -30,48 +30,35 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - Phys/Exterior Walls": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Exterior Walls": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Grid": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
 },
-"PATH:1 - Phys/RTU": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Grid": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Storefront Door": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Storefront Door_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Storefront Door": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Storefront Door_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Storefront Door_001": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Storefront Door_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Storefront Door_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Storefront Door_003": {
+"generate/physics": true
 }
 }
 }

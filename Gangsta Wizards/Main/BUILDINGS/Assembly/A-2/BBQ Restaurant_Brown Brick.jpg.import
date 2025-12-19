@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv0hnxygbd80f"
-path.s3tc="res://.godot/imported/Psychologist_gray shingles.jpg-2b38768c379fff3dd4d28ae8591224ae.s3tc.ctex"
+uid="uid://cxvt0eajgfjo6"
+path.s3tc="res://.godot/imported/BBQ Restaurant_Brown Brick.jpg-a7c9ffaa3b658ebd7abe87b664ba20fd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "bad7cd64f89f94657e6461143ab0f70c"
+"md5": "6020e82dde3319aa04a065a8f076e527"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Psychologist_gray shingles.jpg"
-dest_files=["res://.godot/imported/Psychologist_gray shingles.jpg-2b38768c379fff3dd4d28ae8591224ae.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/BBQ Restaurant_Brown Brick.jpg"
+dest_files=["res://.godot/imported/BBQ Restaurant_Brown Brick.jpg-a7c9ffaa3b658ebd7abe87b664ba20fd.s3tc.ctex"]
 
 [params]
 

@@ -33,6 +33,9 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cup": {
 "generate/physics": true
 },
@@ -40,6 +43,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lights Ext": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Picnic Table_002": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {

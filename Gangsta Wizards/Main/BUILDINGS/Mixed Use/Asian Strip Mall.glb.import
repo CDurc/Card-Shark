@@ -30,30 +30,27 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/2nd Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/3rd Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/4th Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Overhang": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Roofs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Sign": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Sign_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Sign_002": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
