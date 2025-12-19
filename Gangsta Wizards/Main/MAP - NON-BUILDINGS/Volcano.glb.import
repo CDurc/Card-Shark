@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwpqv23iuenqk"
-path="res://.godot/imported/LadyLake.glb-0c8e534275f3e53996310b93a4cf43d2.scn"
+uid="uid://duroubb2kdtmv"
+path="res://.godot/imported/Volcano.glb-0a2c59a7437351bc9f43bb04937261cc.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/LadyLake.glb"
-dest_files=["res://.godot/imported/LadyLake.glb-0c8e534275f3e53996310b93a4cf43d2.scn"]
+source_file="res://MAP - NON-BUILDINGS/Volcano.glb"
+dest_files=["res://.godot/imported/Volcano.glb-0a2c59a7437351bc9f43bb04937261cc.scn"]
 
 [params]
 
@@ -30,22 +30,10 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
+import_script/path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Ext Walls": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Floor": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Roof": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk": {
+"PATH:Volcano": {
 "generate/physics": true
 }
 }

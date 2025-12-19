@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxxu1frcvglmd"
-path.s3tc="res://.godot/imported/The Vine_Gravel.jpg-0a4b790b41d20657b77058a6337ce864.s3tc.ctex"
+uid="uid://cn1r8gp8jgjdv"
+path.s3tc="res://.godot/imported/VikramsHouse_Grass-Forest.jpg-4afb745481a1b49d85f0317e87bbe8c5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4360d87faf69b0cd2b40bc29f7a5c932"
+"md5": "73ac05f8d528704145575f5d7dd8bc80"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/The Vine_Gravel.jpg"
-dest_files=["res://.godot/imported/The Vine_Gravel.jpg-0a4b790b41d20657b77058a6337ce864.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/VikramsHouse_Grass-Forest.jpg"
+dest_files=["res://.godot/imported/VikramsHouse_Grass-Forest.jpg-4afb745481a1b49d85f0317e87bbe8c5.s3tc.ctex"]
 
 [params]
 

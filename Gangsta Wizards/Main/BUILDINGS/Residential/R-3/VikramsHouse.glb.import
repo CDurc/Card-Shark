@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7osu6o8jya7w"
-path="res://.godot/imported/Neighborhood.glb-a74e17dfa5c3bcfae9de94e6bf25da0c.scn"
+uid="uid://btlxpd7cqjn0b"
+path="res://.godot/imported/VikramsHouse.glb-da9779709cebede9ba6fa4f2e2b4b35a.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Neighborhood.glb"
-dest_files=["res://.godot/imported/Neighborhood.glb-a74e17dfa5c3bcfae9de94e6bf25da0c.scn"]
+source_file="res://BUILDINGS/Residential/R-3/VikramsHouse.glb"
+dest_files=["res://.godot/imported/VikramsHouse.glb-da9779709cebede9ba6fa4f2e2b4b35a.scn"]
 
 [params]
 
@@ -33,28 +33,22 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Bases": {
+"PATH:1 - PHYS/Grill": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/BillboardBack": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Dividing Wall": {
+"PATH:1 - PHYS/Int Col": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Neighborhood Ground": {
+"PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Post": {
+"PATH:1 - PHYS/Walls": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Sign_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Support": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Tower": {
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

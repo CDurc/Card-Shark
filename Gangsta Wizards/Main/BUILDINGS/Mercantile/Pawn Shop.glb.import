@@ -33,10 +33,28 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Doorways": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Floor": {
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Intcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Other Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTUs": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {

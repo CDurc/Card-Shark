@@ -33,6 +33,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Exterior Walls": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -48,10 +51,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/RTUs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Sign Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
+"generate/physics": true
 }
 }
 }
