@@ -1036,16 +1036,16 @@ transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 
 transform = Transform3D(0.994624, 0, -0.103556, 0, 1, 0, 0.103556, 0, 0.994624, 42.2147, 34.0119, -48.8296)
 
 [node name="Bush Puncher" type="Node3D" parent="Gourd Goals"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.635653, -0.257317, 13.8032)
+transform = Transform3D(0.460386, 0, -0.887719, 0, 1, 0, 0.887719, 0, 0.460386, 1.35524, -0.257317, 13.5144)
 
 [node name="Bush" type="Node3D" parent="Gourd Goals/Bush Puncher"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.862332, 0, 3.95812e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.320743, 0, -0.0408978)
 
 [node name="AnotherGoal" type="Node3D" parent="Gourd Goals"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7759, -0.257317, 13.8032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9144, -0.257317, 2.87102)
 
 [node name="Bush" type="Node3D" parent="Gourd Goals/AnotherGoal"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.862332, 0, 3.95812e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240274, 0, -0.0817994)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Gourd Goals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0410567, -0.0216064, 4.65661e-10)

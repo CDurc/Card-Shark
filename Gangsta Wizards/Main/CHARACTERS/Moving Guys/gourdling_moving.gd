@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 @export var speed: float = 8.0
 @export var gravity: float = 9.8
-@export var turn_speed: float = 3.0
-@export var punch_delay: float = 2.0  # seconds to wait after starting turn
+@export var turn_speed: float = 4.0
+@export var punch_delay: float = 2.5  # seconds to wait after starting turn
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var Gen_anime: AnimationPlayer = $Gourdling2/GenAnime
@@ -13,9 +13,9 @@ var current_goal_task = null
 var state: String = "idle"
 
 func _ready():
-	# Each goal-task is a single unit
+	#TODO make random
 	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task")})
-	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "some_other_task")})
+	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task")})
 	start_next_goal_task()
 
 func _physics_process(delta):
@@ -36,9 +36,9 @@ func _physics_process(delta):
 				state = "turning_to_task"
 				start_task_after_delay(punch_delay)
 
-	# Gradual turning toward task target while in turning_to_task
+	# Gradual turning instead of instant
 	if state == "turning_to_task" and current_goal_task != null:
-		var target = current_goal_task["goal"].get_child(0)
+		var target = current_goal_task["goal"].get_child(0) #Always make first child of goal node the target
 		var flat_dir = Vector3(target.global_position.x - global_position.x, 0, target.global_position.z - global_position.z)
 		if flat_dir.length() > 0.01:
 			var current_yaw = rotation.y
@@ -47,9 +47,6 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-# -----------------------
-# Movement helpers
-# -----------------------
 func move_along_path(delta):
 	if nav_agent.is_navigation_finished():
 		velocity.x = 0
@@ -73,9 +70,7 @@ func rotate_toward_direction(direction: Vector3, delta: float):
 	var desired_yaw = atan2(flat_dir.x, flat_dir.z)
 	rotation.y = lerp_angle(current_yaw, desired_yaw, turn_speed * delta)
 
-# -----------------------
-# Task flow
-# -----------------------
+
 func start_next_goal_task():
 	if goal_task_queue.size() == 0:
 		state = "idle"
@@ -100,21 +95,14 @@ func _delayed_task_runner(delay_time: float, goal_task) -> void:
 # Example task: punch
 # -----------------------
 func punch_task(goal_node: Node3D) -> void:
-	var target = goal_node.get_child(0)
-	# Continue facing target (gradual turn already done)
-	
-	# First punch
+	#var target = goal_node.get_child(0)
 	Gen_anime.play("Punch")
 	await get_tree().create_timer(3).timeout
-	
-	# Second punch
 	Gen_anime.play("Punch")
-	await get_tree().create_timer(1).timeout
-	
-	# After task, move to next goal-task
+	await get_tree().create_timer(3).timeout
 	start_next_goal_task()
 
-# Example placeholder for another task
+#Placeholder
 func some_other_task(goal_node: Node3D) -> void:
 	await get_tree().create_timer(2).timeout
 	start_next_goal_task()
