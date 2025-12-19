@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxxu1frcvglmd"
+uid="uid://b5tovk8s80246"
 path.s3tc="res://.godot/imported/The Vine_Gravel.jpg-0a4b790b41d20657b77058a6337ce864.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "4360d87faf69b0cd2b40bc29f7a5c932"
 }
 
 [deps]

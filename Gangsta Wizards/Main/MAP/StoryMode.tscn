@@ -969,6 +969,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9144, -0.257317, 2.87102)
 [node name="Bush" type="Node3D" parent="Gourd Goals/AnotherGoal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240274, 0, -0.0817994)
 
+[node name="DeathSpot" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5598, -0.257317, -10.8244)
+
+[node name="Die" type="Node3D" parent="Gourd Goals/DeathSpot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240274, 0, -0.0817994)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Gourd Goals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0410567, -0.0216064, 4.65661e-10)
 navigation_mesh = SubResource("NavigationMesh_nwkyl")
