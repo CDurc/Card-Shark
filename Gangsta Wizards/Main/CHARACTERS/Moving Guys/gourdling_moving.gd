@@ -8,6 +8,7 @@ extends CharacterBody3D
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var Gen_anime: AnimationPlayer = $Gourdling2/GenAnime
 @onready var Leg_anime: AnimationPlayer = $Gourdling2/LegAnime
+@onready var collider = $CollisionShape3D
 
 var goal_task_queue: Array = []
 var current_goal_task = null
@@ -15,6 +16,7 @@ var state: String = "idle"
 
 func _ready():
 	#TODO make random
+	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot", "task": Callable(self, "sit")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
@@ -107,6 +109,16 @@ func die(goal_node: Node3D) -> void:
 	await get_tree().create_timer(0.7).timeout
 	Gen_anime.play("Death")
 
+func sit(goal_node: Node3D) -> void:
+	gravity = 0
+	collider.disabled = true
+	await get_tree().process_frame
+	global_position = goal_node.get_child(1).global_position
+	look_at(goal_node.get_child(0).global_position)
+	global_rotation_degrees.y += 180
+	Gen_anime.play("Sit - Down")
+	await get_tree().create_timer(1.5).timeout
+	Gen_anime.play("Sit - Idle")
 #Placeholder
 func some_other_task(goal_node: Node3D) -> void:
 	await get_tree().create_timer(2).timeout
