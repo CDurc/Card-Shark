@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceirm75q4502r"
-path.s3tc="res://.godot/imported/Full House_grass.jpg-283c5edbf35b49ac6e78c0f65af019c6.s3tc.ctex"
+uid="uid://crwpu3agja13"
+path.s3tc="res://.godot/imported/Full House_White Siding.jpg-1c60ae9c452fcb84f41a074fc8874d4b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "c6cde2c9295fe3f5aa9fc64f6981e2ce"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/Full House_grass.jpg"
-dest_files=["res://.godot/imported/Full House_grass.jpg-283c5edbf35b49ac6e78c0f65af019c6.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Full House_White Siding.jpg"
+dest_files=["res://.godot/imported/Full House_White Siding.jpg-1c60ae9c452fcb84f41a074fc8874d4b.s3tc.ctex"]
 
 [params]
 

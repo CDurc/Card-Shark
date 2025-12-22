@@ -16,7 +16,7 @@ var state: String = "idle"
 
 func _ready():
 	#TODO make random
-	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot", "task": Callable(self, "sit")})
+	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})

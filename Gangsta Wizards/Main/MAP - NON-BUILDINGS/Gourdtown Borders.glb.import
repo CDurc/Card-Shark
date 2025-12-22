@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Arch_003": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Benches": {
 "generate/physics": true
 },
@@ -75,10 +78,16 @@ _subresources={
 "PATH:1 - PHYS/Fencescols": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/GourdTunnel": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Houston Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lights": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Local Roads": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
@@ -103,6 +112,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Street Sign 2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trash": {

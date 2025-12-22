@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceirm75q4502r"
-path.s3tc="res://.godot/imported/Full House_grass.jpg-283c5edbf35b49ac6e78c0f65af019c6.s3tc.ctex"
+uid="uid://x6sl5qqhsqnw"
+path.s3tc="res://.godot/imported/Full House_Brown Brick.jpg-4afae9c694c8257e63cbbc5f2798a890.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "6020e82dde3319aa04a065a8f076e527"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/Full House_grass.jpg"
-dest_files=["res://.godot/imported/Full House_grass.jpg-283c5edbf35b49ac6e78c0f65af019c6.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/Full House_Brown Brick.jpg"
+dest_files=["res://.godot/imported/Full House_Brown Brick.jpg-4afae9c694c8257e63cbbc5f2798a890.s3tc.ctex"]
 
 [params]
 
