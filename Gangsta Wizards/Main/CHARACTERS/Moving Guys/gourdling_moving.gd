@@ -8,6 +8,7 @@ extends CharacterBody3D
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var Gen_anime: AnimationPlayer = $Gourdling2/GenAnime
 @onready var Leg_anime: AnimationPlayer = $Gourdling2/LegAnime
+@onready var Arm_anime: AnimationPlayer = $Gourdling2/ArmAnime
 @onready var collider = $CollisionShape3D
 
 var goal_task_queue: Array = []
@@ -16,9 +17,9 @@ var state: String = "idle"
 
 func _ready():
 	#TODO make random
-	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task")})
+	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
 	start_next_goal_task()
 
@@ -32,6 +33,7 @@ func _physics_process(delta):
 	# Walk toward goal
 	if state == "walking":
 		Leg_anime.play("Sprint Lower")
+		Arm_anime.play("Sprint Upper")
 		move_along_path(delta)
 		if nav_agent.is_navigation_finished():
 			velocity.x = 0

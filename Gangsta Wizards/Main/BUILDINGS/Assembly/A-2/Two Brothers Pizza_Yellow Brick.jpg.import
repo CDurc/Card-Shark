@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ow1bjsdw5sjh"
-path.s3tc="res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"
+uid="uid://bvcymea351n62"
+path.s3tc="res://.godot/imported/Two Brothers Pizza_Yellow Brick.jpg-f8523bf23a35001f327528d5c7162fed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "12407aab38937626fa56227f5958a8a2"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Two Brothers Pizza_grass.jpg"
-dest_files=["res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Two Brothers Pizza_Yellow Brick.jpg"
+dest_files=["res://.godot/imported/Two Brothers Pizza_Yellow Brick.jpg-f8523bf23a35001f327528d5c7162fed.s3tc.ctex"]
 
 [params]
 

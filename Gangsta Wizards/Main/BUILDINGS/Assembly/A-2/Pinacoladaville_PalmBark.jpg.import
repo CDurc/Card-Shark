@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ow1bjsdw5sjh"
-path.s3tc="res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"
+uid="uid://ctj42pnqc1spe"
+path.s3tc="res://.godot/imported/Pinacoladaville_PalmBark.jpg-8868fd26810b30edad6f6d7a5aeea77d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "c36421f29ca042c2e99e1d962db14770"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Two Brothers Pizza_grass.jpg"
-dest_files=["res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Pinacoladaville_PalmBark.jpg"
+dest_files=["res://.godot/imported/Pinacoladaville_PalmBark.jpg-8868fd26810b30edad6f6d7a5aeea77d.s3tc.ctex"]
 
 [params]
 

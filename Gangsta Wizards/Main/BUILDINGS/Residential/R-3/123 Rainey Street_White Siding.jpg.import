@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ow1bjsdw5sjh"
-path.s3tc="res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"
+uid="uid://cpsidkqj3e1yq"
+path.s3tc="res://.godot/imported/123 Rainey Street_White Siding.jpg-31b61fec31a9199a5d8d194f605fea2a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "c6cde2c9295fe3f5aa9fc64f6981e2ce"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Two Brothers Pizza_grass.jpg"
-dest_files=["res://.godot/imported/Two Brothers Pizza_grass.jpg-21d41cef04d7795c0a97f3c3d8d97096.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/123 Rainey Street_White Siding.jpg"
+dest_files=["res://.godot/imported/123 Rainey Street_White Siding.jpg-31b61fec31a9199a5d8d194f605fea2a.s3tc.ctex"]
 
 [params]
 
