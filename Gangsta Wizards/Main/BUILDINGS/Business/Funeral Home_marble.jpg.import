@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bckirbqgwyu4n"
+uid="uid://b25ln7otl2u7q"
 path.s3tc="res://.godot/imported/Funeral Home_marble.jpg-fa26958a0f0d641293b00b1f3e9ec71b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ef86a91cb477ed0354a27546c87a8cce"
 }
 
 [deps]

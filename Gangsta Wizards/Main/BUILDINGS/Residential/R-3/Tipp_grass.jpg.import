@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1d8mqsercvcm"
+uid="uid://2iavulu8txxt"
 path.s3tc="res://.godot/imported/Tipp_grass.jpg-0c5671f81b9dbf6efc67392c46a2da4c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
 }
 
 [deps]
