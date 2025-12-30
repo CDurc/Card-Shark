@@ -30,9 +30,15 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arch": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Arch_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Glass": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -42,6 +48,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Palm Trees": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pine Tress": {
+"generate/physics": true
 }
 }
 }

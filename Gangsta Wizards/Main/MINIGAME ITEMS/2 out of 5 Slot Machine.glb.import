@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://di0fssnga4ycr"
-path="res://.godot/imported/Brick Wall.glb-e16587ff32f9ad90558b7f3a78ffbe21.scn"
+uid="uid://rd1117cvflbj"
+path="res://.godot/imported/2 out of 5 Slot Machine.glb-7f4d94f8a06324de1a1a07d7be6fb65a.scn"
 
 [deps]
 
-source_file="res://objects/Brick Wall.glb"
-dest_files=["res://.godot/imported/Brick Wall.glb-e16587ff32f9ad90558b7f3a78ffbe21.scn"]
+source_file="res://MINIGAME ITEMS/2 out of 5 Slot Machine.glb"
+dest_files=["res://.godot/imported/2 out of 5 Slot Machine.glb-7f4d94f8a06324de1a1a07d7be6fb65a.scn"]
 
 [params]
 

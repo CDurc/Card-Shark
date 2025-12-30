@@ -33,6 +33,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Computers": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Doors": {
 "generate/physics": true
 },
@@ -50,7 +53,16 @@ _subresources={
 "PATH:1 - PHYS/Front Desk": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Front Desk_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Mailboxes": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {

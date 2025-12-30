@@ -30,7 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Back": {
@@ -38,15 +38,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Speakers": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spotlights": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Stage": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Stairs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Supports": {
 "generate/physics": true,

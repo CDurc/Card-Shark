@@ -30,15 +30,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Counter": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cube_001": {
+"PATH:1 - PHYS/Cube": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
@@ -48,10 +46,34 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground_001": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Int Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lottery": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PUMP": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
 }
 }
 }

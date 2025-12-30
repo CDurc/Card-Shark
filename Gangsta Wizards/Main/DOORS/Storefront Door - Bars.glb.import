@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coqt2gv243eu8"
-path="res://.godot/imported/WALKING.glb-cdc70cb543422c81cd91599d3d5fd824.scn"
+uid="uid://dror6tovwy5yu"
+path="res://.godot/imported/Storefront Door - Bars.glb-f1a8b7aea1aff2e25921f26750c49085.scn"
 
 [deps]
 
-source_file="res://Woo Anime/WALKING.glb"
-dest_files=["res://.godot/imported/WALKING.glb-cdc70cb543422c81cd91599d3d5fd824.scn"]
+source_file="res://DOORS/Storefront Door - Bars.glb"
+dest_files=["res://.godot/imported/Storefront Door - Bars.glb-f1a8b7aea1aff2e25921f26750c49085.scn"]
 
 [params]
 

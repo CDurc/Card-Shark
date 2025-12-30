@@ -30,48 +30,47 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Counter": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cube_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Drums": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cylinder": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cylinder_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cylinder_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Lottery": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Tank": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Pumps": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Tank_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Tank_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Roof_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tanks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window": {
+"generate/physics": true
 }
 }
 }

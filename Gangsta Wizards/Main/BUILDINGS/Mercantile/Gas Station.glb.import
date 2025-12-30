@@ -30,9 +30,18 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Body": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Body_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Body_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Building Roof": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -53,6 +62,24 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Gas Pump": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gas Pump_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gas Pump_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gas Pump_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gas Pump_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gas Pump_005": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -67,6 +94,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,

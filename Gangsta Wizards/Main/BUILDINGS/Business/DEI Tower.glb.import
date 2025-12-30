@@ -38,6 +38,15 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Int Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Light Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Statue Base": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Top": {
 "generate/physics": true,
 "physics/layer": 9,

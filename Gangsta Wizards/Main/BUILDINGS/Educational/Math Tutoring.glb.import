@@ -39,6 +39,12 @@ _subresources={
 "PATH:1 - PHYS/Floors": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Furniture": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Stairs": {
 "generate/physics": true
 }
