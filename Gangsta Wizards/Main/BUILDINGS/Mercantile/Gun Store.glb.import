@@ -30,9 +30,12 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Checkout": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube_001": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -62,6 +65,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Skylight_003": {
 "generate/physics": true,
