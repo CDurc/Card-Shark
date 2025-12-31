@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch2o2c0ilsd5l"
-path.s3tc="res://.godot/imported/White House_WhiteBrick.jpg-18df3f6b9ec4f3128cf154bc6ea76155.s3tc.ctex"
+uid="uid://bgh8ntoxobfot"
+path.s3tc="res://.godot/imported/Seedy Bar_art26.jpg-9fe2254bed8ea9bf2ab101635a2a35d8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e37983f2296565846aae1299d220af05"
+"md5": "1a1b185517a758986bbee307c175f7d1"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/White House_WhiteBrick.jpg"
-dest_files=["res://.godot/imported/White House_WhiteBrick.jpg-18df3f6b9ec4f3128cf154bc6ea76155.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Seedy Bar_art26.jpg"
+dest_files=["res://.godot/imported/Seedy Bar_art26.jpg-9fe2254bed8ea9bf2ab101635a2a35d8.s3tc.ctex"]
 
 [params]
 

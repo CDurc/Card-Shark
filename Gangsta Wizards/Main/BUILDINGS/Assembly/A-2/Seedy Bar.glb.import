@@ -36,6 +36,12 @@ _subresources={
 "PATH:1 - PHYS/Bar": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Booth": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CUs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Dumpster": {
 "generate/physics": true
 },
@@ -43,6 +49,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Floor & Site": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Piano": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Piano_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
@@ -55,6 +67,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stool": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tables": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {

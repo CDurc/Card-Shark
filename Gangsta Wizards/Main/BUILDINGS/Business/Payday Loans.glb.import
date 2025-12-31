@@ -33,35 +33,40 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cube_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Desks": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Cube_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Cube_004": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Cube_005": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Divider Walls": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Suppors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spotlights": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Vault Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Vault Wall": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Vault Wall_001": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,

@@ -675,7 +675,7 @@ transform = Transform3D(0.119166, 0, -0.992874, 0, 1, 0, 0.992874, 0, 0.119166, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.991, 0.372253, 183.745)
 
 [node name="Volcano2" parent="MAP" instance=ExtResource("135_s42on")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.972, 7.18087, 184.12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.972, -3.10699, 184.12)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.2419, 40.3804, -56.0171)
