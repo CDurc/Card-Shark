@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnd4wd2yym76n"
-path.s3tc="res://.godot/imported/Gun Store_Dirt.jpg-aa9f2fca0b013b1230ab661da464ca0a.s3tc.ctex"
+uid="uid://ci5eajuqb480f"
+path.s3tc="res://.godot/imported/Gun Store_Stone Brick.jpg-9e694f147153c7f337815b68f05cd4b3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
+"md5": "ca357c21a6ca4ced44402c18d86a7dcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Mercantile/Gun Store_Dirt.jpg"
-dest_files=["res://.godot/imported/Gun Store_Dirt.jpg-aa9f2fca0b013b1230ab661da464ca0a.s3tc.ctex"]
+source_file="res://BUILDINGS/Mercantile/Gun Store_Stone Brick.jpg"
+dest_files=["res://.godot/imported/Gun Store_Stone Brick.jpg-9e694f147153c7f337815b68f05cd4b3.s3tc.ctex"]
 
 [params]
 
