@@ -33,8 +33,9 @@ func _on_body_entered(body):
 func suck(character, delta):
 	var target = get_node(target_node)
 	
-	if character.can_move:
-		character.can_move = false
+	if character.is_in_group("Enemies"):
+		if character.can_move:
+			character.can_move = false
 	
 	#Check if sucked player has CharacterCenter
 	if character.has_node("CharacterCenter"):
