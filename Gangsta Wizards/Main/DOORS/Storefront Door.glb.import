@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkavxoa6utrfa"
-path="res://.godot/imported/Construction Skyscraper.glb-10857b7afa19da55a14bdd642340593a.scn"
+uid="uid://b3sonoslu3qyt"
+path="res://.godot/imported/Storefront Door.glb-5697ed73414d341ac301a531f0b8faf3.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Utility and Misc/Construction Skyscraper.glb"
-dest_files=["res://.godot/imported/Construction Skyscraper.glb-10857b7afa19da55a14bdd642340593a.scn"]
+source_file="res://DOORS/Storefront Door.glb"
+dest_files=["res://.godot/imported/Storefront Door.glb-5697ed73414d341ac301a531f0b8faf3.scn"]
 
 [params]
 
@@ -31,14 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

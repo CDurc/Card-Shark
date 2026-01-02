@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=164 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -140,6 +140,7 @@
 [ext_resource type="PackedScene" uid="uid://7qhvl4d07pjt" path="res://MAP - NON-BUILDINGS/Big Tree Area.glb" id="144_kprpg"]
 [ext_resource type="PackedScene" uid="uid://cy85r304h02hx" path="res://MAP - NON-BUILDINGS/Hiding Place.glb" id="145_2y1o6"]
 [ext_resource type="PackedScene" uid="uid://bjcyckvth2l43" path="res://CHARACTERS/Moving Guys/gourdling moving.tscn" id="146_pyrg3"]
+[ext_resource type="PackedScene" uid="uid://ckatfnch8hoyc" path="res://DOORS/Openable Storefront Bars Duo.tscn" id="147_it17w"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
 [ext_resource type="PackedScene" uid="uid://bowjekmxrtna2" path="res://DOORS/Openable Light Brown Metal Door.tscn" id="148_irqwt"]
 [ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
@@ -674,6 +675,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.991, 0.372253, 183.745)
 [node name="Volcano2" parent="MAP" instance=ExtResource("135_s42on")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.972, -3.10699, 184.12)
 
+[node name="Root" parent="MAP" instance=ExtResource("147_it17w")]
+transform = Transform3D(0.135007, 0, 0.990845, 0, 1, 0, -0.990845, 0, 0.135007, 65.2975, 34.5707, -113.376)
+
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.2419, 40.3804, -56.0171)
 health = 250
@@ -1041,11 +1045,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.227356, -0.516918, -1.89938
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33053, 0, 1.98784)
 
 [node name="Openable Wood Door" parent="Gourd Goals/SeedyDoorSpot" instance=ExtResource("149_bl4xi")]
-transform = Transform3D(0.999879, 0, 0.0155677, 0, 1, 0, -0.0155677, 0, 0.999879, -0.408432, 0.549858, -0.86661)
+transform = Transform3D(0.999879, 0, 0.0155677, 0, 1, 0, -0.0155677, 0, 0.999879, -0.415157, 0.549858, -0.866505)
 Door_open_angle = 95.0
 
 [node name="OutdoorSpot" type="Node3D" parent="Gourd Goals/SeedyDoorSpot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11431, -0.516918, 0.0329413)
+
+[node name="Lights" type="Node3D" parent="."]
+transform = Transform3D(0.992036, 0, -0.125957, 0, 1, 0, 0.125957, 0, 0.992036, 31.9872, 37.4115, -73.1878)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
