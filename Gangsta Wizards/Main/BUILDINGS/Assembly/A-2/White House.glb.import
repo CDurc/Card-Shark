@@ -68,10 +68,8 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Sidewalk": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Sidewalkcol": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,

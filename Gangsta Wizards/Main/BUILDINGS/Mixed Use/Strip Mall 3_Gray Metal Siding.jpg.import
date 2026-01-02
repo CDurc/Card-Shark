@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn2xj646fqlwj"
-path.s3tc="res://.godot/imported/Construction Skyscraper_Gravel.jpg-dfeb370c1566087a3bf9bc26190af20f.s3tc.ctex"
+uid="uid://dsufkl6j44ryr"
+path.s3tc="res://.godot/imported/Strip Mall 3_Gray Metal Siding.jpg-8c434da1ce0676c3314bd9985bbb39d1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4360d87faf69b0cd2b40bc29f7a5c932"
+"md5": "90ebb421d4442f5dba591614986c6fcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Utility and Misc/Construction Skyscraper_Gravel.jpg"
-dest_files=["res://.godot/imported/Construction Skyscraper_Gravel.jpg-dfeb370c1566087a3bf9bc26190af20f.s3tc.ctex"]
+source_file="res://BUILDINGS/Mixed Use/Strip Mall 3_Gray Metal Siding.jpg"
+dest_files=["res://.godot/imported/Strip Mall 3_Gray Metal Siding.jpg-8c434da1ce0676c3314bd9985bbb39d1.s3tc.ctex"]
 
 [params]
 
