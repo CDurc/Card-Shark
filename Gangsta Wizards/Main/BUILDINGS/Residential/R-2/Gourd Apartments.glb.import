@@ -30,7 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Corridor Floors": {
@@ -38,30 +38,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Dome Light": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Doors": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Ext": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Stairs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairscol2": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,

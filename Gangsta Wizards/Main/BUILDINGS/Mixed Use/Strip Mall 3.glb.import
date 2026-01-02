@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u564ok8eko57"
+uid="uid://g8qaf25suw56"
 path="res://.godot/imported/Strip Mall 3.glb-ef837d0afedbdf537075a9eeb2af860e.scn"
 
 [deps]
@@ -30,88 +30,65 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Exterior Walls": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Exterior Walls_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Exterior Walls_004": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Floor_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Floor_005": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int Walls": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls_005": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTUs": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_006": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_007": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_010": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_011": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 }
 }
 }
