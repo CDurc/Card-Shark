@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfn87qghr1sd1"
-path.s3tc="res://.godot/imported/AC Store_Grass-Light.jpg-82107f8d7b45125725fa9f76f16b55d9.s3tc.ctex"
+uid="uid://b2tjqmywlplbh"
+path.s3tc="res://.godot/imported/Mart_Brown Brick.jpg-fc3f3bfa5c00e54f836455ed91268b0d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7d523a186494d1218dc8eb6e780630ab"
+"md5": "6020e82dde3319aa04a065a8f076e527"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Mercantile/AC Store_Grass-Light.jpg"
-dest_files=["res://.godot/imported/AC Store_Grass-Light.jpg-82107f8d7b45125725fa9f76f16b55d9.s3tc.ctex"]
+source_file="res://BUILDINGS/Mercantile/Mart_Brown Brick.jpg"
+dest_files=["res://.godot/imported/Mart_Brown Brick.jpg-fc3f3bfa5c00e54f836455ed91268b0d.s3tc.ctex"]
 
 [params]
 
