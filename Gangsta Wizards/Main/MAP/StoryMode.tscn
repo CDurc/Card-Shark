@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=170 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -152,6 +152,7 @@
 [ext_resource type="PackedScene" uid="uid://buf4s1n7hpjj2" path="res://DOORS/Openable Sliding Glass Door.tscn" id="150_xycsw"]
 [ext_resource type="PackedScene" uid="uid://bmuvpyol6etx7" path="res://DOORS/Openable Dark Wood Door.tscn" id="151_5m3wu"]
 [ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
+[ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -1110,6 +1111,9 @@ Door_open_angle = -110.0
 [node name="Openable Door2" parent="." instance=ExtResource("151_5m3wu")]
 transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019, 83.2135, 34.3169, -22.2577)
 Door_open_angle = -110.0
+
+[node name="Gary" parent="." instance=ExtResource("153_5bfla")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 20.2254, 34.5052, -73.6395)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
