@@ -28,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://cumvaj707kbdi" path="res://BUILDINGS/Utility and Misc/Arboretum.glb" id="27_54lbp"]
 [ext_resource type="PackedScene" uid="uid://clu3ui44gjw1g" path="res://BUILDINGS/Utility and Misc/Water Tower.glb" id="28_dmbat"]
 [ext_resource type="PackedScene" uid="uid://cdimvvwog60gk" path="res://BUILDINGS/Assembly/A-3/Capitol.glb" id="29_k32w2"]
-[ext_resource type="PackedScene" uid="uid://c3vo81ssgfsj6" path="res://Card Shark Campaign/Character Models/Player_v2.tscn" id="30_vklu3"]
 [ext_resource type="PackedScene" uid="uid://xoiwedcerogw" path="res://BUILDINGS/Assembly/A-3/Church - Traditional.glb" id="30_xmd1t"]
 [ext_resource type="PackedScene" uid="uid://dmmt55keqpn8t" path="res://BUILDINGS/Assembly/A-3/ETower.glb" id="31_urriu"]
 [ext_resource type="PackedScene" uid="uid://xxp3x8nvdbx" path="res://BUILDINGS/Assembly/A-3/Art Gallery.glb" id="32_o3fg1"]
@@ -153,6 +152,7 @@
 [ext_resource type="PackedScene" uid="uid://bmuvpyol6etx7" path="res://DOORS/Openable Dark Wood Door.tscn" id="151_5m3wu"]
 [ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
 [ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
+[ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="154_nu2kt"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -726,10 +726,6 @@ transform = Transform3D(-0.070923, 0, -0.997482, 0, 1, 0, 0.997482, 0, -0.070923
 [node name="Openable Door10" parent="MAP" instance=ExtResource("147_yg6vf")]
 transform = Transform3D(0.096141, 0, 0.995368, 0, 1, 0, -0.995368, 0, 0.096141, 84.2414, 34.1315, -80.4272)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("30_vklu3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.2419, 40.3804, -56.0171)
-health = 250
-
 [node name="Projectiles" type="Node3D" parent="."]
 
 [node name="Cars" type="Node3D" parent="."]
@@ -1100,6 +1096,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11431, -0.516918, 0.032941
 
 [node name="Openable Door" parent="Gourd Goals" instance=ExtResource("151_5m3wu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.9821, 0.0932655, -25.122)
+Door_open_angle = 95.0
 
 [node name="Lights" type="Node3D" parent="."]
 transform = Transform3D(0.992036, 0, -0.125957, 0, 1, 0, 0.125957, 0, 0.992036, 31.9872, 37.4115, -73.1878)
@@ -1114,6 +1111,9 @@ Door_open_angle = -110.0
 
 [node name="Gary" parent="." instance=ExtResource("153_5bfla")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 20.2254, 34.5052, -73.6395)
+
+[node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3691, 36.0911, -56.5471)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

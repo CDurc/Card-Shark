@@ -23,12 +23,12 @@ var time_since_moved: float = 0.0
 
 func _ready():
 	#TODO make random
+	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task"), "time": 16})
+	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task"), "time": 16})
 	goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot", "task": Callable(self, "open_door")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/SeedySitSpot1", "task": Callable(self, "sit"), "time": 6})
 	goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": Callable(self, "open_door_exit")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit"), "time": 10})
-	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task")})
-	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task")})
 	goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
 	start_next_goal_task()
 	last_position = global_position
@@ -124,11 +124,23 @@ func _delayed_task_runner(delay_time: float, goal_task) -> void:
 
 
 func punch_task(goal_node: Node3D) -> void:
-	Gen_anime.play("Punch")
-	await get_tree().create_timer(3).timeout
-	Gen_anime.play("Punch")
-	await get_tree().create_timer(3).timeout
+	var task_time: float = float(current_goal_task["time"])
+	var cycles: int = int(floor(task_time / 4.5))
+	for i in range(cycles):
+		await multi_punch()
 	start_next_goal_task()
+
+
+func multi_punch() -> void: #Multipunch takes 4.5 seconds on average
+	var rand_len = randi_range(3,6)
+	Gen_anime.speed_scale = 2.0
+	Gen_anime.play("Punch")
+	await get_tree().create_timer(rand_len).timeout
+	Gen_anime.stop()
+	await get_tree().create_timer(0.5).timeout
+
+
+		
 
 func die(goal_node: Node3D) -> void:
 	await get_tree().create_timer(0.7).timeout
