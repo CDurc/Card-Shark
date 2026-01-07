@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq6mfwyembx1d"
-path.s3tc="res://.godot/imported/Sports Field_Dirt.jpg-905ab57414d60c84880e51254207fbb4.s3tc.ctex"
+uid="uid://c18bfv5gnalv8"
+path.s3tc="res://.godot/imported/WooCorp Tower_Golf-Grass.jpg-40c01aa88e60979dd4223bf79c5c7f8e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
+"md5": "81e3ad19d61049c2a5cb8dbc51423017"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field_Dirt.jpg"
-dest_files=["res://.godot/imported/Sports Field_Dirt.jpg-905ab57414d60c84880e51254207fbb4.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/WooCorp Tower_Golf-Grass.jpg"
+dest_files=["res://.godot/imported/WooCorp Tower_Golf-Grass.jpg-40c01aa88e60979dd4223bf79c5c7f8e.s3tc.ctex"]
 
 [params]
 

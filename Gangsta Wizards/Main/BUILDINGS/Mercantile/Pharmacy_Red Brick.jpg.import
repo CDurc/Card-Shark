@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq6mfwyembx1d"
-path.s3tc="res://.godot/imported/Sports Field_Dirt.jpg-905ab57414d60c84880e51254207fbb4.s3tc.ctex"
+uid="uid://gc645vroqbvo"
+path.s3tc="res://.godot/imported/Pharmacy_Red Brick.jpg-471141630d00c77c8a8f970f8de35394.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
+"md5": "6a4dcb2ed9b04f8c741007c04ae0f124"
 }
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Sports Field_Dirt.jpg"
-dest_files=["res://.godot/imported/Sports Field_Dirt.jpg-905ab57414d60c84880e51254207fbb4.s3tc.ctex"]
+source_file="res://BUILDINGS/Mercantile/Pharmacy_Red Brick.jpg"
+dest_files=["res://.godot/imported/Pharmacy_Red Brick.jpg-471141630d00c77c8a8f970f8de35394.s3tc.ctex"]
 
 [params]
 

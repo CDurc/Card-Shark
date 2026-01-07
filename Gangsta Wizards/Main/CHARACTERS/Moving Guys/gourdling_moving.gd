@@ -23,14 +23,15 @@ var time_since_moved: float = 0.0
 
 func _ready():
 	#TODO make random
-	goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task"), "time": 16})
-	goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task"), "time": 16})
-	goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot", "task": Callable(self, "open_door")})
-	goal_task_queue.append({"goal": $"../Gourd Goals/SeedySitSpot1", "task": Callable(self, "sit"), "time": 6})
-	goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": Callable(self, "open_door_exit")})
-	goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit"), "time": 10})
-	goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
-	start_next_goal_task()
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot3", "task": Callable(self, "sit"), "time": 6})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task"), "time": 16})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task"), "time": 16})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot", "task": Callable(self, "open_door")})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedySitSpot1", "task": Callable(self, "sit"), "time": 6})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": Callable(self, "open_door_exit")})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit"), "time": 10})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
+	#start_next_goal_task()
 	last_position = global_position
 
 func _physics_process(delta):
@@ -111,6 +112,7 @@ func start_next_goal_task():
 	if goal_task_queue.size() == 0:
 		state = "idle"
 		current_goal_task = null
+		print("gourdling is out of tasks")
 		return
 	current_goal_task = goal_task_queue.pop_front()
 	move_to(current_goal_task["goal"].global_position)

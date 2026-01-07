@@ -1,4 +1,4 @@
-[gd_scene load_steps=170 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=173 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -151,7 +151,9 @@
 [ext_resource type="PackedScene" uid="uid://buf4s1n7hpjj2" path="res://DOORS/Openable Sliding Glass Door.tscn" id="150_xycsw"]
 [ext_resource type="PackedScene" uid="uid://bmuvpyol6etx7" path="res://DOORS/Openable Dark Wood Door.tscn" id="151_5m3wu"]
 [ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
+[ext_resource type="Script" path="res://MAP/give_gourds_goals.gd" id="151_w05ur"]
 [ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
+[ext_resource type="PackedScene" uid="uid://sdjdcrkfyvaj" path="res://VEHICLES/Blimp.glb" id="154_djghw"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="154_nu2kt"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
@@ -245,6 +247,14 @@ cell_height = 0.2
 agent_height = 1.0
 agent_radius = 0.6
 agent_max_climb = 0.2
+
+[sub_resource type="Curve3D" id="Curve3D_dlcoh"]
+bake_interval = 350.34
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 352.249, 0, 122.026, 0, 0, 0, 0, 0, 0, 469.066, 0, 372.58, 0, 0, 0, 0, 0, 0, 469.065, 0, 951.81, 0, 0, 0, 0, 0, 0, 155.432, 0, 1206.98, 0, 0, 0, 0, 0, 0, -397.457, 0, 999.822, 0, 0, 0, 0, 0, 0, -542.284, 0, 717.618, 0, 0, 0, 0, 0, 0, -295.924, 0, 124.51, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
 
 [node name="RootNode" type="Node3D"]
 
@@ -464,7 +474,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -266.511, 31.0953, -125.236)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9829, 32.1172, -261.479)
 
 [node name="Sports Field" parent="MAP" instance=ExtResource("72_vtnwg")]
-transform = Transform3D(0.0982948, 0, 0.995158, 0, 1, 0, -0.995158, 0, 0.0982948, 219.201, 7.0543, 231.498)
+transform = Transform3D(0.134366, 0, 0.990932, 0, 1, 0, -0.990932, 0, 0.134366, 272.451, 7.0543, 263.792)
 
 [node name="Boardwalk2" parent="MAP" instance=ExtResource("73_xrr63")]
 transform = Transform3D(-0.190021, 0, 0.98178, 0, 1, 0, -0.98178, 0, -0.190021, -69.4607, 0.205392, 454.472)
@@ -1004,6 +1014,7 @@ transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 
 
 [node name="Gourd Goals" type="Node3D" parent="."]
 transform = Transform3D(0.994624, 0, -0.103556, 0, 1, 0, 0.103556, 0, 0.994624, 42.2147, 34.0119, -48.8296)
+script = ExtResource("151_w05ur")
 
 [node name="Bush Puncher" type="Node3D" parent="Gourd Goals"]
 transform = Transform3D(0.460386, 0, -0.887719, 0, 1, 0, 0.887719, 0, 0.460386, 1.35524, -0.257317, 13.5144)
@@ -1030,6 +1041,15 @@ transform = Transform3D(-0.999345, 0, 0.0361903, 0, 1, 0, -0.0361903, 0, -0.9993
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.331, -0.082)
 
 [node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807144, -0.39616, -0.0817994)
+
+[node name="SitSpot3" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.998863, 0, -0.0476817, 0, 1, 0, 0.0476817, 0, -0.998863, -27.8321, -0.497734, 11.4783)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SitSpot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.331, -0.082)
+
+[node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807144, -0.39616, -0.0817994)
 
 [node name="SitSpot2" type="Node3D" parent="Gourd Goals"]
@@ -1114,6 +1134,21 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 20.2254, 34.5052, -73.6
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3691, 36.0911, -56.5471)
+
+[node name="OnARail" type="Node3D" parent="."]
+
+[node name="Path3D" type="Path3D" parent="OnARail"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216.775, 302.315, -510.86)
+curve = SubResource("Curve3D_dlcoh")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="OnARail/Path3D"]
+transform = Transform3D(-0.327336, 0, -0.944908, 0, 1, 0, 0.944908, 0, -0.327336, 107.529, 0, 37.2502)
+progress = 121.21
+script = ExtResource("99_1skxp")
+mps = 50
+
+[node name="Blimp" parent="OnARail/Path3D/PathFollow3D" instance=ExtResource("154_djghw")]
+transform = Transform3D(0.000852585, 0, 1, 0, 1, 0, -1, 0, 0.000852585, 3.18915, -13.8586, 4.43268)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

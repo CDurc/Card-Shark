@@ -36,40 +36,7 @@ _subresources={
 "PATH:1 - PHYS/Base": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_003": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_004": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_005": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_006": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cube_007": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cylinder": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Cylinder_001": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Pillars": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Pillars_001": {
 "generate/physics": true
 }
 }
