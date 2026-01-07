@@ -124,6 +124,35 @@ func _delayed_task_runner(delay_time: float, goal_task) -> void:
 	state = "performing_task"
 	await goal_task["task"].call(goal_task["goal"])
 
+func fight_task(goal_node: Node3D) -> void:
+	goal_node.set_meta("Occupied", true)
+	var par = goal_node.get_parent()
+	var children = par.get_children()
+	
+	while true:
+		var all_occupied = true
+		for child in children:
+			if not child.get_meta("Occupied", false): #If occupied==false or if occupied doesnt exist
+				all_occupied = false
+				break
+		if all_occupied:
+			break
+		await get_tree().process_frame
+	print("All Children Occupied!")
+	
+	#self.reparent(goal_node)
+	#await get_tree().process_frame
+	#var other_gourd: Node
+	#for child in children:
+	#	if child != goal_node:
+	#		other_gourd = child.get_child(1)
+	#look_at(other_gourd.global_position)
+	#self.global_rotation_degrees.y += 180
+	var rand_delay = randf_range(0.1,0.3) #Slight delay to desync the punches
+	await get_tree().create_timer(rand_delay).timeout
+	#self.reparent($"..")
+	punch_task(goal_node)
+
 
 func punch_task(goal_node: Node3D) -> void:
 	var task_time: float = float(current_goal_task["time"])

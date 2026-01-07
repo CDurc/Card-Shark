@@ -1022,6 +1022,23 @@ transform = Transform3D(0.460386, 0, -0.887719, 0, 1, 0, 0.887719, 0, 0.460386, 
 [node name="Bush" type="Node3D" parent="Gourd Goals/Bush Puncher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.320743, 0, -0.0408978)
 
+[node name="GourdFightSpot1" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.0423637, 0, -0.999102, 0, 1, 0, 0.999102, 0, -0.0423637, -21.3394, -0.257317, -28.9463)
+
+[node name="FightSpot1" type="Node3D" parent="Gourd Goals/GourdFightSpot1"]
+transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, 0, 0, 0)
+metadata/Occupied = false
+
+[node name="Look" type="Node3D" parent="Gourd Goals/GourdFightSpot1/FightSpot1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22358, 0, 0.425471)
+
+[node name="FightSpot2" type="Node3D" parent="Gourd Goals/GourdFightSpot1"]
+transform = Transform3D(-1, 0, -0.0004884, 0, 1, 0, 0.0004884, 0, -1, 0.670227, 0, 0.000131607)
+metadata/Occupied = false
+
+[node name="Look" type="Node3D" parent="Gourd Goals/GourdFightSpot1/FightSpot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05949, 0, -0.478779)
+
 [node name="AnotherGoal" type="Node3D" parent="Gourd Goals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9144, -0.257317, 2.87102)
 
@@ -1142,7 +1159,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216.775, 302.315, -510.86)
 curve = SubResource("Curve3D_dlcoh")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="OnARail/Path3D"]
-transform = Transform3D(-0.327336, 0, -0.944908, 0, 1, 0, 0.944908, 0, -0.327336, 107.529, 0, 37.2502)
+transform = Transform3D(-0.327335, 0, -0.944908, 0, 1, 0, 0.944908, 0, -0.327335, 107.529, 0, 37.2501)
 progress = 121.21
 script = ExtResource("99_1skxp")
 mps = 50
