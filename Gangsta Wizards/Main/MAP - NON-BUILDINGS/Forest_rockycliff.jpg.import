@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7t3kkyj81upp"
-path.s3tc="res://.godot/imported/Hospital_grass.jpg-9ea4df906c6b42bb7cc1d7a0eb9f6eb5.s3tc.ctex"
+uid="uid://djpvkd0b3rsyn"
+path.s3tc="res://.godot/imported/Forest_rockycliff.jpg-9c381daf52024d2597c44436d133e33e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "a3cae00147220c0b4471e706ac3e06da"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Institutional/Hospital_grass.jpg"
-dest_files=["res://.godot/imported/Hospital_grass.jpg-9ea4df906c6b42bb7cc1d7a0eb9f6eb5.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Forest_rockycliff.jpg"
+dest_files=["res://.godot/imported/Forest_rockycliff.jpg-9c381daf52024d2597c44436d133e33e.s3tc.ctex"]
 
 [params]
 

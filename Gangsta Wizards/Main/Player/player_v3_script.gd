@@ -566,8 +566,6 @@ func trigger_ragdoll(impulse: Vector3):
 	get_tree().root.add_child(ragdoll)
 	
 	
-
-
 	
 	#followhip.position = hip.position #Properly position parent node
 	#var dir = impulse.normalized()
@@ -622,10 +620,10 @@ func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
-		#trigger_ragdoll(Vector3(0,0,0))
+		trigger_ragdoll(Vector3(109.8797, 1000, -993.9449))
 		#straight_laser_spell()
 		#flush_spell()
-		basking_house_spell()
+		#basking_house_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
