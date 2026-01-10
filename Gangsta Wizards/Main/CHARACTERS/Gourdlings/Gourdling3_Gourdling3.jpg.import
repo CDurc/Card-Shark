@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5wd85hyhq7js"
-path.s3tc="res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"
+uid="uid://c2vci5mlxb1g6"
+path.s3tc="res://.godot/imported/Gourdling3_Gourdling3.jpg-34c7b71f7346c6758aa0f0e1d55c0095.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "efff23dc5389afc8fcd71a7e503574b0"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Casino_grass.jpg"
-dest_files=["res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"]
+source_file="res://CHARACTERS/Gourdlings/Gourdling3_Gourdling3.jpg"
+dest_files=["res://.godot/imported/Gourdling3_Gourdling3.jpg-34c7b71f7346c6758aa0f0e1d55c0095.s3tc.ctex"]
 
 [params]
 

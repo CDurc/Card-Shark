@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://duroubb2kdtmv"
-path="res://.godot/imported/Volcano.glb-0a2c59a7437351bc9f43bb04937261cc.scn"
+uid="uid://b65n8uq1f46e8"
+path="res://.godot/imported/Door - Porthole.glb-6edc9a5633adad6f420aa777350ec53f.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Volcano.glb"
-dest_files=["res://.godot/imported/Volcano.glb-0a2c59a7437351bc9f43bb04937261cc.scn"]
+source_file="res://DOORS/Door - Porthole.glb"
+dest_files=["res://.godot/imported/Door - Porthole.glb-6edc9a5633adad6f420aa777350ec53f.scn"]
 
 [params]
 
@@ -30,19 +30,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Sign": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Support": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Volcano": {
-"generate/physics": true
-}
-}
-}
+import_script/path=""
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

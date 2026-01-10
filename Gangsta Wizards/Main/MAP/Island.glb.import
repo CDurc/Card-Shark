@@ -36,6 +36,12 @@ _subresources={
 "PATH:1 - PHYS/Beach Caves Entrance": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Casino Ground": {
 "generate/physics": true
 },

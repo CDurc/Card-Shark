@@ -33,35 +33,20 @@ animation/import_rest_as_RESET=false
 import_script/path="res://MAP/post_import_settings.gd"
 _subresources={
 "nodes": {
-"PATH:1 - Phys/Ext Walls": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Overhang": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Overhang": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Pillar": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Pillar": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Pillar_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Spotlights": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Stairs": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - Phys/Stairs_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
 }
 }
 }

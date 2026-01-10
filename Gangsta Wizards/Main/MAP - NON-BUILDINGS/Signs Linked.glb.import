@@ -33,49 +33,13 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Billboard": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/BillboardBack": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/BillboardBack_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/BillboardBack_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/BillboardBack_004": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Board": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Highway Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Sign_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Stand_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Stand_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Stand_003": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Stand_004": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Street Sign Tops": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Supports": {
 "generate/physics": true
 }
 }

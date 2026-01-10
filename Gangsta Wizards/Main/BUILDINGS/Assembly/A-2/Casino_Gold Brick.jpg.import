@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5wd85hyhq7js"
-path.s3tc="res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"
+uid="uid://dkm8johg0bjwk"
+path.s3tc="res://.godot/imported/Casino_Gold Brick.jpg-4cb0141f5bfd800798b75f59053685b2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "a3d77295f4f6b196271c7c1b39f7f48f"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Casino_grass.jpg"
-dest_files=["res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Casino_Gold Brick.jpg"
+dest_files=["res://.godot/imported/Casino_Gold Brick.jpg-4cb0141f5bfd800798b75f59053685b2.s3tc.ctex"]
 
 [params]
 

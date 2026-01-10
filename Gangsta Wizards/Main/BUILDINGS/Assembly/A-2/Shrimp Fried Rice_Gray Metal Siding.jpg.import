@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5wd85hyhq7js"
-path.s3tc="res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"
+uid="uid://bqd2wjtwtuckp"
+path.s3tc="res://.godot/imported/Shrimp Fried Rice_Gray Metal Siding.jpg-e567e2beba9e2f927f280b94710bd0b8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "90ebb421d4442f5dba591614986c6fcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Casino_grass.jpg"
-dest_files=["res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Shrimp Fried Rice_Gray Metal Siding.jpg"
+dest_files=["res://.godot/imported/Shrimp Fried Rice_Gray Metal Siding.jpg-e567e2beba9e2f927f280b94710bd0b8.s3tc.ctex"]
 
 [params]
 

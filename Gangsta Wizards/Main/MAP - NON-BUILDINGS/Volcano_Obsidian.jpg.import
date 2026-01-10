@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5wd85hyhq7js"
-path.s3tc="res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"
+uid="uid://66mhps5ltefb"
+path.s3tc="res://.godot/imported/Volcano_Obsidian.jpg-63df336107cf5ab3e5ac2af5210591f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "ab8dcd1ddeedcd72ccb064c549d635b0"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Casino_grass.jpg"
-dest_files=["res://.godot/imported/Casino_grass.jpg-38a5fda79426efc0aea0c10cd5627e27.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Volcano_Obsidian.jpg"
+dest_files=["res://.godot/imported/Volcano_Obsidian.jpg-63df336107cf5ab3e5ac2af5210591f6.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://copf0mokrtkru"
-path="res://.godot/imported/BBQ Billboard.glb-4f4728e187a5dc527d85e15bd593886b.scn"
+uid="uid://dbi5gsl13trcv"
+path="res://.godot/imported/Gourdling4.glb-764b6c26a3bdd9337fa36f1ad282b14e.scn"
 
 [deps]
 
-source_file="res://SIGNS/BBQ Billboard.glb"
-dest_files=["res://.godot/imported/BBQ Billboard.glb-4f4728e187a5dc527d85e15bd593886b.scn"]
+source_file="res://CHARACTERS/Gourdlings/Gourdling4.glb"
+dest_files=["res://.godot/imported/Gourdling4.glb-764b6c26a3bdd9337fa36f1ad282b14e.scn"]
 
 [params]
 
