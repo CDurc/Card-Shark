@@ -537,9 +537,11 @@ func flatten():
 	#Move cam quickly?
 
 	
-
+var can_rag = true
 func trigger_ragdoll(impulse: Vector3):
+	if can_rag == false: return
 	
+	can_rag = false
 	var ragdoll = ragdoll_glb.instantiate()
 	ragdoll.global_position = self.global_position
 	#ragdoll.global_rotation = self.global_rotation + Vector3(0,90,0)
@@ -564,6 +566,8 @@ func trigger_ragdoll(impulse: Vector3):
 	phys.active = true
 	$Collider.disabled = true
 	get_tree().root.add_child(ragdoll)
+	
+	await get_tree().physics_frame
 	
 	
 	
@@ -598,6 +602,8 @@ func trigger_ragdoll(impulse: Vector3):
 	#Get back up	
 	#get_tree().paused = !get_tree().paused #flip the boolean
 	await wait_and_get_up(ragdoll)
+	await get_tree().create_timer(0.5).timeout
+	can_rag = true
 
 
 
@@ -620,7 +626,7 @@ func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
-		trigger_ragdoll(Vector3(109.8797, 1000, -993.9449))
+		trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
 		#straight_laser_spell()
 		#flush_spell()
 		#basking_house_spell()

@@ -15,4 +15,4 @@ func _on_body_entered(body):
 		
 		var launch_vector = (horizontal_force + vertical_force)
 		print("LAUNCH          ",launch_vector)
-		player.trigger_ragdoll(horizontal_force + vertical_force)
+		player.call_deferred("trigger_ragdoll", launch_vector)

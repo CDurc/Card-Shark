@@ -30,8 +30,17 @@ func _ready():
 		{"goal": $"../Gourd Goals/AnotherGoal", "task": "punch_task", "time": 12},
 		[
 			{"goal": $"../Gourd Goals/SeedyDoorSpot", "task": "open_door"},
-			#SIT AT THE BAR
 			{"goal": $"../Gourd Goals/SeedySitSpot1", "task": "sit", "time": 40},
+			{"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": "open_door_exit"},
+		],
+				[
+			{"goal": $"../Gourd Goals/SeedyDoorSpot", "task": "open_door"},
+			{"goal": $"../Gourd Goals/SeedySitSpot2", "task": "sit", "time": 40},
+			{"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": "open_door_exit"},
+		],
+				[
+			{"goal": $"../Gourd Goals/SeedyDoorSpot", "task": "open_door"},
+			{"goal": $"../Gourd Goals/SeedySitSpot3", "task": "sit", "time": 40},
 			{"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": "open_door_exit"},
 		],
 		{"goal": $"../Gourd Goals/SitSpot2", "task": "sit", "time": 20},

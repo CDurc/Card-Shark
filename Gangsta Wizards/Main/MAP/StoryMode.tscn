@@ -1096,6 +1096,24 @@ transform = Transform3D(0.996216, 0, -0.0869128, 0, 1, 0, 0.0869128, 0, 0.996216
 [node name="Sit" type="Node3D" parent="Gourd Goals/SeedySitSpot1"]
 transform = Transform3D(0.999934, 0, -0.0114668, 0, 1, 0, 0.0114668, 0, 0.999934, 1.31452, -0.00512695, -0.644807)
 
+[node name="SeedySitSpot2" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.0795374, 0, 0.996831, 0, 1, 0, -0.996831, 0, -0.0795374, -38.6951, -0.242054, -25.9186)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SeedySitSpot2"]
+transform = Transform3D(0.996216, 0, -0.0869128, 0, 1, 0, 0.0869128, 0, 0.996216, 2.2752, -0.212002, -0.733563)
+
+[node name="Sit" type="Node3D" parent="Gourd Goals/SeedySitSpot2"]
+transform = Transform3D(0.999934, 0, -0.0114668, 0, 1, 0, 0.0114668, 0, 0.999934, 1.31452, -0.00512695, -0.644807)
+
+[node name="SeedySitSpot3" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.0728374, 0, 0.997343, 0, 1, 0, -0.997343, 0, -0.0728374, -41.1526, -0.242054, -25.8108)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SeedySitSpot3"]
+transform = Transform3D(0.996216, 0, -0.0869128, 0, 1, 0, 0.0869128, 0, 0.996216, 2.2752, -0.212002, -0.733563)
+
+[node name="Sit" type="Node3D" parent="Gourd Goals/SeedySitSpot3"]
+transform = Transform3D(0.999934, 0, -0.0114668, 0, 1, 0, 0.0114668, 0, 0.999934, 1.31452, -0.00512695, -0.644807)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Gourd Goals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0410567, 2.35952, 4.65661e-10)
 navigation_mesh = SubResource("NavigationMesh_nwkyl")
@@ -1159,7 +1177,7 @@ Door_open_angle = -110.0
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 20.2254, 34.5052, -73.6395)
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3691, 36.0911, -56.5471)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.8227, 56.343, -59.5698)
 
 [node name="OnARail" type="Node3D" parent="."]
 

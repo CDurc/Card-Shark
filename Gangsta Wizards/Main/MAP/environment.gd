@@ -37,6 +37,6 @@ func _process(delta: float) -> void:
 	
 	print_timer += delta
 	if print_timer >= 1.0:
-		print("energy is ", energy)
-		print("time is ", time)
+		#print("energy is ", energy)
+		#print("time is ", time)
 		print_timer = 0
