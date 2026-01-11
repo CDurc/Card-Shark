@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8awn0bh85ra1"
+uid="uid://1qqdnpsd0pyp"
 path.s3tc="res://.godot/imported/University_Dirt.jpg-d572d77a0a1258aebfc55508fb58dde8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
 }
 
 [deps]
