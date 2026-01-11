@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div1iqrl365dg"
-path.s3tc="res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"
+uid="uid://dogl0vko1vnmc"
+path.s3tc="res://.godot/imported/Mart_Dirt.jpg-522b12c20f4524df14b20b28a1fb627b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "e2f5fdf84d322924d582fc8d69d1e42d"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/News Building_grass.jpg"
-dest_files=["res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"]
+source_file="res://BUILDINGS/Mercantile/Mart_Dirt.jpg"
+dest_files=["res://.godot/imported/Mart_Dirt.jpg-522b12c20f4524df14b20b28a1fb627b.s3tc.ctex"]
 
 [params]
 

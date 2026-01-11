@@ -1,4 +1,4 @@
-[gd_scene load_steps=202 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=215 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -138,19 +138,27 @@
 [ext_resource type="PackedScene" uid="uid://sxuic48dj761" path="res://BUILDINGS/Business/Astro Building.glb" id="140_0aabl"]
 [ext_resource type="PackedScene" uid="uid://d2nvts8va8aqk" path="res://DOORS/Openable Dark Brown Metal Door.tscn" id="140_44gu0"]
 [ext_resource type="PackedScene" uid="uid://lj2bkq01ff7b" path="res://DOORS/Openable Dark Wood Duo.tscn" id="141_frmr1"]
+[ext_resource type="PackedScene" uid="uid://vysjfu4ex6ud" path="res://VEHICLES/80s Car 2.glb" id="144_bhric"]
+[ext_resource type="PackedScene" uid="uid://1n8m35ph87gn" path="res://VEHICLES/Bullet Train - Front.glb" id="144_khr1m"]
 [ext_resource type="PackedScene" uid="uid://7qhvl4d07pjt" path="res://MAP - NON-BUILDINGS/Big Tree Area.glb" id="144_kprpg"]
 [ext_resource type="PackedScene" uid="uid://cy85r304h02hx" path="res://MAP - NON-BUILDINGS/Hiding Place.glb" id="145_2y1o6"]
+[ext_resource type="PackedScene" uid="uid://dw3b4umnhl6yq" path="res://VEHICLES/Bullet Train - Car.glb" id="145_08qt1"]
+[ext_resource type="PackedScene" uid="uid://jwrk1j2atukr" path="res://VEHICLES/80s Car.glb" id="145_coi4w"]
 [ext_resource type="PackedScene" uid="uid://bjcyckvth2l43" path="res://CHARACTERS/Moving Guys/gourdling moving.tscn" id="146_pyrg3"]
 [ext_resource type="PackedScene" uid="uid://ckatfnch8hoyc" path="res://DOORS/Openable Storefront Bars Duo.tscn" id="147_it17w"]
+[ext_resource type="PackedScene" uid="uid://c3742ykvsgmy3" path="res://VEHICLES/Box Truck - Long.glb" id="147_vbaep"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
+[ext_resource type="PackedScene" uid="uid://bi2ujdxus2g3t" path="res://VEHICLES/Box Truck - Moonview.glb" id="148_8dh3i"]
 [ext_resource type="PackedScene" uid="uid://bowjekmxrtna2" path="res://DOORS/Openable Light Brown Metal Door.tscn" id="148_irqwt"]
 [ext_resource type="PackedScene" uid="uid://dwr8ag64r23ae" path="res://VEHICLES/Weinermobile.glb" id="148_lui7b"]
 [ext_resource type="Script" path="res://MAP/environment.gd" id="149_1fhlb"]
 [ext_resource type="PackedScene" uid="uid://bd2mowq8b4qkn" path="res://DOORS/Openable Wood Door - Steel Handle.tscn" id="149_bl4xi"]
+[ext_resource type="PackedScene" uid="uid://crils5ycru35h" path="res://VEHICLES/Box Truck.glb" id="149_n1lbr"]
 [ext_resource type="PackedScene" uid="uid://buf4s1n7hpjj2" path="res://DOORS/Openable Sliding Glass Door.tscn" id="150_xycsw"]
 [ext_resource type="PackedScene" uid="uid://bmuvpyol6etx7" path="res://DOORS/Openable Dark Wood Door.tscn" id="151_5m3wu"]
 [ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
 [ext_resource type="Script" path="res://MAP/give_gourds_goals.gd" id="151_w05ur"]
+[ext_resource type="Script" path="res://MAP/car_flatten.gd" id="152_hbeiv"]
 [ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
 [ext_resource type="PackedScene" uid="uid://sdjdcrkfyvaj" path="res://VEHICLES/Blimp.glb" id="154_djghw"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="154_nu2kt"]
@@ -184,6 +192,7 @@
 [ext_resource type="AudioStream" uid="uid://dkkvvy81xqiue" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 28.wav" id="182_rb6jw"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
+bake_interval = 20.0
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, -0.397842, 0, 0, 0, 0, 0, 0, 20, 0, -0.8, 0, 0, 0, 0, 0, 0, 40, 0, -0.5, 0, 0, 0, 0, 0, 0, 60, 0, -0.3, 0, 0, 0, 0, 0, 0, 79.7, 0, 0.2, 0, 0, 0, 0, 0, 0, 95, 0, 6, 0, 0, 0, 0, 0, 0, 141, 0, 22.7, 0, 0, 0, 0, 0, 0, 171.013, 0, 21.6171, 0, 0, 0, 0, 0, 0, 204.147, 0, -3.27246, 0, 0, 0, 0, 0, 0, 235.055, 0, 1.55966, 0, 0, 0, 0, 0, 0, 254.068, 0, -26.7957, 0, 0, 0, 0, 0, 0, 242.795, 0, -92.9894, 0, 0, 0, 0, 0, 0, 262.03, 0, -140.981, 0, 0, 0, 0, 0, 0, 274.819, 0, -232.572, 0, 0, 0, 0, 0, 0, 252.289, 0, -268.47, 0, 0, 0, 0, 0, 0, 188.443, 0, -291.302, 0, 0, 0, 0, 0, 0, 184.745, 0, -302.377, 0, 0, 0, 0, 0, 0, 192.836, 0, -370.944, 0, 0, 0, 0, 0, 0, 201.862, 0, -436.316, 0, 0, 0, 0, 0, 0, 192.691, 0, -485.259, 0, 0, 0, 0, 0, 0, 127.485, 0, -537.624, 0, 0, 0, 0, 0, 0, 73.7388, 0, -617.192, 0, 0, 0, 0, 0, 0, 38.0324, 0, -631.879, 0, 0, 0, 0, 0, 0, 8.70348, 0, -612.803, 0, 0, 0, 0, 0, 0, -41.3475, 0, -551, 0, 0, 0, 0, 0, 0, -70.984, 0, -516.886, 0, 0, 0, 0, 0, 0, -123.424, 0, -460.074, 0, 0, 0, 0, 0, 0, -127.293, 0, -433.972, 0, 0, 0, 0, 0, 0, -120.151, 0, -406.373, 0, 0, 0, 0, 0, 0, -62.0944, 0, -311.074, 0, 0, 0, 0, 0, 0, -43.4675, 0, -263.809, 0, 0, 0, 0, 0, 0, -42.4876, 0, -218.559, 0, 0, 0, 0, 0, 0, -79.8552, 0, -220.113, 0, 0, 0, 0, 0, 0, -122.982, 0, -223.159, 0, 0, 0, 0, 0, 0, -156.752, 0, -242.536, 0, 0, 0, 0, 0, 0, -195.529, 0, -263.541, 0, 0, 0, 0, 0, 0, -228.243, 0, -263.105, 0, 0, 0, 0, 0, 0, -248.993, 0, -247.608, 0, 0, 0, 0, 0, 0, -284.512, 0, -207.497, 0, 0, 0, 0, 0, 0, -275.867, 0, -169.706, 0, 0, 0, 0, 0, 0, -291.599, 0, -130.281, 0, 0, 0, 0, 0, 0, -315.716, 0, -103.183, 0, 0, 0, 0, 0, 0, -314.308, 0, -55.0527, 0, 0, 0, 0, 0, 0, -258.132, 0, 48.0223, 0, 0, 0, 0, 0, 0, -230.02, 0, 56.5573, 0, 0, 0, 0, 0, 0, -193.402, 0, 50.1691, 0, 0, 0, 0, 0, 0, -133.036, 0, 50, 0, 0, 0, 0, 0, 0, -96.601, 0, 39.6005, 0, 0, 0, 0, 0, 0, -29.0201, 0, 1.48563, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -193,7 +202,17 @@ point_count = 51
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1vja"]
 size = Vector3(5.53394, 2, 3.58155)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mt313"]
+size = Vector3(25.9103, 4.91058, 3.58155)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqpyh"]
+size = Vector3(19.9322, 4.91058, 3.58155)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7nrm4"]
+size = Vector3(5.85779, 2, 2.73273)
+
 [sub_resource type="Curve3D" id="Curve3D_2x8is"]
+bake_interval = 20.0
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, -0.397842, 0, 0, 0, 0, 0, 0, 20, 0, -0.8, 0, 0, 0, 0, 0, 0, 40, 0, -0.5, 0, 0, 0, 0, 0, 0, 60, 0, -0.3, 0, 0, 0, 0, 0, 0, 79.7, 0, -0.0733032, 0, 0, 0, 0, 0, 0, 95, 0, 7.34091, 0, 0, 0, 0, 0, 0, 131.286, 0, 22.7, 0, 0, 0, 0, 0, 0, 171.013, 0, 21.6171, 0, 0, 0, 0, 0, 0, 205.001, 0, -2.4173, 0, 0, 0, 0, 0, 0, 235.563, 0, 2.22655, 0, 0, 0, 0, 0, 0, 257.426, 0, -26.7957, 0, 0, 0, 0, 0, 0, 246.128, 0, -93.8812, 0, 0, 0, 0, 0, 0, 264.841, 0, -142.346, 0, 0, 0, 0, 0, 0, 277.763, 0, -236.486, 0, 0, 0, 0, 0, 0, 254.337, 0, -273.802, 0, 0, 0, 0, 0, 0, 188.868, 0, -299.193, 0, 0, 0, 0, 0, 0, 188.116, 0, -308.085, 0, 0, 0, 0, 0, 0, 195.065, 0, -370.944, 0, 0, 0, 0, 0, 0, 203.896, 0, -439.773, 0, 0, 0, 0, 0, 0, 195.908, 0, -488.403, 0, 0, 0, 0, 0, 0, 132.716, 0, -538.785, 0, 0, 0, 0, 0, 0, 74.3546, 0, -623.746, 0, 0, 0, 0, 0, 0, 39.8249, 0, -638.891, 0, 0, 0, 0, 0, 0, 6.59718, 0, -617.744, 0, 0, 0, 0, 0, 0, -43.8465, 0, -556.24, 0, 0, 0, 0, 0, 0, -73.1345, 0, -520.985, 0, 0, 0, 0, 0, 0, -127.072, 0, -463.266, 0, 0, 0, 0, 0, 0, -130.199, 0, -433.972, 0, 0, 0, 0, 0, 0, -122.974, 0, -406.373, 0, 0, 0, 0, 0, 0, -67.0359, 0, -314.957, 0, 0, 0, 0, 0, 0, -46.6342, 0, -263.809, 0, 0, 0, 0, 0, 0, -45.5912, 0, -224.641, 0, 0, 0, 0, 0, 0, -79.8552, 0, -224.597, 0, 0, 0, 0, 0, 0, -120.166, 0, -228.003, 0, 0, 0, 0, 0, 0, -153.225, 0, -247.268, 0, 0, 0, 0, 0, 0, -195.529, 0, -268.367, 0, 0, 0, 0, 0, 0, -229.957, 0, -267.917, 0, 0, 0, 0, 0, 0, -252.774, 0, -251.142, 0, 0, 0, 0, 0, 0, -287.418, 0, -210.853, 0, 0, 0, 0, 0, 0, -279.045, 0, -171.901, 0, 0, 0, 0, 0, 0, -296.018, 0, -131.066, 0, 0, 0, 0, 0, 0, -318.704, 0, -106.824, 0, 0, 0, 0, 0, 0, -318.612, 0, -57.0421, 0, 0, 0, 0, 0, 0, -259.674, 0, 48.9122, 0, 0, 0, 0, 0, 0, -230.02, 0, 57.2779, 0, 0, 0, 0, 0, 0, -193.402, 0, 50.8331, 0, 0, 0, 0, 0, 0, -129.573, 0, 50.4507, 0, 0, 0, 0, 0, 0, -96.601, 0, 40.1637, 0, 0, 0, 0, 0, 0, -27.5541, 0, 1.92114, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -207,6 +226,7 @@ size = Vector3(6, 2, 2.2)
 size = Vector3(6.07629, 2, 4.34894)
 
 [sub_resource type="Curve3D" id="Curve3D_m077f"]
+bake_interval = 20.0
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -0.00531006, 0, 0, 0, 0, 0, 0, 10, 0, -0.519058, 0, 0, 0, 0, 0, 0, 20, 0, -0.245117, 0, 0, 0, 0, 0, 0, 40, 0, -0.348145, 0, 0, 0, 0, 0, 0, 60, 0, -0.3, 0, 0, 0, 0, 0, 0, 79.7, 0, -0.0733032, 0, 0, 0, 0, 0, 0, 114.131, 0, 17.8645, 0, 0, 0, 0, 0, 0, 131.286, 0, 23.809, 0, 0, 0, 0, 0, 0, 171.013, 0, 22.4582, 0, 0, 0, 0, 0, 0, 206.971, 0, -1.97461, 0, 0, 0, 0, 0, 0, 239.084, 0, 1.74174, 0, 0, 0, 0, 0, 0, 262.636, 0, -29.7563, 0, 0, 0, 0, 0, 0, 250.203, 0, -99.303, 0, 0, 0, 0, 0, 0, 269.339, 0, -146.003, 0, 0, 0, 0, 0, 0, 281.978, 0, -241.106, 0, 0, 0, 0, 0, 0, 258.83, 0, -281.399, 0, 0, 0, 0, 0, 0, 194.244, 0, -305.219, 0, 0, 0, 0, 0, 0, 192.48, 0, -314.311, 0, 0, 0, 0, 0, 0, 200.411, 0, -394.921, 0, 0, 0, 0, 0, 0, 208.15, 0, -444.346, 0, 0, 0, 0, 0, 0, 199.372, 0, -495.631, 0, 0, 0, 0, 0, 0, 132.716, 0, -549.586, 0, 0, 0, 0, 0, 0, 79.0267, 0, -630.89, 0, 0, 0, 0, 0, 0, 41.4904, 0, -648.906, 0, 0, 0, 0, 0, 0, 4.85559, 0, -628.4, 0, 0, 0, 0, 0, 0, -61.905, 0, -544.227, 0, 0, 0, 0, 0, 0, -83.0635, 0, -520.985, 0, 0, 0, 0, 0, 0, -131.633, 0, -471.155, 0, 0, 0, 0, 0, 0, -136.1, 0, -438.856, 0, 0, 0, 0, 0, 0, -126.207, 0, -406.373, 0, 0, 0, 0, 0, 0, -70.9645, 0, -314.957, 0, 0, 0, 0, 0, 0, -53.5323, 0, -273.759, 0, 0, 0, 0, 0, 0, -52.3479, 0, -233.405, 0, 0, 0, 0, 0, 0, -79.8552, 0, -234.173, 0, 0, 0, 0, 0, 0, -120.166, 0, -238.175, 0, 0, 0, 0, 0, 0, -153.225, 0, -256.909, 0, 0, 0, 0, 0, 0, -195.529, 0, -277.546, 0, 0, 0, 0, 0, 0, -229.957, 0, -277.23, 0, 0, 0, 0, 0, 0, -254.101, 0, -261.264, 0, 0, 0, 0, 0, 0, -291.992, 0, -215.99, 0, 0, 0, 0, 0, 0, -283.833, 0, -177.989, 0, 0, 0, 0, 0, 0, -298.183, 0, -140.732, 0, 0, 0, 0, 0, 0, -325.018, 0, -112.557, 0, 0, 0, 0, 0, 0, -323.59, 0, -59.9579, 0, 0, 0, 0, 0, 0, -262.506, 0, 48.6203, 0, 0, 0, 0, 0, 0, -230.02, 0, 57.4842, 0, 0, 0, 0, 0, 0, -193.402, 0, 50.8966, 0, 0, 0, 0, 0, 0, -129.573, 0, 51.2092, 0, 0, 0, 0, 0, 0, -72.7507, 0, 30.6586, 0, 0, 0, 0, 0, 0, -25.2709, 0, -0.251236, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -215,6 +235,12 @@ point_count = 51
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h17jk"]
 size = Vector3(7.08466, 3.30286, 2.4615)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fl4o4"]
+size = Vector3(11.2677, 3.41803, 2.4615)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yhb8o"]
+size = Vector3(6.95956, 3.41803, 2.4615)
 
 [sub_resource type="Gradient" id="Gradient_or2fw"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -525,7 +551,7 @@ transform = Transform3D(0.998716, 0, -0.0506627, 0, 1, 0, 0.0506627, 0, 0.998716
 transform = Transform3D(0.999995, 0, -0.00319394, 0, 1, 0, 0.00319394, 0, 0.999995, -359.067, 34.8577, 255.204)
 
 [node name="Central Park" parent="MAP" instance=ExtResource("82_ot1tw")]
-transform = Transform3D(0.889169, 0, -0.457579, 0, 1, 0, 0.457579, 0, 0.889169, -69.0531, 33.2699, -258.399)
+transform = Transform3D(-0.889416, 0, 0.457098, 0, 1, 0, -0.457098, 0, -0.889416, -69.0531, 33.2699, -258.399)
 
 [node name="Nukehouses" parent="MAP" instance=ExtResource("84_bvjjl")]
 transform = Transform3D(-0.994613, 0, -0.10366, 0, 1, 0, 0.10366, 0, -0.994613, -172.295, 34.1961, -153.445)
@@ -786,8 +812,142 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(0.999991, 0, 1.65775e-07, 0, 1, 0, -1.65775e-07, 0, 0.999991, 0.015501, 0, -0.12561)
 shape = SubResource("BoxShape3D_h1vja")
 
+[node name="BULLET TRAIN 1" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.878029, 0, -0.478527, 0, 1, 0, 0.478527, 0, -0.878029, -277.731, 0, 12.0604)
+progress = 2036.3
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Front" parent="Cars/Cars/Path1/BULLET TRAIN 1" instance=ExtResource("144_khr1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99985, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D"]
+transform = Transform3D(0.999991, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, 0.999991, -0.236923, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_mt313")
+
+[node name="BULLET TRAIN 2" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.878029, 0, -0.478527, 0, 1, 0, 0.478527, 0, -0.878029, -287.213, 0, -5.33637)
+progress = 2015.9
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Car" parent="Cars/Cars/Path1/BULLET TRAIN 2" instance=ExtResource("145_08qt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94446, 0.500133)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, 2.75208, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_pqpyh")
+
+[node name="BULLET TRAIN 3" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.878029, 0, -0.478527, 0, 1, 0, 0.478527, 0, -0.878029, -296.886, 0, -23.0861)
+progress = 1995.5
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Car" parent="Cars/Cars/Path1/BULLET TRAIN 3" instance=ExtResource("145_08qt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94446, 0.500133)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 3/Bullet Train - Car"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 3/Bullet Train - Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, 2.75208, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_pqpyh")
+
+[node name="BULLET TRAIN 4" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.907027, 0, -0.420982, 0, 1, 0, 0.420982, 0, -0.907027, -306.816, 0, -41.2473)
+progress = 1975.1
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Car" parent="Cars/Cars/Path1/BULLET TRAIN 4" instance=ExtResource("145_08qt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94446, 0.500133)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 4/Bullet Train - Car"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 4/Bullet Train - Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, 2.75208, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_pqpyh")
+
+[node name="BULLET TRAIN 5" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.999534, 0, -0.02924, 0, 1, 0, 0.02924, 0, -0.999534, -314.822, 0, -59.3725)
+progress = 1954.7
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Car" parent="Cars/Cars/Path1/BULLET TRAIN 5" instance=ExtResource("145_08qt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94446, 0.500133)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 5/Bullet Train - Car"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 5/Bullet Train - Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, 2.75208, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_pqpyh")
+
+[node name="BULLET TRAIN 6" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.999534, 0, -0.02924, 0, 1, 0, 0.02924, 0, -0.999534, -315.039, 0, -80.0291)
+progress = 1934.3
+script = ExtResource("99_1skxp")
+
+[node name="Bullet Train - Car" parent="Cars/Cars/Path1/BULLET TRAIN 6" instance=ExtResource("145_08qt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94446, 0.500133)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/BULLET TRAIN 6/Bullet Train - Car"]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0615845, 0.2355, 0.244751)
+script = ExtResource("101_bkb02")
+weight = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/BULLET TRAIN 6/Bullet Train - Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, 2.75208, -0.55307, -0.125458)
+shape = SubResource("BoxShape3D_pqpyh")
+
+[node name="80s Green" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.754882, 0, 0.655803, 0, 1, 0, -0.655803, 0, -0.754882, -53.5461, 0, -536.958)
+progress = 1151.51
+script = ExtResource("99_1skxp")
+
+[node name="80s Car 2" parent="Cars/Cars/Path1/80s Green" instance=ExtResource("144_bhric")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.264606, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/80s Green/80s Car 2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/80s Green/80s Car 2/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, -0.146423, 0, -0.340729)
+shape = SubResource("BoxShape3D_7nrm4")
+
+[node name="80s Red" type="PathFollow3D" parent="Cars/Cars/Path1"]
+transform = Transform3D(-0.994291, 0, -0.106347, 0, 1, 0, 0.106347, 0, -0.994291, -275.873, 0, -167.808)
+progress = 1833.7
+script = ExtResource("99_1skxp")
+
+[node name="80s Car" parent="Cars/Cars/Path1/80s Red" instance=ExtResource("145_coi4w")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.254791, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path1/80s Red/80s Car"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319683, -0.140839, 0.299544)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path1/80s Red/80s Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, -0.146423, 0, -0.340729)
+shape = SubResource("BoxShape3D_7nrm4")
+
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.0401816, 0, -0.999151, 0, 1, 0, 0.999151, 0, 0.0401816, 14.9881, 0, -0.598441)
+transform = Transform3D(0.0399659, 0, -0.999161, 0, 1, 0, 0.999161, 0, 0.0399659, 14.9881, 0, -0.632598)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -803,7 +963,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="C3" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.600578, 0, -0.799515, 0, 1, 0, 0.799515, 0, 0.600578, 190.955, 0, 6.63694)
+transform = Transform3D(0.600578, 0, -0.799515, 0, 1, 0, 0.799515, 0, 0.600578, 191.147, 0, 6.49279)
 progress = 200.0
 script = ExtResource("99_1skxp")
 
@@ -823,7 +983,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36757, 32.8967, -193.779)
 curve = SubResource("Curve3D_2x8is")
 
 [node name="C1" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(0.990669, 0, -0.135983, 0, 1, 0, 0.135983, 0, 0.990669, 274.18, 0, -210.381)
+transform = Transform3D(0.990669, 0, -0.135983, 0, 1, 0, 0.135983, 0, 0.990669, 274.202, 0, -210.543)
 progress = 473.398
 script = ExtResource("99_1skxp")
 mps = 100
@@ -840,7 +1000,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.769167, 0, 0.638983, 0, 1, 0, -0.638983, 0, -0.769167, -68.1949, 0, -526.931)
+transform = Transform3D(-0.769167, 0, 0.638983, 0, 1, 0, -0.638983, 0, -0.769167, -68.2868, 0, -526.82)
 progress = 1183.5
 script = ExtResource("99_1skxp")
 mps = 100
@@ -856,8 +1016,42 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
 shape = SubResource("BoxShape3D_h1vja")
 
+[node name="C9" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(0.986072, 0, 0.166066, 0, 1, 0, -0.166066, 0, 0.986072, 249.63, 0, -73.0861)
+progress = 331.657
+script = ExtResource("99_1skxp")
+mps = 100
+
+[node name="Car1" parent="Cars/Cars/Path2/C9" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C9/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C9/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C10" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(-0.997951, 0, -0.063283, 0, 1, 0, 0.063283, 0, -0.997951, -46.154, 0, -246.318)
+progress = 1508.01
+script = ExtResource("99_1skxp")
+mps = 100
+
+[node name="Car1" parent="Cars/Cars/Path2/C10" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 0.0637054, 0.2355, -0.0749798)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C10/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C10/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
 [node name="C3" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(0.446298, 0, 0.894839, 0, 1, 0, -0.894839, 0, 0.446298, -165.994, 0, -253.637)
+transform = Transform3D(0.446298, 0, 0.894839, 0, 1, 0, -0.894839, 0, 0.446298, -165.436, 0, -253.358)
 progress = 1656.89
 script = ExtResource("99_1skxp")
 mps = 100
@@ -873,51 +1067,152 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
 shape = SubResource("BoxShape3D_h1vja")
 
-[node name="C4" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.0149978, 0, -0.999847, 0, 1, 0, 0.999847, 0, -0.0149978, 29.9829, 0, -0.650257)
+[node name="C6" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(-0.852945, 0, -0.521923, 0, 1, 0, 0.521923, 0, -0.852945, -77.911, 0, -332.729)
+progress = 1414.47
+script = ExtResource("99_1skxp")
+mps = 100
+
+[node name="Car2" parent="Cars/Cars/Path2/C6" instance=ExtResource("102_qdw4h")]
+transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C6/Car2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C6/Car2/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C7" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(0.623374, 0, 0.781872, 0, 1, 0, -0.781872, 0, 0.623374, 145.68, 0, -528.449)
+progress = 869.02
+script = ExtResource("99_1skxp")
+mps = 100
+
+[node name="Car2" parent="Cars/Cars/Path2/C7" instance=ExtResource("102_qdw4h")]
+transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C7/Car2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C7/Car2/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C8" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(0.577347, 0, -0.816449, 0, 1, 0, 0.816449, 0, 0.577347, 192.938, 0, 6.11292)
+progress = 202.35
+script = ExtResource("99_1skxp")
+mps = 100
+
+[node name="Car2" parent="Cars/Cars/Path2/C8" instance=ExtResource("102_qdw4h")]
+transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C8/Car2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C8/Car2/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(-0.0149034, 0, -0.999848, 0, 1, 0, 0.999848, 0, -0.0149034, 29.9829, 0, -0.650258)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
 
-[node name="Cybertruck" parent="Cars/Cars/Path2/C4" instance=ExtResource("103_g16e2")]
+[node name="Cybertruck" parent="Cars/Cars/Path2/Cybertruck2" instance=ExtResource("103_g16e2")]
 transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336617, 0)
 
-[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C4/Cybertruck"]
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/Cybertruck2/Cybertruck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
 script = ExtResource("101_bkb02")
+weight = 1.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C4/Cybertruck/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/Cybertruck2/Cybertruck/Area3D"]
 shape = SubResource("BoxShape3D_1b7e0")
 
-[node name="C5" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.150218, 0, -0.988612, 0, 1, 0, 0.988612, 0, -0.150218, 223.987, 0, 0.467617)
+[node name="Cybertruck" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(-0.150218, 0, -0.988612, 0, 1, 0, 0.988612, 0, -0.150218, 224.085, 0, 0.842693)
 progress = 236.699
 script = ExtResource("99_1skxp")
 mps = 100
 
-[node name="Cybertruck" parent="Cars/Cars/Path2/C5" instance=ExtResource("103_g16e2")]
+[node name="Cybertruck" parent="Cars/Cars/Path2/Cybertruck" instance=ExtResource("103_g16e2")]
 transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 0, 0.336617, 0)
 
-[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/C5/Cybertruck"]
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/Cybertruck/Cybertruck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
 script = ExtResource("101_bkb02")
+weight = 1.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/C5/Cybertruck/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/Cybertruck/Cybertruck/Area3D"]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0621643, 0, -0.112427)
 shape = SubResource("BoxShape3D_hryed")
+
+[node name="80s Green" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(0.824234, 0, 0.566183, 0, 1, 0, -0.566183, 0, 0.824234, 119.555, 0, -557.944)
+progress = 909.09
+script = ExtResource("99_1skxp")
+
+[node name="80s Car 2" parent="Cars/Cars/Path2/80s Green" instance=ExtResource("144_bhric")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.264606, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/80s Green/80s Car 2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/80s Green/80s Car 2/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, -0.146423, 0, -0.340729)
+shape = SubResource("BoxShape3D_7nrm4")
+
+[node name="80s Red" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(0.484492, 0, -0.874751, 0, 1, 0, 0.874751, 0, 0.484492, -51.543, 0, 15.2077)
+progress = 2311.83
+script = ExtResource("99_1skxp")
+
+[node name="80s Car" parent="Cars/Cars/Path2/80s Red" instance=ExtResource("145_coi4w")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.254791, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/80s Red/80s Car"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319683, -0.140839, 0.299544)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/80s Red/80s Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, -0.146423, 0, -0.340729)
+shape = SubResource("BoxShape3D_7nrm4")
+
+[node name="80s Red2" type="PathFollow3D" parent="Cars/Cars/Path2"]
+transform = Transform3D(-0.923374, 0, 0.383799, 0, 1, 0, -0.383799, 0, -0.923374, -294.623, 0, -133.299)
+progress = 1887.59
+script = ExtResource("99_1skxp")
+
+[node name="80s Car" parent="Cars/Cars/Path2/80s Red2" instance=ExtResource("145_coi4w")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.254791, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Path2/80s Red2/80s Car"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319683, -0.140839, 0.299544)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Path2/80s Red2/80s Car/Area3D"]
+transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.999991, -0.146423, 0, -0.340729)
+shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="Slow Lane" type="Path3D" parent="Cars/Cars"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36757, 32.8967, -189.331)
 curve = SubResource("Curve3D_m077f")
 
 [node name="C1" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.346009, 0, 0.938181, 0, 0.999996, 0, -0.938175, 0, 0.346011, 250.962, 0, -284.301)
+transform = Transform3D(0.485264, 0, 0.874313, 0, 0.999996, 0, -0.874308, 0, 0.485267, 251.102, 0, -284.343)
 progress = 563.49
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
 [node name="Car1" parent="Cars/Cars/Slow Lane/C1" instance=ExtResource("100_6jwe4")]
-transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, -1.29359, 0.2355, -0.104318)
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
 
 [node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C1/Car1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
@@ -927,14 +1222,116 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
 shape = SubResource("BoxShape3D_h1vja")
 
+[node name="C15" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.871499, 0, -0.490292, 0, 0.999996, 0, 0.490288, 0, -0.871505, -283.26, 0, 11.7301)
+progress = 2078.64
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C15" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C15/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C15/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C16" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.0987876, 0, 0.99506, 0, 0.999996, 0, -0.995053, 0, 0.0987882, -93.8015, 0, -235.558)
+progress = 1591.92
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C16" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C16/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C16/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C8" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.83443, 0, 0.551021, 0, 0.999996, 0, -0.551018, 0, 0.834435, 85.4187, 0, -621.334)
+progress = 987.73
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C8" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C8/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C8/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C12" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.611181, 0, 0.791429, 0, 0.999996, 0, -0.791424, 0, -0.611184, 1.27117, 0, -624.174)
+progress = 1089.41
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C12" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C12/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C12/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C13" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.984341, 0, 0.175973, 0, 0.999996, 0, -0.175972, 0, 0.984346, 260.331, 0, -42.6516)
+progress = 304.718
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C13" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C13/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C13/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C14" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.85582, 0, -0.517174, 0, 0.999996, 0, 0.517171, 0, -0.855825, -114.937, 0, -387.723)
+progress = 1379.98
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C14" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, -1.29359, 0.2355, -0.104318)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C14/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C14/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.995153, 0, -0.0979103, 0, 0.999999, 0, 0.0979104, 0, 0.995152, 196.859, 0, -358.822)
+transform = Transform3D(0.995153, 0, -0.0979103, 0, 0.999999, 0, 0.0979104, 0, 0.995152, 196.865, 0, -358.877)
 progress = 677.93
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
 [node name="Car1" parent="Cars/Cars/Slow Lane/C2" instance=ExtResource("100_6jwe4")]
-transform = Transform3D(-0.0216101, 0, -0.999767, 0, 1, 0, 0.999767, 0, -0.0216101, 1.53451, 0.2355, -0.0431881)
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, 1.53451, 0.2355, -0.0431881)
 
 [node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C2/Car1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
@@ -944,14 +1341,65 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
 shape = SubResource("BoxShape3D_h1vja")
 
+[node name="C9" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.783453, 0, 0.621383, 0, 0.999999, 0, -0.621384, 0, -0.783452, -17.4923, 0, -600.223)
+progress = 1119.14
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C9" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, 1.53451, 0.2355, -0.0431881)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C9/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C9/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C10" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.0553816, 0, 0.998421, 0, 0.999999, 0, -0.998422, 0, 0.0553815, -82.4883, 0, -234.363)
+progress = 1579.96
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C10" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, 1.53451, 0.2355, -0.0431881)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C10/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C10/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
+[node name="C11" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.871508, 0, -0.490293, 0, 0.999999, 0, 0.490293, 0, -0.871507, -285.415, 0, 7.89838)
+progress = 2074.05
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Car1" parent="Cars/Cars/Slow Lane/C11" instance=ExtResource("100_6jwe4")]
+transform = Transform3D(0.0209424, 0, 0.999781, 0, 1, 0, -0.999781, 0, 0.0209424, 1.53451, 0.2355, -0.0431881)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C11/Car1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C11/Car1/Area3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.0155029, 0, -3.05176e-05)
+shape = SubResource("BoxShape3D_h1vja")
+
 [node name="C3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.977675, 0, -0.209911, 0, 0.999998, 0, 0.209911, 0, -0.977675, -291.888, 0, -215.503)
+transform = Transform3D(-0.781501, 0, 0.623833, 0, 0.999998, 0, -0.623833, 0, -0.781501, -292.009, 0, -215.65)
 progress = 1826.0
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
 [node name="Car2" parent="Cars/Cars/Slow Lane/C3" instance=ExtResource("102_qdw4h")]
-transform = Transform3D(0.0256186, 0, -0.999672, 0, 1, 0, 0.999672, 0, 0.0256186, -1.4506, 0, 0.0371745)
+transform = Transform3D(-0.026177, 0, 0.999658, 0, 1, 0, -0.999658, 0, -0.026177, -1.4506, 0, 0.0371745)
 
 [node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C3/Car2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319683, 0, -0.00480652)
@@ -961,52 +1409,281 @@ script = ExtResource("101_bkb02")
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -2.38419e-07, 0, 1, 0.0155334, 0, -0.202728)
 shape = SubResource("BoxShape3D_h1vja")
 
-[node name="C4" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.783358, 0, 0.621311, 0, 0.999997, 0, -0.621308, 0, -0.78336, -12.551, 0, -606.453)
-progress = 1111.08
+[node name="Cybertruck" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.783358, 0, 0.621311, 0, 0.999997, 0, -0.621308, 0, -0.78336, -50.2362, 0, -558.939)
+progress = 1171.69
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
-[node name="Cybertruck" parent="Cars/Cars/Slow Lane/C4" instance=ExtResource("103_g16e2")]
-transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, 1.73119, 0.336617, -2.57969e-08)
+[node name="Cybertruck" parent="Cars/Cars/Slow Lane/Cybertruck" instance=ExtResource("103_g16e2")]
+transform = Transform3D(0.0244321, 0, 0.999701, 0, 1, 0, -0.999701, 0, 0.0244321, 1.353, 0.336617, -0.00924273)
 
-[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C4/Cybertruck"]
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/Cybertruck/Cybertruck"]
 script = ExtResource("101_bkb02")
+weight = 1.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C4/Cybertruck/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/Cybertruck/Cybertruck/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 0.999968, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_1b7e0")
 
-[node name="C5" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.488411, 0, 0.872567, 0, 0.999997, 0, -0.872566, 0, -0.488411, 27.3591, 0, -640.996)
-progress = 1057.28
+[node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.783453, 0, 0.621385, 0, 0.999997, 0, -0.621384, 0, -0.783454, -54.455, 0, -553.57)
+progress = 1178.49
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
-[node name="Cybertruck" parent="Cars/Cars/Slow Lane/C5" instance=ExtResource("103_g16e2")]
-transform = Transform3D(1.49012e-08, 0, -1, 0, 1, 0, 1, 0, 1.49012e-08, -1.25031, 0.336617, 2.23564e-08)
+[node name="Cybertruck" parent="Cars/Cars/Slow Lane/Cybertruck2" instance=ExtResource("103_g16e2")]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, -1.46138, 0.336617, 1.98394e-08)
 
-[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C5/Cybertruck"]
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/Cybertruck2/Cybertruck"]
 script = ExtResource("101_bkb02")
+weight = 1.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C5/Cybertruck/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/Cybertruck2/Cybertruck/Area3D"]
 shape = SubResource("BoxShape3D_1b7e0")
 
-[node name="C6" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.834439, 0, 0.551024, 0, 0.999997, 0, -0.551024, 0, 0.83444, 113.952, 0, -578.002)
+[node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.999472, 0, -0.0271346, 0, 0.999997, 0, 0.0271345, 0, -0.999475, -324.415, 0, -90.341)
+progress = 1965.61
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Cybertruck" parent="Cars/Cars/Slow Lane/Cybertruck3" instance=ExtResource("103_g16e2")]
+transform = Transform3D(0.0244321, 0, 0.999701, 0, 1, 0, -0.999701, 0, 0.0244321, 2.3539, 0.336617, 0.0152185)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/Cybertruck3/Cybertruck"]
+script = ExtResource("101_bkb02")
+weight = 1.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/Cybertruck3/Cybertruck/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999968, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_1b7e0")
+
+[node name="Cybertruck4" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.999589, 0, -0.0271377, 0, 0.999997, 0, 0.0271377, 0, -0.99959, -324.284, 0, -85.5261)
+progress = 1970.24
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Cybertruck" parent="Cars/Cars/Slow Lane/Cybertruck4" instance=ExtResource("103_g16e2")]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, -1.46138, 0.336617, 1.98394e-08)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/Cybertruck4/Cybertruck"]
+script = ExtResource("101_bkb02")
+weight = 1.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/Cybertruck4/Cybertruck/Area3D"]
+shape = SubResource("BoxShape3D_1b7e0")
+
+[node name="Weiner" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.834439, 0, 0.551024, 0, 0.999997, 0, -0.551024, 0, 0.83444, 114.028, 0, -577.886)
 progress = 936.07
 script = ExtResource("99_1skxp")
-mps = 40
+mps = -60
 
-[node name="Weinermobile" parent="Cars/Cars/Slow Lane/C6" instance=ExtResource("148_lui7b")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.40925, 0, -1.99579e-09)
+[node name="Weinermobile" parent="Cars/Cars/Slow Lane/Weiner" instance=ExtResource("148_lui7b")]
+transform = Transform3D(-0.026177, 0, 0.999657, 0, 1, 0, -0.999657, 0, -0.026177, -1.40925, 0, -1.99579e-09)
 
-[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/C6/Weinermobile"]
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/Weiner/Weinermobile"]
 script = ExtResource("101_bkb02")
+weight = 2.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/C6/Weinermobile/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/Weiner/Weinermobile/Area3D"]
 transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.948303, 0.651428, 0.0349426)
 shape = SubResource("BoxShape3D_h17jk")
+
+[node name="BoxTruck1" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.716076, 0, 0.697963, 0, 0.999997, 0, -0.697962, 0, -0.716076, -94.9568, 0, -508.783)
+progress = 1239.1
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Long" parent="Cars/Cars/Slow Lane/BoxTruck1" instance=ExtResource("147_vbaep")]
+transform = Transform3D(1.33866, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31513, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck1/Box Truck - Long"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("152_hbeiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck1/Box Truck - Long/Area3D"]
+transform = Transform3D(1, 0, 3.27826e-07, 0, 1, 0, 0, 0, 1, 0.861496, -0.36438, 0.0349121)
+shape = SubResource("BoxShape3D_fl4o4")
+
+[node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.419251, 0, 0.907823, 0, 0.999997, 0, -0.907823, 0, 0.419251, -196.097, 0, -277.609)
+progress = 1703.88
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Long" parent="Cars/Cars/Slow Lane/BoxTruck2" instance=ExtResource("147_vbaep")]
+transform = Transform3D(1.33866, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31513, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck2/Box Truck - Long"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("152_hbeiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck2/Box Truck - Long/Area3D"]
+transform = Transform3D(1, 0, 3.27826e-07, 0, 1, 0, 0, 0, 1, 0.861496, -0.36438, 0.0349121)
+shape = SubResource("BoxShape3D_fl4o4")
+
+[node name="BoxTruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.34009, 0, -0.940348, 0, 0.999997, 0, 0.940347, 0, 0.34009, -101.445, 0, 41.0362)
+progress = 2285.03
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Long" parent="Cars/Cars/Slow Lane/BoxTruck3" instance=ExtResource("147_vbaep")]
+transform = Transform3D(1.33866, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31513, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck3/Box Truck - Long"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("152_hbeiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck3/Box Truck - Long/Area3D"]
+transform = Transform3D(1, 0, 3.27826e-07, 0, 1, 0, 0, 0, 1, 0.861496, -0.36438, 0.0349121)
+shape = SubResource("BoxShape3D_fl4o4")
+
+[node name="BoxTruck4" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.114955, 0, -0.993327, 0, 0.999997, 0, 0.993327, 0, -0.114955, 237.782, 0, 2.23521)
+progress = 250.775
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Long" parent="Cars/Cars/Slow Lane/BoxTruck4" instance=ExtResource("147_vbaep")]
+transform = Transform3D(1.33866, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31513, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck4/Box Truck - Long"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("152_hbeiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck4/Box Truck - Long/Area3D"]
+transform = Transform3D(1, 0, 3.27826e-07, 0, 1, 0, 0, 0, 1, 0.861496, -0.36438, 0.0349121)
+shape = SubResource("BoxShape3D_fl4o4")
+
+[node name="BoxTruck Moon" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.855829, 0, -0.517176, 0, 0.999997, 0, 0.517176, 0, -0.85583, -74.6776, 0, -321.227)
+progress = 1456.94
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Moonview" parent="Cars/Cars/Slow Lane/BoxTruck Moon" instance=ExtResource("148_8dh3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51347, 1.29733, -2.32831e-10)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon/Box Truck - Moonview"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon/Box Truck - Moonview/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Moon3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.98792, 0, -0.154689, 0, 0.999997, 0, 0.154689, 0, 0.987921, 207.648, 0, -440.345)
+progress = 759.518
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Moonview" parent="Cars/Cars/Slow Lane/BoxTruck Moon3" instance=ExtResource("148_8dh3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51347, 1.29733, -2.32831e-10)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon3/Box Truck - Moonview"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon3/Box Truck - Moonview/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Moon4" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.98435, 0, 0.175974, 0, 0.999997, 0, -0.175974, 0, 0.98435, 251.845, 0, -89.9337)
+progress = 352.667
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Moonview" parent="Cars/Cars/Slow Lane/BoxTruck Moon4" instance=ExtResource("148_8dh3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29785, 1.29733, 2.95695e-08)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon4/Box Truck - Moonview"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon4/Box Truck - Moonview/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Moon5" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.739442, 0, 0.673156, 0, 0.999997, 0, -0.673156, 0, -0.739442, -75.0974, 0, -529.723)
+progress = 1210.0
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck - Moonview" parent="Cars/Cars/Slow Lane/BoxTruck Moon5" instance=ExtResource("148_8dh3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29785, 1.29733, 2.95695e-08)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon5/Box Truck - Moonview"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Moon5/Box Truck - Moonview/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Reg" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.989434, 0, 0.144689, 0, 0.999997, 0, -0.144689, 0, 0.989434, 192.509, 0, -316.128)
+progress = 635.232
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck" parent="Cars/Cars/Slow Lane/BoxTruck Reg" instance=ExtResource("149_n1lbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93459, 1.25903, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg/Box Truck"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg/Box Truck/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(-0.0467043, 0, -0.998866, 0, 0.999997, 0, 0.998865, 0, -0.0467043, 221.439, 0, -0.318907)
+progress = 234.53
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck" parent="Cars/Cars/Slow Lane/BoxTruck Reg2" instance=ExtResource("149_n1lbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59034, 1.25903, 0)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
+
+[node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
+transform = Transform3D(0.000424202, 0, -0.999953, 0, 0.999997, 0, 0.999953, 0, 0.000424202, 46.2539, 0, -0.336407)
+progress = 46.2711
+script = ExtResource("99_1skxp")
+mps = -60
+
+[node name="Box Truck" parent="Cars/Cars/Slow Lane/BoxTruck Reg3" instance=ExtResource("149_n1lbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31203, 1.25903, 2.98023e-08)
+
+[node name="Area3D" type="Area3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.01628, 0)
+script = ExtResource("101_bkb02")
+weight = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck/Area3D"]
+transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421, 0.0349426)
+shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="Environment" type="Node3D" parent="."]
 script = ExtResource("149_1fhlb")
@@ -1594,19 +2271,57 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.059
 shape = SubResource("BoxShape3D_l1m1a")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 3/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 3/Bullet Train - Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 4/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 4/Bullet Train - Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 5/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 5/Bullet Train - Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 6/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 6/Bullet Train - Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/80s Green/80s Car 2/Area3D" to="Cars/Cars/Path1/80s Green/80s Car 2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path1/80s Red/80s Car/Area3D" to="Cars/Cars/Path1/80s Red/80s Car/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C3/Car2/Area3D" to="Cars/Cars/Path1/C3/Car2/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path2/C1/Car1/Area3D" to="Cars/Cars/Path2/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path2/C2/Car1/Area3D" to="Cars/Cars/Path2/C2/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/C9/Car1/Area3D" to="Cars/Cars/Path2/C9/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/C10/Car1/Area3D" to="Cars/Cars/Path2/C10/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path2/C3/Car2/Area3D" to="Cars/Cars/Path2/C3/Car2/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Cars/Cars/Path2/C4/Cybertruck/Area3D" to="Cars/Cars/Path2/C4/Cybertruck/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Cars/Cars/Path2/C5/Cybertruck/Area3D" to="Cars/Cars/Path2/C5/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/C6/Car2/Area3D" to="Cars/Cars/Path2/C6/Car2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/C7/Car2/Area3D" to="Cars/Cars/Path2/C7/Car2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/C8/Car2/Area3D" to="Cars/Cars/Path2/C8/Car2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/Cybertruck2/Cybertruck/Area3D" to="Cars/Cars/Path2/Cybertruck2/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/Cybertruck/Cybertruck/Area3D" to="Cars/Cars/Path2/Cybertruck/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/80s Green/80s Car 2/Area3D" to="Cars/Cars/Path2/80s Green/80s Car 2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/80s Red/80s Car/Area3D" to="Cars/Cars/Path2/80s Red/80s Car/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Path2/80s Red2/80s Car/Area3D" to="Cars/Cars/Path2/80s Red2/80s Car/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Slow Lane/C1/Car1/Area3D" to="Cars/Cars/Slow Lane/C1/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C15/Car1/Area3D" to="Cars/Cars/Slow Lane/C15/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C16/Car1/Area3D" to="Cars/Cars/Slow Lane/C16/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C8/Car1/Area3D" to="Cars/Cars/Slow Lane/C8/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C12/Car1/Area3D" to="Cars/Cars/Slow Lane/C12/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C13/Car1/Area3D" to="Cars/Cars/Slow Lane/C13/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C14/Car1/Area3D" to="Cars/Cars/Slow Lane/C14/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Slow Lane/C2/Car1/Area3D" to="Cars/Cars/Slow Lane/C2/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C9/Car1/Area3D" to="Cars/Cars/Slow Lane/C9/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C10/Car1/Area3D" to="Cars/Cars/Slow Lane/C10/Car1/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/C11/Car1/Area3D" to="Cars/Cars/Slow Lane/C11/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Slow Lane/C3/Car2/Area3D" to="Cars/Cars/Slow Lane/C3/Car2/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Cars/Cars/Slow Lane/C4/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/C4/Cybertruck/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Cars/Cars/Slow Lane/C5/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/C5/Cybertruck/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Cars/Cars/Slow Lane/C6/Weinermobile/Area3D" to="Cars/Cars/Slow Lane/C6/Weinermobile/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/Cybertruck/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/Cybertruck/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/Cybertruck2/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/Cybertruck2/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/Cybertruck3/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/Cybertruck3/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/Cybertruck4/Cybertruck/Area3D" to="Cars/Cars/Slow Lane/Cybertruck4/Cybertruck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/Weiner/Weinermobile/Area3D" to="Cars/Cars/Slow Lane/Weiner/Weinermobile/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck1/Box Truck - Long/Area3D" to="Cars/Cars/Slow Lane/BoxTruck1/Box Truck - Long/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck2/Box Truck - Long/Area3D" to="Cars/Cars/Slow Lane/BoxTruck2/Box Truck - Long/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck3/Box Truck - Long/Area3D" to="Cars/Cars/Slow Lane/BoxTruck3/Box Truck - Long/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck4/Box Truck - Long/Area3D" to="Cars/Cars/Slow Lane/BoxTruck4/Box Truck - Long/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Moon/Box Truck - Moonview/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Moon/Box Truck - Moonview/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Moon3/Box Truck - Moonview/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Moon3/Box Truck - Moonview/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Moon4/Box Truck - Moonview/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Moon4/Box Truck - Moonview/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Moon5/Box Truck - Moonview/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Moon5/Box Truck - Moonview/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Reg/Box Truck/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Reg/Box Truck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck/Area3D" method="_on_body_entered"]
 
 [editable path="MAP/Openable Double Door"]
 [editable path="MAP/Openable Double Door2"]

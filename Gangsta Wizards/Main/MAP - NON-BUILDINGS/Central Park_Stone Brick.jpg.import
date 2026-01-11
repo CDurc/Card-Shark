@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div1iqrl365dg"
-path.s3tc="res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"
+uid="uid://ydoxcldejsne"
+path.s3tc="res://.godot/imported/Central Park_Stone Brick.jpg-c8b13f5067e7e6004d8a6cb4f59ee89b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "ca357c21a6ca4ced44402c18d86a7dcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/News Building_grass.jpg"
-dest_files=["res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Central Park_Stone Brick.jpg"
+dest_files=["res://.godot/imported/Central Park_Stone Brick.jpg-c8b13f5067e7e6004d8a6cb4f59ee89b.s3tc.ctex"]
 
 [params]
 

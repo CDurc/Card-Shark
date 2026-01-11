@@ -243,7 +243,7 @@ func _physics_process(delta):
 		return
 	
 	if generic_disable:
-		TransformUtils.lerp_slerp_node(camera, flat_cam_goal, 4, 0.2, delta)
+		TransformUtils.lerp_slerp_node(camera, flat_cam_goal, 4, 0.2, delta) #This should have been a tween
 		return
 	
 	if moving_cam:
@@ -520,6 +520,8 @@ func shuffle_deck():
 
 @onready var flat_path = preload("res://Card Shark Campaign/Character Models/FlatShark.glb")
 func flatten():
+	if can_rag == false: return
+	can_rag = false
 	#Disable characters body
 	generic_disable = true
 	self.visible = false
@@ -534,8 +536,23 @@ func flatten():
 	flat_shark.rotation_degrees = Vector3(0,rotation_degrees.y+270,90)
 	flat_shark.position = self.position
 	get_tree().root.add_child(flat_shark)
+	
+	await get_tree().create_timer(2).timeout
+	flat_shark.queue_free()
+	self.visible = true
+	$Collider.disabled = false
+	generic_disable = false
+	can_move = true
+	var tween = get_tree().create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_IN)
+	tween.tween_property(camera, "position", camera_origin.position, 0.7)
+	tween.tween_property(camera, "rotation", camera_origin.rotation, 0.7)
+	await get_tree().create_timer(1).timeout
+	can_rag = true
+	
 	#Move cam quickly?
-
+	
 	
 var can_rag = true
 func trigger_ragdoll(impulse: Vector3):
@@ -627,7 +644,7 @@ func test_2_spell():
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
-		play_test_sound()
+		flatten()
 		#straight_laser_spell()
 		#flush_spell()
 		#basking_house_spell()

@@ -43,11 +43,6 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Flagpole": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,

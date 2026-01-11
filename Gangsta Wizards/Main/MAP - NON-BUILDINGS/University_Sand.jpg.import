@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div1iqrl365dg"
-path.s3tc="res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"
+uid="uid://crs05t3xhh3as"
+path.s3tc="res://.godot/imported/University_Sand.jpg-5263ec4c3238dcd00fc2f901aee84a49.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "f3d17facc42d23f22a53d53418edde37"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/News Building_grass.jpg"
-dest_files=["res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/University_Sand.jpg"
+dest_files=["res://.godot/imported/University_Sand.jpg-5263ec4c3238dcd00fc2f901aee84a49.s3tc.ctex"]
 
 [params]
 

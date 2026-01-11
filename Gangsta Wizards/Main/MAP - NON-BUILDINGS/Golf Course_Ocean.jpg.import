@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div1iqrl365dg"
-path.s3tc="res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"
+uid="uid://dgypxpnrnl5vp"
+path.s3tc="res://.godot/imported/Golf Course_Ocean.jpg-4d6205ee104b24486310b4fa8d6a5403.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "d2535067be3bb5ff0a90921fcb1376b0"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/News Building_grass.jpg"
-dest_files=["res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Golf Course_Ocean.jpg"
+dest_files=["res://.godot/imported/Golf Course_Ocean.jpg-4d6205ee104b24486310b4fa8d6a5403.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div1iqrl365dg"
-path.s3tc="res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"
+uid="uid://b0lssa1r4kfey"
+path.s3tc="res://.godot/imported/University_rockycliff.jpg-58c63ecf730d975de623fde8b6e6506c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "a3cae00147220c0b4471e706ac3e06da"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/News Building_grass.jpg"
-dest_files=["res://.godot/imported/News Building_grass.jpg-fefcb066e33fd6c952fe0fdc441963a0.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/University_rockycliff.jpg"
+dest_files=["res://.godot/imported/University_rockycliff.jpg-58c63ecf730d975de623fde8b6e6506c.s3tc.ctex"]
 
 [params]
 
