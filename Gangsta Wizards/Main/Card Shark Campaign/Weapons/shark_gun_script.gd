@@ -72,7 +72,7 @@ func use_item():
 		
 		var collider = raycast.get_collider()
 		# Hitting an enemy
-		
+		print(collider)
 		if collider.has_method("damage"): #Should become obsolete
 			collider.damage(dmg)
 		elif collider.get_parent().has_method("damage"):

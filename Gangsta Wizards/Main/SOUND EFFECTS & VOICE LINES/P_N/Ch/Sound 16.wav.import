@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btk8rlgwmw4yj"
+path="res://.godot/imported/Sound 16.wav-1780cd9e31ebf2b35138c0e4d42e8c11.sample"
+
+[deps]
+
+source_file="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 16.wav"
+dest_files=["res://.godot/imported/Sound 16.wav-1780cd9e31ebf2b35138c0e4d42e8c11.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

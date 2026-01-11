@@ -23,7 +23,7 @@ func _on_area_entered(area: Area3D) -> void:
 	if hit: #Make sure signal doesnt trigger twice
 		return
 	hit = true
-	
+	print("HIT HIT HIT")
 	if area.get_parent().is_in_group(target_group):
 	
 		if area.is_in_group("Headshot"):
@@ -34,5 +34,10 @@ func _on_area_entered(area: Area3D) -> void:
 			area.get_parent().damage(damage_amount)
 			print("BODYSHOT")
 			queue_free()
+			
+	elif area.is_in_group("Non-enemy-hit"):
+		area.damage(damage_amount)
+		print("HIT A NON-ENEMY HITTABLE THING IDK")
+		queue_free()
 	else:
 		queue_free()

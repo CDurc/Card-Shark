@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=202 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -154,6 +154,34 @@
 [ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
 [ext_resource type="PackedScene" uid="uid://sdjdcrkfyvaj" path="res://VEHICLES/Blimp.glb" id="154_djghw"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="154_nu2kt"]
+[ext_resource type="Script" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/key.gd" id="155_jg5ga"]
+[ext_resource type="AudioStream" uid="uid://slaqc8n60rv5" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 02.wav" id="156_pclic"]
+[ext_resource type="AudioStream" uid="uid://covi5rxh2r2ip" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 03.wav" id="157_hjlkl"]
+[ext_resource type="AudioStream" uid="uid://dmquvwpi2op51" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 04.wav" id="158_b5o3d"]
+[ext_resource type="AudioStream" uid="uid://118cihf2ao6k" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 05.wav" id="159_amns8"]
+[ext_resource type="AudioStream" uid="uid://byec7wjiahmbw" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 06.wav" id="160_qoq2t"]
+[ext_resource type="AudioStream" uid="uid://ig3cg8dy3iul" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 07.wav" id="161_n5hqm"]
+[ext_resource type="AudioStream" uid="uid://bhu63bvsnm3da" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 08.wav" id="162_y38eq"]
+[ext_resource type="AudioStream" uid="uid://djod4vanedsii" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 09.wav" id="163_lir57"]
+[ext_resource type="AudioStream" uid="uid://dc433hbuaqfj5" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 10.wav" id="164_4kxn3"]
+[ext_resource type="AudioStream" uid="uid://pweiaf4pcgid" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 11.wav" id="165_yiyin"]
+[ext_resource type="AudioStream" uid="uid://c7yp27bnr2hgh" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 12.wav" id="166_04gir"]
+[ext_resource type="AudioStream" uid="uid://tqvhtmp0y1h4" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 13.wav" id="167_ow4ju"]
+[ext_resource type="AudioStream" uid="uid://ctk1vmj3f1e0v" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 14.wav" id="168_13jiv"]
+[ext_resource type="AudioStream" uid="uid://cdy5w1hthgbv8" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 15.wav" id="169_74qf2"]
+[ext_resource type="AudioStream" uid="uid://btk8rlgwmw4yj" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 16.wav" id="170_hr1xy"]
+[ext_resource type="AudioStream" uid="uid://bafrmlb418ni3" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 17.wav" id="171_63ij5"]
+[ext_resource type="AudioStream" uid="uid://cod6ws71ec2b7" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 18.wav" id="172_48yrn"]
+[ext_resource type="AudioStream" uid="uid://b64yqb06o1r0i" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 19.wav" id="173_4clvy"]
+[ext_resource type="AudioStream" uid="uid://bbiu8kpsf17vd" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 20.wav" id="174_dsxw7"]
+[ext_resource type="AudioStream" uid="uid://dhomafch0x8gy" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 21.wav" id="175_4c1mj"]
+[ext_resource type="AudioStream" uid="uid://byi4c6x4tk4fd" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 22.wav" id="176_qb86y"]
+[ext_resource type="AudioStream" uid="uid://ct43mwk5ka68y" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 23.wav" id="177_dyoao"]
+[ext_resource type="AudioStream" uid="uid://dslbdugjg6ebm" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 24.wav" id="178_h33p8"]
+[ext_resource type="AudioStream" uid="uid://c27semjlqmfgo" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 25.wav" id="179_ymish"]
+[ext_resource type="AudioStream" uid="uid://bh6j80ayqvr8v" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 26.wav" id="180_sbi7g"]
+[ext_resource type="AudioStream" uid="uid://cmvl44oklf5lg" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 27.wav" id="181_yt138"]
+[ext_resource type="AudioStream" uid="uid://dkkvvy81xqiue" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 28.wav" id="182_rb6jw"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 _data = {
@@ -257,6 +285,9 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 9
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l1m1a"]
+size = Vector3(0.12, 0.15, 0.123)
 
 [node name="RootNode" type="Node3D"]
 
@@ -1193,6 +1224,284 @@ mps = 50
 
 [node name="Blimp" parent="OnARail/Path3D/PathFollow3D" instance=ExtResource("154_djghw")]
 transform = Transform3D(0.000852585, 0, 1, 0, 1, 0, -1, 0, 0.000852585, 3.18915, -13.8586, 4.43268)
+
+[node name="Areas" type="Node3D" parent="."]
+
+[node name="Piano1" type="Node3D" parent="Areas"]
+transform = Transform3D(0.878692, 0, 0.477389, 0, 1, 0, -0.477389, 0, 0.878692, 3.59247, 33.8467, -77.0298)
+
+[node name="Zone1" type="Area3D" parent="Areas/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("156_pclic")
+sound2 = ExtResource("157_hjlkl")
+sound3 = ExtResource("158_b5o3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone2" type="Area3D" parent="Areas/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("159_amns8")
+sound2 = ExtResource("160_qoq2t")
+sound3 = ExtResource("161_n5hqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone3" type="Area3D" parent="Areas/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("162_y38eq")
+sound2 = ExtResource("163_lir57")
+sound3 = ExtResource("164_4kxn3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone4" type="Area3D" parent="Areas/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("165_yiyin")
+sound2 = ExtResource("166_04gir")
+sound3 = ExtResource("167_ow4ju")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone5" type="Area3D" parent="Areas/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("168_13jiv")
+sound2 = ExtResource("169_74qf2")
+sound3 = ExtResource("170_hr1xy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone6" type="Area3D" parent="Areas/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("171_63ij5")
+sound2 = ExtResource("172_48yrn")
+sound3 = ExtResource("173_4clvy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone7" type="Area3D" parent="Areas/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("174_dsxw7")
+sound2 = ExtResource("175_4c1mj")
+sound3 = ExtResource("176_qb86y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone8" type="Area3D" parent="Areas/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("177_dyoao")
+sound2 = ExtResource("178_h33p8")
+sound3 = ExtResource("179_ymish")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone9" type="Area3D" parent="Areas/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("180_sbi7g")
+sound2 = ExtResource("181_yt138")
+sound3 = ExtResource("182_rb6jw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano1/Zone9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Piano2" type="Node3D" parent="Areas"]
+transform = Transform3D(-0.251428, 0, 0.967876, 0, 1, 0, -0.967876, 0, -0.251428, 0.886295, 33.8488, -77.5164)
+
+[node name="Zone1" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("156_pclic")
+sound2 = ExtResource("157_hjlkl")
+sound3 = ExtResource("158_b5o3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone2" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("159_amns8")
+sound2 = ExtResource("160_qoq2t")
+sound3 = ExtResource("161_n5hqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone3" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("162_y38eq")
+sound2 = ExtResource("163_lir57")
+sound3 = ExtResource("164_4kxn3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone4" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("165_yiyin")
+sound2 = ExtResource("166_04gir")
+sound3 = ExtResource("167_ow4ju")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone5" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("168_13jiv")
+sound2 = ExtResource("169_74qf2")
+sound3 = ExtResource("170_hr1xy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone6" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("171_63ij5")
+sound2 = ExtResource("172_48yrn")
+sound3 = ExtResource("173_4clvy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone7" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("174_dsxw7")
+sound2 = ExtResource("175_4c1mj")
+sound3 = ExtResource("176_qb86y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone8" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("177_dyoao")
+sound2 = ExtResource("178_h33p8")
+sound3 = ExtResource("179_ymish")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone9" type="Area3D" parent="Areas/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("180_sbi7g")
+sound2 = ExtResource("181_yt138")
+sound3 = ExtResource("182_rb6jw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C2/Car1/Area3D" to="Cars/Cars/Path1/C2/Car1/Area3D" method="_on_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b33gugfpxauvs"]
+[gd_scene load_steps=4 format=3 uid="uid://b33gugfpxauvs"]
 
 [ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_0k1tp"]
 [ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="2_5bw1s"]
+[ext_resource type="AudioStream" uid="uid://csdsvg0nh35id" path="res://sounds/blaster_repeater.ogg" id="2_pv3bq"]
 
 [node name="SharkRifle" type="Node3D"]
 script = ExtResource("1_0k1tp")
@@ -23,3 +24,12 @@ one_shot = true
 
 [node name="Bullet_spawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143507, 0.0189154, 0.631172)
+
+[node name="A1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pv3bq")
+
+[node name="A2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pv3bq")
+
+[node name="A3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pv3bq")

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ioaelno08288"
-path.s3tc="res://.godot/imported/ETower_grass.jpg-e86291bcb4ff31bb7ae56a0afa7fbb50.s3tc.ctex"
+uid="uid://cftjf08yvan8u"
+path.s3tc="res://.godot/imported/Casino_marble.jpg-0ada7b21fd4afbfc118e5632a89e3268.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "ef86a91cb477ed0354a27546c87a8cce"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/ETower_grass.jpg"
-dest_files=["res://.godot/imported/ETower_grass.jpg-e86291bcb4ff31bb7ae56a0afa7fbb50.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Casino_marble.jpg"
+dest_files=["res://.godot/imported/Casino_marble.jpg-0ada7b21fd4afbfc118e5632a89e3268.s3tc.ctex"]
 
 [params]
 

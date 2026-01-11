@@ -626,7 +626,8 @@ func test_2_spell():
 	if Input.is_action_just_pressed("Test_2"):
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
-		trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
+		#trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
+		play_test_sound()
 		#straight_laser_spell()
 		#flush_spell()
 		#basking_house_spell()
@@ -1528,6 +1529,12 @@ func damage(amount):
 		
 		#get_tree().reload_current_scene() # Reset when out of health
 		
+
+func play_test_sound():
+	var area = $"../Areas/Piano1/Zone1"
+	#var spatial = $"../Spatial Testing/AudioStreamPlayer3D"
+	#spatial.play()
+	area.damage(1)
 
 func toggle_healthbar(vis: bool):
 	for bar in get_tree().get_nodes_in_group("Healthbars"):

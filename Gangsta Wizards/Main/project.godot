@@ -43,6 +43,7 @@ Healthbars="This could also be any visual UI element the player sees that needs 
 Roller="Things that can make rollers shrink, especially other rollers"
 Headshot="Headshot Area3D"
 Bodyshot="Bodyshot Area3D"
+Non-enemy-hit="Things you can shoot and trigger damage() but is not an enemy"
 
 [importer_defaults]
 

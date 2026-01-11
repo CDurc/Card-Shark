@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ioaelno08288"
-path.s3tc="res://.godot/imported/ETower_grass.jpg-e86291bcb4ff31bb7ae56a0afa7fbb50.s3tc.ctex"
+uid="uid://c4cteo86gft55"
+path.s3tc="res://.godot/imported/Casino_grass.jpg-c95408132a119cc619d0a6f0ac3e8144.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/ETower_grass.jpg"
-dest_files=["res://.godot/imported/ETower_grass.jpg-e86291bcb4ff31bb7ae56a0afa7fbb50.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Casino_grass.jpg"
+dest_files=["res://.godot/imported/Casino_grass.jpg-c95408132a119cc619d0a6f0ac3e8144.s3tc.ctex"]
 
 [params]
 
