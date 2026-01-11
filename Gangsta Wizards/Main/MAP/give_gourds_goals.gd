@@ -25,7 +25,6 @@ func _ready():
 	]
 	
 	all_goals = [
-		{"goal": $"../Gourd Goals/SitSpot3", "task": "sit", "time": 20},
 		{"goal": $"../Gourd Goals/Bush Puncher", "task": "punch_task", "time": 12},
 		{"goal": $"../Gourd Goals/AnotherGoal", "task": "punch_task", "time": 12},
 		[
@@ -43,7 +42,20 @@ func _ready():
 			{"goal": $"../Gourd Goals/SeedySitSpot3", "task": "sit", "time": 40},
 			{"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": "open_door_exit"},
 		],
+		{"goal": $"../Gourd Goals/SitSpot", "task": "sit", "time": 20},
 		{"goal": $"../Gourd Goals/SitSpot2", "task": "sit", "time": 20},
+		{"goal": $"../Gourd Goals/SitSpot3", "task": "sit", "time": 20},
+		{"goal": $"../Gourd Goals/SitSpot4", "task": "sit", "time": 20},
+		{"goal": $"../Gourd Goals/SitSpot5", "task": "sit", "time": 20},
+		
+		{"goal": $"../Gourd Goals/SleepSpot", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot2", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot3", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot4", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot5", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot6", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot7", "task": "sleep", "time": 20},
+		{"goal": $"../Gourd Goals/SleepSpot8", "task": "sleep", "time": 20},
 	]
 	
 	distribute_special_goals()

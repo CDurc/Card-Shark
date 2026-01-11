@@ -23,7 +23,7 @@ var time_since_moved: float = 0.0
 
 func _ready():
 	#TODO make random
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot3", "task": Callable(self, "sit"), "time": 6})
+	#goal_task_queue.append({"goal": $"../Gourd Goals/SleepSpot2", "task": Callable(self, "sleep"), "time": 10})
 	#goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task"), "time": 16})
 	#goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task"), "time": 16})
 	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot", "task": Callable(self, "open_door")})
@@ -258,3 +258,37 @@ func open_door_exit(goal_node: Node3D) -> void:  #Use when EXITING buildings
 	await get_tree().create_timer(0.5).timeout
 	if door.get_child(0).open == true:
 		door.get_child(0).interac()
+		
+func sleep(goal_node: Node3D) -> void:
+	var old_ground_pos = global_position
+	var old_ground_quat = global_transform.basis.get_rotation_quaternion() * Quaternion(Vector3.UP, PI)
+	gravity = 0
+	collider.disabled = true
+	await get_tree().process_frame
+	
+	var target_position = goal_node.get_child(1).global_position
+	var target_look_at = goal_node.get_child(0).global_position
+	var direction = (target_look_at - target_position).normalized()
+	var target_rotation_y = atan2(direction.x, direction.z)
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(self, "global_position", target_position, 1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "global_rotation:y", target_rotation_y, 1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	Gen_anime.play("Lie Down - Down")
+	
+	var task_time = current_goal_task["time"]
+	await get_tree().create_timer(1.5).timeout
+	Gen_anime.speed_scale = 1.0
+	Gen_anime.play("Lie Down - Idle") #set to loop
+	await get_tree().create_timer(task_time).timeout
+	print("Done sleeping")
+	
+	var tween2 = create_tween()
+	tween2.set_parallel(true)
+	tween2.tween_property(self, "global_position", old_ground_pos, 1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	tween2.tween_property(self, "global_transform:basis", Basis(old_ground_quat), 1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	Gen_anime.play("Lie Down - Up")
+	await tween2.finished
+	gravity = 9.8
+	collider.disabled = false
+	start_next_goal_task()

@@ -1100,6 +1100,78 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.331, -0.082)
 [node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807144, -0.39616, -0.0817994)
 
+[node name="SleepSpot" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.999345, 0, 0.0361903, 0, 1, 0, -0.0361903, 0, -0.999345, -20.5596, -0.311669, -28.1663)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot3" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.999345, 0, 0.0361903, 0, 1, 0, -0.0361903, 0, -0.999345, -17.9534, -0.311669, -32.0098)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot5" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.999345, 0, 0.0361903, 0, 1, 0, -0.0361903, 0, -0.999345, -20.5703, -0.311669, -32.7753)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot4" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(0.998581, 0, -0.0532597, 0, 1, 0, 0.0532597, 0, 0.998581, -19.094, -0.311669, -32.8598)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot6" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(0.998581, 0, -0.0532597, 0, 1, 0, 0.0532597, 0, 0.998581, -20.7766, -0.311669, -36.8003)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot7" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(0.881897, 0, 0.471443, 0, 1, 0, -0.471443, 0, 0.881897, -19.7655, -0.311669, -39.7921)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot8" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.618038, 0, 0.786148, 0, 1, 0, -0.786148, 0, -0.618038, -17.7627, -0.311669, -38.6165)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 0.741932)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.548527, 0)
+
+[node name="SleepSpot2" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.437618, 0, 0.899161, 0, 1, 0, -0.899161, 0, -0.437618, -19.9692, -0.311669, -26.6467)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SleepSpot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997248, -0.331, 2.16372)
+
+[node name="Sleep" type="Node3D" parent="Gourd Goals/SleepSpot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -0.548527, 1.33401)
+
 [node name="SitSpot3" type="Node3D" parent="Gourd Goals"]
 transform = Transform3D(-0.998863, 0, -0.0476817, 0, 1, 0, 0.0476817, 0, -0.998863, -27.8321, -0.497734, 11.4783)
 
@@ -1117,6 +1189,24 @@ transform = Transform3D(0.770424, 0, -0.637532, 0, 1, 0, 0.637532, 0, 0.770424, 
 
 [node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot2"]
 transform = Transform3D(0.749279, 0, -0.662254, 0, 1, 0, 0.662254, 0, 0.749279, 1.15224, -0.211693, 0.295962)
+
+[node name="SitSpot4" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(0.228793, 0, 0.973475, 0, 1, 0, -0.973475, 0, 0.228793, 10.4425, -0.242054, -60.888)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SitSpot4"]
+transform = Transform3D(0.244325, 0, -0.969693, 0, 1, 0, 0.969693, 0, 0.244325, 0.340128, -0.212, 0.319285)
+
+[node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot4"]
+transform = Transform3D(0.228028, 0, -0.973654, 0, 1, 0, 0.973654, 0, 0.228028, 0.844213, -0.546894, 0.193522)
+
+[node name="SitSpot5" type="Node3D" parent="Gourd Goals"]
+transform = Transform3D(-0.224628, 0, 0.974445, 0, 1, 0, -0.974445, 0, -0.224628, 11.8251, -0.242054, -60.8388)
+
+[node name="Look" type="Node3D" parent="Gourd Goals/SitSpot5"]
+transform = Transform3D(-0.286492, 0, -0.958083, 0, 1, 0, 0.958083, 0, -0.286492, 0.426053, -0.212, -0.152741)
+
+[node name="Sit" type="Node3D" parent="Gourd Goals/SitSpot5"]
+transform = Transform3D(-0.260218, 0, -0.96555, 0, 1, 0, 0.96555, 0, -0.260218, 0.837712, -0.546894, -0.0621978)
 
 [node name="SeedySitSpot1" type="Node3D" parent="Gourd Goals"]
 transform = Transform3D(-0.0429215, 0, 0.999078, 0, 1, 0, -0.999078, 0, -0.0429215, -37.5182, -0.242054, -25.9636)
