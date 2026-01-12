@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dulsxvwklt34u"
-path.s3tc="res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"
+uid="uid://dvy4ln1qlosxb"
+path.s3tc="res://.godot/imported/Nakatomi Plaza_White Siding.jpg-661849bccef5f3488e289764ba41460a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "c6cde2c9295fe3f5aa9fc64f6981e2ce"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Nakatomi Plaza_grass.jpg"
-dest_files=["res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Nakatomi Plaza_White Siding.jpg"
+dest_files=["res://.godot/imported/Nakatomi Plaza_White Siding.jpg-661849bccef5f3488e289764ba41460a.s3tc.ctex"]
 
 [params]
 

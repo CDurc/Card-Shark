@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dulsxvwklt34u"
-path.s3tc="res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"
+uid="uid://d3g5byvqmgvl"
+path.s3tc="res://.godot/imported/Megachurch_Black Siding.jpg-20b2adc903249968f3592d2edf8acb86.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "a743091dd271f41c7a493205ca670e81"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Nakatomi Plaza_grass.jpg"
-dest_files=["res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-3/Megachurch_Black Siding.jpg"
+dest_files=["res://.godot/imported/Megachurch_Black Siding.jpg-20b2adc903249968f3592d2edf8acb86.s3tc.ctex"]
 
 [params]
 

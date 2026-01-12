@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dulsxvwklt34u"
-path.s3tc="res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"
+uid="uid://cjk1raksexxsn"
+path.s3tc="res://.godot/imported/Megachurch_JackbeLucky.png-51e8cdeceedc5c099cf31e6e47257fb6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "4e1673e57efcb5d143eac5ff44a701fb"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Nakatomi Plaza_grass.jpg"
-dest_files=["res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-3/Megachurch_JackbeLucky.png"
+dest_files=["res://.godot/imported/Megachurch_JackbeLucky.png-51e8cdeceedc5c099cf31e6e47257fb6.s3tc.ctex"]
 
 [params]
 

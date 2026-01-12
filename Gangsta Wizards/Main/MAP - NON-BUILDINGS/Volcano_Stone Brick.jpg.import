@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dulsxvwklt34u"
-path.s3tc="res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"
+uid="uid://bg7k6ot0pb6n6"
+path.s3tc="res://.godot/imported/Volcano_Stone Brick.jpg-03c320e9a0db32f7df8dde59211fe711.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "ca357c21a6ca4ced44402c18d86a7dcd"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Nakatomi Plaza_grass.jpg"
-dest_files=["res://.godot/imported/Nakatomi Plaza_grass.jpg-4cacd5849115a55fb36c6352a913a1d9.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Volcano_Stone Brick.jpg"
+dest_files=["res://.godot/imported/Volcano_Stone Brick.jpg-03c320e9a0db32f7df8dde59211fe711.s3tc.ctex"]
 
 [params]
 
