@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ra0yucsrscs2"
-path.s3tc="res://.godot/imported/Firehouse_grass.jpg-4dc1ea84e3a53adb6ed5202e8129a1b1.s3tc.ctex"
+uid="uid://c24iptbybtdsc"
+path.s3tc="res://.godot/imported/Firehouse_Brown Brick.jpg-34137ac34dd4c8e1c374dcea6c3982ab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3d8411b30b129f413c0060ea77fe2638"
+"md5": "6020e82dde3319aa04a065a8f076e527"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Firehouse_grass.jpg"
-dest_files=["res://.godot/imported/Firehouse_grass.jpg-4dc1ea84e3a53adb6ed5202e8129a1b1.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Firehouse_Brown Brick.jpg"
+dest_files=["res://.godot/imported/Firehouse_Brown Brick.jpg-34137ac34dd4c8e1c374dcea6c3982ab.s3tc.ctex"]
 
 [params]
 
