@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c3vo81ssgfsj6"]
+[gd_scene load_steps=38 format=3 uid="uid://c3vo81ssgfsj6"]
 
 [ext_resource type="Script" path="res://objects/GenericPlayer.gd" id="1_tjpgj"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_jg68g"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://c6o1fpll1dciq" path="res://Menus/CashIcon.png" id="22_n3fv3"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/resume.gd" id="22_p8c2x"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/go_to_main_menu.gd" id="23_g3t70"]
-[ext_resource type="PackedScene" uid="uid://cyolbxh2dunh4" path="res://Card Shark Campaign/Spells/empty.tscn" id="24_tc8cu"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/fold.gd" id="25_gvw6i"]
 [ext_resource type="Texture2D" uid="uid://bne84pb8w03h2" path="res://Menus/PokerChipCursor.png" id="26_duqyg"]
 [ext_resource type="Script" path="res://Card Shark Campaign/Character Models/save_game.gd" id="27_2xi52"]
@@ -869,7 +868,6 @@ anchor_right = 0.966
 anchor_bottom = 0.354
 text = "MAIN MENU"
 script = ExtResource("23_g3t70")
-new_scene = ExtResource("24_tc8cu")
 
 [node name="Chip" type="TextureRect" parent="HUD/PauseMenu/TextureRect/Main_menu"]
 visible = false

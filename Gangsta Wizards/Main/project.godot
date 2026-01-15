@@ -24,6 +24,7 @@ boot_splash/minimum_display_time=2000
 Audio="*res://scripts/audio.gd"
 Lerp_Slerp="*res://Card Shark Campaign/Scripts/lerp_slerp.gd"
 GameState="*res://Card Shark Campaign/Scripts/gamestate.gd"
+SceneManager="*res://Menus/SceneManager.gd"
 
 [display]
 

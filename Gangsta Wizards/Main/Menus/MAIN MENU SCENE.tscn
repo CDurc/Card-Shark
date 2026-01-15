@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dxutsuyx1icch" path="res://Menus/The Shark Arm TM.tscn" id="4_foeht"]
 [ext_resource type="Script" path="res://Menus/play_intro.gd" id="4_kbo7x"]
 [ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
+[ext_resource type="Script" path="res://Menus/launch_new_scene.gd" id="6_2rmjt"]
 [ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
 [ext_resource type="Script" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
-[ext_resource type="PackedScene" uid="uid://cyolbxh2dunh4" path="res://Card Shark Campaign/Spells/empty.tscn" id="9_m4vlu"]
 [ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
 
 [sub_resource type="Gradient" id="Gradient_ex873"]
@@ -1938,9 +1938,6 @@ bones/31/rotation = Quaternion(0.999964, -4.70487e-09, 4.4276e-07, -0.0085224)
 bones/32/position = Vector3(-0.252724, 0.184124, 0.97181)
 bones/32/rotation = Quaternion(-0.613758, -0.513475, 0.370614, 0.471476)
 
-[node name="Water" parent="World/Non-Auto Updated Main  Menu" index="8"]
-visible = false
-
 [node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/Caardvark" index="0"]
 bones/0/rotation = Quaternion(-0.5, 0.5, 0.5, 0.5)
 bones/2/rotation = Quaternion(0.344193, 0.00746123, -0.00267816, 0.938865)
@@ -2013,8 +2010,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3rgy0")
 [node name="Area3D" type="Area3D" parent="Buttons/Story Mode"]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("8_p0l6d")
-new_scene = ExtResource("9_m4vlu")
+script = ExtResource("6_2rmjt")
+target_scene_path = "res://MAP/StoryMode.tscn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Story Mode/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0770565, 0)

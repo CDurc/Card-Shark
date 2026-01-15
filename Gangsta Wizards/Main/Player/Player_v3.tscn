@@ -297,7 +297,7 @@ body_offset = Transform3D(-0.309259, 0.0221889, 0.95072, 0.0438304, 0.998998, -0
 [node name="Physical Bone Wrist L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="6"]
 transform = Transform3D(0.977938, -0.208148, 0.0176757, -0.0117395, 0.0297198, 0.999489, -0.208567, -0.977646, 0.0266205, 0.07453, 0.16911, -0.703695)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063941, -0.549722, 0.40333)
-body_offset = Transform3D(-0.973523, -0.00851448, 0.228434, -0.0237047, -0.990158, -0.137937, 0.22736, -0.139699, 0.963739, -0.034567, -0.487162, -0.480038)
+body_offset = Transform3D(-0.973523, -0.0085146, 0.228434, -0.0237046, -0.990158, -0.137937, 0.22736, -0.139699, 0.963739, -0.034567, -0.487162, -0.480038)
 
 [node name="Physical Bone Shoulders Middle" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
 transform = Transform3D(-0.0141394, -0.9999, -4.19585e-08, -1.93825e-07, 4.47035e-08, -1, 0.9999, -0.0141394, -1.94437e-07, 0.000273742, 4.98295e-05, -1.25631e-05)
@@ -315,9 +315,9 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280548, -9.87388e-05, 
 body_offset = Transform3D(-0.99874, 0.00591858, -0.0498329, -0.000372589, 0.992119, 0.1253, -0.0501817, -0.125161, 0.990866, -0.0101606, -0.0448154, -0.356509)
 
 [node name="Physical Bone Bicep R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
-transform = Transform3D(0.150229, -0.988651, 1.91957e-06, 3.72529e-07, -1.885e-06, -1, 0.988651, 0.150229, 8.51193e-08, -0.000150494, -2.02656e-06, -0.00204504)
+transform = Transform3D(0.150229, -0.988651, 1.92694e-06, 3.72529e-07, -1.89245e-06, -1, 0.988651, 0.150229, 8.4e-08, -0.000150494, -2.02656e-06, -0.00204504)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205645, 0.0161388, -0.383931)
-body_offset = Transform3D(-0.1962, -0.000597771, -0.980564, 0.383978, -0.920187, -0.076269, -0.902256, -0.391479, 0.18077, -0.336112, -0.0933945, 0.261266)
+body_offset = Transform3D(-0.1962, -0.000597779, -0.980564, 0.383978, -0.920187, -0.076269, -0.902256, -0.391479, 0.18077, -0.336112, -0.0933945, 0.261266)
 
 [node name="Physical Bone Forearm R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
 transform = Transform3D(-0.97499, 0.22225, 1.25095e-06, 1.2219e-06, -2.68221e-07, 1, -0.22225, -0.97499, 1.00533e-08, -0.00232457, -8.34465e-07, -0.00258958)
