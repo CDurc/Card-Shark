@@ -16,11 +16,10 @@ var fading = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	await get_tree().create_timer(1).timeout
+	#await get_tree().create_timer(1).timeout
 	fading = true
-	anime.play("MainMenuAction")
-	anime.play("MainMenuAction2")
-	await get_tree().create_timer(4.5).timeout
+	anime.play("CS Action")
+	await get_tree().create_timer(5.5).timeout
 	moving_cam1 = true
 	await get_tree().create_timer(3.5).timeout
 	moving_cam1 = false

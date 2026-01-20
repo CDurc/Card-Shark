@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_w3sgo"]
 [ext_resource type="PackedScene" uid="uid://dxutsuyx1icch" path="res://Menus/The Shark Arm TM.tscn" id="4_foeht"]
-[ext_resource type="Script" path="res://Menus/play_intro.gd" id="4_kbo7x"]
-[ext_resource type="Script" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
-[ext_resource type="Script" path="res://Menus/launch_new_scene.gd" id="6_2rmjt"]
+[ext_resource type="Script" uid="uid://bogrd0kgx7num" path="res://Menus/play_intro.gd" id="4_kbo7x"]
+[ext_resource type="Script" uid="uid://ctxf2nr30cglu" path="res://Menus/main_menu_buttons.gd" id="5_j5xvy"]
+[ext_resource type="Script" uid="uid://im3jefolanvu" path="res://Menus/launch_new_scene.gd" id="6_2rmjt"]
 [ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
-[ext_resource type="Script" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
+[ext_resource type="Script" uid="uid://337j8ktiw6ih" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
 [ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
 
 [sub_resource type="Gradient" id="Gradient_ex873"]
@@ -1850,10 +1850,10 @@ tracks/63/keys = PackedFloat32Array(0, 1, -0.246923, -0.107326, 0.673868, 0.6880
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ysj8p"]
 _data = {
-"MainMenuAction": SubResource("Animation_ktyxt"),
-"MainMenuAction - CV": SubResource("Animation_x747q"),
-"MainMenuAction2": SubResource("Animation_2h6fj"),
-"Waves Action": SubResource("Animation_p3qf5")
+&"MainMenuAction": SubResource("Animation_ktyxt"),
+&"MainMenuAction - CV": SubResource("Animation_x747q"),
+&"MainMenuAction2": SubResource("Animation_2h6fj"),
+&"Waves Action": SubResource("Animation_p3qf5")
 }
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kvsuo"]
@@ -1902,9 +1902,9 @@ environment = SubResource("Environment_x1h13")
 [node name="World" type="Node3D" parent="."]
 
 [node name="Main Menu" parent="World" instance=ExtResource("1_w3sgo")]
-visible = false
 
 [node name="Non-Auto Updated Main  Menu" parent="World" instance=ExtResource("1_w3sgo")]
+visible = false
 
 [node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/Caardvark" index="0"]
 bones/0/rotation = Quaternion(-0.5, 0.5, 0.5, 0.5)
@@ -1967,27 +1967,27 @@ bones/32/position = Vector3(-0.252724, 0.184124, 0.97181)
 bones/32/rotation = Quaternion(-0.613758, -0.513475, 0.370614, 0.471476)
 
 [node name="Tie" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="0"]
-transform = Transform3D(1, -1.49012e-08, -4.21889e-07, 4.06057e-07, 1, -1.15833e-08, 4.3679e-07, -1.56579e-08, 1, 0.0236419, -0.138083, 0.00079678)
+transform = Transform3D(1, -1.4901161e-08, -4.2188913e-07, 4.0605664e-07, 0.99999976, -1.15833245e-08, 4.367903e-07, -1.565786e-08, 0.99999964, 0.023641896, -0.13808256, 0.00079678)
 
 [node name="L Shoe" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="1"]
-transform = Transform3D(-1.27405e-06, -0.211508, 0.977388, -3.42727e-06, 0.977386, 0.211509, -1.00001, -2.98023e-06, -2.17557e-06, 0.0126672, 0.0187861, -0.0650232)
+transform = Transform3D(-1.2740493e-06, -0.21150762, 0.97738826, -3.427267e-06, 0.9773856, 0.21150926, -1.0000076, -2.9802322e-06, -2.1755695e-06, 0.012667194, 0.018786132, -0.065023154)
 
 [node name="R Shoe" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="2"]
-transform = Transform3D(-4.65661e-08, -0.211501, 0.977364, -4.29153e-06, 0.977369, 0.2115, -0.999994, -4.14252e-06, -8.79169e-07, -0.0296186, -0.0096786, -0.0308688)
+transform = Transform3D(-4.656613e-08, -0.2115009, 0.9773643, -4.2915344e-06, 0.97736937, 0.21149983, -0.9999936, -4.142523e-06, -8.791685e-07, -0.02961861, -0.009678602, -0.03086882)
 
 [node name="CardAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
 libraries = {
-"": SubResource("AnimationLibrary_ysj8p")
+&"": SubResource("AnimationLibrary_ysj8p")
 }
 
 [node name="WaveAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
 libraries = {
-"": SubResource("AnimationLibrary_ysj8p")
+&"": SubResource("AnimationLibrary_ysj8p")
 }
 
 [node name="VarkAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
 libraries = {
-"": SubResource("AnimationLibrary_ysj8p")
+&"": SubResource("AnimationLibrary_ysj8p")
 }
 
 [node name="Arm" parent="World" instance=ExtResource("4_foeht")]
