@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yf6d2als1y6n"
-path.s3tc="res://.godot/imported/Levi, Carnie_stripes3.jpg-88ca0e0b5b0d7fa92a35930815f07f99.s3tc.ctex"
+path.s3tc="res://.godot/imported/Levi, Carnie_stripes3.jpg-a1ec51dd277fdde6579d72c1c8514a0b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Levi, Carnie_stripes3.jpg"
-dest_files=["res://.godot/imported/Levi, Carnie_stripes3.jpg-88ca0e0b5b0d7fa92a35930815f07f99.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Levi, Carnie_stripes3.jpg"
+dest_files=["res://.godot/imported/Levi, Carnie_stripes3.jpg-a1ec51dd277fdde6579d72c1c8514a0b.s3tc.ctex"]
 
 [params]
 

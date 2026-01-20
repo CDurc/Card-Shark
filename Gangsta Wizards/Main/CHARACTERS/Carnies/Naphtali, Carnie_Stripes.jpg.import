@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dus8o1vu6s6hl"
-path.s3tc="res://.godot/imported/Naphtali, Carnie_Stripes.jpg-3260da9e8d9b70d06009b14df324e98d.s3tc.ctex"
+path.s3tc="res://.godot/imported/Naphtali, Carnie_Stripes.jpg-0272645bb3866c98d95b9476e980fae2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Naphtali, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Naphtali, Carnie_Stripes.jpg-3260da9e8d9b70d06009b14df324e98d.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Naphtali, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Naphtali, Carnie_Stripes.jpg-0272645bb3866c98d95b9476e980fae2.s3tc.ctex"]
 
 [params]
 

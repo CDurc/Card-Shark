@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ghi2pmp7l8lb"
-path.s3tc="res://.godot/imported/Simeon, Carnie_Stripes.jpg-c2bbba61d73c0943c1016859045925ca.s3tc.ctex"
+path.s3tc="res://.godot/imported/Simeon, Carnie_Stripes.jpg-f8a42bab70ccd6f965016e222862a08a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Simeon, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Simeon, Carnie_Stripes.jpg-c2bbba61d73c0943c1016859045925ca.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Simeon, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Simeon, Carnie_Stripes.jpg-f8a42bab70ccd6f965016e222862a08a.s3tc.ctex"]
 
 [params]
 

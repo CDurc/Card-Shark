@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d08u24rnginx5"
-path="res://.godot/imported/TheWaningGibbous.glb-c2d154d391462ba1ae7df6475b3dad16.scn"
+path="res://.godot/imported/TheWaningGibbous.glb-464d3b8f0c53311f65aacf302080a045.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/TheWaningGibbous.glb"
-dest_files=["res://.godot/imported/TheWaningGibbous.glb-c2d154d391462ba1ae7df6475b3dad16.scn"]
+source_file="res://CHARACTERS/TheWaningGibbous.glb"
+dest_files=["res://.godot/imported/TheWaningGibbous.glb-464d3b8f0c53311f65aacf302080a045.scn"]
 
 [params]
 

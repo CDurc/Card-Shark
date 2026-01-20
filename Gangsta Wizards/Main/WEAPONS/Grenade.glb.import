@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dh4iei2g3y165"
-path="res://.godot/imported/Grenade.glb-6a8710b79e9dba093099bd9ee8e220a2.scn"
+path="res://.godot/imported/Grenade.glb-7b7e1f1f52114dd7c26af7f4a03da85e.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Grenade.glb"
-dest_files=["res://.godot/imported/Grenade.glb-6a8710b79e9dba093099bd9ee8e220a2.scn"]
+source_file="res://WEAPONS/Grenade.glb"
+dest_files=["res://.godot/imported/Grenade.glb-7b7e1f1f52114dd7c26af7f4a03da85e.scn"]
 
 [params]
 

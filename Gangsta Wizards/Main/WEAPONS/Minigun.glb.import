@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bdypq1yswuav1"
-path="res://.godot/imported/Minigun.glb-1d24ac62885d475f968e9ed40fb2f6b2.scn"
+path="res://.godot/imported/Minigun.glb-14ca74d352dbd532e1b718c5a85f2250.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Minigun.glb"
-dest_files=["res://.godot/imported/Minigun.glb-1d24ac62885d475f968e9ed40fb2f6b2.scn"]
+source_file="res://WEAPONS/Minigun.glb"
+dest_files=["res://.godot/imported/Minigun.glb-14ca74d352dbd532e1b718c5a85f2250.scn"]
 
 [params]
 

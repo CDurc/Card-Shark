@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d03k2x6evblbq"
-path="res://.godot/imported/Benjamin, Carnie.glb-67939b41b06f573980e6dda3453c2aa8.scn"
+path="res://.godot/imported/Benjamin, Carnie.glb-5be571c48c9e88bd731c06a849390f4f.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Benjamin, Carnie.glb"
-dest_files=["res://.godot/imported/Benjamin, Carnie.glb-67939b41b06f573980e6dda3453c2aa8.scn"]
+source_file="res://CHARACTERS/Carnies/Benjamin, Carnie.glb"
+dest_files=["res://.godot/imported/Benjamin, Carnie.glb-5be571c48c9e88bd731c06a849390f4f.scn"]
 
 [params]
 

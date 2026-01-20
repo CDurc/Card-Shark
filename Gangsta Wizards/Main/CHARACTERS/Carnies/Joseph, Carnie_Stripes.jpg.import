@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ud223qqih0xg"
-path.s3tc="res://.godot/imported/Joseph, Carnie_Stripes.jpg-faf18bfda4c2e3c620c355e665d266f1.s3tc.ctex"
+path.s3tc="res://.godot/imported/Joseph, Carnie_Stripes.jpg-80ada02181fe54eb2ae1cf1fb55cb691.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Joseph, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Joseph, Carnie_Stripes.jpg-faf18bfda4c2e3c620c355e665d266f1.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Joseph, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Joseph, Carnie_Stripes.jpg-80ada02181fe54eb2ae1cf1fb55cb691.s3tc.ctex"]
 
 [params]
 

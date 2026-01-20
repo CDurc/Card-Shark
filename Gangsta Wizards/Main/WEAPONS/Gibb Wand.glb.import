@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://daffrcun4nmlf"
-path="res://.godot/imported/Gibb Wand.glb-ed1cbe2f3db4ed6ff5d90b5c3d061e06.scn"
+path="res://.godot/imported/Gibb Wand.glb-20cc1e44ea7716d0df49d195e1d60762.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Gibb Wand.glb"
-dest_files=["res://.godot/imported/Gibb Wand.glb-ed1cbe2f3db4ed6ff5d90b5c3d061e06.scn"]
+source_file="res://WEAPONS/Gibb Wand.glb"
+dest_files=["res://.godot/imported/Gibb Wand.glb-20cc1e44ea7716d0df49d195e1d60762.scn"]
 
 [params]
 

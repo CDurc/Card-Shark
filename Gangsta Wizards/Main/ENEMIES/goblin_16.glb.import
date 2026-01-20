@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ll8a1tl33v4q"
-path="res://.godot/imported/goblin_16.glb-64b5863a963ef11a0fdc740ebf3da701.scn"
+path="res://.godot/imported/goblin_16.glb-4011032033168cffae3b51bb6af374f6.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Goblins/goblin_16.glb"
-dest_files=["res://.godot/imported/goblin_16.glb-64b5863a963ef11a0fdc740ebf3da701.scn"]
+source_file="res://ENEMIES/goblin_16.glb"
+dest_files=["res://.godot/imported/goblin_16.glb-4011032033168cffae3b51bb6af374f6.scn"]
 
 [params]
 

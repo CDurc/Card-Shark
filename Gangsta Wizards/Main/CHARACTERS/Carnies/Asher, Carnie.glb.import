@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xe2fm6pxemcw"
-path="res://.godot/imported/Asher, Carnie.glb-79a26c992e19143dc7efacf42ecbd95a.scn"
+path="res://.godot/imported/Asher, Carnie.glb-d8640a8af7e32b348047fa5362bf0a84.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Asher, Carnie.glb"
-dest_files=["res://.godot/imported/Asher, Carnie.glb-79a26c992e19143dc7efacf42ecbd95a.scn"]
+source_file="res://CHARACTERS/Carnies/Asher, Carnie.glb"
+dest_files=["res://.godot/imported/Asher, Carnie.glb-d8640a8af7e32b348047fa5362bf0a84.scn"]
 
 [params]
 

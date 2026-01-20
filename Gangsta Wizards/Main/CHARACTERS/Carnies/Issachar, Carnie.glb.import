@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyib2ag22i316"
-path="res://.godot/imported/Issachar, Carnie.glb-c0e0a9c098915fa5328505432b369c92.scn"
+path="res://.godot/imported/Issachar, Carnie.glb-67bd4069af4e12a6e9f8587beb785c49.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Issachar, Carnie.glb"
-dest_files=["res://.godot/imported/Issachar, Carnie.glb-c0e0a9c098915fa5328505432b369c92.scn"]
+source_file="res://CHARACTERS/Carnies/Issachar, Carnie.glb"
+dest_files=["res://.godot/imported/Issachar, Carnie.glb-67bd4069af4e12a6e9f8587beb785c49.scn"]
 
 [params]
 

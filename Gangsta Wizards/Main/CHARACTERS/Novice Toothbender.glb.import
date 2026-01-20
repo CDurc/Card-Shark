@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ikgnvbkcittx"
-path="res://.godot/imported/Novice Toothbender.glb-81a7713ea12d200e7cb9c3b83595a8a6.scn"
+path="res://.godot/imported/Novice Toothbender.glb-53b1b261da8b65a141cd261a583d3a70.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Novice Toothbender.glb"
-dest_files=["res://.godot/imported/Novice Toothbender.glb-81a7713ea12d200e7cb9c3b83595a8a6.scn"]
+source_file="res://CHARACTERS/Novice Toothbender.glb"
+dest_files=["res://.godot/imported/Novice Toothbender.glb-53b1b261da8b65a141cd261a583d3a70.scn"]
 
 [params]
 

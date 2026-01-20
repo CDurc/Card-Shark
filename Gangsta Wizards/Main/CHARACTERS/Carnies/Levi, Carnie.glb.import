@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxvjtibe45ncn"
-path="res://.godot/imported/Levi, Carnie.glb-a12b99a99e827bf8236c0e64061ef81c.scn"
+path="res://.godot/imported/Levi, Carnie.glb-11503f5800fed6fe4fdfaef6c87e1328.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Levi, Carnie.glb"
-dest_files=["res://.godot/imported/Levi, Carnie.glb-a12b99a99e827bf8236c0e64061ef81c.scn"]
+source_file="res://CHARACTERS/Carnies/Levi, Carnie.glb"
+dest_files=["res://.godot/imported/Levi, Carnie.glb-11503f5800fed6fe4fdfaef6c87e1328.scn"]
 
 [params]
 

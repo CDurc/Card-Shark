@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d3xtr7xupcsmg"
-path="res://.godot/imported/Flamethrower.glb-5d678797290eb8ee3bc1ad68f8429b9b.scn"
+path="res://.godot/imported/Flamethrower.glb-b63def36d352c508d09de16f9072dec5.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Flamethrower.glb"
-dest_files=["res://.godot/imported/Flamethrower.glb-5d678797290eb8ee3bc1ad68f8429b9b.scn"]
+source_file="res://WEAPONS/Flamethrower.glb"
+dest_files=["res://.godot/imported/Flamethrower.glb-b63def36d352c508d09de16f9072dec5.scn"]
 
 [params]
 

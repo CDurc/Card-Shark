@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://epycr6wk58g2"
-path.s3tc="res://.godot/imported/Asher, Carnie_Stripes.jpg-47b2c44711b19a9ed20b195c367c8bbe.s3tc.ctex"
+path.s3tc="res://.godot/imported/Asher, Carnie_Stripes.jpg-8ab8a9b7ccfb89056abedd50a63a77aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Asher, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Asher, Carnie_Stripes.jpg-47b2c44711b19a9ed20b195c367c8bbe.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Asher, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Asher, Carnie_Stripes.jpg-8ab8a9b7ccfb89056abedd50a63a77aa.s3tc.ctex"]
 
 [params]
 

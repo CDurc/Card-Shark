@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwaryvmt01k6f"
-path="res://.godot/imported/Cannonball.glb-9e1bc232a86d2d4dce2be8a62e37e576.scn"
+path="res://.godot/imported/Cannonball.glb-dc0a3124d3726764afb770700ba3325d.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Cannonball.glb"
-dest_files=["res://.godot/imported/Cannonball.glb-9e1bc232a86d2d4dce2be8a62e37e576.scn"]
+source_file="res://WEAPONS/Cannonball.glb"
+dest_files=["res://.godot/imported/Cannonball.glb-dc0a3124d3726764afb770700ba3325d.scn"]
 
 [params]
 

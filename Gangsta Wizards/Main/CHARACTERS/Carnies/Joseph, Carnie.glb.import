@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b15d8dqw7xof5"
-path="res://.godot/imported/Joseph, Carnie.glb-430cdb8a07548ce1038c32ab6a519ff0.scn"
+path="res://.godot/imported/Joseph, Carnie.glb-c832cb60801b4d7b26fca1ac4047edd0.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Joseph, Carnie.glb"
-dest_files=["res://.godot/imported/Joseph, Carnie.glb-430cdb8a07548ce1038c32ab6a519ff0.scn"]
+source_file="res://CHARACTERS/Carnies/Joseph, Carnie.glb"
+dest_files=["res://.godot/imported/Joseph, Carnie.glb-c832cb60801b4d7b26fca1ac4047edd0.scn"]
 
 [params]
 

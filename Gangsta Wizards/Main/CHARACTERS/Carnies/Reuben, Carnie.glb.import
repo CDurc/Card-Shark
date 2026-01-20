@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dqfvf7k4a4i4p"
-path="res://.godot/imported/Reuben, Carnie.glb-f1ac767fe04a82cdc3a67a1a2452d678.scn"
+path="res://.godot/imported/Reuben, Carnie.glb-236f014a6e3ad6fa693482a7bfbf2e75.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Reuben, Carnie.glb"
-dest_files=["res://.godot/imported/Reuben, Carnie.glb-f1ac767fe04a82cdc3a67a1a2452d678.scn"]
+source_file="res://CHARACTERS/Carnies/Reuben, Carnie.glb"
+dest_files=["res://.godot/imported/Reuben, Carnie.glb-236f014a6e3ad6fa693482a7bfbf2e75.scn"]
 
 [params]
 

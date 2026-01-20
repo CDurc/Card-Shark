@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbfjk0fgfaksd"
-path="res://.godot/imported/Billy.glb-d5c9058194cf3df0eb202e678a1512a4.scn"
+path="res://.godot/imported/Billy.glb-042981868807072c03ad0bc458b3afaa.scn"
 
 [deps]
 
-source_file="res://NPCs/Billy.glb"
-dest_files=["res://.godot/imported/Billy.glb-d5c9058194cf3df0eb202e678a1512a4.scn"]
+source_file="res://CHARACTERS/Billy.glb"
+dest_files=["res://.godot/imported/Billy.glb-042981868807072c03ad0bc458b3afaa.scn"]
 
 [params]
 

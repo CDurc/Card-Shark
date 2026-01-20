@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cpmgpga6h6108"
-path="res://.godot/imported/Pike.glb-a36843bf84d92527c377a7b722295f72.scn"
+path="res://.godot/imported/Pike.glb-dde7bcfda64f4d5f1004fe4330dd7cae.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Pike.glb"
-dest_files=["res://.godot/imported/Pike.glb-a36843bf84d92527c377a7b722295f72.scn"]
+source_file="res://WEAPONS/Pike.glb"
+dest_files=["res://.godot/imported/Pike.glb-dde7bcfda64f4d5f1004fe4330dd7cae.scn"]
 
 [params]
 

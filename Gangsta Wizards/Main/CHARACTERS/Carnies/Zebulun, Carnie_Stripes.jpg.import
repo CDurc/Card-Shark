@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8hj4h5c81h3w"
-path.s3tc="res://.godot/imported/Zebulun, Carnie_Stripes.jpg-81ec9f9dabea67610e6e984f1b75f69f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Zebulun, Carnie_Stripes.jpg-742e6c3d89187cccf1b446f8e17c242a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Zebulun, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Zebulun, Carnie_Stripes.jpg-81ec9f9dabea67610e6e984f1b75f69f.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Zebulun, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Zebulun, Carnie_Stripes.jpg-742e6c3d89187cccf1b446f8e17c242a.s3tc.ctex"]
 
 [params]
 

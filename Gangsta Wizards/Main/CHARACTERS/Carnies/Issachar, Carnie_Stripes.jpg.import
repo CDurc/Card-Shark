@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byjbvrmrw4nt8"
-path.s3tc="res://.godot/imported/Issachar, Carnie_Stripes.jpg-73a9d0dfa517fb046b3d2274c3c54d90.s3tc.ctex"
+path.s3tc="res://.godot/imported/Issachar, Carnie_Stripes.jpg-643496bae6850f4fe9154edd8763f54f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Issachar, Carnie_Stripes.jpg"
-dest_files=["res://.godot/imported/Issachar, Carnie_Stripes.jpg-73a9d0dfa517fb046b3d2274c3c54d90.s3tc.ctex"]
+source_file="res://CHARACTERS/Carnies/Issachar, Carnie_Stripes.jpg"
+dest_files=["res://.godot/imported/Issachar, Carnie_Stripes.jpg-643496bae6850f4fe9154edd8763f54f.s3tc.ctex"]
 
 [params]
 

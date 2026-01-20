@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dbmnqui46ljnl"
-path="res://.godot/imported/Zebulun, Carnie.glb-e67091ec0e5b8ad012e2dfadc74c90c6.scn"
+path="res://.godot/imported/Zebulun, Carnie.glb-9e40dedf7105040326387d6dc787fdea.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Zebulun, Carnie.glb"
-dest_files=["res://.godot/imported/Zebulun, Carnie.glb-e67091ec0e5b8ad012e2dfadc74c90c6.scn"]
+source_file="res://CHARACTERS/Carnies/Zebulun, Carnie.glb"
+dest_files=["res://.godot/imported/Zebulun, Carnie.glb-9e40dedf7105040326387d6dc787fdea.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5yx6xug7ylfg"
-path="res://.godot/imported/Judah, Carnie.glb-cab4f3eff5b9e80af3a3364a5a102d0e.scn"
+path="res://.godot/imported/Judah, Carnie.glb-5aaa233ed6032fbe8d5e36d92dbbea07.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Judah, Carnie.glb"
-dest_files=["res://.godot/imported/Judah, Carnie.glb-cab4f3eff5b9e80af3a3364a5a102d0e.scn"]
+source_file="res://CHARACTERS/Carnies/Judah, Carnie.glb"
+dest_files=["res://.godot/imported/Judah, Carnie.glb-5aaa233ed6032fbe8d5e36d92dbbea07.scn"]
 
 [params]
 

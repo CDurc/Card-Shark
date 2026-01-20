@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cak8qrsxwa506"
-path="res://.godot/imported/Naphtali, Carnie.glb-50522d020b4ef64e37292be70c924726.scn"
+path="res://.godot/imported/Naphtali, Carnie.glb-06a526e42aff3a7042d7def3edeef3cd.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Naphtali, Carnie.glb"
-dest_files=["res://.godot/imported/Naphtali, Carnie.glb-50522d020b4ef64e37292be70c924726.scn"]
+source_file="res://CHARACTERS/Carnies/Naphtali, Carnie.glb"
+dest_files=["res://.godot/imported/Naphtali, Carnie.glb-06a526e42aff3a7042d7def3edeef3cd.scn"]
 
 [params]
 

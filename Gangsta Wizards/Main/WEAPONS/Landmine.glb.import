@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cjb005680n11u"
-path="res://.godot/imported/Landmine.glb-386a3d84d00b8269ea8159ec43a33fbb.scn"
+path="res://.godot/imported/Landmine.glb-9fbbb11e0af8f83a840ff3468eb2e393.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Landmine.glb"
-dest_files=["res://.godot/imported/Landmine.glb-386a3d84d00b8269ea8159ec43a33fbb.scn"]
+source_file="res://WEAPONS/Landmine.glb"
+dest_files=["res://.godot/imported/Landmine.glb-9fbbb11e0af8f83a840ff3468eb2e393.scn"]
 
 [params]
 

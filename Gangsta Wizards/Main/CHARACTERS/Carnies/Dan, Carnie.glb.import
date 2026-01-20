@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c4yeqw4txo8w2"
-path="res://.godot/imported/Dan, Carnie.glb-f27675a8c1170d17513cf2a80d0e20b6.scn"
+path="res://.godot/imported/Dan, Carnie.glb-1e13d42e0e1c923655bd324d00ed99df.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Character Models/Carnies/Dan, Carnie.glb"
-dest_files=["res://.godot/imported/Dan, Carnie.glb-f27675a8c1170d17513cf2a80d0e20b6.scn"]
+source_file="res://CHARACTERS/Carnies/Dan, Carnie.glb"
+dest_files=["res://.godot/imported/Dan, Carnie.glb-1e13d42e0e1c923655bd324d00ed99df.scn"]
 
 [params]
 

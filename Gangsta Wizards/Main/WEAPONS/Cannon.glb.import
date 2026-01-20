@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dmmh81qnlyd82"
-path="res://.godot/imported/Cannon.glb-a4a48a6241f4caee43699a339b33693f.scn"
+path="res://.godot/imported/Cannon.glb-d0dca68446fe0ef6534276e4b7df7ce8.scn"
 
 [deps]
 
-source_file="res://Card Shark Campaign/Weapons/Cannon.glb"
-dest_files=["res://.godot/imported/Cannon.glb-a4a48a6241f4caee43699a339b33693f.scn"]
+source_file="res://WEAPONS/Cannon.glb"
+dest_files=["res://.godot/imported/Cannon.glb-d0dca68446fe0ef6534276e4b7df7ce8.scn"]
 
 [params]
 
