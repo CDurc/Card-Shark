@@ -1368,7 +1368,6 @@ func shoot():
 	if Input.is_action_pressed("Left_Click"):
 		if item and item.has_method("use_item"):
 			item.use_item()
-			print("shooit")
 
 # Mouse movement
 func _input(event):
