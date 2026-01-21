@@ -1991,7 +1991,7 @@ libraries = {
 }
 
 [node name="Arm" parent="World" instance=ExtResource("4_foeht")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00498766, 1.457, 0.709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20332706, 1.457, 0.709)
 visible = false
 
 [node name="Scripts" type="Node3D" parent="."]

@@ -13,21 +13,24 @@ var current_round = 0
 	"gun": preload("res://Card Shark Campaign/Character Models/Goblins/SMART SHOOT GOBLIN AUBURN.tscn"),
 	"bomb": preload("res://Card Shark Campaign/Character Models/Goblins/SMART BOMBER.tscn"),
 	"roll": preload("res://Card Shark Campaign/Character Models/Goblins/SMART ROLL GOBLIN.tscn"),
-	"sign": preload("res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN.tscn")
+	"sign": preload("res://Card Shark Campaign/Character Models/Goblins/SMART SIGN GOBLIN.tscn"),
+	"devil": preload("res://Card Shark Campaign/Character Models/Goblins/SMART_fly_guy.tscn")
 }
 
 
 var rounds = [
-	{ "small": {"pipe": 6, "gun": 0, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 8, "gun": 1, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 6, "gun": 2, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 6, "gun": 0, "bomb": 0}, "big": {"roll": 0, "sign": 1} },
-	{ "small": {"pipe": 8, "gun": 2, "bomb": 0}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 0, "gun": 0, "bomb": 0}, "big": {"roll": 3, "sign": 0} },
-	{ "small": {"pipe": 0, "gun": 0, "bomb": 14}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 4, "gun": 3, "bomb": 4}, "big": {"roll": 0, "sign": 0} },
-	{ "small": {"pipe": 0, "gun": 3, "bomb": 0}, "big": {"roll": 0, "sign": 3} },
-	{ "small": {"pipe": 8, "gun": 0, "bomb": 8}, "big": {"roll": 2, "sign": 0} }
+	{ "small": {"pipe": 5, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 8, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 6} },
+	{ "small": {"pipe": 6, "gun": 1, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 2} },
+	{ "small": {"pipe": 6, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 1},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 8, "gun": 1, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 6} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 0},    "big": {"roll": 3, "sign": 0},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 14},   "big": {"roll": 0, "sign": 0},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 0, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 14} },
+	{ "small": {"pipe": 4, "gun": 3, "bomb": 4},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 0, "gun": 3, "bomb": 0},    "big": {"roll": 0, "sign": 2},    "fly": {"devil": 8} },
+	{ "small": {"pipe": 8, "gun": 0, "bomb": 8},    "big": {"roll": 2, "sign": 0},    "fly": {"devil": 4} }
 ]
 
 # Track cooldowns for each spawn point
@@ -77,6 +80,11 @@ func start_round(round_index: int) -> void:
 		for enemy_type in round_data["big"].keys():
 			for i in range(round_data["big"][enemy_type]):
 				spawn_big_enemy(enemy_type)
+		
+		#Spawn fly guys
+		for enemy_type in round_data["fly"].keys():
+			for i in range(round_data["fly"][enemy_type]):
+				spawn_fly_enemy(enemy_type)
 
 
 func spawn_small_enemy(enemy_type: String) -> void:
@@ -106,6 +114,36 @@ func spawn_big_enemy(enemy_type: String) -> void:
 	spawn_enemy(enemy_type, big_spawn, big_parent_node)
 	spawn_cooldowns[big_spawn] = COOLDOWN_TIME
 
+func spawn_fly_enemy(enemy_type: String) -> void:
+	# Randomly choose left or right rail system
+	var use_left = randf() < 0.5
+	var rails: Node3D
+	if use_left:
+		rails = get_node("/root/Rootbeer/LeftFlyRails")
+	else:
+		rails = get_node("/root/Rootbeer/RightFlyRails")
+	
+	# Pick a random rail path from the chosen side
+	var rail_children = rails.get_children()
+	if rail_children.size() == 0:
+		push_error("No rail paths found in " + rails.name)
+		return
+	
+	var random_rail = rail_children.pick_random()
+	
+	# Instantiate the flying enemy
+	if not enemy_scenes.has(enemy_type):
+		push_error("No scene found for enemy type: " + enemy_type)
+		return
+	
+	var enemy_instance = enemy_scenes[enemy_type].instantiate()
+	random_rail.add_child(enemy_instance)
+	
+	# Reset its transform so it starts at the beginning of the path
+	#enemy_instance.transform = Transform3D.IDENTITY
+	
+	print("Spawned flying %s on %s (parent: %s)" % [enemy_type, random_rail.name, rails.name])
+	
 
 func spawn_enemy(enemy_type: String, spawn_point: Node3D, parent_node) -> void:
 	if not enemy_scenes.has(enemy_type):
