@@ -597,8 +597,8 @@ func trigger_ragdoll(impulse: Vector3):
 	if impulse != Vector3(0,0,0):
 		local_pos = impulse.normalized()
 		local_pos = Vector3(local_pos.x,-0.3*local_pos.y,local_pos.z).normalized() * 3.5
-		ragcam.global_position = hip.global_position - local_pos
 		print("LOCAL POS",local_pos)
+		ragcam.global_position = hip.global_position - local_pos
 		ragcam.look_at(hip.position)
 		
 		hip.apply_central_impulse(impulse)
@@ -608,8 +608,8 @@ func trigger_ragdoll(impulse: Vector3):
 	else:
 		var back_pos = 2*transform.basis.z
 		local_pos = -(Vector3(0,1.5,0) + back_pos)
-		ragcam.global_position = hip.global_position - local_pos
 		print("LOCAL POS",local_pos)
+		ragcam.global_position = hip.global_position - local_pos
 		ragcam.look_at(hip.position)
 		
 		hip.apply_central_impulse(impulse)

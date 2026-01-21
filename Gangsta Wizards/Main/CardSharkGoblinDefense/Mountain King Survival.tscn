@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=21 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
@@ -84,6 +84,14 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 26
+
+[sub_resource type="Curve3D" id="Curve3D_827m0"]
+bake_interval = 16.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8.090168, 4.0961947, 1.3153273, 0, 0, 0, 0, 0, 0, -22.31356, 4.3544273, 0.79991895, 0, 0, 0, 0, 0, 0, -32.87553, -0.030048192, -2.5351307, 0, 0, 0, 0, 0, 0, -53.436646, 0.037233815, -1.3800501, 0, 0, 0, 0, 0, 0, -53.090694, -2.5825927, -8.711172, 0, 0, 0, 0, 0, 0, -48.365253, -13.920717, -17.079502, 0, 0, 0, 0, 0, 0, -38.733723, -14.28197, -17.600554, 0, 0, 0, 0, 0, 0, -41.11848, -12.7935095, -6.658599, 0, 0, 0, 0, 0, 0, -29.349115, -13.423085, -2.7223492, 0, 0, 0, 0, 0, 0, -24.259659, -5.772357, -15.3018465, 0, 0, 0, 0, 0, 0, -27.943245, 0.5311651, -21.705622, 0, 0, 0, 0, 0, 0, -35.096317, 1.684253, -24.40324, 0, 0, 0, 0, 0, 0, -54.166992, 1.6832693, -24.402306, 0, 0, 0, 0, 0, 0, -61.17418, 0.030326217, -3.4375985, 0, 0, 0, 0, 0, 0, -57.783657, 0.8765885, 22.932152, 0, 0, 0, 0, 0, 0, -32.82138, -0.8939415, 29.131418, 0, 0, 0, 0, 0, 0, -29.16531, 2.7026615, 22.47856, 0, 0, 0, 0, 0, 0, -36.138626, 3.6792197, 16.41066, 0, 0, 0, 0, 0, 0, -77.4348, 4.357606, 15.895248, 0, 0, 0, 0, 0, 0, -81.12646, 0.2473118, 15.634774, 0, 0, 0, 0, 0, 0, -85.26313, 1.1504179, 7.627609),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.9215338, 0.9215338, 2.1903882, 2.0769417, 0, 0, 0, 0, 0, 0)
+}
+point_count = 22
 
 [node name="Rootbeer" type="Node3D"]
 
@@ -421,7 +429,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Player" parent="." instance=ExtResource("7_lq2qr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18428, 11.595, -28.7913)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18428, 26.190002, -9.649164)
 health = 250
 stamina = 4.5
 
@@ -470,7 +478,6 @@ curve = SubResource("Curve3D_4a4gl")
 curve = SubResource("Curve3D_c2j0s")
 
 [node name="3" type="Path3D" parent="LeftFlyRails"]
-visible = false
 curve = SubResource("Curve3D_wbl8k")
 
 [node name="RightFlyRails" type="Node3D" parent="."]
@@ -481,3 +488,6 @@ curve = SubResource("Curve3D_d51kt")
 
 [node name="2" type="Path3D" parent="RightFlyRails"]
 curve = SubResource("Curve3D_04q24")
+
+[node name="3" type="Path3D" parent="RightFlyRails"]
+curve = SubResource("Curve3D_827m0")
