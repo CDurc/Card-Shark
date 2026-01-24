@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=23 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dvx6jq0uru0f3" path="res://CardSharkGoblinDefense/weapon_pickup.gd" id="8_8ywqv"]
 [ext_resource type="PackedScene" uid="uid://covvkwphtcdih" path="res://Card Shark Campaign/Weapons/sniper.tscn" id="8_cijjr"]
 [ext_resource type="PackedScene" uid="uid://qauvwuftnp8v" path="res://Card Shark Campaign/Weapons/revolver.tscn" id="8_to54h"]
+[ext_resource type="PackedScene" uid="uid://8egsnfdn7ovj" path="res://Card Shark Campaign/Character Models/Goblins/SMART_fly_guy.tscn" id="10_iqbs7"]
 [ext_resource type="AudioStream" uid="uid://12b86jh82p0e" path="res://Music/Card Shark Arcade Song.mp3" id="13_hfiix"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4xw1"]
@@ -68,6 +69,14 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.5, 0, -0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.7, 0, 1.5, 0, 0)
 }
 point_count = 25
+
+[sub_resource type="Curve3D" id="Curve3D_so3oe"]
+bake_interval = 16.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.4963202, 2.8582337, 19.601559, 0, 0, 0, 0, 0, 0, 21.954674, 3.122118, 21.985935, 0, 0, 0, 0, 0, 0, 26.96791, -0.87421167, 22.503654, 0, 0, 0, 0, 0, 0, 49.92447, -1.9359845, 22.31516, 0, 0, 0, 0, 0, 0, 53.450626, -5.5102987, 13.912649, 0, 0, 0, 0, 0, 0, 56.800804, -16.199217, 9.545766, 0, 0, 0, 0, 0, 0, 61.896107, -15.160917, -14.238304, 0, 0, 0, 0, 0, 0, 62.193237, -1.5125455, -29.148577, 0, 0, 0, 0, 0, 0, 56.50813, -0.66624296, -32.22588, 0, 0, 0, 0, 0, 0, 55.647457, -1.818723, -25.8775, 0, 0, 0, 0, 0, 0, 61.152496, -1.51507, -18.80626, 0, 0, 0, 0, 0, 0, 62.081303, -2.572881, 21.554008, 0, 0, 0, 0, 0, 0, 58.329357, -4.5957355, 23.350018, 0, 0, 0, 0, 0, 0, 54.833076, -14.872331, 23.706463, 0, 0, 0, 0, 0, 0, 46.502552, -16.790354, 25.407238, 0, 0, 0, 0, 0, 0, 34.572964, -17.157885, 33.7962, 0, 0, 0, 0, 0, 0, 27.395947, -17.530571, 32.113182, 0, 0, 0, 0, 0, 0, 27.607573, -16.339735, -12.349993, 0, 0, 0, 0, 0, 0, 39.903385, -16.602444, -29.698126, 0, 0, 0, 0, 0, 0, 55.585182, -17.150877, -32.372395, 0, 0, 0, 0, 0, 0, 56.793903, -16.7161, -23.750599, 0, 0, 0, 0, 0, 0, 54.29627, -11.089376, -9.818519, 0, 0, 0, 0, 0, 0, 57.293644, 0.4907746, 5.9405313, 0, 0, 0, 0, 0, 0, 64.46533, 3.4420657, 7.6495233, 0, 0, 0, 0, 0, 0, 78.543, 3.441462, 7.6538973, 0, 0, 0, 0, 0, 0, 81.6474, -1.9999906, 8.151173, 0, 0, 0, 0, 0, 0, 85.2426, -1.14909, -7.63351),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.5359633, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1.5306537, 0, -2.4207716, 0, 1.2688544, 1.5306537, 0, 0)
+}
+point_count = 28
 
 [sub_resource type="Curve3D" id="Curve3D_d51kt"]
 bake_interval = 16.0
@@ -479,6 +488,12 @@ curve = SubResource("Curve3D_c2j0s")
 
 [node name="3" type="Path3D" parent="LeftFlyRails"]
 curve = SubResource("Curve3D_wbl8k")
+
+[node name="4" type="Path3D" parent="LeftFlyRails"]
+curve = SubResource("Curve3D_so3oe")
+
+[node name="FlyGuy" parent="LeftFlyRails/4" instance=ExtResource("10_iqbs7")]
+transform = Transform3D(-0.9628634, -0.037538677, -0.26736662, -1.8626454e-09, 0.99028707, -0.1390378, 0.269989, -0.13387442, -0.9535112, 0, 0, 0)
 
 [node name="RightFlyRails" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.828, 28.7889, -8.21278)
