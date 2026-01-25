@@ -1,14 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://1560qrd2orln"]
+[gd_scene load_steps=8 format=3 uid="uid://dpf060ddbj72j"]
 
 [ext_resource type="PackedScene" uid="uid://dkhwvgcjcie2h" path="res://PracticeSandbox/SandboxMap.glb" id="1_efnc4"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="2_d1kxc"]
+
+[sub_resource type="Gradient" id="Gradient_d1kxc"]
+colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_awnjb"]
+gradient = SubResource("Gradient_d1kxc")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_meanl"]
+panorama = SubResource("GradientTexture2D_awnjb")
+
+[sub_resource type="Sky" id="Sky_ah5w1"]
+sky_material = SubResource("PanoramaSkyMaterial_meanl")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_0lva3"]
+background_mode = 2
+background_energy_multiplier = 0.9
+sky = SubResource("Sky_ah5w1")
+ambient_light_source = 2
+ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
+ambient_light_energy = 0.9
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 1.0
+ssao_power = 5.0
+glow_enabled = true
+glow_levels/2 = 0.6
+glow_levels/3 = 0.6
+glow_levels/5 = 0.0
+glow_intensity = 2.0
 
 [node name="BenScene" type="Node3D"]
 
 [node name="SandboxMap" parent="." instance=ExtResource("1_efnc4")]
 
 [node name="Player" parent="." instance=ExtResource("2_d1kxc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8817286, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9260864, 1.5464952, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46.912094, 0)
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0lva3")
