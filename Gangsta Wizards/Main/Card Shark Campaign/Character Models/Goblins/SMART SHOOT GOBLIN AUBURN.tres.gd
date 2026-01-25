@@ -14,7 +14,6 @@ extends CharacterBody3D
 @onready var bullet_path = preload("res://Particles/bullet.tscn")
 @onready var bullet_spawn = self.get_node("spawn")
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/10d_money_drop.tscn")
-@onready var raycast = $RayCast
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -93,17 +92,8 @@ func _physics_process(delta: float) -> void:
 			#l_anime.play("Walking") NOTE
 			
 		if (target.global_transform.origin - global_transform.origin).length() < 35 and not attacking:
-			var aim_pos = target.get_node("CharacterCenter").global_position
-			#For now do one check for if he can see center, might want do do head and feet check too later
-			raycast.target_position = raycast.to_local(aim_pos)
-			raycast.force_raycast_update()
-			if raycast.is_colliding():
-				var hit = raycast.get_collider()
-				print("RAY HIT:  ", hit)
-				if hit == target:
-					print("ray hit target player")
-					attacking = true
-					shoot()
+			attacking = true
+			shoot()
 
 		#if nav_agent.is_navigation_finished():
 		#	velocity.x = 0
