@@ -1364,10 +1364,13 @@ func reload():
 			item.reload()
 			print("reload")
 
-func shoot():
-	if Input.is_action_pressed("Left_Click"):
+
+func shoot(): #Use this for stuff that a single tap can fire (no charge), and you can hold the button down
+	if Input.is_action_pressed("Left_Click"): #shoot() is called every frame
 		if item and item.has_method("use_item"):
 			item.use_item()
+
+var is_holding:= false #Not used rn, but needed for weapon swap if holding.  Prevent swap when true?
 
 # Mouse movement
 func _input(event):
@@ -1377,6 +1380,18 @@ func _input(event):
 		
 		rotation_target.y -= event.relative.x / mouse_sensitivity
 		rotation_target.x -= event.relative.y / mouse_sensitivity
+		
+	#Use this for items that need held then released
+	if event.is_action_pressed("Left_Click"): #This is a single event (_input is not called every frame)
+		print("PRESS")
+		if item and item.has_method("hold_item"):
+			item.hold_item()
+			is_holding = true
+
+	if event.is_action_released("Left_Click"):
+		if item and item.has_method("release_item"):
+			item.release_item()
+			is_holding = false
 
 func handle_controls(_delta): #Also handles sprint now
 	
