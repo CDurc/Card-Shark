@@ -1,3 +1,10 @@
+# Godot
 .godot/
-.import/
 
+# GDExtension binaries
+*.dll
+*.so
+*.dylib
+*.framework
+*.wasm
+addons/*/bin/
