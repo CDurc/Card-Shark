@@ -1,4 +1,4 @@
-[gd_scene load_steps=219 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=218 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -159,7 +159,6 @@
 [ext_resource type="PackedScene" uid="uid://b5jd7ue1ru6uk" path="res://BUILDINGS/Business/Metro Entrance - Gourdtown.glb" id="151_ktwea"]
 [ext_resource type="Script" uid="uid://cma50fu0nn3ac" path="res://MAP/give_gourds_goals.gd" id="151_w05ur"]
 [ext_resource type="Script" uid="uid://vdlo6be1tp0e" path="res://MAP/car_flatten.gd" id="152_hbeiv"]
-[ext_resource type="PackedScene" uid="uid://cq7nhd2ijwrsg" path="res://Card Shark Campaign/CPUs/gary2.tscn" id="153_5bfla"]
 [ext_resource type="PackedScene" uid="uid://xf25lxgt375v" path="res://VEHICLES/Semi Truck.glb" id="153_voqde"]
 [ext_resource type="PackedScene" uid="uid://sdjdcrkfyvaj" path="res://VEHICLES/Blimp.glb" id="154_djghw"]
 [ext_resource type="PackedScene" uid="uid://5kenax3soww0" path="res://VEHICLES/Fire Truck.glb" id="154_lukap"]
@@ -872,7 +871,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_pqpyh")
 
 [node name="BULLET TRAIN 4" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(-0.90702677, 0, -0.42098227, 0, 1, 0, 0.42098227, 0, -0.90702677, -306.81555, 0, -41.247253)
+transform = Transform3D(-0.90702677, 0, -0.42098224, 0, 1, 0, 0.42098224, 0, -0.90702677, -306.81555, 0, -41.247253)
 progress = 1975.1
 script = ExtResource("99_1skxp")
 
@@ -955,7 +954,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.039965898, 0, -0.99916214, 0, 1, 0, 0.99916214, 0, 0.039965898, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.0399659, 0, -0.9991622, 0, 1, 0, 0.9991622, 0, 0.0399659, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -991,7 +990,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36757, 32.8967, -193.779)
 curve = SubResource("Curve3D_2x8is")
 
 [node name="C1" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(0.99066913, 0, -0.13598283, 0, 1, 0, 0.13598283, 0, 0.99066913, 274.202, 0, -210.54333)
+transform = Transform3D(0.99066913, 0, -0.13598284, 0, 1, 0, 0.13598284, 0, 0.99066913, 274.202, 0, -210.54333)
 progress = 473.398
 script = ExtResource("99_1skxp")
 mps = 100
@@ -1042,7 +1041,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="C10" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.9979499, 0, -0.0633028, 0, 1, 0, 0.0633028, 0, -0.9979499, -46.154037, 0, -246.31923)
+transform = Transform3D(-0.99794984, 0, -0.0633028, 0, 1, 0, 0.0633028, 0, -0.99794984, -46.154037, 0, -246.31923)
 progress = 1508.01
 script = ExtResource("99_1skxp")
 mps = 100
@@ -1178,7 +1177,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="80s Red" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(0.48449272, 0, -0.87475103, 0, 1, 0, 0.87475103, 0, 0.48449272, -51.54296, 0, 15.207697)
+transform = Transform3D(0.4844927, 0, -0.874751, 0, 1, 0, 0.874751, 0, 0.4844927, -51.54296, 0, 15.207697)
 progress = 2311.83
 script = ExtResource("99_1skxp")
 
@@ -1451,7 +1450,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994731, 0, -0.027134642, 0, 0.999997, 0, 0.02713456, 0, -0.99947613, -324.41486, 0, -90.341)
+transform = Transform3D(-0.99947315, 0, -0.027134644, 0, 0.999997, 0, 0.027134562, 0, -0.9994762, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1535,7 +1534,7 @@ transform = Transform3D(1, 0, 3.27826e-07, 0, 1, 0, 2.98023e-08, 0, 1, 0.632462,
 shape = SubResource("BoxShape3D_lt5n4")
 
 [node name="Fire Truck" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.8558297, 0, -0.5171767, 0, 0.999997, 0, 0.5171764, 0, -0.8558301, -97.22356, 0, -358.4108)
+transform = Transform3D(-0.8558297, 0, -0.5171766, 0, 0.999997, 0, 0.5171764, 0, -0.8558301, -97.22356, 0, -358.4108)
 progress = 1414.1
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1552,7 +1551,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.4192541, 0, 0.9078208, 0, 0.999997, 0, -0.9078208, 0, 0.4192541, -196.0966, 0, -277.60928)
+transform = Transform3D(0.41925406, 0, 0.9078208, 0, 0.999997, 0, -0.9078208, 0, 0.41925406, -196.0966, 0, -277.60928)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1674,7 +1673,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.9894329, 0, 0.14469908, 0, 0.999997, 0, -0.14469908, 0, 0.9894329, 192.50854, 0, -316.1279)
+transform = Transform3D(0.9894328, 0, 0.14469908, 0, 0.999997, 0, -0.14469908, 0, 0.9894328, 192.50854, 0, -316.1279)
 progress = 635.232
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1710,7 +1709,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0004242018, 0, -0.9999519, 0, 0.999997, 0, 0.9999519, 0, 0.0004242018, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042420177, 0, -0.99995184, 0, 0.999997, 0, 0.99995184, 0, 0.00042420177, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2012,9 +2011,6 @@ Door_open_angle = -110.0
 [node name="Openable Door2" parent="." instance=ExtResource("151_5m3wu")]
 transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019, 83.2135, 34.3169, -22.2577)
 Door_open_angle = -110.0
-
-[node name="Gary" parent="." instance=ExtResource("153_5bfla")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 20.2254, 34.5052, -73.6395)
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.52687, 56.343, -77.19963)
