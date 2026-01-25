@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bho6fcfumcfks"
-path.s3tc="res://.godot/imported/Art Gallery_art26.jpg-14e01cf32e8b6ef089f8926686e3afde.s3tc.ctex"
+uid="uid://ysjys61u00aj"
+path.s3tc="res://.godot/imported/Roulette Table_WoodTexture.jpg-372e063974d145a28aa6cfa587f30370.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "5958b905feff5326c6cbfcc0b37df09a"
+}
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/Art Gallery_art26.jpg"
-dest_files=["res://.godot/imported/Art Gallery_art26.jpg-14e01cf32e8b6ef089f8926686e3afde.s3tc.ctex"]
+source_file="res://MINIGAME ITEMS/Roulette Table_WoodTexture.jpg"
+dest_files=["res://.godot/imported/Roulette Table_WoodTexture.jpg-372e063974d145a28aa6cfa587f30370.s3tc.ctex"]
 
 [params]
 

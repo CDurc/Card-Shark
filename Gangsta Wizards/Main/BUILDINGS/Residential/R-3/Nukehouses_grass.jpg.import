@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw5mjd726clxl"
+uid="uid://ekh726ey2r01"
 path.s3tc="res://.godot/imported/Nukehouses_grass.jpg-8b75d1ca8c94e68a6727c8c749075f5f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "de4bcee0f530ea8519fd4009ba9fdd8c"
 }
 
 [deps]

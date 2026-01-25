@@ -254,21 +254,21 @@ size = Vector3(6.95956, 3.41803, 2.4615)
 [sub_resource type="Gradient" id="Gradient_or2fw"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_awnjb"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g21t7"]
 gradient = SubResource("Gradient_or2fw")
 fill_to = Vector2(0, 1)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vrrql"]
-panorama = SubResource("GradientTexture2D_awnjb")
+panorama = SubResource("GradientTexture2D_g21t7")
 
-[sub_resource type="Sky" id="Sky_ah5w1"]
+[sub_resource type="Sky" id="Sky_0lq01"]
 sky_material = SubResource("PanoramaSkyMaterial_vrrql")
 radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_fh68l"]
 background_mode = 2
 background_energy_multiplier = 0.9
-sky = SubResource("Sky_ah5w1")
+sky = SubResource("Sky_0lq01")
 ambient_light_source = 2
 ambient_light_color = Color(0.745384, 0.769195, 0.80424, 1)
 ambient_light_energy = 0.9
@@ -956,7 +956,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.039965924, 0, -0.9991628, 0, 1, 0, 0.9991628, 0, 0.039965924, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.03996594, 0, -0.99916315, 0, 1, 0, 0.99916315, 0, 0.03996594, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -1452,7 +1452,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947375, 0, -0.02713466, 0, 0.999997, 0, 0.027134579, 0, -0.9994768, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994741, 0, -0.02713467, 0, 0.999997, 0, 0.027134588, 0, -0.99947715, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1711,7 +1711,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0004242015, 0, -0.99995124, 0, 0.999997, 0, 0.99995124, 0, 0.0004242015, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042420137, 0, -0.9999509, 0, 0.999997, 0, 0.9999509, 0, 0.00042420137, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2313,9 +2313,17 @@ shape = SubResource("BoxShape3D_l1m1a")
 [node name="Ball" parent="." instance=ExtResource("192_korqk")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -60.781925, 6.4966555, 473.5335)
 
-[node name="BankBall" parent="." instance=ExtResource("193_g21t7")]
+[node name="Stationary Ball" type="Node3D" parent="."]
 transform = Transform3D(6.731352, 0, 1.9206514, 0, 7, 0, -1.9206514, 0, 6.731352, -64.99169, 1.6714933, 473.58768)
-disable_mode = 1
+
+[node name="BankBall" parent="Stationary Ball" instance=ExtResource("193_g21t7")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="BankBall" parent="Stationary Ball/BankBall" index="0"]
+collision_layer = 3
+
+[node name="Openable Door3" parent="." instance=ExtResource("147_yg6vf")]
+transform = Transform3D(0.020890104, 0, -0.9997818, 0, 1, 0, 0.9997818, 0, 0.020890104, -63.73626, 2.1336164, 470.50827)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
@@ -2375,3 +2383,5 @@ disable_mode = 1
 [editable path="MAP/Openable Double Door"]
 [editable path="MAP/Openable Double Door2"]
 [editable path="Gourd Goals/NavigationRegion3D/Gourdtown Cemetery"]
+[editable path="Stationary Ball/BankBall"]
+[editable path="Openable Door3"]

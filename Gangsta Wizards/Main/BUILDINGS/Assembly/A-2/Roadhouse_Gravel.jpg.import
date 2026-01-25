@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb5cem8t5pwgw"
+uid="uid://qe54wi6a6p60"
 path.s3tc="res://.godot/imported/Roadhouse_Gravel.jpg-8372095f978606ffe937d13479a5afb1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "481ed094ab3677bb545f2f794aed3a9d"
 }
 
 [deps]

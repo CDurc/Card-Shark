@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lodxkwuhvelb"
+uid="uid://ca87xg2y3ope2"
 path.s3tc="res://.godot/imported/Pinacoladaville_White Siding.jpg-5280d68d6ea45a3536a18567b018ac09.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ff0aba190a83fd27dd853990ff7d2e88"
 }
 
 [deps]

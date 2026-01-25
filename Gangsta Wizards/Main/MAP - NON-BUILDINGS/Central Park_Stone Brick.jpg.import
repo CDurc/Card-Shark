@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ydoxcldejsne"
+uid="uid://qncfpvvrvqwy"
 path.s3tc="res://.godot/imported/Central Park_Stone Brick.jpg-c8b13f5067e7e6004d8a6cb4f59ee89b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "1c63b7c01fb28f8d93cb085337056a80"
 }
 
 [deps]

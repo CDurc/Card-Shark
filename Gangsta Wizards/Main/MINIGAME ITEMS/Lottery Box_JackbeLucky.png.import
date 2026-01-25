@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bho6fcfumcfks"
-path.s3tc="res://.godot/imported/Art Gallery_art26.jpg-14e01cf32e8b6ef089f8926686e3afde.s3tc.ctex"
+uid="uid://cp1awi1i1yrem"
+path.s3tc="res://.godot/imported/Lottery Box_JackbeLucky.png-11317aa830cf801219f939b6fea44fce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "4e1673e57efcb5d143eac5ff44a701fb"
+}
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/Art Gallery_art26.jpg"
-dest_files=["res://.godot/imported/Art Gallery_art26.jpg-14e01cf32e8b6ef089f8926686e3afde.s3tc.ctex"]
+source_file="res://MINIGAME ITEMS/Lottery Box_JackbeLucky.png"
+dest_files=["res://.godot/imported/Lottery Box_JackbeLucky.png-11317aa830cf801219f939b6fea44fce.s3tc.ctex"]
 
 [params]
 

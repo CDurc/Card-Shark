@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyuose3wh6ge4"
+uid="uid://cthgvea1v8hbi"
 path.s3tc="res://.godot/imported/Neighborhood_Stone Brick.jpg-2d4b366f74bb306affddd236e05ea57f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "1c63b7c01fb28f8d93cb085337056a80"
 }
 
 [deps]

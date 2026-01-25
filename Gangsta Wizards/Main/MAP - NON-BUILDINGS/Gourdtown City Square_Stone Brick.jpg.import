@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kyhlljoxhwwt"
+uid="uid://bpu4vs6l1342w"
 path.s3tc="res://.godot/imported/Gourdtown City Square_Stone Brick.jpg-ff98a1e0424b1d06ece6d337a89ea011.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "1c63b7c01fb28f8d93cb085337056a80"
 }
 
 [deps]
