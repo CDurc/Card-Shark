@@ -1574,6 +1574,7 @@ func toggle_healthbar(vis: bool):
 			bar.visible = vis
 
 @onready var int_prompt = get_node("HUD/Interact")
+
 func get_interact():
 	if raycast_int.is_colliding():
 		var collider = raycast_int.get_collider()

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg6icd0lur312"
+uid="uid://c6sngb1pyyc7j"
 path.s3tc="res://.godot/imported/Megachurch_grass.jpg-b9e7585e706e1f70d75a90c3b3a6e4ba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e4b92d087af4cf11c7101dd343ff95be"
 }
 
 [deps]

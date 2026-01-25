@@ -1,4 +1,4 @@
-[gd_scene load_steps=218 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=220 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -191,6 +191,8 @@
 [ext_resource type="AudioStream" uid="uid://bh6j80ayqvr8v" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 26.wav" id="180_sbi7g"]
 [ext_resource type="AudioStream" uid="uid://cmvl44oklf5lg" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 27.wav" id="181_yt138"]
 [ext_resource type="AudioStream" uid="uid://dkkvvy81xqiue" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 28.wav" id="182_rb6jw"]
+[ext_resource type="PackedScene" uid="uid://cgdfv6cgxdrcu" path="res://MINIGAME ITEMS/ball.tscn" id="192_korqk"]
+[ext_resource type="PackedScene" uid="uid://bbu67lukycgc3" path="res://MINIGAME ITEMS/bank_ball.tscn" id="193_g21t7"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 bake_interval = 20.0
@@ -954,7 +956,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.0399659, 0, -0.9991622, 0, 1, 0, 0.9991622, 0, 0.0399659, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.039965924, 0, -0.9991628, 0, 1, 0, 0.9991628, 0, 0.039965924, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -1041,7 +1043,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="C10" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.99794984, 0, -0.0633028, 0, 1, 0, 0.0633028, 0, -0.99794984, -46.154037, 0, -246.31923)
+transform = Transform3D(-0.9979497, 0, -0.063302785, 0, 1, 0, 0.063302785, 0, -0.9979497, -46.154037, 0, -246.31923)
 progress = 1508.01
 script = ExtResource("99_1skxp")
 mps = 100
@@ -1177,7 +1179,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="80s Red" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(0.4844927, 0, -0.874751, 0, 1, 0, 0.874751, 0, 0.4844927, -51.54296, 0, 15.207697)
+transform = Transform3D(0.48449266, 0, -0.874751, 0, 1, 0, 0.874751, 0, 0.48449266, -51.54296, 0, 15.207697)
 progress = 2311.83
 script = ExtResource("99_1skxp")
 
@@ -1450,7 +1452,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947315, 0, -0.027134644, 0, 0.999997, 0, 0.027134562, 0, -0.9994762, -324.41486, 0, -90.341)
+transform = Transform3D(-0.99947375, 0, -0.02713466, 0, 0.999997, 0, 0.027134579, 0, -0.9994768, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1673,7 +1675,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.9894328, 0, 0.14469908, 0, 0.999997, 0, -0.14469908, 0, 0.9894328, 192.50854, 0, -316.1279)
+transform = Transform3D(0.9894328, 0, 0.14469907, 0, 0.999997, 0, -0.14469907, 0, 0.9894328, 192.50854, 0, -316.1279)
 progress = 635.232
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1709,7 +1711,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042420177, 0, -0.99995184, 0, 0.999997, 0, 0.99995184, 0, 0.00042420177, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.0004242015, 0, -0.99995124, 0, 0.999997, 0, 0.99995124, 0, 0.0004242015, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2013,7 +2015,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.52687, 56.343, -77.19963)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.049335, 1.7574949, 489.1068)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -2307,6 +2309,13 @@ sound3 = ExtResource("182_rb6jw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Areas/Piano2/Zone9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
 shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Ball" parent="." instance=ExtResource("192_korqk")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -60.781925, 6.4966555, 473.5335)
+
+[node name="BankBall" parent="." instance=ExtResource("193_g21t7")]
+transform = Transform3D(6.731352, 0, 1.9206514, 0, 7, 0, -1.9206514, 0, 6.731352, -64.99169, 1.6714933, 473.58768)
+disable_mode = 1
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
