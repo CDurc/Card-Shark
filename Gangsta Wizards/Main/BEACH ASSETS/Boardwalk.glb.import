@@ -39,19 +39,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arch": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Bar": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Bench": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Boardwalk": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Boxes": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Building 2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CUs": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Flagstand": {
@@ -78,7 +81,7 @@ _subresources={
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairs": {
+"PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stand": {

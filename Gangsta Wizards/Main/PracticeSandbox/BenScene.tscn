@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1560qrd2orln"]
+
+[ext_resource type="PackedScene" uid="uid://dkhwvgcjcie2h" path="res://PracticeSandbox/SandboxMap.glb" id="1_efnc4"]
+[ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="2_d1kxc"]
+
+[node name="BenScene" type="Node3D"]
+
+[node name="SandboxMap" parent="." instance=ExtResource("1_efnc4")]
+
+[node name="Player" parent="." instance=ExtResource("2_d1kxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8817286, 0.5, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46.912094, 0)
