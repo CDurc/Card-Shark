@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cw643hqnkhage"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART SHOOT GOBLIN AUBURN.tres.gd" id="1_i82rv"]
+[ext_resource type="Script" uid="uid://df1cryp24qs42" path="res://Card Shark Campaign/Character Models/Goblins/SMART SHOOT GOBLIN AUBURN.tres.gd" id="1_i82rv"]
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_psg4o"]
 [ext_resource type="PackedScene" uid="uid://b1v8vca37cdi6" path="res://Card Shark Campaign/Character Models/Goblins/goblin_10.glb" id="3_axvuc"]
-[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_o5tc1"]
+[ext_resource type="Script" uid="uid://ywturtvcuo0m" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_o5tc1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.227039
@@ -13,7 +13,7 @@ height = 1.8598
 radius = 0.145566
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nyec"]
-radius = 0.237767
+radius = 0.2578125
 height = 1.54634
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
@@ -85,5 +85,11 @@ anchor_top = 0.15
 anchor_right = 0.975
 anchor_bottom = 0.85
 color = Color(0, 1, 0, 1)
+
+[node name="RayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034751847, 1.0351274, -0.27912468)
+target_position = Vector3(0, 0, -1)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 3
 
 [connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_hbar_expire_timeout"]
