@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1c8ku0myq838"
+uid="uid://dpyxm8f4hl28s"
 path.s3tc="res://.godot/imported/Main Menu_PalmBark.jpg-aa0a209c8cf270cab789d8e3af467a43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ad2c5bbadb4fa34d65dad82424663946"
 }
 
 [deps]
