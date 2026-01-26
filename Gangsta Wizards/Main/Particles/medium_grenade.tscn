@@ -1,7 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://faybe3u3uif4"]
+[gd_scene load_steps=20 format=3 uid="uid://m2u5yi8t0b6"]
 
-[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_1rtt1"]
-[ext_resource type="Script" uid="uid://c73bjnd0kducw" path="res://Card Shark/card_damage.gd" id="2_l3aka"]
+[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_sv58j"]
+[ext_resource type="Script" uid="uid://cscuhl1c6t55h" path="res://Card Shark/grenade_boom_hurtbox.gd" id="2_sv58j"]
 
 [sub_resource type="Gradient" id="Gradient_gud1c"]
 colors = PackedColorArray(0.780392, 0.627451, 0, 1, 1, 0, 0, 1)
@@ -91,7 +91,7 @@ rings = 6
 radius = 2.0
 
 [node name="Particles" type="Node3D"]
-script = ExtResource("1_1rtt1")
+script = ExtResource("1_sv58j")
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -114,7 +114,7 @@ process_material = SubResource("ParticleProcessMaterial_077fe")
 draw_pass_1 = SubResource("SphereMesh_ctcow")
 
 [node name="Boombox" type="Area3D" parent="."]
-script = ExtResource("2_l3aka")
+script = ExtResource("2_sv58j")
 damage = 75.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boombox"]

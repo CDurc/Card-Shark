@@ -956,7 +956,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.03996594, 0, -0.99916315, 0, 1, 0, 0.99916315, 0, 0.03996594, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.039965946, 0, -0.99916327, 0, 1, 0, 0.99916327, 0, 0.039965946, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -1452,7 +1452,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994741, 0, -0.02713467, 0, 0.999997, 0, 0.027134588, 0, -0.99947715, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994742, 0, -0.027134674, 0, 0.999997, 0, 0.027134592, 0, -0.99947727, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1711,7 +1711,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042420137, 0, -0.9999509, 0, 0.999997, 0, 0.9999509, 0, 0.00042420137, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.0004242013, 0, -0.99995077, 0, 0.999997, 0, 0.99995077, 0, 0.0004242013, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2322,9 +2322,6 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 [node name="BankBall" parent="Stationary Ball/BankBall" index="0"]
 collision_layer = 3
 
-[node name="Openable Door3" parent="." instance=ExtResource("147_yg6vf")]
-transform = Transform3D(0.020890104, 0, -0.9997818, 0, 1, 0, 0.9997818, 0, 0.020890104, -63.73626, 2.1336164, 470.50827)
-
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" method="_on_body_entered"]
@@ -2384,4 +2381,3 @@ transform = Transform3D(0.020890104, 0, -0.9997818, 0, 1, 0, 0.9997818, 0, 0.020
 [editable path="MAP/Openable Double Door2"]
 [editable path="Gourd Goals/NavigationRegion3D/Gourdtown Cemetery"]
 [editable path="Stationary Ball/BankBall"]
-[editable path="Openable Door3"]

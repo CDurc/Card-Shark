@@ -99,9 +99,7 @@ func _physics_process(delta: float) -> void:
 			raycast.force_raycast_update()
 			if raycast.is_colliding():
 				var hit = raycast.get_collider()
-				print("RAY HIT:  ", hit)
 				if hit == target:
-					print("ray hit target player")
 					attacking = true
 					shoot()
 

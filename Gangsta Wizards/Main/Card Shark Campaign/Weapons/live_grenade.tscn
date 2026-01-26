@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://cggp5c3eofy85"]
+
+[ext_resource type="Script" uid="uid://bmckwvr3w5qku" path="res://Card Shark Campaign/Weapons/phys_grenade.gd" id="1_dkjdl"]
+[ext_resource type="PackedScene" uid="uid://dh4iei2g3y165" path="res://WEAPONS/Grenade.glb" id="2_fexms"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkjdl"]
+rough = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_orhna"]
+radius = 0.09735465
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dkjdl"]
+radius = 0.04348633
+
+[node name="Grenade" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010081397, -0.013395496, -0.044)
+collision_layer = 18
+collision_mask = 18
+physics_material_override = SubResource("PhysicsMaterial_dkjdl")
+freeze = true
+continuous_cd = true
+linear_damp = 0.5
+angular_damp = 4.0
+script = ExtResource("1_dkjdl")
+
+[node name="Mesh" parent="." instance=ExtResource("2_fexms")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_orhna")
+disabled = true
+
+[node name="bump" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0695444, 0, 0)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true
+
+[node name="bump2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029625922, -0.043818556, 0.051065803)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true
+
+[node name="bump3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029625922, 0.015904002, -0.0518483)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true

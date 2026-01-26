@@ -1351,8 +1351,11 @@ func sprint(delta):
 		if sprinting:
 			sprinting = false
 			movement_speed = walk_speed
-			await get_tree().process_frame
-			Leg_anime.play("Idle")
+			#await get_tree().process_frame
+			#Leg_anime.play("Idle") #Something that overrides everything
+			Leg_anime.play("Sprint")
+			Leg_anime.seek(Leg_anime.get_animation("Sprint").length, true)
+			Leg_anime.stop()
 			print("STOP")
 			sprint_cooldown = 1
 			print("STAMINA =   ",stamina)

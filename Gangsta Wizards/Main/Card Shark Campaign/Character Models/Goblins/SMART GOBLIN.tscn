@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://c3w2iojgthqvv"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tres.gd" id="1_vufae"]
+[ext_resource type="Script" uid="uid://dhnhhqwlfdwkp" path="res://Card Shark Campaign/Character Models/Goblins/SMART GOBLIN.tres.gd" id="1_vufae"]
 [ext_resource type="PackedScene" uid="uid://dsg348i6y6mp2" path="res://Card Shark Campaign/Character Models/Goblins/GOBLIN_1_ANIMES.tscn" id="2_n6flr"]
 [ext_resource type="PackedScene" uid="uid://b6a7n5eerxt8g" path="res://Card Shark Campaign/Character Models/new goblin.tscn" id="2_wmgx7"]
 [ext_resource type="PackedScene" uid="uid://cgqbrqx8cet6s" path="res://Card Shark Campaign/Weapons/PIPE_WEAPON_NEW.tscn" id="3_0fiey"]
-[ext_resource type="Script" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_ra0xm"]
+[ext_resource type="Script" uid="uid://ywturtvcuo0m" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_ra0xm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.284015
@@ -19,6 +19,8 @@ height = 1.54634
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+collision_layer = 17
+collision_mask = 17
 script = ExtResource("1_vufae")
 avg_speed = 5.0
 health = 100
@@ -53,8 +55,11 @@ bones/76/position = Vector3(-0.925835, 1.61109, 0.218328)
 bones/76/rotation = Quaternion(0.929327, -4.4019e-08, 1.10784e-07, -0.369257)
 bones/79/rotation = Quaternion(-0.839214, -0.0863456, 0.525681, -0.1092)
 
+[node name="Hat" parent="Goblin/Goblin Bones/Skeleton3D" index="0"]
+transform = Transform3D(-0.000529898, -0.027852759, -1.5087726, -0.3191732, 1.4746411, -0.027110538, 1.4748896, 0.31910914, -0.0064089773, 0.08247336, 1.0431819, 0.21567947)
+
 [node name="HandContainer" parent="Goblin/Goblin Bones/Skeleton3D" index="2"]
-transform = Transform3D(-0.26138, 0.303384, 0.916318, 0.921761, -0.203244, 0.330224, 0.286421, 0.93094, -0.226524, -0.054896, 1.2731, 2.26035)
+transform = Transform3D(-0.2613795, 0.30338424, 0.91631806, 0.9217613, -0.20324446, 0.33022445, 0.28642145, 0.93094003, -0.22652383, -0.054896004, 1.2731042, 2.2603457)
 
 [node name="Metal Pipe" parent="Goblin/Goblin Bones/Skeleton3D/HandContainer" index="0" instance=ExtResource("3_0fiey")]
 transform = Transform3D(0.200751, 4.92889, -0.42075, -1.46233, -0.343147, -4.71754, -4.72572, 0.315566, 1.44192, 2.39003, -0.28388, -0.0873072)
