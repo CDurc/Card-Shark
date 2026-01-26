@@ -8,7 +8,7 @@ var live_nade_scene = preload("res://Card Shark Campaign/Weapons/live_grenade.ts
 var hold_time: float = 0.0
 var holding: = false
 var boom_time: float = 5.0
-var grenades: int = 5
+var grenades: int = 200
 var can_throw: = true
 var can_release: = true
 
@@ -38,8 +38,9 @@ func release_item() -> void:
 			player.LA_anime.play("Grenade Throw")
 			print("Item held for ", hold_time, " seconds")
 			hold_time = 0.0
+			await get_tree().create_timer(0.1).timeout
 			grenade.throw_grenade_g()
-			await get_tree().create_timer(0.8).timeout
+			await get_tree().create_timer(0.7).timeout
 			
 		#Grab new grenade
 		player.LA_anime.play("Reload")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://faybe3u3uif4"]
+[gd_scene load_steps=20 format=3 uid="uid://m2u5yi8t0b6"]
 
-[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_1rtt1"]
-[ext_resource type="Script" uid="uid://c73bjnd0kducw" path="res://Card Shark/card_damage.gd" id="2_l3aka"]
+[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_sv58j"]
+[ext_resource type="Script" uid="uid://cscuhl1c6t55h" path="res://Card Shark/grenade_boom_hurtbox.gd" id="2_sv58j"]
 
 [sub_resource type="Gradient" id="Gradient_gud1c"]
 colors = PackedColorArray(0.780392, 0.627451, 0, 1, 1, 0, 0, 1)
@@ -24,9 +24,9 @@ point_count = 3
 [sub_resource type="CurveTexture" id="CurveTexture_bd3fq"]
 curve = SubResource("Curve_uop62")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2ebj1"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nl0he"]
 emission_shape = 1
-emission_sphere_radius = 10.0
+emission_sphere_radius = 5.0
 direction = Vector3(0, -1, 0)
 spread = 135.0
 initial_velocity_min = 3.0
@@ -63,9 +63,9 @@ point_count = 3
 [sub_resource type="CurveTexture" id="CurveTexture_qxm81"]
 curve = SubResource("Curve_hk5g0")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ncxd2"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_077fe"]
 emission_shape = 1
-emission_sphere_radius = 6.4
+emission_sphere_radius = 3.2
 direction = Vector3(0, 0, 0)
 spread = 60.0
 initial_velocity_min = 1.0
@@ -88,33 +88,33 @@ radial_segments = 8
 rings = 6
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3t7ke"]
-radius = 3.3
+radius = 1.8848993
 
 [node name="Particles" type="Node3D"]
-script = ExtResource("1_1rtt1")
+script = ExtResource("1_sv58j")
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 emitting = false
-amount = 120
+amount = 40
 lifetime = 0.9
 one_shot = true
 explosiveness = 0.99
-process_material = SubResource("ParticleProcessMaterial_2ebj1")
+process_material = SubResource("ParticleProcessMaterial_nl0he")
 draw_pass_1 = SubResource("SphereMesh_biwbi")
 
 [node name="Smoke" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.45671, 0)
 emitting = false
-amount = 120
+amount = 40
 lifetime = 2.0
 one_shot = true
 explosiveness = 0.99
-process_material = SubResource("ParticleProcessMaterial_ncxd2")
+process_material = SubResource("ParticleProcessMaterial_077fe")
 draw_pass_1 = SubResource("SphereMesh_ctcow")
 
 [node name="Boombox" type="Area3D" parent="."]
-script = ExtResource("2_l3aka")
+script = ExtResource("2_sv58j")
 damage = 75.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boombox"]

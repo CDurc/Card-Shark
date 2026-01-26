@@ -10,7 +10,7 @@ extends RigidBody3D
 
 var pin_pulled: = false
 var has_exploded: bool = false  # To prevent multiple triggers
-var boom_scene = preload("res://Particles/medium_grenade.tscn")
+var boom_scene = preload("res://Particles/medium_boom.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,7 +45,7 @@ func throw_grenade_g():
 func boom():
 	print("BOOOOOOOOOM")
 	var boom = boom_scene.instantiate()
-	boom.global_transform = self.global_transform
+	boom.global_position = self.global_position + 0.8*Vector3.UP
 	get_tree().root.add_child(boom)
 	has_exploded = true
 	queue_free()
