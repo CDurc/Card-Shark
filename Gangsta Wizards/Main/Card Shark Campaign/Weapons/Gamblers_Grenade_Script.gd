@@ -1,13 +1,13 @@
+#Gambler's Nade
 extends Node3D
 
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var grenade = get_child(1)
 @onready var nade_spawn = $GrenadeSpawn
 
-var live_nade_scene = preload("res://Card Shark Campaign/Weapons/live_grenade.tscn")
+var live_nade_scene = preload("res://Card Shark Campaign/Weapons/live_gamblers_grenade.tscn")
 var hold_time: float = 0.0
 var holding: = false
-var boom_time: float = 5.0
 var grenades: int = 200
 var can_throw: = true
 var can_release: = true
@@ -26,7 +26,7 @@ func hold_item() -> void:
 		can_throw = false
 		grenade = get_child(1)
 		holding = true
-		player.LA_anime.play("Grenade Aim")
+		#player.LA_anime.play("Grenade Aim")
 		grenade.pull_pin()
 	
 func release_item() -> void:
@@ -35,7 +35,7 @@ func release_item() -> void:
 		holding = false
 		if grenade:  #Check to make sure grenade still exists/ hasnt exploded
 			grenades -= 1
-			player.LA_anime.play("Grenade Throw")
+			#player.LA_anime.play("Grenade Throw")
 			print("Item held for ", hold_time, " seconds")
 			hold_time = 0.0
 			await get_tree().create_timer(0.1).timeout

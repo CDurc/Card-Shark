@@ -2,7 +2,7 @@ extends RigidBody3D
 
 #@export var damage_amount: int = 25
 var has_exploded: bool = false  # To prevent multiple triggers
-var boom_scene = preload("res://Particles/big_explosion.tscn")
+var boom_scene = preload("res://Particles/medium_boom.tscn")
 
 func _ready() -> void:
 	contact_monitor = true

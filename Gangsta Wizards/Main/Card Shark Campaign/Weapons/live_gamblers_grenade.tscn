@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3glt5g11wl02"]
+
+[ext_resource type="Script" uid="uid://e2egr74b0vb5" path="res://Card Shark Campaign/Weapons/Live_Gamblers_Grenade.gd" id="1_7np5x"]
+[ext_resource type="PackedScene" uid="uid://l3fmbyj55q23" path="res://WEAPONS/Gamblers Grenade.glb" id="3_7np5x"]
+[ext_resource type="PackedScene" uid="uid://jat82eubhrdp" path="res://Particles/gamblers_nade_sparks.tscn" id="3_widcq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkjdl"]
+rough = true
+bounce = 0.2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_orhna"]
+radius = 0.09735465
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dkjdl"]
+radius = 0.04348633
+
+[node name="Grenade2" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010081397, -0.013395496, -0.044)
+collision_layer = 18
+collision_mask = 18
+physics_material_override = SubResource("PhysicsMaterial_dkjdl")
+freeze = true
+continuous_cd = true
+linear_damp = 0.5
+angular_damp = 4.0
+script = ExtResource("1_7np5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_orhna")
+disabled = true
+
+[node name="bump" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0695444, 0, 0)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true
+
+[node name="bump2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029625922, -0.043818556, 0.051065803)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true
+
+[node name="bump3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029625922, 0.015904002, -0.0518483)
+shape = SubResource("SphereShape3D_dkjdl")
+disabled = true
+
+[node name="Particles" parent="." instance=ExtResource("3_widcq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020482603, 0)
+
+[node name="Bubbles" parent="Particles" index="1"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.0059550824, 0)
+
+[node name="Gamblers Grenade" parent="." instance=ExtResource("3_7np5x")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[editable path="Particles"]

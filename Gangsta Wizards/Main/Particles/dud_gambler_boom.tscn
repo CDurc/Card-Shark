@@ -1,7 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://m2u5yi8t0b6"]
+[gd_scene load_steps=20 format=3 uid="uid://cqgik4xw1ckwk"]
 
-[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_sv58j"]
-[ext_resource type="Script" uid="uid://cscuhl1c6t55h" path="res://Card Shark/grenade_boom_hurtbox.gd" id="2_sv58j"]
+[ext_resource type="Script" uid="uid://dfisv3aj4otmc" path="res://Particles/boom_effect.gd" id="1_0kboo"]
+[ext_resource type="Script" uid="uid://cscuhl1c6t55h" path="res://Card Shark/grenade_boom_hurtbox.gd" id="2_47yth"]
 
 [sub_resource type="Gradient" id="Gradient_gud1c"]
 colors = PackedColorArray(0.780392, 0.627451, 0, 1, 1, 0, 0, 1)
@@ -26,19 +26,19 @@ curve = SubResource("Curve_uop62")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nl0he"]
 emission_shape = 1
-emission_sphere_radius = 5.0
+emission_sphere_radius = 0.6
 direction = Vector3(0, -1, 0)
 spread = 135.0
 initial_velocity_min = 3.0
 initial_velocity_max = 4.0
 gravity = Vector3(0, 1, 0)
-scale_max = 5.0
+scale_min = 0.5
 scale_curve = SubResource("CurveTexture_bd3fq")
 color = Color(1, 0.643137, 0, 1)
 color_ramp = SubResource("GradientTexture1D_1fgku")
 emission_curve = SubResource("CurveTexture_2was5")
-hue_variation_min = -2.2351742e-08
-hue_variation_max = -2.2351742e-08
+hue_variation_min = 0.19999997
+hue_variation_max = 0.49999997
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3e6u"]
 transparency = 1
@@ -67,15 +67,16 @@ curve = SubResource("Curve_hk5g0")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_077fe"]
 emission_shape = 1
-emission_sphere_radius = 3.2
+emission_sphere_radius = 0.4
 direction = Vector3(0, 0, 0)
 spread = 60.0
 initial_velocity_min = 1.0
 initial_velocity_max = 2.0
 gravity = Vector3(0, 2, 0)
-scale_max = 2.0
+scale_min = 0.39999998
+scale_max = 0.79999995
 scale_curve = SubResource("CurveTexture_qxm81")
-color = Color(0.27451, 0.27451, 0.27451, 1)
+color = Color(0, 0.12941177, 0.023529412, 1)
 alpha_curve = SubResource("CurveTexture_l7p6a")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijsfa"]
@@ -90,15 +91,15 @@ radial_segments = 8
 rings = 6
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3t7ke"]
-radius = 1.8848993
+radius = 0.4088464
 
 [node name="Particles" type="Node3D"]
-script = ExtResource("1_sv58j")
+script = ExtResource("1_0kboo")
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 emitting = false
-amount = 40
+amount = 3
 lifetime = 0.9
 one_shot = true
 explosiveness = 0.99
@@ -106,9 +107,9 @@ process_material = SubResource("ParticleProcessMaterial_nl0he")
 draw_pass_1 = SubResource("SphereMesh_biwbi")
 
 [node name="Smoke" type="GPUParticles3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.45671, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.37960488, 0)
 emitting = false
-amount = 40
+amount = 10
 lifetime = 2.0
 one_shot = true
 explosiveness = 0.99
@@ -116,8 +117,8 @@ process_material = SubResource("ParticleProcessMaterial_077fe")
 draw_pass_1 = SubResource("SphereMesh_ctcow")
 
 [node name="Boombox" type="Area3D" parent="."]
-script = ExtResource("2_sv58j")
-damage = 75.0
+script = ExtResource("2_47yth")
+damage = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boombox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00106315, -0.00952149, 0.000122075)

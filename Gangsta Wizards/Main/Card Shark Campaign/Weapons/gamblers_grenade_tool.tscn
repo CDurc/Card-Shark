@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bum6m8k40j5dl"]
+
+[ext_resource type="Script" uid="uid://1ll8md8eyeq6" path="res://Card Shark Campaign/Weapons/Gamblers_Grenade_Script.gd" id="1_tm7a6"]
+[ext_resource type="PackedScene" uid="uid://b3glt5g11wl02" path="res://Card Shark Campaign/Weapons/live_gamblers_grenade.tscn" id="2_7i8w1"]
+
+[node name="HandGrenadeTool" type="Node3D"]
+script = ExtResource("1_tm7a6")
+
+[node name="GrenadeSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009452151, -0.0042688623, -0.046409883)
+
+[node name="Grenade2" parent="." instance=ExtResource("2_7i8w1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009452151, -0.0042688623, -0.046409883)
