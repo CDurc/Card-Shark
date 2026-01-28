@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p5xaii2ifc6a"
+uid="uid://cj057w1twu1xh"
 path.s3tc="res://.godot/imported/Electric Company_IslandFlag.jpg-d415ae8a13e401f2b86981669a7c0e2c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ad7f7b6f3e8718750490526296b3d0d2"
 }
 
 [deps]

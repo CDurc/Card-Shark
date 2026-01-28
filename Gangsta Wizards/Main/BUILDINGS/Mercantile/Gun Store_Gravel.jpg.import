@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl0fe2ghfy5ei"
+uid="uid://d0l2js26nx7sp"
 path.s3tc="res://.godot/imported/Gun Store_Gravel.jpg-eb50459ee6eca5cba46094cf2cd792e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "481ed094ab3677bb545f2f794aed3a9d"
 }
 
 [deps]

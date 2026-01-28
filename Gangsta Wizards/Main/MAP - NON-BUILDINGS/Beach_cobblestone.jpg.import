@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qbqdfqso2lns"
+uid="uid://bjnh2wnb7cm55"
 path.s3tc="res://.godot/imported/Beach_cobblestone.jpg-f078cc3f416ccb101c6208d8f0564c7f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "fb591e6148634ec42066431d21b9384b"
 }
 
 [deps]

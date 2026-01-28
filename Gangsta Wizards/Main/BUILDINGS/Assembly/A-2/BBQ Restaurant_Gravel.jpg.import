@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvcr4uxg4psok"
+uid="uid://blcu0snnqiovc"
 path.s3tc="res://.godot/imported/BBQ Restaurant_Gravel.jpg-29218632e36225db11db33fc09caba2c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "481ed094ab3677bb545f2f794aed3a9d"
 }
 
 [deps]

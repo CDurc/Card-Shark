@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nw4j711qhusp"
+uid="uid://cxfy7hg57cr5i"
 path.s3tc="res://.godot/imported/Full House_gray shingles.jpg-e8edfd2cda12e0efa326feace02b9944.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "656d2364225494c72e6d98047bbf7e65"
 }
 
 [deps]

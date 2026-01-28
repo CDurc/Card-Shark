@@ -39,10 +39,26 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Backrooms": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ball Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach Ball 2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach Umbrella": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Buoy": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Can": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chair Storage": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Cube_001": {
 "generate/physics": true,
@@ -54,6 +70,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desk_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -64,15 +86,45 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Floor_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Handwashing Sink": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Picnic Table_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pillars": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU HP": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Shelf": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/TikiSign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Toilet": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true,
@@ -113,6 +165,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/stairscol": {
+"generate/physics": true
 }
 }
 }

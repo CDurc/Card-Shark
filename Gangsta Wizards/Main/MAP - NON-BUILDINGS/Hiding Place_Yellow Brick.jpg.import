@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyq4cr6aq5uy2"
+uid="uid://pom6auq6ouqx"
 path.s3tc="res://.godot/imported/Hiding Place_Yellow Brick.jpg-03c9149d26deb3181d563d10f97643e7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "47c3d767bf2bb34a3fd15071e73c5308"
 }
 
 [deps]

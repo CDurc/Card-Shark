@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bej53smt461j"
+uid="uid://ql4uqvw57jyr"
 path.s3tc="res://.godot/imported/2 out of 5 Slot Machine_Slot4.png-a6bd66897418840fb8f3e113578ebfae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e8f983eba65bafd47b7ad34ce6544ffe"
 }
 
 [deps]

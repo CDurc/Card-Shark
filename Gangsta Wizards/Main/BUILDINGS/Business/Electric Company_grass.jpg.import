@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs8gqr6buvxa"
+uid="uid://dayjfr1x3d64v"
 path.s3tc="res://.godot/imported/Electric Company_grass.jpg-91ac628f682043ce64032ed235b5d641.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "de4bcee0f530ea8519fd4009ba9fdd8c"
 }
 
 [deps]

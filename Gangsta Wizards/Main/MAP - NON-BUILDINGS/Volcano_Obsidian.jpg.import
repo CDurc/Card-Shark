@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://66mhps5ltefb"
+uid="uid://jmeypi50ujog"
 path.s3tc="res://.godot/imported/Volcano_Obsidian.jpg-63df336107cf5ab3e5ac2af5210591f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "efbe5f0e4ac3bd98135acd09f025ab6e"
 }
 
 [deps]

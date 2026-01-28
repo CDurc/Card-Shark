@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcath6todgbe1"
+uid="uid://ep7l4ib2v4s6"
 path.s3tc="res://.godot/imported/Golf Course_grass- green.jpg-7a5ca914887e27c416859d6dc73dc662.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "cfc45277e0ebe24b6c2ddcbdd7322e74"
 }
 
 [deps]

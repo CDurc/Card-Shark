@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxacjk3ua8p1"
+uid="uid://bymvpogpa24lf"
 path.s3tc="res://.godot/imported/Church - Traditional_brick-sandstone.jpg-de92955f3c427cf44cc3a09b25ef020c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "470d98c2f9a348a301e3c46626179708"
 }
 
 [deps]
