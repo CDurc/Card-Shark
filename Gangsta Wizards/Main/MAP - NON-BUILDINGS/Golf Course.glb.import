@@ -44,6 +44,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -55,11 +58,6 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Bridge": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Cart Path": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9

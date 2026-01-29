@@ -46,6 +46,12 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true
 }

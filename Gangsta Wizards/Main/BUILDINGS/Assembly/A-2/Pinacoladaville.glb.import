@@ -51,7 +51,22 @@ _subresources={
 "PATH:1 - PHYS/High Roof": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Intcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Palm Trees": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 }
 }

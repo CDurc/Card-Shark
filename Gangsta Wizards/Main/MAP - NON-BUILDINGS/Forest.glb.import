@@ -39,7 +39,34 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bases_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Forest Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Redwoods": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rocks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shrub": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tree1": {

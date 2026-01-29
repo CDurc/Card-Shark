@@ -44,6 +44,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Concert Area": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Speakers": {
 "generate/physics": true
 },
@@ -58,10 +64,19 @@ _subresources={
 "PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Supports": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
 }
 }
 }

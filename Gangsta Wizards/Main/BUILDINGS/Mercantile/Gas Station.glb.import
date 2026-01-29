@@ -104,6 +104,9 @@ _subresources={
 "PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
 "physics/layer": 9,
