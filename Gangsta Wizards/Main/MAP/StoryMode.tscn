@@ -1,4 +1,4 @@
-[gd_scene load_steps=222 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=223 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -140,6 +140,7 @@
 [ext_resource type="PackedScene" uid="uid://c2iscsgmfi4sh" path="res://MAP - NON-BUILDINGS/Public Pool.glb" id="141_0lq01"]
 [ext_resource type="PackedScene" uid="uid://lj2bkq01ff7b" path="res://DOORS/Openable Dark Wood Duo.tscn" id="141_frmr1"]
 [ext_resource type="PackedScene" uid="uid://csio1nclbyidf" path="res://BUILDINGS/Business/Metro Entrance - Beachfront.glb" id="142_bckvk"]
+[ext_resource type="PackedScene" uid="uid://ccj05hjkbh0q3" path="res://BUILDINGS/Institutional/Insane Asylum.glb" id="143_4j6of"]
 [ext_resource type="PackedScene" uid="uid://vysjfu4ex6ud" path="res://VEHICLES/80s Car 2.glb" id="144_bhric"]
 [ext_resource type="PackedScene" uid="uid://1n8m35ph87gn" path="res://VEHICLES/Bullet Train - Front.glb" id="144_khr1m"]
 [ext_resource type="PackedScene" uid="uid://7qhvl4d07pjt" path="res://MAP - NON-BUILDINGS/Big Tree Area.glb" id="144_kprpg"]
@@ -379,7 +380,7 @@ transform = Transform3D(-0.653236, 0, -0.757155, 0, 1, 0, 0.757155, 0, -0.653236
 transform = Transform3D(-0.685374, 0, -0.728192, 0, 1, 0, 0.728192, 0, -0.685374, -141.773, 33.1079, -205.62)
 
 [node name="Wizard Tower" parent="MAP" instance=ExtResource("18_b8ggr")]
-transform = Transform3D(0.228827, 0, -0.973467, 0, 1, 0, 0.973467, 0, 0.228827, -4.56948, 32.9211, 140.892)
+transform = Transform3D(0.228827, 0, -0.973467, 0, 1, 0, 0.973467, 0, 0.228827, -4.8938904, 32.867306, 141.0107)
 
 [node name="Construction Skyscraper" parent="MAP" instance=ExtResource("19_fq4q7")]
 transform = Transform3D(0.999997, 0, 0.00216421, 0, 1, 0, -0.00216421, 0, 0.999997, -172.11, 32.3861, -122.323)
@@ -391,7 +392,7 @@ transform = Transform3D(0.981417, 0, -0.191888, 0, 1, 0, 0.191888, 0, 0.981417, 
 transform = Transform3D(0.135784, 0, 0.990738, 0, 1, 0, -0.990738, 0, 0.135784, 59.2847, 32.8396, -88.9991)
 
 [node name="Asian Strip Mall" parent="MAP" instance=ExtResource("22_062sa")]
-transform = Transform3D(-0.00570716, 0, -0.999984, 0, 1, 0, 0.999984, 0, -0.00570716, -65.955, 32.95, 183.31)
+transform = Transform3D(-4.37114e-08, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -4.37114e-08, -66.751, 32.952, 197.192)
 
 [node name="Strip Mall 1" parent="MAP" instance=ExtResource("23_sgfm1")]
 transform = Transform3D(-0.000994818, 0, -1, 0, 1, 0, 1, 0, -0.000994818, -99.7193, 36.3323, 272.148)
@@ -550,7 +551,7 @@ transform = Transform3D(0.041456994, 0, 0.9991404, 0, 1, 0, -0.9991404, 0, 0.041
 transform = Transform3D(0.999974, 0, -0.00710299, 0, 1, 0, 0.00710299, 0, 0.999974, 87.3384, 32.7108, 231.643)
 
 [node name="K-12 School" parent="MAP" instance=ExtResource("78_87k4x")]
-transform = Transform3D(-0.836028, 0, -0.548687, 0, 1, 0, 0.548687, 0, -0.836028, -44.622, 34.925, 175.513)
+transform = Transform3D(-0.7840401, 0, 0.6207104, 0, 1, 0, -0.6207104, 0, -0.7840401, -42.99144, 34.925, 223.85683)
 
 [node name="Public Executions" parent="MAP" instance=ExtResource("80_ehedl")]
 transform = Transform3D(0.998716, 0, -0.0506627, 0, 1, 0, 0.0506627, 0, 0.998716, 14.9422, 33.8854, -103.782)
@@ -565,7 +566,7 @@ transform = Transform3D(-0.889416, 0, 0.457098, 0, 1, 0, -0.457098, 0, -0.889416
 transform = Transform3D(-0.994613, 0, -0.10366, 0, 1, 0, 0.10366, 0, -0.994613, -172.295, 34.1961, -153.445)
 
 [node name="Art Gallery" parent="MAP" instance=ExtResource("32_o3fg1")]
-transform = Transform3D(-0.00033154, 0, 1, 0, 1, 0, -1, 0, -0.00033154, -67.7334, 33.2868, 229.872)
+transform = Transform3D(-0.00033154, 0, 1, 0, 1, 0, -1, 0, -0.00033154, -67.733, 33.212, 243.04996)
 
 [node name="Tent Church" parent="MAP" instance=ExtResource("50_njv0h")]
 transform = Transform3D(0.827659, 0, 0.561231, 0, 1, 0, -0.561231, 0, 0.827659, 61.2884, 34.4957, -8.11668)
@@ -598,7 +599,7 @@ transform = Transform3D(0.817336, 0, 0.576161, 0, 1, 0, -0.576161, 0, 0.817336, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.795, 32.746, 211.891)
 
 [node name="Boba" parent="MAP" instance=ExtResource("98_e50ur")]
-transform = Transform3D(0.532315, 0, -0.846546, 0, 1, 0, 0.846546, 0, 0.532315, -37.115, 32.943, 167.594)
+transform = Transform3D(0.532315, 0, -0.846546, 0, 1, 0, 0.846546, 0, 0.532315, -52.226, 32.903, 177.376)
 
 [node name="Full House" parent="MAP" instance=ExtResource("99_cr3bj")]
 transform = Transform3D(-0.751713, 0, 0.65949, 0, 1, 0, -0.65949, 0, -0.751713, -178.241, 34.7001, -244.049)
@@ -628,7 +629,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.996, 32.749, -107.554)
 transform = Transform3D(0.67176, 0, -0.740769, 0, 1, 0, 0.740769, 0, 0.67176, 735.82, 0.352577, -591.164)
 
 [node name="Math Tutoring" parent="MAP" instance=ExtResource("109_j0jwd")]
-transform = Transform3D(-0.059306387, 0, -0.99823934, 0, 1, 0, 0.99823934, 0, -0.059306387, -5.317, 32.924, 122.048)
+transform = Transform3D(-0.0037873983, 0, -0.9999923, 0, 1, 0, 0.9999923, 0, -0.0037873983, -4.8207, 32.924, 122.14242)
 
 [node name="LootLakeHouse" parent="MAP" instance=ExtResource("110_kfudl")]
 transform = Transform3D(-0.987579, 0, 0.157124, 0, 1, 0, -0.157124, 0, -0.987579, -55.1034, 32.1519, -107.567)
@@ -664,7 +665,7 @@ transform = Transform3D(0.766291, 0, -0.642493, 0, 1, 0, 0.642493, 0, 0.766291, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -345.424, 33.5985, 350.205)
 
 [node name="Shrimp Fried Rice" parent="MAP" instance=ExtResource("118_lma2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.787, 32.967, 266.595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.787, 32.967, 266.0855)
 
 [node name="MoneyTrap" parent="MAP" instance=ExtResource("119_xhtk6")]
 transform = Transform3D(-0.335813, 0, 0.941929, 0, 1, 0, -0.941929, 0, -0.335813, -222.41846, 32.982, 336.05176)
@@ -799,6 +800,9 @@ transform = Transform3D(0.99960375, 0, -0.028148443, 0, 1, 0, 0.028148443, 0, 0.
 
 [node name="Metro Entrance - Beachfront" parent="MAP" instance=ExtResource("142_bckvk")]
 transform = Transform3D(0.8144903, 0, 0.5801771, 0, 1, 0, -0.5801771, 0, 0.8144903, -155.77, 32.931, 301.141)
+
+[node name="Insane Asylum" parent="MAP" instance=ExtResource("143_4j6of")]
+transform = Transform3D(-0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, -0.64278764, -35.721157, 33.074337, 176.16534)
 
 [node name="Projectiles" type="Node3D" parent="."]
 
@@ -961,7 +965,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.03996595, 0, -0.9991634, 0, 1, 0, 0.9991634, 0, 0.03996595, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.03996595, 0, -0.99916345, 0, 1, 0, 0.99916345, 0, 0.03996595, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -1457,7 +1461,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947435, 0, -0.027134677, 0, 0.999997, 0, 0.027134594, 0, -0.9994774, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994744, 0, -0.02713468, 0, 0.999997, 0, 0.027134595, 0, -0.99947745, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1716,7 +1720,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042420125, 0, -0.99995065, 0, 0.999997, 0, 0.99995065, 0, 0.00042420125, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042420122, 0, -0.9999506, 0, 0.999997, 0, 0.9999506, 0, 0.00042420122, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1769,7 +1773,7 @@ mesh = SubResource("SphereMesh_05b07")
 skeleton = NodePath("../Moon")
 
 [node name="Hiding Place" parent="." instance=ExtResource("145_2y1o6")]
-transform = Transform3D(0.756504, 0, -0.653989, 0, 1, 0, 0.653989, 0, 0.756504, 10.3635, 31.8569, 146.255)
+transform = Transform3D(0.756504, 0, -0.653989, 0, 1, 0, 0.653989, 0, 0.756504, 10.490144, 31.8569, 146.3988)
 
 [node name="Gourdling" parent="." instance=ExtResource("146_pyrg3")]
 transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 22.5578, 37.4378, -57.245)
