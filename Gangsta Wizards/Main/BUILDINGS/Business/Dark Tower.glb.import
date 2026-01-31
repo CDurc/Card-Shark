@@ -91,6 +91,9 @@ _subresources={
 },
 "PATH:1 - PHYS/Torches": {
 "generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
 }
 }
 }
