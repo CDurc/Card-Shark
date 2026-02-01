@@ -39,6 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BannerPost": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CU": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Elevator Shaft": {
 "generate/physics": true
 },
@@ -57,10 +63,22 @@ _subresources={
 "PATH:1 - PHYS/Layers": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LightPosts": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU HP": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sliding Glass Doors": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 }
 }

@@ -37,6 +37,39 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:1 - PHYS/Air Outlet": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach Umbrella": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int Wall": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Turnstile": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
