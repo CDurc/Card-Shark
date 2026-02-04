@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=227 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -148,7 +148,9 @@
 [ext_resource type="PackedScene" uid="uid://cy85r304h02hx" path="res://MAP - NON-BUILDINGS/Hiding Place.glb" id="145_2y1o6"]
 [ext_resource type="PackedScene" uid="uid://dw3b4umnhl6yq" path="res://VEHICLES/Bullet Train - Car.glb" id="145_08qt1"]
 [ext_resource type="PackedScene" uid="uid://jwrk1j2atukr" path="res://VEHICLES/80s Car.glb" id="145_coi4w"]
+[ext_resource type="PackedScene" uid="uid://y08qq8gi38r2" path="res://BUILDINGS/Residential/R-1/Hotel California.glb" id="145_euieh"]
 [ext_resource type="PackedScene" uid="uid://bjcyckvth2l43" path="res://CHARACTERS/Moving Guys/gourdling moving.tscn" id="146_pyrg3"]
+[ext_resource type="PackedScene" uid="uid://euvkulb7vica" path="res://BUILDINGS/Mixed Use/Streetlife Corner.glb" id="146_y1m6j"]
 [ext_resource type="PackedScene" uid="uid://ckatfnch8hoyc" path="res://DOORS/Openable Storefront Bars Duo.tscn" id="147_it17w"]
 [ext_resource type="PackedScene" uid="uid://c3742ykvsgmy3" path="res://VEHICLES/Box Truck - Long.glb" id="147_vbaep"]
 [ext_resource type="PackedScene" uid="uid://bp4pjskyibr1l" path="res://DOORS/Openable Black Metal Door.tscn" id="147_yg6vf"]
@@ -804,7 +806,13 @@ transform = Transform3D(-0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, -0.
 transform = Transform3D(-0.9983708, 0, 0.057058834, 0, 1, 0, -0.057058834, 0, -0.9983708, -209.91095, 32.98717, 42.959095)
 
 [node name="Abandoned Luncheonette" parent="MAP" instance=ExtResource("144_nn67a")]
-transform = Transform3D(0.99353826, 0, 0.113498, 0, 1, 0, -0.113498, 0, 0.99353826, -34.684006, 33.536007, -217.64143)
+transform = Transform3D(0.99353826, 0, 0.113498, 0, 1, 0, -0.113498, 0, 0.99353826, -34.69948, 33.536007, -217.27032)
+
+[node name="Hotel California" parent="MAP" instance=ExtResource("145_euieh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.51281, 32.780155, 268.2095)
+
+[node name="Streetlife Corner" parent="MAP" instance=ExtResource("146_y1m6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.225273, 33.29964, -172.69968)
 
 [node name="Projectiles" type="Node3D" parent="."]
 
@@ -967,7 +975,7 @@ transform = Transform3D(0.999991, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 0.99
 shape = SubResource("BoxShape3D_7nrm4")
 
 [node name="C2" type="PathFollow3D" parent="Cars/Cars/Path1"]
-transform = Transform3D(0.039965957, 0, -0.99916357, 0, 1, 0, 0.99916357, 0, 0.039965957, 14.988056, 0, -0.63259757)
+transform = Transform3D(0.039965957, 0, -0.9991636, 0, 1, 0, 0.9991636, 0, 0.039965957, 14.988056, 0, -0.63259757)
 progress = 15.0
 script = ExtResource("99_1skxp")
 
@@ -1463,7 +1471,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994745, 0, -0.027134681, 0, 0.999997, 0, 0.0271346, 0, -0.99947757, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994746, 0, -0.027134683, 0, 0.999997, 0, 0.027134601, 0, -0.9994776, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1722,7 +1730,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0004242012, 0, -0.99995047, 0, 0.999997, 0, 0.99995047, 0, 0.0004242012, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042420116, 0, -0.9999504, 0, 0.999997, 0, 0.9999504, 0, 0.00042420116, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60

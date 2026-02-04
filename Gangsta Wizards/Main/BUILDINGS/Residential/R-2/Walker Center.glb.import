@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://b11ixdilrs8p7"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
@@ -49,10 +49,8 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Ground_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
@@ -80,11 +78,6 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Site": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
