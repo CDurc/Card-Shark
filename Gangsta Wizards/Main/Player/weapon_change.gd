@@ -40,9 +40,11 @@ func _update_selection():
 		if i == current_index:
 			label_style.set_border_width_all(4.0)
 			item_style.set_border_width_all(4.0)
+			ItemBG.visible = true
 		else:
 			label_style.set_border_width_all(0.0)
 			item_style.set_border_width_all(0.0)
+			ItemBG.visible = false
 		
 		LabelBG.add_theme_stylebox_override("panel", label_style)
 		ItemBG.add_theme_stylebox_override("panel", item_style)
@@ -68,10 +70,10 @@ func change_weapon(i):
 	current_weapon.put_away = true
 	print("weapon swap")
 	LA_anime.play("Reload")
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.7).timeout
 	current_weapon.reparent(new_container)
 	new_weapon.reparent(held_item_holder)
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.2).timeout
 	player.item = new_weapon
 	new_weapon.put_away = false
 	ammo_counter.text = str(new_weapon.ammo)
