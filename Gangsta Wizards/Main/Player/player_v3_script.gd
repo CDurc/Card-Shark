@@ -188,7 +188,7 @@ var phys_card_path
 var phys_card #phys_cards are affected by gravity/ physics
 var bofa
 var splash
-var local_pos
+var local_pos = Vector3(0,0,0) #Trying to make never nil
 var hip
 var PokerEvaluator = load("res://Card Shark/GPT Best Hand.gd")
 var evaluator_instance = PokerEvaluator.new()
@@ -238,7 +238,8 @@ func _physics_process(delta):
 	
 	if is_disabled: #Currently only use this for ragdoll pls
 		#followhip.position = hip.position
-		ragcam.global_position = hip.global_position - local_pos
+		await get_tree().process_frame #Trying to ensure local_pos is set and not nil/V3(0,0,0)
+		ragcam.global_position = hip.global_position - local_pos  #Sometimes you get an error that one of these is nil, idk why
 		ragcam.look_at(hip.position)
 		return
 	
@@ -595,6 +596,7 @@ func trigger_ragdoll(impulse: Vector3):
 	#ragcam.look_at(hip.position)
 	
 	if impulse != Vector3(0,0,0):
+		print("IMPULSE:  ",impulse)
 		local_pos = impulse.normalized()
 		local_pos = Vector3(local_pos.x,-0.3*local_pos.y,local_pos.z).normalized() * 3.5
 		print("LOCAL POS",local_pos)
@@ -644,7 +646,8 @@ func test_2_spell():
 		#flatten()
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
-		flatten()
+		#flatten()
+		straightline_card_spell()
 		#straight_laser_spell()
 		#flush_spell()
 		#basking_house_spell()

@@ -5,7 +5,7 @@ var current_weapon_i:= 0
 
 @export var max_timer = 2.0
 
-@onready var choices := get_children()  # the 5 Control nodes
+@onready var choices := get_children()
 @onready var t = max_timer
 @onready var LA_anime = $"../../../TheCardShark2/LeftArmController"
 @onready var player = $"../../.."

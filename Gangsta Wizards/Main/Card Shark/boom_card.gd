@@ -21,6 +21,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 
 			# Explosion effects
 			var boom = boom_scene.instantiate()
+			boom.get_node("Boombox").can_damage_player = false
 			boom.global_transform = self.global_transform
 			get_tree().root.add_child(boom)
 			#boom.get_node("Fire").emitting = true
