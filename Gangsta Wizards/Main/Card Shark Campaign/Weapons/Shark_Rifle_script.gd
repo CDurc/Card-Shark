@@ -25,6 +25,8 @@ var bullet_path = preload("res://Particles/bullet.tscn")
 @export var HS_mult: float
 @export var Velocity: float
 @export var recoil: float
+@export var put_away = false
+@export var weapon_type: int
 var ammo: int
 
 func _ready() -> void:
@@ -37,6 +39,7 @@ func _process(delta: float) -> void:
 
 
 func use_item():
+	if put_away: return
 	if player.acting == true: return
 	if !gun_cooldown.is_stopped(): return
 	if player.ammo <= 0 and not player.reloading:
@@ -60,15 +63,17 @@ func use_item():
 
 
 func reload():
+	if put_away: return
 	if player.acting == true: return
 	reloading = true
 	#gun_anime.play("Reload")
 	await get_tree().create_timer(max(reload_time - 2,0.1)).timeout
 	player.LA_anime.play("Reload")
 	await get_tree().create_timer(2).timeout
-	ammo = clip_ammo
-	ammo_counter.text = str(ammo)
-	await get_tree().process_frame
+	if not put_away:
+		ammo = clip_ammo
+		ammo_counter.text = str(ammo)
+		await get_tree().process_frame
 	reloading = false
 
 

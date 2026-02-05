@@ -20,6 +20,8 @@ var reload_time = 2
 @export var cooldown: float
 @export var HS_Mult: float
 @export var spread: float
+@export var put_away = false
+@export var weapon_type: int
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +35,7 @@ func _process(delta: float) -> void:
 
 
 func use_item():
+	if put_away: return
 	if player.acting == true: return
 	if !gun_cooldown.is_stopped(): return
 	if player.ammo <= 0 and not player.reloading:
@@ -102,12 +105,15 @@ func use_item():
 
 func reload():
 	if player.acting == true: return
+	if put_away: return
 	reloading = true
 	gun_anime.play("Reload")
 	await get_tree().create_timer(0.5).timeout
-	LA_anime.play("Reload")
-	await get_tree().create_timer(reload_time - 0.5).timeout
-	ammo = clip_ammo
-	ammo_counter.text = str(ammo)
-	await get_tree().process_frame
+	if not put_away:
+		LA_anime.play("Reload")
+		await get_tree().create_timer(reload_time - 0.5).timeout
+		if not put_away:
+			ammo = clip_ammo
+			ammo_counter.text = str(ammo)
+			await get_tree().process_frame
 	reloading = false

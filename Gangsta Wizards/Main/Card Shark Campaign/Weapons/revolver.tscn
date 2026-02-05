@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qauvwuftnp8v"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_lpju1"]
+[ext_resource type="Script" uid="uid://cd16jbvdhtipr" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_lpju1"]
 [ext_resource type="PackedScene" uid="uid://cvh45hy5lkpb4" path="res://Card Shark Campaign/Weapons/Revolver.glb" id="1_ttaqt"]
 
 [node name="Revolver" type="Node3D"]
@@ -13,6 +13,7 @@ burst = 1
 HS_mult = 2.0
 Velocity = 75.0
 recoil = 0.025
+weapon_type = 1
 
 [node name="Revolver" parent="." instance=ExtResource("1_ttaqt")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://covvkwphtcdih"]
 
-[ext_resource type="Script" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_fsiuh"]
+[ext_resource type="Script" uid="uid://cd16jbvdhtipr" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_fsiuh"]
 [ext_resource type="PackedScene" uid="uid://cjlpemundpthj" path="res://Card Shark Campaign/Weapons/Sniper.glb" id="2_aglpa"]
 
 [node name="Sniper" type="Node3D"]
@@ -14,6 +14,7 @@ burst = 1
 HS_mult = 2.0
 Velocity = 75.0
 recoil = 0.025
+weapon_type = 3
 
 [node name="GunCooldown" type="Timer" parent="."]
 wait_time = 1.8
