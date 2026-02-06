@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b60j68xqcso7v"
-path.s3tc="res://.godot/imported/Walker Center_Red Brick.jpg-0e4b77751074cfb9e710dd0d294f8385.s3tc.ctex"
+uid="uid://wtnvyqxjb7d8"
+path.s3tc="res://.godot/imported/Streetlife Corner_Red Brick.jpg-9c2d34d5b6ebeda6a83d5f65c3e01ff6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0d2a0c709156317ec8cf3b8711b42078"
+}
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-2/Walker Center_Red Brick.jpg"
-dest_files=["res://.godot/imported/Walker Center_Red Brick.jpg-0e4b77751074cfb9e710dd0d294f8385.s3tc.ctex"]
+source_file="res://BUILDINGS/Mixed Use/Streetlife Corner_Red Brick.jpg"
+dest_files=["res://.godot/imported/Streetlife Corner_Red Brick.jpg-9c2d34d5b6ebeda6a83d5f65c3e01ff6.s3tc.ctex"]
 
 [params]
 

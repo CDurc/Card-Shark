@@ -42,10 +42,37 @@ _subresources={
 "PATH:1 - PHYS/Bldg": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bldg_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bldg_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Canopy": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Car": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land_001": {
+"PATH:1 - PHYS/Hotel Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PO Box": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Van Body": {
 "generate/physics": true
 }
 }
