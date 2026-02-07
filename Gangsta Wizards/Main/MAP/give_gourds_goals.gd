@@ -63,10 +63,10 @@ func _ready():
 	
 	# Convert task strings to Callables for each gourdling
 	flatten_goals_with_callables(g1, gourdling1.goal_task_queue, gourdling1)
-	gourdling1.start_next_goal_task()
+	#gourdling1.start_next_goal_task()
 	
 	flatten_goals_with_callables(g2, gourdling2.goal_task_queue, gourdling2)
-	gourdling2.start_next_goal_task()
+	#gourdling2.start_next_goal_task()
 
 func distribute_special_goals():
 	# Use the same flatten function for special goals

@@ -17,22 +17,15 @@ var current_goal_task = null
 var state: String = "idle"
 var jump_force = 4
 
+var underground: = true
+
 # Stuck detection variables
 var last_position: Vector3 = Vector3.ZERO
 var time_since_moved: float = 0.0
 
 func _ready():
-	#TODO make random
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SleepSpot2", "task": Callable(self, "sleep"), "time": 10})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/Bush Puncher", "task": Callable(self, "punch_task"), "time": 16})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/AnotherGoal", "task": Callable(self, "punch_task"), "time": 16})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot", "task": Callable(self, "open_door")})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedySitSpot1", "task": Callable(self, "sit"), "time": 6})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SeedyDoorSpot/IndoorSpot", "task": Callable(self, "open_door_exit")})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/SitSpot2", "task": Callable(self, "sit"), "time": 10})
-	#goal_task_queue.append({"goal": $"../Gourd Goals/DeathSpot", "task": Callable(self, "die")})
-	#start_next_goal_task()
 	last_position = global_position
+	birth()
 
 func _physics_process(delta):
 	# Gravity
@@ -115,6 +108,7 @@ func start_next_goal_task():
 		print("gourdling is out of tasks")
 		return
 	current_goal_task = goal_task_queue.pop_front()
+	#if not underground: #If underground, no need to move
 	move_to(current_goal_task["goal"].global_position)
 
 func _delayed_task_runner(delay_time: float, goal_task) -> void:
@@ -291,4 +285,15 @@ func sleep(goal_node: Node3D) -> void:
 	await tween2.finished
 	gravity = 9.8
 	collider.disabled = false
+	start_next_goal_task()
+	
+func birth():
+	print("birth")
+	underground = false
+	Gen_anime.play("Birth")
+	Gen_anime.seek(0.0, true)  # Seeks to time 0.0, true = don't update immediately
+	Gen_anime.pause()
+	await get_tree().create_timer(2).timeout
+	Gen_anime.play("Birth")
+	await get_tree().create_timer(2).timeout
 	start_next_goal_task()

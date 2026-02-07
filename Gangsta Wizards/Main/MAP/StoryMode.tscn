@@ -1502,7 +1502,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947655, 0, -0.027134737, 0, 0.999997, 0, 0.027134655, 0, -0.9994796, -324.41486, 0, -90.341)
+transform = Transform3D(-0.99947685, 0, -0.027134744, 0, 0.999997, 0, 0.027134662, 0, -0.9994799, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1761,7 +1761,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042420032, 0, -0.99994844, 0, 0.999997, 0, 0.99994844, 0, 0.00042420032, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.0004242002, 0, -0.99994814, 0, 0.999997, 0, 0.99994814, 0, 0.0004242002, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1819,7 +1819,7 @@ skeleton = NodePath("../Moon")
 transform = Transform3D(0.756504, 0, -0.653989, 0, 1, 0, 0.653989, 0, 0.756504, 10.490144, 31.8569, 146.3988)
 
 [node name="Gourdling" parent="." instance=ExtResource("146_pyrg3")]
-transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 22.5578, 37.4378, -57.245)
+transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 42.914497, 33.190716, -62.73728)
 
 [node name="Gourdling2" parent="." instance=ExtResource("146_pyrg3")]
 transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 56.9234, 37.4378, -40.0516)
@@ -2067,7 +2067,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.179985, 36.661526, 273.01715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.539375, 36.661526, -59.17375)
 
 [node name="OnARail" type="Node3D" parent="."]
 
