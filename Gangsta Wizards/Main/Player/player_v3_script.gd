@@ -162,6 +162,7 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var current_NPC #The NPC you're currently talking to, if any
 var item: Node3D #Assigned to the singular child of item_container
 var vulnerable = true
 var melee_camgoal = Node3D
