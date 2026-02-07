@@ -1,4 +1,4 @@
-[gd_scene load_steps=227 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=233 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -200,6 +200,9 @@
 [ext_resource type="PackedScene" uid="uid://cgdfv6cgxdrcu" path="res://MINIGAME ITEMS/ball.tscn" id="192_korqk"]
 [ext_resource type="PackedScene" uid="uid://bbu67lukycgc3" path="res://MINIGAME ITEMS/bank_ball.tscn" id="193_g21t7"]
 [ext_resource type="PackedScene" uid="uid://b33h4ewo7av45" path="res://BUILDINGS/Business/Metro Entrance - North.glb" id="198_jujiw"]
+[ext_resource type="PackedScene" uid="uid://dt75d4cdbpky2" path="res://CHARACTERS/Shadow Person - Tall.glb" id="201_fwwy5"]
+[ext_resource type="Script" uid="uid://c1jb2cp6v22yu" path="res://Dialogue/dialogue_general.gd" id="202_0jm8y"]
+[ext_resource type="Resource" uid="uid://bdy87x6oeac3x" path="res://Dialogue/Test_d.tres" id="203_0jm8y"]
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 bake_interval = 20.0
@@ -289,6 +292,10 @@ glow_levels/2 = 0.6
 glow_levels/3 = 0.6
 glow_levels/5 = 0.0
 glow_intensity = 2.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0001
+volumetric_fog_albedo = Color(0.1254902, 0.5686275, 1, 1)
+volumetric_fog_length = 335.67
 
 [sub_resource type="SphereMesh" id="SphereMesh_7oes6"]
 radius = 280.0
@@ -330,6 +337,16 @@ point_count = 9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l1m1a"]
 size = Vector3(0.12, 0.15, 0.123)
+
+[sub_resource type="BoxMesh" id="BoxMesh_euieh"]
+size = Vector3(0.1, 1, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euieh"]
+albedo_color = Color(0.47868448, 0.09072832, 0.4786147, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h2rlu"]
+radius = 0.359375
+height = 2.072754
 
 [node name="RootNode" type="Node3D"]
 
@@ -1471,7 +1488,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994748, 0, -0.02713469, 0, 0.999997, 0, 0.027134607, 0, -0.99947786, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994756, 0, -0.02713471, 0, 0.999997, 0, 0.027134629, 0, -0.99947864, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1730,7 +1747,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042420105, 0, -0.9999502, 0, 0.999997, 0, 0.9999502, 0, 0.00042420105, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042420073, 0, -0.9999494, 0, 0.999997, 0, 0.9999494, 0, 0.00042420073, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1757,15 +1774,17 @@ environment = SubResource("Environment_fh68l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.0285, 0, 1.38086)
 
 [node name="Sun" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1000, 0)
-light_color = Color(1, 1, 0.894118, 1)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1111.4701, -4.8725137e-06)
+light_color = Color(1, 1, 0.5764706, 1)
 light_energy = 0.9
+light_volumetric_fog_energy = 0.05
 shadow_enabled = true
 
 [node name="Moon" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1000, 0)
 light_color = Color(1, 1, 0.894118, 1)
 light_energy = 0.1
+light_volumetric_fog_energy = 0.05
 shadow_enabled = true
 
 [node name="Great Sun Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
@@ -2034,7 +2053,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.07948, 36.661526, 295.33276)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.179985, 36.661526, 273.01715)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -2343,6 +2362,41 @@ collision_layer = 3
 
 [node name="Metro Entrance - North" parent="." instance=ExtResource("198_jujiw")]
 transform = Transform3D(-0.8509945, 0, -0.52517456, 0, 1, 0, 0.52517456, 0, -0.8509945, -90.62485, 32.95177, -365.0205)
+
+[node name="DirectionalLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.81468, 40.713676, 294.4017)
+light_energy = 1.529
+light_volumetric_fog_energy = 1000000.0
+light_negative = true
+omni_range = 140.723
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0122, 34.367634, 261.7277)
+mesh = SubResource("BoxMesh_euieh")
+surface_material_override/0 = SubResource("StandardMaterial3D_euieh")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(-0.013438644, 0, -0.9999097, 0, 1, 0, 0.9999097, 0, -0.013438644, -0.060107492, 0.049491882, -0.004672511)
+text = "Lost a bet?
+Don't jump!!!
+
+Debts need repaid first."
+font_size = 22
+
+[node name="Shadow Person - Tall" parent="." instance=ExtResource("201_fwwy5")]
+transform = Transform3D(-0.9917564, 0, 0.1281378, 0, 1, 0, -0.1281378, 0, -0.9917564, -38.237328, 33.7945, 263.69952)
+
+[node name="Int" type="StaticBody3D" parent="Shadow Person - Tall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7445297, 0)
+disable_mode = 1
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("202_0jm8y")
+dialogue_options = ExtResource("203_0jm8y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shadow Person - Tall/Int"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.656613e-10, -0.4780197, -0.03983037)
+shape = SubResource("CapsuleShape3D_h2rlu")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]

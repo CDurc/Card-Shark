@@ -15,19 +15,20 @@ func _ready():
 	_update_selection()
 
 func _unhandled_input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			current_index += 1
-			self.visible = true
-			t = max_timer
-			current_index = wrapi(current_index, 0, choices.size())
-			_update_selection()
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			current_index -= 1
-			self.visible = true
-			t = max_timer
-			current_index = wrapi(current_index, 0, choices.size())
-			_update_selection()
+	if GameState.current_mode == GameState.GameMode.GAMEPLAY:
+		if event is InputEventMouseButton and event.pressed:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				current_index += 1
+				self.visible = true
+				t = max_timer
+				current_index = wrapi(current_index, 0, choices.size())
+				_update_selection()
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				current_index -= 1
+				self.visible = true
+				t = max_timer
+				current_index = wrapi(current_index, 0, choices.size())
+				_update_selection()
 
 func _update_selection():
 	for i in range(choices.size()):
