@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u24g5cxrd6oj"
-path="res://.godot/imported/Goblin Fort.glb-f70b0a202a297f7ac8eade4205d61f97.scn"
+uid="uid://pvhwfscdsxcg"
+path="res://.godot/imported/Gourdling6.glb-843c1d7c3d1ef5b3b1d2535367b7604c.scn"
 
 [deps]
 
-source_file="res://MAP - NON-BUILDINGS/Goblin Fort.glb"
-dest_files=["res://.godot/imported/Goblin Fort.glb-f70b0a202a297f7ac8eade4205d61f97.scn"]
+source_file="res://CHARACTERS/Gourdlings/Gourdling6.glb"
+dest_files=["res://.godot/imported/Gourdling6.glb-843c1d7c3d1ef5b3b1d2535367b7604c.scn"]
 
 [params]
 
@@ -37,19 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Fences": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
