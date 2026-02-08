@@ -648,10 +648,10 @@ func test_2_spell():
 		#trigger_ragdoll(Vector3(randi_range(-100,100),200,randi_range(-100,100)))
 		#trigger_ragdoll(Vector3(101.8081, 1000, -994.804))
 		#flatten()
-		straightline_card_spell()
+		#straightline_card_spell()
 		#straight_laser_spell()
 		#flush_spell()
-		#basking_house_spell()
+		basking_house_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):

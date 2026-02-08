@@ -7,9 +7,9 @@ extends CharacterBody3D
 @export var stuck_distance_threshold: float = 0.3  # Minimum movement to not be stuck
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var Gen_anime: AnimationPlayer = $Gourdling2/GenAnime
-@onready var Leg_anime: AnimationPlayer = $Gourdling2/LegAnime
-@onready var Arm_anime: AnimationPlayer = $Gourdling2/ArmAnime
+@onready var Gen_anime: AnimationPlayer = $G/GenAnime
+@onready var Leg_anime: AnimationPlayer = $G/LegAnime
+@onready var Arm_anime: AnimationPlayer = $G/ArmAnime
 @onready var collider = $CollisionShape3D
 
 var goal_task_queue: Array = []

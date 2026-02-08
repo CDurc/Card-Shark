@@ -53,6 +53,9 @@ _subresources={
 },
 "PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Beams": {
+"import/skip_import": true
 }
 }
 }

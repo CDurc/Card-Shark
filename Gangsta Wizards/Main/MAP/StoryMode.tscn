@@ -1,4 +1,4 @@
-[gd_scene load_steps=235 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=237 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -204,6 +204,10 @@
 [ext_resource type="Script" uid="uid://c1jb2cp6v22yu" path="res://Dialogue/dialogue_general.gd" id="202_0jm8y"]
 [ext_resource type="Resource" uid="uid://bdy87x6oeac3x" path="res://Dialogue/Test_d.tres" id="203_0jm8y"]
 [ext_resource type="Script" uid="uid://b0iue53t8yk00" path="res://Dialogue/Dialogue_creater.gd" id="204_h2rlu"]
+[ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2rlu"]
+size = Vector3(100, 100, 100)
 
 [sub_resource type="Curve3D" id="Curve3D_yig5o"]
 bake_interval = 20.0
@@ -294,7 +298,7 @@ glow_levels/3 = 0.6
 glow_levels/5 = 0.0
 glow_intensity = 2.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0001
+volumetric_fog_density = 0.0
 volumetric_fog_albedo = Color(0.1254902, 0.5686275, 1, 1)
 volumetric_fog_length = 335.67
 
@@ -312,7 +316,7 @@ emission_energy_multiplier = 8.9
 albedo_color = Color(0.259294, 0.259294, 0.259294, 1)
 emission_enabled = true
 emission = Color(0.678944, 0.678944, 0.678944, 1)
-emission_energy_multiplier = 4.47
+emission_energy_multiplier = 3.11
 
 [sub_resource type="SphereMesh" id="SphereMesh_05b07"]
 radius = 160.0
@@ -563,6 +567,11 @@ transform = Transform3D(0.997054, 0, -0.0767014, 0, 1, 0, 0.0767014, 0, 0.997054
 
 [node name="WindTurbine" parent="MAP/WindTurbine/WindTurbine" instance=ExtResource("67_ivgyn")]
 transform = Transform3D(0.997054, 0, -0.0767014, 0, 1, 0, 0.0767014, 0, 0.997054, 44.2582, -0.27626, -270.209)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MAP/WindTurbine/WindTurbine"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 776.21515, 884.5918, -46.354378)
+visible = false
+mesh = SubResource("BoxMesh_h2rlu")
 
 [node name="Forest" parent="MAP" instance=ExtResource("68_5bvpg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -405.334, 32.47, 208.461)
@@ -1502,7 +1511,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947685, 0, -0.027134744, 0, 0.999997, 0, 0.027134662, 0, -0.9994799, -324.41486, 0, -90.341)
+transform = Transform3D(-0.99947816, 0, -0.02713478, 0, 0.999997, 0, 0.027134698, 0, -0.9994812, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1761,7 +1770,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0004242002, 0, -0.99994814, 0, 0.999997, 0, 0.99994814, 0, 0.0004242002, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042419965, 0, -0.99994683, 0, 0.999997, 0, 0.99994683, 0, 0.00042419965, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1789,6 +1798,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.0285, 0, 1.38086)
 
 [node name="Sun" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1111.4701, -4.8725137e-06)
+visible = false
 light_color = Color(1, 1, 0.5764706, 1)
 light_energy = 0.9
 light_volumetric_fog_energy = 0.05
@@ -1797,12 +1807,13 @@ shadow_enabled = true
 [node name="Moon" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1000, 0)
 light_color = Color(1, 1, 0.894118, 1)
-light_energy = 0.1
+light_energy = 0.01
 light_volumetric_fog_energy = 0.05
 shadow_enabled = true
 
 [node name="Great Sun Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 1.9766e-22, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 1422, -1.84774e-05)
+visible = false
 cast_shadow = 0
 mesh = SubResource("SphereMesh_7oes6")
 skeleton = NodePath("../Moon")
@@ -2067,7 +2078,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.539375, 36.661526, -59.17375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8903694, 138.7732, -76.61015)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -2433,6 +2444,21 @@ shape = SubResource("CapsuleShape3D_h2rlu")
 [node name="Cam0" type="Marker3D" parent="Shadow Person - Tall2"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
 
+[node name="Skybeam0" parent="." instance=ExtResource("205_dmcx1")]
+transform = Transform3D(0.99864876, 0.010146454, 0.05096452, -0.026947659, 0.9396925, 0.34095687, -0.044431478, -0.3418695, 0.9386963, -81.65527, 58.184986, 19.893719)
+
+[node name="Skybeam1" parent="." instance=ExtResource("205_dmcx1")]
+transform = Transform3D(-0.8346303, 0.17311715, -0.522898, -0.019635316, 0.93937063, 0.34234086, 0.55046004, 0.2959954, -0.7806281, -40.90745, 58.336147, 148.14203)
+
+[node name="Skybeam2" parent="." instance=ExtResource("205_dmcx1")]
+transform = Transform3D(-0.6911743, -0.28018057, 0.66616565, 0.008828934, 0.9184463, 0.39544693, -0.72263396, 0.27920437, -0.63233286, -123.35427, 58.07032, 148.24397)
+
+[node name="Skybeam4" parent="." instance=ExtResource("205_dmcx1")]
+transform = Transform3D(0.1373863, -0.3386916, 0.930813, -0.00065663096, 0.93969256, 0.34201944, -0.9905171, -0.047599997, 0.1288785, -149.01857, 58.05523, 68.72942)
+
+[node name="Skybeam3" parent="." instance=ExtResource("205_dmcx1")]
+transform = Transform3D(0.29082683, 0.32424462, -0.900158, 0.003925062, 0.94041246, 0.34001267, 0.95676786, -0.10241798, 0.27222443, -14.753262, 58.09946, 69.14215)
+
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 2/Bullet Train - Car/Area3D" method="_on_body_entered"]
@@ -2490,5 +2516,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33
 
 [editable path="MAP/Openable Double Door"]
 [editable path="MAP/Openable Double Door2"]
+[editable path="Gourdling"]
+[editable path="Gourdling/G"]
+[editable path="Gourdling2"]
+[editable path="Gourdling2/G"]
 [editable path="Gourd Goals/NavigationRegion3D/Gourdtown Cemetery"]
 [editable path="Stationary Ball/BankBall"]
+[editable path="Skybeam0"]
+[editable path="Skybeam1"]
+[editable path="Skybeam2"]
+[editable path="Skybeam4"]
+[editable path="Skybeam3"]

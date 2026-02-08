@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhy623sg8h50c"]
+
+[ext_resource type="Texture2D" uid="uid://dab21uoel7inj" path="res://Shaders/SkybeamGlowCurve.tres" id="1_cuw1k"]
+[ext_resource type="Texture2D" uid="uid://cgbxv5jnya2fc" path="res://Shaders/SkybeamAlbedoCurve.tres" id="2_ouh1y"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cuw1k"]
+lightmap_size_hint = Vector2i(378, 1224)
+top_radius = 35.0
+bottom_radius = 0.2
+height = 700.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="Shader" id="Shader_4g8jr"]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back;
+
+uniform sampler2D gradient_curve : hint_default_white;
+uniform sampler2D glow_curve : hint_default_white;
+uniform bool flip_gradient = false;
+uniform bool flip_glow = false;
+uniform vec4 color_top : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform vec4 color_bottom : source_color = vec4(0.0, 0.0, 0.0, 0.0);
+uniform float glow_strength : hint_range(0.0, 1000.0) = 1.0;
+uniform float gradient_edge_blend : hint_range(0.0, 0.2) = 0.05;
+uniform float glow_edge_blend : hint_range(0.0, 0.2) = 0.05;
+
+void fragment() {
+    // Clamp gradient sampling
+    float gradient_y = UV.y;
+    if (flip_gradient) {
+        gradient_y = clamp(gradient_y, gradient_edge_blend, 1.0);
+    } else {
+        gradient_y = clamp(gradient_y, 0.0, 1.0 - gradient_edge_blend);
+    }
+    
+    // Clamp glow sampling
+    float glow_y = UV.y;
+    if (flip_glow) {
+        glow_y = clamp(glow_y, glow_edge_blend, 1.0);
+    } else {
+        glow_y = clamp(glow_y, 0.0, 1.0 - glow_edge_blend);
+    }
+    
+    float gradient_sample = flip_gradient ? (1.0 - gradient_y) : gradient_y;
+    float glow_sample = flip_glow ? (1.0 - glow_y) : glow_y;
+    
+    float blend = texture(gradient_curve, vec2(gradient_sample, 0.5)).r;
+    float glow_blend = texture(glow_curve, vec2(glow_sample, 0.5)).r;
+    
+    vec4 final_color = mix(color_bottom, color_top, blend);
+    ALBEDO = final_color.rgb;
+    ALPHA = final_color.a;
+    
+    EMISSION = final_color.rgb * glow_strength * glow_blend;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1k0xu"]
+render_priority = 0
+shader = SubResource("Shader_4g8jr")
+shader_parameter/gradient_curve = ExtResource("2_ouh1y")
+shader_parameter/glow_curve = ExtResource("1_cuw1k")
+shader_parameter/flip_gradient = true
+shader_parameter/flip_glow = true
+shader_parameter/color_top = Color(0.9490196, 0.34117648, 0, 1)
+shader_parameter/color_bottom = Color(0.9490196, 0.34117648, 0, 0)
+shader_parameter/glow_strength = 56.7370026950075
+shader_parameter/gradient_edge_blend = 0.05
+shader_parameter/glow_edge_blend = 0.05
+
+[node name="Skybeam" type="Node3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 350, 0)
+mesh = SubResource("CylinderMesh_cuw1k")
+surface_material_override/0 = SubResource("ShaderMaterial_1k0xu")

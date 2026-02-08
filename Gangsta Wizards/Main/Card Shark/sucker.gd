@@ -17,7 +17,7 @@ func _physics_process(delta):
 		if ref == null:  # The character has been deleted!
 			to_remove.append(character)
 		else:
-			suck(ref, delta)  # Only process if still valid
+			suck(ref, delta, get_node(target_node))  # Only process if still valid
 
 	# Remove deleted characters from the dictionary
 	for character in to_remove:
@@ -25,14 +25,12 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	if body is CharacterBody3D and target_node:
+	if body is CharacterBody3D and target_node and not body.is_in_group("Player"):
 		print("Character entered:", body.name)
 		flying_characters[body] = weakref(body)  # Store a weak reference
 
 
-func suck(character, delta):
-	var target = get_node(target_node)
-	
+func suck(character, delta, target):
 	if character.is_in_group("Enemies"):
 		if character.can_move:
 			character.can_move = false

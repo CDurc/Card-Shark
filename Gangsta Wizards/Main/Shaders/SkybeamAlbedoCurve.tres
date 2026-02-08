@@ -1,0 +1,6 @@
+[gd_resource type="CurveTexture" load_steps=2 format=3 uid="uid://cgbxv5jnya2fc"]
+
+[ext_resource type="Curve" uid="uid://bete725fq847j" path="res://Shaders/ShaderCurve.tres" id="1_0h3lr"]
+
+[resource]
+curve = ExtResource("1_0h3lr")
