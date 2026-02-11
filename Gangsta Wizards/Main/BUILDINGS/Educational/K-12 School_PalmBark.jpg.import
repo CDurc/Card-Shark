@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw4ry314x7wqq"
-path.s3tc="res://.godot/imported/K-12 School_grass.jpg-117887d0c36141537c56fbd3a0ec15e6.s3tc.ctex"
+uid="uid://cegqd2smgjy7o"
+path.s3tc="res://.godot/imported/K-12 School_PalmBark.jpg-b490353f010a24d3802f6a674deb2e09.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e4b92d087af4cf11c7101dd343ff95be"
+"md5": "ad2c5bbadb4fa34d65dad82424663946"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Educational/K-12 School_grass.jpg"
-dest_files=["res://.godot/imported/K-12 School_grass.jpg-117887d0c36141537c56fbd3a0ec15e6.s3tc.ctex"]
+source_file="res://BUILDINGS/Educational/K-12 School_PalmBark.jpg"
+dest_files=["res://.godot/imported/K-12 School_PalmBark.jpg-b490353f010a24d3802f6a674deb2e09.s3tc.ctex"]
 
 [params]
 
