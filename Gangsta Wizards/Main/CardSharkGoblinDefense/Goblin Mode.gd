@@ -19,7 +19,7 @@ var current_round = 0
 
 
 var rounds = [
-	{ "small": {"pipe": 16, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 3},    "fly": {"devil": 0} },
+	{ "small": {"pipe": 5, "gun": 0, "bomb": 20},    "big": {"roll": 0, "sign": 3},    "fly": {"devil": 0} },
 	{ "small": {"pipe": 8, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 0} },
 	{ "small": {"pipe": 0, "gun": 0, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 6} },
 	{ "small": {"pipe": 6, "gun": 1, "bomb": 0},    "big": {"roll": 0, "sign": 0},    "fly": {"devil": 2} },

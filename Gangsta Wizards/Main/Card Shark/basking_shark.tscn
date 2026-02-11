@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfs7t8w8wgff3"]
+[gd_scene load_steps=11 format=3 uid="uid://bfs7t8w8wgff3"]
 
 [ext_resource type="PackedScene" uid="uid://3twoblqia3rh" path="res://Card Shark/Basking Shark.glb" id="1_3qw25"]
 [ext_resource type="Script" uid="uid://7pdpm70mbdwq" path="res://Card Shark/sucker.gd" id="2_f7bgk"]
@@ -20,6 +20,26 @@ albedo_color = Color(1, 1, 1, 0.109804)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1n15w"]
 height = 14.476746
 radius = 5.538086
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uqbtc"]
+emission_shape_scale = Vector3(0.5, 1, 1)
+emission_shape = 1
+emission_sphere_radius = 4.0
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 9.0
+initial_velocity_max = 9.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1n15w"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.93333334)
+
+[sub_resource type="SphereMesh" id="SphereMesh_306o1"]
+material = SubResource("StandardMaterial3D_1n15w")
+radius = 0.05
+height = 0.1
+radial_segments = 32
 
 [node name="Basking Shark" instance=ExtResource("1_3qw25")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -58,6 +78,20 @@ script = ExtResource("3_uqbtc")
 [node name="Suckbox" type="CollisionShape3D" parent="Sucker2" index="0"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 8.556809, 1.9094051e-07, 5.684342e-14)
 shape = SubResource("CylinderShape3D_1n15w")
+
+[node name="GPUParticlesAttractorBox3D" type="GPUParticlesAttractorBox3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.705468, 0, 0)
+strength = 300.0
+attenuation = 0.435277
+size = Vector3(8.856567, 10, 10)
+
+[node name="Particles" type="GPUParticles3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.129933, -0.34235597, 0)
+emitting = false
+amount = 60
+lifetime = 0.4
+process_material = SubResource("ParticleProcessMaterial_uqbtc")
+draw_pass_1 = SubResource("SphereMesh_306o1")
 
 [connection signal="tree_exiting" from="Sucker" to="Sucker" method="_on_parent_deleting"]
 [connection signal="body_entered" from="Sucker2" to="Sucker2" method="_on_body_entered"]

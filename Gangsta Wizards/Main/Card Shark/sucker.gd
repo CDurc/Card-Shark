@@ -49,13 +49,14 @@ func suck(character, delta, target):  #Called every frame while in flying_list
 		character.velocity = direction * fly_speed
 		character.move_and_slide()
 		
-	if character.global_position.distance_to(target.global_position) < 1.5:
+	if character.global_position.distance_to(target.global_position) < 2.0:
 		to_remove.append(character)
 		var tween = create_tween()
 		tween.tween_property(character, "global_position", second_target_node.global_position, 0.1)
 		tween.tween_callback(func():
-			character.can_move = true
-			character.damage(100)
+			if character:
+				character.can_move = true
+				character.damage(100)
 		)
 		print("tweening")
 	
