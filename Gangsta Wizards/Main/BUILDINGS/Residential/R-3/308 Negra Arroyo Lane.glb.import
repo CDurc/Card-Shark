@@ -44,6 +44,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chair_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Driveway": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -54,25 +60,49 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Fireplace": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Garage Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Glass Table": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Grill": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Overhang": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Patio": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Planter": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Table": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Yard": {
 "generate/physics": true,

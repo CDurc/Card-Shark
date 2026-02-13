@@ -39,6 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Dock": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Escalatorcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Escalatorcol_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Fences": {
 "generate/physics": true
 },
@@ -47,10 +56,25 @@ _subresources={
 "physics/layer": 11,
 "physics/mask": 11
 },
+"PATH:1 - PHYS/Picnic Table": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Railings": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sign_004": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
 "generate/physics": true
 }
 }

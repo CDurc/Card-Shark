@@ -39,10 +39,25 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/ACC": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CU": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Condensing Unit": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Cooling Tower": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/DOAS": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/ES Pump": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ext Walls": {
@@ -54,13 +69,28 @@ _subresources={
 "PATH:1 - PHYS/Inline Pump": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Louver": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PTAC": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU HP": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/RTU_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/RTU_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shell & Tube Body": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Storage": {
@@ -69,7 +99,13 @@ _subresources={
 "PATH:1 - PHYS/Tank": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Undeveloped Land_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/WSHP": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/WallMtdIndoor": {
 "generate/physics": true
 }
 }

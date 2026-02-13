@@ -42,6 +42,12 @@ _subresources={
 "PATH:1 - PHYS/2nd Floor": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/DOAS": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Foundation": {
 "generate/physics": true
 },
@@ -60,7 +66,25 @@ _subresources={
 "PATH:1 - PHYS/Int Walls 2nd Flr": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof High": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Street Posts": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_004": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {

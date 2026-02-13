@@ -51,7 +51,16 @@ _subresources={
 "PATH:1 - PHYS/Arch_003": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Arch_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Barrels": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bases_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Benches": {
@@ -69,6 +78,9 @@ _subresources={
 "PATH:1 - PHYS/Billboard_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Dock": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Drums": {
 "generate/physics": true
 },
@@ -84,7 +96,13 @@ _subresources={
 "PATH:1 - PHYS/Fencescols": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Fencescols_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/GourdTunnel": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/GourdTunnel_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Houston Sign": {
@@ -94,6 +112,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Local Roads": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Piers": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
@@ -121,6 +142,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower_001": {

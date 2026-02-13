@@ -84,9 +84,6 @@ _subresources={
 "PATH:1 - PHYS/Tunnel": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Volcano Ground": {
 "generate/physics": true
 }
