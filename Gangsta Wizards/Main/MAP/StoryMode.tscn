@@ -1,4 +1,4 @@
-[gd_scene load_steps=241 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=242 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -369,6 +369,10 @@ options_2_goto = Array[int]([3, 3, 3])
 options_3 = Array[String](["Try again", "Try again", "Try again"])
 options_3_goto = Array[int]([0, 0, 0])
 metadata/_custom_type_script = "uid://b0iue53t8yk00"
+
+[sub_resource type="FogMaterial" id="FogMaterial_1k0xu"]
+density = 0.02
+emission = Color(0, 0.7445714, 3.85046e-07, 1)
 
 [node name="RootNode" type="Node3D"]
 
@@ -1521,7 +1525,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994788, 0, -0.027134798, 0, 0.999997, 0, 0.027134717, 0, -0.99948186, -324.41486, 0, -90.341)
+transform = Transform3D(-0.99947894, 0, -0.027134802, 0, 0.999997, 0, 0.027134718, 0, -0.999482, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1780,7 +1784,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042419936, 0, -0.9999462, 0, 0.999997, 0, 0.9999462, 0, 0.00042419936, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.0004241993, 0, -0.99994606, 0, 0.999997, 0, 0.99994606, 0, 0.0004241993, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2697,7 +2701,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.104553, 41.34321, -45.703735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.35418, 41.34321, -253.70352)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -3055,6 +3059,19 @@ shape = SubResource("CapsuleShape3D_h2rlu")
 
 [node name="Cam0" type="Marker3D" parent="Shadow Person - Tall2"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.826878, 33.139454, -265.33356)
+size = Vector3(31.506714, 33.814453, 42.9021)
+shape = 0
+material = SubResource("FogMaterial_1k0xu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.991272, 41.33562, -256.8766)
+light_color = Color(0, 1, 0, 1)
+light_energy = 10.172
+light_volumetric_fog_energy = 3.344
+omni_range = 1.076
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]

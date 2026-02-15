@@ -48,7 +48,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 transform = Transform3D(0.023378372, 0, 0, 0, 0.023378372, 0, 0, 0, 0.023378372, 3.4609354, 0.25036284, -0.2735457)
 
 [node name="Sucker" type="Area3D" parent="." index="3"]
-collision_layer = 3
 script = ExtResource("2_f7bgk")
 fly_speed = 6.0
 
@@ -72,7 +71,6 @@ target_position = Vector3(-1, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1523066, 0, 0)
 
 [node name="Sucker2" type="Area3D" parent="." index="4"]
-collision_layer = 3
 script = ExtResource("3_uqbtc")
 
 [node name="Suckbox" type="CollisionShape3D" parent="Sucker2" index="0"]
