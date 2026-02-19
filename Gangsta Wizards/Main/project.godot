@@ -199,3 +199,4 @@ pause={
 [rendering]
 
 anti_aliasing/quality/screen_space_aa=1
+occlusion_culling/use_occlusion_culling=true

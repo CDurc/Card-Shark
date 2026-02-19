@@ -1,4 +1,4 @@
-[gd_scene load_steps=242 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=244 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -210,6 +210,9 @@
 [ext_resource type="Material" uid="uid://b2mouql1r5psp" path="res://Shaders/Skybeam Surface Mats/LB Green.tres" id="206_dmcx1"]
 [ext_resource type="Material" uid="uid://dtjwjgflef78v" path="res://Shaders/Skybeam Surface Mats/Pink-purp.tres" id="207_ofgt5"]
 
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_1k0xu"]
+size = Vector3(200, 100, 200)
+
 [sub_resource type="BoxMesh" id="BoxMesh_h2rlu"]
 size = Vector3(100, 100, 100)
 
@@ -302,7 +305,7 @@ glow_levels/3 = 0.6
 glow_levels/5 = 0.0
 glow_intensity = 2.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0001
+volumetric_fog_density = 0.001
 volumetric_fog_albedo = Color(0.1254902, 0.5686275, 1, 1)
 volumetric_fog_length = 335.67
 
@@ -374,6 +377,9 @@ metadata/_custom_type_script = "uid://b0iue53t8yk00"
 density = 0.02
 emission = Color(0, 0.7445714, 3.85046e-07, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_1k0xu"]
+size = Vector3(10000, 20, 10000)
+
 [node name="RootNode" type="Node3D"]
 
 [node name="MAP" type="Node3D" parent="."]
@@ -389,6 +395,9 @@ transform = Transform3D(0.999575, 0, -0.0291429, 0, 1, 0, 0.0291429, 0, 0.999575
 
 [node name="Casino" parent="MAP" instance=ExtResource("4_pq7m6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.221, 37.448, 108.058)
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="MAP/Casino"]
+occluder = SubResource("BoxOccluder3D_1k0xu")
 
 [node name="Golf Clubhouse" parent="MAP" instance=ExtResource("5_04wnq")]
 transform = Transform3D(0.854432, 0, -0.519564, 0, 1, 0, 0.519564, 0, 0.854432, -312.643, 32.88, 90.5774)
@@ -1525,7 +1534,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947894, 0, -0.027134802, 0, 0.999997, 0, 0.027134718, 0, -0.999482, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994791, 0, -0.027134806, 0, 0.999997, 0, 0.027134724, 0, -0.99948215, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1784,7 +1793,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0004241993, 0, -0.99994606, 0, 0.999997, 0, 0.99994606, 0, 0.0004241993, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042419924, 0, -0.9999459, 0, 0.999997, 0, 0.9999459, 0, 0.00042419924, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1808,7 +1817,7 @@ script = ExtResource("149_1fhlb")
 environment = SubResource("Environment_fh68l")
 
 [node name="CelestialBodies" type="Node3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.029, 0, 1.381)
+transform = Transform3D(0.7710693, -0.6367512, 0, 0.6367512, 0.7710693, 0, 0, 0, 1, -69.029, 0, 1.381)
 
 [node name="Sun" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1111.4701, -4.8725137e-06)
@@ -1816,6 +1825,8 @@ light_color = Color(1, 1, 0.5764706, 1)
 light_energy = 0.9
 light_volumetric_fog_energy = 0.05
 shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 60.0
 
 [node name="Moon" type="DirectionalLight3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1000, 0)
@@ -1823,6 +1834,8 @@ light_color = Color(1, 1, 0.894118, 1)
 light_energy = 0.01
 light_volumetric_fog_energy = 0.05
 shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 60.0
 
 [node name="Great Sun Torus" type="MeshInstance3D" parent="Environment/CelestialBodies"]
 transform = Transform3D(1, 0, 1.9766e-22, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 1422, -1.84774e-05)
@@ -2409,125 +2422,146 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0273223, 0, 17.364744)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.832172, -0.52950287, 2.9835374)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight2" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.832172, -0.52950287, 13.350701)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight14" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.423983, -0.52950287, 28.197973)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight15" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.086541, -0.52950287, 37.395245)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight16" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.56944, -0.52950287, 42.415314)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight17" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.506905, -0.52950287, 39.91033)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight18" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.683846, -0.52950287, 35.176)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight19" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6652, -0.52950287, 34.32627)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight20" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.49996, -0.52950287, 30.26109)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight3" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.873776, -0.52950287, 10.363705)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight4" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.40148, -0.52950287, -11.128115)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight5" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.101873, -0.52950287, -11.403551)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight6" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.339197, -0.52950287, -29.530737)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight7" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.899689, -0.52950287, -28.959703)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight8" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7437935, -0.52950287, -44.28554)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight9" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.185941, -0.52950287, -50.431316)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight10" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.739714, -0.52950287, -60.46471)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight11" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8042, -0.45580292, -56.15337)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight12" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.323985, -0.45580292, -48.232914)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="streetlight13" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1663218, -0.45580292, -41.5244)
 light_color = Color(1, 0.4745098, 0, 1)
 light_energy = 8.236
+light_bake_mode = 1
 omni_range = 7.0
 
 [node name="BronzeIronSign" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.929138, 0.98986053, -2.776711)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 4.5
 
 [node name="SeedyIndoorLights" type="Node3D" parent="Lights/Gtown Lights"]
@@ -2536,160 +2570,187 @@ omni_range = 4.5
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -25.863468, -1.751667, -20.921452)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight4" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -25.863468, -1.751667, -22.816624)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight5" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -25.863468, -1.751667, -24.64169)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight2" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -25.787357, -1.751667, -19.059536)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight3" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -25.673557, -1.751667, -17.21409)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight6" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -22.203487, -1.751667, -20.921452)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight7" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -22.203487, -1.751667, -22.816624)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight8" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -22.203487, -1.751667, -24.64169)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight9" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -22.127377, -1.751667, -19.059536)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight10" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -22.013577, -1.751667, -17.21409)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight11" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -29.696098, -1.751667, -20.921452)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight12" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -29.696098, -1.751667, -22.816624)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight13" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -29.696098, -1.751667, -24.64169)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight14" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -29.619987, -1.751667, -19.059536)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight15" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -29.506187, -1.751667, -17.21409)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight16" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.43515, -1.751667, -20.921452)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight17" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.43515, -1.751667, -22.816624)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight18" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.43515, -1.751667, -24.64169)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight19" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.35904, -1.751667, -19.059536)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight20" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.24524, -1.751667, -17.21409)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight21" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -37.258003, -1.751667, -20.921452)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight22" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -37.258003, -1.751667, -22.816624)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight23" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -37.258003, -1.751667, -24.64169)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight24" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -37.181892, -1.751667, -19.059536)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="SeedyLight25" type="OmniLight3D" parent="Lights/Gtown Lights/SeedyIndoorLights"]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -37.068092, -1.751667, -17.21409)
 light_color = Color(0.99999803, 0.63655156, 0.094775654, 1)
 light_energy = 0.5
+light_bake_mode = 1
 omni_range = 3.839
 
 [node name="BronzeIronSign3" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.709276, -1.2566605, -11.206977)
 light_energy = 0.8
+light_bake_mode = 1
 omni_range = 2.5
 
 [node name="BronzeIronSign2" type="OmniLight3D" parent="Lights/Gtown Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.047117, -1.1341667, 5.8808737)
 light_energy = 0.8
+light_bake_mode = 1
 omni_range = 2.5
 
 [node name="Openable Door" parent="." instance=ExtResource("138_pnmfd")]
@@ -2701,7 +2762,7 @@ transform = Transform3D(0.0716019, 0, 0.997433, 0, 1, 0, -0.997433, 0, 0.0716019
 Door_open_angle = -110.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.35418, 41.34321, -253.70352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.959694, 41.34321, -60.379944)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -3072,6 +3133,10 @@ light_color = Color(0, 1, 0, 1)
 light_energy = 10.172
 light_volumetric_fog_energy = 3.344
 omni_range = 1.076
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -229.30959, 0)
+mesh = SubResource("BoxMesh_1k0xu")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
