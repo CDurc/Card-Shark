@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueTree" load_steps=2 format=3 uid="uid://b4kmr8u12svok"]
+
+[ext_resource type="Script" uid="uid://lphdnh17u8dd" path="res://Dialogue/Dictionary_Tree_Dialogue_Creator.gd" id="1_2ycir"]
+
+[resource]
+script = ExtResource("1_2ycir")
+speaker_name = "SHadow Man"
+metadata/_custom_type_script = "uid://lphdnh17u8dd"

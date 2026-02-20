@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpf060ddbj72j"]
+[gd_scene load_steps=12 format=3 uid="uid://dpf060ddbj72j"]
 
 [ext_resource type="PackedScene" uid="uid://dkhwvgcjcie2h" path="res://PracticeSandbox/SandboxMap.glb" id="1_efnc4"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="2_d1kxc"]
+[ext_resource type="PackedScene" uid="uid://dt75d4cdbpky2" path="res://CHARACTERS/Shadow Person - Tall.glb" id="3_0rd6y"]
+[ext_resource type="Script" uid="uid://cm5vpqhtml7ch" path="res://Dialogue/Tree_Dialogue.gd" id="4_khtka"]
+[ext_resource type="Resource" uid="uid://cr7owrmsct8bo" path="res://Dialogue/D1.tres" id="5_0rd6y"]
 
 [sub_resource type="Gradient" id="Gradient_d1kxc"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -35,6 +38,10 @@ glow_levels/3 = 0.6
 glow_levels/5 = 0.0
 glow_intensity = 2.0
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jatbo"]
+radius = 0.359375
+height = 2.072754
+
 [node name="BenScene" type="Node3D"]
 
 [node name="SandboxMap" parent="." instance=ExtResource("1_efnc4")]
@@ -49,3 +56,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46.912094, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0lva3")
+
+[node name="Shadow Person - Tall3" parent="." instance=ExtResource("3_0rd6y")]
+transform = Transform3D(-0.9917564, 0, 0.1281378, 0, 1, 0, -0.1281378, 0, -0.9917564, -7.4951572, 0.92861974, 2.1785598)
+
+[node name="Int" type="StaticBody3D" parent="Shadow Person - Tall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7445297, 0)
+disable_mode = 1
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("4_khtka")
+dialogue_tree = ExtResource("5_0rd6y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shadow Person - Tall3/Int"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.656613e-10, -0.4780197, -0.03983037)
+shape = SubResource("CapsuleShape3D_jatbo")
+
+[node name="Cam0" type="Marker3D" parent="Shadow Person - Tall3"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1234319, -0.033020765)

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogueTree" load_steps=7 format=3 uid="uid://cr7owrmsct8bo"]
+
+[ext_resource type="Script" uid="uid://bsi31pyf1jy2j" path="res://Dialogue/DialogueNode.gd" id="1_0wwbr"]
+[ext_resource type="Script" uid="uid://d3em8xw6pqgrr" path="res://Dialogue/DialogueTree.gd" id="2_g0bb8"]
+
+[sub_resource type="Resource" id="Resource_hcvti"]
+script = ExtResource("1_0wwbr")
+text = "[b][font_size=20]Shadow Man:[/font_size][/b]   DO you have the key?"
+options = Array[String](["I have the key!", "I do not have the key", "Give me the key"])
+options_goto = Array[int]([1, 2, 3])
+options_check_property = Array[String](["has_key"])
+options_check_value = Array[int]([1])
+options_fail_goto = Array[int]([2])
+options_call_method = Array[String](["use_key", "", "give_key"])
+metadata/_custom_type_script = "uid://bsi31pyf1jy2j"
+
+[sub_resource type="Resource" id="Resource_jatbo"]
+script = ExtResource("1_0wwbr")
+text = "[b][font_size=20]Shadow Man:[/font_size][/b]   You have the key!!!!"
+options = Array[String](["Back to start", "Back to start", "Bag To Start"])
+options_goto = Array[int]([0, 0, 0])
+metadata/_custom_type_script = "uid://bsi31pyf1jy2j"
+
+[sub_resource type="Resource" id="Resource_jugas"]
+script = ExtResource("1_0wwbr")
+text = "[b][font_size=20]Shadow Man:[/font_size][/b]   No key?  Gay."
+options = Array[String](["Back to star", "Patrick Star", "Back to where it all began"])
+options_goto = Array[int]([0, 0, 0])
+metadata/_custom_type_script = "uid://bsi31pyf1jy2j"
+
+[sub_resource type="Resource" id="Resource_0wwbr"]
+script = ExtResource("1_0wwbr")
+text = "[b][font_size=20]Shadow Man:[/font_size][/b]   Heres the key!"
+options = Array[String](["back", "pack", "tack"])
+options_goto = Array[int]([0, 0, 0])
+metadata/_custom_type_script = "uid://bsi31pyf1jy2j"
+
+[resource]
+script = ExtResource("2_g0bb8")
+speaker_name = "King Man"
+nodes = Array[ExtResource("1_0wwbr")]([SubResource("Resource_hcvti"), SubResource("Resource_jatbo"), SubResource("Resource_jugas"), SubResource("Resource_0wwbr")])
+metadata/_custom_type_script = "uid://d3em8xw6pqgrr"

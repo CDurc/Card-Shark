@@ -68,6 +68,8 @@ var initial_deck = [
 var deck = initial_deck
 var movement_speed = walk_speed
 
+var has_key = false
+
 var mouse_sensitivity = 700
 var gamepad_sensitivity := 0.075
 
