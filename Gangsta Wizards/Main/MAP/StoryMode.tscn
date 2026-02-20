@@ -1,4 +1,4 @@
-[gd_scene load_steps=247 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=244 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -209,8 +209,6 @@
 [ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
 [ext_resource type="Material" uid="uid://b2mouql1r5psp" path="res://Shaders/Skybeam Surface Mats/LB Green.tres" id="206_dmcx1"]
 [ext_resource type="Material" uid="uid://dtjwjgflef78v" path="res://Shaders/Skybeam Surface Mats/Pink-purp.tres" id="207_ofgt5"]
-[ext_resource type="Script" uid="uid://cm5vpqhtml7ch" path="res://Dialogue/Tree_Dialogue.gd" id="209_kibu0"]
-[ext_resource type="Script" uid="uid://lphdnh17u8dd" path="res://Dialogue/Dictionary_Tree_Dialogue_Creator.gd" id="210_ywsmc"]
 
 [sub_resource type="BoxOccluder3D" id="BoxOccluder3D_1k0xu"]
 size = Vector3(200, 100, 200)
@@ -361,11 +359,6 @@ albedo_color = Color(0.47868448, 0.09072832, 0.4786147, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h2rlu"]
 radius = 0.359375
 height = 2.072754
-
-[sub_resource type="Resource" id="Resource_m4epl"]
-script = ExtResource("210_ywsmc")
-speaker_name = "SHadow Man"
-metadata/_custom_type_script = "uid://lphdnh17u8dd"
 
 [sub_resource type="Resource" id="Resource_4g8jr"]
 script = ExtResource("204_h2rlu")
@@ -1541,7 +1534,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.99947935, 0, -0.027134806, 0, 0.999997, 0, 0.02713473, 0, -0.99948215, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994794, 0, -0.027134806, 0, 0.999997, 0, 0.027134731, 0, -0.99948215, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1800,7 +1793,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042419913, 0, -0.99994564, 0, 0.999997, 0, 0.99994564, 0, 0.00042419913, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.00042419913, 0, -0.9999456, 0, 0.999997, 0, 0.9999456, 0, 0.00042419913, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3108,24 +3101,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.656613e-10, -0.4780197, -0.
 shape = SubResource("CapsuleShape3D_h2rlu")
 
 [node name="Cam0" type="Marker3D" parent="Shadow Person - Tall"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
-
-[node name="Shadow Person - Tall3" parent="." instance=ExtResource("201_fwwy5")]
-transform = Transform3D(-0.9917564, 0, 0.1281378, 0, 1, 0, -0.1281378, 0, -0.9917564, -38.95158, 33.7945, 269.22766)
-
-[node name="Int" type="StaticBody3D" parent="Shadow Person - Tall3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7445297, 0)
-disable_mode = 1
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("209_kibu0")
-dialogue_options = SubResource("Resource_m4epl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Shadow Person - Tall3/Int"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.656613e-10, -0.4780197, -0.03983037)
-shape = SubResource("CapsuleShape3D_h2rlu")
-
-[node name="Cam0" type="Marker3D" parent="Shadow Person - Tall3"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
 
 [node name="Shadow Person - Tall2" parent="." instance=ExtResource("201_fwwy5")]
