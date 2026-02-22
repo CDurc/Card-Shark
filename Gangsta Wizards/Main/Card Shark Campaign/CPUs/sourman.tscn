@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://crxnlufryuhvn"]
+
+[ext_resource type="Script" uid="uid://dad8fsilauaqf" path="res://sourman.gd" id="1_v3pox"]
+[ext_resource type="PackedScene" uid="uid://ba0eq8oxf5n2v" path="res://CHARACTERS/SPM/SPM - Red.glb" id="2_1wydg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onjlt"]
+radius = 0.35986328
+height = 2.1899414
+
+[node name="Sourman" type="CharacterBody3D"]
+script = ExtResource("1_v3pox")
+
+[node name="SPM - Red" parent="." instance=ExtResource("2_1wydg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6926305, 0.047480494)
+
+[node name="Skeleton3D" parent="SPM - Red/SPM-Red" index="0"]
+bones/1/position = Vector3(-0.014806804, 0.24183153, 0.5656195)
+bones/4/rotation = Quaternion(-0.32337627, -0.5082709, -0.53940696, 0.58832693)
+bones/5/rotation = Quaternion(-0.11922929, 0.8997082, -0.19493707, 0.3718994)
+bones/6/rotation = Quaternion(0.63391477, 0.08746424, -0.008902235, 0.7683899)
+bones/7/rotation = Quaternion(0.37645704, -0.9093893, 0.057786703, 0.16718844)
+bones/25/rotation = Quaternion(-0.22683354, 0.102583334, 0.017554205, 0.96835697)
+bones/29/rotation = Quaternion(0.80609787, -0.004237395, -0.59174603, -0.0049994127)
+bones/30/rotation = Quaternion(0.79471225, 0.22856802, -0.55376905, -0.0976164)
+bones/40/rotation = Quaternion(-0.68750876, 0.7049611, 0.17230517, -0.025932653)
+bones/43/rotation = Quaternion(0.6771874, -0.64661354, 0.20244879, -0.28691924)
+bones/45/rotation = Quaternion(-0.092408486, -0.8963351, 0.13711073, 0.41139358)
+bones/46/rotation = Quaternion(0.59722817, -0.0119576845, -0.03596829, 0.8011753)
+bones/47/rotation = Quaternion(-0.0018523, 0.97716385, 0.21247876, -0.00033673272)
+bones/63/rotation = Quaternion(0.9836004, 0.028038891, 0.03356752, -0.17497815)
+bones/63/scale = Vector3(1.000038, 1.0000004, 1.0000144)
+bones/64/rotation = Quaternion(0.0021030419, -0.017090112, 0.00028912444, 0.9998517)
+bones/65/rotation = Quaternion(-0.49329203, -0.025768923, 0.020391937, 0.8692428)
+bones/67/rotation = Quaternion(0.9991332, -0.034167487, -0.018790506, 0.014568013)
+bones/67/scale = Vector3(1.0000408, 0.9999999, 1.0000113)
+bones/68/rotation = Quaternion(0.089874536, 0.016845321, -0.020829432, 0.9955928)
+bones/69/rotation = Quaternion(-0.40207955, 0.0045131748, -0.01722127, 0.9154317)
+bones/71/position = Vector3(0.23180598, 0.10034028, 1.1972169)
+bones/71/rotation = Quaternion(-0.5880793, 0.058269188, -0.8065018, 0.017953843)
+bones/72/position = Vector3(0.14290527, 0.3854208, 0.029784525)
+bones/72/rotation = Quaternion(0.929327, 7.88442e-08, 1.9156882e-07, -0.36925793)
+bones/73/position = Vector3(0.28083235, 0.26994142, 1.4301649)
+bones/74/position = Vector3(0.12931207, -0.06396985, 0.26115462)
+bones/74/rotation = Quaternion(0.9999637, -2.693529e-09, 3.1607453e-07, -0.00852151)
+bones/75/position = Vector3(-0.15975745, 0.18452056, 0.02055805)
+bones/75/rotation = Quaternion(0.92932713, 6.695156e-08, 2.6499805e-08, -0.3692575)
+bones/76/position = Vector3(-0.42988756, 0.17747225, 1.2976905)
+bones/77/position = Vector3(-0.15947713, -0.07310169, 0.2370326)
+bones/77/rotation = Quaternion(0.9999637, 5.4696947e-08, 3.2960173e-07, -0.008521974)
+bones/78/position = Vector3(-0.2874342, 0.09569217, 1.229984)
+bones/78/rotation = Quaternion(-0.76549697, -0.28103986, 0.5651933, 0.12485021)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0949509, 0.00095948577)
+shape = SubResource("CapsuleShape3D_onjlt")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 0.8
+
+[editable path="SPM - Red"]
