@@ -1,8 +1,8 @@
 [gd_scene load_steps=38 format=3 uid="uid://bwcpw01wgs26t"]
 
-[ext_resource type="Script" path="res://Particles/poopy_fart.gd" id="1_r3o3s"]
-[ext_resource type="Script" path="res://Particles/falling_node.gd" id="2_epkrp"]
-[ext_resource type="Script" path="res://Particles/poop_slow.gd" id="3_vqdyq"]
+[ext_resource type="Script" uid="uid://d4dh4ue10t7xs" path="res://Particles/poopy_fart.gd" id="1_r3o3s"]
+[ext_resource type="Script" uid="uid://67uhojoasksh" path="res://Particles/falling_node.gd" id="2_epkrp"]
+[ext_resource type="Script" uid="uid://cu7y8m2ohis48" path="res://Particles/poop_slow.gd" id="3_vqdyq"]
 
 [sub_resource type="Curve" id="Curve_op7nt"]
 _data = [Vector2(0.0295858, 0), 0.0, 0.0, 0, 0, Vector2(0.286432, 0.857143), 0.0, 0.0, 0, 0, Vector2(0.40201, 0.450549), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -187,6 +187,7 @@ script = ExtResource("2_epkrp")
 
 [node name="Explosive" type="GPUParticles3D" parent="Poop"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+cast_shadow = 0
 emitting = false
 amount = 2000
 lifetime = 4.0
@@ -197,6 +198,7 @@ draw_pass_1 = SubResource("SphereMesh_088qw")
 
 [node name="Linger" type="GPUParticles3D" parent="Poop"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.285726, 0)
+cast_shadow = 0
 emitting = false
 amount = 6000
 lifetime = 6.0
