@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crxxjlnqgx4l0"
+uid="uid://csk1x6hgl2jdo"
 path="res://.godot/imported/Strip Mall 4.glb-164ec03a869f8cb5c486e12aa6dacfc8.scn"
 
 [deps]
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
+import_script/path="uid://b11ixdilrs8p7"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
@@ -56,5 +56,5 @@ _subresources={
 }
 }
 }
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

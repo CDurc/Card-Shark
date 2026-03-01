@@ -60,9 +60,6 @@ _subresources={
 },
 "PATH:1 - PHYS/Pine Tress": {
 "generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
-"generate/physics": true
 }
 }
 }

@@ -42,9 +42,6 @@ _subresources={
 "PATH:1 - PHYS/Air Outlet": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Billboard": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Ext": {
 "generate/physics": true
 },
@@ -57,13 +54,7 @@ _subresources={
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairs": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Turnstile": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 }
 }

@@ -39,10 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/BillboardBack": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Dividing Wall": {
+"PATH:1 - PHYS/BillboardBack_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -51,22 +48,10 @@ _subresources={
 "PATH:1 - PHYS/Ground_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Highway": {
+"PATH:1 - PHYS/Ground_002": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Highway Supports": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Neighborhood Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Post": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Sign_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Support": {
+"PATH:1 - PHYS/Stand": {
 "generate/physics": true
 }
 }

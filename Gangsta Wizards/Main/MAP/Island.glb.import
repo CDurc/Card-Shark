@@ -39,52 +39,82 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Beach Caves Entrance": {
+"PATH:1 - PHYS/AirportRoad": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Casino Ground": {
+"PATH:1 - PHYS/AirportRoad_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Cobb Wall": {
+"PATH:1 - PHYS/Bridge to PLI": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Highway Supports": {
+"PATH:1 - PHYS/Bridge to PLI_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Island Rock Faces": {
+"PATH:1 - PHYS/Bridge to Spade Island": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Lake": {
+"PATH:1 - PHYS/GTRoad": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Local Roads": {
+"PATH:1 - PHYS/GTRoad_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/North Point": {
+"PATH:1 - PHYS/GTRoad_002": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/OceanFloor": {
+"PATH:1 - PHYS/GolfRd": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/OceanFloor_001": {
+"PATH:1 - PHYS/Island Borders": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Overlook Grass": {
+"PATH:1 - PHYS/MAIN ROAD": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Parking Lot": {
+"PATH:1 - PHYS/Main Road Ramp": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Ramp": {
+"PATH:1 - PHYS/Main Road Ramp_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Main Road Ramp_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Main Road Ramp_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/NBAlley": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/NBHRoad": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Offshore Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RamptoNBH": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RamptoNBH_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Road": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Tunnel": {
+"PATH:1 - PHYS/Road to SI": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Volcano Ground": {
+"PATH:1 - PHYS/Road to SI_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Seafloor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spade Island": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Undeveloped Land": {
 "generate/physics": true
 }
 }

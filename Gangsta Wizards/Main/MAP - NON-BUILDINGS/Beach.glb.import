@@ -39,37 +39,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Arch": {
+"PATH:1 - PHYS/Beach Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Beach - Grass & Walkway": {
+"PATH:1 - PHYS/Beach Ground_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Beach - Sand Ground": {
+"PATH:1 - PHYS/Breaker": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Castle Walls": {
+"PATH:1 - PHYS/Breaker_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/CastleStairsCol": {
+"PATH:1 - PHYS/Palm Tree Trunks": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Hammock Trees": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Rocks": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Rocks_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Shower": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Shower_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trees": {
+"PATH:1 - PHYS/Sign": {
 "generate/physics": true
 }
 }

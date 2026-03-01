@@ -39,10 +39,16 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Cube": {
+"PATH:1 - PHYS/Drive": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_002": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Landing Strip": {
