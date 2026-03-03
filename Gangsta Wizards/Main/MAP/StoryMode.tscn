@@ -1,4 +1,4 @@
-[gd_scene load_steps=238 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=239 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -371,6 +371,9 @@ emission = Color(0, 0.7445714, 3.85046e-07, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1k0xu"]
 size = Vector3(10000, 20, 10000)
+
+[sub_resource type="SphereOccluder3D" id="SphereOccluder3D_h2rlu"]
+radius = 30.027452
 
 [node name="RootNode" type="Node3D"]
 
@@ -1479,7 +1482,7 @@ weight = 1.5
 shape = SubResource("BoxShape3D_1b7e0")
 
 [node name="Cybertruck3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(-0.9994803, 0, -0.027134806, 0, 0.999997, 0, 0.027134756, 0, -0.99948215, -324.41486, 0, -90.341)
+transform = Transform3D(-0.9994804, 0, -0.027134806, 0, 0.999997, 0, 0.02713476, 0, -0.99948215, -324.41486, 0, -90.341)
 progress = 1965.61
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1738,7 +1741,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg3" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.00042419872, 0, -0.9999447, 0, 0.999997, 0, 0.9999447, 0, 0.00042419872, 46.253876, 0, -0.3364072)
+transform = Transform3D(0.0004241987, 0, -0.99994457, 0, 0.999997, 0, 0.99994457, 0, 0.0004241987, 46.253876, 0, -0.3364072)
 progress = 46.2711
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3057,13 +3060,13 @@ shape = SubResource("CapsuleShape3D_h2rlu")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
 
 [node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.804363, 15.18346, -61.716877)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.804363, 8.259688, -61.716877)
 size = Vector3(31.506714, 33.814453, 42.9021)
 shape = 0
 material = SubResource("FogMaterial_1k0xu")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.480804, 19.550999, -60.619858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.328892, 13.618174, -71.89116)
 light_color = Color(0, 1, 0, 1)
 light_energy = 10.172
 light_volumetric_fog_energy = 3.344
@@ -3072,6 +3075,12 @@ omni_range = 1.076
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.733826, 0)
 mesh = SubResource("BoxMesh_1k0xu")
+
+[node name="Occluders" type="Node3D" parent="."]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.240532, 3.8615246, 229.10353)
+occluder = SubResource("SphereOccluder3D_h2rlu")
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" to="Cars/Cars/Path1/BULLET TRAIN 1/Bullet Train - Front/Area3D" method="_on_body_entered"]
