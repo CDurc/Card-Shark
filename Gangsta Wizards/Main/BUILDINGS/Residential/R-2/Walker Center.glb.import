@@ -39,10 +39,8 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Ceiling": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ceiling_001": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/First Floor": {
 "generate/physics": true,
@@ -52,20 +50,14 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Int Walls": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Int Walls E_001": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Int Walls E": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Int Walls W_001": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Int Walls W": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Int Walls_001": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true,
@@ -82,10 +74,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Sidewalk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Storm Shelter": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Top Floors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunks": {
+"generate/physics": true
 }
 }
 }

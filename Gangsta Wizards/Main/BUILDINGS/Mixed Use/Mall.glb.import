@@ -39,6 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Cooling Towers": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Entries": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Flagpole": {
 "generate/physics": true,
 "physics/layer": 3
@@ -46,10 +55,16 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land_001": {
+"PATH:1 - PHYS/PRVUs": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land_002": {
+"PATH:1 - PHYS/Posts": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spotlights": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stair Exit and Parapets": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {

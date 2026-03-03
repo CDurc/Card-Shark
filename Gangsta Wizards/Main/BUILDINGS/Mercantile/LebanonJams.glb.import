@@ -48,10 +48,19 @@ _subresources={
 "PATH:1 - PHYS/Foundation": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Intcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Site": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Supports": {

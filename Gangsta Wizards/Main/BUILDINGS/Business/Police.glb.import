@@ -48,6 +48,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Ground Ext": {
+"generate/physics": true
 }
 }
 }

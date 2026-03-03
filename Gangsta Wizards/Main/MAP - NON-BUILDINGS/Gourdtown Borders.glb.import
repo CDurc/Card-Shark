@@ -42,124 +42,70 @@ _subresources={
 "PATH:1 - PHYS/Arch": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Arch_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Arch_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Arch_003": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Arch_004": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Barrels": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Bases": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Bases_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Benches": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard Back": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard Back_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Billboard_001": {
+"PATH:1 - PHYS/BillboardBack_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Billboard_002": {
+"PATH:1 - PHYS/BillboardBack_002": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Dock": {
+"PATH:1 - PHYS/Eye": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Drums": {
+"PATH:1 - PHYS/GTown Columns": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Drums_001": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Drums_002": {
+"PATH:1 - PHYS/PathtoGt": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Fences_001cols": {
+"PATH:1 - PHYS/Pole": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Fencescols": {
+"PATH:1 - PHYS/Ramp2": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Fencescols_001": {
+"PATH:1 - PHYS/Sign Top": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/GourdTunnel": {
+"PATH:1 - PHYS/Sign Top_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/GourdTunnel_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Houston Sign": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Lights": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Local Roads": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Piers": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Post": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Rocks": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Scrap": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Scrap_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Shantytown": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Shantytown_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Sign": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Street Sign 2": {
+"PATH:1 - PHYS/Stand_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Tower": {
+"PATH:1 - PHYS/Support_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Tower_001": {
+"PATH:1 - PHYS/Support_002": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trash": {
+"PATH:1 - PHYS/Supports": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trash 2": {
+"PATH:1 - PHYS/Tunnel2": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trash 3": {
+"PATH:1 - PHYS/TunneltoGT": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land": {
+"PATH:1 - PHYS/Weathered Supports": {
 "generate/physics": true
 }
 }

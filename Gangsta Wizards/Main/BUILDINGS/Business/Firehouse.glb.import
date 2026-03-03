@@ -78,6 +78,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Truck0": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Truck2": {
+"generate/physics": true
 }
 }
 }

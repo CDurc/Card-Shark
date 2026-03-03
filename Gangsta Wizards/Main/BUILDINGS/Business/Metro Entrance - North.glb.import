@@ -42,16 +42,13 @@ _subresources={
 "PATH:1 - PHYS/Air Outlet": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Beach Umbrella": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Chair": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Ext": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Int Wall": {
@@ -64,9 +61,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turnstile": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 }
 }

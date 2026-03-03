@@ -39,19 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/BillboardBack": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Dice": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Groundcol": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Groundcol_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Light Pole": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Overhang": {
@@ -59,22 +47,10 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Stand": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Support": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
-},
-"PATH:1 - PHYS/Undeveloped Land": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
-"generate/physics": true
 }
 }
 }

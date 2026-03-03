@@ -42,7 +42,22 @@ _subresources={
 "PATH:1 - PHYS/Base": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/CT": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Glass Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Glass Walls_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Pillars": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Screenwalls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 }
 }

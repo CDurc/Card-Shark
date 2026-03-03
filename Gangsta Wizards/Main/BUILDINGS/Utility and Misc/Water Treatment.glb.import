@@ -39,13 +39,70 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/DCW Pump": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/DW Piping": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Garage Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground entrance": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Indoor Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Intake Piping": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lava Piping": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Outdoor Braces": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platform": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land_001": {
+"PATH:1 - PHYS/SAN": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/SAN Piping": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/SAN Pump": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shell & Tube": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Vote Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/gapcol": {
 "generate/physics": true
 }
 }

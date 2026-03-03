@@ -49,15 +49,13 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Cube_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Garage Door": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/PFMB": {
 "generate/physics": true,

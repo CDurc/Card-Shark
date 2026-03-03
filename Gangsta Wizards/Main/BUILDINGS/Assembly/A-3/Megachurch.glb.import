@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Ceilingcol": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Dollar Sign": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true,
 "physics/layer": 9,

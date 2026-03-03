@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/ACC": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cage": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -54,30 +57,24 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Deck": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Deck_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Deckcol": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Furniture": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Supports": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Piping": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,

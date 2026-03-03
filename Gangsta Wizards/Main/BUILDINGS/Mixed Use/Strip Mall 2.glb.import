@@ -79,10 +79,16 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Sign Back": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Window": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Window_001": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window_004": {
 "generate/physics": true,

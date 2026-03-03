@@ -39,15 +39,36 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Elev Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Front Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Ground_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Light Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Statue Base": {
