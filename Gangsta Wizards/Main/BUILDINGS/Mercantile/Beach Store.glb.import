@@ -60,6 +60,9 @@ _subresources={
 "PATH:1 - PHYS/Chair Storage": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Cube": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube_001": {
 "generate/physics": true,
 "physics/layer": 9,

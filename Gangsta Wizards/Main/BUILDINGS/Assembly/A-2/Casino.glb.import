@@ -39,7 +39,16 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Clover": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Intcol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Intcol_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Overhang": {
@@ -53,9 +62,6 @@ _subresources={
 },
 "PATH:1 - PHYS/Stairscol": {
 "generate/physics": true
-},
-"PATH:3 - No Cols/Beams": {
-"import/skip_import": true
 }
 }
 }

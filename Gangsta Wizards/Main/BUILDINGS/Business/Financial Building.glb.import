@@ -39,9 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Bases": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/CT": {
 "generate/physics": true
 },
@@ -54,10 +51,10 @@ _subresources={
 "PATH:1 - PHYS/Floor & Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Tower": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land_001": {
+"PATH:1 - PHYS/Ground_001": {
 "generate/physics": true
 }
 }

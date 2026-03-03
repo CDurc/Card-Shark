@@ -39,10 +39,34 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Anchors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Crane": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floors": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Pit": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pit Bottom": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ramp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircols": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircols_001": {
+"generate/physics": true
 }
 }
 }

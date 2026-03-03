@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q3sgvpgj86aw"
-path.s3tc="res://.godot/imported/Metro Entrance_WhiteBrick.jpg-c38a6e33a9f3cef08f0fdd3160e75a2f.s3tc.ctex"
+uid="uid://bcu6vusqrn7fx"
+path.s3tc="res://.godot/imported/DEI Tower_TippCityTourism.jpg-527ff358b93f6a0be6f264930ff9619c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0a656a8af23c4fc69d5b35dabfd74bda"
+}
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Metro Entrance_WhiteBrick.jpg"
-dest_files=["res://.godot/imported/Metro Entrance_WhiteBrick.jpg-c38a6e33a9f3cef08f0fdd3160e75a2f.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/DEI Tower_TippCityTourism.jpg"
+dest_files=["res://.godot/imported/DEI Tower_TippCityTourism.jpg-527ff358b93f6a0be6f264930ff9619c.s3tc.ctex"]
 
 [params]
 

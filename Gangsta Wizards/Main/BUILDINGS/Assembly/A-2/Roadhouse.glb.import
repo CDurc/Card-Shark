@@ -79,6 +79,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Walls_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,
 "physics/layer": 9,

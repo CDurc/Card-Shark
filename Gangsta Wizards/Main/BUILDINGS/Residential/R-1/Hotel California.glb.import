@@ -42,7 +42,7 @@ _subresources={
 "PATH:1 - PHYS/Cube_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Cube_002": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 }
 }

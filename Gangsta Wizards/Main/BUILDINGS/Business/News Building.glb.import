@@ -74,10 +74,16 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Satellite": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Window": {
 "generate/physics": true,

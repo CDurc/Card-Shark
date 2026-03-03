@@ -39,13 +39,31 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Chimney": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Fence": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Garage Door": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int ": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairscol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Window": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Window Out_001": {

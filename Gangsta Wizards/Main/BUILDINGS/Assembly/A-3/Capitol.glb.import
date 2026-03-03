@@ -59,6 +59,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Board": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cylinder": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -99,6 +102,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Road": {
 "generate/physics": true
 },
@@ -117,6 +126,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Square": {
 "generate/physics": true
 },
@@ -124,6 +139,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Wall": {
 "generate/physics": true,

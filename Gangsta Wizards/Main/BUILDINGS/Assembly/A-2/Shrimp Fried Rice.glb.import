@@ -42,10 +42,22 @@ _subresources={
 "PATH:1 - PHYS/Counter": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Picnic Table": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Rect Windows": {

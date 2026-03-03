@@ -33,51 +33,47 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://b11ixdilrs8p7"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - Phys/First Floors Ext": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/CUs": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/First Floors Ext": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Garage Doors": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Ground": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Garage Doors": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Second Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Light Pole": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Third Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
 },
-"PATH:1 - Phys/Windows": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Second Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Skylight": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Steel Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Third Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
+"generate/physics": true
 }
 }
 }

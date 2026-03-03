@@ -49,6 +49,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Fence": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -63,6 +66,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Grill": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
@@ -84,47 +90,15 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walway": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Window": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_004": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_005": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_006": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Window_007": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9

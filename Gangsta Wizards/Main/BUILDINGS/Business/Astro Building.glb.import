@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Floors": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Int Building": {
 "generate/physics": true
 },
@@ -58,9 +61,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Transparent Bricks": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 }
 }
