@@ -21,3 +21,4 @@ func go_to(id: SceneID):
 		return
 	is_changing = true
 	get_tree().change_scene_to_file(scenes[id])
+	is_changing = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ccahg3ocwrgd2"]
+[gd_scene load_steps=25 format=3 uid="uid://ccahg3ocwrgd2"]
 
 [ext_resource type="PackedScene" uid="uid://4wemrnh58mry" path="res://Menus/Main Menu.glb" id="1_w3sgo"]
 [ext_resource type="PackedScene" uid="uid://dxutsuyx1icch" path="res://Menus/The Shark Arm TM.tscn" id="4_foeht"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://im3jefolanvu" path="res://Menus/launch_new_scene.gd" id="6_2rmjt"]
 [ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
 [ext_resource type="Script" uid="uid://337j8ktiw6ih" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
+[ext_resource type="Texture2D" uid="uid://dxnvnqb0t1pow" path="res://Menus/GoblinModeLoadingBackground.jpg" id="9_4vfp3"]
 [ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
 
 [sub_resource type="Gradient" id="Gradient_ex873"]
@@ -1906,75 +1907,6 @@ environment = SubResource("Environment_x1h13")
 [node name="Non-Auto Updated Main  Menu" parent="World" instance=ExtResource("1_w3sgo")]
 visible = false
 
-[node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/Caardvark" index="0"]
-bones/0/rotation = Quaternion(-0.5, 0.5, 0.5, 0.5)
-bones/2/rotation = Quaternion(0.344193, 0.00746123, -0.00267816, 0.938865)
-bones/5/rotation = Quaternion(-0.17891, 0.593639, -0.0814222, 0.780355)
-bones/6/rotation = Quaternion(0.0020503, 0.0121128, 0.00609681, 0.999906)
-bones/7/rotation = Quaternion(-0.0936285, -0.667953, -0.0162211, 0.738112)
-bones/24/rotation = Quaternion(0.294652, 0.00242829, 0.0313652, 0.955087)
-bones/25/rotation = Quaternion(-0.298501, 0.00602793, -0.0286515, 0.95396)
-bones/29/rotation = Quaternion(0.806098, -0.00423647, -0.591746, -0.00500334)
-bones/30/rotation = Quaternion(0.794711, 0.228568, -0.55377, -0.0976199)
-bones/43/rotation = Quaternion(0.679545, -0.631055, 0.240705, -0.286441)
-bones/45/rotation = Quaternion(-0.0983192, -0.623457, 0.0428216, 0.774469)
-bones/46/rotation = Quaternion(0.117578, -0.00739376, -0.00832668, 0.993001)
-bones/47/rotation = Quaternion(-0.28084, 0.666252, 0.0852896, 0.685538)
-bones/63/rotation = Quaternion(0.996046, 0.0340118, 0.0299294, -0.0764185)
-bones/64/rotation = Quaternion(0.0901401, -0.0195405, 0.0231835, 0.995467)
-bones/65/rotation = Quaternion(-0.443545, -0.00888272, 0.00758886, 0.896176)
-bones/67/rotation = Quaternion(0.996743, -0.0332275, 0.0074302, -0.0731086)
-bones/68/rotation = Quaternion(0.0920541, 0.0192057, -0.0314122, 0.995073)
-bones/69/rotation = Quaternion(-0.441224, -0.0291125, -0.0167194, 0.896769)
-bones/71/position = Vector3(0.462385, 0.215614, 1.33112)
-bones/71/rotation = Quaternion(0.133824, 0.0144934, 0.689909, -0.711271)
-bones/72/rotation = Quaternion(0.929327, 1.2389e-07, 1.14872e-07, -0.369258)
-bones/74/rotation = Quaternion(0.999964, 3.02691e-08, 1.60851e-07, -0.00852161)
-bones/75/rotation = Quaternion(0.929327, 1.34914e-07, 8.70511e-08, -0.369257)
-bones/77/rotation = Quaternion(0.999964, -9.31366e-10, 1.24263e-07, -0.00852212)
-bones/78/rotation = Quaternion(-0.246923, -0.107326, 0.673868, 0.688049)
-
-[node name="Skeleton3D" parent="World/Non-Auto Updated Main  Menu/SharkBones" index="0"]
-bones/0/position = Vector3(0.348781, -0.948659, 2.13234)
-bones/0/rotation = Quaternion(-0.0214421, -0.706782, -0.706782, 0.0214422)
-bones/1/position = Vector3(-0.0137373, 0.224364, 0.760633)
-bones/2/rotation = Quaternion(0.344193, 0.00746092, -0.00267812, 0.938865)
-bones/5/rotation = Quaternion(-0.437139, 0.629607, -0.560803, 0.313056)
-bones/6/rotation = Quaternion(0.184963, 0.0116127, -0.0129276, 0.982592)
-bones/7/rotation = Quaternion(0.590193, -0.670022, -0.300043, 0.335733)
-bones/10/rotation = Quaternion(0.120798, 0.00256176, 0.0127377, 0.992592)
-bones/11/rotation = Quaternion(-0.110252, 0.00572354, -0.00367141, 0.99388)
-bones/13/rotation = Quaternion(-0.432766, -0.606144, 0.612062, 0.265862)
-bones/14/rotation = Quaternion(0.0864014, -0.00745071, -0.292051, 0.952463)
-bones/15/rotation = Quaternion(-0.300618, 0.903963, 0.183127, 0.242782)
-bones/17/rotation = Quaternion(0.996038, 0.0339602, 0.0302607, -0.0764189)
-bones/17/scale = Vector3(1, 1, 1.00002)
-bones/18/rotation = Quaternion(0.0901494, -0.0195406, 0.0231849, 0.995467)
-bones/19/rotation = Quaternion(-0.443558, -0.00919763, 0.00747236, 0.896167)
-bones/21/rotation = Quaternion(0.996736, -0.0333105, 0.00795077, -0.0731033)
-bones/21/scale = Vector3(1, 1, 1.00002)
-bones/22/rotation = Quaternion(0.0920613, 0.0192056, -0.0314161, 0.995072)
-bones/23/rotation = Quaternion(-0.441203, -0.0296082, -0.0168988, 0.89676)
-bones/25/position = Vector3(0.231142, 0.194042, 0.976292)
-bones/25/rotation = Quaternion(-0.696491, 0.0478308, -0.713515, -0.0592316)
-bones/26/rotation = Quaternion(0.929327, -2.52934e-07, 4.28912e-07, -0.369258)
-bones/27/position = Vector3(0.412811, 0.355831, 1.33688)
-bones/28/rotation = Quaternion(0.999964, 2.78197e-08, 3.72195e-07, -0.0085214)
-bones/29/rotation = Quaternion(0.929327, -9.97335e-08, 4.08229e-08, -0.369257)
-bones/30/position = Vector3(-0.411779, 0.355831, 1.32976)
-bones/31/rotation = Quaternion(0.999964, -4.70487e-09, 4.4276e-07, -0.0085224)
-bones/32/position = Vector3(-0.252724, 0.184124, 0.97181)
-bones/32/rotation = Quaternion(-0.613758, -0.513475, 0.370614, 0.471476)
-
-[node name="Tie" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="0"]
-transform = Transform3D(1, -1.4901161e-08, -4.2188913e-07, 4.0605664e-07, 0.99999976, -1.15833245e-08, 4.367903e-07, -1.565786e-08, 0.99999964, 0.023641896, -0.13808256, 0.00079678)
-
-[node name="L Shoe" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="1"]
-transform = Transform3D(-1.2740493e-06, -0.21150762, 0.97738826, -3.427267e-06, 0.9773856, 0.21150926, -1.0000076, -2.9802322e-06, -2.1755695e-06, 0.012667194, 0.018786132, -0.065023154)
-
-[node name="R Shoe" parent="World/Non-Auto Updated Main  Menu/Billy/Skeleton3D" index="2"]
-transform = Transform3D(-4.656613e-08, -0.2115009, 0.9773643, -4.2915344e-06, 0.97736937, 0.21149983, -0.9999936, -4.142523e-06, -8.791685e-07, -0.02961861, -0.009678602, -0.03086882)
-
 [node name="CardAnime" type="AnimationPlayer" parent="World/Non-Auto Updated Main  Menu"]
 libraries = {
 &"": SubResource("AnimationLibrary_ysj8p")
@@ -2118,5 +2050,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="LoadingScreen" type="TextureRect" parent="GUI/CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_4vfp3")
+expand_mode = 1
 
 [editable path="World/Non-Auto Updated Main  Menu"]
