@@ -313,7 +313,7 @@ func _physics_process(delta):
 	previously_floored = is_on_floor()
 	
 	# Falling/respawning
-	if position.y < -10:
+	if position.y < -25: #killblox
 		get_tree().reload_current_scene()
 		
 	get_interact()
@@ -652,8 +652,8 @@ func test_2_spell():
 		#flatten()
 		#straightline_card_spell()
 		#straight_laser_spell()
-		#flush_spell()
-		basking_house_spell()
+		flush_spell()
+		#basking_house_spell()
 
 func test_1_spell():
 	if Input.is_action_just_pressed("Test_1"):
@@ -1005,6 +1005,7 @@ func flush_spell():
 	var point = get_node("CharacterCenter")
 	var wave = flush.get_node("Wave")
 	var white = flush.get_node("White")
+	var rain = flush.get_node("Rain")
 	var pushbox = flush.get_node("Pushbox")
 	flush.global_position = point.global_position
 	get_tree().current_scene.add_child(flush)
@@ -1013,6 +1014,7 @@ func flush_spell():
 		flush.global_position = point.global_position
 		wave.emitting = true
 		white.emitting = true
+		rain.emitting = true
 		flush.global_position = point.global_position
 		pushbox.monitoring = true
 		pushbox.overlap_check()

@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://c7j0siudqwrtw"]
 
 [ext_resource type="SphereMesh" uid="uid://bxjatt8lw7pr1" path="res://Particles/water_droplet.tres" id="1_b8swc"]
-[ext_resource type="Script" path="res://Particles/flush_effect.gd" id="1_h3syi"]
+[ext_resource type="Script" uid="uid://cygcbj0s6fqgt" path="res://Particles/flush_effect.gd" id="1_h3syi"]
 [ext_resource type="SphereMesh" uid="uid://dagi1dskc2xte" path="res://Particles/wave1.tres" id="2_u4iil"]
-[ext_resource type="Script" path="res://Particles/Wave Pushbox.gd" id="4_yjfuc"]
+[ext_resource type="Script" uid="uid://bxubs3khd23dx" path="res://Particles/Wave Pushbox.gd" id="4_yjfuc"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xqtj1"]
 particle_flag_align_y = true
@@ -12,6 +12,7 @@ emission_ring_axis = Vector3(0, 1, 0)
 emission_ring_height = 1.0
 emission_ring_radius = 20.0
 emission_ring_inner_radius = 2.0
+emission_ring_cone_angle = 90.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_obgqw"]
 particle_flag_align_y = true
@@ -20,6 +21,7 @@ emission_ring_axis = Vector3(0, 1, 0)
 emission_ring_height = 0.01
 emission_ring_radius = 1.5
 emission_ring_inner_radius = 0.2
+emission_ring_cone_angle = 90.0
 radial_velocity_min = 15.0
 radial_velocity_max = 15.0
 gravity = Vector3(0, 0, 0)
@@ -31,6 +33,7 @@ emission_ring_axis = Vector3(0, 1, 0)
 emission_ring_height = 0.1
 emission_ring_radius = 2.0
 emission_ring_inner_radius = 1.8
+emission_ring_cone_angle = 90.0
 radial_velocity_min = 15.0
 radial_velocity_max = 15.0
 gravity = Vector3(0, 0, 0)
@@ -66,6 +69,7 @@ lifetime = 0.5
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 60
+visibility_aabb = AABB(-15, -15, -15, 30, 30, 30)
 process_material = SubResource("ParticleProcessMaterial_obgqw")
 draw_pass_1 = ExtResource("2_u4iil")
 
@@ -77,6 +81,7 @@ lifetime = 0.5
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 60
+visibility_aabb = AABB(-15, -15, -15, 30, 30, 30)
 process_material = SubResource("ParticleProcessMaterial_nlwda")
 draw_pass_1 = SubResource("SphereMesh_os5nt")
 
