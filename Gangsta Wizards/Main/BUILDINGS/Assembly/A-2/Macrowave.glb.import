@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Door": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Fridges": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
@@ -66,6 +69,9 @@ _subresources={
 "PATH:1 - PHYS/Main Kitchen": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/RR": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
@@ -75,7 +81,13 @@ _subresources={
 "PATH:1 - PHYS/Rotators": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sink": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Table_022": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turntable": {

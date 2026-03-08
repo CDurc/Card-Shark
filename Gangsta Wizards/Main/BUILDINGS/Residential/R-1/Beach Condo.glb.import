@@ -39,19 +39,31 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Ext Walls": {
+"PATH:1 - PHYS/1st Floor": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Floor": {
+"PATH:1 - PHYS/CU": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Units": {
+"PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Units_001": {
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stair Border": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stair Platforms": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircols": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Upper Floors": {
 "generate/physics": true
 }
 }

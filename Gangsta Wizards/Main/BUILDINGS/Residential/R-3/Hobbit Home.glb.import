@@ -42,7 +42,16 @@ _subresources={
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Sphere": {
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Hill": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

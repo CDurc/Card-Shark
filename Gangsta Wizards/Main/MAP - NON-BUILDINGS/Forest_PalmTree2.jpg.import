@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duvttui4a350t"
-path.s3tc="res://.godot/imported/Abandoned Luncheonette_Grass-Forest.jpg-932c5668e16adb21372122a868b85b99.s3tc.ctex"
+uid="uid://caixlylrfisv"
+path.s3tc="res://.godot/imported/Forest_PalmTree2.jpg-2de91ae2351a8602e2d581347bc1215a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a75471a6033accad82392d3f9ebe72e1"
+"md5": "340c7d4977aa5c997cad59f7b0b8c74d"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-2/Abandoned Luncheonette_Grass-Forest.jpg"
-dest_files=["res://.godot/imported/Abandoned Luncheonette_Grass-Forest.jpg-932c5668e16adb21372122a868b85b99.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Forest_PalmTree2.jpg"
+dest_files=["res://.godot/imported/Forest_PalmTree2.jpg-2de91ae2351a8602e2d581347bc1215a.s3tc.ctex"]
 
 [params]
 

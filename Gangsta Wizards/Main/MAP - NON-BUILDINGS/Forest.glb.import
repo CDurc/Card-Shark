@@ -39,7 +39,64 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Elec Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec Tower_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec Tower_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Palm": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Redwood": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rocks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree10": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree11": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree12": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree3": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree4": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree5": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree6": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree7": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree8": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
 "generate/physics": true
 }
 }

@@ -49,6 +49,12 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/CU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Dollar": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -68,6 +74,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Int Wall_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int Wall_002": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
@@ -94,7 +106,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Undeveloped Land_001": {
+"PATH:1 - PHYS/Sofa Body": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spotlight": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Throne": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Unopenable Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Vault": {
 "generate/physics": true
 }
 }

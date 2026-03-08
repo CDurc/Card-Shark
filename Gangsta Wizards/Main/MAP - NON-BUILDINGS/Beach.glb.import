@@ -39,10 +39,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Base": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Beach Ground": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Beach Ground_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach Umbrella": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Beach Umbrella_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Body": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Breaker": {
@@ -51,10 +63,55 @@ _subresources={
 "PATH:1 - PHYS/Breaker_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Can": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Can_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Can_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Can_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Castle Walls cols": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Center Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Light": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lighthouse Top": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Palm Tree Trunks": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Railing": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/SC Umbrellas": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairramp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Top Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/beach Chairs": {
 "generate/physics": true
 }
 }

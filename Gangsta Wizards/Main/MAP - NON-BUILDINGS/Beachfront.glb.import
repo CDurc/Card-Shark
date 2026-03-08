@@ -39,7 +39,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bar": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bar_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bench_015": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec Tower_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -54,7 +69,28 @@ _subresources={
 "PATH:1 - PHYS/Post": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Staircol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Streetlight": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Supports_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/TikiSigns": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
 "generate/physics": true
 }
 }

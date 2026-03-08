@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgtl1ej51vmd"
-path.s3tc="res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"
+uid="uid://2ksgjy7lubgf"
+path.s3tc="res://.godot/imported/TheLoanShark_GreenFeltTexture.jpg-d11da4b1b9651a631bca2cffd2e5624f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0d2a0c709156317ec8cf3b8711b42078"
+"md5": "b95cf11de220b8a8f5b100253ffad55b"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/Full House_Red Brick.jpg"
-dest_files=["res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/TheLoanShark_GreenFeltTexture.jpg"
+dest_files=["res://.godot/imported/TheLoanShark_GreenFeltTexture.jpg-d11da4b1b9651a631bca2cffd2e5624f.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgtl1ej51vmd"
-path.s3tc="res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"
+uid="uid://b32gymbk1s7nk"
+path.s3tc="res://.godot/imported/Beachfront_PalmTree2.jpg-217f8b30df1fda63652074a26fa547af.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0d2a0c709156317ec8cf3b8711b42078"
+"md5": "340c7d4977aa5c997cad59f7b0b8c74d"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/Full House_Red Brick.jpg"
-dest_files=["res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Beachfront_PalmTree2.jpg"
+dest_files=["res://.godot/imported/Beachfront_PalmTree2.jpg-217f8b30df1fda63652074a26fa547af.s3tc.ctex"]
 
 [params]
 

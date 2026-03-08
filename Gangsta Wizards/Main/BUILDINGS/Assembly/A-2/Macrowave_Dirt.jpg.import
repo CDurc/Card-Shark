@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgtl1ej51vmd"
-path.s3tc="res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"
+uid="uid://bdhn58p50hu00"
+path.s3tc="res://.godot/imported/Macrowave_Dirt.jpg-29319465a3fbc6392da574537a10bc72.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0d2a0c709156317ec8cf3b8711b42078"
+"md5": "d456444bf86529fa9c1b001a83d4b7d9"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/Full House_Red Brick.jpg"
-dest_files=["res://.godot/imported/Full House_Red Brick.jpg-a5caba2e007f18918070061fb138d031.s3tc.ctex"]
+source_file="res://BUILDINGS/Assembly/A-2/Macrowave_Dirt.jpg"
+dest_files=["res://.godot/imported/Macrowave_Dirt.jpg-29319465a3fbc6392da574537a10bc72.s3tc.ctex"]
 
 [params]
 

@@ -39,13 +39,16 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Fencecols": {
+"PATH:1 - PHYS/Entrance Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Ramparts": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Scrapcol": {
 "generate/physics": true
