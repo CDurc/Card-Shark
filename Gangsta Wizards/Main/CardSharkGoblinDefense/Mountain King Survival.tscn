@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://mq104ueahsat"]
+[gd_scene load_steps=26 format=3 uid="uid://mq104ueahsat"]
 
 [ext_resource type="Environment" uid="uid://jvmpkdwaeaq" path="res://scenes/main-environment.tres" id="1_qr17x"]
 [ext_resource type="PackedScene" uid="uid://bgyf7157jxepy" path="res://CardSharkGoblinDefense/Hall of the Mountain King.glb" id="2_d1bmk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dvx6jq0uru0f3" path="res://CardSharkGoblinDefense/weapon_pickup.gd" id="8_8ywqv"]
 [ext_resource type="PackedScene" uid="uid://covvkwphtcdih" path="res://Card Shark Campaign/Weapons/sniper.tscn" id="8_cijjr"]
 [ext_resource type="PackedScene" uid="uid://qauvwuftnp8v" path="res://Card Shark Campaign/Weapons/revolver.tscn" id="8_to54h"]
+[ext_resource type="Script" uid="uid://cx2gyu7yf047t" path="res://CardSharkGoblinDefense/ChangeGunMenu.gd" id="10_iqbs7"]
 [ext_resource type="AudioStream" uid="uid://12b86jh82p0e" path="res://Music/Card Shark Arcade Song.mp3" id="13_hfiix"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4xw1"]
@@ -100,6 +101,12 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.9215338, 0.9215338, 2.1903882, 2.0769417, 0, 0, 0, 0, 0, 0)
 }
 point_count = 22
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_827m0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_so3oe"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6n4ef"]
 
 [node name="Rootbeer" type="Node3D"]
 
@@ -502,3 +509,17 @@ curve = SubResource("Curve3D_04q24")
 
 [node name="3" type="Path3D" parent="RightFlyRails"]
 curve = SubResource("Curve3D_827m0")
+
+[node name="MeshInstance3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05586821, 10.629805, -33.429073)
+disable_mode = 1
+collision_layer = 3
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_827m0")
+script = ExtResource("10_iqbs7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D"]
+shape = SubResource("SphereShape3D_so3oe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+mesh = SubResource("SphereMesh_6n4ef")

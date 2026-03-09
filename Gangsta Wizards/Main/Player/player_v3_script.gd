@@ -1535,6 +1535,7 @@ func melee():
 		can_look = true
 		moving_cam = false
 		acting = false
+		gravity = 0.5
 		#camera.make_current()
 		#cam2.global_position = camera.global_position
 

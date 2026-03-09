@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://b53m2mj6gegky"]
+[gd_scene load_steps=56 format=3 uid="uid://b53m2mj6gegky"]
 
 [ext_resource type="Script" uid="uid://be68wqmervtwy" path="res://Player/player_v3_script.gd" id="1_2tanh"]
 [ext_resource type="SpriteFrames" uid="uid://dbv3sy5qjatnl" path="res://sprites/burst_animation.tres" id="2_d4skl"]
@@ -9,10 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://be8aktxpp8odf" path="res://Card Shark Campaign/TheCardSharkCURRENT.tscn" id="7_txfuf"]
 [ext_resource type="PackedScene" uid="uid://do0gx3te0eliw" path="res://Card Shark Campaign/Weapons/golden_gun.tscn" id="8_udu6d"]
 [ext_resource type="PackedScene" uid="uid://bgvpqpkr8qlnu" path="res://Card Shark/Card.tscn" id="9_00ky1"]
+[ext_resource type="Texture2D" uid="uid://c1iiwsohvyeyo" path="res://IMAGES/Gambling Images/Slot9.png" id="10_1ym0y"]
 [ext_resource type="Script" uid="uid://cqpq3h8jf556r" path="res://scripts/hud.gd" id="10_itajd"]
+[ext_resource type="Texture2D" uid="uid://oj7jiauurn5d" path="res://IMAGES/Gambling Images/Slot1.png" id="10_wayri"]
 [ext_resource type="Texture2D" uid="uid://2jld33y6h5pq" path="res://sprites/crosshair.png" id="11_nmkgg"]
+[ext_resource type="Texture2D" uid="uid://cbxma0bjqtcf5" path="res://IMAGES/Gambling Images/Slot2.png" id="11_up58d"]
 [ext_resource type="FontFile" uid="uid://biqtga8moh7ah" path="res://fonts/lilita_one_regular.ttf" id="12_qt802"]
 [ext_resource type="Texture2D" uid="uid://xi2jjlurwk8n" path="res://Card Shark/Card Pics/PlayingCard_2C.jpg" id="13_0w81o"]
+[ext_resource type="Texture2D" uid="uid://djfd2q0uwwmhn" path="res://IMAGES/Gambling Images/Slot7.png" id="13_cw5eh"]
 [ext_resource type="Texture2D" uid="uid://ds4mtht5kc2gx" path="res://Menus/DeathScreen.png" id="14_y5n83"]
 [ext_resource type="Script" uid="uid://celi25qepprb4" path="res://Card Shark Campaign/Character Models/chipbar.gd" id="15_bxqv1"]
 [ext_resource type="Texture2D" uid="uid://cj8ihx0nbbg3y" path="res://Menus/Death Menu.jpg" id="15_r1uyo"]
@@ -208,6 +212,7 @@ mesh = SubResource("CapsuleMesh_hlc1o")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.07594e-07, -3.47398, -20.519716)
 
 [node name="indicator" type="MeshInstance3D" parent="Baskingspawn"]
+visible = false
 mesh = SubResource("CapsuleMesh_03cjf")
 
 [node name="3rd_person_point" type="Marker3D" parent="."]
@@ -347,9 +352,9 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06394128, -0.5497221, 0.
 body_offset = Transform3D(-0.9735229, -0.008515045, 0.22843485, -0.02370435, -0.99015784, -0.13793659, 0.2273606, -0.13969888, 0.96373826, -0.034567058, -0.48716205, -0.4800371)
 
 [node name="Physical Bone Shoulders Middle" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(-0.014139356, -0.99990004, -4.1958458e-08, -1.938247e-07, 4.4703484e-08, -1, 0.99990004, -0.014139356, -1.944374e-07, 0.00027424097, 6.2942505e-05, -1.2590072e-05)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020681627, 0.027240068, -0.35829902)
-body_offset = Transform3D(-0.9999734, 0.00013684761, 0.0072833435, -0.0072833034, -0.037878107, -0.99925566, 0.00013913028, -0.99928224, 0.03787805, 0.004673995, -0.35698545, 0.0407919)
+transform = Transform3D(-0.014139356, -0.99990004, -4.1958458e-08, -1.938247e-07, 4.4703484e-08, -1, 0.99990004, -0.014139356, -1.944374e-07, 0.00027430058, 6.4611435e-05, -1.2591004e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020681645, 0.027240131, -0.35829735)
+body_offset = Transform3D(-0.9999734, 0.00013684761, 0.0072833435, -0.0072833034, -0.037878107, -0.99925566, 0.00013913028, -0.99928224, 0.03787805, 0.004673985, -0.35698378, 0.0407919)
 
 [node name="Physical Bone Neck" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
 transform = Transform3D(-0.01297609, -0.9905775, -0.13633756, 0.001785943, 0.13632587, -0.99066246, 0.9999142, -0.013098416, 1.3820345e-07, -0.066321276, 0.0014879704, -1.976929e-05)
@@ -362,19 +367,19 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02805477, -9.873882e-05
 body_offset = Transform3D(-0.9987397, 0.0059185773, -0.049832866, -0.00037258863, 0.9921188, 0.12530036, -0.050181687, -0.12516098, 0.9908663, -0.010160625, -0.044815376, -0.35650897)
 
 [node name="Physical Bone Bicep R" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
-transform = Transform3D(0.15022987, -0.98865116, 1.9166155e-06, -7.748604e-07, -2.0563602e-06, -1, 0.9886511, 0.15022989, -1.0749933e-06, -0.00014950335, -1.8000603e-05, -0.00204508)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20564449, 0.016139843, -0.38394773)
-body_offset = Transform3D(-0.1962012, -0.00059792586, -0.98056316, 0.3839786, -0.9201865, -0.07626926, -0.90225583, -0.3914793, 0.18077126, -0.33612764, -0.09339482, 0.26126906)
+transform = Transform3D(0.15022987, -0.98865116, 1.9166155e-06, -7.748604e-07, -2.0563602e-06, -1, 0.9886511, 0.15022989, -1.0749933e-06, -0.00014930218, -1.9788742e-05, -0.002045095)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20564446, 0.016140051, -0.38394943)
+body_offset = Transform3D(-0.1962012, -0.00059792586, -0.98056316, 0.3839786, -0.9201865, -0.07626926, -0.90225583, -0.3914793, 0.18077126, -0.3361293, -0.09339476, 0.26126942)
 
 [node name="Physical Bone Forearm R" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
-transform = Transform3D(-0.9749898, 0.22224979, 2.2927684e-06, 1.2442471e-06, -4.857778e-06, 1, -0.22224979, -0.9749898, -4.45975e-06, -0.0023246184, -9.536743e-07, -0.002589524)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28944075, -0.20194833, 0.40129077)
-body_offset = Transform3D(0.9711216, -0.14964417, 0.1858198, -0.10385379, 0.43604606, 0.89391136, 0.21479487, 0.88739526, -0.40791264, 0.176294, -0.30071914, 0.40506995)
+transform = Transform3D(-0.9749898, 0.22224979, 2.4583574e-06, 1.2442471e-06, -5.6028366e-06, 1, -0.22224979, -0.9749898, -5.186175e-06, -0.0023246184, -9.536743e-07, -0.002589524)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28944075, -0.20194863, 0.40129066)
+body_offset = Transform3D(0.9711216, -0.14964429, 0.18581969, -0.10385379, 0.4360454, 0.89391166, 0.21479487, 0.8873955, -0.40791202, 0.176294, -0.30071914, 0.40506995)
 
 [node name="Physical Bone Wrist R" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="12"]
-transform = Transform3D(-0.54854876, -0.8361186, -6.1724536e-06, -1.758337e-06, -6.2286854e-06, 1, 0.8361186, -0.54854876, -1.9465592e-06, -0.0026365593, -4.2915344e-06, -0.001990542)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018052079, -0.333086, 0.54095715)
-body_offset = Transform3D(-0.9685687, 0.004961282, -0.24869584, -0.1913011, -0.6539006, 0.7319954, 0.15899101, -0.7565648, -0.6342973, 0.153671, -0.6103299, 0.08825636)
+transform = Transform3D(-0.54854876, -0.8361186, -6.969838e-06, -1.758337e-06, -7.18236e-06, 1, 0.8361186, -0.5485488, -2.4696963e-06, -0.0026365593, -4.2915344e-06, -0.001990542)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01805208, -0.33308667, 0.54095685)
+body_offset = Transform3D(-0.9685687, 0.0049615502, -0.24869582, -0.1913011, -0.6539013, 0.73199475, 0.15899101, -0.75656414, -0.6342981, 0.153671, -0.6103299, 0.08825636)
 
 [node name="Physical Bone Thigh L" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
 transform = Transform3D(-0.05136019, 0.99868023, 2.2086506e-05, 1.6397098e-06, -2.2031369e-05, 1, 0.99868023, 0.05136019, -5.0601057e-07, 2.1442771e-05, -1.8835068e-05, 0.0010175109)
@@ -382,9 +387,9 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.087770805, -0.012805609
 body_offset = Transform3D(-0.9978102, 0.0005103685, 0.06612972, -0.065911084, 0.07394478, -0.9950818, -0.005397778, -0.9972565, -0.07374887, -0.08045272, -0.111966014, -0.021183848)
 
 [node name="Physical Bone Shin L" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
-transform = Transform3D(-0.011942877, 0.9999287, 4.3919415e-05, 5.7297148e-06, -4.3854114e-05, 1, 0.9999288, 0.011942876, -5.2055616e-06, -0.00031971186, 2.1457672e-06, 0.001199156)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117293656, 0.02613113, -0.56451935)
-body_offset = Transform3D(-0.9997915, 0.000116967596, 0.020408966, -0.020309012, -0.104706734, -0.9942955, 0.00202112, -0.99449766, 0.10468871, -0.105751, -0.56094503, 0.085323215)
+transform = Transform3D(-0.011942884, 0.9999288, 4.4106237e-05, 5.777445e-06, -4.4040382e-05, 1, 0.9999288, 0.011942884, -5.251063e-06, -0.00031971186, 2.1457672e-06, 0.001199156)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11729369, 0.026131235, -0.56451935)
+body_offset = Transform3D(-0.9997915, 0.00011695642, 0.020409014, -0.020309059, -0.10470655, -0.9942955, 0.002021131, -0.99449766, 0.104688525, -0.105751, -0.56094503, 0.085323215)
 
 [node name="Physical Bone Ankle L" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="15"]
 transform = Transform3D(3.7198013e-06, 1, 1.3709083e-06, -3.8662074e-07, -1.3709068e-06, 1, 1, -3.7198017e-06, 3.8661565e-07, 0.00010315329, 5.9604645e-07, 0.0012356415)
@@ -392,9 +397,9 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12473433, -0.010385513,
 body_offset = Transform3D(-0.99999976, 4.9741416e-06, 2.627757e-07, 2.9989897e-06, 0.727294, -0.6863222, -3.229709e-06, -0.68631786, -0.7272974, -0.124734, -0.62456673, -0.67698777)
 
 [node name="Physical Bone Thigh R" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="16"]
-transform = Transform3D(-0.02806355, 0.99960613, 5.47178e-05, 1.8596768e-06, 5.479157e-05, -1, 0.99960613, 0.02806355, 3.3965905e-06, 0.00023815036, 1.168251e-05, -0.0013713911)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12280507, -0.0075626047, 0.109847106)
-body_offset = Transform3D(-0.9972996, 0.00027330592, 0.07342203, 0.073191464, 0.082989484, 0.99385905, 0.005821582, -0.99654233, 0.08278482, 0.11441031, -0.11753321, -0.017345048)
+transform = Transform3D(-0.028063577, 0.99960613, 5.482213e-05, 1.857494e-06, 5.4895878e-05, -1, 0.99960613, 0.028063577, 3.3973372e-06, 0.00023820251, 1.168251e-05, -0.0013710409)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122804716, -0.007562672, 0.10984714)
+body_offset = Transform3D(-0.9972996, 0.0002732724, 0.07342202, 0.073191464, 0.08298938, 0.99385905, 0.005821608, -0.99654233, 0.08278471, 0.11440996, -0.11753321, -0.017345108)
 
 [node name="Physical Bone Shin R" parent="TheCardShark2 - Old/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="17"]
 transform = Transform3D(-0.066604614, 0.9977795, -3.8890375e-05, -5.289927e-06, 3.862381e-05, 1, 0.9977795, 0.066604614, 2.7056565e-06, -0.00013176352, 9.536743e-07, -0.0015514046)
@@ -417,6 +422,318 @@ transform = Transform3D(1, 0, 0, 0, 0.977582, 0.210557, 0, -0.210557, 0.977582, 
 
 [node name="DialogueElements" type="CanvasLayer" parent="."]
 visible = false
+
+[node name="GunMenu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="GunMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GunMenu/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+
+[node name="Guns1" type="Control" parent="GunMenu/Control/ColorRect"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll1" type="ScrollContainer" parent="GunMenu/Control/ColorRect/Guns1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.229
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GunMenu/Control/ColorRect/Guns1/Scroll1"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button8" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns1/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_wayri")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Icon1" type="TextureRect" parent="GunMenu/Control/ColorRect/Guns1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.129
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_up58d")
+expand_mode = 1
+
+[node name="Guns2" type="Control" parent="GunMenu/Control/ColorRect"]
+layout_mode = 1
+anchor_top = 0.22
+anchor_right = 1.0
+anchor_bottom = 0.42
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll1" type="ScrollContainer" parent="GunMenu/Control/ColorRect/Guns2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.229
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GunMenu/Control/ColorRect/Guns2/Scroll1"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns2/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Icon1" type="TextureRect" parent="GunMenu/Control/ColorRect/Guns2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.129
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_cw5eh")
+expand_mode = 1
+
+[node name="Guns3" type="Control" parent="GunMenu/Control/ColorRect"]
+layout_mode = 1
+anchor_top = 0.44
+anchor_right = 1.0
+anchor_bottom = 0.64
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll1" type="ScrollContainer" parent="GunMenu/Control/ColorRect/Guns3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.229
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GunMenu/Control/ColorRect/Guns3/Scroll1"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="GunMenu/Control/ColorRect/Guns3/Scroll1/HBoxContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("10_1ym0y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Icon1" type="TextureRect" parent="GunMenu/Control/ColorRect/Guns3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.129
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_cw5eh")
+expand_mode = 1
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("10_itajd")
@@ -1421,9 +1738,9 @@ shape = SubResource("CapsuleShape3D_1oqpq")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00020935059, 0.8645259, 0.098020755)
 
 [node name="Physical Bone Main Controller" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
-transform = Transform3D(-1.4210855e-14, -0.95888764, 0.28378618, -0.018122619, -0.28373957, -0.95873016, 0.9998358, -0.0051429486, -0.017377555, 0.11167943, -0.568343, 0.015892427)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6406246e-05, 0.0006257221, 0.3965009)
-body_offset = Transform3D(-0.9998358, 0.0051429477, 0.017377552, 1.4210855e-14, 0.95888764, -0.28378612, -0.018122617, -0.28373954, -0.9587301, -0.0068070404, 0.11192144, 0.38031644)
+transform = Transform3D(-1.4210855e-14, -0.9588875, 0.28378654, -0.018122645, -0.28373992, -0.9587301, 0.9998358, -0.0051429626, -0.01737758, 0.11167953, -0.568343, 0.015892375)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6468644e-05, 0.00062597543, 0.3965008)
+body_offset = Transform3D(-0.9998358, 0.0051429616, 0.017377578, 1.4210855e-14, 0.9588875, -0.2837865, -0.018122643, -0.2837399, -0.9587301, -0.0068069883, 0.11192133, 0.38031644)
 
 [node name="Physical Bone Hips" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
 transform = Transform3D(0.0022733808, 0.97401136, 0.22648779, -0.010130921, 0.22649917, -0.97395873, -0.9999462, -8.035093e-05, 0.010382551, -0.016292863, -0.12132561, 0.022103548)
@@ -1501,9 +1818,9 @@ joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.748496e-05, -9.946359e-0
 body_offset = Transform3D(0.99999654, -1.0952353e-06, -1.2293458e-07, -4.9825758e-08, -9.685755e-07, -1, -1.3969839e-08, 0.99998504, 4.6119094e-06, -2.746284e-05, 0.17925304, 9.119511e-06)
 
 [node name="Physical Bone Ankle L" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="16"]
-transform = Transform3D(1.6158322e-07, -0.6863281, -0.7272921, 6.2032586e-07, -0.72729206, 0.6863281, -1, -5.620572e-07, 3.082289e-07, 0.00559555, -0.9360461, -0.1233529)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00014602907, -2.5022004e-05, 0.021859135)
-body_offset = Transform3D(0.99999654, -7.515591e-07, -1.2348648e-06, 2.8935965e-08, 1.1026859e-06, -0.9999933, 1.3310597e-10, 0.9999919, -1.4871359e-05, -0.00014600158, 0.02185899, 2.5346875e-05)
+transform = Transform3D(1.6158322e-07, -0.6863281, -0.7272921, 6.2032586e-07, -0.72729206, 0.6863281, -1, -5.620572e-07, 3.082289e-07, 0.00559555, -0.9360461, -0.123352796)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00014613337, -2.5022004e-05, 0.021859135)
+body_offset = Transform3D(0.99999654, -7.515591e-07, -1.2348648e-06, 2.8935965e-08, 1.1026859e-06, -0.9999933, 1.3310597e-10, 0.9999919, -1.4871359e-05, -0.00014610589, 0.02185899, 2.5346875e-05)
 
 [node name="Physical Bone Thigh R" parent="TheCardShark2/SharkBones/Skeleton3D/PhysicalBoneSimulator3D" index="17"]
 transform = Transform3D(0.028265452, -0.9963166, -0.08095829, -0.07342647, -0.082841285, 0.99385405, -0.9969, -0.022147251, -0.07549755, 0.0077935457, -0.33755457, 0.13846585)
