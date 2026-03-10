@@ -11,7 +11,7 @@ extends CharacterBody3D
 @onready var healthbar = $Control/Healthbar/Helth
 @onready var healthbar_control = $Control
 @onready var healthbar_timer = $Control/Hbar_Expire
-@onready var bullet_path = preload("res://Particles/bullet.tscn")
+@onready var bullet_path = preload("uid://dttofjkv60se2")
 @onready var bullet_spawn = self.get_node("spawn")
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/10d_money_drop.tscn")
 @onready var raycast = $RayCast

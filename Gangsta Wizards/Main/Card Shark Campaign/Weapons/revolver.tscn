@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://qauvwuftnp8v"]
+[gd_scene load_steps=4 format=3 uid="uid://qauvwuftnp8v"]
 
 [ext_resource type="Script" uid="uid://cd16jbvdhtipr" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_lpju1"]
 [ext_resource type="PackedScene" uid="uid://cvh45hy5lkpb4" path="res://Card Shark Campaign/Weapons/Revolver.glb" id="1_ttaqt"]
+[ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet_2m.tscn" id="2_8ug4m"]
 
 [node name="Revolver" type="Node3D"]
 script = ExtResource("1_lpju1")
+bullet_path = ExtResource("2_8ug4m")
 dmg = 34.0
 clip_ammo = 6
 reload_time = 4.0
 spread = 0.01
 burst = 1
 HS_mult = 2.0
-Velocity = 75.0
+Velocity = 150.0
 recoil = 0.025
 weapon_type = 1
 

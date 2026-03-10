@@ -1,18 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://b33gugfpxauvs"]
+[gd_scene load_steps=5 format=3 uid="uid://b33gugfpxauvs"]
 
 [ext_resource type="Script" uid="uid://cd16jbvdhtipr" path="res://Card Shark Campaign/Weapons/Shark_Rifle_script.gd" id="1_0k1tp"]
 [ext_resource type="PackedScene" uid="uid://71edpvgq8rp8" path="res://Card Shark Campaign/Weapons/Rifle.glb" id="2_5bw1s"]
+[ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet_2m.tscn" id="2_lcjrm"]
 [ext_resource type="AudioStream" uid="uid://csdsvg0nh35id" path="res://sounds/blaster_repeater.ogg" id="2_pv3bq"]
 
 [node name="SharkRifle" type="Node3D"]
 script = ExtResource("1_0k1tp")
+bullet_path = ExtResource("2_lcjrm")
 dmg = 13.0
 clip_ammo = 30
 reload_time = 3.0
 spread = 0.04
 burst = 3
 HS_mult = 1.25
-Velocity = 70.0
+Velocity = 120.0
 recoil = 0.025
 weapon_type = 2
 

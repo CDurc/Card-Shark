@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv8imxfxrt0of"]
+
+[ext_resource type="Script" uid="uid://icmos8jyh4r7" path="res://Card Shark Campaign/Weapons/magic_hand_gun.gd" id="1_35y4f"]
+[ext_resource type="PackedScene" uid="uid://cvh45hy5lkpb4" path="res://Card Shark Campaign/Weapons/Revolver.glb" id="3_niari"]
+
+[node name="Magic HandGun" type="Node3D"]
+script = ExtResource("1_35y4f")
+put_away = true
+weapon_type = 2
+
+[node name="Revolver" parent="." instance=ExtResource("3_niari")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="GunCooldown" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+
+[node name="Bullet_spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57039e-05, 0.0189154, 0.242954)

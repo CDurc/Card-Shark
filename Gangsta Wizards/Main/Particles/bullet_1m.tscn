@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dttofjkv60se2"]
+
+[ext_resource type="Script" uid="uid://bhsf8no357kha" path="res://Particles/bullet.gd" id="1_vp25h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_o8pxl"]
+radius = 0.05
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2lyt"]
+albedo_color = Color(1, 0.721569, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.364706, 0, 1)
+emission_energy_multiplier = 1.22
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vp5aw"]
+radius = 0.15
+height = 1.031826
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fy7m8"]
+radius = 0.23
+height = 1.1539367
+
+[node name="Bullet" type="RigidBody3D"]
+collision_layer = 0
+collision_mask = 2
+continuous_cd = true
+script = ExtResource("1_vp25h")
+damage_amount = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0, -0.5094186)
+mesh = SubResource("CapsuleMesh_o8pxl")
+surface_material_override/0 = SubResource("StandardMaterial3D_i2lyt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -1.1902559e-08, 1.1902559e-08, -0.5082568)
+shape = SubResource("CapsuleShape3D_vp5aw")
+
+[node name="Damage Collider" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -0.235958)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage Collider"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.26555496, 1.1607778e-08, -6.217249e-15)
+shape = SubResource("CapsuleShape3D_fy7m8")
+
+[connection signal="area_entered" from="Damage Collider" to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Damage Collider" to="." method="_on_body_entered"]

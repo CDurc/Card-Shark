@@ -6,7 +6,7 @@ extends Node3D
 @onready var bullet_spawn = $Bullet_spawn
 
 var reloading = false
-var bullet_path = preload("res://Particles/bullet.tscn")
+@export var bullet_path = preload("uid://c12fc3guvo5gu")
 
 #@onready var ammo = player.ammo
 @onready var acting = player.acting
