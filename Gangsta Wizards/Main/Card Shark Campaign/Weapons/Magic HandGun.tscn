@@ -1,10 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv8imxfxrt0of"]
+[gd_scene load_steps=7 format=3 uid="uid://dv8imxfxrt0of"]
 
 [ext_resource type="Script" uid="uid://icmos8jyh4r7" path="res://Card Shark Campaign/Weapons/magic_hand_gun.gd" id="1_35y4f"]
+[ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet_2m.tscn" id="2_mmqsa"]
 [ext_resource type="PackedScene" uid="uid://cvh45hy5lkpb4" path="res://Card Shark Campaign/Weapons/Revolver.glb" id="3_niari"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mmqsa"]
+radius = 0.08300781
+height = 0.3312378
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35y4f"]
+transparency = 1
+albedo_color = Color(0, 0.34901962, 1, 0.21176471)
+
+[sub_resource type="TorusMesh" id="TorusMesh_mmqsa"]
+material = SubResource("StandardMaterial3D_35y4f")
+inner_radius = 0.009
+outer_radius = 0.033
 
 [node name="Magic HandGun" type="Node3D"]
 script = ExtResource("1_35y4f")
+bullet_path = ExtResource("2_mmqsa")
+dmg = 20.0
+clip_ammo = 12
+cooldown = 0.3
+reload_time = 1.0
+burst = 1
+HS_mult = 1.5
+Velocity = 150.0
+recoil = 0.025
 put_away = true
 weapon_type = 2
 
@@ -16,4 +39,44 @@ wait_time = 0.55
 one_shot = true
 
 [node name="Bullet_spawn" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57039e-05, 0.0189154, 0.242954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017718337, 0.017273337, 0.23116732)
+
+[node name="Bullet_spawn2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16472837, 0.034960575, 0.30555478)
+
+[node name="Phys" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13598575, 0.023727149, 0.029511102)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="collider" type="CollisionShape3D" parent="Phys"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.012939449, 0.030792236)
+shape = SubResource("CapsuleShape3D_mmqsa")
+disabled = true
+
+[node name="MagicHand" parent="Phys" instance=ExtResource("3_niari")]
+transform = Transform3D(-0.076631546, -0.009684892, -0.99701244, -0.12538518, 0.99210817, -9.313226e-10, 0.98914415, 0.12501058, -0.07724113, -0.0019102395, 0.011229318, 0.027311046)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Phys/MagicHand"]
+transform = Transform3D(-0.07663154, -0.99705225, -0.003782418, -0.009684896, -0.003049024, 0.99994844, -0.9970123, 0.076664224, -0.009422689, -0.05537892, -0.04466996, -0.0029607208)
+mesh = SubResource("TorusMesh_mmqsa")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Phys/MagicHand"]
+transform = Transform3D(-0.07663154, -0.99705225, -0.003782418, -0.009684896, -0.003049024, 0.99994844, -0.9970123, 0.076664224, -0.009422689, -0.075573385, -0.04741174, -0.0013819176)
+mesh = SubResource("TorusMesh_mmqsa")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Phys/MagicHand"]
+transform = Transform3D(-0.07663154, -0.99705225, -0.003782418, -0.009684896, -0.003049024, 0.99994844, -0.9970123, 0.076664224, -0.009422689, -0.094823994, -0.048104487, 0.000104436505)
+mesh = SubResource("TorusMesh_mmqsa")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Phys/MagicHand"]
+transform = Transform3D(-0.07663154, -0.99705225, -0.003782418, -0.009684896, -0.003049024, 0.99994844, -0.9970123, 0.076664224, -0.009422689, -0.11436933, -0.046408877, 0.0015902426)
+mesh = SubResource("TorusMesh_mmqsa")
+skeleton = NodePath("../../..")
+
+[node name="Magic_Cam" type="Camera3D" parent="Phys"]
+transform = Transform3D(-0.9954346, 0, 0.09544608, 0, 1, 0, -0.09544608, 0, -0.9954346, 0.006346623, 0.0818551, -0.09557172)

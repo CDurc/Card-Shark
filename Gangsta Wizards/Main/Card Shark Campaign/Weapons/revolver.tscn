@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet_2m.tscn" id="2_8ug4m"]
 
 [node name="Revolver" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99998224, -0.0059515834, 0, 0.0059515834, 0.99998224, 0, 0, 0)
 script = ExtResource("1_lpju1")
 bullet_path = ExtResource("2_8ug4m")
 dmg = 34.0

@@ -1381,6 +1381,11 @@ func shoot(): #Use this for stuff that a single tap can fire (no charge), and yo
 		if item and item.has_method("use_item"):
 			item.use_item()
 
+func gun_ability():
+	if Input.is_action_pressed("Gun_Ability"): #shoot() is called every frame
+		if item and item.has_method("ability"):
+			item.ability()	
+
 var is_holding:= false #Not used rn, but needed for weapon swap if holding.  Prevent swap when true?
 
 # Mouse movement
@@ -1414,6 +1419,7 @@ func handle_controls(_delta): #Also handles sprint now
 	else:
 		discard()
 		shoot()
+		gun_ability()
 		#straight_laser_spell()
 		#basking_house_spell()
 		#pattern_card_spell()
