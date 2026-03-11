@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://cntf0cugcqtsd"]
+
+[ext_resource type="Script" uid="uid://mtttu36uklnx" path="res://scenes/scratch_off_ben.gd" id="1_nht72"]
+[ext_resource type="Texture2D" uid="uid://bcgcu7yct6ard" path="res://IMAGES/Gambling Images/Lottery1.jpg" id="2_ejujx"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ejujx"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_xby0v"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_m3c76"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_6eqgi"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_lmrfd"]
+
+[node name="ScratchOff" type="Node"]
+script = ExtResource("1_nht72")
+
+[node name="Lottery1" type="Sprite2D" parent="."]
+position = Vector2(466, 348)
+texture = ExtResource("2_ejujx")
+
+[node name="Slot1" type="TextureRect" parent="."]
+offset_left = 294.0
+offset_top = 335.0
+offset_right = 363.0
+offset_bottom = 407.0
+expand_mode = 2
+
+[node name="Slot2" type="TextureRect" parent="."]
+offset_left = 429.0
+offset_top = 332.0
+offset_right = 498.0
+offset_bottom = 398.0
+texture = SubResource("ImageTexture_ejujx")
+expand_mode = 2
+
+[node name="Slot3" type="TextureRect" parent="."]
+offset_left = 557.0
+offset_top = 334.0
+offset_right = 633.0
+offset_bottom = 406.0
+texture = SubResource("ImageTexture_xby0v")
+expand_mode = 2
+
+[node name="Slot4" type="TextureRect" parent="."]
+offset_left = 290.0
+offset_top = 453.0
+offset_right = 368.0
+offset_bottom = 531.0
+texture = SubResource("ImageTexture_m3c76")
+expand_mode = 2
+
+[node name="Slot5" type="TextureRect" parent="."]
+offset_left = 423.0
+offset_top = 459.0
+offset_right = 506.0
+offset_bottom = 542.0
+texture = SubResource("ImageTexture_6eqgi")
+expand_mode = 2
+
+[node name="Slot6" type="TextureRect" parent="."]
+offset_left = 546.0
+offset_top = 451.0
+offset_right = 636.0
+offset_bottom = 541.0
+texture = SubResource("ImageTexture_lmrfd")
+expand_mode = 2
+
+[node name="ResultLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
