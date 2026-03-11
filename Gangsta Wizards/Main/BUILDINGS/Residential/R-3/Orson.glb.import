@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Deck": {
 "generate/physics": true
 },
@@ -63,10 +66,16 @@ _subresources={
 "PATH:1 - PHYS/Staircol_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
 "generate/physics": true
 }
 }

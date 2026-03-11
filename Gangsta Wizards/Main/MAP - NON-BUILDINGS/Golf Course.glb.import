@@ -39,12 +39,52 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/BASE PALM TREE": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/1 - Green": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Bases": {
+"PATH:1 - PHYS/11 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/12 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/13 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/14 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/15 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/16 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/18 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/2 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/3 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/4 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/5 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/6 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/7 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/8 - Green": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/9 - Green": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Billboard": {
@@ -57,159 +97,90 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Bridge": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Cart Bridge": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/ETower1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/ETower2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Fence": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Exterior Walls": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Fence": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Greens": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Fencecols": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Ladder": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Grid": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground_002": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ladder_001": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Palm Tree_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Palms": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Palm Tree_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_004": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_005": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_006": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_007": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_008": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_009": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_010": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_011": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_012": {
-"generate/physics": true,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_013": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_014": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_015": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_016": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_017": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_018": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Palm Tree_019": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Road": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Rock": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Roof Hatch": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Signs": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Support": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Storefront Door": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Tee Boxes": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Tree": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Tower Body": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree10": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree11": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree12": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Tree2": {
 "generate/physics": true,
@@ -225,6 +196,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Tree6": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
+"generate/physics": true
 }
 }
 }

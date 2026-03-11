@@ -45,10 +45,52 @@ _subresources={
 "PATH:1 - PHYS/Arch_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Billboard": {
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Chinaville Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Dice": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lake Bottom": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Posts": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Posts_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_001": {
 "generate/physics": true
 }
 }

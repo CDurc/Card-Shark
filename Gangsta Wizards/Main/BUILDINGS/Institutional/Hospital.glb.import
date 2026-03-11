@@ -59,6 +59,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Elec": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/End Tables": {
 "generate/physics": true,
 "physics/layer": 9,
