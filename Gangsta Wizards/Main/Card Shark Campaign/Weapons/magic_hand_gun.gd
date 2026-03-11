@@ -6,11 +6,14 @@ extends Node3D
 @onready var bullet_spawn = $Bullet_spawn
 @onready var magic_bullet_spawn = $Bullet_spawn2
 @onready var magic_hand = $Phys
+@onready var mouse_sensitivity = player.mouse_sensitivity
 
+var is_frozen = false
 var hand_ability
 var ability_phase = 0
 var can_ability = true
 var reloading = false
+var magic_cam
 @export var bullet_path = preload("uid://c12fc3guvo5gu")
 
 #@onready var ammo = player.ammo
@@ -41,8 +44,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if ability_phase == 1:
+		pass
 	pass
 
+func _input(event):
+	if is_frozen and event is InputEventMouseMotion:
+		rotate_frozen_hand(event.relative)
+
+func rotate_frozen_hand(mouse_delta: Vector2):
+	hand_ability.rotate_y(-mouse_delta.x / mouse_sensitivity)
+	hand_ability.rotate_object_local(Vector3.RIGHT, mouse_delta.y / mouse_sensitivity)
 
 func use_item():
 	if put_away: return
@@ -155,8 +167,10 @@ func ability():
 		can_ability = true
 	
 	elif ability_phase ==1:
-		var magic_cam = hand_ability.get_node("Magic_Cam")
+		magic_cam = hand_ability.get_node("Magic_Cam")
 		player.can_look = false
-		magic_cam.current = true
+		player.can_move = false
 		hand_ability.freeze = true
 		Engine.time_scale = 0.2
+		magic_cam.current = true
+		is_frozen = true
