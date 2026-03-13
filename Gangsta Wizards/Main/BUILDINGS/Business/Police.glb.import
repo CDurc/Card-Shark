@@ -44,12 +44,48 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/ACC": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Dumpster": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Flagpole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Ground Ext": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ptenhouse Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roofs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Screenwalls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Spotlight": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

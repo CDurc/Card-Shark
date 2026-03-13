@@ -402,7 +402,7 @@ transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 
 transform = Transform3D(-0.9999998, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999998, -51.675518, 3.6475534, -156.4005)
 
 [node name="Two Brothers Pizza" parent="MAP" instance=ExtResource("9_8cadw")]
-transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -53.122272, 4.118457, -117.62003)
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -53.122, 3.603, -117.62)
 
 [node name="Strip Mall 2" parent="MAP" instance=ExtResource("10_jaky4")]
 transform = Transform3D(-0.7845168, 0, 0.6201079, 0, 1, 0, -0.6201079, 0, -0.7845168, 63.042786, 3.7541866, -225.86693)
@@ -492,7 +492,7 @@ transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, -49.03784, 10
 transform = Transform3D(-0.7433898, 0, 0.6688578, 0, 1, 0, -0.6688578, 0, -0.7433898, 110.548, -21.348383, 22.851)
 
 [node name="Police" parent="MAP" instance=ExtResource("42_hvh1o")]
-transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -26.54071, 3.1111765, 79.60692)
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -26.54071, 3.3027, 79.60692)
 
 [node name="Post Office" parent="MAP" instance=ExtResource("43_r3u1h")]
 transform = Transform3D(-0.76154923, 0, -0.64810634, 0, 1, 0, 0.64810634, 0, -0.76154923, 121.492, -21.506823, 48.097)
@@ -602,7 +602,7 @@ transform = Transform3D(-0.97355115, 0, -0.22846977, 0, 1, 0, 0.22846977, 0, -0.
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -193.881, 3.92, 179.879)
 
 [node name="Central Park" parent="MAP" instance=ExtResource("82_ot1tw")]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -12.191765, 3.1387358, -45.550476)
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -11.992, 3.374, -46.78)
 
 [node name="Nukehouses" parent="MAP" instance=ExtResource("84_bvjjl")]
 transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, -258.718, 4.754, 246.839)
@@ -677,7 +677,7 @@ transform = Transform3D(-0.18511783, 0, 0.9827164, 0, 1, 0, -0.9827164, 0, -0.18
 transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, -117.71754, 6.2906227, -6.8905735)
 
 [node name="Water Treatment" parent="MAP" instance=ExtResource("110_lbrwg")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 53.44334, 3.2169495, -39.94151)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 53.193, 2.982, -39.942)
 
 [node name="1-2-3 Bank" parent="MAP" instance=ExtResource("113_gx8li")]
 transform = Transform3D(-4.371141e-08, 0, 1.0000005, 0, 1, 0, -1.0000005, 0, -4.371141e-08, -140.95305, 11.233122, -159.40591)
@@ -1154,7 +1154,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396715, 0, -0.9998826, 0, 1, 0, 0.9998826, 0, -0.008396715, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396714, 0, -0.99988246, 0, 1, 0, 0.99988246, 0, -0.008396714, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -1579,7 +1579,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.09311767, 0, 0.9955837, 0, 0.999997, 0, -0.9955837, 0, 0.09311767, -207.88986, 0, -277.479)
+transform = Transform3D(0.093117654, 0, 0.9955836, 0, 0.999997, 0, -0.9955836, 0, 0.093117654, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1719,7 +1719,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0724011, 0, -0.997324, 0, 0.999997, 0, 0.997324, 0, 0.0724011, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240109, 0, -0.9973239, 0, 0.999997, 0, 0.9973239, 0, 0.07240109, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60

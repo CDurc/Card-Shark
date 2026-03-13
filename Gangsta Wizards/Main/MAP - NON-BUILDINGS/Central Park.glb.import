@@ -42,10 +42,10 @@ _subresources={
 "PATH:1 - PHYS/Barrels": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Bases": {
+"PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Billboard": {
+"PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/BillboardPost": {
@@ -54,25 +54,67 @@ _subresources={
 "PATH:1 - PHYS/Dead Trees": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Fountain": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Glowing Rocks": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Grass": {
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Road": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rock": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sludgemound": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Tower": {
+"PATH:1 - PHYS/Stand": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Walks": {
+"PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Walls": {
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_006": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_007": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_009": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_010": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_017": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_027": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_028": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_041": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_046": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_050": {
 "generate/physics": true
 }
 }
