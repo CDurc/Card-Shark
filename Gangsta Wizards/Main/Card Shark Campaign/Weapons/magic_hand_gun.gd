@@ -1,6 +1,7 @@
 #Magic HandGun
 extends Node3D
 @onready var gun_cooldown = $GunCooldown
+@onready var magic_bullet_cooldown = $MagicBulletCooldown
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var gun_anime = $SharkGun2/AnimationPlayer
 @onready var bullet_spawn = $Bullet_spawn
@@ -58,28 +59,34 @@ func rotate_frozen_hand(mouse_delta: Vector2):
 
 func use_item():
 	if put_away: return
-	#Engine.time_scale = 0.4
-	if player.acting == true: return
-	if !gun_cooldown.is_stopped(): return
-	if player.ammo <= 0 and not player.reloading:
-		reload()
-		return
-	if reloading: return
-	
-	#gun_anime.play("Fire")
-	gun_cooldown.start(cooldown)
-	
-	for i in range(burst):
-		ammo -= 1
-		ammo_counter.text = str(ammo)
-		shoot_a_bullet()
-		camera.rotation.x += recoil
-		await get_tree().create_timer(0.07).timeout
+	if ability_phase == 0:
+		#Engine.time_scale = 0.4
+		if player.acting == true: return
+		if !gun_cooldown.is_stopped(): return
+		if player.ammo <= 0 and not player.reloading:
+			reload()
+			return
+		if reloading: return
+		
+		#gun_anime.play("Fire")
+		gun_cooldown.start(cooldown)
+		
+		for i in range(burst):
+			ammo -= 1
+			ammo_counter.text = str(ammo)
+			shoot_a_bullet()
+			camera.rotation.x += recoil
+			await get_tree().create_timer(0.07).timeout
 
-	if ammo <= 0:
-		await get_tree().create_timer(0.3).timeout
-		reload()
-
+		if ammo <= 0:
+			await get_tree().create_timer(0.3).timeout
+			reload()
+	
+	elif ability_phase == 1:
+		if !magic_bullet_cooldown.is_stopped(): return
+		magic_bullet_cooldown.start(0.2)
+		shoot_magic_bullet()
+		
 
 func reload():
 	if put_away: return
@@ -129,6 +136,9 @@ func shoot_a_bullet():
 	bullet.look_at(bullet.global_transform.origin + dir)
 	bullet.apply_impulse(dir * Velocity)
 
+func shoot_magic_bullet():
+	print("mmmmm food")
+
 func ability():
 	if put_away: return
 	if can_ability == false: return
@@ -171,6 +181,6 @@ func ability():
 		player.can_look = false
 		player.can_move = false
 		hand_ability.freeze = true
-		Engine.time_scale = 0.2
+		Engine.time_scale = 0.05
 		magic_cam.current = true
 		is_frozen = true
