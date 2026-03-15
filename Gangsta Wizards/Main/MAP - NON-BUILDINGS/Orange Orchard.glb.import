@@ -48,13 +48,10 @@ _subresources={
 "PATH:1 - PHYS/Fence": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Orange Tree": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Orange Tree_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Orchard Ground": {
+"PATH:1 - PHYS/Orange Tree_024": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Streelight": {

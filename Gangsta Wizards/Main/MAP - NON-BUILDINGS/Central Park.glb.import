@@ -81,10 +81,19 @@ _subresources={
 "PATH:1 - PHYS/Stand": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Streetlights": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_005": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trunk_006": {

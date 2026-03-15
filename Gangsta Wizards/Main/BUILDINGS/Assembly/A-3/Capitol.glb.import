@@ -39,26 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/1st Flr": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/1st Flr_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/2nd Flr": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/2nd Flr_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
@@ -67,25 +47,14 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Floor": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Floor_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Flagpole": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Floor_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Flr": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Flagstand": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Flr_001": {
 "generate/physics": true,
@@ -102,29 +71,31 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Observatory Top_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Pole": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Road": {
+"PATH:1 - PHYS/RTU": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/RTU HP": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Road": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roof_001": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Roof_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Screenwalls": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top": {
 "generate/physics": true
@@ -141,6 +112,33 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Streetlight": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree12": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree3": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree4": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree6": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree7": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wall": {
