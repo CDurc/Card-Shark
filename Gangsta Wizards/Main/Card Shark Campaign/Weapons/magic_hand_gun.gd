@@ -8,6 +8,7 @@ extends Node3D
 @onready var magic_bullet_spawn = $Bullet_spawn2
 @onready var magic_hand = $Phys
 @onready var mouse_sensitivity = player.mouse_sensitivity
+@onready var magic_bullet_path = preload("uid://3ulswtvxvud8")
 
 var is_frozen = false
 var hand_ability
@@ -23,6 +24,7 @@ var magic_cam
 @onready var left_container = player.get_node("Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer")
 @onready var camera = player.get_node("Head/Camera")
 @onready var raycast = player.get_node("Head/Camera/RayCast")
+@onready var magic_raycast = $Phys/Magic_Cam/RayCast
 @onready var LA_anime = player.get_node("TheCardShark2/LeftArmController")
 
 @export var dmg: float
@@ -84,7 +86,7 @@ func use_item():
 	
 	elif ability_phase == 1:
 		if !magic_bullet_cooldown.is_stopped(): return
-		magic_bullet_cooldown.start(0.2)
+		magic_bullet_cooldown.start(0.02)
 		shoot_magic_bullet()
 		
 
@@ -104,6 +106,7 @@ func reload():
 
 
 func shoot_a_bullet():
+	print("shoot a normal bullet")
 	var bullet = bullet_path.instantiate()
 	bullet.target_group = "Enemies"
 	bullet.damage_amount = dmg
@@ -116,13 +119,16 @@ func shoot_a_bullet():
 	var dir: Vector3
 	if raycast.is_colliding():
 		# Shoot towards collision point
-		dir = (raycast.get_collision_point() - bullet_spawn.global_transform.origin).normalized()
+		if hand:
+			dir = (raycast.get_collision_point() - bullet_spawn.global_transform.origin).normalized()
+		else:
+			dir = (raycast.get_collision_point() - magic_bullet_spawn.global_transform.origin).normalized()
 	else:
 		# If nothing hit, shoot forward from camera
 		dir = -camera.global_transform.basis.z
 		
-		dir.x += randf_range(-spread, spread)
-		dir.y += randf_range(-spread, spread)
+		#dir.x += randf_range(-spread, spread)
+		#dir.y += randf_range(-spread, spread)
 		dir = dir.normalized()
 
 	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65) #Consider adding a pitch RV
@@ -137,7 +143,33 @@ func shoot_a_bullet():
 	bullet.apply_impulse(dir * Velocity)
 
 func shoot_magic_bullet():
-	print("mmmmm food")
+	print("shoot a magic bullet")
+	#var magic_bullet = bullet_path.instantiate()
+	var magic_bullet = magic_bullet_path.instantiate()
+	var magic_ability_bullet_spawn = hand_ability.get_node("Magic_spawn")
+	#magic_bullet.target_group = "Enemies"
+	#magic_bullet.damage_amount = dmg
+	#magic_bullet.HS_mult = HS_mult
+	
+	#magic_raycast.target_position.x = randf_range(-spread, spread) * magic_raycast.target_position.z
+	#magic_raycast.target_position.y = randf_range(-spread, spread) * magic_raycast.target_position.z
+	magic_raycast.force_raycast_update()
+	
+	var dir: Vector3
+	if magic_raycast.is_colliding():
+		# Shoot towards collision point
+		dir = (magic_raycast.get_collision_point() - magic_ability_bullet_spawn.global_transform.origin).normalized()
+	else:
+		# If nothing hit, shoot forward from camera
+		dir = -magic_cam.global_transform.basis.z
+		dir = dir.normalized()
+
+	Audio.play_pitch("sounds/blaster_repeater.ogg", 0.65) #Consider adding a pitch RV
+	#Spawn at correct muzzle
+	get_tree().root.add_child(magic_bullet)
+	magic_bullet.global_transform = magic_ability_bullet_spawn.global_transform
+	magic_bullet.look_at(magic_bullet.global_transform.origin + dir)
+	#magic_bullet.apply_impulse(dir * Velocity)
 
 func ability():
 	if put_away: return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv8imxfxrt0of"]
+[gd_scene load_steps=8 format=3 uid="uid://dv8imxfxrt0of"]
 
 [ext_resource type="Script" uid="uid://icmos8jyh4r7" path="res://Card Shark Campaign/Weapons/magic_hand_gun.gd" id="1_35y4f"]
 [ext_resource type="PackedScene" uid="uid://cnueviocrvv2e" path="res://Particles/bullet_2m.tscn" id="2_mmqsa"]
@@ -17,12 +17,16 @@ material = SubResource("StandardMaterial3D_35y4f")
 inner_radius = 0.009
 outer_radius = 0.033
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mmqsa"]
+radius = 0.005
+height = 0.01
+
 [node name="Magic HandGun" type="Node3D"]
 script = ExtResource("1_35y4f")
 bullet_path = ExtResource("2_mmqsa")
 dmg = 20.0
-clip_ammo = 12
-cooldown = 0.3
+clip_ammo = 24
+cooldown = 0.275
 reload_time = 1.0
 burst = 1
 HS_mult = 1.5
@@ -35,11 +39,11 @@ weapon_type = 2
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="GunCooldown" type="Timer" parent="."]
-wait_time = 0.55
+wait_time = 0.35
 one_shot = true
 
 [node name="MagicBulletCooldown" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.02
 one_shot = true
 
 [node name="Bullet_spawn" type="Marker3D" parent="."]
@@ -50,6 +54,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16472837, 0.034960575, 0.30
 
 [node name="Phys" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13598575, 0.023727149, 0.029511102)
+collision_layer = 64
+collision_mask = 64
 gravity_scale = 0.0
 lock_rotation = true
 freeze = true
@@ -92,4 +98,7 @@ collision_mask = 2
 collide_with_areas = true
 
 [node name="Magic_spawn" type="Marker3D" parent="Phys"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0247069, -0.0029930435, 0.30911252)
+transform = Transform3D(1, 0, 0, -2.7823854e-12, 1, -7.3786444e-09, 7.450581e-09, -7.450581e-09, 1, -0.024706885, -0.0029930472, 0.3091125)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Phys/Magic_spawn"]
+mesh = SubResource("CapsuleMesh_mmqsa")

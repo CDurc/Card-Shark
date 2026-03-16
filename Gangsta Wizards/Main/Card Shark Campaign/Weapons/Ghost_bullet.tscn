@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://3ulswtvxvud8"]
+
+[ext_resource type="Script" uid="uid://ceuclms23dkh3" path="res://ghost_bullet.gd" id="1_4l01b"]
+[ext_resource type="Material" uid="uid://cm7te6cxuqua6" path="res://Particles/ghost hand particle color.tres" id="2_mec8s"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j8du7"]
+radius = 0.025
+height = 0.3
+
+[sub_resource type="TorusMesh" id="TorusMesh_kg8gm"]
+inner_radius = 0.057
+outer_radius = 0.073
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1j2sm"]
+emission_shape_scale = Vector3(0.1, 0.1, 0.01)
+direction = Vector3(0, 0, -1)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4caj8"]
+material = ExtResource("2_mec8s")
+radius = 0.005
+height = 0.01
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_4l01b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 6.8214816e-09, -0.15605733)
+visible = false
+mesh = SubResource("CapsuleMesh_j8du7")
+surface_material_override/0 = ExtResource("2_mec8s")
+
+[node name="Ring" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 1.2186426e-09, -0.027879296)
+mesh = SubResource("TorusMesh_kg8gm")
+surface_material_override/0 = ExtResource("2_mec8s")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Ring"]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
+amount = 20
+lifetime = 0.15000000000000002
+process_material = SubResource("ParticleProcessMaterial_1j2sm")
+draw_pass_1 = SubResource("SphereMesh_4caj8")
+
+[node name="Ring2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 3.641406e-09, -0.08330567)
+mesh = SubResource("TorusMesh_kg8gm")
+surface_material_override/0 = ExtResource("2_mec8s")
+
+[node name="Ring3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 5.988873e-09, -0.13700947)
+mesh = SubResource("TorusMesh_kg8gm")
+surface_material_override/0 = ExtResource("2_mec8s")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 8.805123e-10, -0.020143775)
+target_position = Vector3(0, -50, 0)
