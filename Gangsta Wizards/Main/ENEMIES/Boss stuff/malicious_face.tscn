@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://5o1d1uoah07q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7nk3"]
+transparency = 1
+albedo_color = Color(1, 0.78431374, 0.11764706, 0.44705883)
+grow = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_5ng2g"]
+material = SubResource("StandardMaterial3D_p7nk3")
+radius = 0.2
+height = 0.4
+radial_segments = 12
+rings = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12tuo"]
+transparency = 1
+albedo_color = Color(2.0331757, 0.82230157, 0.28672263, 0.44705883)
+grow = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_7r8o6"]
+material = SubResource("StandardMaterial3D_12tuo")
+radius = 0.1
+height = 0.2
+radial_segments = 12
+rings = 6
+
+[node name="Malicious Face" type="Node3D"]
+
+[node name="Outer" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_5ng2g")
+
+[node name="Inner" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7r8o6")

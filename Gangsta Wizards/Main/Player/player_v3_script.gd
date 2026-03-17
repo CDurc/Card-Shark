@@ -283,7 +283,8 @@ func _physics_process(delta):
 		camera_origin.rotation.z = lerp_angle(camera_origin.rotation.z, -input_mouse.x * 25 * delta, delta * 5)	
 		camera_origin.rotation.x = lerp_angle(camera_origin.rotation.x, rotation_target.x, delta * 25)
 		rotation.y = lerp_angle(rotation.y, rotation_target.y, delta * 25)
-	
+	else:
+		input_mouse = Vector2.ZERO
 	#make the container lag for a sway effect
 	right_container.position = lerp(right_container.position, right_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
 	left_container.position = lerp(left_container.position, left_container_offset - (basis.inverse() * applied_velocity / 30), delta * 10)
@@ -1391,18 +1392,21 @@ var is_holding:= false #Not used rn, but needed for weapon swap if holding.  Pre
 # Mouse movement
 func _input(event):
 	if event is InputEventMouseMotion and mouse_captured:
-		
-		input_mouse = event.relative / mouse_sensitivity
-		
-		rotation_target.y -= event.relative.x / mouse_sensitivity
-		rotation_target.x -= event.relative.y / mouse_sensitivity
+		if can_look:
+			input_mouse = event.relative / mouse_sensitivity
+			rotation_target.y -= event.relative.x / mouse_sensitivity
+			rotation_target.x -= event.relative.y / mouse_sensitivity
+		else:
+			input_mouse = Vector2.ZERO
 		
 	#Use this for items that need held then released
 	if event.is_action_pressed("Left_Click"): #This is a single event (_input is not called every frame)
-		print("PRESS")
 		if item and item.has_method("hold_item"):
 			item.hold_item()
 			is_holding = true
+		
+		elif item and item.has_method("use_item_press"):
+			item.use_item_press()
 
 	if event.is_action_released("Left_Click"):
 		if item and item.has_method("release_item"):

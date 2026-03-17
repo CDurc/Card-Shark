@@ -1,5 +1,8 @@
 #Magic HandGun
 extends Node3D
+
+signal shoot_magic_bullets
+
 @onready var gun_cooldown = $GunCooldown
 @onready var magic_bullet_cooldown = $MagicBulletCooldown
 @onready var player = get_tree().get_first_node_in_group("Player")
@@ -10,6 +13,7 @@ extends Node3D
 @onready var mouse_sensitivity = player.mouse_sensitivity
 @onready var magic_bullet_path = preload("uid://3ulswtvxvud8")
 
+var shot_count = 0 #Number of shots fired during magic hand ability
 var is_frozen = false
 var hand_ability
 var ability_phase = 0
@@ -24,7 +28,7 @@ var magic_cam
 @onready var left_container = player.get_node("Head/Camera/SubViewportContainer/SubViewport/CameraItem/LeftContainer")
 @onready var camera = player.get_node("Head/Camera")
 @onready var raycast = player.get_node("Head/Camera/RayCast")
-@onready var magic_raycast = $Phys/Magic_Cam/RayCast
+var magic_raycast
 @onready var LA_anime = player.get_node("TheCardShark2/LeftArmController")
 
 @export var dmg: float
@@ -83,12 +87,13 @@ func use_item():
 		if ammo <= 0:
 			await get_tree().create_timer(0.3).timeout
 			reload()
-	
-	elif ability_phase == 1:
-		if !magic_bullet_cooldown.is_stopped(): return
-		magic_bullet_cooldown.start(0.02)
-		shoot_magic_bullet()
 		
+
+func use_item_press():
+	if ability_phase ==2 and shot_count<3:
+		if !magic_bullet_cooldown.is_stopped(): return
+		shot_count += 1
+		shoot_magic_bullet()
 
 func reload():
 	if put_away: return
@@ -153,14 +158,20 @@ func shoot_magic_bullet():
 	
 	#magic_raycast.target_position.x = randf_range(-spread, spread) * magic_raycast.target_position.z
 	#magic_raycast.target_position.y = randf_range(-spread, spread) * magic_raycast.target_position.z
+	#await get_tree().process_frame
 	magic_raycast.force_raycast_update()
+	#await get_tree().process_frame
+	#await get_tree().process_frame
 	
 	var dir: Vector3
 	if magic_raycast.is_colliding():
 		# Shoot towards collision point
+		print("Working collider")
+		print("Hit: ", magic_raycast.get_collider())
 		dir = (magic_raycast.get_collision_point() - magic_ability_bullet_spawn.global_transform.origin).normalized()
 	else:
 		# If nothing hit, shoot forward from camera
+		print("Collision failed, backup used")
 		dir = -magic_cam.global_transform.basis.z
 		dir = dir.normalized()
 
@@ -169,6 +180,21 @@ func shoot_magic_bullet():
 	get_tree().root.add_child(magic_bullet)
 	magic_bullet.global_transform = magic_ability_bullet_spawn.global_transform
 	magic_bullet.look_at(magic_bullet.global_transform.origin + dir)
+	#await get_tree().create_timer(0.1).timeout
+	if shot_count == 1:
+		await shoot_magic_bullets
+		await get_tree().create_timer(0.005).timeout
+		magic_bullet.draw_ray()
+	elif shot_count == 2:
+		await shoot_magic_bullets
+		await get_tree().create_timer(0.006).timeout
+		magic_bullet.draw_ray()
+	elif shot_count == 3:
+		end_ability()
+		await shoot_magic_bullets
+		await get_tree().create_timer(0.007).timeout
+		magic_bullet.draw_ray()
+		
 	#magic_bullet.apply_impulse(dir * Velocity)
 
 func ability():
@@ -177,9 +203,10 @@ func ability():
 	if ability_phase == 0:
 		#duplicate magic hand
 		can_ability = false
-		ability_phase = 1
+		ability_phase = 1 #Hand is flying
 		print("abillibty")
 		hand_ability = magic_hand.duplicate()
+		magic_raycast = hand_ability.get_node("Magic_Cam/RayCast")
 		get_tree().root.add_child(hand_ability)
 		hand_ability.global_transform = magic_hand.global_transform
 		magic_hand.visible = false
@@ -208,11 +235,26 @@ func ability():
 		await get_tree().create_timer(0.5).timeout
 		can_ability = true
 	
-	elif ability_phase ==1:
+	elif ability_phase == 1:
+		ability_phase = 2 #hand is stationary
 		magic_cam = hand_ability.get_node("Magic_Cam")
 		player.can_look = false
 		player.can_move = false
 		hand_ability.freeze = true
-		Engine.time_scale = 0.05
+		Engine.time_scale = 0.01
 		magic_cam.current = true
 		is_frozen = true
+		await get_tree().create_timer(0.02).timeout
+		end_ability()
+		ability_phase = 3 #Does nothing atm but prevents other phases
+		
+func end_ability():
+	print("ability over")
+	await get_tree().create_timer(0.004).timeout
+	magic_cam.current = false
+	shoot_magic_bullets.emit()
+	await get_tree().create_timer(0.007).timeout
+	player.can_look = true
+	player.can_move = true
+	Engine.time_scale = 1.0
+	is_frozen = false
