@@ -190,6 +190,7 @@ func shoot_magic_bullet():
 		await get_tree().create_timer(0.006).timeout
 		magic_bullet.draw_ray()
 	elif shot_count == 3:
+		await get_tree().create_timer(0.001).timeout
 		end_ability()
 		await shoot_magic_bullets
 		await get_tree().create_timer(0.007).timeout
@@ -230,7 +231,7 @@ func ability():
 			dir.y += randf_range(-spread, spread)
 			dir = dir.normalized()
 			
-		hand_ability.apply_impulse(dir * 12)
+		hand_ability.apply_impulse(dir * 20)
 	
 		await get_tree().create_timer(0.5).timeout
 		can_ability = true
@@ -244,16 +245,15 @@ func ability():
 		Engine.time_scale = 0.01
 		magic_cam.current = true
 		is_frozen = true
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.04).timeout
 		end_ability()
-		ability_phase = 3 #Does nothing atm but prevents other phases
 		
 func end_ability():
 	print("ability over")
-	await get_tree().create_timer(0.004).timeout
+	ability_phase = 3 #Does nothing atm but prevents other phases
 	magic_cam.current = false
 	shoot_magic_bullets.emit()
-	await get_tree().create_timer(0.007).timeout
+	await get_tree().create_timer(0.008).timeout
 	player.can_look = true
 	player.can_move = true
 	Engine.time_scale = 1.0
