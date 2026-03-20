@@ -18,6 +18,7 @@ func _ready() -> void:
 	add_child(mesh_instance)
 
 func draw_ray() -> void:
+	print("draw")
 	immediate_mesh.clear_surfaces()
 	
 	if not raycast.is_colliding():
@@ -40,3 +41,7 @@ func draw_ray() -> void:
 		collider.get_parent().damage(100)
 		print("BODYSHOT")
 		#queue_free()
+	
+	#await get_tree().create_timer(0.1).timeout
+	#print("free")
+	#queue_free()

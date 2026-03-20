@@ -12,6 +12,8 @@ signal shoot_magic_bullets
 @onready var magic_hand = $Phys
 @onready var mouse_sensitivity = player.mouse_sensitivity
 @onready var magic_bullet_path = preload("uid://3ulswtvxvud8")
+@onready var behind_pos = $Behind_pos
+@onready var magic_hand_pos = $MagicHand_pos
 
 var shot_count = 0 #Number of shots fired during magic hand ability
 var is_frozen = false
@@ -20,6 +22,8 @@ var ability_phase = 0
 var can_ability = true
 var reloading = false
 var magic_cam
+var ending_ability = false
+var ability_ready = true
 @export var bullet_path = preload("uid://c12fc3guvo5gu")
 
 #@onready var ammo = player.ammo
@@ -44,17 +48,24 @@ var magic_raycast
 @export var weapon_type: int
 var ammo: int
 var hand: = true #True is real hand, false is magic hand
+var _returning = false
 
 func _ready() -> void:
 	ammo = clip_ammo
 	pass
 
 
-func _process(delta: float) -> void:
-	if ability_phase == 1:
-		pass
-	pass
+var return_speed := 20.0
 
+func _process(delta: float) -> void:
+#	if _returning:
+#		var pos_diff = behind_pos.global_position - hand_ability.global_position
+#		var rot_diff = behind_pos.global_rotation - hand_ability.global_rotation
+#		
+#		hand_ability.global_position += pos_diff.normalized() * return_speed * delta
+#		hand_ability.global_rotation += rot_diff.normalized() * return_speed * delta
+	pass
+	
 func _input(event):
 	if is_frozen and event is InputEventMouseMotion:
 		rotate_frozen_hand(event.relative)
@@ -185,22 +196,33 @@ func shoot_magic_bullet():
 		await shoot_magic_bullets
 		await get_tree().create_timer(0.005).timeout
 		magic_bullet.draw_ray()
+		await get_tree().create_timer(0.002).timeout
+		magic_bullet.queue_free()
 	elif shot_count == 2:
 		await shoot_magic_bullets
 		await get_tree().create_timer(0.006).timeout
 		magic_bullet.draw_ray()
+		await get_tree().create_timer(0.002).timeout
+		magic_bullet.queue_free()
 	elif shot_count == 3:
 		await get_tree().create_timer(0.001).timeout
-		end_ability()
+		#if not ending_ability:
+		#	ending_ability = true
+		#	end_ability()
 		await shoot_magic_bullets
 		await get_tree().create_timer(0.007).timeout
 		magic_bullet.draw_ray()
+		print("RAY DRAWN")
+		await get_tree().create_timer(0.002).timeout
+		magic_bullet.queue_free()
+		print("finally free")
 		
 	#magic_bullet.apply_impulse(dir * Velocity)
 
 func ability():
 	if put_away: return
-	if can_ability == false: return
+	if can_ability == false: return #This is for a wait period before you can freeze the hand
+	if ability_ready == false: return #This is for the cooldown of reusuing the ability
 	if ability_phase == 0:
 		#duplicate magic hand
 		can_ability = false
@@ -246,15 +268,36 @@ func ability():
 		magic_cam.current = true
 		is_frozen = true
 		await get_tree().create_timer(0.04).timeout
-		end_ability()
+		if not ending_ability:
+			ending_ability = true
+			end_ability()
 		
 func end_ability():
+	ability_ready = false
 	print("ability over")
 	ability_phase = 3 #Does nothing atm but prevents other phases
 	magic_cam.current = false
 	shoot_magic_bullets.emit()
 	await get_tree().create_timer(0.008).timeout
+	hand_ability.reparent(self)
 	player.can_look = true
 	player.can_move = true
 	Engine.time_scale = 1.0
 	is_frozen = false
+	#Return the ghost hand
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_parallel(true)
+	tween.tween_property(hand_ability, "position", magic_hand.position, 1.0)
+	tween.tween_property(hand_ability, "rotation", magic_hand.rotation, 1.0)
+	await tween.finished
+	magic_hand.visible = true
+	hand_ability.queue_free()
+	await get_tree().create_timer(0.1).timeout
+	ability_phase = 0
+	await get_tree().create_timer(1.9).timeout
+	can_ability = true
+	ability_ready = true
+	ending_ability = false
+	shot_count = 0
