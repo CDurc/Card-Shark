@@ -66,6 +66,9 @@ _subresources={
 "PATH:1 - PHYS/Elec_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Great Wall": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
@@ -88,6 +91,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Towers": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires_001": {

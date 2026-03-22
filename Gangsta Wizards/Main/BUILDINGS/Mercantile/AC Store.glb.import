@@ -42,6 +42,9 @@ _subresources={
 "PATH:1 - PHYS/ACC": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Boiler": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/CU": {
 "generate/physics": true
 },
@@ -97,9 +100,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tank": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/WSHP": {

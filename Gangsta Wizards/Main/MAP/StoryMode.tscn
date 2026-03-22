@@ -510,7 +510,7 @@ transform = Transform3D(-0.99999976, 0, -8.7422755e-08, 0, 1, 0, 8.7422755e-08, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.416084, 3.4531279, -285.20923)
 
 [node name="Factory" parent="MAP" instance=ExtResource("48_fp3ge")]
-transform = Transform3D(-4.3711374e-08, 0, 0.9999997, 0, 1, 0, -0.9999997, 0, -4.3711374e-08, 19.360847, -22.23115, 89.49059)
+transform = Transform3D(1.1924877e-08, 0, -0.9999997, 0, 1, 0, 0.9999997, 0, 1.1924877e-08, 41.884, -21.406, 90.551)
 
 [node name="Hospital" parent="MAP" instance=ExtResource("49_6h740")]
 transform = Transform3D(0.043183416, 0, 0.9990671, 0, 1, 0, -0.9990671, 0, 0.043183416, -191.03802, 4.0344563, 22.66632)
@@ -540,7 +540,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -157
 transform = Transform3D(-0.9498031, 0, 0.31284824, 0, 1, 0, -0.31284824, 0, -0.9498031, 115.538, -16.340633, 103.458)
 
 [node name="Chinaville" parent="MAP" instance=ExtResource("58_maxk2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -139.40515, -0.0418686, -119.555244)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -139.235, 0, -119.555)
 
 [node name="Goblin Fort" parent="MAP" instance=ExtResource("59_taptl")]
 transform = Transform3D(0.999998, 0, -0.0021467, 0, 1, 0, 0.0021467, 0, 0.999998, -335.60452, 2.0190773, 304.05313)
@@ -599,7 +599,7 @@ transform = Transform3D(-0.9081358, 0, 0.41867596, 0, 1, 0, -0.41867596, 0, -0.9
 transform = Transform3D(-0.97355115, 0, -0.22846977, 0, 1, 0, 0.22846977, 0, -0.97355115, 132.41057, -20.175772, 65.07627)
 
 [node name="Airport" parent="MAP" instance=ExtResource("81_vv01r")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -193.881, 3.92, 179.879)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -193.881, 4, 179.879)
 
 [node name="Central Park" parent="MAP" instance=ExtResource("82_ot1tw")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -11.992, 3.374, -46.78)
@@ -1154,7 +1154,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396713, 0, -0.99988234, 0, 1, 0, 0.99988234, 0, -0.008396713, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396712, 0, -0.9998822, 0, 1, 0, 0.9998822, 0, -0.008396712, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -1579,7 +1579,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.09311765, 0, 0.9955835, 0, 0.999997, 0, -0.9955835, 0, 0.09311765, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311763, 0, 0.99558336, 0, 0.999997, 0, -0.99558336, 0, 0.09311763, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -1719,7 +1719,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.072401084, 0, -0.99732375, 0, 0.999997, 0, 0.99732375, 0, 0.072401084, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240108, 0, -0.99732363, 0, 0.999997, 0, 0.99732363, 0, 0.07240108, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60

@@ -53,6 +53,15 @@ _subresources={
 },
 "PATH:1 - PHYS/Landing Strip": {
 "generate/physics": true
+},
+"PATH:1 - PHYS/Monumental Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
 }
 }
 }
