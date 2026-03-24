@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bench": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -71,6 +74,18 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Staircol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stall": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Storage": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,

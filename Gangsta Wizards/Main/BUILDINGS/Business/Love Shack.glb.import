@@ -42,10 +42,19 @@ _subresources={
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Floor": {
+"PATH:1 - PHYS/Door": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shack": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stand_001": {
