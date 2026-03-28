@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 #These will be moved to a Player_stats resource file
 @export_subgroup("Properties")
-@export var walk_speed = 5
+@export var walk_speed: float = 5
 @export var sprint_speed = 10
 @export var jump_strength = 8
 @export var health:int = 100
@@ -69,7 +69,7 @@ var initial_deck = [
 ]
 
 var deck = initial_deck
-var movement_speed = walk_speed
+var movement_speed: float = walk_speed
 
 var has_key = false
 
@@ -167,6 +167,10 @@ signal health_updated
 @export var crosshair:TextureRect
 
 #Durc
+var dash_velocity: Vector3 = Vector3.ZERO
+var dash_dir: Vector3 = Vector3.ZERO
+var dash_cooldown: = 0.0
+var is_dashing = false
 var current_NPC #The NPC you're currently talking to, if any
 var item: Node3D #Assigned to the singular child of item_container
 var vulnerable = true
@@ -264,11 +268,23 @@ func _physics_process(delta):
 	if active_laser:
 		laser(delta)
 	
-	# Movement
+	
+	#Movement
 	var applied_velocity: Vector3
-	var local_input = movement_velocity # <- this is before basis transform so relative to player cords
+	dash_dir = movement_velocity.normalized() if movement_velocity.length() > 0.01 else Vector3.FORWARD
+	#var local_input = movement_velocity # <- this is before basis transform so relative to player cords
 	movement_velocity = transform.basis * movement_velocity #"Transform.basis" is relative to parent cords
-	applied_velocity = velocity.lerp(movement_velocity, delta * 10)
+	if is_dashing:
+		applied_velocity = velocity.lerp(dash_velocity, delta * 20)
+		dash_cooldown -= delta
+		if dash_cooldown <= 0.0:
+			is_dashing = false
+			dash_velocity = Vector3.ZERO
+			movement_speed = sprint_speed
+			
+	else:
+		applied_velocity = velocity.lerp(movement_velocity, delta * 10)
+		movement_speed = lerp(movement_speed, walk_speed, delta * 1.7)
 	applied_velocity.y = -gravity
 	velocity = applied_velocity
 	if can_move:
@@ -277,6 +293,8 @@ func _physics_process(delta):
 			#global_position.y = lerp(global_position.y, global_position.y + 0.5, delta * 30)
 			global_position.y += 0.32
 				
+
+
 
 	
 	# Rotation
@@ -1352,13 +1370,18 @@ func _process(delta):
 func sprint(delta):
 	#Start sprinting
 	if Input.is_action_pressed("Sprint"): 
-		if stats.can_dash == false and stamina > 0 and not acting:
+		if stats.can_dash == false and stamina > 0 and not acting: #SPRINT
 			if not sprinting:
 				sprinting = true
 				movement_speed = sprint_speed
 				replenishing_stamina = false
 			stamina = max(stamina - delta, 0)
-
+		elif stats.can_dash and not acting: #WAVEDASH
+			if Input.is_action_just_pressed("Sprint") and dash_cooldown <= 0.0 and not is_dashing:
+				dash_velocity = transform.basis * (dash_dir * 45.0)
+				is_dashing = true
+				dash_cooldown = 0.1
+			
 	#Stop sprinting
 	if Input.is_action_just_released("Sprint") or stamina <= 0:
 		if sprinting:
@@ -1505,7 +1528,7 @@ func action_jump():
 var melee_scene = preload("res://Card Shark Campaign/CS_MELEE.tscn")
 
 func melee():
-	#melee_camgoal = $melee_camgoal
+	melee_camgoal = $melee_camgoal
 	#ar lerpspeed = 4
 	#var slerpspeed = 3
 	if not acting:

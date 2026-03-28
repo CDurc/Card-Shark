@@ -4,5 +4,4 @@
 
 [resource]
 script = ExtResource("1_heiy2")
-can_dash = false
 metadata/_custom_type_script = "uid://mnj5g6d3ny3s"
