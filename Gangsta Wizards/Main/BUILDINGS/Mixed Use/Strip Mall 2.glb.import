@@ -49,6 +49,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Int Walls_001": {
 "generate/physics": true,
 "physics/layer": 9,
