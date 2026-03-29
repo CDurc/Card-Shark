@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var time: float = 12 #In hours, military time
+@export var time: float = 24 #In hours, military time
 var print_timer = 0.0
 
 @onready var celestial_axis = $CelestialBodies
