@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx5gi37d4wlwp"
-path.s3tc="res://.godot/imported/Metro Entrance - Gourdtown_Dirt.jpg-0e61715d2e8a25b507dec2df9744d00f.s3tc.ctex"
+uid="uid://bplf50hkelfm6"
+path.s3tc="res://.godot/imported/Metro Entrance - Gourdtown_Stone Brick.jpg-9423845428faa0de6257cf1a453f543c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d456444bf86529fa9c1b001a83d4b7d9"
+"md5": "1c63b7c01fb28f8d93cb085337056a80"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Metro Entrance - Gourdtown_Dirt.jpg"
-dest_files=["res://.godot/imported/Metro Entrance - Gourdtown_Dirt.jpg-0e61715d2e8a25b507dec2df9744d00f.s3tc.ctex"]
+source_file="res://BUILDINGS/Business/Metro Entrance - Gourdtown_Stone Brick.jpg"
+dest_files=["res://.godot/imported/Metro Entrance - Gourdtown_Stone Brick.jpg-9423845428faa0de6257cf1a453f543c.s3tc.ctex"]
 
 [params]
 
