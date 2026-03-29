@@ -1,4 +1,4 @@
-#PLAYER v3 SCRIPT
+#PLAYER v3 SCRIPT B-BRANCH VERSION???
 extends CharacterBody3D
 
 #These will be moved to a Player_stats resource file
@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var can_move = true
 @export var stamina:float = 6
 @export var reload_time:float = 3.25
+var hello_wurld
 
 var stats = preload("res://Player/Test_player_stats.tres")
 
