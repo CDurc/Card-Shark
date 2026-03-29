@@ -206,10 +206,9 @@ func shoot_magic_bullet():
 		magic_bullet.queue_free()
 	elif shot_count == 3:
 		await get_tree().create_timer(0.001).timeout
-		if not ending_ability:
-			ending_ability = true
-			end_ability()
-		print("next step")
+		#if not ending_ability:
+		#	ending_ability = true
+		#	end_ability()
 		await shoot_magic_bullets
 		await get_tree().create_timer(0.007).timeout
 		magic_bullet.draw_ray()
@@ -278,7 +277,6 @@ func end_ability():
 	print("ability over")
 	ability_phase = 3 #Does nothing atm but prevents other phases
 	magic_cam.current = false
-	await get_tree().process_frame
 	shoot_magic_bullets.emit()
 	await get_tree().create_timer(0.008).timeout
 	hand_ability.reparent(self)
