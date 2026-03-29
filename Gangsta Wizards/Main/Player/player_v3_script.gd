@@ -1,7 +1,6 @@
 #PLAYER v3 SCRIPT
 extends CharacterBody3D
 
-#These will be moved to a Player_stats resource file
 @export_subgroup("Properties")
 @export var walk_speed = 5
 @export var sprint_speed = 10
@@ -10,8 +9,6 @@ extends CharacterBody3D
 @export var can_move = true
 @export var stamina:float = 6
 @export var reload_time:float = 3.25
-
-var stats = preload("res://Player/Test_player_stats.tres")
 
 var initial_deck = [
 	{"rank": 2, "suit": "Clubs"},
@@ -1351,13 +1348,12 @@ func _process(delta):
 
 func sprint(delta):
 	#Start sprinting
-	if Input.is_action_pressed("Sprint"): 
-		if stats.can_dash == false and stamina > 0 and not acting:
-			if not sprinting:
-				sprinting = true
-				movement_speed = sprint_speed
-				replenishing_stamina = false
-			stamina = max(stamina - delta, 0)
+	if Input.is_action_pressed("Sprint") and stamina > 0 and not acting:
+		if not sprinting:
+			sprinting = true
+			movement_speed = sprint_speed
+			replenishing_stamina = false
+		stamina = max(stamina - delta, 0)
 
 	#Stop sprinting
 	if Input.is_action_just_released("Sprint") or stamina <= 0:

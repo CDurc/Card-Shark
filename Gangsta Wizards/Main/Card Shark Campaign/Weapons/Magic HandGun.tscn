@@ -105,7 +105,6 @@ collide_with_areas = true
 
 [node name="Magic_spawn" type="Marker3D" parent="Phys"]
 transform = Transform3D(1, 0, 0, -2.7823854e-12, 1, -7.3786444e-09, 7.450581e-09, -7.450581e-09, 1, -0.024706885, -0.0029930472, 0.3091125)
-visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Phys/Magic_spawn"]
 mesh = SubResource("CapsuleMesh_mmqsa")
