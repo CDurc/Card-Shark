@@ -24,7 +24,7 @@ var reloading = false
 var magic_cam
 var ending_ability = false
 var ability_ready = true
-@export var bullet_path = preload("uid://c12fc3guvo5gu")
+@export var bullet_path = preload("res://Particles/bullet_3m.tscn")
 
 #@onready var ammo = player.ammo
 @onready var acting = player.acting
