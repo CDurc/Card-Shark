@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
@@ -58,6 +61,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stand_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
 "generate/physics": true
 }
 }

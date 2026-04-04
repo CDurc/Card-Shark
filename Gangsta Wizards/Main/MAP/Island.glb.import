@@ -114,7 +114,7 @@ _subresources={
 "PATH:1 - PHYS/Spade Island": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Undeveloped Land": {
+"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 }
 }

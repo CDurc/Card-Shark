@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7t5wyxvcrkjs"
+path="res://.godot/imported/Judgement Day.mp3-e6e026990130299a398a43a9ad5d9f21.mp3str"
+
+[deps]
+
+source_file="res://Music/Judgement Day.mp3"
+dest_files=["res://.godot/imported/Judgement Day.mp3-e6e026990130299a398a43a9ad5d9f21.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

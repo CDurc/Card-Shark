@@ -60,6 +60,12 @@ _subresources={
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
@@ -70,6 +76,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trunk_015": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_002": {
 "generate/physics": true
 }
 }

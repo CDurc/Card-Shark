@@ -42,6 +42,12 @@ _subresources={
 "PATH:1 - PHYS/Arch": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bases_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
@@ -87,6 +93,9 @@ _subresources={
 "PATH:1 - PHYS/Stand_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Streetlights": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
@@ -99,13 +108,22 @@ _subresources={
 "PATH:1 - PHYS/Supports": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Tunnel2": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/TunneltoGT": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Walls": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Weathered Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_001": {
 "generate/physics": true
 }
 }

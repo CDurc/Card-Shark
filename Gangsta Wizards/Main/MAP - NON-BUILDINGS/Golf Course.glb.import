@@ -140,6 +140,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Lampposts": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Palms": {
 "generate/physics": true
 },

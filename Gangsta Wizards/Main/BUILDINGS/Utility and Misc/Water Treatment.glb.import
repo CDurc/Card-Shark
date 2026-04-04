@@ -99,7 +99,19 @@ _subresources={
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Vote Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/gapcol": {
