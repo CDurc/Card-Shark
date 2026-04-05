@@ -90,6 +90,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Streelight": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },

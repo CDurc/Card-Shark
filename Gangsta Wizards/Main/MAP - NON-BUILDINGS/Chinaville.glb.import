@@ -66,6 +66,12 @@ _subresources={
 "PATH:1 - PHYS/Elec_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elec_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elec_004": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Great Wall": {
 "generate/physics": true
 },
@@ -73,6 +79,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lake Bottom": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Post": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Posts": {
@@ -96,7 +105,13 @@ _subresources={
 "PATH:1 - PHYS/Towers": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Wires": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Wires_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Wires_004": {
 "generate/physics": true
 }
 }

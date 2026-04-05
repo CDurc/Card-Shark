@@ -60,16 +60,28 @@ _subresources={
 "PATH:1 - PHYS/Pole": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Rock": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign Top": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stand": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Streetlight": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_001": {
 "generate/physics": true
 }
 }

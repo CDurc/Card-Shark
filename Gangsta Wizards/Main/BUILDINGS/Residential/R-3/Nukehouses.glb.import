@@ -50,6 +50,9 @@ _subresources={
 },
 "PATH:1 - PHYS/House 2": {
 "generate/physics": true
+},
+"PATH:1 - PHYS/Streetlight_001": {
+"generate/physics": true
 }
 }
 }

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr84fnrfmmkc0"
-path.s3tc="res://.godot/imported/LadyLake_gray shingles.jpg-71b00c3745e79d891210ac652f69f6d3.s3tc.ctex"
+uid="uid://c2ohnwa6o6kxq"
+path.s3tc="res://.godot/imported/LadyLake_White Siding.jpg-4e1bba90a0468b7c7b04451655cc092a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "656d2364225494c72e6d98047bbf7e65"
+"md5": "ff0aba190a83fd27dd853990ff7d2e88"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Residential/R-3/LadyLake_gray shingles.jpg"
-dest_files=["res://.godot/imported/LadyLake_gray shingles.jpg-71b00c3745e79d891210ac652f69f6d3.s3tc.ctex"]
+source_file="res://BUILDINGS/Residential/R-3/LadyLake_White Siding.jpg"
+dest_files=["res://.godot/imported/LadyLake_White Siding.jpg-4e1bba90a0468b7c7b04451655cc092a.s3tc.ctex"]
 
 [params]
 

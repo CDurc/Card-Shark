@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Bases_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Benches": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
@@ -66,6 +69,18 @@ _subresources={
 "PATH:1 - PHYS/BillboardBack_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Board": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Box": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/DeadTree3": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Drum": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Eye": {
 "generate/physics": true
 },
@@ -75,6 +90,9 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Homeless Camps": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/PathtoGt": {
 "generate/physics": true
 },
@@ -82,6 +100,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ramp2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rock": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Scrapcols": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top": {
@@ -109,6 +133,21 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Toxic Waste": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trash Bags": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree1": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree4": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tunnel2": {

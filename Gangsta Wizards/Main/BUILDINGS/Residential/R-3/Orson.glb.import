@@ -66,6 +66,9 @@ _subresources={
 "PATH:1 - PHYS/Staircol_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Streetlight": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true
 },
