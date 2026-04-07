@@ -585,6 +585,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.839, 0.347, 84.159)
 
 [node name="Gourd Goals" type="Node3D" parent="MAP/Gourdtown Borders"]
 transform = Transform3D(0.994624, 0, -0.103556, 0, 1, 0, 0.103556, 0, 0.994624, -69.43957, 34.064682, -133.17375)
+visible = false
 script = ExtResource("151_w05ur")
 
 [node name="Bush Puncher" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals"]
@@ -766,299 +767,6 @@ transform = Transform3D(0.996216, 0, -0.0869128, 0, 1, 0, 0.0869128, 0, 0.996216
 [node name="Sit" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals/SeedySitSpot3"]
 transform = Transform3D(0.999934, 0, -0.0114668, 0, 1, 0, 0.0114668, 0, 0.999934, 1.31452, -0.00512695, -0.644807)
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="MAP/Gourdtown Borders/Gourd Goals"]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 57.20398, -48.9722, 135.95135)
-navigation_mesh = SubResource("NavigationMesh_nwkyl")
-
-[node name="Seedy Bar" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D" instance=ExtResource("107_t5brg")]
-transform = Transform3D(0.35396522, 0, 0.93525755, 0, 1, 0, -0.93525755, 0, 0.35396522, -14.158775, -6.818001, -13.608376)
-
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2645, -2.89508, -3.33323)
-radius = 0.6
-affect_navigation_mesh = true
-
-[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D"]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -23.3671, -2.89508, 0.435623)
-radius = 0.6
-affect_navigation_mesh = true
-
-[node name="Piano1" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D"]
-transform = Transform3D(0.98006654, 0, 0.19866642, 0, 1, 0, -0.19866642, 0, 0.98006654, -17.97403, -5.5031204, -13.697273)
-
-[node name="Zone1" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("156_pclic")
-sound2 = ExtResource("157_hjlkl")
-sound3 = ExtResource("158_b5o3d")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone2" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("159_amns8")
-sound2 = ExtResource("160_qoq2t")
-sound3 = ExtResource("161_n5hqm")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone3" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("162_y38eq")
-sound2 = ExtResource("163_lir57")
-sound3 = ExtResource("164_4kxn3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone4" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("165_yiyin")
-sound2 = ExtResource("166_04gir")
-sound3 = ExtResource("167_ow4ju")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone5" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("168_13jiv")
-sound2 = ExtResource("169_74qf2")
-sound3 = ExtResource("170_hr1xy")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone6" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("171_63ij5")
-sound2 = ExtResource("172_48yrn")
-sound3 = ExtResource("173_4clvy")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone7" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("174_dsxw7")
-sound2 = ExtResource("175_4c1mj")
-sound3 = ExtResource("176_qb86y")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone8" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("177_dyoao")
-sound2 = ExtResource("178_h33p8")
-sound3 = ExtResource("179_ymish")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone9" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("180_sbi7g")
-sound2 = ExtResource("181_yt138")
-sound3 = ExtResource("182_rb6jw")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano1/Zone9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Piano2" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D"]
-transform = Transform3D(0.04351466, 0, 0.99905235, 0, 1, 0, -0.99905235, 0, 0.04351466, -20.40937, -5.4979763, -14.980011)
-
-[node name="Zone1" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("156_pclic")
-sound2 = ExtResource("157_hjlkl")
-sound3 = ExtResource("158_b5o3d")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone2" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("159_amns8")
-sound2 = ExtResource("160_qoq2t")
-sound3 = ExtResource("161_n5hqm")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone3" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("162_y38eq")
-sound2 = ExtResource("163_lir57")
-sound3 = ExtResource("164_4kxn3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone4" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("165_yiyin")
-sound2 = ExtResource("166_04gir")
-sound3 = ExtResource("167_ow4ju")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone5" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("168_13jiv")
-sound2 = ExtResource("169_74qf2")
-sound3 = ExtResource("170_hr1xy")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone6" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("171_63ij5")
-sound2 = ExtResource("172_48yrn")
-sound3 = ExtResource("173_4clvy")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone7" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("174_dsxw7")
-sound2 = ExtResource("175_4c1mj")
-sound3 = ExtResource("176_qb86y")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone8" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("177_dyoao")
-sound2 = ExtResource("178_h33p8")
-sound3 = ExtResource("179_ymish")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
-[node name="Zone9" type="Area3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
-collision_layer = 2
-collision_mask = 2
-reverb_bus_enabled = true
-reverb_bus_amount = 0.2
-script = ExtResource("155_jg5ga")
-sound1 = ExtResource("180_sbi7g")
-sound2 = ExtResource("181_yt138")
-sound3 = ExtResource("182_rb6jw")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/Gourd Goals/NavigationRegion3D/Piano2/Zone9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
-shape = SubResource("BoxShape3D_l1m1a")
-
 [node name="SeedyDoorSpot" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals"]
 transform = Transform3D(0.38791806, 0, 0.92169356, 0, 1, 0, -0.92169356, 0, 0.38791806, 51.465633, -54.738495, 128.0337)
 
@@ -1074,8 +782,301 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.422315, 0.519459, -0.88417
 [node name="OutdoorSpot" type="Node3D" parent="MAP/Gourdtown Borders/Gourd Goals/SeedyDoorSpot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11431, -0.516918, 0.0329413)
 
-[node name="Openable Door" parent="MAP/Gourdtown Borders/Gourd Goals" instance=ExtResource("151_5m3wu")]
-transform = Transform3D(0.3694386, 0, 0.9292551, 0, 1, 0, -0.9292551, 0, 0.3694386, 34.53769, -54.18178, 119.043076)
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="MAP/Gourdtown Borders"]
+transform = Transform3D(0.9946239, 0, -0.103555985, 0, 1, 0, 0.103555985, 0, 0.9946239, -26.621696, -14.9075165, 7.9705505)
+navigation_mesh = SubResource("NavigationMesh_nwkyl")
+
+[node name="Seedy Bar" parent="MAP/Gourdtown Borders/NavigationRegion3D" instance=ExtResource("107_t5brg")]
+transform = Transform3D(0.35396522, 0, 0.93525755, 0, 1, 0, -0.93525755, 0, 0.35396522, -14.158775, -6.818001, -13.608376)
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="MAP/Gourdtown Borders/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2645, -2.89508, -3.33323)
+radius = 0.6
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="MAP/Gourdtown Borders/NavigationRegion3D"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -23.3671, -2.89508, 0.435623)
+radius = 0.6
+affect_navigation_mesh = true
+
+[node name="Piano1" type="Node3D" parent="MAP/Gourdtown Borders/NavigationRegion3D"]
+transform = Transform3D(0.98006654, 0, 0.19866642, 0, 1, 0, -0.19866642, 0, 0.98006654, -17.97403, -5.5031204, -13.697273)
+
+[node name="Zone1" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("156_pclic")
+sound2 = ExtResource("157_hjlkl")
+sound3 = ExtResource("158_b5o3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone2" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("159_amns8")
+sound2 = ExtResource("160_qoq2t")
+sound3 = ExtResource("161_n5hqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone3" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("162_y38eq")
+sound2 = ExtResource("163_lir57")
+sound3 = ExtResource("164_4kxn3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone4" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1" groups=["Non-enemy-hit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("165_yiyin")
+sound2 = ExtResource("166_04gir")
+sound3 = ExtResource("167_ow4ju")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone5" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("168_13jiv")
+sound2 = ExtResource("169_74qf2")
+sound3 = ExtResource("170_hr1xy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone6" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("171_63ij5")
+sound2 = ExtResource("172_48yrn")
+sound3 = ExtResource("173_4clvy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone7" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("174_dsxw7")
+sound2 = ExtResource("175_4c1mj")
+sound3 = ExtResource("176_qb86y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone8" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("177_dyoao")
+sound2 = ExtResource("178_h33p8")
+sound3 = ExtResource("179_ymish")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone9" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("180_sbi7g")
+sound2 = ExtResource("181_yt138")
+sound3 = ExtResource("182_rb6jw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano1/Zone9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Piano2" type="Node3D" parent="MAP/Gourdtown Borders/NavigationRegion3D"]
+transform = Transform3D(0.04351466, 0, 0.99905235, 0, 1, 0, -0.99905235, 0, 0.04351466, -20.40937, -5.4979763, -14.980011)
+
+[node name="Zone1" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.426183)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("156_pclic")
+sound2 = ExtResource("157_hjlkl")
+sound3 = ExtResource("158_b5o3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone2" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 0.303537)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("159_amns8")
+sound2 = ExtResource("160_qoq2t")
+sound3 = ExtResource("161_n5hqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone3" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.180236)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("162_y38eq")
+sound2 = ExtResource("163_lir57")
+sound3 = ExtResource("164_4kxn3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595398)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone4" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, 0.0559677)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("165_yiyin")
+sound2 = ExtResource("166_04gir")
+sound3 = ExtResource("167_ow4ju")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone5" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, 0, -0.0679383)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("168_13jiv")
+sound2 = ExtResource("169_74qf2")
+sound3 = ExtResource("170_hr1xy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone6" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.192088)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("171_63ij5")
+sound2 = ExtResource("172_48yrn")
+sound3 = ExtResource("173_4clvy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone7" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, -0.31613)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("174_dsxw7")
+sound2 = ExtResource("175_4c1mj")
+sound3 = ExtResource("176_qb86y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone8" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.43967)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("177_dyoao")
+sound2 = ExtResource("178_h33p8")
+sound3 = ExtResource("179_ymish")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Zone9" type="Area3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, 0, -0.562775)
+collision_layer = 2
+collision_mask = 2
+reverb_bus_enabled = true
+reverb_bus_amount = 0.2
+script = ExtResource("155_jg5ga")
+sound1 = ExtResource("180_sbi7g")
+sound2 = ExtResource("181_yt138")
+sound3 = ExtResource("182_rb6jw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAP/Gourdtown Borders/NavigationRegion3D/Piano2/Zone9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635872, -0.0484505, 0.0595474)
+shape = SubResource("BoxShape3D_l1m1a")
+
+[node name="Openable Door" parent="MAP/Gourdtown Borders/NavigationRegion3D" instance=ExtResource("151_5m3wu")]
+transform = Transform3D(0.36943862, 0, 0.9292552, 0, 1, 0, -0.9292552, 0, 0.36943862, -22.666283, -5.2095833, -16.908287)
 Door_open_angle = 95.0
 
 [node name="Orange Orchard" parent="MAP" instance=ExtResource("70_8axfy")]
@@ -1649,7 +1650,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396701, 0, -0.99988085, 0, 1, 0, 0.99988085, 0, -0.008396701, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.0083967, 0, -0.99988073, 0, 1, 0, 0.99988073, 0, -0.0083967, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2074,7 +2075,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.093117505, 0, 0.995582, 0, 0.999997, 0, -0.995582, 0, 0.093117505, -207.88986, 0, -277.479)
+transform = Transform3D(0.0931175, 0, 0.99558187, 0, 0.999997, 0, -0.99558187, 0, 0.0931175, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2214,7 +2215,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240097, 0, -0.99732226, 0, 0.999997, 0, 0.99732226, 0, 0.07240097, 222.65828, 0, -3.795718)
+transform = Transform3D(0.072400965, 0, -0.99732214, 0, 0.999997, 0, 0.99732214, 0, 0.072400965, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2294,7 +2295,8 @@ skeleton = NodePath("../Moon")
 transform = Transform3D(-0.5181757, 0, 0.8552743, 0, 1, 0, -0.8552743, 0, -0.5181757, -208.1441, 9.988632, -110.26397)
 
 [node name="Gourdling" parent="." instance=ExtResource("146_pyrg3")]
-transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 42.914497, 33.190716, -62.73728)
+transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 73.656204, -13.987915, 51.204273)
+visible = false
 
 [node name="Skeleton3D" parent="Gourdling/G/Gourdling" index="0"]
 bones/1/position = Vector3(-0.00959282, 0.156674, 0.531152)
@@ -2426,7 +2428,8 @@ bones/58/rotation = Quaternion(-0.1952036, -0.053249486, 0.68749046, 0.6974359)
 bones/58/scale = Vector3(0.9999998, 0.9999998, 1.0000001)
 
 [node name="Gourdling2" parent="." instance=ExtResource("146_pyrg3")]
-transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 56.9234, 37.4378, -40.0516)
+transform = Transform3D(0.260488, 0, -0.965477, 0, 1, 0, 0.965477, 0, 0.260488, 87.66511, -9.740829, 73.88995)
+visible = false
 
 [node name="Skeleton3D" parent="Gourdling2/G/Gourdling" index="0"]
 bones/1/position = Vector3(-0.00959282, 0.156674, 0.531152)

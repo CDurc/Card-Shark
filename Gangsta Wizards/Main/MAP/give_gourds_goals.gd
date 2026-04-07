@@ -5,8 +5,8 @@ var special_goals = []  #Goals that require coordination between two gourds and 
 var g1 = []
 var g2 = []
 
-@onready var gourdling1 = $"../Gourdling"
-@onready var gourdling2 = $"../Gourdling2"
+@onready var gourdling1 = $"../../../Gourdling"
+@onready var gourdling2 = $"../../../Gourdling2"
 
 func randomize_into_lists(pool: Array, list1: Array, list2: Array):
 	var shuffled_pool = pool.duplicate()

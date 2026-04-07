@@ -25,7 +25,7 @@ var time_since_moved: float = 0.0
 
 func _ready():
 	last_position = global_position
-	birth()
+	#birth()
 
 func _physics_process(delta):
 	# Gravity
