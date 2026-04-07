@@ -4,16 +4,17 @@
 [ext_resource type="Script" uid="uid://c2fg7fqfn1t47" path="res://CHARACTERS/Misc/red_crab.gd" id="1_pe1wg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pe1wg"]
-radius = 0.34466553
+radius = 0.2861328
 height = 1.132927
 
 [node name="RedCrab" type="CharacterBody3D"]
 script = ExtResource("1_pe1wg")
 
 [node name="CrabModel" parent="." instance=ExtResource("1_p4wvs")]
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 1.0324696e-08, -0.13203675, -0.118100755)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.012867341, 0.062256552, -0.17770314)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.012867344, 0.007826664, 0.07241523)
 shape = SubResource("CapsuleShape3D_pe1wg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

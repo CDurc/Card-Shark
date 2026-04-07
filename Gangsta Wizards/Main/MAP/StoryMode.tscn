@@ -1,4 +1,4 @@
-[gd_scene load_steps=239 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=240 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -196,6 +196,7 @@
 [ext_resource type="PackedScene" uid="uid://dt75d4cdbpky2" path="res://CHARACTERS/Shadow Person - Tall.glb" id="201_fwwy5"]
 [ext_resource type="Script" uid="uid://hbwt7374qqog" path="res://MAP/crab_goals.gd" id="201_y1m6j"]
 [ext_resource type="Script" uid="uid://c1jb2cp6v22yu" path="res://Dialogue/dialogue_general.gd" id="202_0jm8y"]
+[ext_resource type="PackedScene" uid="uid://blidckclv6v2x" path="res://CHARACTERS/Misc/red_crab.tscn" id="202_fwwy5"]
 [ext_resource type="Resource" uid="uid://bdy87x6oeac3x" path="res://Dialogue/Test_d.tres" id="203_0jm8y"]
 [ext_resource type="Script" uid="uid://b0iue53t8yk00" path="res://Dialogue/Dialogue_creater.gd" id="204_h2rlu"]
 [ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
@@ -1650,7 +1651,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.0083967, 0, -0.99988073, 0, 1, 0, 0.99988073, 0, -0.0083967, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396699, 0, -0.9998807, 0, 1, 0, 0.9998807, 0, -0.008396699, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2075,7 +2076,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0931175, 0, 0.99558187, 0, 0.999997, 0, -0.99558187, 0, 0.0931175, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311749, 0, 0.9955818, 0, 0.999997, 0, -0.9955818, 0, 0.09311749, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2215,7 +2216,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.072400965, 0, -0.99732214, 0, 0.999997, 0, 0.99732214, 0, 0.072400965, 222.65828, 0, -3.795718)
+transform = Transform3D(0.072400965, 0, -0.9973221, 0, 0.999997, 0, 0.9973221, 0, 0.072400965, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3356,10 +3357,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.178, 0.009000063, 182.69
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.413216, 3.082966, 201.43942)
 script = ExtResource("201_y1m6j")
 
-[node name="G1" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
-
 [node name="G0" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.990017, -1.6836293, 29.944)
+
+[node name="G1" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 
 [node name="G2" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.658142, 0, 0)
@@ -3369,6 +3370,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.658142, -0.18063784, 12.6
 
 [node name="G4" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.652161, -2.0777836, 25.093292)
+
+[node name="RedCrab" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.33922, 3.2086205, 194.51857)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C4/Steamroller/Area3D" to="Cars/Cars/Path1/C4/Steamroller/Area3D" method="_on_body_entered"]

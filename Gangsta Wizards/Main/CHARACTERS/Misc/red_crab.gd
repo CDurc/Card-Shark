@@ -1,54 +1,49 @@
 #Crab goin around
 extends CharacterBody3D
-
-@export var speed: float = 8.0
+@export var speed: float = 2.0
 @export var gravity: float = 9.8
 @export var turn_speed: float = 4.0
-@export var stuck_threshold: float = 0.5  # How long before considering "stuck"
-@export var stuck_distance_threshold: float = 0.3  # Minimum movement to not be stuck
-
+@export var stuck_threshold: float = 0.5
+@export var stuck_distance_threshold: float = 0.3
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var anime: AnimationPlayer = $CrabModel/AnimationPlayer
 @onready var collider = $CollisionShape3D
+@onready var crab_goals = $"../CrabGoals"
 
-var goal_task_queue: Array = []
-var current_goal_task = null
+var current_goal = null
 var state: String = "idle"
 var jump_force = 4
 
-# Stuck detection variables
+# Stuck detection
 var last_position: Vector3 = Vector3.ZERO
 var time_since_moved: float = 0.0
 
 func _ready():
 	last_position = global_position
+	consult_goals()
 
 func _physics_process(delta):
-	# Gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	else:
 		velocity.y = 0
 
-	# Walk toward goal
 	if state == "walking":
 		anime.play("Walking")
-		
-		# Stuck detection
 		check_if_stuck(delta)
-		
 		move_along_path(delta)
 		if nav_agent.is_navigation_finished():
 			velocity.x = 0
 			velocity.z = 0
 			move_and_slide()
-			if current_goal_task != null and current_goal_task["task"] != null:
+			if current_goal != null and current_goal["action"] != null:
 				state = "turning_to_task"
-				call_deferred("_delayed_task_runner", 0.5, current_goal_task)
+				call_deferred("_delayed_task_runner", 0.5, current_goal)
+			else:
+				finish_goal()
 
-	# Gradual turning instead of instant
-	if state == "turning_to_task" and current_goal_task != null:
-		var target = current_goal_task["goal"].get_child(0)
+	if state == "turning_to_task" and current_goal != null:
+		var target = current_goal["node"].get_child(0)
 		var flat_dir = Vector3(target.global_position.x - global_position.x, 0, target.global_position.z - global_position.z)
 		if flat_dir.length() > 0.01:
 			var current_yaw = rotation.y
@@ -57,18 +52,43 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+# Called when the crab self-decides to go do something
+func consult_goals():
+	var goals = crab_goals.goals  # however you're accessing the goals script
+	var available = goals.filter(func(g): return g["open"])
+	if available.size() == 0:
+		state = "idle"
+		print(name + " found no open goals.")
+		return
+	# Pick one — first available for now, could be random or weighted later
+	var chosen = available[randi() % available.size()]
+	claim_goal(chosen)
+
+func claim_goal(goal: Dictionary):
+	goal["open"] = false
+	goal["assignedTo"] = name
+	current_goal = goal
+	move_to(crab_goals.get_node(goal["path"]).global_position)
+	print(name + " claimed goal " + str(goal["id"]))
+
+func finish_goal():
+	if current_goal != null:
+		current_goal["open"] = true
+		current_goal["assignedTo"] = null
+		current_goal = null
+	state = "idle"
+	print(name + " finished their goal.")
+
 func check_if_stuck(delta: float):
 	var distance_moved = global_position.distance_to(last_position)
-	
 	if distance_moved < stuck_distance_threshold * delta:
 		time_since_moved += delta
 		if time_since_moved >= stuck_threshold:
 			print("Stuck! Jumping...")
 			jump()
-			time_since_moved = 0.0  # Reset timer
+			time_since_moved = 0.0
 	else:
-		time_since_moved = 0.0  # Reset if we're moving
-	
+		time_since_moved = 0.0
 	last_position = global_position
 
 func move_along_path(delta):
@@ -85,7 +105,7 @@ func move_along_path(delta):
 func move_to(target_pos: Vector3):
 	nav_agent.target_position = target_pos
 	state = "walking"
-	time_since_moved = 0.0  # Reset stuck timer when starting new movement
+	time_since_moved = 0.0
 
 func rotate_toward_direction(direction: Vector3, delta: float):
 	var flat_dir = Vector3(direction.x, 0, direction.z)
@@ -95,25 +115,13 @@ func rotate_toward_direction(direction: Vector3, delta: float):
 	var desired_yaw = atan2(flat_dir.x, flat_dir.z)
 	rotation.y = lerp_angle(current_yaw, desired_yaw, turn_speed * delta)
 
-
-func start_next_goal_task():
-	if goal_task_queue.size() == 0:
-		state = "idle"
-		current_goal_task = null
-		print("gourdling is out of tasks")
-		return
-	current_goal_task = goal_task_queue.pop_front()
-	#if not underground: #If underground, no need to move
-	move_to(current_goal_task["goal"].global_position)
-
-func _delayed_task_runner(delay_time: float, goal_task) -> void:
+func _delayed_task_runner(delay_time: float, goal) -> void:
 	await get_tree().create_timer(delay_time).timeout
-	if goal_task != current_goal_task:
+	if goal != current_goal:
 		return
 	state = "performing_task"
-	await goal_task["task"].call(goal_task["goal"])
-
-
+	await goal["action"].call(goal["node"])
+	finish_goal()
 
 func jump():
 	if is_on_floor():
