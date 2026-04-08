@@ -39,6 +39,18 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/3rd Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/4th Bars": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/4th Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/4th Floor_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
@@ -57,10 +69,19 @@ _subresources={
 "PATH:1 - PHYS/Floor_005": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/RTU HP": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shutters": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircols": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
@@ -69,22 +90,10 @@ _subresources={
 "PATH:1 - PHYS/Walls_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Window": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Window_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Window_002": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/Window_003": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Window_004": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }
