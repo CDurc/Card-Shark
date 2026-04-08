@@ -13,6 +13,7 @@ extends CharacterBody3D
 var current_goal = null
 var state: String = "idle"
 var jump_force = 4
+var is_jumping = false
 
 # Stuck detection
 var last_position: Vector3 = Vector3.ZERO
@@ -26,7 +27,9 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	else:
-		velocity.y = 0
+		if not is_jumping:
+			velocity.y = 0
+		is_jumping = false
 
 	if state == "walking":
 		anime.play("Walking")
@@ -43,7 +46,7 @@ func _physics_process(delta):
 				finish_goal()
 
 	if state == "turning_to_task" and current_goal != null:
-		var target = current_goal["node"].get_child(0)
+		var target = crab_goals.get_node(current_goal["path"]).get_child(0)
 		var flat_dir = Vector3(target.global_position.x - global_position.x, 0, target.global_position.z - global_position.z)
 		if flat_dir.length() > 0.01:
 			var current_yaw = rotation.y
@@ -73,11 +76,15 @@ func claim_goal(goal: Dictionary):
 
 func finish_goal():
 	if current_goal != null:
-		current_goal["open"] = true
 		current_goal["assignedTo"] = null
+		current_goal["open"] = false
+		var old_goal = current_goal
 		current_goal = null
+		get_tree().create_timer(3.0).timeout.connect(func(): old_goal["open"] = true)
 	state = "idle"
 	print(name + " finished their goal.")
+	await get_tree().create_timer(1.0).timeout
+	consult_goals()
 
 func check_if_stuck(delta: float):
 	var distance_moved = global_position.distance_to(last_position)
@@ -120,9 +127,12 @@ func _delayed_task_runner(delay_time: float, goal) -> void:
 	if goal != current_goal:
 		return
 	state = "performing_task"
-	await goal["action"].call(goal["node"])
+	await goal["action"].call(crab_goals.get_node(goal["path"]), self)
 	finish_goal()
 
 func jump():
+	print("jump attempt")
 	if is_on_floor():
+		print("jumped")
 		velocity.y = jump_force
+		is_jumping = true

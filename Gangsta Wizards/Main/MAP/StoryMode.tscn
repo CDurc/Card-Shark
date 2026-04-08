@@ -1655,7 +1655,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396699, 0, -0.9998806, 0, 1, 0, 0.9998806, 0, -0.008396699, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396698, 0, -0.9998805, 0, 1, 0, 0.9998805, 0, -0.008396698, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2080,7 +2080,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.09311748, 0, 0.99558175, 0, 0.999997, 0, -0.99558175, 0, 0.09311748, -207.88986, 0, -277.479)
+transform = Transform3D(0.093117476, 0, 0.9955816, 0, 0.999997, 0, -0.9955816, 0, 0.093117476, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2220,7 +2220,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240096, 0, -0.997322, 0, 0.999997, 0, 0.997322, 0, 0.07240096, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240095, 0, -0.9973219, 0, 0.999997, 0, 0.9973219, 0, 0.07240095, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3364,19 +3364,60 @@ script = ExtResource("201_y1m6j")
 [node name="G0" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.990017, -1.6836293, 29.944)
 
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
+[node name="G5" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
+transform = Transform3D(0.38918823, 0, 0.92115825, 0, 1, 0, -0.92115825, 0, 0.38918823, -26.216509, -0.237293, 17.459764)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
 [node name="G1" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
+[node name="G6" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82603455, -0.31017375, 11.896149)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
+[node name="G7" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8436584, -2.4857717, 19.661407)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
 
 [node name="G2" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.658142, 0, 0)
 
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
 [node name="G3" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.658142, -0.18063784, 12.67514)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
 
 [node name="G4" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.652161, -2.0777836, 25.093292)
 
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
 [node name="RedCrab" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.33922, 3.2086205, 194.51857)
+speed = 4.0
+
+[node name="RedCrab2" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+transform = Transform3D(0.7759363, 0, 0.6308113, 0, 1, 0, -0.6308113, 0, 0.7759363, 61.743034, 3.2086205, 205.51622)
+
+[node name="RedCrab3" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+transform = Transform3D(0.7759363, 0, 0.6308113, 0, 1, 0, -0.6308113, 0, 0.7759363, 105.484146, 1.896728, 194.03941)
+speed = 8.0
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C4/Steamroller/Area3D" to="Cars/Cars/Path1/C4/Steamroller/Area3D" method="_on_body_entered"]
