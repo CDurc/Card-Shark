@@ -8,7 +8,7 @@ extends CharacterBody3D
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var anime: AnimationPlayer = $CrabModel/AnimationPlayer
 @onready var collider = $CollisionShape3D
-@onready var crab_goals = $"../CrabGoals"
+@export var NPC_goals: Node3D
 
 var current_goal = null
 var state: String = "idle"
@@ -46,7 +46,7 @@ func _physics_process(delta):
 				finish_goal()
 
 	if state == "turning_to_task" and current_goal != null:
-		var target = crab_goals.get_node(current_goal["path"]).get_child(0)
+		var target = NPC_goals.get_node(current_goal["path"]).get_child(0)
 		var flat_dir = Vector3(target.global_position.x - global_position.x, 0, target.global_position.z - global_position.z)
 		if flat_dir.length() > 0.01:
 			var current_yaw = rotation.y
@@ -57,7 +57,7 @@ func _physics_process(delta):
 
 # Called when the crab self-decides to go do something
 func consult_goals():
-	var goals = crab_goals.goals  # however you're accessing the goals script
+	var goals = NPC_goals.goals  # however you're accessing the goals script
 	var available = goals.filter(func(g): return g["open"])
 	if available.size() == 0:
 		state = "idle"
@@ -71,7 +71,7 @@ func claim_goal(goal: Dictionary):
 	goal["open"] = false
 	goal["assignedTo"] = name
 	current_goal = goal
-	move_to(crab_goals.get_node(goal["path"]).global_position)
+	move_to(NPC_goals.get_node(goal["path"]).global_position)
 	print(name + " claimed goal " + str(goal["id"]))
 
 func finish_goal():
@@ -127,7 +127,7 @@ func _delayed_task_runner(delay_time: float, goal) -> void:
 	if goal != current_goal:
 		return
 	state = "performing_task"
-	await goal["action"].call(crab_goals.get_node(goal["path"]), self)
+	await goal["action"].call(NPC_goals.get_node(goal["path"]), self)
 	finish_goal()
 
 func jump():

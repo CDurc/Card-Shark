@@ -1629,7 +1629,7 @@ func get_interact():
 	if raycast_int.is_colliding():
 		var collider = raycast_int.get_collider()
 		if collider and collider.has_method("interac"):
-			print("intable")
+			#print("intable")
 			int_prompt.visible = true
 			if Input.is_action_pressed("Interact"):
 				collider.interac()

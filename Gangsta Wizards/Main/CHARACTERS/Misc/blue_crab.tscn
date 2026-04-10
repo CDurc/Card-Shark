@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7jo0hr2jat3a"]
+
+[ext_resource type="Script" uid="uid://bvvyty1xnmnvd" path="res://CHARACTERS/Misc/NPC_Talking_Generic.gd" id="1_3jqo3"]
+[ext_resource type="PackedScene" uid="uid://w44b3erei1oi" path="res://ENEMIES/Crab.glb" id="2_l7eny"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pe1wg"]
+radius = 0.2861328
+height = 1.132927
+
+[node name="RedCrab" type="CharacterBody3D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_3jqo3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.012867344, 0.007826664, 0.07241523)
+shape = SubResource("CapsuleShape3D_pe1wg")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CrabModel" parent="." instance=ExtResource("2_l7eny")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.0324696e-08, -0.13203675, -0.118100755)

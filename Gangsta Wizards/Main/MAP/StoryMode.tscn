@@ -1,4 +1,4 @@
-[gd_scene load_steps=241 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=243 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -199,7 +199,9 @@
 [ext_resource type="Script" uid="uid://c1jb2cp6v22yu" path="res://Dialogue/dialogue_general.gd" id="202_0jm8y"]
 [ext_resource type="PackedScene" uid="uid://blidckclv6v2x" path="res://CHARACTERS/Misc/red_crab.tscn" id="202_fwwy5"]
 [ext_resource type="Resource" uid="uid://bdy87x6oeac3x" path="res://Dialogue/Test_d.tres" id="203_0jm8y"]
+[ext_resource type="PackedScene" uid="uid://c7jo0hr2jat3a" path="res://CHARACTERS/Misc/blue_crab.tscn" id="204_4g8jr"]
 [ext_resource type="Script" uid="uid://b0iue53t8yk00" path="res://Dialogue/Dialogue_creater.gd" id="204_h2rlu"]
+[ext_resource type="Resource" uid="uid://cr7owrmsct8bo" path="res://Dialogue/D1.tres" id="205_4g8jr"]
 [ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
 [ext_resource type="Material" uid="uid://b2mouql1r5psp" path="res://Shaders/Skybeam Surface Mats/LB Green.tres" id="206_dmcx1"]
 [ext_resource type="Material" uid="uid://dtjwjgflef78v" path="res://Shaders/Skybeam Surface Mats/Pink-purp.tres" id="207_ofgt5"]
@@ -1655,7 +1657,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396697, 0, -0.99988043, 0, 1, 0, 0.99988043, 0, -0.008396697, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396694, 0, -0.9998801, 0, 1, 0, 0.9998801, 0, -0.008396694, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2080,7 +2082,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.09311747, 0, 0.99558157, 0, 0.999997, 0, -0.99558157, 0, 0.09311747, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311744, 0, 0.9955812, 0, 0.999997, 0, -0.9955812, 0, 0.09311744, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2220,7 +2222,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240094, 0, -0.99732184, 0, 0.999997, 0, 0.99732184, 0, 0.07240094, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240092, 0, -0.9973215, 0, 0.999997, 0, 0.9973215, 0, 0.07240092, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3271,7 +3273,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0122, 34.367634, 261.7277)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0122, 28.74284, 298.37506)
 mesh = SubResource("BoxMesh_euieh")
 surface_material_override/0 = SubResource("StandardMaterial3D_euieh")
 
@@ -3284,7 +3286,7 @@ Debts need repaid first."
 font_size = 22
 
 [node name="Shadow Person - Tall" parent="." instance=ExtResource("201_fwwy5")]
-transform = Transform3D(-0.9917564, 0, 0.1281378, 0, 1, 0, -0.1281378, 0, -0.9917564, -38.237328, 33.7945, 263.69952)
+transform = Transform3D(-0.9917564, 0, 0.1281378, 0, 1, 0, -0.1281378, 0, -0.9917564, -58.395344, 2.535221, 389.85764)
 
 [node name="Int" type="StaticBody3D" parent="Shadow Person - Tall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7445297, 0)
@@ -3318,6 +3320,9 @@ shape = SubResource("CapsuleShape3D_h2rlu")
 
 [node name="Cam0" type="Marker3D" parent="Shadow Person - Tall2"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.33452126, 1.1547546, -0.033020765)
+
+[node name="RayCast3D" type="RayCast3D" parent="Shadow Person - Tall2/Cam0"]
+transform = Transform3D(1, 0, 0, 0, 0.0865993, -0.99624324, 0, 0.99624324, 0.0865993, 0, 0, 0)
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.804363, 8.259688, -61.716877)
@@ -3408,16 +3413,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.652161, -2.0777836, 25.09
 [node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
 
-[node name="RedCrab" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+[node name="RedCrab" parent="BeachNav/NavigationRegion3D/Beach" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("202_fwwy5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.33922, 3.2086205, 194.51857)
-speed = 4.0
+NPC_goals = NodePath("../CrabGoals")
 
-[node name="RedCrab2" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+[node name="RedCrab2" parent="BeachNav/NavigationRegion3D/Beach" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("202_fwwy5")]
 transform = Transform3D(0.7759363, 0, 0.6308113, 0, 1, 0, -0.6308113, 0, 0.7759363, 61.743034, 3.2086205, 205.51622)
+NPC_goals = NodePath("../CrabGoals")
 
-[node name="RedCrab3" parent="BeachNav/NavigationRegion3D/Beach" instance=ExtResource("202_fwwy5")]
+[node name="RedCrab3" parent="BeachNav/NavigationRegion3D/Beach" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("202_fwwy5")]
 transform = Transform3D(0.7759363, 0, 0.6308113, 0, 1, 0, -0.6308113, 0, 0.7759363, 105.484146, 1.896728, 194.03941)
-speed = 8.0
+NPC_goals = NodePath("../CrabGoals")
+
+[node name="BlueCrab" parent="BeachNav/NavigationRegion3D/Beach" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("204_4g8jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.615234, 2.7943552, 187.34904)
+speed = 3.0
+NPC_goals = NodePath("../CrabGoals")
+dialogue_tree = ExtResource("205_4g8jr")
+
+[node name="Cam0" type="Marker3D" parent="BeachNav/NavigationRegion3D/Beach/BlueCrab"]
+transform = Transform3D(0.9983379, 0, 0.05763373, -0.040753204, 0.70710677, 0.7059314, -0.040753204, -0.70710677, 0.7059314, 0.06118539, 1.0392214, 1.0855039)
+
+[node name="RayCast3D" type="RayCast3D" parent="BeachNav/NavigationRegion3D/Beach/BlueCrab/Cam0"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C4/Steamroller/Area3D" to="Cars/Cars/Path1/C4/Steamroller/Area3D" method="_on_body_entered"]
