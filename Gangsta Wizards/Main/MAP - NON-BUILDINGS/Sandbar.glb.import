@@ -39,97 +39,16 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Sand": {
+"PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trunk": {
+"PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trunk_001": {
+"PATH:1 - PHYS/Post": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Trunk_002": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_003": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_004": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_005": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_006": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_007": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_008": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_009": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_010": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_011": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_012": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_013": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_014": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_015": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_016": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_017": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_018": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_019": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_020": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_021": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_022": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_023": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_024": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_025": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_026": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_027": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_028": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk_029": {
+"PATH:1 - PHYS/Support": {
 "generate/physics": true
 }
 }

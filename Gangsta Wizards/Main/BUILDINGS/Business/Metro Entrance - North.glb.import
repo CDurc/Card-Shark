@@ -54,10 +54,10 @@ _subresources={
 "PATH:1 - PHYS/Int Wall": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Sign": {
+"PATH:1 - PHYS/Post_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairs": {
+"PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turnstile": {

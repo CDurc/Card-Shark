@@ -69,6 +69,9 @@ _subresources={
 "PATH:1 - PHYS/Island Borders": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LuckyLnPosts": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/MAIN ROAD": {
 "generate/physics": true
 },
@@ -109,12 +112,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Seafloor": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Spade Island": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 }
 }

@@ -80,6 +80,9 @@ _subresources={
 "PATH:1 - PHYS/Pit": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,

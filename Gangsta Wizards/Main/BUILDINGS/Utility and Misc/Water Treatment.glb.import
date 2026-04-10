@@ -81,6 +81,9 @@ _subresources={
 "PATH:1 - PHYS/Platform": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
@@ -103,6 +106,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Vote Sign": {

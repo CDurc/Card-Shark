@@ -63,6 +63,9 @@ _subresources={
 "PATH:1 - PHYS/Lottery": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Rails": {
 "generate/physics": true
 },

@@ -39,28 +39,34 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/2nd Layer": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/3rd Layer": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bottom Layer": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Clover": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Ext Walls": {
+"PATH:1 - PHYS/Ramparts": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Intcol": {
+"PATH:1 - PHYS/Spade Island_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Intcol_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Overhang": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Pillar": {
+"PATH:1 - PHYS/Sphere": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Spotlights": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairscol": {
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Towers": {
 "generate/physics": true
 }
 }

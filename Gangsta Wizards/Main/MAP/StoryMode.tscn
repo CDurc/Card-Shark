@@ -398,7 +398,7 @@ transform = Transform3D(-4.3711402e-08, 0, 1.0000004, 0, 1, 0, -1.0000004, 0, -4
 transform = Transform3D(-4.3711374e-08, 0, 0.9999997, 0, 1, 0, -0.9999997, 0, -4.3711374e-08, -88.616, 3.525, -193.02)
 
 [node name="Casino" parent="MAP" instance=ExtResource("4_pq7m6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.83673, 6.255665, -528.317)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.977, 5.066, -526.437)
 
 [node name="Macrowave" parent="MAP" instance=ExtResource("6_hyfyx")]
 transform = Transform3D(0.00014001876, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, 0.00014001876, -14.377, 5.232, 270.024)
@@ -455,7 +455,7 @@ transform = Transform3D(-4.371141e-08, 0, -1.0000005, 0, 1, 0, 1.0000005, 0, -4.
 transform = Transform3D(-0.7659549, 0, -0.642895, 0, 1, 0, 0.642895, 0, -0.7659549, 100.91161, -21.154522, 57.912384)
 
 [node name="Casino Hotel" parent="MAP" instance=ExtResource("25_ofkor")]
-transform = Transform3D(-0.008621823, 0, 0.99996305, 0, 1, 0, -0.99996305, 0, -0.008621823, -141.409, 4.5521507, -477.84564)
+transform = Transform3D(-0.008621823, 0, 0.99996305, 0, 1, 0, -0.99996305, 0, -0.008621823, -148.18018, 4.5521507, -477.84564)
 
 [node name="Walker Center" parent="MAP" instance=ExtResource("26_cor53")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 10.195, 8.006, -153.481)
@@ -521,7 +521,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.416, 3.453, -284.959)
 transform = Transform3D(1.1924877e-08, 0, -0.9999997, 0, 1, 0, 0.9999997, 0, 1.1924877e-08, 41.989, -21.406, 90.441)
 
 [node name="Hospital" parent="MAP" instance=ExtResource("49_6h740")]
-transform = Transform3D(0.043183416, 0, 0.9990671, 0, 1, 0, -0.9990671, 0, 0.043183416, -191.03802, 4.0344563, 22.66632)
+transform = Transform3D(0.043183416, 0, 0.9990671, 0, 1, 0, -0.9990671, 0, 0.043183416, -190.87231, 4.0344563, 22.500607)
 
 [node name="Jail" parent="MAP" instance=ExtResource("50_wwpfs")]
 transform = Transform3D(0.5577451, 0, 0.8300123, 0, 1, 0, -0.8300123, 0, 0.5577451, 65.50882, -21.053755, 116.978386)
@@ -1085,7 +1085,7 @@ Door_open_angle = 95.0
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -25.62722, 1.822, -325.19458)
 
 [node name="Sandbar" parent="MAP" instance=ExtResource("71_apoey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.63942, -0.119911194, -147.21259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.38242, 0, -146.86987)
 
 [node name="Sports Field" parent="MAP" instance=ExtResource("72_vtnwg")]
 transform = Transform3D(0.134366, 0, 0.990932, 0, 1, 0, -0.990932, 0, 0.134366, 347.04205, 7.0543, 307.365)
@@ -1130,7 +1130,7 @@ transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, -48.449005, 2
 transform = Transform3D(1.0000007, 0, 0, 0, 1, 0, 0, 0, 1.0000007, -54.14193, 3.1841106, -305.18445)
 
 [node name="Dentist Office" parent="MAP" instance=ExtResource("55_5rfwt")]
-transform = Transform3D(0.9159779, 0, 0.40122783, 0, 1, 0, -0.40122783, 0, 0.9159779, -196.74406, 3.3750877, -24.70333)
+transform = Transform3D(0.9271835, 0, 0.37460646, 0, 1, 0, -0.37460646, 0, 0.9271835, -195.82344, 3.3750877, -25.01135)
 
 [node name="Electric Company" parent="MAP" instance=ExtResource("56_dlq3b")]
 transform = Transform3D(0.56019086, 0, 0.82836324, 0, 1, 0, -0.82836324, 0, 0.56019086, -162.562, 3.744, -300.808)
@@ -1253,7 +1253,7 @@ transform = Transform3D(0.23588848, 0, -0.9717801, 0, 1, 0, 0.9717801, 0, 0.2358
 transform = Transform3D(0.9312087, 0, -0.36448684, 0, 1, 0, 0.36448684, 0, 0.9312087, -10.389, 3.526, 306.732)
 
 [node name="Insane Asylum" parent="MAP" instance=ExtResource("143_4j6of")]
-transform = Transform3D(-0.5219776, 0, 0.85295916, 0, 1, 0, -0.85295916, 0, -0.5219776, -217.05574, 3.6400757, -54.737682)
+transform = Transform3D(-0.5195189, 0, 0.8544587, 0, 1, 0, -0.8544587, 0, -0.5195189, -217.316, 3.665, -55.223206)
 
 [node name="Metro Entrance - Uptown" parent="MAP" instance=ExtResource("144_1fcbo")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -153.356, 3.595, -31.573)
@@ -1655,7 +1655,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396698, 0, -0.9998805, 0, 1, 0, 0.9998805, 0, -0.008396698, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396697, 0, -0.99988043, 0, 1, 0, 0.99988043, 0, -0.008396697, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2080,7 +2080,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.093117476, 0, 0.9955816, 0, 0.999997, 0, -0.9955816, 0, 0.093117476, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311747, 0, 0.99558157, 0, 0.999997, 0, -0.99558157, 0, 0.09311747, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2220,7 +2220,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240095, 0, -0.9973219, 0, 0.999997, 0, 0.9973219, 0, 0.07240095, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240094, 0, -0.99732184, 0, 0.999997, 0, 0.99732184, 0, 0.07240094, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2572,62 +2572,62 @@ transform = Transform3D(0.992036, 0, -0.125957, 0, 1, 0, 0.125957, 0, 0.992036, 
 transform = Transform3D(0.9920354, 0, 0.12595692, 0, 1, 0, -0.12595692, 0, 0.9920354, -22.513924, -37.4115, 76.633896)
 
 [node name="Skybeam0" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.99853665, -0.01294723, 0.050817464, 0, 0.6577848, 0.34202012, -0.054078814, -0.23906374, 0.93831754, -81.65527, 58.184986, 19.893719)
+transform = Transform3D(0.99853647, -0.012947227, 0.050817452, 0, 0.6577848, 0.34202012, -0.054078802, -0.2390637, 0.93831736, -74.354515, 13.929928, -616.4122)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam0" index="0"]
 surface_material_override/0 = ExtResource("206_dmcx1")
 
 [node name="Skybeam1" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(-0.8309844, 0.13318503, -0.522747, 0, 0.6577848, 0.34202012, 0.5562957, 0.19894937, -0.7808699, -40.90745, 58.336147, 148.14203)
+transform = Transform3D(-0.83098423, 0.13318498, -0.5227468, 0, 0.6577848, 0.34202012, 0.5562955, 0.19894932, -0.7808697, -33.606705, 14.081089, -488.1639)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam1" index="0"]
 surface_material_override/0 = ExtResource("206_dmcx1")
 
 [node name="Skybeam2" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(-0.6883545, -0.17366484, 0.68162894, 0, 0.6577848, 0.34202012, -0.7253744, 0.16480176, -0.64684165, -123.35427, 58.07032, 148.24397)
+transform = Transform3D(-0.6883543, -0.1736648, 0.68162876, 0, 0.6577848, 0.34202012, -0.7253742, 0.16480172, -0.64684147, -116.05351, 13.815262, -488.06198)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam2" index="0"]
 surface_material_override/0 = ExtResource("206_dmcx1")
 
 [node name="Skybeam4" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.13744453, -0.23714192, 0.9307744, 0, 0.6577848, 0.34202012, -0.99050945, -0.032906156, 0.1291556, -149.01857, 58.05523, 68.72942)
+transform = Transform3D(0.13744448, -0.23714188, 0.9307742, 0, 0.6577848, 0.34202012, -0.9905093, -0.032906145, 0.12915556, -141.71779, 13.800171, -567.5765)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam4" index="0"]
 surface_material_override/0 = ExtResource("206_dmcx1")
 
 [node name="Skybeam3" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.28903183, 0.22919577, -0.8995861, 0, 0.6577848, 0.34202012, 0.9573195, -0.069198295, 0.27160108, -14.753262, 58.09946, 69.14215)
+transform = Transform3D(0.28903174, 0.22919573, -0.8995859, 0, 0.6577848, 0.34202012, 0.9573193, -0.06919827, 0.271601, -7.452525, 13.844402, -567.16376)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam3" index="0"]
 transform = Transform3D(1, -1.4901161e-08, 2.9802322e-08, -1.4901161e-08, 0.9999999, 5.9604645e-08, 0, 1.4901161e-08, 0.9999998, 0, 350.00006, 0)
 surface_material_override/0 = ExtResource("206_dmcx1")
 
 [node name="Skybeam5" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.24021941, 0, -0.17970708, 0, 0.5, 0, 0.17970708, 0, 0.24021941, -59.0967, 57.427963, 61.338882)
+transform = Transform3D(0.24021937, 0, -0.17970704, 0, 0.5, 0, 0.17970704, 0, 0.24021937, -51.795944, 13.172905, -574.96704)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam5" index="0"]
 surface_material_override/0 = ExtResource("207_ofgt5")
 
 [node name="Skybeam6" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.24021941, 0, -0.17970708, 0, 0.5, 0, 0.17970708, 0, 0.24021941, -45.766285, 57.427963, 104.121666)
+transform = Transform3D(0.24021937, 0, -0.17970704, 0, 0.5, 0, 0.17970704, 0, 0.24021937, -38.465538, 13.172905, -532.18427)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam6" index="0"]
 surface_material_override/0 = ExtResource("207_ofgt5")
 
 [node name="Skybeam7" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.24021941, 0, -0.17970708, 0, 0.5, 0, 0.17970708, 0, 0.24021941, -82.04711, 57.427963, 130.46968)
+transform = Transform3D(0.24021937, 0, -0.17970704, 0, 0.5, 0, 0.17970704, 0, 0.24021937, -74.74635, 13.172905, -505.83627)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam7" index="0"]
 surface_material_override/0 = ExtResource("207_ofgt5")
 
 [node name="Skybeam8" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.24021941, 0, -0.17970708, 0, 0.5, 0, 0.17970708, 0, 0.24021941, -119.025955, 57.427963, 101.44577)
+transform = Transform3D(0.24021937, 0, -0.17970704, 0, 0.5, 0, 0.17970704, 0, 0.24021937, -111.7252, 13.172905, -534.86017)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam8" index="0"]
 surface_material_override/0 = ExtResource("207_ofgt5")
 
 [node name="Skybeam9" parent="Lights/Skybeams" instance=ExtResource("205_dmcx1")]
-transform = Transform3D(0.24021941, 0, -0.17970708, 0, 0.5, 0, 0.17970708, 0, 0.24021941, -103.18271, 57.427963, 60.488728)
+transform = Transform3D(0.24021937, 0, -0.17970704, 0, 0.5, 0, 0.17970704, 0, 0.24021937, -95.88195, 13.172905, -575.8172)
 
 [node name="Mesh" parent="Lights/Skybeams/Skybeam9" index="0"]
 surface_material_override/0 = ExtResource("207_ofgt5")
@@ -3333,7 +3333,7 @@ light_volumetric_fog_energy = 3.344
 omni_range = 1.076
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.733826, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -110.734, 0)
 mesh = SubResource("BoxMesh_1k0xu")
 
 [node name="Occluders" type="Node3D" parent="."]

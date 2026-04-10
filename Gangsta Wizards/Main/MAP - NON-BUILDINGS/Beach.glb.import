@@ -90,6 +90,9 @@ _subresources={
 "PATH:1 - PHYS/Palm Tree Trunks": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Railing": {
 "generate/physics": true
 },
