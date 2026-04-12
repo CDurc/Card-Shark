@@ -336,7 +336,7 @@ func _physics_process(delta):
 	previously_floored = is_on_floor()
 	
 	# Falling/respawning
-	if position.y < -25: #killblox
+	if position.y < -50: #killblox
 		get_tree().reload_current_scene()
 		
 	get_interact()

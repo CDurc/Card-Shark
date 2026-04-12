@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var time: float = 18 #In hours, military time
+@export var time: float = 12 #In hours, military time
 var print_timer = 0.0
 
 @onready var celestial_axis = $CelestialBodies
@@ -35,8 +35,15 @@ func _process(delta: float) -> void:
 	env.environment.ambient_light_energy = energy
 	env.environment.background_energy_multiplier = energy
 	
+	#Directional Sunlight stuff
+	# After your existing energy calculation:
+	var sun_angle: float = (time - 5.35) / 13.0
+	var sunlight: float = pow(clamp(sin(sun_angle * PI), 0.0, 1.0), 0.3) * 0.9
+	sun.light_energy = sunlight
+	
 	print_timer += delta
 	if print_timer >= 1.0:
 		#print("energy is ", energy)
 		#print("time is ", time)
 		print_timer = 0
+		print("sunlight is ", sunlight)
