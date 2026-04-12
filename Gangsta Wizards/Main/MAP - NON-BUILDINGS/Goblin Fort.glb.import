@@ -39,6 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bag": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Drum": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Entrance Sign": {
 "generate/physics": true
 },
@@ -47,13 +53,13 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Ramp": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ramparts": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Scrapcol": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Statue": {

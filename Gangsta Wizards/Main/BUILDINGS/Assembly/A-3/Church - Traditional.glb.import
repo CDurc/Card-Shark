@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://b11ixdilrs8p7"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
@@ -54,10 +54,19 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Cemetery Wall": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Connector Wall": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Flat Headstone_005": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Flr": {
 "generate/physics": true,
@@ -74,6 +83,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Headstone_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/High Roof": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -83,6 +95,18 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pavillion Extension": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU HP": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Sanct Walls": {
 "generate/physics": true,
@@ -103,6 +127,15 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Trad Headstone": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
+"generate/physics": true
 }
 }
 }

@@ -49,11 +49,6 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Door": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -63,6 +58,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Door_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Endcap": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Entrance Connector": {
 "generate/physics": true,
@@ -85,11 +86,6 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Grid_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
@@ -124,10 +120,22 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/LinkedDoors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pathway": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stairramp": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,

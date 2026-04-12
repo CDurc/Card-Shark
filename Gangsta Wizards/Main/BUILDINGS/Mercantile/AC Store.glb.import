@@ -42,6 +42,9 @@ _subresources={
 "PATH:1 - PHYS/ACC": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Boiler": {
 "generate/physics": true
 },
@@ -69,6 +72,9 @@ _subresources={
 "PATH:1 - PHYS/Floor Mounted FCU": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Ground Extension": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Inline Pump": {
 "generate/physics": true
 },
@@ -76,6 +82,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/PTAC": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platform": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
@@ -93,16 +102,31 @@ _subresources={
 "PATH:1 - PHYS/RTU_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Rock_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sales Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Shell & Tube Body": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Storage": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tank": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/WSHP": {
