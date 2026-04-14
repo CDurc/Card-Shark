@@ -1,4 +1,4 @@
-[gd_scene load_steps=245 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=246 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -177,6 +177,7 @@
 [ext_resource type="PackedScene" uid="uid://tbsg6x77e3nc" path="res://BUILDINGS/Utility and Misc/Space Shuttle.glb" id="168_0jm8y"]
 [ext_resource type="AudioStream" uid="uid://ctk1vmj3f1e0v" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 14.wav" id="168_13jiv"]
 [ext_resource type="AudioStream" uid="uid://cdy5w1hthgbv8" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 15.wav" id="169_74qf2"]
+[ext_resource type="PackedScene" uid="uid://qas8pfw1yuen" path="res://LINKED MAP/Subway System.glb" id="169_dmcx1"]
 [ext_resource type="AudioStream" uid="uid://btk8rlgwmw4yj" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 16.wav" id="170_hr1xy"]
 [ext_resource type="AudioStream" uid="uid://bafrmlb418ni3" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 17.wav" id="171_63ij5"]
 [ext_resource type="AudioStream" uid="uid://cod6ws71ec2b7" path="res://SOUND EFFECTS & VOICE LINES/P_N/Ch/Sound 18.wav" id="172_48yrn"]
@@ -1317,6 +1318,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.03929, -21.543354, 142.57
 [node name="Space Shuttle" parent="MAP" instance=ExtResource("168_0jm8y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -114.45001, 11.21769, -165.76157)
 
+[node name="Subway System" parent="MAP" instance=ExtResource("169_dmcx1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.08, 0.345, 182.585)
+
 [node name="Projectiles" type="Node3D" parent="."]
 
 [node name="Cars" type="Node3D" parent="."]
@@ -1666,7 +1670,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396692, 0, -0.9998797, 0, 1, 0, 0.9998797, 0, -0.008396692, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396691, 0, -0.9998796, 0, 1, 0, 0.9998796, 0, -0.008396691, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2091,7 +2095,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0931174, 0, 0.99558085, 0, 0.999997, 0, -0.99558085, 0, 0.0931174, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311739, 0, 0.99558073, 0, 0.999997, 0, -0.99558073, 0, 0.09311739, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2231,7 +2235,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240089, 0, -0.9973211, 0, 0.999997, 0, 0.9973211, 0, 0.07240089, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240088, 0, -0.997321, 0, 0.999997, 0, 0.997321, 0, 0.07240088, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3453,7 +3457,7 @@ transform = Transform3D(0.6565068, 0, -0.75432014, 0, 1, 0, 0.75432014, 0, 0.656
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006682027, 0, 0.9999769, 0, 1, 0, -0.9999769, 0, -0.006682027, 0.697381, 0, -0.005562812)
+transform = Transform3D(-0.006682026, 0, 0.99997675, 0, 1, 0, -0.99997675, 0, -0.006682026, 0.697381, 0, -0.005562812)
 progress = 39.32721
 
 [node name="SubwayCar" parent="Subway/Path3D/PathFollow3D" instance=ExtResource("206_sr7l5")]

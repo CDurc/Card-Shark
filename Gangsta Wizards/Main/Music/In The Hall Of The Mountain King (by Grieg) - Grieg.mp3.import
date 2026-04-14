@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ci2yiwtdhya8j"
+path="res://.godot/imported/In The Hall Of The Mountain King (by Grieg) - Grieg.mp3-095b7d2bd2d39942dafbfa50082553f5.mp3str"
+
+[deps]
+
+source_file="res://Music/In The Hall Of The Mountain King (by Grieg) - Grieg.mp3"
+dest_files=["res://.godot/imported/In The Hall Of The Mountain King (by Grieg) - Grieg.mp3-095b7d2bd2d39942dafbfa50082553f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
