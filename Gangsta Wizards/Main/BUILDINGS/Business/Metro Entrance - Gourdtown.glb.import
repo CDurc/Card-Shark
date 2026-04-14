@@ -42,6 +42,12 @@ _subresources={
 "PATH:1 - PHYS/Air Outlet": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Condensing Unit": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Endcaps": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext": {
 "generate/physics": true
 },
@@ -51,13 +57,16 @@ _subresources={
 "PATH:1 - PHYS/Int Wall": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Lottery": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Rails": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairs": {
+"PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turnstile": {
