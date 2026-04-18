@@ -1,4 +1,4 @@
-[gd_scene load_steps=246 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=249 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -205,8 +205,11 @@
 [ext_resource type="Resource" uid="uid://cr7owrmsct8bo" path="res://Dialogue/D1.tres" id="205_4g8jr"]
 [ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
 [ext_resource type="Material" uid="uid://b2mouql1r5psp" path="res://Shaders/Skybeam Surface Mats/LB Green.tres" id="206_dmcx1"]
-[ext_resource type="PackedScene" uid="uid://cnb70uflm4kgp" path="res://VEHICLES/SubwayCar.glb" id="206_sr7l5"]
+[ext_resource type="PackedScene" uid="uid://bj1yj1c3ixsvg" path="res://VEHICLES/SubwayCar_0.glb" id="207_kibu0"]
 [ext_resource type="Material" uid="uid://dtjwjgflef78v" path="res://Shaders/Skybeam Surface Mats/Pink-purp.tres" id="207_ofgt5"]
+[ext_resource type="PackedScene" uid="uid://dx3lnew1y7o4l" path="res://VEHICLES/SubwayCar_1.glb" id="208_ywsmc"]
+[ext_resource type="PackedScene" uid="uid://clhopeidoahji" path="res://VEHICLES/SubwayCar_2.glb" id="209_m4epl"]
+[ext_resource type="PackedScene" uid="uid://b3rccv8tscny6" path="res://VEHICLES/SubwayCar_3.glb" id="210_38f6n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h2rlu"]
 size = Vector3(100, 100, 100)
@@ -1670,7 +1673,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396691, 0, -0.9998796, 0, 1, 0, 0.9998796, 0, -0.008396691, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396689, 0, -0.9998795, 0, 1, 0, 0.9998795, 0, -0.008396689, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2095,7 +2098,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.09311739, 0, 0.99558073, 0, 0.999997, 0, -0.99558073, 0, 0.09311739, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311738, 0, 0.9955806, 0, 0.999997, 0, -0.9955806, 0, 0.09311738, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2235,7 +2238,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240088, 0, -0.997321, 0, 0.999997, 0, 0.997321, 0, 0.07240088, 222.65828, 0, -3.795718)
+transform = Transform3D(0.072400875, 0, -0.9973209, 0, 0.999997, 0, 0.9973209, 0, 0.072400875, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3454,14 +3457,36 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 transform = Transform3D(0.6565068, 0, -0.75432014, 0, 1, 0, 0.75432014, 0, 0.6565068, 151.20982, -28.001785, 70.40801)
 
 [node name="Path3D" type="Path3D" parent="Subway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.2856048)
 curve = SubResource("Curve3D_dmcx1")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006682026, 0, 0.99997675, 0, 1, 0, -0.99997675, 0, -0.006682026, 0.697381, 0, -0.005562812)
-progress = 39.32721
+[node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
+transform = Transform3D(-0.006681849, 0, 0.99996805, 0, 1, 0, -0.99996805, 0, -0.006681849, 14.412659, 0, -0.09630613)
+progress = 25.25
 
-[node name="SubwayCar" parent="Subway/Path3D/PathFollow3D" instance=ExtResource("206_sr7l5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.06291e-07, -0.50372887, -9.237483)
+[node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
+transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0.013962217, 0.033107854, 0, -3.4022076)
+
+[node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
+transform = Transform3D(-0.006681992, 0, 0.9999716, 0, 1, 0, -0.9999716, 0, -0.006681992, 7.6370945, 0, -0.051031478)
+progress = 32.0
+
+[node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
+transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
+
+[node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
+transform = Transform3D(-0.00675256, 0, 0.9999708, 0, 1, 0, -0.9999708, 0, -0.00675256, -0.18115859, 0, 0.0014959713)
+progress = 40.2
+
+[node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]
+transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.12055247, 0, -7.5847816)
+
+[node name="Car3" type="PathFollow3D" parent="Subway/Path3D"]
+transform = Transform3D(-0.009411779, 0, 0.99994963, 0, 1, 0, -0.99994963, 0, -0.009411779, -8.1914015, 0, 0.07709818)
+progress = 48.2
+
+[node name="SubwayCar_3" parent="Subway/Path3D/Car3" instance=ExtResource("210_38f6n")]
+transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.15402862, 0, -3.3947861)
 
 [connection signal="body_entered" from="Cars/Cars/Path1/C1/Car1/Area3D" to="Cars/Cars/Path1/C1/Car1/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Path1/C4/Steamroller/Area3D" to="Cars/Cars/Path1/C4/Steamroller/Area3D" method="_on_body_entered"]
