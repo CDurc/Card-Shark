@@ -132,6 +132,9 @@ _subresources={
 "PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tabletops": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Throne": {
 "generate/physics": true
 },

@@ -39,6 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bases": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Bases_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
@@ -55,6 +61,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lake Edges": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Riverbank": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support": {

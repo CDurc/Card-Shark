@@ -39,7 +39,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Mt King Entrance": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Outcropping": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rock Supports": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircols": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Volcano Body": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Walkway": {
 "generate/physics": true
 }
 }

@@ -42,22 +42,10 @@ _subresources={
 "PATH:1 - PHYS/Bases": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bases_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Conduit Tunnel": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Conduit Tunnel_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Conduit Tunnel_003": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Fences": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
@@ -91,6 +79,15 @@ _subresources={
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Transformers": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -100,6 +97,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Wirepath": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {
 "generate/physics": true

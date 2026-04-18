@@ -105,6 +105,9 @@ _subresources={
 "PATH:1 - PHYS/Rock": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Rock_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Scrapcols": {
 "generate/physics": true
 },

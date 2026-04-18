@@ -44,6 +44,9 @@ _subresources={
 "physics/layer": 11,
 "physics/mask": 11
 },
+"PATH:1 - PHYS/Ground Infill": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground_001": {
 "generate/physics": true
 },
@@ -60,6 +63,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tree Trunks": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {

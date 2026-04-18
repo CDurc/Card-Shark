@@ -39,6 +39,18 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Chair": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chair_005": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Couches": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Exterior Walls": {
 "generate/physics": true
 },

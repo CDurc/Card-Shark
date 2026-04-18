@@ -66,13 +66,22 @@ _subresources={
 "PATH:1 - PHYS/Ground_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Groundext": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Post": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Posts": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sign_015": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Staircol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stools": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Streetlight": {

@@ -160,6 +160,9 @@ _subresources={
 "PATH:1 - PHYS/Roof Hatch": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Signs": {
 "generate/physics": true,
 "physics/layer": 9,
