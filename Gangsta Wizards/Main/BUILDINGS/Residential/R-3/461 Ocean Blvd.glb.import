@@ -39,9 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/1st Floor": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/1st Floor Roof": {
 "generate/physics": true
 },
@@ -51,13 +48,28 @@ _subresources={
 "PATH:1 - PHYS/1st floor Balcony": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/2nd Floor": {
-"generate/physics": true
-},
 "PATH:1 - PHYS/2nd Floor Roof": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Beach House ROof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chimney": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Walls_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Garage Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Glass Door": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Grass": {
@@ -66,10 +78,19 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Pool House": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Streetlight_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

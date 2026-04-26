@@ -42,7 +42,31 @@ _subresources={
 "PATH:1 - PHYS/ATC Tower": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Airport Hotel?": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Auto Door_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Back Wall": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CT": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CT_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Canopy": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Canopy_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Drive": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/First Floor": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -57,16 +81,58 @@ _subresources={
 "PATH:1 - PHYS/Ground_003": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Helipad": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Jeff (Jet) Bridges": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Landing Strip": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Louver": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Monumental Sign": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pillars": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Pole": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Ramp": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Runway Signs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Second Floor": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Solid Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_002": {
 "generate/physics": true
 }
 }

@@ -54,6 +54,9 @@ _subresources={
 "PATH:1 - PHYS/Chinaville Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Concert Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Dice": {
 "generate/physics": true
 },

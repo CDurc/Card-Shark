@@ -87,6 +87,12 @@ _subresources={
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Tower": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tower_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
@@ -124,6 +130,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trunk_050": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/bILLBOARD": {
 "generate/physics": true
 }
 }

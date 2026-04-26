@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arc": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
@@ -60,6 +63,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Flr_002": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
