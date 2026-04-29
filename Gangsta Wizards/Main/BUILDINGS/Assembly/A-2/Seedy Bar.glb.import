@@ -66,6 +66,9 @@ _subresources={
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Shelf": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },

@@ -96,6 +96,9 @@ _subresources={
 "PATH:1 - PHYS/Sign Top_003": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sign_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Stand": {
 "generate/physics": true
 },

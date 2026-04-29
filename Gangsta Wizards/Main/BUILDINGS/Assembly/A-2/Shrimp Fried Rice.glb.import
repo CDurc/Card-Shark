@@ -51,7 +51,13 @@ _subresources={
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Fridge": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Picnic Table": {
@@ -70,6 +76,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Round Windows": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shelving": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sinks": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stove": {
 "generate/physics": true
 }
 }

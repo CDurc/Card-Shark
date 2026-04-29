@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Cylinder": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true
 },
@@ -64,6 +67,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sphere": {

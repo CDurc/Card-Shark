@@ -598,7 +598,7 @@ mesh = SubResource("BoxMesh_h2rlu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -251.136, 3.52, 295.073)
 
 [node name="Gourdtown Borders" parent="MAP" instance=ExtResource("69_titqe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.839, 0.347, 84.159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.839, 0.387, 84.159)
 
 [node name="Gourd Goals" type="Node3D" parent="MAP/Gourdtown Borders"]
 transform = Transform3D(0.994624, 0, -0.103556, 0, 1, 0, 0.103556, 0, 0.994624, -69.43957, 34.064682, -133.17375)
@@ -1673,7 +1673,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396688, 0, -0.9998793, 0, 1, 0, 0.9998793, 0, -0.008396688, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396687, 0, -0.9998792, 0, 1, 0, 0.9998792, 0, -0.008396687, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2098,7 +2098,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.093117364, 0, 0.99558043, 0, 0.999997, 0, -0.99558043, 0, 0.093117364, -207.88986, 0, -277.479)
+transform = Transform3D(0.09311736, 0, 0.9955803, 0, 0.999997, 0, -0.9955803, 0, 0.09311736, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2238,7 +2238,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240086, 0, -0.9973207, 0, 0.999997, 0, 0.9973207, 0, 0.07240086, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240085, 0, -0.9973206, 0, 0.999997, 0, 0.9973206, 0, 0.07240085, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3461,7 +3461,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.28
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681848, 0, 0.9999679, 0, 1, 0, -0.9999679, 0, -0.006681848, 14.412659, 0, -0.09630613)
+transform = Transform3D(-0.006681847, 0, 0.99996775, 0, 1, 0, -0.99996775, 0, -0.006681847, 14.412659, 0, -0.09630613)
 progress = 25.25
 
 [node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
@@ -3469,14 +3469,14 @@ transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0
 visible = false
 
 [node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681991, 0, 0.99997145, 0, 1, 0, -0.99997145, 0, -0.006681991, 7.6370945, 0, -0.051031478)
+transform = Transform3D(-0.00668199, 0, 0.99997133, 0, 1, 0, -0.99997133, 0, -0.00668199, 7.6370945, 0, -0.051031478)
 progress = 32.0
 
 [node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
 
 [node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0067525585, 0, 0.9999706, 0, 1, 0, -0.9999706, 0, -0.0067525585, -0.18115859, 0, 0.0014959713)
+transform = Transform3D(-0.0067525576, 0, 0.9999705, 0, 1, 0, -0.9999705, 0, -0.0067525576, -0.18115859, 0, 0.0014959713)
 progress = 40.2
 
 [node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]
