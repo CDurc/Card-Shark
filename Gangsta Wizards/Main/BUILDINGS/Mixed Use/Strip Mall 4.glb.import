@@ -48,6 +48,12 @@ _subresources={
 "PATH:1 - PHYS/Intcols": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/RTUs": {
 "generate/physics": true
 },

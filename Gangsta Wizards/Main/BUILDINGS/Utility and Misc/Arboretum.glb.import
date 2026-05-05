@@ -55,10 +55,22 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Palm Trees": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pine Tress": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign Top": {
 "generate/physics": true
 }
 }

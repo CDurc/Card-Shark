@@ -39,58 +39,58 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Billboard": {
+"PATH:1 - PHYS/Bases": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Cabin": {
+"PATH:1 - PHYS/Cars": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Car": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Car Body": {
+"PATH:1 - PHYS/Door": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Car Body_001": {
+"PATH:1 - PHYS/Ext Walls": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Car_001": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Fencecols": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Front Window": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Offices": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Light Pole": {
+"generate/physics": true
 },
-"PATH:1 - PHYS/Showroom": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Medians": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roof": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Service Doors": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stand_001": {
+"PATH:1 - PHYS/Tower": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Truck Body": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Wash & Service Center": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
 }
 }
 }

@@ -39,7 +39,19 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Chairs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Detector": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Gate": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -54,10 +66,46 @@ _subresources={
 "PATH:1 - PHYS/Overhang": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pnuematic System": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pot": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Roller Chairs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sink": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sofa": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sofa_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tables": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Toilet": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Valut": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

@@ -59,6 +59,9 @@ _subresources={
 "PATH:1 - PHYS/Int Walls_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_003": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true,
 "physics/layer": 9,

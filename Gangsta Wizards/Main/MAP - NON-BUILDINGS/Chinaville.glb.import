@@ -81,6 +81,9 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_009": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lake Bottom": {
 "generate/physics": true
 },
@@ -91,6 +94,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Posts_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Rocks": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top_003": {
@@ -109,6 +118,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Towers": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {

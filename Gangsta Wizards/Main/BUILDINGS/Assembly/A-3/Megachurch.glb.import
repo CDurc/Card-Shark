@@ -66,6 +66,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Locked Doors Two": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lotterys": {
 "generate/physics": true
 },

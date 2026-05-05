@@ -93,10 +93,16 @@ _subresources={
 "PATH:1 - PHYS/Homeless Camps": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/PathtoGt": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_005": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ramp2": {

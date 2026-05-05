@@ -54,6 +54,9 @@ _subresources={
 "PATH:1 - PHYS/Int Building": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lightning Rod": {
 "generate/physics": true
 },

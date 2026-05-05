@@ -74,6 +74,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/E Tower": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Exam Lights": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -98,6 +101,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/LV Pole_003": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true,

@@ -87,6 +87,9 @@ _subresources={
 "PATH:1 - PHYS/Jeff (Jet) Bridges": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Landing Strip": {
 "generate/physics": true
 },

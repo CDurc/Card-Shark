@@ -58,6 +58,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lights Ext": {
 "generate/physics": true
 },
@@ -65,6 +68,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/RTUs": {

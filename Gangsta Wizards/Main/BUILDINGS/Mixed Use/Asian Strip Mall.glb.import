@@ -48,13 +48,25 @@ _subresources={
 "PATH:1 - PHYS/4th Floor": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Front Doors": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ground Floor Windows": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Overhang": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roofs": {
 "generate/physics": true,

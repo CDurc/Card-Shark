@@ -57,7 +57,13 @@ _subresources={
 "PATH:1 - PHYS/Ground_002": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_003": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Pole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_002": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Rock": {

@@ -81,6 +81,9 @@ _subresources={
 "PATH:1 - PHYS/Center Post": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Light": {
 "generate/physics": true
 },
@@ -91,6 +94,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Railing": {

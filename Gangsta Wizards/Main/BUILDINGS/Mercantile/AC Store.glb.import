@@ -78,6 +78,9 @@ _subresources={
 "PATH:1 - PHYS/Inline Pump": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_004": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Louver": {
 "generate/physics": true
 },
@@ -88,6 +91,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/RTU": {
