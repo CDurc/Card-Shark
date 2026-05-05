@@ -27,7 +27,6 @@ health = 100
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 0.275791, -0.0723298)
-visible = false
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="Goblin_old" parent="." instance=ExtResource("2_wmgx7")]
