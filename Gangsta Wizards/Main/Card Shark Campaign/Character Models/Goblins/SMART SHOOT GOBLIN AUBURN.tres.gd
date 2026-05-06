@@ -15,6 +15,8 @@ extends CharacterBody3D
 @onready var bullet_spawn = self.get_node("spawn")
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/10d_money_drop.tscn")
 @onready var raycast = $RayCast
+@onready var anime1 = $Goblin/AnimationPlayer #Upper
+@onready var anime2 = $Goblin/AnimationPlayer2 #Lower
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -59,10 +61,6 @@ var rush = false
 
 
 
-#@onready var upper_anime        = $Goblin/ArmAnimation
-#@onready var lower_anime          = $Goblin/LegAnimation
-
-
 func _ready() -> void:
 	
 	if target == null:
@@ -90,7 +88,8 @@ func _physics_process(delta: float) -> void:
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
-			#l_anime.play("Walking") NOTE
+			anime1.play("Walking")
+			anime2.play("Walking Upper")
 			
 		if (target.global_transform.origin - global_transform.origin).length() < 35 and not attacking:
 			var aim_pos = target.get_node("CharacterCenter").global_position
@@ -208,6 +207,8 @@ var last_direction = Vector3.ZERO  # store direction of the first bullet
 
 func shoot():
 	# SLOW THE GOBBY AND ANIME
+	anime2.play("Attack")
+	await get_tree().create_timer(0.3).timeout
 	speed = speed / 4
 
 	for i in range(3):
