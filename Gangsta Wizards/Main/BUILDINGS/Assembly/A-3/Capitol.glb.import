@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Chips Arc": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cylinder": {
 "generate/physics": true,
 "physics/layer": 9,

@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Art": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube_001": {
 "generate/physics": true
 },

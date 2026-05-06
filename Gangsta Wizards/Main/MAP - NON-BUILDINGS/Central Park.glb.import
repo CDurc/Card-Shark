@@ -134,6 +134,9 @@ _subresources={
 },
 "PATH:1 - PHYS/bILLBOARD": {
 "generate/physics": true
+},
+"PATH:LV Pole_001": {
+"generate/physics": true
 }
 }
 }
