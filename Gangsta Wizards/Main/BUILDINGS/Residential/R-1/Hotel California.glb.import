@@ -42,7 +42,10 @@ _subresources={
 "PATH:1 - PHYS/Art": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Cube_001": {
+"PATH:1 - PHYS/Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ext Wa;;s": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -52,6 +55,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

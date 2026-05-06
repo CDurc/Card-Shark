@@ -57,10 +57,16 @@ _subresources={
 "PATH:1 - PHYS/Ground_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/LV Pole_008": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Lake Bottom": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lake Edges": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Power Box_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Riverbank": {

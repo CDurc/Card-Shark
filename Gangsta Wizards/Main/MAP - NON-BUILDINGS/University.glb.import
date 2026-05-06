@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
 "physics/layer": 11,
@@ -54,6 +57,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top": {
