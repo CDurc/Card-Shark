@@ -58,10 +58,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Piano": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Piano_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
@@ -76,10 +78,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stool": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Tables": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true
