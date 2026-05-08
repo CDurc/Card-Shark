@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dj2x826w57oec"
-path="res://.godot/imported/goblin_piss.glb-7c571f78ff4422d76ab254f305e4dcde.scn"
+uid="uid://bhflwbitso8aq"
+path="res://.godot/imported/goblin_nade.glb-da2d49a25a35f337788bc633aa6b59df.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_piss.glb"
-dest_files=["res://.godot/imported/goblin_piss.glb-7c571f78ff4422d76ab254f305e4dcde.scn"]
+source_file="res://ENEMIES/goblin_nade.glb"
+dest_files=["res://.godot/imported/goblin_nade.glb-da2d49a25a35f337788bc633aa6b59df.scn"]
 
 [params]
 

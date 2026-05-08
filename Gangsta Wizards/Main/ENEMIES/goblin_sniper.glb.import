@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://l3golunhdf4p"
-path="res://.godot/imported/goblin_ar.glb-52f6e477287f591970731eb94250296e.scn"
+uid="uid://dfq1qf00fyi4r"
+path="res://.godot/imported/goblin_sniper.glb-08d00a5f0170a4bf2905c7b41ebe1429.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_ar.glb"
-dest_files=["res://.godot/imported/goblin_ar.glb-52f6e477287f591970731eb94250296e.scn"]
+source_file="res://ENEMIES/goblin_sniper.glb"
+dest_files=["res://.godot/imported/goblin_sniper.glb-08d00a5f0170a4bf2905c7b41ebe1429.scn"]
 
 [params]
 

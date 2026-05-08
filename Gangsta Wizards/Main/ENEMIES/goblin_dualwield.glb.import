@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3n1vtveupgd0"
-path="res://.godot/imported/goblin_vandy.glb-69f5a17c0b8a0e46f67732b4fd3f64a9.scn"
+uid="uid://djs4bap83rvv2"
+path="res://.godot/imported/goblin_dualwield.glb-7608e825ab1c03883ec47a4093180508.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_vandy.glb"
-dest_files=["res://.godot/imported/goblin_vandy.glb-69f5a17c0b8a0e46f67732b4fd3f64a9.scn"]
+source_file="res://ENEMIES/goblin_dualwield.glb"
+dest_files=["res://.godot/imported/goblin_dualwield.glb-7608e825ab1c03883ec47a4093180508.scn"]
 
 [params]
 

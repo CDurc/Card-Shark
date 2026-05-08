@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bktba8rl5bnv5"
-path="res://.godot/imported/goblin_bama.glb-413b296673a011f97e59ba29825b0315.scn"
+uid="uid://cduujtmufwaow"
+path="res://.godot/imported/goblin_minigun.glb-ff733dc486d97c73c8fd96ee86953056.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_bama.glb"
-dest_files=["res://.godot/imported/goblin_bama.glb-413b296673a011f97e59ba29825b0315.scn"]
+source_file="res://ENEMIES/goblin_minigun.glb"
+dest_files=["res://.godot/imported/goblin_minigun.glb-ff733dc486d97c73c8fd96ee86953056.scn"]
 
 [params]
 

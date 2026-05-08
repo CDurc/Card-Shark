@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c22yrg1ukwr6h"
-path="res://.godot/imported/goblin_ttun.glb-03224761636fe21252b0c85fe369fffa.scn"
+uid="uid://ckd5ejo3j56ff"
+path="res://.godot/imported/goblin_rifle.glb-dc7b0e7b4631adc71128befcbbc3052d.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_ttun.glb"
-dest_files=["res://.godot/imported/goblin_ttun.glb-03224761636fe21252b0c85fe369fffa.scn"]
+source_file="res://ENEMIES/goblin_rifle.glb"
+dest_files=["res://.godot/imported/goblin_rifle.glb-dc7b0e7b4631adc71128befcbbc3052d.scn"]
 
 [params]
 

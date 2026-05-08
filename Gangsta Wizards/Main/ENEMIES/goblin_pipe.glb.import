@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c0hh1fsdj64ln"
-path="res://.godot/imported/goblin_dawg.glb-3ceeb52f22a0f54255c5cbcebf603d90.scn"
+uid="uid://dq4h700r06emu"
+path="res://.godot/imported/goblin_pipe.glb-a2b47055978c86b5b8e2e27903876623.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_dawg.glb"
-dest_files=["res://.godot/imported/goblin_dawg.glb-3ceeb52f22a0f54255c5cbcebf603d90.scn"]
+source_file="res://ENEMIES/goblin_pipe.glb"
+dest_files=["res://.godot/imported/goblin_pipe.glb-a2b47055978c86b5b8e2e27903876623.scn"]
 
 [params]
 

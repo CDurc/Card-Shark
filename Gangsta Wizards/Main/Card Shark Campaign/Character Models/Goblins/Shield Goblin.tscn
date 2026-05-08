@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cj6gobo5bn6ft"]
 
 [ext_resource type="Script" uid="uid://ddq3kmf2gkrp2" path="res://Card Shark Campaign/Character Models/Goblins/shield_goblin.gd" id="1_e6gui"]
-[ext_resource type="PackedScene" uid="uid://bjnxgixnuiey6" path="res://ENEMIES/goblin_17.glb" id="3_cu3tk"]
+[ext_resource type="PackedScene" uid="uid://b5x12jxl17nai" path="res://ENEMIES/goblin_shield.glb" id="3_cu3tk"]
 [ext_resource type="PackedScene" uid="uid://xcjwo6ivovp6" path="res://WEAPONS/Sword.glb" id="4_8w2f5"]
 [ext_resource type="Script" uid="uid://ywturtvcuo0m" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_ekbqy"]
 [ext_resource type="PackedScene" uid="uid://cllewifklam37" path="res://WEAPONS/Shield.glb" id="5_y4b5f"]

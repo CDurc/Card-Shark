@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cm747ckoxvhvb"
-path="res://.godot/imported/goblin_zou.glb-5ff628ba2fe71572aace7b9868a472c0.scn"
+uid="uid://x23rsfccgsxf"
+path="res://.godot/imported/goblin_roll.glb-3b5e6f45f14f71b2594538bbdd973799.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_zou.glb"
-dest_files=["res://.godot/imported/goblin_zou.glb-5ff628ba2fe71572aace7b9868a472c0.scn"]
+source_file="res://ENEMIES/goblin_roll.glb"
+dest_files=["res://.godot/imported/goblin_roll.glb-3b5e6f45f14f71b2594538bbdd973799.scn"]
 
 [params]
 

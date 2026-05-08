@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://clu4n5apv1qer"
-path="res://.godot/imported/goblin_lsu.glb-fa86fea31fbf7e9b61030e24cda3f12d.scn"
+uid="uid://mtjqsnq3eokd"
+path="res://.godot/imported/goblin_flame.glb-eb8006f058c0d8fb535f842968ac748a.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_lsu.glb"
-dest_files=["res://.godot/imported/goblin_lsu.glb-fa86fea31fbf7e9b61030e24cda3f12d.scn"]
+source_file="res://ENEMIES/goblin_flame.glb"
+dest_files=["res://.godot/imported/goblin_flame.glb-eb8006f058c0d8fb535f842968ac748a.scn"]
 
 [params]
 

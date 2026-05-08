@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cmkpbaywk7d10"
-path="res://.godot/imported/goblin_uk.glb-e9666270ca103ed0a8979b839d2f6c0e.scn"
+uid="uid://b5x12jxl17nai"
+path="res://.godot/imported/goblin_shield.glb-f75a8cfa298bba87a03fd3242d249db1.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_uk.glb"
-dest_files=["res://.godot/imported/goblin_uk.glb-e9666270ca103ed0a8979b839d2f6c0e.scn"]
+source_file="res://ENEMIES/goblin_shield.glb"
+dest_files=["res://.godot/imported/goblin_shield.glb-f75a8cfa298bba87a03fd3242d249db1.scn"]
 
 [params]
 

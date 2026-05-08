@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6m4wrl3es568"
-path="res://.godot/imported/goblin_tamu.glb-f48f62168fb71eaf2345941c649b9a2c.scn"
+uid="uid://oxlht47jyi5o"
+path="res://.godot/imported/goblin_sneak.glb-2e4cca8432f5088de28f145b582109b0.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_tamu.glb"
-dest_files=["res://.godot/imported/goblin_tamu.glb-f48f62168fb71eaf2345941c649b9a2c.scn"]
+source_file="res://ENEMIES/goblin_sneak.glb"
+dest_files=["res://.godot/imported/goblin_sneak.glb-2e4cca8432f5088de28f145b582109b0.scn"]
 
 [params]
 

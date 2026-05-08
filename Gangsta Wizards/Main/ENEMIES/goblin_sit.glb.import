@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://o6jaotmy1yql"
-path="res://.godot/imported/goblin_cocks.glb-e91ef16f38d86f92e1528ee176d3216a.scn"
+uid="uid://nwcct527idh"
+path="res://.godot/imported/goblin_sit.glb-97e9521151ec477b4f632b57344c25f1.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_cocks.glb"
-dest_files=["res://.godot/imported/goblin_cocks.glb-e91ef16f38d86f92e1528ee176d3216a.scn"]
+source_file="res://ENEMIES/goblin_sit.glb"
+dest_files=["res://.godot/imported/goblin_sit.glb-97e9521151ec477b4f632b57344c25f1.scn"]
 
 [params]
 

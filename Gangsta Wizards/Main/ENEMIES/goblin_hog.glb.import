@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://iq5e7mhgg8dn"
-path="res://.godot/imported/goblin_tx.glb-78fa652dff1963b07e4967a7872ba1b9.scn"
+uid="uid://6v2rbnjh6dck"
+path="res://.godot/imported/goblin_hog.glb-fd7056e2b4242bdfd7599870b7010a3c.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_tx.glb"
-dest_files=["res://.godot/imported/goblin_tx.glb-78fa652dff1963b07e4967a7872ba1b9.scn"]
+source_file="res://ENEMIES/goblin_hog.glb"
+dest_files=["res://.godot/imported/goblin_hog.glb-fd7056e2b4242bdfd7599870b7010a3c.scn"]
 
 [params]
 

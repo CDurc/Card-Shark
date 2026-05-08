@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cq34sijgb5s5o"
-path="res://.godot/imported/goblin_burn.glb-2f917b7e4d710bcd2e572d36f7101dc9.scn"
+uid="uid://doyqn27mypi64"
+path="res://.godot/imported/goblin_jump.glb-73785fbe7cda64afb880ea721ea56774.scn"
 
 [deps]
 
-source_file="res://ENEMIES/goblin_burn.glb"
-dest_files=["res://.godot/imported/goblin_burn.glb-2f917b7e4d710bcd2e572d36f7101dc9.scn"]
+source_file="res://ENEMIES/goblin_jump.glb"
+dest_files=["res://.godot/imported/goblin_jump.glb-73785fbe7cda64afb880ea721ea56774.scn"]
 
 [params]
 
