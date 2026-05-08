@@ -47,7 +47,7 @@ var attacking       = false
 
 
 #@onready var damaged_bodies = area3D.damaged_bodies
-@onready var a_anime          = $"Mountain King2/AnimationPlayer2"
+@onready var a_anime          = $"Mountain King2/AnimationPlayer"
 @onready var l_anime          = $Goblin/LegAnimation
 
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bewbp6k6sour4"
+path="res://.godot/imported/Gary_Talk_4.wav-2b000eb3ce8dff02d3032764247cbed9.sample"
+
+[deps]
+
+source_file="res://SOUND EFFECTS & VOICE LINES/NPC - Non-Dialogue Boxes/Gary_Talk_4.wav"
+dest_files=["res://.godot/imported/Gary_Talk_4.wav-2b000eb3ce8dff02d3032764247cbed9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -43,7 +43,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Booth": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/CUs": {
 "generate/physics": true

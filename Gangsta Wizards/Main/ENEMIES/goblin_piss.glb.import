@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://clt832ypbhik8"
-path="res://.godot/imported/Gary.glb-b9bb0eb33cac54029a5c8d3dc202cfe1.scn"
+uid="uid://dj2x826w57oec"
+path="res://.godot/imported/goblin_piss.glb-7c571f78ff4422d76ab254f305e4dcde.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Gary.glb"
-dest_files=["res://.godot/imported/Gary.glb-b9bb0eb33cac54029a5c8d3dc202cfe1.scn"]
+source_file="res://ENEMIES/goblin_piss.glb"
+dest_files=["res://.godot/imported/goblin_piss.glb-7c571f78ff4422d76ab254f305e4dcde.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

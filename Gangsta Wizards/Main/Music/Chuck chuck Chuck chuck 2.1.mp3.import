@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cis4fatlrhiby"
+path="res://.godot/imported/Chuck chuck Chuck chuck 2.1.mp3-f050f8a52f9bd45c6ed02436acb05f0d.mp3str"
+
+[deps]
+
+source_file="res://Music/Chuck chuck Chuck chuck 2.1.mp3"
+dest_files=["res://.godot/imported/Chuck chuck Chuck chuck 2.1.mp3-f050f8a52f9bd45c6ed02436acb05f0d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

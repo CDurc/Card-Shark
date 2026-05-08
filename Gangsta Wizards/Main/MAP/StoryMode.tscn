@@ -1,4 +1,4 @@
-[gd_scene load_steps=249 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=251 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -202,11 +202,13 @@
 [ext_resource type="Resource" uid="uid://bdy87x6oeac3x" path="res://Dialogue/Test_d.tres" id="203_0jm8y"]
 [ext_resource type="PackedScene" uid="uid://c7jo0hr2jat3a" path="res://CHARACTERS/Misc/blue_crab.tscn" id="204_4g8jr"]
 [ext_resource type="Script" uid="uid://b0iue53t8yk00" path="res://Dialogue/Dialogue_creater.gd" id="204_h2rlu"]
+[ext_resource type="Script" uid="uid://drgda1aj6rge3" path="res://CHARACTERS/Beach People/Gary Goals.gd" id="204_m4epl"]
 [ext_resource type="Resource" uid="uid://cr7owrmsct8bo" path="res://Dialogue/D1.tres" id="205_4g8jr"]
 [ext_resource type="PackedScene" uid="uid://dhy623sg8h50c" path="res://Shaders/Skybeam.tscn" id="205_dmcx1"]
 [ext_resource type="Material" uid="uid://b2mouql1r5psp" path="res://Shaders/Skybeam Surface Mats/LB Green.tres" id="206_dmcx1"]
 [ext_resource type="PackedScene" uid="uid://bj1yj1c3ixsvg" path="res://VEHICLES/SubwayCar_0.glb" id="207_kibu0"]
 [ext_resource type="Material" uid="uid://dtjwjgflef78v" path="res://Shaders/Skybeam Surface Mats/Pink-purp.tres" id="207_ofgt5"]
+[ext_resource type="PackedScene" uid="uid://dkgk5ml87o86" path="res://CHARACTERS/Beach People/gary.tscn" id="208_38f6n"]
 [ext_resource type="PackedScene" uid="uid://dx3lnew1y7o4l" path="res://VEHICLES/SubwayCar_1.glb" id="208_ywsmc"]
 [ext_resource type="PackedScene" uid="uid://clhopeidoahji" path="res://VEHICLES/SubwayCar_2.glb" id="209_m4epl"]
 [ext_resource type="PackedScene" uid="uid://b3rccv8tscny6" path="res://VEHICLES/SubwayCar_3.glb" id="210_38f6n"]
@@ -1672,7 +1674,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396681, 0, -0.9998786, 0, 1, 0, 0.9998786, 0, -0.008396681, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.00839668, 0, -0.99987835, 0, 1, 0, 0.99987835, 0, -0.00839668, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2097,7 +2099,7 @@ transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -2.98023e-08, 0, 1, 0.482605
 shape = SubResource("BoxShape3D_jxx7n")
 
 [node name="BoxTruck2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.0931173, 0, 0.9955797, 0, 0.999997, 0, -0.9955797, 0, 0.0931173, -207.88986, 0, -277.479)
+transform = Transform3D(0.093117274, 0, 0.9955795, 0, 0.999997, 0, -0.9955795, 0, 0.093117274, -207.88986, 0, -277.479)
 progress = 1703.88
 script = ExtResource("99_1skxp")
 mps = -60
@@ -2237,7 +2239,7 @@ transform = Transform3D(1, 0, 5.06639e-07, 0, 1, 0, 0, 0, 1, -1.20578, 0.651421,
 shape = SubResource("BoxShape3D_yhb8o")
 
 [node name="BoxTruck Reg2" type="PathFollow3D" parent="Cars/Cars/Slow Lane"]
-transform = Transform3D(0.07240081, 0, -0.99732, 0, 0.999997, 0, 0.99732, 0, 0.07240081, 222.65828, 0, -3.795718)
+transform = Transform3D(0.07240079, 0, -0.99731976, 0, 0.999997, 0, 0.99731976, 0, 0.07240079, 222.65828, 0, -3.795718)
 progress = 234.53
 script = ExtResource("99_1skxp")
 mps = -60
@@ -3428,6 +3430,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.652161, -2.0777836, 25.09
 [node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/CrabGoals/G4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
 
+[node name="GaryGoals" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.413216, 3.082966, 201.43942)
+script = ExtResource("204_m4epl")
+
+[node name="G0" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/GaryGoals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6138687, 0.020733595, -23.794403)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/GaryGoals/G0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
+[node name="G1" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/GaryGoals"]
+transform = Transform3D(-0.47485647, 0, -0.88006324, 0, 1, 0, 0.88006324, 0, -0.47485647, -18.58811, 0.020733595, -41.298344)
+
+[node name="look" type="Node3D" parent="BeachNav/NavigationRegion3D/Beach/GaryGoals/G1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.69174194)
+
 [node name="RedCrab" parent="BeachNav/NavigationRegion3D/Beach" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("202_fwwy5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.33922, 3.2086205, 194.51857)
 NPC_goals = NodePath("../CrabGoals")
@@ -3452,6 +3470,10 @@ transform = Transform3D(0.9983379, 0, 0.05763373, -0.040753204, 0.70710677, 0.70
 [node name="RayCast3D" type="RayCast3D" parent="BeachNav/NavigationRegion3D/Beach/BlueCrab/Cam0"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
+[node name="Gary" parent="BeachNav/NavigationRegion3D" node_paths=PackedStringArray("NPC_goals") instance=ExtResource("208_38f6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.87669, 2.781389, 349.0741)
+NPC_goals = NodePath("../Beach/GaryGoals")
+
 [node name="Subway" type="Node3D" parent="."]
 transform = Transform3D(0.6565068, 0, -0.75432014, 0, 1, 0, 0.75432014, 0, 0.6565068, 151.20982, -28.001785, 70.40801)
 
@@ -3460,7 +3482,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.28
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0066818427, 0, 0.99996716, 0, 1, 0, -0.99996716, 0, -0.0066818427, 14.412659, 0, -0.09630613)
+transform = Transform3D(-0.0066818413, 0, 0.9999669, 0, 1, 0, -0.9999669, 0, -0.0066818413, 14.412659, 0, -0.09630613)
 progress = 25.25
 
 [node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
@@ -3468,14 +3490,14 @@ transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0
 visible = false
 
 [node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681986, 0, 0.99997073, 0, 1, 0, -0.99997073, 0, -0.006681986, 7.6370945, 0, -0.051031478)
+transform = Transform3D(-0.0066819843, 0, 0.9999705, 0, 1, 0, -0.9999705, 0, -0.0066819843, 7.6370945, 0, -0.051031478)
 progress = 32.0
 
 [node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
 
 [node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006752554, 0, 0.9999699, 0, 1, 0, -0.9999699, 0, -0.006752554, -0.18115859, 0, 0.0014959713)
+transform = Transform3D(-0.006752552, 0, 0.99996966, 0, 1, 0, -0.99996966, 0, -0.006752552, -0.18115859, 0, 0.0014959713)
 progress = 40.2
 
 [node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]
