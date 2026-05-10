@@ -14,15 +14,12 @@ var goals = [
 func loiter(node, body):
 	var wait_time = randf_range(5,10)
 	await get_tree().create_timer(wait_time).timeout
-	print("loiter done")
 
 func jump_loiter(node, body):
 	var jumps = randf_range(3,6)
 	for jump in range(jumps):
-		print("jump")
 		body.jump()
 		await get_tree().create_timer(2.0).timeout
-	print("loiter done")
 
 func rand_jump_loiter(node, body):
 	var id = randi_range(1,2)

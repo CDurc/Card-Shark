@@ -22,10 +22,14 @@ func sleep(node, body):
 	old_collider.disabled = true
 	new_collider.disabled = false
 	
-	var wait_time = randf_range(10,15)
-	await get_tree().create_timer(wait_time).timeout
+	var wait_time = randf_range(20,40)
+	
+	var wait_cycles = floor(wait_time/2.6)
+	for cycle in range(0,wait_cycles):
+		anime.play("Sleep - Idle")
+		await get_tree().create_timer(2.6).timeout
+	
 	old_collider.disabled = false
 	new_collider.disabled = true
 	anime.play("Wake Up")
 	await anime.animation_finished
-	

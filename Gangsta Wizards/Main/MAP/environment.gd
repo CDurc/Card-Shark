@@ -46,4 +46,4 @@ func _process(delta: float) -> void:
 		#print("energy is ", energy)
 		#print("time is ", time)
 		print_timer = 0
-		print("sunlight is ", sunlight)
+		#print("sunlight is ", sunlight)

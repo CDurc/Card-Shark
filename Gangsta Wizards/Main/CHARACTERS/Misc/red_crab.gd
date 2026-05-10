@@ -61,7 +61,6 @@ func consult_goals():
 	var available = goals.filter(func(g): return g["open"])
 	if available.size() == 0:
 		state = "idle"
-		print(name + " found no open goals.")
 		return
 	# Pick one — first available for now, could be random or weighted later
 	var chosen = available[randi() % available.size()]
@@ -72,7 +71,6 @@ func claim_goal(goal: Dictionary):
 	goal["assignedTo"] = name
 	current_goal = goal
 	move_to(NPC_goals.get_node(goal["path"]).global_position)
-	print(name + " claimed goal " + str(goal["id"]))
 
 func finish_goal():
 	if current_goal != null:
@@ -82,7 +80,6 @@ func finish_goal():
 		current_goal = null
 		get_tree().create_timer(3.0).timeout.connect(func(): old_goal["open"] = true)
 	state = "idle"
-	print(name + " finished their goal.")
 	await get_tree().create_timer(1.0).timeout
 	consult_goals()
 
@@ -91,7 +88,6 @@ func check_if_stuck(delta: float):
 	if distance_moved < stuck_distance_threshold * delta:
 		time_since_moved += delta
 		if time_since_moved >= stuck_threshold:
-			print("Stuck! Jumping...")
 			jump()
 			time_since_moved = 0.0
 	else:
@@ -131,8 +127,6 @@ func _delayed_task_runner(delay_time: float, goal) -> void:
 	finish_goal()
 
 func jump():
-	print("jump attempt")
 	if is_on_floor():
-		print("jumped")
 		velocity.y = jump_force
 		is_jumping = true
