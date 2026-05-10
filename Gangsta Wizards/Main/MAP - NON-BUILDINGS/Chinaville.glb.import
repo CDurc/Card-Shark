@@ -45,10 +45,16 @@ _subresources={
 "PATH:1 - PHYS/Arch_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/BillboardBack_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Chinaville Ground": {
@@ -115,6 +121,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_003": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Towers": {

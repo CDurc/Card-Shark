@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Arch_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Glass": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -71,6 +74,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
 "generate/physics": true
 }
 }

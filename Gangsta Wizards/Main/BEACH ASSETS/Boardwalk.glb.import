@@ -45,7 +45,13 @@ _subresources={
 "PATH:1 - PHYS/Bar": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Base": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Bench": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Body_002": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Boxes": {
@@ -55,6 +61,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/CUs": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Conc Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Flagstand": {
@@ -75,13 +84,19 @@ _subresources={
 "PATH:1 - PHYS/Lamppost": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Lid": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Overhang": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Railing": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Stairscol": {
+"PATH:1 - PHYS/Sphere": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stand": {

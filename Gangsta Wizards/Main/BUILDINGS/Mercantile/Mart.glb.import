@@ -39,6 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/BillboardBack": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -70,6 +79,18 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_001": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,

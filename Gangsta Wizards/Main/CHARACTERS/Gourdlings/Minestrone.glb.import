@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://w6ihy2aq82pg"
-path="res://.godot/imported/Beach Restrooms.glb-4eb9609699b14dc9b0565732e19ce7c8.scn"
+uid="uid://3cnqyedyb2ur"
+path="res://.godot/imported/Minestrone.glb-e38ca403469d98de7da187e00bab858d.scn"
 
 [deps]
 
-source_file="res://BEACH ASSETS/Beach Restrooms.glb"
-dest_files=["res://.godot/imported/Beach Restrooms.glb-4eb9609699b14dc9b0565732e19ce7c8.scn"]
+source_file="res://CHARACTERS/Gourdlings/Minestrone.glb"
+dest_files=["res://.godot/imported/Minestrone.glb-e38ca403469d98de7da187e00bab858d.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1
