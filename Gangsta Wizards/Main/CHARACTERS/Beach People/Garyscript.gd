@@ -1,4 +1,4 @@
-#Ambient Talking NPC Generic
+#GARY SCRIPT NPC
 extends CharacterBody3D
 @export var speed: float = 2.0
 @export var gravity: float = 9.8
@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var stuck_threshold: float = 0.5
 @export var stuck_distance_threshold: float = 0.3
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var collider = $CollisionShape3D
+#@onready var collider = $collider
 @export var NPC_goals: Node3D
 @export var anime: AnimationPlayer  #Lower walking
 @export var anime2: AnimationPlayer #Upper walking, talking, etc
@@ -53,7 +53,7 @@ func _physics_process(delta):
 			move_and_slide()
 			if current_goal != null and current_goal["action"] != null:
 				state = "turning_to_task"
-				call_deferred("_delayed_task_runner", 0.5, current_goal)
+				call_deferred("_delayed_task_runner", 1, current_goal)
 			else:
 				finish_goal()
 
@@ -168,6 +168,15 @@ func rotate_toward_direction(direction: Vector3, delta: float):
 	rotation.y = lerp_angle(current_yaw, desired_yaw, turn_speed * delta)
 
 func _delayed_task_runner(delay_time: float, goal) -> void:
+	
+	#Move NPC to exact position
+	var target = NPC_goals.get_node(goal["path"])
+	var tween = create_tween().set_parallel()
+	tween.tween_property(self, "global_position:x", target.global_position.x, 0.5)
+	tween.tween_property(self, "global_position:z", target.global_position.z, 0.5)
+	#await tween.finished
+	
+	#Wait a bit for turn to finish
 	await get_tree().create_timer(delay_time).timeout
 	if goal != current_goal:
 		return
