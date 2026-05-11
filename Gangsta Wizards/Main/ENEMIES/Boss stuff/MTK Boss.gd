@@ -44,6 +44,12 @@ var knockback_t   := 0.0
 var player
 var destroyed       := false
 var attacking       = false
+var YMCA_dir
+
+var state = "attacking"
+#attacking : Runs at player and swings
+#YMCA : 
+#busy : disable movement and attacking
 
 
 #@onready var damaged_bodies = area3D.damaged_bodies
@@ -59,6 +65,9 @@ func _ready() -> void:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
 
+	await get_tree().create_timer(8).timeout
+	
+	YMCA()
 
 func _physics_process(delta: float) -> void:
 	if not target:
@@ -69,7 +78,7 @@ func _physics_process(delta: float) -> void:
 		velocity = knockback_v
 		move_and_slide()
 		knockback_t -= delta
-	elif can_move:
+	elif can_move and state == "attacking":
 		
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
@@ -134,6 +143,10 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
+	elif can_move and state == "YMCA":
+		velocity = YMCA_dir * 20.0
+		move_and_slide()
+
 func jump():
 	#jumping = true
 	velocity.y = jump_force
@@ -141,6 +154,17 @@ func jump():
 	#await get_tree().create_timer(0.5).timeout
 	#jumping = false
 
+func YMCA():
+	print("YMCA GO")
+	state = "busy"
+	for i in range(0,4):
+		YMCA_dir = target.global_position - global_position
+		YMCA_dir.y = 0
+		YMCA_dir = YMCA_dir.normalized()
+		state = "YMCA"
+		await get_tree().create_timer(2).timeout
+		state = "busy"
+	state = "attacking"
 
 func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")

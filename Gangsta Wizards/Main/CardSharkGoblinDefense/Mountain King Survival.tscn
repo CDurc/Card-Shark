@@ -140,7 +140,7 @@ affect_navigation_mesh = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.789, 0)
 
 [node name="MTK" parent="NavMap/LargeNav" instance=ExtResource("3_827m0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83969665, 9.588792, 6.5758266)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3238163, 9.588792, 6.5758266)
 
 [node name="SmallNav" type="NavigationRegion3D" parent="NavMap"]
 navigation_mesh = SubResource("NavigationMesh_ntpda")
