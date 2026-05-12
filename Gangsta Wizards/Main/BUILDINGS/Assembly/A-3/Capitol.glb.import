@@ -48,12 +48,18 @@ _subresources={
 "PATH:1 - PHYS/Chips Arc": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Chuck Statue": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cylinder": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Erik Statue": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Flagpole": {

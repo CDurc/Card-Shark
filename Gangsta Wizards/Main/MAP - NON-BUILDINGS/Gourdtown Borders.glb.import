@@ -93,6 +93,9 @@ _subresources={
 "PATH:1 - PHYS/Homeless Camps": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Joel Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/LV Pole": {
 "generate/physics": true
 },

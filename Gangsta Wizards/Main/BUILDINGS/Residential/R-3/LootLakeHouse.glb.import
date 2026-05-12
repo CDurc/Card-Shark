@@ -42,16 +42,28 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/House": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Ramps": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Rock": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Rock_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Towers": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Tree": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tree_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Trunk_003": {
 "generate/physics": true
 }
 }

@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/BillboardBack_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
@@ -72,7 +75,13 @@ _subresources={
 "PATH:1 - PHYS/Sign Top": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Sign_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Stand": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stand_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Streetlight": {
