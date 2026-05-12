@@ -53,8 +53,8 @@ var state = "attacking"
 
 
 #@onready var damaged_bodies = area3D.damaged_bodies
-@onready var a_anime          = $"Mountain King2/AnimationPlayer"
-@onready var l_anime          = $Goblin/LegAnimation
+@onready var upper_anime          = $"Mountain King2/Upper"
+@onready var lower_anime          = $"Mountain King2/Lower"
 
 
 func _ready() -> void:
@@ -81,11 +81,11 @@ func _physics_process(delta: float) -> void:
 	elif can_move and state == "attacking":
 		
 
-		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
+		if (target.global_transform.origin - nav_agent.target_position).length() > 3:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
-			a_anime.play("Walking Lower")
+			lower_anime.play("Walking Lower")
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
+		if (target.global_transform.origin - global_transform.origin).length() < 5 and not attacking:
 			attack()
 
 		if nav_agent.is_navigation_finished():
@@ -144,7 +144,14 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 	elif can_move and state == "YMCA":
-		velocity = YMCA_dir * 20.0
+		velocity.x = YMCA_dir.x * 20.0
+		velocity.z = YMCA_dir.z * 20.0
+		if is_on_floor():
+			if velocity.y <= 0.0:
+				velocity.y = 0
+		else:
+			velocity.y -= gravity * delta
+			
 		move_and_slide()
 
 func jump():
@@ -154,15 +161,18 @@ func jump():
 	#await get_tree().create_timer(0.5).timeout
 	#jumping = false
 
+var ordered_YMCA_animes = ["Stone Freeze Pose Y", "Stone Freeze Pose M", "Stone Freeze Pose C", "Stone Freeze Pose A"]
 func YMCA():
 	print("YMCA GO")
 	state = "busy"
 	for i in range(0,4):
+		upper_anime.play(ordered_YMCA_animes[i])
+		await upper_anime.animation_finished
 		YMCA_dir = target.global_position - global_position
 		YMCA_dir.y = 0
 		YMCA_dir = YMCA_dir.normalized()
 		state = "YMCA"
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(1).timeout
 		state = "busy"
 	state = "attacking"
 
@@ -191,11 +201,9 @@ func _on_healthbar_timer_timeout():
 
 func attack():
 	attacking = true
-#	a_anime.stop()
-#	a_anime.play("Attack")
+	upper_anime.play("Swing - Side")
 	await get_tree().create_timer(0.9).timeout
 	print("MTK ATTACK SWING")
-
 	damaging = true
 	#monitor = true
 	#area3D.overlap_check()
