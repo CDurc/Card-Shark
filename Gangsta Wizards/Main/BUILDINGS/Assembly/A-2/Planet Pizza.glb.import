@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Dumpster": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Entrance": {
 "generate/physics": true
 },

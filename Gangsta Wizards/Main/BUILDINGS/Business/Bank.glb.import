@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Detector": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
 "physics/layer": 9,

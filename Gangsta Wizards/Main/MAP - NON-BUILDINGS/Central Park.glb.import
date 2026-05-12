@@ -54,6 +54,9 @@ _subresources={
 "PATH:1 - PHYS/Dead Trees": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Glowing Rocks": {
 "generate/physics": true
 },

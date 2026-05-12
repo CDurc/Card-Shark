@@ -51,6 +51,9 @@ _subresources={
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
@@ -103,6 +106,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Supports_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Supports_003": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/TikiSigns": {

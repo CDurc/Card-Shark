@@ -39,6 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bed_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Chair Bed": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Closets": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -53,6 +62,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Desk": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
@@ -69,15 +81,39 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Kitchen Eqpt": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Locked Doors": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/PRVU": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Pool": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Roof2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sofas": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Truck0": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Truck2": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/VRF": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Windows": {
 "generate/physics": true
 }
 }

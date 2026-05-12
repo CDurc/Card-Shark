@@ -45,6 +45,15 @@ _subresources={
 "PATH:1 - PHYS/ElevTube": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elevated Hydrant_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Elevated Hydrant_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Floors": {
 "generate/physics": true
 },

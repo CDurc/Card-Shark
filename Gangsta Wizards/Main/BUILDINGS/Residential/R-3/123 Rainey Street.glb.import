@@ -44,6 +44,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Exterior Walls": {
 "generate/physics": true,
 "physics/layer": 9,
