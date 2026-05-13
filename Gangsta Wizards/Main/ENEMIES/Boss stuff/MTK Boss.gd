@@ -1,4 +1,4 @@
-#MTK
+#MTK  k
 extends CharacterBody3D
 
 @export var avg_speed: float		# horizontal move speed
