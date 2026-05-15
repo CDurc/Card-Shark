@@ -40,7 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/CUs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/First Floors Ext": {
 "generate/physics": true
@@ -64,16 +65,21 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Skylight": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Steel Supports": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Third Floor": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Plmg Vents": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

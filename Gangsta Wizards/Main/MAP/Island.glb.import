@@ -70,7 +70,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/LuckyLnPosts": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/MAIN ROAD": {
 "generate/physics": true
@@ -112,7 +113,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Seafloor": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 50.0
 }
 }
 }

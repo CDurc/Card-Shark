@@ -46,6 +46,7 @@ _subresources={
 },
 "PATH:1 - PHYS/Ceiling": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -66,6 +67,7 @@ _subresources={
 },
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -75,12 +77,31 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Sidewalkcol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Grid": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Sidewalk": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Signs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Tables and Chairs": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Tape_003": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

@@ -45,10 +45,12 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Chair": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Chair_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Driveway": {
 "generate/physics": true,
@@ -72,10 +74,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Glass Table": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Grill": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
@@ -91,7 +95,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Planter": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
@@ -99,10 +104,12 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Streetlight": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Table": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
@@ -111,6 +118,18 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Bracing": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Lantern": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Pizza": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Shrub": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

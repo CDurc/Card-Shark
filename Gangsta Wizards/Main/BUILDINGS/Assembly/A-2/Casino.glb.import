@@ -55,13 +55,16 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Fencecols": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Piping": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Ramparts": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Spade Island_001": {
 "generate/physics": true
@@ -70,7 +73,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Spotlights": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true
@@ -85,7 +89,23 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Clover_001": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Fences": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Parking Lot Lines": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Piping Supports": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Signs": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

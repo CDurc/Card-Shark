@@ -39,11 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Deck": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
 "PATH:1 - PHYS/Foundation": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -57,6 +52,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/PRVU": {
+"mesh_instance/visibility_range_end": 400.0
+},
 "PATH:1 - PHYS/RTUs": {
 "generate/physics": true
 },
@@ -65,10 +63,14 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
-"PATH:1 - PHYS/Supports": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"PATH:1 - PHYS/Spotlight": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:1 - PHYS/Staircol": {
+"mesh_instance/visibility_range_end": 1.0
+},
+"PATH:1 - PHYS/Tablecols": {
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
@@ -77,8 +79,18 @@ _subresources={
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Supports": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Wall Light_003": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

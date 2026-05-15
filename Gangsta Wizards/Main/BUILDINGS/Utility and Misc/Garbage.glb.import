@@ -49,25 +49,37 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ramp": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Scrapcol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Sign_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stairscol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/TrashPile": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true
+},
+"PATH:2 - MANUAL/Railing": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Light": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Step": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

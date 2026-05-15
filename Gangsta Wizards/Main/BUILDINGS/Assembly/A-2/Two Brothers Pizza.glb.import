@@ -47,14 +47,17 @@ _subresources={
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Light Posts": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/PRVU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTU": {
 "generate/physics": true
@@ -73,7 +76,14 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Wires_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Roof Hatch": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

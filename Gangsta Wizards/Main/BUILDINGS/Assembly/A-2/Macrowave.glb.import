@@ -40,7 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/CU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Chair": {
 "generate/physics": true
@@ -49,7 +50,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Fridges": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
@@ -58,10 +60,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lamps": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Lectern": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Macrowave Outer": {
 "generate/physics": true
@@ -70,19 +74,23 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/RR": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ropes": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Rotators": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Sink": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Table_022": {
 "generate/physics": true
@@ -91,7 +99,23 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turntable": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:2 - MANUAL/Grid": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/2x2 Light": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Buttons": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/RR Sign": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

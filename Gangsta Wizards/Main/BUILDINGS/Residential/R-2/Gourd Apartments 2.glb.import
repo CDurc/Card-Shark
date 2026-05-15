@@ -40,7 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Elev Shaft": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
@@ -80,6 +81,15 @@ _subresources={
 },
 "PATH:1 - PHYS/Posts_003": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Dome Lights": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Lift Platform": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Lift Platform/Lift Controls": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

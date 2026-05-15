@@ -62,6 +62,9 @@ _subresources={
 },
 "PATH:1 - PHYS/Platforms": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Sign": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

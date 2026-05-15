@@ -41,6 +41,7 @@ _subresources={
 "nodes": {
 "PATH:1 - PHYS/Bar": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -56,11 +57,13 @@ _subresources={
 },
 "PATH:1 - PHYS/Grid": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/PXs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/RTU": {
 "generate/physics": true
@@ -81,15 +84,22 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Stool_001": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Undeveloped Land_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:2 - MANUAL/KitchenDoor": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/DRG": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

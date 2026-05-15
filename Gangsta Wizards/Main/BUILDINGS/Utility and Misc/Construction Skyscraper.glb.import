@@ -42,8 +42,14 @@ _subresources={
 "PATH:1 - PHYS/Anchors": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Bases": {
+"mesh_instance/visibility_range_end": 400.0
+},
 "PATH:1 - PHYS/Crane": {
 "generate/physics": true
+},
+"PATH:1 - PHYS/Elevated Hydrant": {
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Floors": {
 "generate/physics": true
@@ -63,16 +69,19 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Staircols": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Staircols_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

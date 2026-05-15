@@ -1671,7 +1671,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396669, 0, -0.9998771, 0, 1, 0, 0.9998771, 0, -0.008396669, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396668, 0, -0.99987704, 0, 1, 0, 0.99987704, 0, -0.008396668, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -3219,7 +3219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.28
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681833, 0, 0.99996567, 0, 1, 0, -0.99996567, 0, -0.006681833, 14.412659, 0, -0.09630613)
+transform = Transform3D(-0.0066818325, 0, 0.9999656, 0, 1, 0, -0.9999656, 0, -0.0066818325, 14.412659, 0, -0.09630613)
 progress = 25.25
 
 [node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
@@ -3227,14 +3227,14 @@ transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0
 visible = false
 
 [node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681976, 0, 0.99996924, 0, 1, 0, -0.99996924, 0, -0.006681976, 7.6370945, 0, -0.051031478)
+transform = Transform3D(-0.006681976, 0, 0.9999692, 0, 1, 0, -0.9999692, 0, -0.006681976, 7.6370945, 0, -0.051031478)
 progress = 32.0
 
 [node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
 
 [node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0067525436, 0, 0.9999684, 0, 1, 0, -0.9999684, 0, -0.0067525436, -0.18115859, 0, 0.0014959713)
+transform = Transform3D(-0.006752543, 0, 0.99996835, 0, 1, 0, -0.99996835, 0, -0.006752543, -0.18115859, 0, 0.0014959713)
 progress = 40.2
 
 [node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]

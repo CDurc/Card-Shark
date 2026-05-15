@@ -41,6 +41,7 @@ _subresources={
 "nodes": {
 "PATH:1 - PHYS/Corridor Floors": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -53,15 +54,29 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Stairscol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Stairscol2": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:2 - MANUAL/Doors": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Dome Light": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Stairs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

@@ -41,6 +41,7 @@ _subresources={
 "nodes": {
 "PATH:1 - PHYS/Chimney": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -64,11 +65,13 @@ _subresources={
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Int Walls_001": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -78,7 +81,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Streetlight": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true,
@@ -89,6 +93,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Antenna": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

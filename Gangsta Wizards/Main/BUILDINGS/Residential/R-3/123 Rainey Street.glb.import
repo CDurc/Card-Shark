@@ -45,7 +45,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Elevated Hydrant": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Exterior Walls": {
 "generate/physics": true,
@@ -62,16 +63,19 @@ _subresources={
 },
 "PATH:1 - PHYS/Flower Bed": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Flowerbed": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Grill": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
@@ -84,7 +88,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/LV Pole_009": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Patio": {
 "generate/physics": true,
@@ -97,7 +102,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Streelight": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
@@ -111,6 +117,24 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Downspout": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/LV Wires_007": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Mailbox": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Propane Tank": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Shrubbery": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Shutters": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

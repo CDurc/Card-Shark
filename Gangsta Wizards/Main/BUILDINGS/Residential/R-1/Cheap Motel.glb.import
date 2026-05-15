@@ -85,7 +85,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Front Desk": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Gravel": {
 "generate/physics": true,
@@ -113,7 +114,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/PC": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Railing": {
 "generate/physics": true,
@@ -151,7 +153,17 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Stairscol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
+},
+"PATH:3 - No Cols/Handle": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Light Bulbs": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Vents": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }
