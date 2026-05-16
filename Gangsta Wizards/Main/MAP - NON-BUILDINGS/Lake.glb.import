@@ -40,10 +40,12 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Bases": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Bases_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
@@ -58,7 +60,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/LV Pole_008": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Lake Bottom": {
 "generate/physics": true
@@ -67,16 +70,19 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Power Box_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Riverbank": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sign_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
@@ -100,13 +106,28 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Wires_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Wires_002": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/LV Wires_006": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Post": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Power Box Text_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

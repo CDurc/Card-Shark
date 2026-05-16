@@ -53,6 +53,12 @@ _subresources={
 },
 "PATH:1 - PHYS/Smelter": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Rails": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

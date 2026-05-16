@@ -40,16 +40,20 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Chairs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Desk": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Detector": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Elevated Hydrant": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true,
@@ -57,7 +61,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Gate": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
@@ -83,22 +88,27 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/PRVU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Pnuematic System": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Pot": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/RTU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Roller Chairs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true,
@@ -106,22 +116,28 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Sign Top": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sink": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Sofa": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Sofa_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Tables": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Toilet": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Valut": {
 "generate/physics": true
@@ -133,6 +149,48 @@ _subresources={
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Camera Body": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Computers": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Detector Labels": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Legs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Legs_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Plant_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Registers": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Speaker": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Symbol": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

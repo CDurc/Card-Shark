@@ -75,7 +75,11 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/RTU HP": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

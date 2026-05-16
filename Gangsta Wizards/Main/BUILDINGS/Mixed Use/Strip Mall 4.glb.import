@@ -40,7 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Elevated Hydrant": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
@@ -49,16 +50,20 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Intcols": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/LV Pole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Power Box": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTUs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
@@ -71,6 +76,18 @@ _subresources={
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/LV Wires": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Power Box Text": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

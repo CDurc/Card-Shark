@@ -43,7 +43,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ceilingcol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Dollar Sign": {
 "generate/physics": true
@@ -58,11 +59,13 @@ _subresources={
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Int Walls_001": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -70,13 +73,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lotterys": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Manhole": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/PRVU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTUs": {
 "generate/physics": true
@@ -88,6 +93,24 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Can Light": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Ductwork": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Flags": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Games Text": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Label": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

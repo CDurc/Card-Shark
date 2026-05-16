@@ -43,7 +43,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Exhaust Fans": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Exterior_Tenant Walls": {
 "generate/physics": true,
@@ -51,10 +52,12 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Int Block": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Int Walls": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -62,7 +65,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lights Ext": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Manhole": {
 "generate/physics": true
@@ -74,13 +78,16 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Power Box_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTUs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sign Top": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Site": {
 "generate/physics": true,
@@ -97,6 +104,27 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/LV Wires_008": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Label": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Plmg Vents": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Power Box Text_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Staff Only Signs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Symbol": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

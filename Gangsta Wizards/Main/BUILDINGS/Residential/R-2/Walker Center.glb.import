@@ -102,6 +102,24 @@ _subresources={
 },
 "PATH:1 - PHYS/Trunks": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/LV Wires_004": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/LV Wires_005": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Label": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Label_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Power Box Text_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Wall Light": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

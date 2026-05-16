@@ -40,7 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Elevated Hydrant": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true,
@@ -48,12 +49,25 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/LV Pole_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Tower": {
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/LV Wires_003": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Low Routing": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Pathways": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Wire_": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

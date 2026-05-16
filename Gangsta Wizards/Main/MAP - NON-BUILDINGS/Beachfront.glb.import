@@ -40,13 +40,16 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Bar": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Bar_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Bench_015": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
@@ -79,7 +82,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/LV Pole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Legs": {
 "generate/physics": true
@@ -94,13 +98,16 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Staircol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Stools": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Streetlight": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Supports": {
 "generate/physics": true
@@ -121,7 +128,53 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wires": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:2 - MANUAL/Can": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:2 - MANUAL/Can_001": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:2 - MANUAL/Can_002": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Bench Legs": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Floor Supports": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/LV Wires": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Sign": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_002": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_003": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_004": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_005": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_006": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Torch": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Torch_002": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

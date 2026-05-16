@@ -59,11 +59,15 @@ _subresources={
 "PATH:1 - PHYS/Door": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"mesh_instance/visibility_range_end": 400.0
+},
 "PATH:1 - PHYS/Erik Statue": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Flagpole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Flagstand": {
 "generate/physics": true
@@ -93,10 +97,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Pole_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTU": {
 "generate/physics": true
@@ -116,10 +122,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign Top": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sign Top_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Square": {
 "generate/physics": true
@@ -178,6 +186,39 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Flag": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Label": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Symbol": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol_002": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol_003": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_002": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_003": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_004": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

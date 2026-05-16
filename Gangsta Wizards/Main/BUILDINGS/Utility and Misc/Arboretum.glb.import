@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Elevated Hydrant": {
+"mesh_instance/visibility_range_end": 400.0
+},
 "PATH:1 - PHYS/Glass": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -68,16 +71,40 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pole": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Power Box": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sign Top": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Support": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/LV Wires": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Lights": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Power Box Text": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Symbol_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text_001": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

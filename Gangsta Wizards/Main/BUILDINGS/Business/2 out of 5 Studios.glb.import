@@ -40,22 +40,28 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Balls": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Chair": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Chairs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Computer": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Conc Pad": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Conf Table": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Cube": {
 "generate/physics": true,
@@ -63,13 +69,16 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Cubicle Walls": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Desks": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Detector": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Dumpster": {
 "generate/physics": true
@@ -80,7 +89,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Fixture": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Garage Door": {
 "generate/physics": true,
@@ -88,10 +98,12 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/RA Duct": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/RTU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Raised Floor": {
 "generate/physics": true,
@@ -99,19 +111,48 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Reception Desk": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/SA Duct": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sink": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Sofas": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Toilet": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Cables": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Camera Body": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Curtain": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Detector Labels": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Grille": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Lights": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Nameplates": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Vent": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

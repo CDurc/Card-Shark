@@ -40,10 +40,12 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Air Outlet": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Condensing Unit": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Endcaps": {
 "generate/physics": true
@@ -61,31 +63,101 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lottery": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Post_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Rails": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Sign": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Staircol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Turnstile": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Underground": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true
+},
+"PATH:2 - MANUAL/Benches": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:2 - MANUAL/Can": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Chairs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Computers": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Maps": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/RR Sign": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Sign_001": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_002": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_003": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_004": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_005": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_006": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_007": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_008": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_009": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Sign_010": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Strip Lights": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Tickets Sign": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Turning Part": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Turning Part_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Turning Part_002": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/WallMtdIndoor": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

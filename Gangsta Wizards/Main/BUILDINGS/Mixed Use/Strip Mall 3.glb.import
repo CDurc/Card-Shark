@@ -40,16 +40,20 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:1 - PHYS/Chair": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Chair_005": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Couches": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Desk": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Exterior Walls": {
 "generate/physics": true
@@ -70,22 +74,28 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Int Walls": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Int Walls_001": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Int Walls_003": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/Int Walls_005": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0
 },
 "PATH:1 - PHYS/PRVU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTUs": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
@@ -107,6 +117,30 @@ _subresources={
 },
 "PATH:1 - PHYS/Window_011": {
 "generate/physics": true
+},
+"PATH:2 - MANUAL/Ceiling Elements": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Bars & Boards": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Grid": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Keyboard": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Legs": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Lights Ext_002": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/RR Sign_001": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Wall Deco": {
+"mesh_instance/visibility_range_end": 100.0
 }
 }
 }

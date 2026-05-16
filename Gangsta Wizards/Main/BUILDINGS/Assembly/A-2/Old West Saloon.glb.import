@@ -46,10 +46,12 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Int": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Lantern Support": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Porch": {
 "generate/physics": true
@@ -59,6 +61,12 @@ _subresources={
 },
 "PATH:1 - PHYS/Widnows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Lantern": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Sign Text": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

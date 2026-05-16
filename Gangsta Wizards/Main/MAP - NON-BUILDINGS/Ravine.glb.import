@@ -58,10 +58,21 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Staircol": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
+},
+"PATH:3 - No Cols/Graffiti": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Text": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Text_003": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

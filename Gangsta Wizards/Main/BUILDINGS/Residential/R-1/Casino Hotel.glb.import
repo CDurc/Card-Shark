@@ -41,6 +41,7 @@ _subresources={
 "nodes": {
 "PATH:1 - PHYS/Core Floor": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -63,7 +64,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Endcap": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Entrance Connector": {
 "generate/physics": true,
@@ -82,16 +84,19 @@ _subresources={
 },
 "PATH:1 - PHYS/Grid": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Grid_001": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Int Wall_001": {
 "generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0,
 "physics/layer": 9,
 "physics/mask": 9
 },
@@ -121,7 +126,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/LinkedDoors": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 40.0
 },
 "PATH:1 - PHYS/Pathway": {
 "generate/physics": true
@@ -135,7 +141,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Stairramp": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 1.0
 },
 "PATH:1 - PHYS/Walls": {
 "generate/physics": true,
@@ -146,6 +153,12 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:3 - No Cols/Piping": {
+"mesh_instance/visibility_range_end": 40.0
+},
+"PATH:3 - No Cols/Strip Light": {
+"mesh_instance/visibility_range_end": 40.0
 }
 }
 }

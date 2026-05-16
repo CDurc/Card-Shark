@@ -48,11 +48,20 @@ _subresources={
 "PATH:1 - PHYS/Hill": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Streetlight": {
+"mesh_instance/visibility_range_end": 400.0
+},
 "PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Doorknob": {
+"mesh_instance/visibility_range_end": 100.0
+},
+"PATH:3 - No Cols/Vents": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }

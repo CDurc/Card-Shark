@@ -66,7 +66,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Flat Headstone_005": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Flr": {
 "generate/physics": true,
@@ -84,7 +85,8 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Headstone_002": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/High Roof": {
 "generate/physics": true,
@@ -97,16 +99,19 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/PRVU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Pavillion Extension": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/RTU": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/RTU HP": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Sanct Walls": {
 "generate/physics": true,
@@ -129,13 +134,20 @@ _subresources={
 "physics/mask": 9
 },
 "PATH:1 - PHYS/Trad Headstone": {
-"generate/physics": true
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Trunks": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Windows": {
 "generate/physics": true
+},
+"PATH:3 - No Cols/Lights Ext": {
+"mesh_instance/visibility_range_end": 400.0
+},
+"PATH:3 - No Cols/Sign": {
+"mesh_instance/visibility_range_end": 400.0
 }
 }
 }
