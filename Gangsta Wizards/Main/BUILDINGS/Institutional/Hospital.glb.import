@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Art": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Canopies": {
 "generate/physics": true,
 "physics/layer": 9,
@@ -89,6 +92,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Manhole": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true,

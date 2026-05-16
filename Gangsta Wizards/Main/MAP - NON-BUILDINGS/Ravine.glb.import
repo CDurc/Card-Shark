@@ -39,7 +39,28 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Arch": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Big Stairs": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Paltform": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Platform": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Portal": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sign": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircol": {
 "generate/physics": true
 }
 }

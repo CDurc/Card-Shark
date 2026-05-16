@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cuf8oslv61oe"
-path="res://.godot/imported/Nakatomi Plaza.glb-9e752d94e71ef42d1ad293e98dddba07.scn"
+uid="uid://dg6rqcjkeef2e"
+path="res://.godot/imported/Swish.glb-2b200acd93f1e44a0d4fcd4508839248.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Business/Nakatomi Plaza.glb"
-dest_files=["res://.godot/imported/Nakatomi Plaza.glb-9e752d94e71ef42d1ad293e98dddba07.scn"]
+source_file="res://Particles/Swish.glb"
+dest_files=["res://.godot/imported/Swish.glb-2b200acd93f1e44a0d4fcd4508839248.scn"]
 
 [params]
 
@@ -33,29 +33,10 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://MAP/post_import_settings.gd"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Manhole": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Overhang": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-},
-"PATH:1 - PHYS/Tower": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
-}
-}
-}
-gltf/naming_version=1
+_subresources={}
+gltf/naming_version=2
 gltf/embedded_image_handling=1

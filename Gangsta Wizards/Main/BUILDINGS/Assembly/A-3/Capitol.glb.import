@@ -81,6 +81,9 @@ _subresources={
 "physics/layer": 9,
 "physics/mask": 9
 },
+"PATH:1 - PHYS/Manhole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Observatory Top": {
 "generate/physics": true,
 "physics/layer": 9,
