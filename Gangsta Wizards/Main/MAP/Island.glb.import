@@ -91,6 +91,9 @@ _subresources={
 "PATH:1 - PHYS/Main Road Ramp_003": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Manholes": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/NBAlley": {
 "generate/physics": true
 },

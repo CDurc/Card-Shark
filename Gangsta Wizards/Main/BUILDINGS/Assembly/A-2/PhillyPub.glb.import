@@ -58,6 +58,9 @@ _subresources={
 "PATH:1 - PHYS/Light Pole": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Manhole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Roof": {
 "generate/physics": true
 },

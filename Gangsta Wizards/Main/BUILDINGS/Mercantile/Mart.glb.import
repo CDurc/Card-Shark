@@ -69,6 +69,15 @@ _subresources={
 "PATH:1 - PHYS/Ground": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Manhole": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Manhole_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Manhole_002": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/PRVU": {
 "generate/physics": true
 },

@@ -72,6 +72,9 @@ _subresources={
 "PATH:1 - PHYS/LV Pole_011": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Manhole": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Pillar": {
 "generate/physics": true
 },
