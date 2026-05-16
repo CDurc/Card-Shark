@@ -113,6 +113,9 @@ bones/71/rotation = Quaternion(-0.94300956, 0.16907753, -0.18629, -0.21781151)
 bones/76/position = Vector3(-1.1362733, 0.9818876, 3.3966877)
 bones/76/rotation = Quaternion(-1.6623231e-06, 3.383911e-07, -5.629638e-13, 1)
 
+[node name="AxeSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.090945, -3.1680636)
+
 [connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_healthbar_timer_timeout"]
 
 [editable path="Mountain King2"]

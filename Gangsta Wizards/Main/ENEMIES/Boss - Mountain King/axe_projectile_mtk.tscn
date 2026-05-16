@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ngxr1oglq0x3"]
+
+[ext_resource type="PackedScene" uid="uid://25kdhmk14ppo" path="res://WEAPONS/MtKingAxe.glb" id="1_2u80b"]
+[ext_resource type="Script" uid="uid://bcr3tqfbldpk5" path="res://Card Shark Campaign/Weapons/sword_damage.gd" id="2_qlf6r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tpfso"]
+size = Vector3(1, 5.140518, 2.9047852)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2u80b"]
+height = 5.249634
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qlf6r"]
+size = Vector3(0.67370605, 1.916565, 2.8890991)
+
+[node name="AxeProjectileMTK" type="RigidBody3D"]
+
+[node name="MtKingAxe" parent="." instance=ExtResource("1_2u80b")]
+transform = Transform3D(-4.371139e-08, 0, 1, -0.006963807, 0.99997574, -3.0439767e-10, -0.99997574, -0.006963807, -4.371033e-08, 0, 1.8298554, 0.01634872)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8857884, 0)
+script = ExtResource("2_qlf6r")
+damage = 50
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065330505, 0.025146484)
+shape = SubResource("BoxShape3D_tpfso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.835022, 0)
+shape = SubResource("CapsuleShape3D_2u80b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024353027, 3.527092, 0.0035705566)
+shape = SubResource("BoxShape3D_qlf6r")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

@@ -3,7 +3,7 @@ extends Area3D
 @export var damage := 20
 
 var goblin
-@export var damaged_bodies := {} # A dictionary to store each body we've damaged.
+@export var damaged_bodies := {}
 
 func _ready():
 	goblin = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()

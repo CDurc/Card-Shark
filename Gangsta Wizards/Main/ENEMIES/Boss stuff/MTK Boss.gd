@@ -12,6 +12,7 @@ extends CharacterBody3D
 @onready var healthbar_timer = $Control/Hbar_Expire
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/1d_money_drop.tscn")
 @onready var speed = avg_speed + randf_range(-2,2)
+@onready var axe_spawn = $AxeSpawn
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc

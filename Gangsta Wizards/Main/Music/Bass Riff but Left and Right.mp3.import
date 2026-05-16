@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djuxk66ri14we"
+path="res://.godot/imported/Bass Riff but Left and Right.mp3-bceea4956a175341b9384079cfec0636.mp3str"
+
+[deps]
+
+source_file="res://Music/Bass Riff but Left and Right.mp3"
+dest_files=["res://.godot/imported/Bass Riff but Left and Right.mp3-bceea4956a175341b9384079cfec0636.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
