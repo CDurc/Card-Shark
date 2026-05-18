@@ -1325,7 +1325,26 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -114
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.82, 0, 182.735)
 
 [node name="Lift" parent="MAP" instance=ExtResource("169_ywsmc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -183.1723, 14.98391, -83.35123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -183.61685, 14.98391, -83.80858)
+
+[node name="Area3D" parent="MAP/Lift" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08590698, 0, 0.095199585)
+
+[node name="CollisionShape3D" parent="MAP/Lift/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5443306, 0)
+
+[node name="GPUParticles3D" parent="MAP/Lift" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5472393, 0)
+fixed_fps = 30
+
+[node name="OmniLight3D" parent="MAP/Lift" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11729431, -2.1461997, -0.022979736)
+light_color = Color(0.5803922, 0.09019608, 0.7607843, 1)
+light_energy = 5.674
+light_indirect_energy = 100000.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 831.033
 
 [node name="Sewers" parent="MAP" instance=ExtResource("170_m4epl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.018, 0.079, 182.581)
@@ -1679,7 +1698,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396664, 0, -0.9998764, 0, 1, 0, 0.9998764, 0, -0.008396664, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396654, 0, -0.99987537, 0, 1, 0, 0.99987537, 0, -0.008396654, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -2996,7 +3015,7 @@ light_bake_mode = 1
 omni_range = 7.0
 
 [node name="Player2" parent="." instance=ExtResource("154_nu2kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.02002, 4.7472744, 395.39188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157.86035, 18.724874, -146.4714)
 
 [node name="OnARail" type="Node3D" parent="."]
 
@@ -3227,7 +3246,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.28
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0066818283, 0, 0.99996495, 0, 1, 0, -0.99996495, 0, -0.0066818283, 14.412659, 0, -0.09630613)
+transform = Transform3D(-0.0066818213, 0, 0.99996394, 0, 1, 0, -0.99996394, 0, -0.0066818213, 14.412659, 0, -0.09630613)
 progress = 25.25
 
 [node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
@@ -3235,14 +3254,14 @@ transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0
 visible = false
 
 [node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0066819713, 0, 0.9999685, 0, 1, 0, -0.9999685, 0, -0.0066819713, 7.6370945, 0, -0.051031478)
+transform = Transform3D(-0.0066819647, 0, 0.9999675, 0, 1, 0, -0.9999675, 0, -0.0066819647, 7.6370945, 0, -0.051031478)
 progress = 32.0
 
 [node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
 
 [node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006752539, 0, 0.9999677, 0, 1, 0, -0.9999677, 0, -0.006752539, -0.18115859, 0, 0.0014959713)
+transform = Transform3D(-0.006752532, 0, 0.9999667, 0, 1, 0, -0.9999667, 0, -0.006752532, -0.18115859, 0, 0.0014959713)
 progress = 40.2
 
 [node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]
@@ -3311,6 +3330,7 @@ transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00
 [connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Reg2/Box Truck/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck/Area3D" to="Cars/Cars/Slow Lane/BoxTruck Reg3/Box Truck/Area3D" method="_on_body_entered"]
 
+[editable path="MAP/Lift"]
 [editable path="Lights/Skybeams/Skybeam0"]
 [editable path="Lights/Skybeams/Skybeam1"]
 [editable path="Lights/Skybeams/Skybeam2"]

@@ -85,6 +85,7 @@ var local_velocity: Vector3 #What the player is trying to do relative to their p
 
 var input_mouse: Vector2
 
+var gravity_on := true
 var gravity := 0.0
 var replenishing_stamina = false
 var sprint_cooldown:float = 0
@@ -1508,13 +1509,14 @@ func handle_controls(_delta): #Also handles sprint now
 # Handle gravity
 
 func handle_gravity(delta):
+	if gravity_on:
 	
-	gravity += 20 * delta
-	
-	if gravity > 0 and is_on_floor():
+		gravity += 20 * delta
 		
-		jump_single = true
-		gravity = 0
+		if gravity > 0 and is_on_floor():
+			
+			jump_single = true
+			gravity = 0
 
 # Jumping
 

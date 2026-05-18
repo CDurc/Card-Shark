@@ -1,10 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2vx2wbwqehpl"]
+[gd_scene load_steps=10 format=3 uid="uid://c2vx2wbwqehpl"]
 
 [ext_resource type="Script" uid="uid://vpuy8cm1co06" path="res://Wizard_Lift.gd" id="1_n2ymx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7y72h"]
-radius = 0.7
-height = 7.0
+radius = 2.4526367
+height = 15.415016
+
+[sub_resource type="Curve" id="Curve_n2ymx"]
+_data = [Vector2(0, 0.91459846), 0.0, 0.0, 0, 0, Vector2(0.8368794, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7y72h"]
+curve = SubResource("Curve_n2ymx")
+
+[sub_resource type="Curve" id="Curve_i228d"]
+_data = [Vector2(0, 0.12700725), 0.0, 0.0, 0, 0, Vector2(0.99290776, 0.5160583), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ralwo"]
+curve = SubResource("Curve_i228d")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t8l67"]
+emission_shape_scale = Vector3(3, 3, 3)
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 3, 0)
+scale_min = 0.19999999
+scale_curve = SubResource("CurveTexture_ralwo")
+alpha_curve = SubResource("CurveTexture_7y72h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4kxa"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5882353, 0.34509805, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_sgl5s"]
+material = SubResource("StandardMaterial3D_e4kxa")
 
 [node name="Lift" type="Node3D"]
 
@@ -14,4 +49,22 @@ script = ExtResource("1_n2ymx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CapsuleShape3D_7y72h")
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.467554, 0)
+visibility_range_end = 40.0
+amount = 22
+lifetime = 3.0
+explosiveness = 0.25
+fixed_fps = 60
+visibility_aabb = AABB(-4, -4, -4, 8, 30, 8)
+process_material = SubResource("ParticleProcessMaterial_t8l67")
+draw_pass_1 = SubResource("SphereMesh_sgl5s")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.0720363, 0)
+light_color = Color(0.5254902, 0.12156863, 1, 1)
+light_energy = 10.169
+omni_range = 3.605
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
