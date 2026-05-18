@@ -54,8 +54,8 @@ var state = "attacking"
 
 
 #@onready var damaged_bodies = area3D.damaged_bodies
-@onready var upper_anime          = $"Mountain King2/Upper"
-@onready var lower_anime          = $"Mountain King2/Lower"
+@onready var upper_anime          = $"Mountain King3/Upper"
+@onready var lower_anime          = $"Mountain King3/Lower"
 
 
 func _ready() -> void:
@@ -162,7 +162,7 @@ func jump():
 	#await get_tree().create_timer(0.5).timeout
 	#jumping = false
 
-var ordered_YMCA_animes = ["Stone Freeze Pose Y", "Stone Freeze Pose M", "Stone Freeze Pose C", "Stone Freeze Pose A"]
+var ordered_YMCA_animes = ["Stone Freeze Pose Y", "Y-M", "M-C", "C-A"]
 func YMCA():
 	print("YMCA GO")
 	state = "busy"
@@ -176,6 +176,7 @@ func YMCA():
 		await get_tree().create_timer(1).timeout
 		state = "busy"
 	state = "attacking"
+	upper_anime.play("Stone UnFreeze Pose A")
 
 func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://da2saykk6rqmb"]
+[gd_scene load_steps=8 format=3 uid="uid://da2saykk6rqmb"]
 
 [ext_resource type="Script" uid="uid://du87o35lq0ypx" path="res://ENEMIES/Boss stuff/MTK Boss.gd" id="1_pidt8"]
 [ext_resource type="PackedScene" uid="uid://bhwi4663exesa" path="res://CHARACTERS/Bosses/mtk test 1.tscn" id="3_pidt8"]
+[ext_resource type="PackedScene" uid="uid://cjgjck2p8ffw7" path="res://ENEMIES/Boss - Mountain King/mtk anime ready.tscn" id="4_x26hx"]
 [ext_resource type="Script" uid="uid://ywturtvcuo0m" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_txvuw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
@@ -16,7 +17,7 @@ radius = 0.8364258
 height = 4.0351715
 
 [node name="Goblin Enemy" type="CharacterBody3D" groups=["Enemies"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, -0.03041923)
 collision_layer = 17
 collision_mask = 17
 script = ExtResource("1_pidt8")
@@ -24,7 +25,7 @@ avg_speed = 5.0
 health = 5000
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 1.3355982, -0.9682861)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 2.4120934, 0.24027646)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -60,7 +61,7 @@ wait_time = 8.0
 one_shot = true
 
 [node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 3.0077918, -0.912466)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 4.0842867, 0.29609656)
 collision_layer = 2
 collision_mask = 2
 
@@ -69,7 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0265944, -0.024700642, 0.01
 shape = SubResource("SphereShape3D_50u46")
 
 [node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 0.23562598, -0.9224572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 1.3121212, 0.28610533)
 collision_layer = 2
 collision_mask = 2
 
@@ -78,7 +79,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07622415, 0.45429897, -0.02
 shape = SubResource("CapsuleShape3D_g751g")
 
 [node name="Mountain King2" parent="." instance=ExtResource("3_pidt8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0953871, 2.0302465, 0.042124033)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0953871, 3.1067417, 1.2506865)
+visible = false
 
 [node name="Skeleton3D" parent="Mountain King2/Mountain King" index="0"]
 bones/9/position = Vector3(0.090078466, 0.104137324, -0.01825055)
@@ -112,10 +114,79 @@ bones/61/rotation = Quaternion(-0.22021995, 0.13287766, 0.2622639, 0.93008846)
 bones/71/rotation = Quaternion(-0.94300956, 0.16907753, -0.18629, -0.21781151)
 bones/76/position = Vector3(-1.1362733, 0.9818876, 3.3966877)
 bones/76/rotation = Quaternion(-1.6623231e-06, 3.383911e-07, -5.629638e-13, 1)
+bones/79/position = Vector3(-0.15380615, -1.2236717, 0.4056809)
+bones/79/rotation = Quaternion(0.027915638, -0.2566216, -0.11021211, 0.95980173)
+bones/79/scale = Vector3(1, 1, 1)
+bones/80/position = Vector3(-0.20615697, -1.2236754, -0.7663125)
+bones/80/rotation = Quaternion(-0.025474431, 0.2098256, -0.11080182, 0.9711062)
+bones/80/scale = Vector3(1, 1, 1)
 
 [node name="AxeSpawn" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.090945, -3.1680636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1674402, -1.9595015)
+
+[node name="Mountain King3" parent="." instance=ExtResource("4_x26hx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.094989896, 3.109474, 1.250821)
+
+[node name="Skeleton3D" parent="Mountain King3/Mountain King" index="0"]
+bones/1/position = Vector3(-0.037907127, -0.3167042, 0.8936848)
+bones/1/rotation = Quaternion(0.6218841, 0.0032591757, -0.004039196, 0.7830921)
+bones/5/rotation = Quaternion(0.47175172, 0.6920858, -0.3891945, -0.38339958)
+bones/6/rotation = Quaternion(-0.62532544, 0.007933104, 0.4152521, 0.66065943)
+bones/7/rotation = Quaternion(0.15691245, 0.26264852, -0.0921824, 0.94757414)
+bones/9/position = Vector3(0.090078466, 0.104137324, -0.01825055)
+bones/9/rotation = Quaternion(-0.47969383, -0.28488618, -0.14169289, 0.8177145)
+bones/11/rotation = Quaternion(-0.48746982, -0.17925063, 0.13323227, 0.84409213)
+bones/12/position = Vector3(0.028991066, 0.10208005, -0.013683839)
+bones/12/rotation = Quaternion(-0.50871235, -0.18374932, 0.0060830014, 0.8410773)
+bones/14/rotation = Quaternion(-0.45206317, -0.13194093, 0.11636913, 0.8744649)
+bones/15/position = Vector3(-0.029122373, 0.09163999, -0.0090989135)
+bones/15/rotation = Quaternion(-0.47080576, -0.16157643, 0.05689744, 0.8654465)
+bones/17/rotation = Quaternion(-0.5178524, -0.05839869, 0.11163254, 0.84614223)
+bones/18/position = Vector3(-0.0887953, 0.089857385, -0.0034123694)
+bones/18/rotation = Quaternion(-0.4625083, -0.0075663547, 0.3189605, 0.8272201)
+bones/20/rotation = Quaternion(-0.5645508, 0.045656625, 0.12780963, 0.81416374)
+bones/23/rotation = Quaternion(0.2672379, 0.005721731, 0.024683475, 0.9632974)
+bones/24/rotation = Quaternion(0.15998365, 0.0064248946, 0.032885116, 0.98655087)
+bones/25/rotation = Quaternion(-0.11245903, -0.000101676036, -0.029077958, 0.9932308)
+bones/32/position = Vector3(0.059228983, 0.28056744, 0.27650762)
+bones/33/position = Vector3(0.058446623, 0.21383429, 0.29438257)
+bones/34/position = Vector3(-0.119665556, 0.27819133, 0.28375608)
+bones/35/position = Vector3(-0.12007078, 0.21454898, 0.29450023)
+bones/45/rotation = Quaternion(0.017375778, -0.7807251, 0.6012432, 0.16933163)
+bones/46/rotation = Quaternion(0.04684555, -0.004798574, -0.60783815, 0.7926634)
+bones/47/rotation = Quaternion(-0.23464891, 0.93598586, 0.22480255, 0.1354043)
+bones/49/position = Vector3(-0.076748736, 0.10116997, 0.0089988215)
+bones/49/rotation = Quaternion(-0.73463494, 0.2729389, 0.10025064, 0.61299735)
+bones/52/position = Vector3(-0.02695167, 0.10298412, -0.009052763)
+bones/52/rotation = Quaternion(-0.75416833, 0.16094138, 0.018073007, 0.6363972)
+bones/53/rotation = Quaternion(-0.4825028, 0.11910385, -0.017251307, 0.86758727)
+bones/55/position = Vector3(0.03727763, 0.102301, -0.0064198626)
+bones/55/rotation = Quaternion(-0.7214129, 0.15287028, -0.018344993, 0.6751723)
+bones/56/rotation = Quaternion(-0.52194107, 0.056072254, -0.066927604, 0.84850115)
+bones/58/position = Vector3(0.09170427, 0.10131822, -0.0007280903)
+bones/58/rotation = Quaternion(-0.7306852, -0.030659875, -0.22557767, 0.64364123)
+bones/63/rotation = Quaternion(0.9939345, 0.062050905, -0.014820214, 0.08957882)
+bones/64/rotation = Quaternion(0.2853186, -0.018038874, 0.06294941, 0.95619315)
+bones/65/rotation = Quaternion(0.014974717, 0.039228503, -0.02295963, 0.9988543)
+bones/67/rotation = Quaternion(0.9907504, -0.07962605, 0.1045859, 0.033693623)
+bones/68/rotation = Quaternion(0.2784044, 0.017763851, -0.08582919, 0.95645636)
+bones/69/rotation = Quaternion(-0.52048796, -0.14167283, -0.011066519, 0.84196126)
+bones/71/position = Vector3(0.12894619, -1.1006892, 2.3485649)
+bones/71/rotation = Quaternion(-0.94300956, 0.16907753, -0.18629, -0.21781151)
+bones/73/position = Vector3(0.25041962, -0.66595805, 2.4714475)
+bones/74/position = Vector3(0.3310535, -0.79393566, 0.9917164)
+bones/74/rotation = Quaternion(0.9999637, -4.8296343e-08, 3.9566442e-07, -0.008521639)
+bones/75/position = Vector3(-0.40899715, -0.4233142, -0.7700497)
+bones/75/rotation = Quaternion(0.929327, 1.6160506e-08, 1.1166478e-07, -0.36925787)
+bones/76/position = Vector3(-1.0170512, -0.49969614, 2.607012)
+bones/77/position = Vector3(-0.40827957, -0.54852825, 0.5552434)
+bones/78/position = Vector3(-0.69295406, -1.2254012, 2.0037887)
+bones/78/rotation = Quaternion(-0.44016176, -0.22338028, 0.8696254, 0.010522247)
+
+[node name="Head" parent="Mountain King3/Mountain King/Skeleton3D" index="0"]
+transform = Transform3D(0.00050245645, 0.16798891, 0.98578876, 0.003269442, 0.98578316, -0.1679896, -0.99999416, 0.0033074198, -5.3944997e-05, 0.82427096, 0.75181735, -0.1109987)
 
 [connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_healthbar_timer_timeout"]
 
 [editable path="Mountain King2"]
+[editable path="Mountain King3"]

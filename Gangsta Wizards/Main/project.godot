@@ -12,7 +12,7 @@ config_version=5
 
 config/name="MAIN PROJECT"
 config/tags=PackedStringArray("starterkit")
-run/main_scene="res://Menus/loading.tscn"
+run/main_scene="uid://dyueti31kitds"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Menus/Godot.png"
