@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Billboard Support": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Elevated Hydrant": {
 "generate/physics": true,
 "mesh_instance/visibility_range_end": 400.0
@@ -56,6 +59,9 @@ _subresources={
 "generate/physics": true,
 "physics/layer": 9,
 "physics/mask": 9
+},
+"PATH:1 - PHYS/Wanted Poster": {
+"generate/physics": true
 },
 "PATH:3 - No Cols/LV Wires_003": {
 "mesh_instance/visibility_range_end": 400.0
