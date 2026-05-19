@@ -21,11 +21,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55207, -0.03041923)
 collision_layer = 17
 collision_mask = 17
 script = ExtResource("1_pidt8")
-avg_speed = 5.0
+avg_speed = 6.5
 health = 5000
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 2.4120934, 0.24027646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 2.276718, 0.061602592)
 shape = SubResource("CapsuleShape3D_4pgsn")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -61,7 +61,7 @@ wait_time = 8.0
 one_shot = true
 
 [node name="Headshot" type="Area3D" parent="." groups=["Headshot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 4.0842867, 0.29609656)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 3.948911, 0.1174227)
 collision_layer = 2
 collision_mask = 2
 
@@ -70,7 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0265944, -0.024700642, 0.01
 shape = SubResource("SphereShape3D_50u46")
 
 [node name="Bodyshot" type="Area3D" parent="." groups=["Bodyshot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 1.3121212, 0.28610533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393579, 1.1767457, 0.10743147)
 collision_layer = 2
 collision_mask = 2
 
@@ -79,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07622415, 0.45429897, -0.02
 shape = SubResource("CapsuleShape3D_g751g")
 
 [node name="Mountain King2" parent="." instance=ExtResource("3_pidt8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0953871, 3.1067417, 1.2506865)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0953871, 2.9713662, 1.0720127)
 visible = false
 
 [node name="Skeleton3D" parent="Mountain King2/Mountain King" index="0"]
@@ -122,17 +122,12 @@ bones/80/rotation = Quaternion(-0.025474431, 0.2098256, -0.11080182, 0.9711062)
 bones/80/scale = Vector3(1, 1, 1)
 
 [node name="AxeSpawn" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1674402, -1.9595015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0320647, -2.1381755)
 
 [node name="Mountain King3" parent="." instance=ExtResource("4_x26hx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.094989896, 3.109474, 1.250821)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.094989896, 2.9740984, 1.0721471)
 
 [node name="Skeleton3D" parent="Mountain King3/Mountain King" index="0"]
-bones/1/position = Vector3(-0.037907127, -0.3167042, 0.8936848)
-bones/1/rotation = Quaternion(0.6218841, 0.0032591757, -0.004039196, 0.7830921)
-bones/5/rotation = Quaternion(0.47175172, 0.6920858, -0.3891945, -0.38339958)
-bones/6/rotation = Quaternion(-0.62532544, 0.007933104, 0.4152521, 0.66065943)
-bones/7/rotation = Quaternion(0.15691245, 0.26264852, -0.0921824, 0.94757414)
 bones/9/position = Vector3(0.090078466, 0.104137324, -0.01825055)
 bones/9/rotation = Quaternion(-0.47969383, -0.28488618, -0.14169289, 0.8177145)
 bones/11/rotation = Quaternion(-0.48746982, -0.17925063, 0.13323227, 0.84409213)
@@ -145,16 +140,10 @@ bones/17/rotation = Quaternion(-0.5178524, -0.05839869, 0.11163254, 0.84614223)
 bones/18/position = Vector3(-0.0887953, 0.089857385, -0.0034123694)
 bones/18/rotation = Quaternion(-0.4625083, -0.0075663547, 0.3189605, 0.8272201)
 bones/20/rotation = Quaternion(-0.5645508, 0.045656625, 0.12780963, 0.81416374)
-bones/23/rotation = Quaternion(0.2672379, 0.005721731, 0.024683475, 0.9632974)
-bones/24/rotation = Quaternion(0.15998365, 0.0064248946, 0.032885116, 0.98655087)
-bones/25/rotation = Quaternion(-0.11245903, -0.000101676036, -0.029077958, 0.9932308)
 bones/32/position = Vector3(0.059228983, 0.28056744, 0.27650762)
 bones/33/position = Vector3(0.058446623, 0.21383429, 0.29438257)
 bones/34/position = Vector3(-0.119665556, 0.27819133, 0.28375608)
 bones/35/position = Vector3(-0.12007078, 0.21454898, 0.29450023)
-bones/45/rotation = Quaternion(0.017375778, -0.7807251, 0.6012432, 0.16933163)
-bones/46/rotation = Quaternion(0.04684555, -0.004798574, -0.60783815, 0.7926634)
-bones/47/rotation = Quaternion(-0.23464891, 0.93598586, 0.22480255, 0.1354043)
 bones/49/position = Vector3(-0.076748736, 0.10116997, 0.0089988215)
 bones/49/rotation = Quaternion(-0.73463494, 0.2729389, 0.10025064, 0.61299735)
 bones/52/position = Vector3(-0.02695167, 0.10298412, -0.009052763)
@@ -171,20 +160,12 @@ bones/65/rotation = Quaternion(0.014974717, 0.039228503, -0.02295963, 0.9988543)
 bones/67/rotation = Quaternion(0.9907504, -0.07962605, 0.1045859, 0.033693623)
 bones/68/rotation = Quaternion(0.2784044, 0.017763851, -0.08582919, 0.95645636)
 bones/69/rotation = Quaternion(-0.52048796, -0.14167283, -0.011066519, 0.84196126)
-bones/71/position = Vector3(0.12894619, -1.1006892, 2.3485649)
-bones/71/rotation = Quaternion(-0.94300956, 0.16907753, -0.18629, -0.21781151)
-bones/73/position = Vector3(0.25041962, -0.66595805, 2.4714475)
+bones/72/position = Vector3(0.7663597, -0.6250938, -0.7217365)
+bones/72/rotation = Quaternion(0.59628814, 0.21617326, -0.2634976, -0.72682786)
 bones/74/position = Vector3(0.3310535, -0.79393566, 0.9917164)
-bones/74/rotation = Quaternion(0.9999637, -4.8296343e-08, 3.9566442e-07, -0.008521639)
 bones/75/position = Vector3(-0.40899715, -0.4233142, -0.7700497)
 bones/75/rotation = Quaternion(0.929327, 1.6160506e-08, 1.1166478e-07, -0.36925787)
-bones/76/position = Vector3(-1.0170512, -0.49969614, 2.607012)
 bones/77/position = Vector3(-0.40827957, -0.54852825, 0.5552434)
-bones/78/position = Vector3(-0.69295406, -1.2254012, 2.0037887)
-bones/78/rotation = Quaternion(-0.44016176, -0.22338028, 0.8696254, 0.010522247)
-
-[node name="Head" parent="Mountain King3/Mountain King/Skeleton3D" index="0"]
-transform = Transform3D(0.00050245645, 0.16798891, 0.98578876, 0.003269442, 0.98578316, -0.1679896, -0.99999416, 0.0033074198, -5.3944997e-05, 0.82427096, 0.75181735, -0.1109987)
 
 [connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_healthbar_timer_timeout"]
 

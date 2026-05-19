@@ -11,7 +11,7 @@ extends CharacterBody3D
 @onready var healthbar_control = $Control
 @onready var healthbar_timer = $Control/Hbar_Expire
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/1d_money_drop.tscn")
-@onready var speed = avg_speed + randf_range(-2,2)
+@onready var speed = avg_speed
 @onready var axe_spawn = $AxeSpawn
 #@onready var initial_healthbar = healthbar.scale.x
 
@@ -85,6 +85,8 @@ func _physics_process(delta: float) -> void:
 		if (target.global_transform.origin - nav_agent.target_position).length() > 3:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
 			lower_anime.play("Walking Lower")
+			if not attacking:
+				upper_anime.play("Walking Upper")
 			
 		if (target.global_transform.origin - global_transform.origin).length() < 5 and not attacking:
 			attack()
