@@ -48,6 +48,9 @@ _subresources={
 "PATH:1 - PHYS/BillboardBack_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Door": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Elevated Hydrant_001": {
 "generate/physics": true
 },
@@ -58,6 +61,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/HOA Building": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/LV Pole_003": {
@@ -91,9 +97,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tower": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Trunk": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Trunk_001": {

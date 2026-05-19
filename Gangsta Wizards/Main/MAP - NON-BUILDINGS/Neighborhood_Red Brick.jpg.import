@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwhta87cvrt3i"
-path.s3tc="res://.godot/imported/Pool Bar_grass.jpg-5c01036acf17b84f4286d276467710ab.s3tc.ctex"
+uid="uid://8w0r60brt5tn"
+path.s3tc="res://.godot/imported/Neighborhood_Red Brick.jpg-1f4c203e09b73c1bb341bbad20fee0d5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e4b92d087af4cf11c7101dd343ff95be"
+"md5": "0d2a0c709156317ec8cf3b8711b42078"
 }
 
 [deps]
 
-source_file="res://BUILDINGS/Assembly/A-3/Pool Bar_grass.jpg"
-dest_files=["res://.godot/imported/Pool Bar_grass.jpg-5c01036acf17b84f4286d276467710ab.s3tc.ctex"]
+source_file="res://MAP - NON-BUILDINGS/Neighborhood_Red Brick.jpg"
+dest_files=["res://.godot/imported/Neighborhood_Red Brick.jpg-1f4c203e09b73c1bb341bbad20fee0d5.s3tc.ctex"]
 
 [params]
 

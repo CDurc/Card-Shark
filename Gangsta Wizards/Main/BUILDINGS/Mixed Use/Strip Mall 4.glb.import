@@ -39,6 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Display": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Door_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Elevated Hydrant": {
 "generate/physics": true,
 "mesh_instance/visibility_range_end": 400.0
@@ -46,7 +52,16 @@ _subresources={
 "PATH:1 - PHYS/Floor": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Front Desk": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Ground": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Int walls": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Intcols": {

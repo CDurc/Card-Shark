@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://beo5dieegy57x"
+uid="uid://cip1y4tnpjxx0"
 path="res://.godot/imported/Pool Bar.glb-9b8e89af2a1eadaffc227cd0ee1befc4.scn"
 
 [deps]
@@ -39,32 +39,55 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/Bar": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Canopy": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Cube": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 },
 "PATH:1 - PHYS/Cube_002": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
+},
+"PATH:1 - PHYS/Piano": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RR Walls": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/RTU": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Roof": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
+},
+"PATH:1 - PHYS/Shelf": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Sign": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
+},
+"PATH:1 - PHYS/Sofa": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Staircol": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Stool": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Table Base": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Tables": {
+"generate/physics": true
 },
 "PATH:1 - PHYS/Walls": {
-"generate/physics": true,
-"physics/layer": 9,
-"physics/mask": 9
+"generate/physics": true
 }
 }
 }
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1
