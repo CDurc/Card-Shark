@@ -1,13 +1,13 @@
+#melee dmg
 extends Area3D
 
 @export var damage := 60
 
-var goblin
+@export var goblin: Node3D
 
 @export var damaged_bodies := {}
 
 func _ready():
-	goblin = get_parent()
 	monitoring = true
 
 func overlap_check():

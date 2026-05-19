@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmudgmqavuxtt"
+path="res://.godot/imported/not-your-mountain.ogg-6e6d2bacf4b38bb05839d68f507e8de5.oggvorbisstr"
+
+[deps]
+
+source_file="res://ENEMIES/Boss - Mountain King/Voice Lines/not-your-mountain.ogg"
+dest_files=["res://.godot/imported/not-your-mountain.ogg-6e6d2bacf4b38bb05839d68f507e8de5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -13,6 +13,9 @@ extends CharacterBody3D
 @onready var money_drop = preload("res://Card Shark Campaign/Spells/1d_money_drop.tscn")
 @onready var speed = avg_speed
 @onready var axe_spawn = $AxeSpawn
+@onready var voice = $Voice
+@onready var axe = $"Mountain King3/Mountain King/Skeleton3D/Axe" #The one hes holding
+@onready var setaxe = $setaxe #The one he places
 #@onready var initial_healthbar = healthbar.scale.x
 
 #Durc
@@ -43,9 +46,14 @@ var knockback_v   := Vector3.ZERO
 var knockback_t   := 0.0
 
 var player
-var destroyed       := false
-var attacking       = false
+var destroyed: = false
+var attacking: = false
+var cooling:   = false #Period where he cant call an attack function
+var talking:   = false
 var YMCA_dir
+
+@export var voice_lines: Array[AudioStream] = []
+@export var voice_uhh: Array[AudioStream] = []
 
 var state = "attacking"
 #attacking : Runs at player and swings
@@ -59,6 +67,7 @@ var state = "attacking"
 
 
 func _ready() -> void:
+	
 	if target == null:
 		target = get_tree().get_first_node_in_group("Player")
 	
@@ -88,8 +97,8 @@ func _physics_process(delta: float) -> void:
 			if not attacking:
 				upper_anime.play("Walking Upper")
 			
-		if (target.global_transform.origin - global_transform.origin).length() < 5 and not attacking:
-			attack()
+		if (target.global_transform.origin - global_transform.origin).length() < 5 and not cooling:
+			rand_attack()
 
 		if nav_agent.is_navigation_finished():
 			velocity.x = 0
@@ -100,7 +109,7 @@ func _physics_process(delta: float) -> void:
 			dir.y = 0
 			dir = dir.normalized()
 
-			if dir.length() > 0.01 and not jumping and can_move:
+			if dir.length() > 0.01 and not jumping and can_move and not attacking:
 				look_at(global_transform.origin + dir, Vector3.UP)
 
 			velocity.x = dir.x * speed
@@ -109,7 +118,7 @@ func _physics_process(delta: float) -> void:
 		# ---- ALWAYS FACE THE PLAYER ----
 		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
 		face_dir.y = 0
-		if face_dir.length() > 0.01 and not jumping and can_move:
+		if face_dir.length() > 0.01 and not jumping and can_move and not attacking:
 			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
 		# --------------------------------
 
@@ -168,6 +177,13 @@ var ordered_YMCA_animes = ["Stone Freeze Pose Y", "Y-M", "M-C", "C-A"]
 func YMCA():
 	print("YMCA GO")
 	state = "busy"
+	
+	upper_anime.play("Plant Axe")
+	await get_tree().create_timer(1.29).timeout
+	axe.visible = false
+	setaxe.reparent(get_tree().root)
+	setaxe.set_axe()
+	
 	for i in range(0,4):
 		upper_anime.play(ordered_YMCA_animes[i])
 		await upper_anime.animation_finished
@@ -179,6 +195,12 @@ func YMCA():
 		state = "busy"
 	state = "attacking"
 	upper_anime.play("Idle")
+	talking = true
+	voice.volume_db = 5
+	voice.stream = voice_lines[randi() % voice_lines.size()]
+	voice.play()
+	await get_tree().create_timer(2.5).timeout
+	talking = false
 
 func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
@@ -202,19 +224,43 @@ func damage(amount):
 func _on_healthbar_timer_timeout():
 	healthbar_control.visible = false
 
+func rand_attack():
+	var rand = randi_range(0,1)
+	if rand == 0:
+		side_attack()
+	else:
+		over_attack()
 
-func attack():
+func side_attack():
 	attacking = true
+	cooling = true #Cant call any attack function
 	upper_anime.play("Swing - Side")
-	await get_tree().create_timer(0.9).timeout
+	await get_tree().create_timer(0.5).timeout
+	if not talking:
+		voice.volume_db = -2
+		voice.stream = voice_uhh[randi() % voice_uhh.size()]
+		voice.play()
 	print("MTK ATTACK SWING")
-	damaging = true
-	#monitor = true
-	#area3D.overlap_check()
 	await get_tree().create_timer(0.8).timeout
-
-	damaging = false
-	#monitor = false
-	await get_tree().create_timer(1.5).timeout
-	#damaged_bodies.clear()
+	print("attack dmg over")
 	attacking = false
+	await get_tree().create_timer(0.8).timeout
+	cooling = false
+
+func over_attack():
+	upper_anime.speed_scale *= 1.5
+	attacking = true
+	cooling = true #Cant call any attack function
+	upper_anime.play("Swing - Top")
+	await get_tree().create_timer(0.5).timeout
+	if not talking:
+		voice.volume_db = -2
+		voice.stream = voice_uhh[randi() % voice_uhh.size()]
+		voice.play()
+	print("MTK ATTACK SWING")
+	await get_tree().create_timer(0.8).timeout
+	print("attack dmg over")
+	attacking = false
+	upper_anime.speed_scale = 1.0
+	await get_tree().create_timer(0.8).timeout
+	cooling = false

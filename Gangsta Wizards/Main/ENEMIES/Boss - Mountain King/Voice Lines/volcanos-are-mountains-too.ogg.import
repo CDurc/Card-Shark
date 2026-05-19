@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4rtmnl66p2d2"
+path="res://.godot/imported/volcanos-are-mountains-too.ogg-1ba016a4dc22e730b70607eff7cd569e.oggvorbisstr"
+
+[deps]
+
+source_file="res://ENEMIES/Boss - Mountain King/Voice Lines/volcanos-are-mountains-too.ogg"
+dest_files=["res://.godot/imported/volcanos-are-mountains-too.ogg-1ba016a4dc22e730b70607eff7cd569e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

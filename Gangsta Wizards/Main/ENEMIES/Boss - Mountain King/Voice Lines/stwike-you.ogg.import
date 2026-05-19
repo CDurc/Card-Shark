@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcoca0tm2kaii"
+path="res://.godot/imported/stwike-you.ogg-73ffa18193b33fbb4f3e0b970634ae7d.oggvorbisstr"
+
+[deps]
+
+source_file="res://ENEMIES/Boss - Mountain King/Voice Lines/stwike-you.ogg"
+dest_files=["res://.godot/imported/stwike-you.ogg-73ffa18193b33fbb4f3e0b970634ae7d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

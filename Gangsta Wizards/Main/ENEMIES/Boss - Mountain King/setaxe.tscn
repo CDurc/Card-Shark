@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn2fabqgimdn6"]
+
+[ext_resource type="PackedScene" uid="uid://25kdhmk14ppo" path="res://WEAPONS/MtKingAxe.glb" id="1_3r2d2"]
+[ext_resource type="Script" uid="uid://evjs8a4kqtcc" path="res://ENEMIES/Boss - Mountain King/setaxe.gd" id="1_mj82a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mj82a"]
+radius = 0.3647461
+height = 5.3108826
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dodjx"]
+size = Vector3(2.9002075, 1.899826, 0.41149902)
+
+[node name="setaxe" type="Node3D"]
+script = ExtResource("1_mj82a")
+
+[node name="MtKingAxe" parent="." instance=ExtResource("1_3r2d2")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MtKingAxe"]
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MtKingAxe/RigidBody3D"]
+transform = Transform3D(0.6663971, 0.002836313, -0.74560994, -0.015373868, 0.99983627, -0.009941128, 0.7454569, 0.018084653, 0.66633046, 0.0133858025, 0.17198288, -0.029279321)
+shape = SubResource("CapsuleShape3D_mj82a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="MtKingAxe/RigidBody3D"]
+transform = Transform3D(0.99993867, 0.0052397326, -0.011071108, -0.005648655, 0.99928445, -0.037498154, 0.01086676, 0.037557237, 0.99924994, -0.028328747, 1.7542281, -0.035484448)
+shape = SubResource("BoxShape3D_dodjx")

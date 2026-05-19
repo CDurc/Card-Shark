@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0cfh3ogw8g72"
+path="res://.godot/imported/more-than-just-the-mountain.ogg-9995dafcbda3ff19ff480200366acb02.oggvorbisstr"
+
+[deps]
+
+source_file="res://ENEMIES/Boss - Mountain King/Voice Lines/more-than-just-the-mountain.ogg"
+dest_files=["res://.godot/imported/more-than-just-the-mountain.ogg-9995dafcbda3ff19ff480200366acb02.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

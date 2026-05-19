@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dx3vyobjha1p"
+path="res://.godot/imported/Audio 1.ogg-6c8a83bf239adbcb7135b6b3b89ef573.oggvorbisstr"
+
+[deps]
+
+source_file="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 1.ogg"
+dest_files=["res://.godot/imported/Audio 1.ogg-6c8a83bf239adbcb7135b6b3b89ef573.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

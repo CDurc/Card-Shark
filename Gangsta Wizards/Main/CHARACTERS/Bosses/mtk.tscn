@@ -1,9 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://da2saykk6rqmb"]
+[gd_scene load_steps=20 format=3 uid="uid://da2saykk6rqmb"]
 
 [ext_resource type="Script" uid="uid://du87o35lq0ypx" path="res://ENEMIES/Boss stuff/MTK Boss.gd" id="1_pidt8"]
-[ext_resource type="PackedScene" uid="uid://bhwi4663exesa" path="res://CHARACTERS/Bosses/mtk test 1.tscn" id="3_pidt8"]
+[ext_resource type="AudioStream" uid="uid://7blhvgnv3153" path="res://ENEMIES/Boss - Mountain King/Voice Lines/king-halls.ogg" id="2_r7lw6"]
+[ext_resource type="AudioStream" uid="uid://bpk224lci5sw5" path="res://ENEMIES/Boss - Mountain King/Voice Lines/madness-reigns.ogg" id="3_laiyu"]
+[ext_resource type="AudioStream" uid="uid://c0cfh3ogw8g72" path="res://ENEMIES/Boss - Mountain King/Voice Lines/more-than-just-the-mountain.ogg" id="4_iw2bv"]
 [ext_resource type="PackedScene" uid="uid://cjgjck2p8ffw7" path="res://ENEMIES/Boss - Mountain King/mtk anime ready.tscn" id="4_x26hx"]
+[ext_resource type="AudioStream" uid="uid://cmudgmqavuxtt" path="res://ENEMIES/Boss - Mountain King/Voice Lines/not-your-mountain.ogg" id="5_ly53n"]
 [ext_resource type="Script" uid="uid://ywturtvcuo0m" path="res://CardSharkGoblinDefense/HealthBars.gd" id="5_txvuw"]
+[ext_resource type="AudioStream" uid="uid://dcoca0tm2kaii" path="res://ENEMIES/Boss - Mountain King/Voice Lines/stwike-you.ogg" id="6_8fygb"]
+[ext_resource type="AudioStream" uid="uid://c4rtmnl66p2d2" path="res://ENEMIES/Boss - Mountain King/Voice Lines/volcanos-are-mountains-too.ogg" id="7_tja7u"]
+[ext_resource type="AudioStream" uid="uid://dx3vyobjha1p" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 1.ogg" id="8_7ocww"]
+[ext_resource type="AudioStream" uid="uid://8bpnv5a65kd7" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 2.ogg" id="9_70aph"]
+[ext_resource type="AudioStream" uid="uid://b4udfam4tn0ya" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 3.ogg" id="10_l6scs"]
+[ext_resource type="AudioStream" uid="uid://g13u08j2wnq3" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 4.ogg" id="11_8novu"]
+[ext_resource type="AudioStream" uid="uid://wummf02g3qtx" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 5.ogg" id="12_6egus"]
+[ext_resource type="AudioStream" uid="uid://bjbofs4257ueb" path="res://ENEMIES/Boss - Mountain King/Voice Lines/ughh/Audio 6.ogg" id="13_h73p6"]
+[ext_resource type="PackedScene" uid="uid://bn2fabqgimdn6" path="res://ENEMIES/Boss - Mountain King/setaxe.tscn" id="16_7ocww"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pgsn"]
 radius = 0.8466797
@@ -23,6 +35,8 @@ collision_mask = 17
 script = ExtResource("1_pidt8")
 avg_speed = 6.5
 health = 5000
+voice_lines = Array[AudioStream]([ExtResource("2_r7lw6"), ExtResource("3_laiyu"), ExtResource("4_iw2bv"), ExtResource("5_ly53n"), ExtResource("6_8fygb"), ExtResource("7_tja7u")])
+voice_uhh = Array[AudioStream]([ExtResource("8_7ocww"), ExtResource("9_70aph"), ExtResource("10_l6scs"), ExtResource("11_8novu"), ExtResource("12_6egus"), ExtResource("13_h73p6")])
 
 [node name="Body collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370054, 2.276718, 0.061602592)
@@ -78,49 +92,6 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07622415, 0.45429897, -0.021263778)
 shape = SubResource("CapsuleShape3D_g751g")
 
-[node name="Mountain King2" parent="." instance=ExtResource("3_pidt8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0953871, 2.9713662, 1.0720127)
-visible = false
-
-[node name="Skeleton3D" parent="Mountain King2/Mountain King" index="0"]
-bones/9/position = Vector3(0.090078466, 0.104137324, -0.01825055)
-bones/9/rotation = Quaternion(-0.47969383, -0.28488618, -0.14169289, 0.8177145)
-bones/11/rotation = Quaternion(-0.48746982, -0.17925063, 0.13323227, 0.84409213)
-bones/12/position = Vector3(0.028991066, 0.10208005, -0.013683839)
-bones/12/rotation = Quaternion(-0.50871235, -0.18374932, 0.0060830014, 0.8410773)
-bones/14/rotation = Quaternion(-0.45206317, -0.13194093, 0.11636913, 0.8744649)
-bones/15/position = Vector3(-0.029122373, 0.09163999, -0.0090989135)
-bones/15/rotation = Quaternion(-0.47080576, -0.16157643, 0.05689744, 0.8654465)
-bones/17/rotation = Quaternion(-0.5178524, -0.05839869, 0.11163254, 0.84614223)
-bones/18/position = Vector3(-0.0887953, 0.089857385, -0.0034123694)
-bones/18/rotation = Quaternion(-0.4625083, -0.0075663547, 0.3189605, 0.8272201)
-bones/20/rotation = Quaternion(-0.5645508, 0.045656625, 0.12780963, 0.81416374)
-bones/21/rotation = Quaternion(-0.0790427, -0.08803522, -0.38012522, 0.9173368)
-bones/26/position = Vector3(-0.034144767, 0.096711814, 0.3139688)
-bones/38/position = Vector3(-0.09905132, 0.30748725, 0.2823564)
-bones/38/rotation = Quaternion(-0.020698754, 0.11092207, 0.86570126, -0.48767737)
-bones/39/position = Vector3(-0.10116094, 0.30680278, 0.28142053)
-bones/39/rotation = Quaternion(-0.13264675, -0.10967628, 0.8230926, 0.5411974)
-bones/40/position = Vector3(0.085273325, 0.3049188, 0.27992213)
-bones/41/position = Vector3(0.08861271, 0.30429256, 0.27720213)
-bones/41/rotation = Quaternion(0.6091869, 0.52982664, -0.58890676, 0.036932)
-bones/42/position = Vector3(0.063187286, 0.19237298, 0.30987266)
-bones/43/position = Vector3(-0.07596018, 0.1928333, 0.30986524)
-bones/51/rotation = Quaternion(0.02092638, -4.9553753e-05, -0.07614205, 0.9968774)
-bones/56/rotation = Quaternion(-0.52194107, 0.056072254, -0.066927604, 0.84850115)
-bones/59/rotation = Quaternion(-0.4472094, -0.20773135, 0.006832437, 0.8699453)
-bones/61/position = Vector3(-0.12926982, -0.015765486, 0.009047316)
-bones/61/rotation = Quaternion(-0.22021995, 0.13287766, 0.2622639, 0.93008846)
-bones/71/rotation = Quaternion(-0.94300956, 0.16907753, -0.18629, -0.21781151)
-bones/76/position = Vector3(-1.1362733, 0.9818876, 3.3966877)
-bones/76/rotation = Quaternion(-1.6623231e-06, 3.383911e-07, -5.629638e-13, 1)
-bones/79/position = Vector3(-0.15380615, -1.2236717, 0.4056809)
-bones/79/rotation = Quaternion(0.027915638, -0.2566216, -0.11021211, 0.95980173)
-bones/79/scale = Vector3(1, 1, 1)
-bones/80/position = Vector3(-0.20615697, -1.2236754, -0.7663125)
-bones/80/rotation = Quaternion(-0.025474431, 0.2098256, -0.11080182, 0.9711062)
-bones/80/scale = Vector3(1, 1, 1)
-
 [node name="AxeSpawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0320647, -2.1381755)
 
@@ -128,46 +99,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0320647, -2.1381755)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.094989896, 2.9740984, 1.0721471)
 
 [node name="Skeleton3D" parent="Mountain King3/Mountain King" index="0"]
-bones/9/position = Vector3(0.090078466, 0.104137324, -0.01825055)
-bones/9/rotation = Quaternion(-0.47969383, -0.28488618, -0.14169289, 0.8177145)
-bones/11/rotation = Quaternion(-0.48746982, -0.17925063, 0.13323227, 0.84409213)
-bones/12/position = Vector3(0.028991066, 0.10208005, -0.013683839)
-bones/12/rotation = Quaternion(-0.50871235, -0.18374932, 0.0060830014, 0.8410773)
-bones/14/rotation = Quaternion(-0.45206317, -0.13194093, 0.11636913, 0.8744649)
-bones/15/position = Vector3(-0.029122373, 0.09163999, -0.0090989135)
-bones/15/rotation = Quaternion(-0.47080576, -0.16157643, 0.05689744, 0.8654465)
-bones/17/rotation = Quaternion(-0.5178524, -0.05839869, 0.11163254, 0.84614223)
-bones/18/position = Vector3(-0.0887953, 0.089857385, -0.0034123694)
-bones/18/rotation = Quaternion(-0.4625083, -0.0075663547, 0.3189605, 0.8272201)
-bones/20/rotation = Quaternion(-0.5645508, 0.045656625, 0.12780963, 0.81416374)
-bones/32/position = Vector3(0.059228983, 0.28056744, 0.27650762)
-bones/33/position = Vector3(0.058446623, 0.21383429, 0.29438257)
-bones/34/position = Vector3(-0.119665556, 0.27819133, 0.28375608)
-bones/35/position = Vector3(-0.12007078, 0.21454898, 0.29450023)
-bones/49/position = Vector3(-0.076748736, 0.10116997, 0.0089988215)
-bones/49/rotation = Quaternion(-0.73463494, 0.2729389, 0.10025064, 0.61299735)
-bones/52/position = Vector3(-0.02695167, 0.10298412, -0.009052763)
-bones/52/rotation = Quaternion(-0.75416833, 0.16094138, 0.018073007, 0.6363972)
-bones/53/rotation = Quaternion(-0.4825028, 0.11910385, -0.017251307, 0.86758727)
-bones/55/position = Vector3(0.03727763, 0.102301, -0.0064198626)
-bones/55/rotation = Quaternion(-0.7214129, 0.15287028, -0.018344993, 0.6751723)
-bones/56/rotation = Quaternion(-0.52194107, 0.056072254, -0.066927604, 0.84850115)
-bones/58/position = Vector3(0.09170427, 0.10131822, -0.0007280903)
-bones/58/rotation = Quaternion(-0.7306852, -0.030659875, -0.22557767, 0.64364123)
-bones/63/rotation = Quaternion(0.9939345, 0.062050905, -0.014820214, 0.08957882)
-bones/64/rotation = Quaternion(0.2853186, -0.018038874, 0.06294941, 0.95619315)
-bones/65/rotation = Quaternion(0.014974717, 0.039228503, -0.02295963, 0.9988543)
-bones/67/rotation = Quaternion(0.9907504, -0.07962605, 0.1045859, 0.033693623)
-bones/68/rotation = Quaternion(0.2784044, 0.017763851, -0.08582919, 0.95645636)
-bones/69/rotation = Quaternion(-0.52048796, -0.14167283, -0.011066519, 0.84196126)
+bones/3/rotation = Quaternion(-0.4529973, -0.023959205, -0.02008905, 0.89096344)
 bones/72/position = Vector3(0.7663597, -0.6250938, -0.7217365)
 bones/72/rotation = Quaternion(0.59628814, 0.21617326, -0.2634976, -0.72682786)
-bones/74/position = Vector3(0.3310535, -0.79393566, 0.9917164)
-bones/75/position = Vector3(-0.40899715, -0.4233142, -0.7700497)
-bones/75/rotation = Quaternion(0.929327, 1.6160506e-08, 1.1166478e-07, -0.36925787)
-bones/77/position = Vector3(-0.40827957, -0.54852825, 0.5552434)
+bones/81/position = Vector3(2.8837461, -2.3503487, 0.025848031)
+bones/81/rotation = Quaternion(-0.020146271, 0.05180197, 0.014146462, 0.99835396)
+
+[node name="Head" parent="Mountain King3/Mountain King/Skeleton3D" index="0"]
+transform = Transform3D(0.00050505856, 0.16878101, 0.98565334, 0.003269034, 0.9856479, -0.16878165, -0.99999416, 0.0033074012, -5.3966884e-05, 0.82513285, 0.7520174, -0.1109987)
+
+[node name="BoneAttachment3D" parent="Mountain King3/Mountain King/Skeleton3D" index="6"]
+transform = Transform3D(0.99423283, -0.030333586, 0.1028634, 0.026159117, 0.998788, 0.041691847, -0.10400339, -0.038760588, 0.9938214, 2.8837461, -2.3503487, 0.025848031)
+
+[node name="Hurtbox" parent="Mountain King3/Mountain King/Skeleton3D/BoneAttachment3D" index="0" node_paths=PackedStringArray("goblin")]
+goblin = NodePath("../../../../..")
+
+[node name="Voice" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8242376, -0.41143578)
+volume_db = 2.0
+
+[node name="setaxe" parent="." instance=ExtResource("16_7ocww")]
+transform = Transform3D(0.8141055, 0, -0.5807171, 0, 1, 0, 0.5807171, 0, 0.8141055, 0.13766819, 2.157067, -1.6852491)
+visible = false
+
+[node name="RigidBody3D" parent="setaxe/MtKingAxe" index="2"]
+freeze = true
+
+[node name="CollisionShape3D" parent="setaxe/MtKingAxe/RigidBody3D" index="0"]
+disabled = true
+
+[node name="CollisionShape3D2" parent="setaxe/MtKingAxe/RigidBody3D" index="1"]
+disabled = true
 
 [connection signal="timeout" from="Control/Hbar_Expire" to="." method="_on_healthbar_timer_timeout"]
 
-[editable path="Mountain King2"]
 [editable path="Mountain King3"]
+[editable path="setaxe"]
