@@ -176,7 +176,7 @@ func YMCA():
 		await get_tree().create_timer(1).timeout
 		state = "busy"
 	state = "attacking"
-	upper_anime.play("Stone UnFreeze Pose A")
+	upper_anime.play("Idle")
 
 func destroy():
 	Audio.play("sounds/enemy_destroy.ogg")
