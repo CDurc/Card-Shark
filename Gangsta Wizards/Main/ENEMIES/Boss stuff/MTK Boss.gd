@@ -75,7 +75,7 @@ func _ready() -> void:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
 
-	await get_tree().create_timer(8).timeout
+	await get_tree().create_timer(25).timeout
 	
 	YMCA()
 
