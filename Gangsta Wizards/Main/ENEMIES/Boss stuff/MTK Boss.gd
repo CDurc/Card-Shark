@@ -199,7 +199,7 @@ func YMCA():
 	voice.volume_db = 5
 	voice.stream = voice_lines[randi() % voice_lines.size()]
 	voice.play()
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(3.2).timeout
 	talking = false
 
 func destroy():
