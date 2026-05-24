@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://crutpqywncloi"]
+
+[ext_resource type="Script" uid="uid://dd37wsjcp33tb" path="res://WEAPONS/9mm_hitscan.gd" id="1_46nua"]
+[ext_resource type="PackedScene" uid="uid://sc6uro3goc3k" path="res://WEAPONS/9mm.glb" id="3_o1p4t"]
+
+[node name="9mm" type="Node3D" node_paths=PackedStringArray("gun_anime")]
+script = ExtResource("1_46nua")
+gun_anime = NodePath("9mm2/AnimationPlayer")
+dmg = 15.0
+clip_ammo = 12
+cooldown = 0.3
+HS_Mult = 1.32
+spread = 0.01
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="9mm2" parent="." instance=ExtResource("3_o1p4t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0033718136, 0, -0.027811391)
+
+[node name="Skeleton3D" parent="9mm2/9mm Bones" index="0"]
+bones/0/rotation = Quaternion(4.0965813e-09, -9.462154e-09, 0.01032834, 0.99994665)
+bones/1/position = Vector3(0, 0, 0)
+bones/1/rotation = Quaternion(0.7071076, -0.002741236, -0.7070953, -0.0027412653)
+
+[editable path="9mm2"]
