@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c16huy5qohocx"
+path="res://.godot/imported/Reuben_Talk_G.wav-3c9132b9e27dd93d9b4c679f86cd2063.sample"
+
+[deps]
+
+source_file="res://SOUND EFFECTS & VOICE LINES/NPC - Dialogue Boxes/Reuben_Talk_G.wav"
+dest_files=["res://.godot/imported/Reuben_Talk_G.wav-3c9132b9e27dd93d9b4c679f86cd2063.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

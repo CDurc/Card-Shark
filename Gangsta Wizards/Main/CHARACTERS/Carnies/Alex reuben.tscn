@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://8tj8gq7kmlk8"]
+
+[ext_resource type="Script" uid="uid://bvvyty1xnmnvd" path="res://CHARACTERS/Misc/NPC_Talking_Generic.gd" id="1_rxd8q"]
+[ext_resource type="PackedScene" uid="uid://dqfvf7k4a4i4p" path="res://CHARACTERS/Carnies/Reuben, Carnie.glb" id="2_rv76a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwg8r"]
+radius = 0.35986328
+height = 1.831543
+
+[node name="Reuben" type="CharacterBody3D"]
+script = ExtResource("1_rxd8q")
+
+[node name="Reuben, Carnie" parent="." instance=ExtResource("2_rv76a")]
+
+[node name="Skeleton3D" parent="Reuben, Carnie/Bones" index="0"]
+bones/1/position = Vector3(-0.014387398, 0.23498149, 0.7966264)
+bones/3/rotation = Quaternion(-0.39604294, -0.021787755, -0.020730395, 0.9177394)
+bones/5/rotation = Quaternion(-0.17633347, 0.72773457, -0.65673643, -0.089478135)
+bones/6/rotation = Quaternion(0.118611954, 0.01173217, 0.2951262, 0.9479948)
+bones/7/rotation = Quaternion(-0.17064142, -0.9777786, -0.05372096, -0.10929106)
+bones/25/rotation = Quaternion(-0.29855275, 0.003014712, -0.03737128, 0.9536565)
+bones/26/position = Vector3(-0.012910501, 0.016219659, 0.09814993)
+bones/27/position = Vector3(0.0002676533, 0.026613418, 6.496668e-05)
+bones/27/rotation = Quaternion(-0.26349205, -0.028780393, -0.0756176, 0.96126246)
+bones/28/position = Vector3(0.0041327896, 0.039730996, -0.006526799)
+bones/29/position = Vector3(-8.4718224e-05, 0.020909214, 0.0005432726)
+bones/30/position = Vector3(0.00034499122, 0.0007024551, 0.0007115402)
+bones/30/rotation = Quaternion(0.79471177, 0.2285673, -0.55376947, -0.09761956)
+bones/31/position = Vector3(0.007015182, -0.019477323, -0.0072746715)
+bones/31/rotation = Quaternion(0.17490926, -0.008764537, 0.18018062, 0.9679178)
+bones/32/position = Vector3(0.022460457, 0.10021689, 0.082182124)
+bones/32/scale = Vector3(1, 1, 0.99999994)
+bones/33/position = Vector3(0.022206992, 0.08799033, 0.08629328)
+bones/33/scale = Vector3(0.9999999, 1, 0.99999994)
+bones/34/position = Vector3(-0.045437794, 0.099315025, 0.08493323)
+bones/35/position = Vector3(-0.045548126, 0.08826141, 0.086337894)
+bones/40/rotation = Quaternion(-0.6865178, 0.7095922, 0.15192464, -0.045728926)
+bones/43/rotation = Quaternion(0.68520385, -0.64047575, 0.22097574, -0.26731303)
+bones/47/rotation = Quaternion(-0.41417888, -0.7126735, 0.54173535, 0.16454537)
+bones/48/rotation = Quaternion(0.27357516, -0.010556792, -0.233012, 0.93314016)
+bones/49/rotation = Quaternion(-0.25306424, 0.92812055, 0.08494534, 0.2594902)
+bones/65/rotation = Quaternion(0.9960376, 0.033959422, 0.030254502, -0.07642421)
+bones/66/rotation = Quaternion(0.09014213, -0.019540261, 0.02318305, 0.9954673)
+bones/67/rotation = Quaternion(-0.44355613, -0.009193048, 0.007473973, 0.89616835)
+bones/69/rotation = Quaternion(0.9967362, -0.03331036, 0.007951405, -0.07310366)
+bones/69/scale = Vector3(1.0000036, 0.99999964, 1.0000206)
+bones/70/rotation = Quaternion(0.09206068, 0.019205868, -0.031415496, 0.99507236)
+bones/71/rotation = Quaternion(-0.44120184, -0.029609203, -0.016899701, 0.8967601)
+bones/73/position = Vector3(0.28981158, 0.22784415, 0.9725907)
+bones/73/rotation = Quaternion(-0.5498592, 0.4489765, -0.43994993, 0.5500172)
+bones/74/position = Vector3(0.13885738, 0.24495515, 0.0289408)
+bones/74/rotation = Quaternion(0.929327, 3.856732e-08, 3.0430445e-07, -0.36925787)
+bones/75/position = Vector3(0.3281598, 0.22211686, 1.1939284)
+bones/76/rotation = Quaternion(0.9999637, -2.963465e-09, 3.4774908e-07, -0.00852154)
+bones/77/position = Vector3(-0.15523227, 0.24495517, 0.019975636)
+bones/77/rotation = Quaternion(0.9293271, 1.0459575e-07, 1.3812779e-07, -0.36925763)
+bones/78/position = Vector3(-0.43126503, 0.37403694, 1.1355292)
+bones/79/position = Vector3(-0.15495986, 0.08158736, 0.40323392)
+bones/79/rotation = Quaternion(0.9999637, 5.6238243e-08, 3.4545843e-07, -0.008522022)
+bones/80/position = Vector3(-0.28644842, 0.2297763, 0.92989844)
+bones/80/rotation = Quaternion(-0.5984611, -0.4978783, 0.39063025, 0.49129388)
+
+[node name="Hat" parent="Reuben, Carnie/Bones/Skeleton3D" index="0"]
+transform = Transform3D(0.9999998, -1.2665987e-07, -2.6833732e-08, 2.0861626e-07, 0.99999994, 5.0577e-08, 2.2060703e-08, -7.198196e-08, 0.99999964, 1.527369e-07, 0, 3.7252903e-09)
+
+[node name="Bow Tie" parent="Reuben, Carnie/Bones/Skeleton3D" index="1"]
+transform = Transform3D(0.9999999, -8.940697e-08, 3.585592e-08, 8.940697e-08, 0.9999999, -4.0978193e-08, -5.6345016e-08, 4.6100467e-08, 0.99999976, 1.6763806e-08, -1.1920929e-07, -4.8428774e-08)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.084228516, 0)
+shape = SubResource("CapsuleShape3D_fwg8r")
+
+[editable path="Reuben, Carnie"]

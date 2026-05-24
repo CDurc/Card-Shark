@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm6tn2hg1yfq5"
+path="res://.godot/imported/TAttG_Ambient_9.wav-a3ef2a847574e48d459f6107d8e120df.sample"
+
+[deps]
+
+source_file="res://SOUND EFFECTS & VOICE LINES/NPC - Non-Dialogue Boxes/TAttG_Ambient_9.wav"
+dest_files=["res://.godot/imported/TAttG_Ambient_9.wav-a3ef2a847574e48d459f6107d8e120df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
