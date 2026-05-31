@@ -122,9 +122,6 @@ volume_db = 2.0
 transform = Transform3D(0.8141055, 0, -0.5807171, 0, 1, 0, 0.5807171, 0, 0.8141055, 0.13766819, 2.157067, -1.6852491)
 visible = false
 
-[node name="RigidBody3D" parent="setaxe/MtKingAxe" index="2"]
-freeze = true
-
 [node name="CollisionShape3D" parent="setaxe/MtKingAxe/RigidBody3D" index="0"]
 disabled = true
 

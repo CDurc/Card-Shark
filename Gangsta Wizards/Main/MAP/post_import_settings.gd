@@ -48,5 +48,5 @@ func _setup_physics_for_meshes(node: Node) -> void:
 
 
 func _set_physics_layers(body: StaticBody3D) -> void:
-	body.collision_layer = (1 << 0) | (1 << 1) | (1 << 3)
-	body.collision_mask  = (1 << 0) | (1 << 1) | (1 << 3)
+	body.collision_layer = (1 << 0) | (1 << 1) | (1 << 3) | (1 << 6)
+	body.collision_mask  = (1 << 0) | (1 << 1) | (1 << 3) | (1 << 6)
