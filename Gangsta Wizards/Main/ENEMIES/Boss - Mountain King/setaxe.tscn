@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn2fabqgimdn6"]
+[gd_scene load_steps=7 format=3 uid="uid://bn2fabqgimdn6"]
 
 [ext_resource type="PackedScene" uid="uid://25kdhmk14ppo" path="res://WEAPONS/MtKingAxe.glb" id="1_3r2d2"]
 [ext_resource type="Script" uid="uid://evjs8a4kqtcc" path="res://ENEMIES/Boss - Mountain King/setaxe.gd" id="1_mj82a"]
+[ext_resource type="Script" uid="uid://b6q70ddyw44ej" path="res://ENEMIES/generic_damage_dmg.gd" id="3_dodjx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mj82a"]
 radius = 0.3647461
@@ -9,6 +10,9 @@ height = 5.3108826
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dodjx"]
 size = Vector3(2.9002075, 1.899826, 0.41149902)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17jr5"]
+size = Vector3(3.0430527, 5.664093, 1)
 
 [node name="setaxe" type="Node3D"]
 script = ExtResource("1_mj82a")
@@ -27,3 +31,16 @@ transform = Transform3D(0.99993867, 0.0052397326, -0.011071108, -0.005648655, 0.
 shape = SubResource("BoxShape3D_dodjx")
 
 [node name="MtKingAxe" parent="RigidBody3D" instance=ExtResource("1_3r2d2")]
+
+[node name="Hitbox" type="Area3D" parent="RigidBody3D"]
+monitoring = false
+monitorable = false
+script = ExtResource("3_dodjx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01002121, 0.1797638, 0)
+shape = SubResource("BoxShape3D_17jr5")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="RigidBody3D/Hitbox" to="RigidBody3D/Hitbox" method="_on_body_entered"]

@@ -48,6 +48,7 @@ var knockback_t   := 0.0
 var player
 var destroyed: = false
 var attacking: = false
+var no_look: = false
 var cooling:   = false #Period where he cant call an attack function
 var talking:   = false
 var YMCA_dir
@@ -75,7 +76,7 @@ func _ready() -> void:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
 
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(25).timeout
 	
 	YMCA()
 
@@ -109,7 +110,7 @@ func _physics_process(delta: float) -> void:
 			dir.y = 0
 			dir = dir.normalized()
 
-			if dir.length() > 0.01 and not jumping and can_move and not attacking:
+			if dir.length() > 0.01 and not jumping and can_move and not no_look:
 				look_at(global_transform.origin + dir, Vector3.UP)
 
 			velocity.x = dir.x * speed
@@ -118,7 +119,7 @@ func _physics_process(delta: float) -> void:
 		# ---- ALWAYS FACE THE PLAYER ----
 		var face_dir: Vector3 = target.global_transform.origin - global_transform.origin
 		face_dir.y = 0
-		if face_dir.length() > 0.01 and not jumping and can_move and not attacking:
+		if face_dir.length() > 0.01 and not jumping and can_move and not no_look:
 			look_at(global_transform.origin + face_dir.normalized(), Vector3.UP)
 		# --------------------------------
 
@@ -193,6 +194,8 @@ func YMCA():
 		state = "YMCA"
 		await get_tree().create_timer(1).timeout
 		state = "busy"
+	fetch_axe()
+	await get_tree().create_timer(0.6).timeout
 	state = "attacking"
 	upper_anime.play("Idle")
 	talking = true
@@ -241,7 +244,10 @@ func side_attack():
 		voice.stream = voice_uhh[randi() % voice_uhh.size()]
 		voice.play()
 	print("MTK ATTACK SWING")
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.25).timeout
+	$Close_Hurtbox.monitoring = true
+	await get_tree().create_timer(0.55).timeout
+	$Close_Hurtbox.monitoring = false
 	print("attack dmg over")
 	attacking = false
 	await get_tree().create_timer(0.8).timeout
@@ -250,6 +256,7 @@ func side_attack():
 func over_attack():
 	upper_anime.speed_scale *= 1.5
 	attacking = true
+	no_look = true
 	cooling = true #Cant call any attack function
 	upper_anime.play("Swing - Top")
 	await get_tree().create_timer(0.5).timeout
@@ -258,9 +265,39 @@ func over_attack():
 		voice.stream = voice_uhh[randi() % voice_uhh.size()]
 		voice.play()
 	print("MTK ATTACK SWING")
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.15).timeout #correctly time the too close hurtbox
+	$Close_Hurtbox.monitoring = true
+	await get_tree().create_timer(0.3).timeout
+	$Close_Hurtbox.monitoring = false
 	print("attack dmg over")
 	attacking = false
 	upper_anime.speed_scale = 1.0
-	await get_tree().create_timer(0.8).timeout
+	face_player_smooth()
+	await get_tree().create_timer(0.15).timeout
+	no_look = false
+	await get_tree().create_timer(0.5).timeout
 	cooling = false
+	
+func fetch_axe(): #Recalls the set axe
+	setaxe.monitor(true)
+	setaxe.look_at(self.position)
+	setaxe.rotation_degrees.y = 90
+	setaxe.reparent(self)
+	setaxe.spinning = true
+	upper_anime.play("Throw Axe")
+	upper_anime.seek(2.5, true) #Start from 1.18 in
+	var tween = create_tween()
+	tween.tween_property(setaxe, "position", axe_spawn.position, 0.5)
+	await tween.finished
+	setaxe.monitor(false)
+	setaxe.unset_axe()
+	axe.visible = true
+
+func face_player_smooth():
+	var face_dir = target.global_transform.origin - global_transform.origin
+	face_dir.y = 0
+	if face_dir.length() < 0.01:
+		return
+	var target_quat = Basis.looking_at(face_dir.normalized(), Vector3.UP).get_rotation_quaternion()
+	var tween = create_tween()
+	tween.tween_property(self, "quaternion", target_quat, 0.15)
