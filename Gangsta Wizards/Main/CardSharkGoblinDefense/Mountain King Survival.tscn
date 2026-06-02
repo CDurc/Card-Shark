@@ -142,6 +142,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.789, 0)
 [node name="MTK" parent="NavMap/LargeNav" instance=ExtResource("3_827m0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3238163, 8.80641, 6.5758266)
 
+[node name="MTK2" parent="NavMap/LargeNav" instance=ExtResource("3_827m0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.308672, 8.80641, 6.5758266)
+
+[node name="MTK3" parent="NavMap/LargeNav" instance=ExtResource("3_827m0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.582819, 8.80641, 6.5758266)
+
 [node name="SmallNav" type="NavigationRegion3D" parent="NavMap"]
 navigation_mesh = SubResource("NavigationMesh_ntpda")
 

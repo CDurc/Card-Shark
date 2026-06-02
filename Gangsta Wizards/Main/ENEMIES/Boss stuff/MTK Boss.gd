@@ -76,9 +76,12 @@ func _ready() -> void:
 		nav_agent.target_position = target.global_transform.origin
 	last_position = global_position
 
-	await get_tree().create_timer(25).timeout
+	await get_tree().create_timer(6).timeout
 	
-	YMCA()
+	for i in range(0,99):
+		var rand_wait = randi_range(17,30)
+		YMCA()
+		await get_tree().create_timer(rand_wait).timeout
 
 func _physics_process(delta: float) -> void:
 	if not target:
@@ -157,8 +160,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 	elif can_move and state == "YMCA":
-		velocity.x = YMCA_dir.x * 20.0
-		velocity.z = YMCA_dir.z * 20.0
+		velocity.x = YMCA_dir.x * 25.0
+		velocity.z = YMCA_dir.z * 25.0
 		if is_on_floor():
 			if velocity.y <= 0.0:
 				velocity.y = 0
@@ -178,21 +181,23 @@ var ordered_YMCA_animes = ["Stone Freeze Pose Y", "Y-M", "M-C", "C-A"]
 func YMCA():
 	print("YMCA GO")
 	state = "busy"
-	
+	no_look = true
 	upper_anime.play("Plant Axe")
 	await get_tree().create_timer(1.29).timeout
+	no_look = false
 	axe.visible = false
 	setaxe.reparent(get_tree().root)
 	setaxe.set_axe()
 	
 	for i in range(0,4):
 		upper_anime.play(ordered_YMCA_animes[i])
+		face_player_smooth()
 		await upper_anime.animation_finished
 		YMCA_dir = target.global_position - global_position
 		YMCA_dir.y = 0
 		YMCA_dir = YMCA_dir.normalized()
 		state = "YMCA"
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.8).timeout
 		state = "busy"
 	fetch_axe()
 	await get_tree().create_timer(0.6).timeout
@@ -280,18 +285,24 @@ func over_attack():
 	
 func fetch_axe(): #Recalls the set axe
 	setaxe.monitor(true)
-	setaxe.look_at(self.position)
-	setaxe.rotation_degrees.y = 90
+	setaxe.look_at(self.global_position)
+	#await get_tree().create_timer(1).timeout
+	setaxe.rotation_degrees.y += 90
+	#await get_tree().create_timer(1).timeout
+	await get_tree().process_frame
 	setaxe.reparent(self)
 	setaxe.spinning = true
 	upper_anime.play("Throw Axe")
 	upper_anime.seek(2.5, true) #Start from 1.18 in
 	var tween = create_tween()
-	tween.tween_property(setaxe, "position", axe_spawn.position, 0.5)
+	tween.tween_property(setaxe, "position", axe_spawn.position, 0.5) #Should be 0.5
 	await tween.finished
 	setaxe.monitor(false)
 	setaxe.unset_axe()
 	axe.visible = true
+	setaxe.spinning = false
+	setaxe.rotation_degrees.y -= 90 #Just to be safe
+	setaxe.reset_transform()
 
 func face_player_smooth():
 	var face_dir = target.global_transform.origin - global_transform.origin
