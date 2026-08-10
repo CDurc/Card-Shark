@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ch63s045dl34v"
-path="res://.godot/imported/Acceptance.glb-9d10090cb48ecd50be253d0a6b6fa6ad.scn"
+path="res://.godot/imported/Acceptance.glb-da9c265e799646d56701e5de28f7bb03.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Acceptance.glb"
-dest_files=["res://.godot/imported/Acceptance.glb-9d10090cb48ecd50be253d0a6b6fa6ad.scn"]
+source_file="res://CHARACTERS/Wizards/Acceptance.glb"
+dest_files=["res://.godot/imported/Acceptance.glb-da9c265e799646d56701e5de28f7bb03.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bkmqbx4u5shj0"
-path="res://.godot/imported/Anger.glb-6ebffe6e26b2accf43d8588933c58a9f.scn"
+path="res://.godot/imported/Anger.glb-cf109213b566df8ceb739fb7bd611be8.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Anger.glb"
-dest_files=["res://.godot/imported/Anger.glb-6ebffe6e26b2accf43d8588933c58a9f.scn"]
+source_file="res://CHARACTERS/Wizards/Anger.glb"
+dest_files=["res://.godot/imported/Anger.glb-cf109213b566df8ceb739fb7bd611be8.scn"]
 
 [params]
 

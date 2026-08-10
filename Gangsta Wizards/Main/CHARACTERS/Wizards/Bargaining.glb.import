@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bs748ypbhboi6"
-path="res://.godot/imported/Bargaining.glb-79869c14d3532ec703944486bfcd2217.scn"
+path="res://.godot/imported/Bargaining.glb-668b494dc289e7e7de938466b65f964c.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Bargaining.glb"
-dest_files=["res://.godot/imported/Bargaining.glb-79869c14d3532ec703944486bfcd2217.scn"]
+source_file="res://CHARACTERS/Wizards/Bargaining.glb"
+dest_files=["res://.godot/imported/Bargaining.glb-668b494dc289e7e7de938466b65f964c.scn"]
 
 [params]
 

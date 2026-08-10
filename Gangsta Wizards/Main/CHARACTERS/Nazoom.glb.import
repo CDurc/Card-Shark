@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbfjk0fgfaksd"
-path="res://.godot/imported/Billy.glb-269bf2579e625f3e23e93d15ccfd4e5a.scn"
+uid="uid://byxciwsho8ypx"
+path="res://.godot/imported/Nazoom.glb-d352d3bdb60488f7b4fd4dfb7277708e.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Billy/Billy.glb"
-dest_files=["res://.godot/imported/Billy.glb-269bf2579e625f3e23e93d15ccfd4e5a.scn"]
+source_file="res://CHARACTERS/Nazoom.glb"
+dest_files=["res://.godot/imported/Nazoom.glb-d352d3bdb60488f7b4fd4dfb7277708e.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

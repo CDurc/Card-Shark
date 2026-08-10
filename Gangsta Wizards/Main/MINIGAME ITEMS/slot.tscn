@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgp2ouliiqr0p"]
+
+[ext_resource type="PackedScene" uid="uid://7egsj5w7lind" path="res://MINIGAME ITEMS/Slot Machine.glb" id="1_rd4ef"]
+[ext_resource type="PackedScene" uid="uid://3pdqhmqlo5l1" path="res://MINIGAME ITEMS/Slot Wheel.glb" id="2_o18oo"]
+
+[node name="Slot" type="Node3D"]
+
+[node name="Slot Machine2" parent="." instance=ExtResource("1_rd4ef")]
+
+[node name="Slot Wheel2" parent="Slot Machine2" instance=ExtResource("2_o18oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024042442, 0.05247359, 0.06308755)
+
+[node name="Slot Wheel3" parent="Slot Machine2" instance=ExtResource("2_o18oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13191497, 0.05247359, 0.06308755)
+
+[node name="Slot Wheel4" parent="Slot Machine2" instance=ExtResource("2_o18oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18231082, 0.05247359, 0.06308755)

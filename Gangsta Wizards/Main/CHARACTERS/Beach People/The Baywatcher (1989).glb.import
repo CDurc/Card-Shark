@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3lxwkh4qgpfk"
-path="res://.godot/imported/The Baywatcher (1989).glb-492e55ec80415d62d1f09b3db2a39769.scn"
+path="res://.godot/imported/The Baywatcher (1989).glb-0ffb4fb176fc384e7144dade1d3a9dcf.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/The Baywatcher (1989).glb"
-dest_files=["res://.godot/imported/The Baywatcher (1989).glb-492e55ec80415d62d1f09b3db2a39769.scn"]
+source_file="res://CHARACTERS/Beach People/The Baywatcher (1989).glb"
+dest_files=["res://.godot/imported/The Baywatcher (1989).glb-0ffb4fb176fc384e7144dade1d3a9dcf.scn"]
 
 [params]
 

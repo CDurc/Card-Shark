@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bjnv13s0joqhw"
-path="res://.godot/imported/Depression.glb-79e90578987380111647d81a398a4b0a.scn"
+path="res://.godot/imported/Depression.glb-1bc2fc97b3bbd3cb2a9347fd3eeb68d1.scn"
 
 [deps]
 
-source_file="res://CHARACTERS/Depression.glb"
-dest_files=["res://.godot/imported/Depression.glb-79e90578987380111647d81a398a4b0a.scn"]
+source_file="res://CHARACTERS/Wizards/Depression.glb"
+dest_files=["res://.godot/imported/Depression.glb-1bc2fc97b3bbd3cb2a9347fd3eeb68d1.scn"]
 
 [params]
 
