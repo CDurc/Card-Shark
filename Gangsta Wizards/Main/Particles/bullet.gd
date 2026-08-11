@@ -24,7 +24,7 @@ func _on_area_entered(area: Area3D) -> void:
 		return
 	hit = true
 	print("HIT HIT HIT")
-	if area.get_parent().is_in_group(target_group):
+	if area.get_parent().is_in_group(target_group) or area.get_parent().is_in_group("Non-enemy-hit"): #CHANGED
 	
 		if area.is_in_group("Headshot"):
 			area.get_parent().damage(damage_amount * HS_mult)

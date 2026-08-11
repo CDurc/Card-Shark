@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dpf060ddbj72j"]
+[gd_scene load_steps=16 format=3 uid="uid://dpf060ddbj72j"]
 
 [ext_resource type="PackedScene" uid="uid://dkhwvgcjcie2h" path="res://PracticeSandbox/SandboxMap.glb" id="1_efnc4"]
 [ext_resource type="PackedScene" uid="uid://b53m2mj6gegky" path="res://Player/Player_v3.tscn" id="2_d1kxc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://cr7owrmsct8bo" path="res://Dialogue/D1.tres" id="5_0rd6y"]
 [ext_resource type="PackedScene" uid="uid://crxnlufryuhvn" path="res://Card Shark Campaign/CPUs/sourman.tscn" id="6_15nx7"]
 [ext_resource type="Script" uid="uid://d1n7uw1q5p7jx" path="res://Card Shark Campaign/CPUs/give_sour_goals.gd" id="7_hcvti"]
+[ext_resource type="PackedScene" uid="uid://bgp2ouliiqr0p" path="res://MINIGAME ITEMS/slot.tscn" id="8_hcvti"]
 
 [sub_resource type="Gradient" id="Gradient_d1kxc"]
 colors = PackedColorArray(0.591319, 0.47222, 0.770854, 1, 0.315871, 0.421528, 0.674528, 1)
@@ -88,19 +89,9 @@ navigation_mesh = SubResource("NavigationMesh_jatbo")
 
 [node name="Sourman" parent="Sourpeople" instance=ExtResource("6_15nx7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.690211, 0.64471686, 0)
-speed = 8.0
-gravity = 9.8
-turn_speed = 4.0
-stuck_threshold = 0.5
-stuck_distance_threshold = 0.3
 
 [node name="Sourman2" parent="Sourpeople" instance=ExtResource("6_15nx7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.10685, 0.64471686, 0)
-speed = 8.0
-gravity = 9.8
-turn_speed = 4.0
-stuck_threshold = 0.5
-stuck_distance_threshold = 0.3
 
 [node name="Sour_points" type="Node3D" parent="."]
 script = ExtResource("7_hcvti")
@@ -134,3 +125,6 @@ transform = Transform3D(0.97675467, 0, -0.2143603, 0, 1, 0, 0.2143603, 0, 0.9767
 
 [node name="look" type="Node3D" parent="Sour_points/Idlepoint5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5431798)
+
+[node name="Slot" parent="." instance=ExtResource("8_hcvti")]
+transform = Transform3D(-0.40984342, 0, 0.9121559, 0, 1, 0, -0.9121559, 0, -0.40984342, 1.7081995, 1.1276511, 4.601322)
