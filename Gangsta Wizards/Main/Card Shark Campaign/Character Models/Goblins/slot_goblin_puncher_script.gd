@@ -46,13 +46,11 @@ var destroyed       := false
 var attacking       = false
 
 
-@onready var pipe           = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Pipe")
-@onready var current_color  = pipe.get_active_material(0).albedo_color
-@onready var area3D         = $Goblin.get_node("Goblin Bones/Skeleton3D/HandContainer/Metal Pipe/Area3D")
+@onready var area3D         = $Hurtbox
 @onready var damaged_bodies = area3D.damaged_bodies
 @onready var monitor        = area3D.monitoring
-@onready var a_anime          = $Goblin/ArmAnimation
-@onready var l_anime          = $Goblin/LegAnimation
+@onready var a_anime          = $casino_slotter/Upper
+@onready var l_anime          = $casino_slotter/Lower
 
 
 func _ready() -> void:
@@ -78,7 +76,9 @@ func _physics_process(delta: float) -> void:
 
 		if (target.global_transform.origin - nav_agent.target_position).length() > 0.15:
 			nav_agent.target_position = target.global_transform.origin #Move towards player
-			l_anime.play("Walking")
+			l_anime.play("Walking - Lower")
+			if not attacking:
+				a_anime.play("Walking - Upper")
 			
 		if (target.global_transform.origin - global_transform.origin).length() < 1.25 and not attacking:
 			attack()
@@ -174,12 +174,12 @@ func attack():
 	attacking = true
 	a_anime.stop()
 	a_anime.play("Attack")
-	await get_tree().create_timer(0.9).timeout
+	await get_tree().create_timer(0.5).timeout
 
 	damaging = true
 	monitor = true
 	area3D.overlap_check()
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.5).timeout
 
 	damaging = false
 	monitor = false

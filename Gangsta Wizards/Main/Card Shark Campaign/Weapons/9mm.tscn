@@ -8,7 +8,7 @@ script = ExtResource("1_46nua")
 gun_anime = NodePath("9mm2/AnimationPlayer")
 dmg = 15.0
 clip_ammo = 12
-cooldown = 0.3
+cooldown = 0.42
 HS_Mult = 1.32
 spread = 0.01
 
