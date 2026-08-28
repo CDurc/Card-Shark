@@ -39,16 +39,34 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BB Stand": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Base": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/CT": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Cig Ext": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Cig Ext_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Glass Walls": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Glass Walls_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Lightning Rod": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Pillars": {

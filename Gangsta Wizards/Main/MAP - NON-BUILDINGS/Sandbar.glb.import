@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BBC BB": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
@@ -46,6 +49,15 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Billboard_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Billboard_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Cig Ext_001": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Ground": {
@@ -58,6 +70,21 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Support_001": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_002": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_003": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_004": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_005": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_006": {
 "generate/physics": true
 }
 }

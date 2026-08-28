@@ -45,6 +45,9 @@ _subresources={
 "PATH:1 - PHYS/Arch_001": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Benches": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard": {
 "generate/physics": true
 },
@@ -91,6 +94,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Lake Bottom": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Manhole": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Post": {

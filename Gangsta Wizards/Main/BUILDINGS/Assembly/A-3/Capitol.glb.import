@@ -42,6 +42,9 @@ _subresources={
 "PATH:1 - PHYS/Arc": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/BBC BB": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Board": {
 "generate/physics": true
 },
@@ -60,6 +63,7 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Elevated Hydrant": {
+"generate/physics": true,
 "mesh_instance/visibility_range_end": 400.0
 },
 "PATH:1 - PHYS/Erik Statue": {
@@ -141,6 +145,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Streetlight": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/Support_006": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Tree": {

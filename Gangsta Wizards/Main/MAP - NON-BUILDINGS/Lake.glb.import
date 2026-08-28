@@ -47,6 +47,9 @@ _subresources={
 "generate/physics": true,
 "mesh_instance/visibility_range_end": 400.0
 },
+"PATH:1 - PHYS/Billboard": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/BillboardBack": {
 "generate/physics": true
 },

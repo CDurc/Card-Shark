@@ -86,6 +86,9 @@ _subresources={
 },
 "PATH:1 - PHYS/Stove": {
 "generate/physics": true
+},
+"PATH:1 - PHYS/Trunks": {
+"generate/physics": true
 }
 }
 }

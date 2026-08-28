@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BB": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Billboard Support": {
 "generate/physics": true
 },
