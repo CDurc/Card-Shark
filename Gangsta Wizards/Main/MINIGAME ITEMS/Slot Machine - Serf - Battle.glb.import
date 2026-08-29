@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tbsg6x77e3nc"
-path="res://.godot/imported/Space Shuttle.glb-42fb006a71e4279ec04ab2d7f3cda7c8.scn"
+uid="uid://bsv3wwkqahdpa"
+path="res://.godot/imported/Slot Machine - Serf - Battle.glb-32f56c8415501a9e84e17f915a16d2ba.scn"
 
 [deps]
 
-source_file="res://BUILDINGS/Utility and Misc/Space Shuttle.glb"
-dest_files=["res://.godot/imported/Space Shuttle.glb-42fb006a71e4279ec04ab2d7f3cda7c8.scn"]
+source_file="res://MINIGAME ITEMS/Slot Machine - Serf - Battle.glb"
+dest_files=["res://.godot/imported/Slot Machine - Serf - Battle.glb-32f56c8415501a9e84e17f915a16d2ba.scn"]
 
 [params]
 
@@ -33,31 +33,10 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="uid://b11ixdilrs8p7"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:1 - PHYS/Bracing": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Ground": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Operations": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/SS Wings": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Staircols": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Walkway": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
