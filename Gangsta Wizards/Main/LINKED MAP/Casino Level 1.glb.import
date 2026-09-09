@@ -39,10 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:1 - PHYS/Ceiling": {
-"generate/physics": true
-},
-"PATH:1 - PHYS/Centerpiece": {
+"PATH:1 - PHYS/Ceilignco": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Entryway": {
@@ -51,16 +48,16 @@ _subresources={
 "PATH:1 - PHYS/Exit": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Floor": {
+"PATH:1 - PHYS/Floorcol": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Wall": {
+"PATH:1 - PHYS/Kingstandcol": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Wall_001": {
+"PATH:1 - PHYS/Kingstandcol_001": {
 "generate/physics": true
 },
-"PATH:1 - PHYS/Wall_002": {
+"PATH:1 - PHYS/Pillars": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Wall_003": {

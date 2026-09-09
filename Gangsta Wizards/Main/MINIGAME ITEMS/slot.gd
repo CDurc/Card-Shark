@@ -1,9 +1,9 @@
 extends Node3D
 
-@onready var lever = $"Slot Machine - Vassal - Battle/Lever"
-@onready var wheel1 = $"Slot Machine - Vassal - Battle/S1"
-@onready var wheel2 = $"Slot Machine - Vassal - Battle/S2"
-@onready var wheel3 = $"Slot Machine - Vassal - Battle/S3"
+@onready var lever = self.get_child(1).get_child(2)
+@onready var wheel1 = self.get_child(1).get_child(3)
+@onready var wheel2 = self.get_child(1).get_child(4)
+@onready var wheel3 = self.get_child(1).get_child(5)
 
 var gambling = false
 #The index values that the wheels will land on
