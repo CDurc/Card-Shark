@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://cqe7r5tqy6klm" path="res://Card Shark/TheCardShark_mesh_and_skel_v3.1.tscn" id="32_kyg00"]
 [ext_resource type="PackedScene" uid="uid://bum6m8k40j5dl" path="res://Card Shark Campaign/Weapons/gamblers_grenade_tool.tscn" id="33_8fc3r"]
 [ext_resource type="PackedScene" uid="uid://qauvwuftnp8v" path="res://Card Shark Campaign/Weapons/revolver.tscn" id="34_ha4iu"]
-[ext_resource type="Texture2D" uid="uid://dxnvnqb0t1pow" path="res://Menus/GoblinModeLoadingBackground.jpg" id="35_btmsy"]
+[ext_resource type="Texture2D" uid="uid://7lwsbvfv2iaq" path="res://IMAGES/Loading Screens/LoadingScreen1.jpg" id="35_btmsy"]
 [ext_resource type="PackedScene" uid="uid://covvkwphtcdih" path="res://Card Shark Campaign/Weapons/sniper.tscn" id="36_hirjk"]
 [ext_resource type="PackedScene" uid="uid://crutpqywncloi" path="res://Card Shark Campaign/Weapons/9mm.tscn" id="42_cw5eh"]
 [ext_resource type="PackedScene" uid="uid://dv8imxfxrt0of" path="res://Card Shark Campaign/Weapons/Magic HandGun.tscn" id="43_wayri"]
