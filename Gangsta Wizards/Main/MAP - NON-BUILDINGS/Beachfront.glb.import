@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:1 - PHYS/BB": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/Bar": {
 "generate/physics": true,
 "mesh_instance/visibility_range_end": 100.0
@@ -58,6 +61,9 @@ _subresources={
 "generate/physics": true
 },
 "PATH:1 - PHYS/Board": {
+"generate/physics": true
+},
+"PATH:1 - PHYS/CubeAd": {
 "generate/physics": true
 },
 "PATH:1 - PHYS/Elec Tower": {

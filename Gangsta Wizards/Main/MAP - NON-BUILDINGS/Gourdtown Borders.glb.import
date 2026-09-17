@@ -75,6 +75,9 @@ _subresources={
 "PATH:1 - PHYS/Box": {
 "generate/physics": true
 },
+"PATH:1 - PHYS/Clover": {
+"generate/physics": true
+},
 "PATH:1 - PHYS/DeadTree3": {
 "generate/physics": true
 },
