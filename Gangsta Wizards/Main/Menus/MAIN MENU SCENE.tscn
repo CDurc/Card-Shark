@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://im3jefolanvu" path="res://Menus/launch_new_scene.gd" id="6_2rmjt"]
 [ext_resource type="AudioStream" uid="uid://c8f21kq73q2nn" path="res://Music/Placeholder Song.mp3" id="6_swmh5"]
 [ext_resource type="Script" uid="uid://337j8ktiw6ih" path="res://Menus/Launch_Scene.gd" id="8_p0l6d"]
-[ext_resource type="Texture2D" uid="uid://dxnvnqb0t1pow" path="res://Menus/GoblinModeLoadingBackground.jpg" id="9_4vfp3"]
+[ext_resource type="Texture2D" uid="uid://buck6c4kxmnp7" path="res://Menus/GAMELOGO.png" id="9_4vfp3"]
 [ext_resource type="PackedScene" uid="uid://mq104ueahsat" path="res://CardSharkGoblinDefense/Mountain King Survival.tscn" id="10_hsfdo"]
 
 [sub_resource type="Gradient" id="Gradient_ex873"]
