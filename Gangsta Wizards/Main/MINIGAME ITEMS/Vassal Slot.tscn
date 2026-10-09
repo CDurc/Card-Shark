@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dca6qx6cx4xn7"]
+[gd_scene load_steps=11 format=4 uid="uid://dca6qx6cx4xn7"]
 
 [ext_resource type="Script" uid="uid://dgwpxw33n3h0h" path="res://MINIGAME ITEMS/slot.gd" id="1_vvwd1"]
 [ext_resource type="PackedScene" uid="uid://dwc0odi3m0i08" path="res://MINIGAME ITEMS/Slot Machine - Vassal - Battle.glb" id="2_bplf2"]
 [ext_resource type="PackedScene" uid="uid://f5nkr24vei1f" path="res://MINIGAME ITEMS/Slot Wheel - Royal - Battle.glb" id="3_lt486"]
+[ext_resource type="PackedScene" uid="uid://bktrlth70wqn" path="res://MINIGAME ITEMS/Poker Chips - R.glb" id="4_bplf2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_41bbn"]
 size = Vector3(1, 2.0393066, 0.6687012)
@@ -74,6 +75,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7qpaa")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lt486"]
+size = Vector3(1.2438965, 1.4472046, 1.0069275)
+
 [node name="Slot" type="Node3D" groups=["Non-enemy-hit"]]
 script = ExtResource("1_vvwd1")
 
@@ -107,5 +111,18 @@ transform = Transform3D(-1.0000001, -6.2856984e-08, -6.0759675e-08, 0, 0.6950098
 
 [node name="S3" parent="Slot Machine - Vassal - Battle" instance=ExtResource("3_lt486")]
 transform = Transform3D(-1.0000001, -6.2856984e-08, -6.0759675e-08, 0, 0.6950098, -0.71900016, 8.7422784e-08, -0.71900016, -0.6950098, 0.12638137, -0.0636046, 0.14559804)
+
+[node name="Spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29707313, 1.1150674)
+
+[node name="Poker Chips - R" parent="Spawn" instance=ExtResource("4_bplf2")]
+transform = Transform3D(3, 0, 0, 0, -2.1855695e-07, 3, 0, -5, -1.3113416e-07, 0, -0.11410536, 0.06568594)
+
+[node name="Area3D" type="Area3D" parent="Spawn"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08493817)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spawn/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005493164, 0.041289866, -0.02671814)
+shape = SubResource("BoxShape3D_lt486")
 
 [editable path="Slot Machine - Vassal - Battle"]

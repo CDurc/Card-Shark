@@ -1,4 +1,4 @@
-[gd_scene load_steps=253 format=3 uid="uid://csc8n5hgucjp0"]
+[gd_scene load_steps=252 format=3 uid="uid://csc8n5hgucjp0"]
 
 [ext_resource type="PackedScene" uid="uid://cl03ik5uu3ssk" path="res://MAP/Island.glb" id="1_6r7qo"]
 [ext_resource type="PackedScene" uid="uid://dyjqrqfebx1ao" path="res://BUILDINGS/Assembly/A-2/BBQ Restaurant.glb" id="2_r2x43"]
@@ -212,7 +212,6 @@
 [ext_resource type="PackedScene" uid="uid://dx3lnew1y7o4l" path="res://VEHICLES/SubwayCar_1.glb" id="208_ywsmc"]
 [ext_resource type="PackedScene" uid="uid://clhopeidoahji" path="res://VEHICLES/SubwayCar_2.glb" id="209_m4epl"]
 [ext_resource type="PackedScene" uid="uid://b3rccv8tscny6" path="res://VEHICLES/SubwayCar_3.glb" id="210_38f6n"]
-[ext_resource type="PackedScene" uid="uid://c01qm50we45av" path="res://LINKED MAP/Casino Level 1.glb" id="213_38f6n"]
 [ext_resource type="PackedScene" uid="uid://bgp2ouliiqr0p" path="res://MINIGAME ITEMS/slot.tscn" id="214_77knl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h2rlu"]
@@ -1700,7 +1699,7 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.015502
 shape = SubResource("BoxShape3D_h1vja")
 
 [node name="Cybertruck2" type="PathFollow3D" parent="Cars/Cars/Path2"]
-transform = Transform3D(-0.008396652, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.008396652, 29.7808, 0, -0.217479)
+transform = Transform3D(-0.008396651, 0, -0.9998749, 0, 1, 0, 0.9998749, 0, -0.008396651, 29.7808, 0, -0.217479)
 progress = 30.0
 script = ExtResource("99_1skxp")
 mps = 100
@@ -3248,7 +3247,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4369354, -0.20280266, 0.28
 curve = SubResource("Curve3D_dmcx1")
 
 [node name="Car0" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681819, 0, 0.9999636, 0, 1, 0, -0.9999636, 0, -0.006681819, 14.412659, 0, -0.09630613)
+transform = Transform3D(-0.006681818, 0, 0.99996346, 0, 1, 0, -0.99996346, 0, -0.006681818, 14.412659, 0, -0.09630613)
 progress = 25.25
 
 [node name="SubwayCar_0" parent="Subway/Path3D/Car0" instance=ExtResource("207_kibu0")]
@@ -3256,14 +3255,14 @@ transform = Transform3D(-0.013962217, 0, 0.99990255, 0, 1, 0, -0.99990255, 0, -0
 visible = false
 
 [node name="Car1" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.006681962, 0, 0.99996716, 0, 1, 0, -0.99996716, 0, -0.006681962, 7.6370945, 0, -0.051031478)
+transform = Transform3D(-0.0066819615, 0, 0.99996704, 0, 1, 0, -0.99996704, 0, -0.0066819615, 7.6370945, 0, -0.051031478)
 progress = 32.0
 
 [node name="SubwayCar_1" parent="Subway/Path3D/Car1" instance=ExtResource("208_ywsmc")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.023993578, 0, -2.7493935)
 
 [node name="Car2" type="PathFollow3D" parent="Subway/Path3D"]
-transform = Transform3D(-0.0067525296, 0, 0.9999663, 0, 1, 0, -0.9999663, 0, -0.0067525296, -0.18115859, 0, 0.0014959713)
+transform = Transform3D(-0.0067525287, 0, 0.9999662, 0, 1, 0, -0.9999662, 0, -0.0067525287, -0.18115859, 0, 0.0014959713)
 progress = 40.2
 
 [node name="SubwayCar_2" parent="Subway/Path3D/Car2" instance=ExtResource("209_m4epl")]
@@ -3275,9 +3274,6 @@ progress = 48.2
 
 [node name="SubwayCar_3" parent="Subway/Path3D/Car3" instance=ExtResource("210_38f6n")]
 transform = Transform3D(-0.00872653, 0, 0.9999619, 0, 1, 0, -0.9999619, 0, -0.00872653, -0.15402862, 0, -3.3947861)
-
-[node name="Casino Level 1" parent="." instance=ExtResource("213_38f6n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.279396, 2.2790327, 441.77402)
 
 [node name="Slot" parent="." instance=ExtResource("214_77knl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.09168, 3.4329543, 380.9214)
